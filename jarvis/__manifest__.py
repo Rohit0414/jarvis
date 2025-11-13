@@ -8,7 +8,7 @@
     'description': """
         Unlock real-time Odoo data insights with an AI Analyst powered by ChatGPT technology. This Artificial Intelligence AI agent provides instant answers, acting as your personal data analytics assistant. Query sales, inventory, CRM, and more via natural language – information is just a prompt away. Get AI analytics and dashboard like clarity without complex tools like Power BI or Tableau. Your Odoo AI for direct data exploration using your OpenAI key (future compatible with models like Gemini via API). Get real time insights.
     """,
-    'author': "Niyu Labs",
+    'author': "Niyu",
     'website': "https://niyulabs.com",
     'category': 'Productivity',
     'version': '18.0.3.0.0',
