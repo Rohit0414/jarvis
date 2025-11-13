@@ -1,319 +1,346 @@
+<!-- static/description/index.html -->
+<!-- Bootstrap (for grid/flex utilities). You may remove this if your Odoo theme already includes it. -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<style>
+  /* Animation for the glowing text effect in the hero section */
+  @keyframes background-pan {
+    0% { background-position: 0% center; }
+    100% { background-position: -200% center; }
+  }
+</style>
 
-<body style="
-    font-family:'Inter',system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial,sans-serif;
-    color:#e9ecff;
-    background-color: #0b0c10;
-    overflow-x: hidden; /* Prevent horizontal scroll from subtle glows */
-    background-image:
-        radial-gradient(800px 400px at 85% -10%, rgba(139, 92, 246, 0.1), transparent 60%),
-        radial-gradient(700px 350px at -10% 20%, rgba(68, 182, 203, 0.1), transparent 55%),
-        radial-gradient(600px 300px at 50% 110%, rgba(108, 92, 231, 0.15), transparent 60%);
+<section style="
+  background-color:#030712; color:#e5e7eb;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.7; margin:0; padding:0;
+  background-image:
+    radial-gradient(ellipse at 70% 20%, rgba(139, 92, 246, 0.2), transparent 50%),
+    radial-gradient(ellipse at 30% 30%, rgba(59, 130, 246, 0.15), transparent 50%),
+    radial-gradient(ellipse at 90% 80%, rgba(20, 184, 166, 0.1), transparent 60%);
 ">
 
-  <!-- HERO -->
-  <header class="container py-5" style="padding-top: 100px !important; padding-bottom: 100px !important;">
-    <div class="row align-items-center g-4">
-      <div class="col-lg-12" style="padding: 37px;">
-        <span class="badge rounded-pill d-inline-flex align-items-center gap-2"
-              style="background-color:#121725; border:1px solid #1c2131; color:#cbd5ff; padding:10px 14px;
-                     box-shadow: 0 4px 12px rgba(0,0,0,0.3); transition: all 0.3s ease;">
-          &#10024; New &nbsp; Niyu PDF RAG for Odoo 
-        </span>
+  <!-- =======================
+  NEW HERO SECTION
+  ======================== -->
+  <div style="padding: 180px 20px 140px 20px; text-align: center; overflow: hidden; position: relative;">
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('https://www.transparenttextures.com/patterns/black-felt.png'); opacity: 0.1; z-index: 1;"></div>
+    <div style="max-width: 1000px; margin: 0 auto; position: relative; z-index: 2;">
+      <div style="display: inline-block; padding: 10px 22px; border-radius: 999px; font-size: 14px; font-weight: 700; letter-spacing: 0.5px; color: #a5f3fc; background-color: rgba(34, 211, 238, 0.1); border: 1px solid rgba(34, 211, 238, 0.3); margin-bottom: 24px;">
+        ODOO &#8594; BIGQUERY &#8594; YOUR BI PLATFORM
+      </div>
+      <h1 style="
+          font-size: clamp(3.5rem, 8vw, 6rem);
+          font-weight: 900;
+          letter-spacing: -0.06em;
+          line-height: 1;
+          margin: 0 0 24px 0;
+          color: #ffffff;
+          text-shadow: 0 8px 30px rgba(0,0,0,0.6);
+          background: linear-gradient(90deg, #d8b4fe, #a5b4fc, #67e8f9, #d8b4fe);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-size: 200% auto;
+          animation: background-pan 5s linear infinite;
+        ">
+        Your BI, Supercharged.
+      </h1>
+      <p style="font-size: clamp(1.25rem, 3vw, 1.5rem); color: #a0aec7; margin: 0 auto 48px auto; max-width: 720px; font-weight: 500;">
+        One click to sync Odoo data directly to BigQuery. Instantly connect to Power BI, Looker Studio, and Tableau to build enterprise-grade dashboards that drive decisions.
+      </p>
 
-        <h1 class="fw-bold mt-3" style="font-size: clamp(2.5rem, 6vw, 44px); letter-spacing:-.02em; color:#e9ecff; text-shadow: 0 4px 15px rgba(108,92,231,0.4);">
-          Chat with your PDFs &#8212; directly inside Odoo
-        </h1>
-        <p class="lead mb-4" style="color:#b7c3ff; font-size: clamp(1rem, 2.5vw, 1.25rem); max-width: 600px;">
-          Index PDFs to <strong style="color:#8d79ff;">Qdrant</strong>, embed with <strong style="color:#8d79ff;">OpenAI</strong>, and ask natural questions.
-          Answers are grounded in your documents with page-level citations.
-        </p>
-
-        <div class="d-flex flex-wrap gap-3 mt-4">
-          <a href="#screenshots" class="btn btn-primary fw-semibold"
-             style="background-color:#8d79ff; border:0; padding:15px 30px; font-size:1.05rem;
-                    box-shadow:0 12px 25px rgba(108,92,231,.35); transition:transform 0.3s ease, box-shadow 0.3s ease;"
-             onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 18px 35px rgba(108,92,231,.5)';"
-             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 12px 25px rgba(108,92,231,.35)';">
-            See Screenshots &#8594;
-          </a>
-          <a href="#install" class="btn btn-outline-light fw-semibold"
-             style="border-color:#2a3350; padding:15px 30px; font-size:1.05rem; color:#b7c3ff;
-                    transition:background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;"
-             onmouseover="this.style.backgroundColor='#1a2130'; this.style.borderColor='#4a5a7b'; this.style.transform='translateY(-3px)';"
-             onmouseout="this.style.backgroundColor='transparent'; this.style.borderColor='#2a3350'; this.style.transform='translateY(0)';">Install & Configure</a>
-          <a href="#how" class="btn btn-outline-light fw-semibold"
-             style="border-color:#2a3350; padding:15px 30px; font-size:1.05rem; color:#b7c3ff;
-                    transition:background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;"
-             onmouseover="this.style.backgroundColor='#1a2130'; this.style.borderColor='#4a5a7b'; this.style.transform='translateY(-3px)';"
-             onmouseout="this.style.backgroundColor='transparent'; this.style.borderColor='#2a3350'; this.style.transform='translateY(0)';">How it works</a>
-        </div>
-
-        <div class="d-flex flex-wrap gap-2 mt-4">
-          <span class="badge rounded-pill" style="background:#151a25; border:1px solid #1c2131; color:#cbd5ff; padding:8px 12px;">Odoo 18</span>
-          <span class="badge rounded-pill" style="background:#151a25; border:1px solid #1c2131; color:#cbd5ff; padding:8px 12px;">OpenAI: gpt-4o-mini &#183; text-embedding-3-small</span>
-          <span class="badge rounded-pill" style="background:#151a25; border:1px solid #1c2131; color:#cbd5ff; padding:8px 12px;">Qdrant Cloud</span>
-          <span class="badge rounded-pill" style="background:#151a25; border:1px solid #1c2131; color:#cbd5ff; padding:8px 12px;">Citations</span>
-          <span class="badge rounded-pill" style="background:#151a25; border:1px solid #1c2131; color:#cbd5ff; padding:8px 12px;">Token-aware prompt</span>
-        </div>
+      <!-- BI Logos - Ensure you have these images in your module's static folder -->
+      <div class="d-flex justify-content-center align-items-center" style="gap: 48px; margin-bottom: 48px; filter: grayscale(1) brightness(1.2);">
+        <img src="./copy.png" alt="Power BI Logo" style="height: 35px; opacity: 0.8;">
+        <img src="./2.png" alt="Looker Studio Logo" style="height: 70px; opacity: 0.8;">
+        <img src="./hd.png" alt="Tableau Logo" style="height: 58px; opacity: 0.8;">
       </div>
 
-      
+      <!-- <a href="mailto:info@niyulabs.com" target="_blank" style="display: inline-block; background-color: #ffffff; color: #030712; padding: 18px 36px; font-size: 1.15rem; font-weight: 800; text-decoration: none; border-radius: 99px; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 8px 20px -5px rgba(0, 0, 0, 0.3), 0 0 40px 8px rgba(255,255,255,0.25);" onmouseover="this.style.transform='translateY(-7px)'; this.style.boxShadow='0 12px 25px -7px rgba(0,0,0,0.4), 0 0 50px 10px rgba(255,255,255,0.35)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 20px -5px rgba(0, 0, 0, 0.3), 0 0 40px 8px rgba(255,255,255,0.25)';">
+        Get the Connector <span style="margin-left: 10px;">&#8594;</span>
+      </a> -->
     </div>
-  </header>
-  <div class="col-lg-12" style="padding-left: 20px;">
-        <div class="p-3 rounded-4"
-             style="background-color:#0e1422; border:1px solid #1a2130;
-                    box-shadow:0 15px 45px rgba(0,0,0,.45), 0 0 30px rgba(108,92,231,0.25);">
-          <div class="position-relative overflow-hidden rounded-4"
-               style="border:1px solid #1b2334; background-color:#0e1220;
-                      box-shadow:0 20px 50px rgba(6,10,20,.65), 0 0 40px rgba(108,92,231,0.35);">
-            <!-- Screenshot 1 -->
-           <div class="col-12">
-            <div class="card bg-transparent border-0 rounded-4"
-                 style="background-color:#0e1422; border:1px solid #1a2130 !important;
-                        box-shadow:0 25px 70px rgba(0,0,0,.5), 0 0 60px rgba(108,92,231,0.35);
-                        transition: transform 0.3s ease-in-out;"
-                 onmouseover="this.style.transform='translateY(-10px) scale(1.005)'" onmouseout="this.style.transform='translateY(0) scale(1)'">
-               <video autoplay loop muted playsinline controls preload="auto" style="width: 100%; display: block; border-radius: 1.75rem; background-color: #000;">
-                    <source src="./pdfrag.webm" type="video/webm">
-                    <!-- Fallback:
-                    <source src="static/description/q1.mp4" type="video/mp4">
-                    -->
-                    Your browser does not support the video tag.
-               </video>
-                <div class="card-body text-center mt-3">
-                    <p class="lead mb-0" style="color:#009688; font-weight: 600;">&#128172; Engage in natural conversations, get instant answers from your PDFs.</p>
+     <section class="video" style="padding: 0 0 120px 0; perspective: 1500px; background-color: #030712;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                <div style="border-radius: 1.75rem; padding: 3px; background-color:  rgba(20, 184, 166, 0.6) !important; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.9) !important; position: relative !important;">
+                    <video autoplay loop muted playsinline preload="auto" style="width: 100%; display: block; border-radius: 1.75rem; background-color: #000;">
+                        <source src="./preview.webm" type="video/webm">
+                        <!-- Fallback: Add your MP4 video here -->
+                        <source src="static/description/q1.mp4" type="video/mp4">
+<!--                         Your browser does not support the video tag. -->
+                    </video> -->
+<!--                     <img src="./Big-Query01.gif" style="width: 100%; display: block; border-radius: 1.75rem; background-color: #000;"/> -->
                 </div>
             </div>
-        </div>
+        </section>
+  </div>
 
-    <div class="position-absolute top-0 start-0 w-100 h-100" style="pointer-events:none;
-              background:linear-gradient(180deg, rgba(255,255,255,.08), transparent 180px);"></div>
+  <!-- =======================
+  NEW BI INTEGRATIONS SHOWCASE
+  ======================== -->
+  <section style="padding: 100px 24px; background-color: #0b1220; border-top: 1px solid #1f2937; border-bottom: 1px solid #1f2937;">
+    <div style="max-width:1200px; margin:0 auto;">
+
+      <!-- Section Intro -->
+      <div style="text-align: center; max-width: 750px; margin: 0 auto 72px auto;">
+        <h2 style="font-size: clamp(2.5rem, 5vw, 3rem); font-weight: 800; letter-spacing: -2px; margin: 0 0 16px 0; color: #e7eaf2;">
+          Activate Your Analytics Stack
+        </h2>
+        <p style="font-size: 1.15rem; color: #a9b8d2; line-height: 1.6;">
+          Your BigQuery data is the fuel. These are the engines. Connect your clean, structured Odoo data to the platform of your choice and start building dashboards that drive decisions.
+        </p>
       </div>
-          <div class="d-flex flex-wrap gap-2 mt-3 justify-content-center">
-            <span class="badge" style="background:#12182a;border:1px solid #1c2236;color:#a3b3e2; padding:8px 12px;">&#128269; Vector search</span>
-            <span class="badge" style="background:#12182a;border:1px solid #1c2236;color:#a3b3e2; padding:8px 12px;">&#128196; Page citations</span>
-            <span class="badge" style="background:#12182a;border:1px solid #1c2236;color:#a3b3e2; padding:8px 12px;">&#9889; Fast UX</span>
+
+      <!-- Power BI Panel -->
+      <div id="powerbi" style="margin-bottom: 48px;">
+        <div class="row g-5 align-items-center" style="padding: 28px; border-radius: 24px; background: linear-gradient(145deg, #111827, #0c121e); border: 1px solid #1f2937; box-shadow: 0 50px 120px -30px rgba(0,0,0,.7);">
+          <!-- Video Column -->
+          <div class="col-lg-6">
+             <div style="border-radius: 16px; padding: 3px; background: linear-gradient(120deg, rgba(255, 215, 0, .3), rgba(255, 215, 0, 0.05));">
+               <video autoplay loop muted playsinline preload="auto" style="width: 100%; display: block; border-radius: 14px; background-color: #000;">
+                  <source src="./powerbiconnection.webm" type="video/webm">
+                  Your browser does not support the video tag.
+               </video>
+             </div>
+          </div>
+          <!-- Text Column -->
+          <div class="col-lg-6">
+            <div style="display:inline-block; padding:8px 14px; border-radius:999px; font-weight:700; margin-bottom:16px; border:1px solid rgba(255,215,0,.4); color:#ffd700; background-color: rgba(255,215,0,.1);">&#128640; POWER BI + BIGQUERY</div>
+            <h3 style="margin:0 0 10px 0; color:#e7eaf2; font-size:32px; font-weight:700;">Build a Production-Ready Model</h3>
+            <p style="margin:0 0 20px 0; color:#aebccf; line-height:1.7; font-size:16px;">The definitive path for building scalable, high-performance BI on an Odoo + BigQuery stack.</p>
+            <div style="border-radius:14px; background-color:#0f172a; border:1px solid #1e293b; padding:18px;">
+              <div style="font-weight:700; color:#d7e0ef; margin-bottom:10px; font-size:15px;">Key Plays</div>
+              <ul style="margin:0 0 0 20px; padding:0; color:#c8d6ea; line-height:1.8; font-size:15px;">
+                <li>Use the native <strong>BigQuery Connector</strong> (Import Mode).</li>
+                <li>Enable <strong>Incremental Refresh</strong> on date fields to slash refresh times.</li>
+                <li>Centralize all logic in <strong>DAX Measures</strong> for a single source of truth.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
 
-  <!-- SCREENSHOTS -->
-  <section id="screenshots" class="container py-5" style="background-color: #1b2236;">
-    <div class="text-center mb-5">
-        <h2 class="h4 fw-bold mb-3" style="font-size: clamp(2rem, 4vw, 32px); color:#e9ecff; text-shadow: 0 3px 10px rgba(108,92,231,0.3);">Beautiful, Integrated UI & Powerful Features</h2>
-        <p class="lead" style="color:#b7c3ff; max-width: 800px; margin: 0 auto; font-size: clamp(0.9rem, 2vw, 1.15rem);">
-            Experience a clean chat interface on the left, grounded answers with page-level citations, and flexible configurations on the right. Every detail crafted for clarity and efficiency.
-        </p>
-    </div>
-
-    <div class="row g-5 justify-content-center" style="padding: 10px;">
-        <!-- Main Chat UI Screenshot -->
-        <div class="col-12">
-            <div class="card bg-transparent border-0 rounded-4"
-                 style="background-color:#0e1422; border:1px solid #1a2130 !important;
-                        box-shadow:0 25px 70px rgba(0,0,0,.5), 0 0 60px rgba(108,92,231,0.35);
-                        transition: transform 0.3s ease-in-out;"
-                 onmouseover="this.style.transform='translateY(-10px) scale(1.005)'" onmouseout="this.style.transform='translateY(0) scale(1)'">
-                <img src="./pdf.png" alt="Main PDF RAG Chat Interface" class="img-fluid w-100 d-block rounded-4"
-                     style="border:1px solid #2a3350; box-shadow:0 10px 30px rgba(0,0,0,.25);"/>
-                <!-- <div class="card-body text-center mt-3">
-                    <p class="lead mb-0" style="color:#009688; font-weight: 600;">&#128172; Engage in natural conversations, get instant answers from your PDFs.</p>
-                </div> -->
+      <!-- Looker Studio Panel -->
+      <div id="looker" style="margin-bottom: 48px;">
+        <div class="row g-5 align-items-center" style="padding: 28px; border-radius: 24px; background: linear-gradient(145deg, #111827, #0c121e); border: 1px solid #1f2937; box-shadow: 0 50px 120px -30px rgba(0,0,0,.7);">
+          <!-- Image Column -->
+          <div class="col-lg-6">
+            <div style="border-radius: 16px; padding: 3px; background: linear-gradient(120deg, rgba(66, 133, 244, .3), rgba(66, 133, 244, 0.05));">
+              <img src="./lookerconnection.png" alt="Looker Studio Feature" style="width: 100%; display:block; border-radius:14px;">
             </div>
-        </div>
-
-        <!-- Sources Panel Screenshot -->
-        <div class="col-lg-12">
-            <div class="card bg-transparent border-0 rounded-4 h-100"
-                 style="background-color:#0e1422; border:1px solid #1a2130 !important;
-                        box-shadow:0 15px 40px rgba(0,0,0,.4), 0 0 30px rgba(68, 182, 203, 0.25);
-                        transition: transform 0.3s ease-in-out;"
-                 onmouseover="this.style.transform='translateY(-8px) scale(1.005)'" onmouseout="this.style.transform='translateY(0) scale(1)'">
-                <img src="pdf1.png" alt="Sources with page and snippet" class="img-fluid w-100 d-block rounded-top-4"
-                     style="border-bottom:1px solid #2a3350; box-shadow:0 8px 25px rgba(0,0,0,.2);"/>
-                <div class="card-body text-center mt-3">
-                    <p class="lead mb-0" style="color:#009688; font-weight: 600;">&#128195; Verifiable answers with precise title, page, and snippet citations.</p>
-                </div>
+          </div>
+          <!-- Text Column -->
+          <div class="col-lg-6">
+            <div style="display:inline-block; padding:8px 14px; border-radius:999px; font-weight:700; margin-bottom:16px; border:1px solid rgba(66, 133, 244, 0.5); color:#8ab4f8; background-color:rgba(66, 133, 244, 0.1);">&#127760; LOOKER STUDIO + BIGQUERY</div>
+            <h3 style="margin:0 0 10px 0; color:#e7eaf2; font-size:32px; font-weight:700;">Ship Insights at High Velocity</h3>
+            <p style="margin:0 0 20px 0; color:#aebccf; line-height:1.7; font-size:16px;">Create beautiful, shareable dashboards that are fast, intuitive, and accessible to your entire team.</p>
+            <div style="border-radius:14px; background-color:#0f172a; border:1px solid #1e293b; padding:18px;">
+              <div style="font-weight:700; color:#d7e0ef; margin-bottom:10px; font-size:15px;">Key Plays</div>
+              <ul style="margin:0 0 0 20px; padding:0; color:#c8d6ea; line-height:1.8; font-size:15px;">
+                <li>Connect directly to BigQuery tables using <strong>Viewer's Credentials</strong> for security.</li>
+                <li>Use BigQuery <strong>Views</strong> to pre-aggregate data and speed up dashboards.</li>
+                <li>Leverage <strong>Data Extracts</strong> for heavy pages to ensure near-instant load times.</li>
+              </ul>
             </div>
+          </div>
         </div>
+      </div>
 
-        <!-- Settings Page Screenshot -->
-        <div class="col-lg-12">
-            <div class="card bg-transparent border-0 rounded-4 h-100"
-                 style="background-color:#0e1422; border:1px solid #1a2130 !important;
-                        box-shadow:0 15px 40px rgba(0,0,0,.4), 0 0 30px rgba(139, 92, 246, 0.25);
-                        transition: transform 0.3s ease-in-out;"
-                 onmouseover="this.style.transform='translateY(-8px) scale(1.005)'" onmouseout="this.style.transform='translateY(0) scale(1)'">
-                <img src="./pdfset.png" alt="Settings page" class="img-fluid w-100 d-block rounded-top-4"
-                     style="border-bottom:1px solid #2a3350; box-shadow:0 8px 25px rgba(0,0,0,.2);"/>
-                <div class="card-body text-center mt-3">
-                    <p class="lead mb-0" style="color:#009688; font-weight: 600;">&#9881;&#65039; Fine-tune settings like model, API keys, and chunking parameters.</p>
-                </div>
+      <!-- Tableau Panel -->
+      <div id="tableau" style="margin-bottom: 48px;">
+        <div class="row g-5 align-items-center" style="padding: 28px; border-radius: 24px; background: linear-gradient(145deg, #111827, #0c121e); border: 1px solid #1f2937; box-shadow: 0 50px 120px -30px rgba(0,0,0,.7);">
+           <!-- Image Column -->
+          <div class="col-lg-6">
+            <div style="border-radius: 16px; padding: 3px; background: linear-gradient(120deg, rgba(232, 117, 46, .3), rgba(232, 117, 46, 0.05));">
+             <img src="./tableauconnection.png" alt="Tableau Feature" style="width: 100%; display:block; border-radius:14px;">
             </div>
+          </div>
+          <!-- Text Column -->
+          <div class="col-lg-6">
+            <div style="display:inline-block; padding:8px 14px; border-radius:999px; font-weight:700; margin-bottom:16px; border:1px solid rgba(232, 117, 46, 0.5); color:#f8b28a; background-color:rgba(232, 117, 46, 0.1);">&#127912; TABLEAU + BIGQUERY</div>
+            <h3 style="margin:0 0 10px 0; color:#e7eaf2; font-size:32px; font-weight:700;">Visual Storytelling & Deep Dives</h3>
+            <p style="margin:0 0 20px 0; color:#aebccf; line-height:1.7; font-size:16px;">Connect Tableau's powerful analytics engine to your BigQuery data for unparalleled data exploration and insight.</p>
+            <div style="border-radius:14px; background-color:#0f172a; border:1px solid #1e293b; padding:18px;">
+              <div style="font-weight:700; color:#d7e0ef; margin-bottom:10px; font-size:15px;">Key Plays</div>
+              <ul style="margin:0 0 0 20px; padding:0; color:#c8d6ea; line-height:1.8; font-size:15px;">
+                <li>Utilize <strong>Live Connections</strong> for real-time data or <strong>Extracts</strong> for performance.</li>
+                <li>Leverage Tableau's relationship model to handle complex joins visually.</li>
+                <li>Publish to Tableau Server or Cloud to share insights across the organization.</li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
   </section>
+  
+  <!-- CORE FEATURES SECTION -->
+  <section style="padding:70px 0; background-color:#030712; border-top:1px solid #0f172a;">
+    <div class="container" style="padding:0 15px;">
+      <div class="row">
+        <div class="col-12 text-center">
+          <span style="display:inline-block; font-size:14px; font-weight:800; color:#a78bfa; background-color:#a78bfa26; border:1px solid #a78bfa66; border-radius:999px; padding:8px 16px; margin-bottom:10px;">POWERFUL FEATURES</span>
+          <h2 style="font-size:34px; font-weight:800; margin:0 0 14px 0; color:#c4b5fd;">Unmatched Control Over Your Data Pipeline</h2>
+          <p style="font-size:16px; color:#9ca3af; max-width:860px; margin:0 auto 22px;">Go beyond simple data dumps. Our connector gives you the tools to build an efficient, cost-effective, and automated data sync solution.</p>
+        </div>
+      </div>
 
-  <!-- HOW IT WORKS -->
-  <section id="how" class="container py-5" style="background-color:#101625; border-top:1px solid #1f2937; border-bottom:1px solid #1f2937;">
-    <div class="text-center mb-5">
-        <span class="badge rounded-pill" style="background:#22283a; border:1px solid #323d57; color:#a3b3e2; padding:8px 16px; margin-bottom:15px;">UNDER THE HOOD</span>
-        <h2 class="h4 fw-bold mb-3" style="font-size: clamp(2rem, 4vw, 32px); color:#e9ecff; text-shadow: 0 3px 10px rgba(108,92,231,0.3);">Seamlessly Intelligent: The Niyu PDF RAG Workflow</h2>
-        <p class="lead" style="color:#b7c3ff; max-width: 800px; margin: 0 auto; font-size: clamp(0.9rem, 2vw, 1.15rem);">
-            From document ingestion to precise answers, understand the powerful steps Niyu PDF RAG takes to deliver accurate, grounded insights.
-        </p>
-    </div>
-    <div class="row g-4">
-      <div class="col-md-6">
-        <div class="p-4 rounded-4 h-100 d-flex flex-column"
-             style="background-color:#0f1424;border:1px solid #1b2236; box-shadow:0 8px 20px rgba(0,0,0,.3); transition: transform 0.3s ease;"
-             onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-          <h5 class="mb-2" style="font-weight:700; color:#8d79ff; font-size:1.25rem;">&#x2780; 1) Upload & Index</h5>
-          <p class="mb-0" style="color:#b7c3ff; line-height:1.6;">PDFs are intelligently split into manageable chunks. Each chunk is then embedded into a vector representation and securely upserted into Qdrant, using stable UUIDs for precise document, page, and chunk identification.</p>
+      <div class="row g-4" style="margin-top:8px;">
+        <div class="col-12 col-md-4">
+          <div class="d-flex flex-column" style="background-color:#111827; border:1px solid #1f2937; border-radius:16px; padding:24px; height:100%;">
+            <div style="font-size:2rem; color:#a78bfa; margin-bottom:12px;">&#128279;</div>
+            <h4 style="margin:0 0 10px; color:#f9fafb; font-size:18px; font-weight:800;">Precise Record Filtering</h4>
+            <p style="margin:0; color:#9ca3af;">Use standard Odoo domain filters to select exactly which records to export. Sync only active customers, completed orders, or posted invoices, keeping your BigQuery dataset lean and relevant.</p>
+          </div>
         </div>
-      </div>
-      <div class="col-md-6">
-        <div class="p-4 rounded-4 h-100 d-flex flex-column"
-             style="background-color:#0f1424;border:1px solid #1b2236; box-shadow:0 8px 20px rgba(0,0,0,.3); transition: transform 0.3s ease;"
-             onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-          <h5 class="mb-2" style="font-weight:700; color:#68b6c8; font-size:1.25rem;">&#x2781; 2) Ask a Question</h5>
-          <p class="mb-0" style="color:#b7c3ff; line-height:1.6;">Your natural language query is embedded into a vector. We then efficiently retrieve the Top-K most relevant vectors from Qdrant, filter them for optimal context, and carefully construct a token-aware prompt for the LLM.</p>
+        <div class="col-12 col-md-4">
+          <div class="d-flex flex-column" style="background-color:#111827; border:1px solid #1f2937; border-radius:16px; padding:24px; height:100%;">
+            <div style="font-size:2rem; color:#a78bfa; margin-bottom:12px;">&#128200;</div>
+            <h4 style="margin:0 0 10px; color:#f9fafb; font-size:18px; font-weight:800;">Targeted Column Selection</h4>
+            <p style="margin:0; color:#9ca3af;">Why export everything? Choose exactly which fields to send to BigQuery. This targeted approach accelerates exports, simplifies your data models, and directly reduces storage costs.</p>
+          </div>
         </div>
-      </div>
-      <div class="col-md-6">
-        <div class="p-4 rounded-4 h-100 d-flex flex-column"
-             style="background-color:#0f1424;border:1px solid #1b2236; box-shadow:0 8px 20px rgba(0,0,0,.3); transition: transform 0.3s ease;"
-             onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-          <h5 class="mb-2" style="font-weight:700; color:#e0ac5d; font-size:1.25rem;">&#x2782; 3) Grounded Answer</h5>
-          <p class="mb-0" style="color:#b7c3ff; line-height:1.6;">OpenAI processes your query strictly based on the provided document context. This ensures answers are factual and directly supported by your PDFs. If information isn't found, the AI transparently replies &#8220;I don&#8217;t know.&#8221;</p>
-        </div>
-      </div>
-      <div class="col-md-6">
-        <div class="p-4 rounded-4 h-100 d-flex flex-column"
-             style="background-color:#0f1424;border:1px solid #1b2236; box-shadow:0 8px 20px rgba(0,0,0,.3); transition: transform 0.3s ease;"
-             onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-          <h5 class="mb-2" style="font-weight:700; color:#7ec856; font-size:1.25rem;">&#x2783; 4) Citations</h5>
-          <p class="mb-0" style="color:#b7c3ff; line-height:1.6;">Every answer is complemented with clear citations, showing the PDF title, exact page number, and a concise snippet from the source document. This allows for quick and effortless verification of the AI&#8217;s response.</p>
+        <div class="col-12 col-md-4">
+          <div class="d-flex flex-column" style="background-color:#111827; border:1px solid #1f2937; border-radius:16px; padding:24px; height:100%;">
+            <div style="font-size:2rem; color:#a78bfa; margin-bottom:12px;">&#9203;</div>
+            <h4 style="margin:0 0 10px; color:#f9fafb; font-size:18px; font-weight:800;">Incremental & Automated Syncs</h4>
+            <p style="margin:0; color:#9ca3af;">Set a schedule and sync only new or changed records since the last run. Keep your BI dashboards updated automatically without costly full-table reloads, saving time, bandwidth, and processing costs.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- INSTALL -->
-  <section id="install" class="container py-5" style="background-color:#0b0c10;">
-    <div class="text-center mb-5">
-        <span class="badge rounded-pill" style="background:#22283a; border:1px solid #323d57; color:#a3b3e2; padding:8px 16px; margin-bottom:15px;">GET STARTED</span>
-        <h2 class="h4 fw-bold mb-3" style="font-size: clamp(2rem, 4vw, 32px); color:#e9ecff; text-shadow: 0 3px 10px rgba(108,92,231,0.3);">Install &amp; Configure: Unlock Your Data in Minutes</h2>
-        <p class="lead" style="color:#b7c3ff; max-width: 800px; margin: 0 auto; font-size: clamp(0.9rem, 2vw, 1.15rem);">
-            Follow these straightforward steps to integrate Niyu PDF RAG into your Odoo instance and start querying your documents.
-        </p>
+  <!-- SCHEMA HANDLING SECTION -->
+  <section style="padding: 100px 0; background-color:#0b1220; border-top:1px solid #0f172a;">
+    <div class="container" style="padding:0 15px;">
+        <div class="row align-items-center g-5">
+            <div class="col-12 col-lg-6">
+                <span style="display:inline-block; font-size:14px; font-weight:800; color:#67e8f9; background-color:#22d3ee26; border:1px solid #22d3ee66; border-radius:999px; padding:8px 16px; margin-bottom:10px;">SMART DATA MAPPING</span>
+                <h2 style="font-size: clamp(2.2rem, 5vw, 2.8rem); font-weight:800; margin:0 0 14px 0; color:#a5f3fc;">Intelligent Schema Handling</h2>
+                <p style="font-size:1.15rem; color:#9ca3af; margin-bottom:24px;">Our connector automatically translates complex Odoo fields into clean, query-ready columns in BigQuery, saving you hours of data wrangling.</p>
+                <ul style="color: #e5e7eb; padding-left: 20px; font-size: 1.05rem;">
+                  <li style="margin-bottom:12px;"><strong style="color:#67e8f9;">Many2one Fields:</strong> Automatically exports the related record's name and ID (e.g., `partner_id`, `partner_name`).</li>
+                  <li style="margin-bottom:12px;"><strong style="color:#67e8f9;">Selection Fields:</strong> Converts internal keys to human-readable labels (e.g., `state: 'draft'` becomes `state: 'Draft'`).</li>
+                  <li style="margin-bottom:12px;"><strong style="color:#67e8f9;">Date & Datetime:</strong> Ensures proper ISO formatting for seamless use in BigQuery time-series analysis.</li>
+                </ul>
+            </div>
+            <div class="col-12 col-lg-6">
+                 <img src="./schema.png" alt="Schema handling example" style="width: 100%; border-radius: 16px; display: block; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.8), 0 0 0 1px #374151;">
+            </div>
+        </div>
     </div>
-    <div class="row g-4 justify-content-center">
-      <div class="col-lg-7">
-        <div class="p-4 rounded-4 h-100"
-             style="background-color:#0f1424;border:1px solid #1b2236; box-shadow:0 8px 20px rgba(0,0,0,.3); transition: transform 0.3s ease;"
-             onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-          <h5 style="font-weight:700; color:#e9ecff; font-size:1.25rem; margin-bottom:15px;">Requirements & Quickstart</h5>
-          <h6 style="font-weight:600; color:#c7d2ff; margin-bottom:10px;">Dependencies:</h6>
-          <ul class="mb-4" style="color:#d5defa; line-height:1.8; padding-left:25px; list-style-type:'&#x2714; ';">
-            <li>Odoo 18 (community or enterprise)</li>
-            <li>Python libraries: <code style="background-color:#1c2236; padding:3px 7px; border-radius:4px; font-family:monospace;">qdrant_client</code>, <code style="background-color:#1c2236; padding:3px 7px; border-radius:4px; font-family:monospace;">openai</code>, <code style="background-color:#1c2236; padding:3px 7px; border-radius:4px; font-family:monospace;">pypdf</code>, <code style="background-color:#1c2236; padding:3px 7px; border-radius:4px; font-family:monospace;">tiktoken</code></li>
-            <li>Qdrant Cloud cluster &amp; API key</li>
-            <li>OpenAI API key</li>
-          </ul>
-          <h6 style="font-weight:600; color:#c7d2ff; margin-bottom:10px;">Setup Steps:</h6>
-          <pre class="p-4 rounded-3 mb-0"
-               style="background-color:#0b0f1c;border:1px solid #1b2236;color:#d5defa;white-space:pre-wrap;
-                      font-family: 'Fira Code', 'SF Mono', Consolas, monospace; font-size:0.9rem; line-height:1.4;">
-<span style="color:#68b6c8;"># 1) Copy addon into your Odoo custom_addons/ directory.</span>
-<span style="color:#68b6c8;"># 2) Install required Python dependencies in your Odoo virtual environment:</span>
-<span style="color:#7ec856;">pip install qdrant_client openai pypdf tiktoken</span>
+  </section>
 
-<span style="color:#68b6c8;"># 3) Update Odoo apps list and install "Niyu PDF RAG" from the Apps menu.</span>
-<span style="color:#68b6c8;"># 4) Navigate to Odoo Settings &#8594; PDF RAG:</span>
-<span style="color:#7ec856;">   - Paste your OpenAI API Key.</span>
-<span style="color:#7ec856;">   - Enter your Qdrant Cloud URL.</span>
-<span style="color:#7ec856;">   - Paste your Qdrant API Key.</span>
-<span style="color:#7ec856;">   - Click 'Save'.</span>
-<span style="color:#68b6c8;"># 5) Go to the "PDF RAG" app, open the "Documents" menu:</span>
-<span style="color:#7ec856;">   - Upload your desired PDF file(s).</span>
-<span style="color:#7ec856;">   - Click the "Index Now" button for each document.</span>
-<span style="color:#68b6c8;"># 6) Switch to the "Chat" section within the PDF RAG app and start asking questions!</span>
-          </pre>
+  <!-- SECURITY SECTION -->
+  <section style="
+      background-color: #030712;
+      padding: 120px 0;
+      overflow: hidden;
+      position: relative;
+      border-top: 1px solid #1f2937;
+      background-image: radial-gradient(circle at 0% 100%, rgba(34, 197, 94, 0.1), transparent 40%);
+  ">
+      <div class="container" style="padding: 0 15px;">
+          <div class="row mb-5">
+              <div class="col-12 text-center">
+                  <span style="
+                      display: inline-block;
+                      font-size: 14px;
+                      font-weight: 800;
+                      color: #4ade80;
+                      background-color: rgba(34, 197, 94, 0.1);
+                      border: 1px solid rgba(34, 197, 94, 0.3);
+                      border-radius: 999px;
+                      padding: 8px 16px;
+                      margin-bottom: 16px;
+                  ">ENTERPRISE-GRADE</span>
+                  <h2 style="
+                      font-size: clamp(2.5rem, 5vw, 3.5rem);
+                      font-weight: 800;
+                      margin: 0 0 14px 0;
+                      color: #bbf7d0;
+                      text-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+                  ">Your Data, Your Control.</h2>
+                  <p style="font-size: 1.15rem; color: #9ca3af; max-width: 860px; margin: 0 auto;">
+                      Security is the foundation. Your data flows directly and securely from your Odoo instance to your own Google Cloud project using a dedicated Service Account. No middlemen, no third-party servers.
+                  </p>
+              </div>
+          </div>
+         <div class="row">
+          <div class="col-12">
+              <img src="./fullbig.png" alt="Security configuration in Odoo" style="width: 100%; border-radius: 16px; display: block; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.8), 0 0 0 1px #374151;">
+          </div>
         </div>
       </div>
-      <div class="col-lg-5">
-        <div class="p-4 rounded-4 h-100 d-flex flex-column"
-             style="background-color:#0f1424;border:1px solid #1b2236; box-shadow:0 8px 20px rgba(0,0,0,.3); transition: transform 0.3s ease;"
-             onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-          <h5 style="font-weight:700; color:#e9ecff; font-size:1.25rem; margin-bottom:15px;">&#128270; Important: Reverse Proxy Configuration (for large PDFs)</h5>
-          <p class="mb-3" style="color:#b7c3ff;">To prevent "413 Request Entity Too Large" errors when uploading larger PDF files, adjust your web server (e.g., Nginx) configuration as follows:</p>
-          <pre class="p-4 rounded-3 mb-3"
-               style="background:#0b0f1c;border:1px solid #1b2236;color:#d5defa;white-space:pre-wrap;
-                      font-family: 'Fira Code', 'SF Mono', Consolas, monospace; font-size:0.9rem; line-height:1.4;">
-<span style="color:#68b6c8;"># Example for /etc/nginx/sites-available/odoo configuration file:</span>
-<span style="color:#e0ac5d;">client_max_body_size 100m;</span>
-<span style="color:#e0ac5d;">proxy_read_timeout   600s;</span>
-<span style="color:#e0ac5d;">proxy_send_timeout   600s;</span>
+  </section>
 
-<span style="color:#68b6c8;"># After modifying, test and reload Nginx:</span>
-<span style="color:#7ec856;">sudo nginx -t && sudo systemctl reload nginx</span>
-          </pre>
-          <p class="mb-0" style="color:#b7c3ff;">This configuration allows for larger file uploads and prevents timeouts during the indexing process.</p>
+  <!-- SETUP & CONFIGURATION -->
+  <section style="padding:70px 0; background-color:#0b1220; border-top:1px solid #0f172a;">
+    <div class="container" style="padding:0 15px;">
+      <div class="row">
+        <div class="col-12 text-center">
+          <span style="display:inline-block; font-size:14px; font-weight:800; color:#bbf7d0; background-color:#22c55e26; border:1px solid #22c55e66; border-radius:999px; padding:8px 16px; margin-bottom:10px;">SETUP IN MINUTES</span>
+          <h2 style="font-size:34px; font-weight:800; margin:0 0 14px 0; color:#d1fae5;">Installation & Configuration</h2>
+          <p style="font-size:16px; color:#9ca3af; max-width:860px; margin:0 auto 22px;">From install to your first data sync in just a few clicks.</p>
+        </div>
+      </div>
+      <div class="row g-3">
+        <div class="col-12 col-lg-7">
+          <div style="background-color:#111827; border:1px solid #1f2937; border-radius:16px; padding:18px; height:100%;">
+            <ol style="margin:0; padding-left:22px; color:#e5e7eb;">
+              <li style="margin-bottom:10px;"><strong>Get the module</strong> from the Odoo App Store.</li>
+              <li style="margin-bottom:10px;"><strong>Install</strong> by adding to your custom addons directory or through Odoo.sh.</li>
+              <li style="margin-bottom:10px;"><strong>Create a Google Cloud Service Account</strong> with "BigQuery Data Editor" and "BigQuery Job User" roles.</li>
+               <li style="margin-bottom:10px;"><strong>Upload your Service Account JSON key</strong> in <em>Settings &#8594; BigQuery Connector</em>.</li>
+              <li style="margin-bottom:10px;"><strong>Configure your first export model,</strong> select your columns, set a filter, and run!</li>
+            </ol>
+          </div>
+        </div>
+        <div class="col-12 col-lg-5">
+          <div style="background-color:#0b1220; border:1px solid #1f2937; border-radius:16px; padding:18px;">
+            <h5 style="margin:0 0 8px; color:#f9fafb; font-size:16px; font-weight:800;">Compatibility & Requirements</h5>
+            <ul style="margin:0; padding-left:18px; color:#9ca3af; font-size:14px;">
+              <li>Odoo 14 or later</li>
+              <li>A Google Cloud Platform Account</li>
+              <li>Internet access for API calls</li>
+              <li>Works with On-premise & Cloud hosting</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="container py-5" style="background-color:#101625; border-top:1px solid #1f2937; border-bottom:1px solid #1f2937;">
-    <div class="text-center mb-5">
-        <span class="badge rounded-pill" style="background:#22283a; border:1px solid #323d57; color:#a3b3e2; padding:8px 16px; margin-bottom:15px;">COMMON QUESTIONS</span>
-        <h2 class="h4 fw-bold mb-3" style="font-size: clamp(2rem, 4vw, 32px); color:#e9ecff; text-shadow: 0 3px 10px rgba(108,92,231,0.3);">Your Questions, Answered.</h2>
-        <p class="lead" style="color:#b7c3ff; max-width: 800px; margin: 0 auto; font-size: clamp(0.9rem, 2vw, 1.15rem);">
-            Find quick answers to common queries about Niyu PDF RAG and optimize your experience.
-        </p>
-    </div>
-    <div class="row g-4 justify-content-center">
-      <div class="col-md-4">
-        <div class="p-4 rounded-4 h-100 d-flex flex-column"
-             style="background-color:#0f1424;border:1px solid #1b2236; box-shadow:0 8px 20px rgba(0,0,0,.3); transition: transform 0.3s ease;"
-             onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-          <h5 style="font-weight:700; color:#8d79ff; font-size:1.2rem;">&#10068; Why do I sometimes get &#8220;I don&#8217;t know&#8221;?</h5>
-          <p class="mb-0 mt-3" style="color:#b7c3ff; line-height:1.6;">If retrieval returns no meaningful text (e.g., from scanned PDFs without OCR, or if the information isn't present), the assistant will honestly reply. Ensure PDFs are text-searchable or verify your Qdrant collection's content.</p>
-        </div>
+  <section style="padding: 120px 20px; background-color: #030712; border-top: 1px solid #1f2937;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 80px;">
+        <span style="display: inline-block; background-color: rgba(139, 92, 246, 0.15); color: #a78bfa; padding: 8px 16px; border-radius: 99px; font-weight: 600; margin-bottom: 24px; border: 1px solid rgba(139, 92, 246, 0.4);">FAQ</span>
+        <h2 style="font-size: clamp(2.25rem, 5vw, 3.5rem); line-height: 1.2; font-weight: 700; letter-spacing: -0.03em; margin: 0; color: #a78bfa;">Frequently Asked Questions</h2>
       </div>
-      <div class="col-md-4">
-        <div class="p-4 rounded-4 h-100 d-flex flex-column"
-             style="background-color:#0f1424;border:1px solid #1b2236; box-shadow:0 8px 20px rgba(0,0,0,.3); transition: transform 0.3s ease;"
-             onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-          <h5 style="font-weight:700; color:#68b6c8; font-size:1.2rem;">&#9965; Can I tune token usage and Top-K parameters?</h5>
-          <p class="mb-0 mt-3" style="color:#b7c3ff; line-height:1.6;">Yes! Navigate to <em style="color:#c7d2ff;">Settings &#8594; PDF RAG</em>. You can adjust <em style="color:#c7d2ff;">Top-K</em> (number of vectors to retrieve), <em style="color:#c7d2ff;">Keep Top</em> (best vectors for context), and <em style="color:#c7d2ff;">Answer max tokens</em>. Adjusting these values allows you to fine-tune cost and latency.</p>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="p-4 rounded-4 h-100 d-flex flex-column"
-             style="background-color:#0f1424;border:1px solid #1b2236; box-shadow:0 8px 20px rgba(0,0,0,.3); transition: transform 0.3s ease;"
-             onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
-          <h5 style="font-weight:700; color:#e0ac5d; font-size:1.2rem;">&#128279; How are points identified in Qdrant?</h5>
-          <p class="mb-0 mt-3" style="color:#b7c3ff; line-height:1.6;">We use stable UUIDv5 identifiers for each point in Qdrant. These are generated based on a combination of <code style="background-color:#1c2236; padding:3px 7px; border-radius:4px; font-family:monospace;">doc_id-page-chunk</code>. This ensures that if you re-index a document, existing chunks for the same location are efficiently overwritten, maintaining data integrity.</p>
-        </div>
+      <div style="border-top: 1px solid #374151;">
+        <div style="padding: 32px 0; border-bottom: 1px solid #374151;"><h4 style="font-size: 1.25rem; font-weight: 600; margin: 0 0 12px 0; color: #f9fafb;">What do I need to use this module?</h4><p style="color: #9ca3af; margin: 0;">You will need an active Odoo instance (v14 or later), a Google Cloud account with BigQuery enabled, and a Service Account from that project with "BigQuery Data Editor" and "BigQuery Job User" permissions.</p></div>
+        <div style="padding: 32px 0; border-bottom: 1px solid #374151;"><h4 style="font-size: 1.25rem; font-weight: 600; margin: 0 0 12px 0; color: #f9fafb;">How is my data kept secure?</h4><p style="color: #9ca3af; margin: 0;">Data security is paramount. The connector establishes a direct, encrypted connection between your Odoo server and Google's BigQuery API. Your data is never routed through or stored on any third-party servers. Access is controlled entirely by the Google Cloud Service Account key that you provide and manage.</p></div>
+        <div style="padding: 32px 0; border-bottom: 1px solid #374151;"><h4 style="font-size: 1.25rem; font-weight: 600; margin: 0 0 12px 0; color: #f9fafb;">Does it work with my custom Odoo modules and fields?</h4><p style="color: #9ca3af; margin: 0;">Yes. The connector dynamically reads your Odoo models, including any custom modules you have installed and custom fields you have added. You can select these custom fields for export just like standard Odoo fields.</p></div>
+        <div style="padding: 32px 0; border-bottom: 1px solid #374151;"><h4 style="font-size: 1.25rem; font-weight: 600; margin: 0 0 12px 0; color: #f9fafb;">What are the costs involved?</h4><p style="color: #9ca3af; margin: 0;">You purchase the Odoo to BigQuery Connector module license one-time from the Odoo App Store. The only ongoing operational costs are for your usage of Google BigQuery (for storage and querying), which is billed directly by Google Cloud. There are no additional recurring subscription fees from us.</p></div>
+        <div style="padding: 32px 0; border-bottom: 1px solid #374151;"><h4 style="font-size: 1.25rem; font-weight: 600; margin: 0 0 12px 0; color: #f9fafb;">Can I schedule automatic exports?</h4><p style="color: #9ca3af; margin: 0;">Yes. The module leverages Odoo's built-in automation server (Scheduled Actions). You can configure any export profile to run on a schedule you define, such as hourly, daily, or weekly, enabling fully automated, incremental data syncs.</p></div>
+        <div style="padding: 32px 0; border-bottom: 1px solid #374151;"><h4 style="font-size: 1.25rem; font-weight: 600; margin: 0 0 12px 0; color: #f9fafb;">Where can I find documentation or support?</h4><p style="color: #9ca3af; margin: 0;">Detailed documentation is available on this product page and on our website at <em>https://niyulabs.com</em>. For technical support, please contact us at <em>info@niyulabs.com</em>.</p></div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="container d-flex justify-content-between align-items-center flex-wrap gap-3 py-4"
-          style="color:#9aa6c7; font-size:0.95rem; border-top:1px solid #1f2937; padding-top: 30px !important;">
-    <div style="flex-grow: 1;">&copy; <span id="y"></span> Niyu Labs &#183; PDF RAG</div>
-    <div style="text-align: right; flex-grow: 1;">Made with &#10084;&#65039; for Odoo &#183; OpenAI &#183; Qdrant</div>
-  </footer>
+  <!-- FINAL CTA -->
+  <section style="padding: 120px 20px; background-color: #030712;">
+    <div style="max-width: 1000px; margin: 0 auto; text-align: center; ">
+      <div style="background-color:rgba(139, 92, 246, 0.25); padding: 100px 40px; border-radius: 2rem; border: 1px solid #374151; box-shadow: 0 30px 80px rgba(0,0,0,0.5);">
+        <span style="display: inline-block; background-color: rgba(20, 184, 166, 0.15); color: #2dd4bf; padding: 8px 16px; border-radius: 99px; font-weight: 600; margin-bottom: 24px; border: 1px solid rgba(20, 184, 166, 0.4);">READY TO UNLOCK YOUR DATA?</span>
+        <h2 style="font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.2; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 20px; color:#2dd4bf;">Transforming Odoo Data Integration Starts Here.</h2>
+        <p style="max-width: 700px; margin: 0 auto 50px; color: #b0b0b0; font-size: 1.15rem;">Stop managing data and start using it. Empower your analysts, build powerful dashboards, and drive business growth with a seamless data pipeline.</p>
+        <a href="mailto:info@niyulabs.com" target="_blank" style="display: inline-block; background-color: #ffffff; color: #030712; padding: 18px 36px; font-size: 1.15rem; font-weight: 800; text-decoration: none; border-radius: 99px; transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; box-shadow: 0 8px 20px -5px rgba(0, 0, 0, 0.3), 0 5px 10px -5px rgba(0, 0, 0, 0.2), 0 0 40px 8px rgba(255,255,255,0.25);" onmouseover="this.style.transform='translateY(-7px)'; this.style.boxShadow='0 12px 25px -7px rgba(0,0,0,0.4), 0 8px 15px -7px rgba(0,0,0,0.3), 0 0 50px 10px rgba(255,255,255,0.35)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 20px -5px rgba(0, 0, 0, 0.3), 0 5px 10px -5px rgba(0, 0, 0, 0.2), 0 0 40px 8px rgba(255,255,255,0.25)';">
+          Contact Us: info@niyulabs.com
+        </a>
+      </div>
+    </div>
+  </section>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
-
-  <!-- Bootstrap JS (optional, for components that need JS) -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+</section>
