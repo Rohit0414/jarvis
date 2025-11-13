@@ -29,11 +29,11 @@
     # ✅ Add assets here
     'assets': {
         'web.assets_frontend': [
-            'testing-odoo/static/src/css/bi_tabs.css',
+            'jarvis/static/src/css/bi_tabs.css',
         ],
         # Include in backend too if you want the tabs to work in Settings/kanban, etc.
         'web.assets_backend': [
-            'testing-odoo/static/src/css/bi_tabs.css',
+            'jarvis/static/src/css/bi_tabs.css',
         ],
     },
     'installable': True,
