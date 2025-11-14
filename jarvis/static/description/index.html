@@ -27,6 +27,45 @@
       transform: scale(1);
     }
   }
+
+  /* NEW: Premium Card Style for Sections (Looker, PowerBI, Tableau) */
+  .premium-card {
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    cursor: pointer;
+    box-shadow: 0 20px 60px -15px rgba(0,0,0,.08) !important;
+  }
+
+  .premium-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 40px 120px -30px rgba(0,0,0,0.15), 0 0 0 1px #e5e8ed !important; /* Stronger, lifted shadow on hover */
+  }
+
+  /* NEW: Style for feature boxes */
+  .feature-box {
+    transition: all 0.3s ease;
+    border: 1px solid #e5e8ed !important;
+  }
+
+  .feature-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px -10px rgba(64, 160, 255, 0.2);
+    border-color: rgba(64, 160, 255, 0.4) !important;
+  }
+
+  /* NEW: Subtle 3D tilt for the main video showcase on hover */
+  .video-showcase-container {
+    perspective: 1500px;
+  }
+
+  .video-showcase-wrapper {
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    transform: rotateX(0deg) scale(1);
+  }
+
+  .video-showcase-container:hover .video-showcase-wrapper {
+    transform: rotateX(3deg) scale(1.01);
+    box-shadow: 0 60px 150px -20px rgba(0,0,0,0.2) !important;
+  }
 </style>
 
 <section style="
@@ -42,7 +81,7 @@
   <!-- =======================
   NEW HERO SECTION - Refined Color Palette
   ======================== -->
-  <div style="padding: 180px 20px 140px 20px; text-align: center; overflow: hidden; position: relative; background-color: #fcfcfc;">
+  <div style="padding: 180px 20px 40px 20px; text-align: center; overflow: hidden; position: relative; background-color: #fcfcfc;">
     <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('https://www.transparenttextures.com/patterns/white-prism.png'); opacity: 0.1; z-index: 1;"></div>
     <div class="d-flex flex-column justify-content-center align-items-center" style="max-width: 1000px; margin: 0 auto; position: relative; z-index: 2;">
       <div style="display: inline-block; padding: 10px 22px; border-radius: 999px; font-size: 14px; font-weight: 700; letter-spacing: 0.5px; color: #40a0ff; background-color: rgba(64, 160, 255, 0.1); border: 1px solid rgba(64, 160, 255, 0.3); margin-bottom: 24px;">
@@ -77,9 +116,10 @@
       </div>
 
     </div>
-    <section class="video" style="padding: 0 0 120px 0; perspective: 1500px; background-color: #fcfcfc;">
+    <!-- Hero Video Showcase with 3D Hover Effect -->
+    <div class="video-showcase-container" style="padding: 0 0 120px 0; background-color: #fcfcfc;">
       <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-        <div style="border-radius: 1.75rem; padding: 3px; background-color:  rgba(64, 160, 255, 0.6) !important; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.1) !important; position: relative !important;">
+        <div class="video-showcase-wrapper" style="border-radius: 1.75rem; padding: 3px; background-color:  rgba(64, 160, 255, 0.7) !important; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.1) !important; position: relative !important; will-change: transform, box-shadow;">
           <video autoplay loop muted playsinline preload="auto" style="width: 100%; display: block; border-radius: 1.75rem; background-color: #eee;">
             <source src="./preview.webm" type="video/webm">
             <!-- Fallback: Add your MP4 video here -->
@@ -87,7 +127,7 @@
           </video>
         </div>
       </div>
-    </section>
+    </div>
   </div>
 
   <!-- =======================
@@ -108,7 +148,7 @@
 
       <!-- Power BI Panel -->
       <div id="powerbi" style="margin-bottom: 48px;">
-        <div class="row g-5 align-items-center" style="padding: 28px; border-radius: 24px; background: linear-gradient(145deg, #ffffff, #fcfdff); border: 1px solid #e5e8ed; box-shadow: 0 50px 120px -30px rgba(0,0,0,.08);">
+        <div class="row g-5 align-items-center premium-card" style="padding: 28px; border-radius: 24px; background: linear-gradient(145deg, #ffffff, #fcfdff); border: 1px solid #e5e8ed; will-change: transform, box-shadow;">
           <!-- Text Column -->
           <div class="col-lg-6">
             <div style="display:inline-block; padding:8px 14px; border-radius:999px; font-weight:700; margin-bottom:16px; border:1px solid rgba(64, 160, 255,.4); color:#40a0ff; background-color: rgba(64, 160, 255,.1);">🚀 POWER BI + BIGQUERY</div>
@@ -138,7 +178,7 @@
 
       <!-- Looker Studio Panel -->
       <div id="looker" style="margin-bottom: 48px;">
-        <div class="row g-5 align-items-center" style="padding: 28px; border-radius: 24px; background: linear-gradient(145deg, #ffffff, #fcfdff); border: 1px solid #e5e8ed; box-shadow: 0 50px 120px -30px rgba(0,0,0,.08);">
+        <div class="row g-5 align-items-center premium-card" style="padding: 28px; border-radius: 24px; background: linear-gradient(145deg, #ffffff, #fcfdff); border: 1px solid #e5e8ed; will-change: transform, box-shadow;">
           <!-- Image Column -->
           <div class="col-lg-6">
             <div style="border-radius: 16px; padding: 3px; background: linear-gradient(120deg, rgba(120, 220, 200, .3), rgba(120, 220, 200, 0.05));">
@@ -165,7 +205,7 @@
 
       <!-- Tableau Panel -->
       <div id="tableau" style="margin-bottom: 48px;">
-        <div class="row g-5 align-items-center" style="padding: 28px; border-radius: 24px; background: linear-gradient(145deg, #ffffff, #fcfdff); border: 1px solid #e5e8ed; box-shadow: 0 50px 120px -30px rgba(0,0,0,.08);">
+        <div class="row g-5 align-items-center premium-card" style="padding: 28px; border-radius: 24px; background: linear-gradient(145deg, #ffffff, #fcfdff); border: 1px solid #e5e8ed; will-change: transform, box-shadow;">
           <!-- Text Column -->
           <div class="col-lg-6">
             <div style="display:inline-block; padding:8px 14px; border-radius:999px; font-weight:700; margin-bottom:16px; border:1px solid rgba(255, 223, 0, 0.5); color:#ffd700; background-color:rgba(255, 223, 0, 0.1);">🎨 TABLEAU + BIGQUERY</div>
@@ -205,21 +245,21 @@
 
       <div class="row g-4" style="margin-top:8px;">
         <div class="col-12 col-md-4">
-          <div class="d-flex flex-column" style="background-color:#fefefe; border:1px solid #e5e8ed; border-radius:16px; padding:24px; height:100%;">
+          <div class="d-flex flex-column feature-box" style="background-color:#fefefe; border-radius:16px; padding:24px; height:100%;">
             <div style="font-size:2rem; color:#40a0ff; margin-bottom:12px;">🔗</div>
             <h4 style="margin:0 0 10px; color:#333333; font-size:18px; font-weight:800;">Precise Record Filtering</h4>
             <p style="margin:0; color:#555555;">Gain granular control by using standard Odoo domain filters to select exactly which records to export. Sync only active customers, completed orders, posted invoices, or specific product lines, keeping your BigQuery dataset lean, relevant, and optimized for analysis.</p>
           </div>
         </div>
         <div class="col-12 col-md-4">
-          <div class="d-flex flex-column" style="background-color:#fefefe; border:1px solid #e5e8ed; border-radius:16px; padding:24px; height:100%;">
+          <div class="d-flex flex-column feature-box" style="background-color:#fefefe; border-radius:16px; padding:24px; height:100%;">
             <div style="font-size:2rem; color:#40a0ff; margin-bottom:12px;">📈</div>
             <h4 style="margin:0 0 10px; color:#333333; font-size:18px; font-weight:800;">Targeted Column Selection</h4>
             <p style="margin:0; color:#555555;">Why export everything? Choose exactly which fields (columns) to send to BigQuery. This targeted approach accelerates export times, simplifies your BigQuery data models, and directly reduces your storage and processing costs, ensuring data privacy by design.</p>
           </div>
         </div>
         <div class="col-12 col-md-4">
-          <div class="d-flex flex-column" style="background-color:#fefefe; border:1px solid #e5e8ed; border-radius:16px; padding:24px; height:100%;">
+          <div class="d-flex flex-column feature-box" style="background-color:#fefefe; border-radius:16px; padding:24px; height:100%;">
             <div style="font-size:2rem; color:#40a0ff; margin-bottom:12px;">⏳</div>
             <h4 style="margin:0 0 10px; color:#333333; font-size:18px; font-weight:800;">Incremental & Automated Syncs</h4>
             <p style="margin:0; color:#555555;">Set it and forget it! Configure a schedule and sync only new or changed records since the last run. This intelligent incremental loading keeps your BI dashboards updated automatically in near real-time without costly full-table reloads, saving time, bandwidth, and significant processing costs.</p>
@@ -278,8 +318,8 @@
                       font-size: clamp(2.5rem, 5vw, 3.5rem);
                       font-weight: 800;
                       margin: 0 0 14px 0;
-                      color: #333333;
-                      text-shadow: 0 0 20px rgba(64, 160, 255, 0.1);
+                      color: #40a0ff; /* Changed to primary blue for better impact */
+                      text-shadow: 0 0 20px rgba(64, 160, 255, 0.4); /* Stronger blue glow */
                   ">Your Data, Your Control. Absolutely Secure.</h2>
           <p style="font-size: 1.15rem; color: #555555; max-width: 860px; margin: 0 auto;">
             Security is the foundational pillar of our connector. Your sensitive Odoo data flows directly and securely from your Odoo instance to *your own* Google Cloud project using a dedicated Service Account. This means no middlemen, no third-party servers, and complete ownership and auditability of your data's journey.
@@ -415,7 +455,7 @@
   <!-- FINAL CTA -->
   <section style="padding: 120px 20px; background-color: #f7f9fc;">
     <div style="max-width: 1000px; margin: 0 auto; text-align: center; ">
-      <div style="background-color:rgba(64, 160, 255, 0.1); padding: 100px 40px; border-radius: 2rem; border: 1px solid #e5e8ed; box-shadow: 0 30px 80px rgba(0,0,0,0.05);">
+      <div style="background-color:rgba(64, 160, 255, 0.08); padding: 100px 40px; border-radius: 2rem; border: 1px solid rgba(64, 160, 255, 0.2); box-shadow: 0 50px 100px -20px rgba(0,0,0,0.15);">
         <span style="display: inline-block; background-color: rgba(120, 220, 200, 0.15); color: #40a0ff; padding: 8px 16px; border-radius: 99px; font-weight: 600; margin-bottom: 24px; border: 1px solid rgba(120, 220, 200, 0.4);">READY TO UNLOCK YOUR DATA'S FULL POTENTIAL?</span>
         <h2 style="font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.2; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 20px; color:#40a0ff;">Transforming Odoo Data Integration Starts Here.</h2>
         <p style="max-width: 700px; margin: 0 auto 50px; color: #555555; font-size: 1.15rem;">Stop struggling with manual data exports and start leveraging your Odoo data strategically. Empower your business analysts, build powerful, real-time dashboards, and accelerate data-driven business growth with our seamless, secure, and highly efficient data pipeline solution.</p>
