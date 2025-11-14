@@ -10,7 +10,40 @@
   }
   .premium-card-light:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px -10px rgba(0,0,0,0.15);
+    box-shadow: 0 15px 40px -10px rgba(0,0,0,0.18); /* Stronger shadow on hover */
+    border-color: rgba(79, 70, 229, 0.5) !important;
+  }
+
+  /* NEW: Overlapping Card Style for Section Callouts */
+  .overlapping-callout-container {
+    position: relative;
+    padding-top: 150px; /* Space for the floating image above */
+  }
+
+  .floating-card-top {
+      position: absolute;
+      width: 80%;
+      top: -100px; /* Move far above the image */
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      /* Style to make it pop */
+      background: linear-gradient(135deg, #4f46e5, #7c3aed);
+      color: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 20px 50px -15px rgba(0,0,0,0.4);
+      text-align: center;
+  }
+  
+  /* Styling the max-size image for floating effect */
+  .max-image-floating {
+      transform: perspective(1000px) rotateX(2deg); /* subtle 3D tilt */
+      transition: transform 0.6s ease;
+      box-shadow: 0 40px 80px -20px rgba(0,0,0,0.4), 0 0 50px rgba(79, 70, 229, 0.2);
+  }
+  .max-image-floating:hover {
+      transform: perspective(1000px) rotateX(0deg) scale(1.01);
   }
 </style>
 
@@ -47,7 +80,7 @@
     </div>
   </header>
 
-  <!-- VIDEO -->
+  <!-- VIDEO (Unchanged) -->
   <section class="video" style="padding: 0 0 120px 0; background-color: #ffffff;">
     <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
       <div style="border-radius: 1.75rem; padding: 3px; background-color:  rgba(20, 184, 166, 0.6) !important; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.3) !important; position: relative !important;">
@@ -56,7 +89,7 @@
           <!-- Fallback:
           <source src="static/description/q1.mp4" type="video/mp4">
           -->
-          Your browser does support the video tag.
+          Your browser does not support the video tag.
         </video>
       </div>
     </div>
@@ -70,10 +103,10 @@
   <div style="
     max-width: 1200px; 
     margin: 0 auto;
-    background-color: #f0f4ff; /* NEW LIGHT BLUE BACKGROUND FOR CONTRAST */
+    background-color: #f0f4ff; 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid #4f46e5; /* STRONG BRAND BORDER */
+    border: 1px solid #4f46e5;
     border-radius: 1rem;
     padding: 20px 30px;
     box-shadow: 0 10px 30px -10px rgba(79, 70, 229, 0.2);
@@ -94,7 +127,7 @@
 <!-- END: NEW UPDATE HIGHLIGHT BANNER -->
 <!-- =================================================================== -->
 
-  <!-- NEW SECTION 1: HOW IT WORKS -->
+  <!-- NEW SECTION 1: HOW IT WORKS (Unchanged) -->
 <section style="padding:70px 0; background-color:#f7f9fc; border-top:1px solid #e5e8ed; border-bottom:1px solid #e5e8ed;">
   <div class="container" style="padding:0 15px;">
     <div class="row">
@@ -107,11 +140,11 @@
       </div>
     </div>
 
-    <div class="row g-4" style="margin-top:8px;"> <!-- Increased gap to g-4 -->
+    <div class="row g-4" style="margin-top:8px;">
       <div class="col-12 col-md-4">
-        <div class="d-flex flex-column premium-card-light" style="background-color:#ffffff; border:1px solid #e5e8ed; border-radius:16px; padding:24px; height:100%;"> <!-- Increased padding and added premium-card-light -->
-          <div style="font-size:30px; margin-bottom:10px; color:#4f46e5;">&#128220;</div> <!-- Larger icon -->
-          <h4 style="margin:0 0 8px; color:#333333; font-size:20px; font-weight:800;">1) Understand Your Schema</h4> <!-- Larger font -->
+        <div class="d-flex flex-column premium-card-light" style="background-color:#ffffff; border:1px solid #e5e8ed; border-radius:16px; padding:24px; height:100%;">
+          <div style="font-size:30px; margin-bottom:10px; color:#4f46e5;">&#128220;</div>
+          <h4 style="margin:0 0 8px; color:#333333; font-size:20px; font-weight:800;">1) Understand Your Schema</h4>
           <p style="margin:0; color:#555555;">We read your table/field names and types (including custom modules) to build a context map. No row-level data is ever sent out.</p>
         </div>
       </div>
@@ -176,18 +209,18 @@
 
 
 <!-- =================================================================== -->
-<!-- START: NEW SECTION - UI OVERHAUL & SQL TRANSPARENCY (Alternating Layout) -->
+<!-- START: NEW SECTION - UI OVERHAUL & SQL TRANSPARENCY (STAGGERED/OVERLAPPED LAYOUT) -->
 <!-- =================================================================== -->
 <section style="
     background-color: #ffffff;
-    padding: 120px 0;
+    padding: 120px 0 200px 0; /* Extra padding at the bottom for the next section to overlap */
     overflow: hidden;
     position: relative;
     border-top: 1px solid #e5e8ed;
     background-image: radial-gradient(circle at 50% 100%, rgba(236, 72, 153, 0.05), transparent 50%);
 ">
     <div class="container" style="padding: 0 15px;">
-        <!-- Section Header -->
+        <!-- Section Header (Unchanged) -->
         <div class="row mb-5">
             <div class="col-12 text-center">
                 <span style="
@@ -209,43 +242,56 @@
                     color: #333333;
                     text-shadow: 0 0 10px rgba(0,0,0,0.1);
                 ">Beauty, Meet Brains. The All-New Interface.</h2>
-                <p style="font-size: 1.15rem; color: #555555; max-width: 860px; margin: 0 auto;">
+                <p style="font-size: 1.15rem; color: #555555; max-width: 860px; margin: 0 auto 80px;">
                     We didn't just make it look better; we made it smarter and more transparent. Experience our sleekest design yet, and for the first time ever, see the exact SQL query generated for every question you ask. No more black box. Validate the logic, learn how it works, and trust the results.
                 </p>
             </div>
         </div>
 
-        <!-- NEW ALTERNATING LAYOUT (4/8 Split, Text on Right) -->
-        <div class="row g-5 align-items-center">
+        <!-- NEW VISUAL LAYOUT -->
+        <div class="row g-4">
             
-            <!-- Left Side: Image/Screenshot (MAXIMIZED to col-lg-8) -->
-            <div class="col-12 col-lg-8">
-                <div style="position: relative;">
-                    <img src="./sql.png" alt="The new Niyu AI UI showing visible SQL queries" style="
-                        width: 100%;
-                        border-radius: 16px;
-                        display: block;
-                        border: 1px solid #e5e8ed;
-                        box-shadow: 0 30px 60px -15px rgba(0,0,0,0.3), 0 0 40px rgba(236, 72, 153, 0.1);
-                    ">
+            <!-- Floating Top Card (Breaks the flow) -->
+            <div class="col-12">
+                <div class="floating-card-top" style="
+                    background: linear-gradient(135deg, #4f46e5, #7c3aed); /* Strong, visible background */
+                    top: 0px; /* Aligns with the end of the text above */
+                    width: 70%; /* Smaller, more elegant box */
+                    padding: 20px 30px;
+                ">
+                    <h4 style="color:white; font-size:1.5rem; font-weight:800; margin-bottom:5px;">Introducing Total SQL Transparency</h4>
+                    <p style="color:rgba(255,255,255,0.9); margin:0;">Every result is an open book. See the query, trust the data.</p>
                 </div>
             </div>
 
-            <!-- Right Side: Text Callouts (SHRUNK to col-lg-4) -->
-            <div class="col-12 col-lg-4">
-                <div class="row g-4">
-                    <div class="col-12">
-                        <div class="premium-card-light" style="background-color:#fefefe; border:1px solid #e5e8ed; border-radius:16px; padding:24px; height:100%;">
+            <!-- Image (The Star) -->
+            <div class="col-12">
+                <img src="./sql.png" alt="The new Niyu AI UI showing visible SQL queries" class="max-image-floating" style="
+                    width: 100%;
+                    border-radius: 20px; /* Larger radius */
+                    display: block;
+                    margin-top: -80px; /* Overlap with the card above */
+                    position: relative;
+                    z-index: 5;
+                    border: 1px solid #f9fafb;
+                ">
+            </div>
+
+            <!-- Feature Cards (Staggered Below Image) -->
+            <div class="col-12" style="margin-top: -100px; position: relative; z-index: 15;">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-12 col-md-6 d-flex">
+                        <div class="premium-card-light" style="background-color:#fefefe; border:2px solid #ec4899; border-radius:16px; padding:30px; height:100%; width:100%;">
                             <div style="font-size: 2rem; color: #ec4899; margin-bottom: 12px;">&#10024;</div>
-                            <h4 style="color:#333333; font-size:1.25rem; font-weight:700; margin-bottom:12px;">A Stunning New Look</h4>
-                            <p style="color:#555555; font-size:1rem;">Clean, modern, and fast. The interface has been completely redesigned to feel like a native, premium part of your Odoo experience. Data is presented with clarity, making insights jump off the screen.</p>
+                            <h4 style="color:#333333; font-size:1.5rem; font-weight:700; margin-bottom:12px;">A Stunning New Look</h4>
+                            <p style="color:#555555; font-size:1.1rem;">Clean, modern, and fast. The interface has been completely redesigned to feel like a native, premium part of your Odoo experience. Data is presented with clarity, making insights jump off the screen.</p>
                         </div>
                     </div>
-                    <div class="col-12">
-                         <div class="premium-card-light" style="background-color:#fefefe; border:1px solid #e5e8ed; border-radius:16px; padding:24px; height:100%;">
-                            <div style="font-size: 2rem; color: #ec4899; margin-bottom: 12px;">&#128065;</div>
-                            <h4 style="color:#333333; font-size:1.25rem; font-weight:700; margin-bottom:12px;">Total SQL Transparency</h4>
-                            <p style="color:#555555; font-size:1rem;">Trust is earned, not given. Every answer now includes an expandable <strong>Show SQL</strong> option. See the raw PostgreSQL query we generated and executed in your database. It's the ultimate proof of accuracy and security.</p>
+                    <div class="col-12 col-md-6 d-flex">
+                         <div class="premium-card-light" style="background-color:#fefefe; border:2px solid #4f46e5; border-radius:16px; padding:30px; height:100%; width:100%;">
+                            <div style="font-size: 2rem; color: #4f46e5; margin-bottom: 12px;">&#128065;</div>
+                            <h4 style="color:#333333; font-size:1.5rem; font-weight:700; margin-bottom:12px;">Total SQL Transparency</h4>
+                            <p style="color:#555555; font-size:1.1rem;">Trust is earned, not given. Every answer now includes an expandable <strong>Show SQL</strong> option. See the raw PostgreSQL query we generated and executed in your database. It's the ultimate proof of accuracy and security.</p>
                         </div>
                     </div>
                 </div>
@@ -259,11 +305,11 @@
 
 
   <!-- =================================================================== -->
-<!-- START: NEW SECTION - DYNAMIC CHARTING & VISUALIZATION (Alternating Layout) -->
+<!-- START: NEW SECTION - DYNAMIC CHARTING & VISUALIZATION (Staggered Layout) -->
 <!-- =================================================================== -->
 <section style="
     background-color: #f0f4ff; /* NEW LIGHT BLUE BACKGROUND */
-    padding: 120px 0;
+    padding: 120px 0 100px 0;
     overflow: hidden;
     position: relative;
     border-top: 1px solid #e5e8ed;
@@ -291,59 +337,60 @@
                     color: #333333;
                     text-shadow: 0 0 10px rgba(0,0,0,0.1);
                 ">Click. See. Understand.</h2>
-                <p style="font-size: 1.15rem; color: #555555; max-width: 860px; margin: 0 auto;">
+                <p style="font-size: 1.15rem; color: #555555; max-width: 860px; margin: 0 auto 80px;">
                     Every answer is now a potential dashboard. With a single click on <strong>Show Charts</strong>, Niyu AI intelligently analyzes your results and automatically generates the most effective visualizations—be it a bar chart for comparisons, a line chart for trends, or a pie chart for proportions. Stop interpreting tables and start seeing the story in your data.
                 </p>
             </div>
         </div>
 
-        <!-- NEW ALTERNATING LAYOUT (4/8 Split, Image on Left) -->
-        <div class="row g-5 align-items-center">
+        <!-- NEW VISUAL LAYOUT (Staggered/Floating) -->
+        <div class="row g-4">
             
-            <!-- Left Side: Image/Screenshot (MAXIMIZED to col-lg-8) -->
+            <!-- Image (Left Side) -->
             <div class="col-12 col-lg-8 order-lg-1">
                 <div class="row g-4">
                     <div class="col-12">
-                        <img src="./cha.png" alt="Niyu AI response with a 'Show Charts' button" style="
+                        <img src="./cha.png" alt="Niyu AI response with a 'Show Charts' button" class="max-image-floating" style="
                             width: 100%;
-                            border-radius: 16px;
+                            border-radius: 20px;
                             display: block;
                             border: 1px solid #e5e8ed;
-                            box-shadow: 0 30px 60px -15px rgba(0,0,0,0.3), 0 0 40px rgba(45, 212, 191, 0.1);
                         ">
                     </div>
                     <div class="col-12">
-                        <img src="./charts.png" alt="Niyu AI displaying generated charts like bar, line, and pie" style="
+                        <img src="./charts.png" alt="Niyu AI displaying generated charts like bar, line, and pie" class="max-image-floating" style="
                             width: 100%;
-                            border-radius: 16px;
+                            border-radius: 20px;
                             display: block;
                             border: 1px solid #e5e8ed;
-                            box-shadow: 0 30px 60px -15px rgba(0,0,0,0.3), 0 0 40px rgba(45, 212, 191, 0.1);
+                            margin-top: -100px; /* Overlap the image above */
+                            position: relative;
+                            z-index: 5;
                         ">
                     </div>
                 </div>
             </div>
             
-            <!-- Right Side: Text Callouts (SHRUNK to col-lg-4) -->
+            <!-- Right Side: Text Callouts (Staggered) -->
             <div class="col-12 col-lg-4 order-lg-2">
-                 <div class="row g-4">
+                 <div class="row g-4" style="margin-top: 150px;"> <!-- Pushed down to align with the staggered images -->
                     <div class="col-12">
-                        <div class="premium-card-light" style="background-color:#ffffff; border:1px solid #e5e8ed; border-radius:16px; padding:24px; height:100%;">
+                        <div class="premium-card-light" style="background-color:#ffffff; border:2px solid #2dd4bf; border-radius:16px; padding:24px; height:100%;">
                             <div style="font-size: 2rem; color: #2dd4bf; margin-bottom: 12px;">&#128202;</div>
                             <h4 style="color:#333333; font-size:1.25rem; font-weight:700; margin-bottom:12px;">Automatic Chart Selection</h4>
                             <p style="color:#555555; font-size:1rem;">Niyu intelligently picks the best chart type (Bar, Line, Pie, etc.) based on your data structure to provide the clearest insights instantly.</p>
                         </div>
                     </div>
                     <div class="col-12">
-                         <div class="premium-card-light" style="background-color:#ffffff; border:1px solid #e5e8ed; border-radius:16px; padding:24px; height:100%;">
-                            <div style="font-size: 2rem; color: #2dd4bf; margin-bottom: 12px;">&#128279;</div>
+                         <div class="premium-card-light" style="background-color:#ffffff; border:2px solid #4f46e5; border-radius:16px; padding:24px; height:100%;">
+                            <div style="font-size: 2rem; color: #4f46e5; margin-bottom: 12px;">&#128279;</div>
                             <h4 style="color:#333333; font-size:1.25rem; font-weight:700; margin-bottom:12px;">Interactive & Sharable</h4>
                             <p style="color:#555555; font-size:1rem;">Hover over data points for details, and export your charts to PDF or CSV, making it easy to share your findings with the entire team.</p>
                         </div>
                     </div>
                     <div class="col-12">
-                         <div class="premium-card-light" style="background-color:#ffffff; border:1px solid #e5e8ed; border-radius:16px; padding:24px; height:100%;">
-                            <div style="font-size: 2rem; color: #2dd4bf; margin-bottom: 12px;">&#128161;</div>
+                         <div class="premium-card-light" style="background-color:#ffffff; border:2px solid #f97316; border-radius:16px; padding:24px; height:100%;">
+                            <div style="font-size: 2rem; color: #f97316; margin-bottom: 12px;">&#128161;</div>
                             <h4 style="color:#333333; font-size:1.25rem; font-weight:700; margin-bottom:12px;">From Insight to Action</h4>
                             <p style="color:#555555; font-size:1rem;">Visualizing trends and outliers helps you make faster, more confident decisions directly from your Odoo data without any extra steps.</p>
                         </div>
@@ -358,7 +405,7 @@
 <!-- =================================================================== -->
 
 
-    <!-- CUSTOM KEYWORD MAPPING -->
+    <!-- CUSTOM KEYWORD MAPPING (Staggered Layout) -->
 <section style="padding: 100px 0; background-color:#ffffff; border-top:1px solid #e5e8ed; border-bottom:1px solid #e5e8ed;">
   <div class="container" style="padding:0 15px;">
       <!-- Section Header -->
@@ -366,11 +413,11 @@
           <div class="col-12 text-center">
               <span style="display:inline-block; font-size:14px; font-weight:800; color:#d97706; background-color:#fef3c7; border:1px solid #d97706; border-radius:999px; padding:8px 16px; margin-bottom:10px;">POWERFUL CUSTOMIZATION</span>
               <h2 style="font-size: clamp(2.2rem, 5vw, 2.8rem); font-weight:800; margin:0 0 14px 0; color:#333333;">Your Business, Your Terms. Make the AI Adapt.</h2>
-              <p style="font-size:1.15rem; color:#555555; max-width:860px; margin:0 auto;">Why should your team learn Odoo's technical jargon? It's time the AI learned yours. Whether you call a `stock.picking` a "dispatch" or a `helpdesk.ticket` a "case," the Custom Keyword Map acts as your personal translator. It seamlessly syncs Niyu AI with your company's unique vocabulary, making every query intuitive and instantly understood.</p>
+              <p style="font-size:1.15rem; color:#555555; max-width:860px; margin:0 auto 80px;">Why should your team learn Odoo's technical jargon? It's time the AI learned yours. Whether you call a `stock.picking` a "dispatch" or a `helpdesk.ticket` a "case," the Custom Keyword Map acts as your personal translator. It seamlessly syncs Niyu AI with your company's unique vocabulary, making every query intuitive and instantly understood.</p>
           </div>
       </div>
 
-      <!-- NEW ALTERNATING LAYOUT (4/8 Split, Text on Left) -->
+      <!-- NEW ALTERNATING LAYOUT (4/8 Split, Image on Right) -->
       <div class="row g-5 align-items-center">
 
         <!-- Left Side: Text Callouts (SHRUNK to col-lg-4) -->
@@ -387,14 +434,10 @@
                         <p style="margin:0 0 4px 0; color:#333333; font-weight:600;">&#127757; Democratize Data Access</p>
                         <p style="margin:0; color:#555555; font-size:0.95rem;">Unlock insights for everyone, not just the experts. Your sales team can ask about "shipments" and HR can query "new hires" using the language they already know. No Odoo expertise required.</p>
                     </div>
-                    <div>
-                        <p style="margin:0 0 4px 0; color:#333333; font-weight:600;">&#9889; Work at the Speed of Thought</p>
-                        <p style="margin:0; color:#555555; font-size:0.95rem;">Stop rephrasing and start getting answers. When the AI understands you perfectly the first time, you eliminate friction and accelerate your entire decision-making process.</p>
-                    </div>
                 </div>
             </div>
             <div class="col-12">
-                <div class="premium-card-light" style="background-color:#fefefe; border:1px solid #e5e8ed; border-radius:16px; padding:24px; height:100%;">
+                <div class="premium-card-light" style="background-color:#fefefe; border:2px solid #d97706; border-radius:16px; padding:24px; height:100%;">
                     <h4 style="color:#333333; font-size:1.25rem; font-weight:700; margin-bottom:16px;">The 30-Second Setup</h4>
                     <p style="margin:0 0 16px; color:#555555; font-size:0.95rem;">This isn't complex coding; it's just creating a simple dictionary for the AI. In <em>Settings → Niyu AI Analyst</em>, you'll find a text box where you can instantly map your business terms to their corresponding Odoo models. It takes seconds to set up, but the impact is permanent.</p>
                     <div style="background-color:#f7f9fc; border:1px solid #e5e8ed; border-radius:12px; padding:16px;">
@@ -411,7 +454,13 @@
           </div>
         <!-- Right Side: Image/Screenshot (MAXIMIZED to col-lg-8) -->
         <div class="col-12 col-lg-8 order-lg-2">
-            <img src="./custom.png" alt="Custom Keyword Mapping Configuration in Odoo Settings" style="width: 100%; border-radius: 16px; display: block; border: 1px solid #e5e8ed; box-shadow: 0 30px 60px -15px rgba(0,0,0,0.3);">
+            <img src="./custom.png" alt="Custom Keyword Mapping Configuration in Odoo Settings" class="max-image-floating" style="
+                width: 100%; 
+                border-radius: 20px; 
+                display: block; 
+                border: 1px solid #e5e8ed; 
+                margin-top: 150px; /* Pushed down for visual stagger */
+            ">
         </div>
       </div>
   </div>
@@ -451,32 +500,32 @@
                     color: #333333;
                     text-shadow: 0 0 10px rgba(0,0,0,0.1);
                 ">Export with a Click.</h2>
-                <p style="font-size: 1.15rem; color: #555555; max-width: 860px; margin: 0 auto;">
+                <p style="font-size: 1.15rem; color: #555555; max-width: 860px; margin: 0 auto 80px;">
                     Your insights shouldn't be trapped in a chat window. Every response from Niyu AI comes with one-click export buttons, allowing you to instantly generate professional PDF reports or CSV files for deeper analysis in your favorite tools.
                 </p>
             </div>
         </div>
 
-        <!-- NEW ALTERNATING LAYOUT (4/8 Split, Image on Right) -->
+        <!-- NEW ALTERNATING LAYOUT (4/8 Split, Image on Left) -->
         <div class="row g-5 align-items-center">
 
             <!-- Left Side: Image/Screenshot (MAXIMIZED to col-lg-8) -->
-            <div class="col-12 col-lg-8">
-                <img src="./newuipdf.png" alt="Custom Keyword Mapping Configuration in Odoo Settings" style="width: 100%; border-radius: 16px; display: block; border: 1px solid #e5e8ed; box-shadow: 0 30px 60px -15px rgba(0,0,0,0.3);">
+            <div class="col-12 col-lg-8 order-lg-1">
+                <img src="./newuipdf.png" alt="Custom Keyword Mapping Configuration in Odoo Settings" class="max-image-floating" style="width: 100%; border-radius: 20px; display: block; border: 1px solid #e5e8ed;">
             </div>
 
             <!-- Right Side: Text Callouts (SHRUNK to col-lg-4) -->
-            <div class="col-12 col-lg-4">
-                <div class="row g-4">
+            <div class="col-12 col-lg-4 order-lg-2">
+                <div class="row g-4" style="margin-top: 150px;">
                     <div class="col-12">
-                        <div class="premium-card-light" style="background-color:#ffffff; border:1px solid #e5e8ed; border-radius:16px; padding:24px; height:100%;">
-                            <div style="font-size: 2rem; color: #4f46e5; margin-bottom: 12px;">&#128196;</div>
+                        <div class="premium-card-light" style="background-color:#ffffff; border:2px solid #059669; border-radius:16px; padding:24px; height:100%;">
+                            <div style="font-size: 2rem; color: #059669; margin-bottom: 12px;">&#128196;</div>
                             <h4 style="color:#333333; font-size:1.25rem; font-weight:700; margin-bottom:12px;">Presentation-Ready PDFs</h4>
                             <p style="color:#555555; font-size:1rem;">Instantly generate a clean, professionally formatted PDF of any AI-generated table or chart. Perfect for sharing in meetings, emailing to stakeholders, or including in your company reports without any extra work.</p>
                         </div>
                     </div>
                     <div class="col-12">
-                         <div class="premium-card-light" style="background-color:#ffffff; border:1px solid #e5e8ed; border-radius:16px; padding:24px; height:100%;">
+                         <div class="premium-card-light" style="background-color:#ffffff; border:2px solid #4f46e5; border-radius:16px; padding:24px; height:100%;">
                             <div style="font-size: 2rem; color: #4f46e5; margin-bottom: 12px;">&#128202;</div>
                             <h4 style="color:#333333; font-size:1.25rem; font-weight:700; margin-bottom:12px;">Deep Dive with CSV</h4>
                             <p style="color:#555555; font-size:1rem;">Export the raw data from any response as a CSV file. Seamlessly import it into Excel, Google Sheets, or other BI tools to perform your own calculations, create custom pivot tables, and conduct deeper analysis.</p>
@@ -525,7 +574,7 @@
                     color: #333333;
                     text-shadow: 0 0 10px rgba(0,0,0,0.1);
                 ">Speak Your Language. We Understand.</h2>
-                <p style="font-size: 1.15rem; color: #555555; max-width: 860px; margin: 0 auto;">
+                <p style="font-size: 1.15rem; color: #555555; max-width: 860px; margin: 0 auto 80px;">
                     Break down communication barriers and empower your global teams. Niyu AI Analyst understands and responds in virtually any language, providing a consistent, intuitive experience for every user, no matter where they are.
                 </p>
             </div>
@@ -538,34 +587,34 @@
             <div class="col-12 col-lg-8 order-lg-1">
                 <div class="row g-4">
                     <div class="col-12">
-                        <img src="./newuilang.png" alt="Custom Keyword Mapping Configuration in Odoo Settings" style="width: 100%; border-radius: 16px; display: block; border: 1px solid #e5e8ed; box-shadow: 0 30px 60px -15px rgba(0,0,0,0.3);">
+                        <img src="./newuilang.png" alt="Custom Keyword Mapping Configuration in Odoo Settings" class="max-image-floating" style="width: 100%; border-radius: 20px; display: block; border: 1px solid #e5e8ed;">
                     </div>
                     <div class="col-12">
-                        <img src="./newuiarabic.png" alt="Custom Keyword Mapping Configuration in Odoo Settings" style="width: 100%; border-radius: 16px; display: block; border: 1px solid #e5e8ed; box-shadow: 0 30px 60px -15px rgba(0,0,0,0.3);">
+                        <img src="./newuiarabic.png" alt="Custom Keyword Mapping Configuration in Odoo Settings" class="max-image-floating" style="width: 100%; border-radius: 20px; display: block; border: 1px solid #e5e8ed; margin-top: -100px; position: relative; z-index: 5;">
                     </div>
                 </div>
             </div>
 
             <!-- Right Side: Text Callouts (SHRUNK to col-lg-4) -->
             <div class="col-12 col-lg-4 order-lg-2">
-                <div class="row g-4">
+                <div class="row g-4" style="margin-top: 150px;">
                     <div class="col-12">
-                        <div class="premium-card-light" style="background-color:#fefefe; border:1px solid #e5e8ed; border-radius:16px; padding:24px; height:100%;">
+                        <div class="premium-card-light" style="background-color:#fefefe; border:2px solid #f97316; border-radius:16px; padding:24px; height:100%;">
                             <div style="font-size: 2rem; color: #f97316; margin-bottom: 12px;">&#127760;</div>
                             <h4 style="color:#333333; font-size:1.25rem; font-weight:700; margin-bottom:12px;">Global Team Empowerment</h4>
                             <p style="color:#555555; font-size:1rem;">Whether your team is in Tokyo, Berlin, or São Paulo, they can ask questions in their native tongue. This fosters inclusivity and ensures that valuable insights aren't lost in translation.</p>
                         </div>
                     </div>
                     <div class="col-12">
-                         <div class="premium-card-light" style="background-color:#fefefe; border:1px solid #e5e8ed; border-radius:16px; padding:24px; height:100%;">
-                            <div style="font-size: 2rem; color: #f97316; margin-bottom: 12px;">&#10024;</div>
+                         <div class="premium-card-light" style="background-color:#fefefe; border:2px solid #059669; border-radius:16px; padding:24px; height:100%;">
+                            <div style="font-size: 2rem; color: #059669; margin-bottom: 12px;">&#10024;</div>
                             <h4 style="color:#333333; font-size:1.25rem; font-weight:700; margin-bottom:12px;">Zero Configuration Needed</h4>
                             <p style="color:#555555; font-size:1rem;">There are no language packs to install or settings to configure. The AI automatically detects the language of the query and responds in kind. It's an intelligent system that simply works out of the box.</p>
                         </div>
                     </div>
                     <div class="col-12">
-                         <div class="premium-card-light" style="background-color:#fefefe; border:1px solid #e5e8ed; border-radius:16px; padding:24px; height:100%;">
-                            <div style="font-size: 2rem; color: #f97316; margin-bottom: 12px;">&#129504;</div>
+                         <div class="premium-card-light" style="background-color:#fefefe; border:2px solid #4f46e5; border-radius:16px; padding:24px; height:100%;">
+                            <div style="font-size: 2rem; color: #4f46e5; margin-bottom: 12px;">&#129504;</div>
                             <h4 style="color:#333333; font-size:1.25rem; font-weight:700; margin-bottom:12px;">Contextually Aware</h4>
                             <p style="color:#555555; font-size:1rem;">The AI doesn't just translate; it understands business context. Whether you ask for "facturas" (Spanish) or "invoices" (English), it knows to query the `account.move` model in Odoo.</p>
                         </div>
@@ -611,22 +660,22 @@
                     color: #333333;
                     text-shadow: 0 0 10px rgba(0,0,0,0.1);
                 ">Granular Permissions, Total Control.</h2>
-                <p style="font-size: 1.15rem; color: #555555; max-width: 860px; margin: 0 auto;">
+                <p style="font-size: 1.15rem; color: #555555; max-width: 860px; margin: 0 auto 80px;">
                     Niyu AI respects your Odoo hierarchy. Easily grant access to team members while ensuring all queries adhere to existing data security rules.
                 </p>
             </div>
         </div>
 
-        <!-- NEW ALTERNATING LAYOUT (4/8 Split, Image on Right) -->
+        <!-- NEW ALTERNATING LAYOUT (5/7 Split, Image on Right) -->
         <div class="row justify-content-center g-5 align-items-center">
             <div class="col-12 col-lg-10">
-                <div class="row g-5 align-items-center" style="background-color: #ffffff; border: 1px solid #e5e8ed; border-radius: 16px; padding: 30px; box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1);">
+                <div class="row g-5 align-items-center" style="background-color: #ffffff; border: 1px solid #e5e8ed; border-radius: 20px; padding: 40px; box-shadow: 0 20px 40px -10px rgba(0,0,0,0.15);">
                     
-                    <!-- Left side: Text description (SHRUNK to col-md-5 for space) -->
+                    <!-- Left side: Text description (5/12) -->
                     <div class="col-12 col-md-5">
                         <div style="font-size: 2rem; color: #4f46e5; margin-bottom: 12px;">&#128273;</div>
-                        <h4 style="color: #333333; font-size: 1.25rem; font-weight: 700; margin-bottom: 12px;">Simple, Secure Access via the "User" Role</h4>
-                        <p style="color: #555555; font-size: 0.95rem; margin-bottom: 24px;">
+                        <h4 style="color: #333333; font-size: 1.4rem; font-weight: 700; margin-bottom: 15px;">Simple, Secure Access via the "User" Role</h4>
+                        <p style="color: #555555; font-size: 1rem; margin-bottom: 24px;">
                             There is one straightforward access level: <strong>AI Analyst User</strong>. Assigning this role to an employee gives them access to the Niyu AI Analyst app. Importantly, all their queries will automatically respect their existing Odoo permissions and record rules. They can only see the data they are already authorized to see.
                         </p>
                         <h5 style="color: #333333; font-weight: 700; font-size: 1.1rem; margin-bottom: 12px;">How to Grant Access (Admin):</h5>
@@ -638,7 +687,7 @@
                             <li>Click <strong>Save</strong>.</li>
                         </ol>
                     </div>
-                    <!-- Right side: Full Image (MAXIMIZED to col-md-7) -->
+                    <!-- Right side: Full Image (7/12) -->
                     <div class="col-12 col-md-7">
                         <div style="border-radius: 12px; padding: 3px; background: linear-gradient(90deg, rgba(79, 70, 229, 0.6), rgba(236, 72, 153, 0.4)); box-shadow: 0 0 30px -5px rgba(79, 70, 229, 0.3);">
                             <img src="./per.png" alt="Administrator granting AI Analyst User access in Odoo user settings." style="width: 100%; border-radius: 10px; display: block; border: 1px solid #ffffff;">
@@ -688,17 +737,17 @@
         </div>
       </div>
 
-      <!-- Consolidated Amazing Change Log Card -->
-      <div class="row justify-content-center g-4"> <!-- Added g-4 for gap between cards -->
-        <div class="col-12 "> <!-- Make it wider to hold all features beautifully -->
+      <!-- Consolidated Amazing Change Log Card (Unchanged) -->
+      <div class="row justify-content-center g-4">
+        <div class="col-12 ">
           <div style="
             background-color:#fefefe;
             border:1px solid #e5e8ed;
-            border-radius:24px; /* Even larger radius for impact */
-            padding:40px; /* More generous padding */
+            border-radius:24px;
+            padding:40px;
             height:100%;
-            box-shadow: 0 15px 40px -15px rgba(0,0,0,0.15), 0 0 30px rgba(102, 204, 255, 0.1); /* Enhanced, vibrant shadow */
-            transition: transform 0.4s ease-out; /* Smoother transition */
+            box-shadow: 0 15px 40px -15px rgba(0,0,0,0.15), 0 0 30px rgba(102, 204, 255, 0.1);
+            transition: transform 0.4s ease-out;
           " onmouseover="this.style.transform='translateY(-12px) scale(1.01)'" onmouseout="this.style.transform='translateY(0) scale(1)'">
             <p style="color:#555555; font-size:1.1rem; margin-bottom:30px; border-bottom:1px dashed #e5e8ed; padding-bottom:25px;">
               &#128640; This monumental update brings a dazzling new UI, unprecedented data transparency, powerful export capabilities, and a significant leap in AI intelligence. Prepare for an Odoo experience like never before!
@@ -709,9 +758,9 @@
               margin:0;
             ">
               <li style="
-                margin-bottom:18px; /* More spacing between features */
+                margin-bottom:18px;
                 color:#333333;
-                font-size:1.15rem; /* Larger feature text */
+                font-size:1.15rem;
                 display:flex;
                 align-items:flex-start;
               ">
@@ -805,7 +854,7 @@
     </div>
   </section>
 
-  <!-- WHAT'S NEW -->
+  <!-- WHAT'S NEW (Unchanged) -->
   <div style="background-color:#f0f4ff; border-top:1px solid #e5e8ed; border-bottom:1px solid #e5e8ed; padding:70px 0;">
     <div class="container" style="padding:0 15px;">
       <div class="row" style="margin-top:10px;">
@@ -849,7 +898,7 @@
     </div>
   </div>
 
-  <!-- TOKEN METER -->
+  <!-- TOKEN METER (Unchanged) -->
   <div class="container" style="padding:70px 15px;">
     <div class="row">
       <div class="col-12 text-center">
@@ -910,7 +959,7 @@
     </div>
   </div>
 
-  <!-- PREDEFINED QUESTIONS -->
+  <!-- PREDEFINED QUESTIONS (Unchanged) -->
   <div style="background-color:#f0f4ff; border-top:1px solid #e5e8ed; border-bottom:1px solid #e5e8ed; padding:70px 0;">
     <div class="container" style="padding:0 15px;">
       <div class="row">
@@ -979,7 +1028,7 @@
         </div>
       </div>
 
-  <!-- NEW SECTION 2: SETUP & CONFIGURATION -->
+  <!-- NEW SECTION 2: SETUP & CONFIGURATION (Unchanged) -->
   <section style="padding:70px 0; background-color:#ffffff; border-top:1px solid #e5e8ed; border-bottom:1px solid #e5e8ed;">
     <div class="container" style="padding:0 15px;">
       <div class="row">
@@ -1031,7 +1080,7 @@
 
 
 <!-- =================================================================== -->
-<!-- START: EXPLORE OTHER INNOVATIONS SECTION -->
+<!-- START: EXPLORE OTHER INNOVATIONS SECTION (Unchanged) -->
 <!-- =================================================================== -->
 <section style="
     background-color: #f0f4ff; /* NEW LIGHT BLUE BACKGROUND */
@@ -1155,7 +1204,7 @@
 <!-- END: EXPLORE OTHER INNOVATIONS SECTION -->
 <!-- =================================================================== -->
   
-  <!-- FAQ -->
+  <!-- FAQ (Unchanged) -->
 <section style="padding: 120px 20px; background-color: #ffffff;">
     <div style="max-width: 900px; margin: 0 auto;">
       <div style="text-align: center; margin-bottom: 80px;">
@@ -1239,7 +1288,7 @@
     </div>
 </section>
 
-  <!-- FINAL CTA -->
+  <!-- FINAL CTA (Unchanged) -->
   <section style="padding: 120px 20px; background-color: #f0f4ff;">
     <div style="max-width: 1000px; margin: 0 auto; text-align: center; ">
       <div style="background-color:rgba(79, 70, 229, 0.15); padding: 100px 40px; border-radius: 2rem; border: 1px solid #e5e8ed; box-shadow: 0 30px 80px rgba(0,0,0,0.15);">
