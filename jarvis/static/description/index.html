@@ -4,22 +4,23 @@
 
 <!-- MAIN CONTAINER: Changed to White Background and Dark Text -->
 <section style="
-  background-color:#ffffff; color:#1f2937;
+  background-color:#ffffff; color:#1f2937; /* White BG, Dark Text */
   font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
   line-height:1.7; margin:0; padding:0;
-  /* Light, subtle background gradients for a sexy feel */
+  /* Subtle, vibrant background gradients for a sexy feel on a light theme */
   background-image:
     radial-gradient(1200px 600px at 80% -10%, rgba(79,70,229,0.05), transparent 60%),
-    radial-gradient(900px 500px at -10% 20%, rgba(45,212,191,0.05), transparent 55%);
+    radial-gradient(900px 500px at -10% 20%, rgba(45,212,191,0.05), transparent 55%),
+    radial-gradient(700px 400px at 50% 120%, rgba(147,51,234,0.05), transparent 60%);
 ">
 
-   <!-- Top Info Bar: Changed to Darker Text -->
+   <!-- Top Info Bar: Dark Text -->
    <div style="position: absolute; top: 20px; left: 20px; font-size: 1rem; color: #6b7280; z-index: 10;">
     Last updated: October 7, 2025 | Version: 18.0.5.0.6
   </div>
 
-  <!-- HERO -->
-  <header style="padding: 180px 20px 100px 20px; text-align: center; overflow: hidden; background-color: #ffffff;">
+  <!-- HERO (Layout preserved: padding 180px 20px 100px 20px) -->
+  <header style="padding: 180px 20px 100px 20px; text-align: center; overflow: hidden; background-color: transparent;">
     <div style="max-width: 1000px; margin: 0 auto;">
       <h1 class="o_app_page_title" style="font-size: clamp(4rem, 9vw, 5rem); line-height: 1; font-weight: 900; letter-spacing: -0.06em; margin: 0 0 30px 0; color: #4f46e5; text-shadow: 0 5px 20px rgba(0,0,0,0.1);">
         <span style="font-size: clamp(4rem, 9vw, 8rem);">Odoo AI Analyst </span><br>Chatbot:
@@ -30,19 +31,18 @@
       <p style="font-size: clamp(1.15rem, 2.8vw, 1.4rem); color: #4b5563; max-width: 800px; margin: 0 auto 60px;">
         Ask questions in any language and get accurate answers, the exact SQL, and instant charts&#8212;directly from your Odoo.
       </p>
-      <!-- CTA Button: Vibrant Color for Light Theme, Enhanced Shadow -->
-      <a href="https://apps.odoo.com/apps/modules/browse?search=Niyu" target="_blank" style="display: inline-block; background-color: #4f46e5; color: #ffffff; padding: 18px 36px; font-size: 1.15rem; font-weight: 800; text-decoration: none; border-radius: 99px; transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; box-shadow: 0 8px 20px -5px rgba(79, 70, 229, 0.5), 0 5px 10px -5px rgba(79, 70, 229, 0.3), 0 0 40px 8px rgba(79, 70, 229, 0.1);" onmouseover="this.style.transform='translateY(-7px)'; this.style.boxShadow='0 12px 25px -7px rgba(79, 70, 229, 0.6), 0 8px 15px -7px rgba(79, 70, 229, 0.4), 0 0 50px 10px rgba(79, 70, 229, 0.25)'; this.style.backgroundColor='#4338ca';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 20px -5px rgba(79, 70, 229, 0.5), 0 5px 10px -5px rgba(79, 70, 229, 0.3), 0 0 40px 8px rgba(79, 70, 229, 0.1)'; this.style.backgroundColor='#4f46e5';">
+      <!-- CTA Button: Maintained original background (white) but with a vibrant primary-color shadow/glow -->
+      <a href="https://apps.odoo.com/apps/modules/browse?search=Niyu" target="_blank" style="display: inline-block; background-color: #ffffff; color: #1f2937; padding: 18px 36px; font-size: 1.15rem; font-weight: 800; text-decoration: none; border-radius: 99px; transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; box-shadow: 0 8px 20px -5px rgba(0, 0, 0, 0.1), 0 5px 10px -5px rgba(0, 0, 0, 0.05), 0 0 40px 8px rgba(79,70,229,0.15); border: 1px solid #e5e7eb;" onmouseover="this.style.transform='translateY(-7px)'; this.style.boxShadow='0 12px 25px -7px rgba(0,0,0,0.2), 0 8px 15px -7px rgba(0,0,0,0.1), 0 0 50px 10px rgba(79,70,229,0.3)'; this.style.backgroundColor='#f9fafb';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 20px -5px rgba(0, 0, 0, 0.1), 0 5px 10px -5px rgba(0, 0, 0, 0.05), 0 0 40px 8px rgba(79,70,229,0.15)'; this.style.backgroundColor='#ffffff';">
         Install Niyu AI Analyst Now <span style="margin-left: 10px;">&#8594;</span>
       </a>
     </div>
   </header>
 
-  <!-- VIDEO -->
+  <!-- VIDEO (Layout preserved: padding 0 0 120px 0) -->
   <section class="video" style="padding: 0 0 120px 0; background-color: #ffffff;">
     <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
       <!-- Accent Border Changed to Primary Color with Soft Shadow -->
-      <div style="border-radius: 1.75rem; padding: 3px; background-color:  rgba(79, 70, 229, 0.7) !important; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.2) !important; position: relative !important;">
-        <!-- Photo/Video Size NOT Changed -->
+      <div style="border-radius: 1.75rem; padding: 3px; background-color:  rgba(79, 70, 229, 0.6) !important; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.2) !important; position: relative !important;">
         <video autoplay loop muted playsinline controls preload="auto" style="width: 100%; display: block; border-radius: 1.75rem; background-color: #000;">
           <source src="./video.webm" type="video/webm">
           <!-- Fallback:
@@ -56,7 +56,7 @@
 
 
   <!-- =================================================================== -->
-<!-- START: NEW UPDATE HIGHLIGHT BANNER -->
+<!-- START: NEW UPDATE HIGHLIGHT BANNER (Layout preserved: padding 40px 20px 80px 20px) -->
 <!-- =================================================================== -->
 <section style="padding: 40px 20px 80px 20px; background-color: #f9fafb;"> <!-- Light background -->
   <div style="
@@ -86,12 +86,12 @@
 <!-- END: NEW UPDATE HIGHLIGHT BANNER -->
 <!-- =================================================================== -->
 
-  <!-- NEW SECTION 1: HOW IT WORKS -->
-<section style="padding:70px 0; background-color:#ffffff; border-top:1px solid #e5e7eb; border-bottom:1px solid #e5e7eb;"> <!-- White Background -->
+  <!-- NEW SECTION 1: HOW IT WORKS (Layout preserved: padding 70px 0) -->
+<section style="padding:70px 0; background-color:#ffffff; border-top:1px solid #e5e7eb; border-bottom:1px solid #e5e7eb;">
   <div class="container" style="padding:0 15px;">
     <div class="row">
       <div class="col-12 text-center">
-        <!-- Badge: Changed to Primary Color Scheme -->
+        <!-- Badge: Primary Color Scheme -->
         <span style="display:inline-block; font-size:14px; font-weight:800; color:#4f46e5; background-color:#e0e7ff; border:1px solid #c7d2fe; border-radius:999px; padding:8px 16px; margin-bottom:10px;">ARCHITECTURE</span>
         <h2 style="font-size:34px; font-weight:800; margin:0 0 14px 0; color:#1f2937;">How Niyu AI Works (Under the Hood)</h2>
         <p style="font-size:16px; color:#4b5563; max-width:860px; margin:0 auto 22px;">
@@ -100,9 +100,10 @@
       </div>
     </div>
 
+    <!-- Cards Row 1 (Layout preserved: row g-3, margin-top:8px) -->
     <div class="row g-3" style="margin-top:8px;">
-      <!-- Card: Changed to White Background, Light Border, Soft Shadow, Dark Text -->
       <div class="col-12 col-md-4">
+        <!-- Card: White Background, Light Border, Soft Shadow, Dark Text -->
         <div class="d-flex flex-column" style="background-color:#ffffff; border:1px solid #e5e7eb; border-radius:16px; padding:18px; height:100%; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
           <div style="font-size:26px; margin-bottom:6px; color:#4f46e5;">&#128220;</div>
           <h4 style="margin:0 0 6px; color:#1f2937; font-size:18px; font-weight:800;">1) Understand Your Schema</h4>
@@ -125,8 +126,10 @@
       </div>
     </div>
 
+    <!-- Example Row (Layout preserved: row g-3, margin-top:14px) -->
     <div class="row g-3" style="margin-top:14px;">
       <div class="col-12 col-lg-6">
+        <!-- Example Card: Light Background, Light Border/Shadow -->
         <div style="background-color:#f9fafb; border:1px solid #e5e7eb; border-radius:16px; padding:18px; height:100%; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
           <h5 style="margin:0 0 8px; color:#1f2937; font-size:16px; font-weight:800;">Example: Using a Custom Map</h5>
           <p style="margin:0 0 12px; font-size:14px; color:#4b5563;">See how a custom map (<code style="background-color:#e5e7eb; color:#f59e0b; padding:2px 5px; border-radius:4px; font-size:13px;">"shipments" &#8594; "stock.picking"</code>) turns a simple question into a powerful query:</p>
@@ -135,9 +138,9 @@
               <div style="font-size:12px; color:#4f46e5; margin-bottom:6px; font-weight:700;">YOUR QUESTION</div>
               <p style="margin:0; color:#1f2937; font-size:14px;">"Show me all late shipments to Azure Interior"</p>
             </div>
+            <!-- SQL Block: Adjusted colors for light background -->
             <div class="flex-fill" style="background-color:#ffffff; border:1px solid #e5e7eb; border-radius:12px; padding:12px;">
               <div style="font-size:12px; color:#10b981; margin-bottom:6px; font-weight:700;">GENERATED SQL</div>
-              <!-- Adjusted SQL colors for light background -->
               <pre style="margin:0; color:#000; font-size:12.5px; white-space:pre-wrap; line-height:1.5; font-family:monospace;">
 <span style="color:#508d4b">SELECT</span> sp.name, sp.scheduled_date
 <span style="color:#508d4b">FROM</span> stock_picking sp
@@ -151,6 +154,7 @@
       </div>
 
       <div class="col-12 col-lg-6">
+        <!-- Privacy Card: Light Accent Background -->
         <div class="d-flex align-items-center" style="background-color: rgba(79, 70, 229, 0.08); border:1px solid #c7d2fe; border-radius:16px; padding:18px; height:100%;">
           <div style="font-size:22px; margin-right:10px; color:#4f46e5;">&#128737;</div>
           <div>
@@ -171,10 +175,10 @@
 
 
 <!-- =================================================================== -->
-<!-- START: NEW SECTION - UI OVERHAUL & SQL TRANSPARENCY (SEXY/AMAZING) -->
+<!-- START: NEW SECTION - UI OVERHAUL & SQL TRANSPARENCY (Layout preserved: padding 120px 0) -->
 <!-- =================================================================== -->
 <section style="
-    background-color: #f9fafb; /* Light Background */
+    background-color: #ffffff; /* White Background */
     padding: 120px 0;
     overflow: hidden;
     position: relative;
@@ -212,11 +216,11 @@
             </div>
         </div>
 
-        <!-- Full-width Screenshot (The Star of the Show) -->
+        <!-- Full-width Screenshot (Layout preserved: col-12, margin-bottom: 60px) -->
        <div class="row justify-content-center">
         <div class="col-12" style="margin-bottom: 60px;">
             <div style="position: relative;">
-                 <!-- Image Size NOT Changed - Shadow Adjusted for Light Theme -->
+                 <!-- Image Shadow Adjusted for Light Theme -->
                 <img src="./sql.png" alt="The new Niyu AI UI showing visible SQL queries" style="
                     width: 100%;
                     border-radius: 16px;
@@ -228,17 +232,18 @@
         </div>
       </div>
 
-        <!-- Supporting Feature Callouts: Light Cards -->
+        <!-- Supporting Feature Callouts (Layout preserved: row g-4) -->
         <div class="row g-4">
             <div class="col-12 col-md-6">
-                <div style="background-color:#ffffff; border:1px solid #e5e7eb; border-radius:16px; padding:24px; height:100%; transition: transform 0.3s ease; box-shadow: 0 5px 15px rgba(0,0,0,0.05);" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.05)';">
+                <!-- Card: White Background, Light Border, Soft Shadow, Dark Text, Hover Effect -->
+                <div style="background-color:#f9fafb; border:1px solid #e5e7eb; border-radius:16px; padding:24px; height:100%; transition: transform 0.3s ease; box-shadow: 0 5px 15px rgba(0,0,0,0.05);" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.05)';">
                     <div style="font-size: 2rem; color: #ec4899; margin-bottom: 12px;">&#10024;</div>
                     <h4 style="color:#1f2937; font-size:1.25rem; font-weight:700; margin-bottom:12px;">A Stunning New Look</h4>
                     <p style="color:#4b5563; font-size:1rem;">Clean, modern, and fast. The interface has been completely redesigned to feel like a native, premium part of your Odoo experience. Data is presented with clarity, making insights jump off the screen.</p>
                 </div>
             </div>
             <div class="col-12 col-md-6">
-                 <div style="background-color:#ffffff; border:1px solid #e5e7eb; border-radius:16px; padding:24px; height:100%; transition: transform 0.3s ease; box-shadow: 0 5px 15px rgba(0,0,0,0.05);" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.05)';">
+                 <div style="background-color:#f9fafb; border:1px solid #e5e7eb; border-radius:16px; padding:24px; height:100%; transition: transform 0.3s ease; box-shadow: 0 5px 15px rgba(0,0,0,0.05);" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 5px 15px rgba(0,0,0,0.05)';">
                     <div style="font-size: 2rem; color: #ec4899; margin-bottom: 12px;">&#128065;</div>
                     <h4 style="color:#1f2937; font-size:1.25rem; font-weight:700; margin-bottom:12px;">Total SQL Transparency</h4>
                     <p style="color:#4b5563; font-size:1rem;">Trust is earned, not given. Every answer now includes an expandable <strong>Show SQL</strong> option. See the raw PostgreSQL query we generated and executed in your database. It's the ultimate proof of accuracy and security.</p>
@@ -253,10 +258,10 @@
 
 
   <!-- =================================================================== -->
-<!-- START: NEW SECTION - DYNAMIC CHARTING & VISUALIZATION -->
+<!-- START: NEW SECTION - DYNAMIC CHARTING & VISUALIZATION (Layout preserved: padding 120px 0) -->
 <!-- =================================================================== -->
 <section style="
-    background-color: #ffffff; /* White Background */
+    background-color: #f9fafb; /* Light Background */
     padding: 120px 0;
     overflow: hidden;
     position: relative;
@@ -292,7 +297,7 @@
             </div>
         </div>
 
-        <!-- Full-width Screenshot 1 (Size NOT Changed, Shadow Adjusted) -->
+        <!-- Full-width Screenshot 1 (Layout preserved: col-12, margin-bottom: 60px) -->
        <div class="row justify-content-center">
         <div class="col-12" style="margin-bottom: 60px;">
             <div style="position: relative;">
@@ -307,7 +312,7 @@
         </div>
       </div>
 
-        <!-- Full-width Screenshot 2 (Size NOT Changed, Shadow Adjusted) -->
+        <!-- Full-width Screenshot 2 (Layout preserved: col-12, margin-bottom: 60px) -->
        <div class="row justify-content-center">
         <div class="col-12" style="margin-bottom: 60px;">
             <div style="position: relative;">
@@ -322,24 +327,25 @@
         </div>
       </div>
 
-        <!-- Supporting Feature Callouts: Light Cards -->
+        <!-- Supporting Feature Callouts (Layout preserved: row g-4) -->
         <div class="row g-4">
             <div class="col-12 col-md-4">
-                <div style="background-color:#f9fafb; border:1px solid #e5e7eb; border-radius:16px; padding:24px; height:100%; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                <!-- Card: White Background, Light Border, Soft Shadow -->
+                <div style="background-color:#ffffff; border:1px solid #e5e7eb; border-radius:16px; padding:24px; height:100%; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
                     <div style="font-size: 2rem; color: #2dd4bf; margin-bottom: 12px;">&#128202;</div>
                     <h4 style="color:#1f2937; font-size:1.25rem; font-weight:700; margin-bottom:12px;">Automatic Chart Selection</h4>
                     <p style="color:#4b5563; font-size:1rem;">Niyu intelligently picks the best chart type (Bar, Line, Pie, etc.) based on your data structure to provide the clearest insights instantly.</p>
                 </div>
             </div>
             <div class="col-12 col-md-4">
-                 <div style="background-color:#f9fafb; border:1px solid #e5e7eb; border-radius:16px; padding:24px; height:100%; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                 <div style="background-color:#ffffff; border:1px solid #e5e7eb; border-radius:16px; padding:24px; height:100%; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
                     <div style="font-size: 2rem; color: #2dd4bf; margin-bottom: 12px;">&#128279;</div>
                     <h4 style="color:#1f2937; font-size:1.25rem; font-weight:700; margin-bottom:12px;">Interactive & Sharable</h4>
                     <p style="color:#4b5563; font-size:1rem;">Hover over data points for details, and export your charts to PDF or CSV, making it easy to share your findings with the entire team.</p>
                 </div>
             </div>
             <div class="col-12 col-md-4">
-                 <div style="background-color:#f9fafb; border:1px solid #e5e7eb; border-radius:16px; padding:24px; height:100%; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                 <div style="background-color:#ffffff; border:1px solid #e5e7eb; border-radius:16px; padding:24px; height:100%; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
                     <div style="font-size: 2rem; color: #2dd4bf; margin-bottom: 12px;">&#128161;</div>
                     <h4 style="color:#1f2937; font-size:1.25rem; font-weight:700; margin-bottom:12px;">From Insight to Action</h4>
                     <p style="color:#4b5563; font-size:1rem;">Visualizing trends and outliers helps you make faster, more confident decisions directly from your Odoo data without any extra steps.</p>
@@ -353,10 +359,10 @@
 <!-- =================================================================== -->
 
 
-    <!-- CUSTOM KEYWORD MAPPING -->
-<section style="padding: 100px 0; background-color:#ffffff; border-top:1px solid #e5e7eb; border-bottom:1px solid #e5e7eb;"> <!-- White Background -->
+    <!-- CUSTOM KEYWORD MAPPING (Layout preserved: padding 100px 0) -->
+<section style="padding: 100px 0; background-color:#ffffff; border-top:1px solid #e5e7eb; border-bottom:1px solid #e5e7eb;">
   <div class="container" style="padding:0 15px;">
-      <!-- Section Header -->
+      <!-- Section Header (Layout preserved: row mb-5) -->
       <div class="row mb-5">
           <div class="col-12 text-center">
               <!-- Badge: Orange/Gold -->
@@ -366,10 +372,11 @@
           </div>
       </div>
 
-      <!-- Columns for Benefits & How-To: Light Cards -->
+      <!-- Columns for Benefits & How-To (Layout preserved: row g-4 mb-5) -->
       <div class="row g-4 mb-5">
           <!-- Left Column: Why It Matters -->
           <div class="col-12 col-lg-6">
+              <!-- Card: Light Background, Light Border/Shadow -->
               <div style="background-color:#f9fafb; border:1px solid #e5e7eb; border-radius:16px; padding:24px; height:100%; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
                   <h4 style="color:#1f2937; font-size:1.25rem; font-weight:700; margin-bottom:16px;">The "Aha!" Moment</h4>
                   <div style="margin-bottom:12px;">
@@ -393,7 +400,7 @@
                   <p style="margin:0 0 16px; color:#4b5563; font-size:0.95rem;">This isn't complex coding; it's just creating a simple dictionary for the AI. In <em>Settings → Niyu AI Analyst</em>, you'll find a text box where you can instantly map your business terms to their corresponding Odoo models. It takes seconds to set up, but the impact is permanent.</p>
                   <div style="background-color:#ffffff; border:1px solid #e5e7eb; border-radius:12px; padding:16px;">
                       <div style="font-size:12px; color:#4f46e5; margin-bottom:8px; font-weight:700; letter-spacing:0.5px;">EXAMPLE JSON MAPPING</div>
-                      <!-- Adjusted JSON colors for light background -->
+                      <!-- JSON Block: Adjusted colors for light background -->
                       <pre style="margin:0; font-family: 'SF Mono', 'Fira Code', Consolas, monospace; font-size:14px; white-space:pre-wrap; line-height:1.7;">
 <span style="color: #1f2937;">{</span>
   <span style="color: #4f46e5;">"construction"</span><span style="color: #1f2937;">,</span>
@@ -405,9 +412,10 @@
           </div>
       </div>
   
-      <!-- Screenshot Row (Size NOT Changed, Shadow Adjusted) -->
+      <!-- Screenshot Row (Layout preserved: row) -->
       <div class="row">
         <div class="col-12">
+            <!-- Image Shadow Adjusted for Light Theme -->
             <img src="./custom.png" alt="Custom Keyword Mapping Configuration in Odoo Settings" style="width: 100%; border-radius: 16px; display: block; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.1), 0 0 0 1px #d1d5db;">
         </div>
       </div>
@@ -416,7 +424,7 @@
 
 
 <!-- =================================================================== -->
-<!-- START: NEW SECTION 1 - EXPORT TO PDF & CSV -->
+<!-- START: NEW SECTION 1 - EXPORT TO PDF & CSV (Layout preserved: padding 120px 0) -->
 <!-- =================================================================== -->
 <section style="
     background-color: #f9fafb; /* Light Background */
@@ -455,16 +463,18 @@
             </div>
         </div>
 
-        <!-- Full-width Screenshot (Size NOT Changed, Shadow Adjusted) -->
+        <!-- Full-width Screenshot (Layout preserved: col-12, margin-bottom: 20px) -->
        <div class="row">
         <div class="col-12" style="margin-bottom: 20px;">
+            <!-- Image Shadow Adjusted for Light Theme -->
             <img src="./newuipdf.png" alt="Niyu AI response with PDF and CSV export buttons" style="width: 100%; border-radius: 16px; display: block; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.1), 0 0 0 1px #d1d5db;">
         </div>
       </div>
 
-        <!-- NEW CONTENT ROW: Light Cards -->
+        <!-- NEW CONTENT ROW (Layout preserved: row g-4) -->
         <div class="row g-4">
             <div class="col-12 col-md-6">
+                <!-- Card: White Background, Light Border/Shadow -->
                 <div style="background-color:#ffffff; border:1px solid #e5e7eb; border-radius:16px; padding:24px; height:100%; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
                     <div style="font-size: 2rem; color: #4f46e5; margin-bottom: 12px;">&#128196;</div>
                     <h4 style="color:#1f2937; font-size:1.25rem; font-weight:700; margin-bottom:12px;">Presentation-Ready PDFs</h4>
@@ -487,7 +497,7 @@
 
 
 <!-- =================================================================== -->
-<!-- START: NEW SECTION 2 - MULTI-LANGUAGE SUPPORT -->
+<!-- START: NEW SECTION 2 - MULTI-LANGUAGE SUPPORT (Layout preserved: padding 120px 0) -->
 <!-- =================================================================== -->
 <section style="
     background-color: #ffffff; /* White Background */
@@ -526,21 +536,24 @@
             </div>
         </div>
 
-        <!-- Full-width Screenshot (Size NOT Changed, Shadow Adjusted) -->
+        <!-- Full-width Screenshot (Layout preserved: col-12, margin-bottom: 20px) -->
        <div class="row">
        <div class="col-12" style="margin-bottom: 20px;">
+            <!-- Image Shadow Adjusted for Light Theme -->
             <img src="./newuilang.png" alt="Niyu AI response in a foreign language" style="width: 100%; border-radius: 16px; display: block; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.1), 0 0 0 1px #d1d5db;">
         </div>
       </div>
 
       <div class="row">
        <div class="col-12" style="margin-bottom: 20px;">
+            <!-- Image Shadow Adjusted for Light Theme -->
             <img src="./newuiarabic.png" alt="Niyu AI response in Arabic" style="width: 100%; border-radius: 16px; display: block; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.1), 0 0 0 1px #d1d5db;">
         </div>
       </div>
-        <!-- NEW CONTENT ROW: Light Cards -->
+        <!-- NEW CONTENT ROW (Layout preserved: row g-4) -->
         <div class="row g-4">
             <div class="col-12 col-lg-4">
+                <!-- Card: Light Background, Light Border/Shadow -->
                 <div style="background-color:#f9fafb; border:1px solid #e5e7eb; border-radius:16px; padding:24px; height:100%; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
                     <div style="font-size: 2rem; color: #f59e0b; margin-bottom: 12px;">&#127760;</div>
                     <h4 style="color:#1f2937; font-size:1.25rem; font-weight:700; margin-bottom:12px;">Global Team Empowerment</h4>
@@ -568,7 +581,7 @@
 <!-- END: NEW SECTION 2 -->
 <!-- =================================================================== -->
 
-<!-- ROLE-BASED ACCESS CONTROL (REVISED) -->
+<!-- ROLE-BASED ACCESS CONTROL (Layout preserved: padding 120px 0) -->
 <section style="
     background-color: #ffffff; /* White Background */
     border-top: 1px solid #e5e7eb;
@@ -607,12 +620,14 @@
             </div>
         </div>
 
-        <!-- Single Column for Permissions Guide: Light Card -->
+        <!-- Single Column for Permissions Guide (Layout preserved: row justify-content-center, col-12 col-lg-10) -->
         <div class="row justify-content-center">
             <div class="col-12 col-lg-10">
+                <!-- Card: Light Background, Light Border/Shadow -->
                 <div style="background-color: #f9fafb; border: 1px solid #e5e7eb; border-radius: 16px; padding: 24px; box-shadow: 0 5px 20px rgba(0,0,0,0.08);">
+                    <!-- Content Structure (Layout preserved: row align-items-center g-5) -->
                     <div class="row align-items-center g-5">
-                        <!-- Left side: Text description -->
+                        <!-- Left side: Text description (Layout preserved: col-12 col-md-6) -->
                         <div class="col-12 col-md-6">
                             <div style="font-size: 2rem; color: #4f46e5; margin-bottom: 12px;">&#128273;</div>
                             <h4 style="color: #1f2937; font-size: 1.25rem; font-weight: 700; margin-bottom: 12px;">Simple, Secure Access via the "User" Role</h4>
@@ -628,7 +643,7 @@
                                 <li>Click <strong>Save</strong>.</li>
                             </ol>
                         </div>
-                        <!-- Right side: Full Image (Size NOT Changed, Border/Shadow Adjusted) -->
+                        <!-- Right side: Full Image (Layout preserved: col-12 col-md-6) -->
                         <div class="col-12 col-md-6">
                             <div style="border-radius: 12px; padding: 3px; background: linear-gradient(90deg, rgba(139, 92, 246, 0.4), rgba(236, 72, 153, 0.4)); box-shadow: 0 0 30px -5px rgba(139, 92, 246, 0.2);">
                                 <img src="./per.png" alt="Administrator granting AI Analyst User access in Odoo user settings." style="width: 100%; border-radius: 10px; display: block; border: 1px solid #ffffff;">
@@ -642,7 +657,7 @@
 </section>
 
 
-    <!-- RELEASE HISTORY (SEXY/AMAZING CARD) -->
+    <!-- RELEASE HISTORY (SEXY/AMAZING CARD) (Layout preserved: padding 100px 0) -->
     <section style="
     background-color:#f9fafb; /* Light Background */
     border-top:1px solid #e5e7eb;
@@ -681,9 +696,10 @@
         </div>
       </div>
 
-      <!-- Consolidated Amazing Change Log Card: White Background, Stronger Shadow -->
+      <!-- Consolidated Amazing Change Log Card (Layout preserved: row justify-content-center g-4) -->
       <div class="row justify-content-center g-4">
         <div class="col-12 ">
+          <!-- Card: White Background, Light Border, Stronger Shadow, Hover Effect -->
           <div style="
             background-color:#ffffff;
             border:1px solid #e5e7eb;
@@ -696,12 +712,12 @@
             <p style="color:#4b5563; font-size:1.1rem; margin-bottom:30px; border-bottom:1px dashed #d1d5db; padding-bottom:25px;">
               &#128640; This monumental update brings a dazzling new UI, unprecedented data transparency, powerful export capabilities, and a significant leap in AI intelligence. Prepare for an Odoo experience like never before!
             </p>
+            <!-- Feature List: Dark Text, Bright Icons (Layout preserved: list-style:none, padding:0, margin:0, margins on LIs) -->
             <ul style="
               list-style:none;
               padding:0;
               margin:0;
             ">
-              <!-- Feature List: Dark Text, Bright Icons -->
               <li style="
                 margin-bottom:18px;
                 color:#1f2937;
@@ -799,12 +815,13 @@
     </div>
   </section>
 
-  <!-- WHAT'S NEW -->
-  <div style="background-color:#ffffff; border-top:1px solid #e5e7eb; border-bottom:1px solid #e5e7eb; padding:70px 0;"> <!-- White Background -->
+  <!-- WHAT'S NEW (Layout preserved: padding 70px 0) -->
+  <div style="background-color:#ffffff; border-top:1px solid #e5e7eb; border-bottom:1px solid #e5e7eb; padding:70px 0;">
     <div class="container" style="padding:0 15px;">
+      <!-- Feature Cards Row (Layout preserved: row, margin-top:10px) -->
       <div class="row" style="margin-top:10px;">
-        <!-- Card: White Background, Light Border/Shadow, Dark Text -->
         <div class="col-12 col-md-4" style="margin-bottom:16px;">
+          <!-- Card: Light Background, Light Border/Shadow -->
           <div style="background:#f9fafb; border:1px solid #e5e7eb; border-radius:14px; padding:18px; height:100%; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
             <div style="font-size:28px; color:#9333ea; margin-bottom:6px;">&#129504;</div>
             <h3 style="color:#1f2937; font-size:18px; margin:0 0 6px 0;">Brain v2 &#8211; Harder Questions, Smarter Answers</h3>
@@ -829,7 +846,7 @@
         </div>
       </div>
 
-      <!-- Quick preview (Image Sizes NOT Changed, Border/Shadow Adjusted) -->
+      <!-- Quick preview (Layout preserved: row, margin-top:18px) -->
       <div class="row" style="margin-top:18px;">
         <div class="col-12 col-md-4" style="margin-bottom:16px;">
           <img src="./question.png" alt="Ask any question" style="width:100%; border-radius:14px; border:1px solid #d1d5db; display:block; box-shadow: 0 10px 20px rgba(0,0,0,0.05);">
@@ -844,7 +861,7 @@
     </div>
   </div>
 
-  <!-- TOKEN METER -->
+  <!-- TOKEN METER (Layout preserved: padding 70px 15px) -->
   <div class="container" style="padding:70px 15px;">
     <div class="row">
       <div class="col-12 text-center">
@@ -855,7 +872,7 @@
       </div>
     </div>
 
-    <!-- Table: Light Background, Dark Text -->
+    <!-- Table: Light Background, Dark Text (Layout preserved: row, margin-top:8px) -->
     <div class="row" style="margin-top:8px;">
       <div class="col-12" style="overflow-x:auto;">
         <table style="width:100%; border-collapse:collapse; border:1px solid #e5e7eb; background-color:#ffffff; border-radius:12px; overflow:hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
@@ -885,8 +902,8 @@
       </div>
     </div>
 
+    <!-- Cards Row (Layout preserved: row, margin-top:16px) -->
     <div class="row" style="margin-top:16px;">
-      <!-- Card: Light Background, Dark Text -->
       <div class="col-12 col-md-4" style="margin-bottom:12px;">
         <div style="background-color:#f9fafb; border:1px solid #e5e7eb; border-radius:14px; padding:18px; height:100%; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
           <h4 style="margin:0 0 6px; color:#1f2937; font-size:16px;">How it&#8217;s shown</h4>
@@ -908,8 +925,8 @@
     </div>
   </div>
 
-  <!-- PREDEFINED QUESTIONS -->
-  <div style="background-color:#f9fafb; border-top:1px solid #e5e7eb; border-bottom:1px solid #e5e7eb; padding:70px 0;"> <!-- Light Background -->
+  <!-- PREDEFINED QUESTIONS (Layout preserved: padding 70px 0) -->
+  <div style="background-color:#ffffff; border-top:1px solid #e5e7eb; border-bottom:1px solid #e5e7eb; padding:70px 0;">
     <div class="container" style="padding:0 15px;">
       <div class="row">
         <div class="col-12 text-center">
@@ -920,10 +937,10 @@
         </div>
       </div>
 
+      <!-- Feature Lists Row (Layout preserved: row, margin-top:10px) -->
       <div class="row" style="margin-top:10px;">
-        <!-- Card: White Background, Light Border/Shadow, Dark Text -->
         <div class="col-12 col-md-3" style="margin-bottom:16px;">
-          <div style="background-color:#ffffff; border:1px solid #e5e7eb; border-radius:14px; padding:18px; height:100%; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+          <div style="background-color:#f9fafb; border:1px solid #e5e7eb; border-radius:14px; padding:18px; height:100%; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
             <h4 style="margin:0 0 6px; color:#1f2937; font-size:16px;">Sales &amp; CRM</h4>
             <ul style="margin:0; padding-left:18px; color:#4b5563;">
               <li>Top 10 customers by revenue this quarter</li>
@@ -932,7 +949,7 @@
           </div>
         </div>
         <div class="col-12 col-md-3" style="margin-bottom:16px;">
-          <div style="background-color:#ffffff; border:1px solid #e5e7eb; border-radius:14px; padding:18px; height:100%; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+          <div style="background-color:#f9fafb; border:1px solid #e5e7eb; border-radius:14px; padding:18px; height:100%; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
             <h4 style="margin:0 0 6px; color:#1f2937; font-size:16px;">Invoicing</h4>
             <ul style="margin:0; padding-left:18px; color:#4b5563;">
               <li>Overdue invoices by account manager</li>
@@ -941,7 +958,7 @@
           </div>
         </div>
         <div class="col-12 col-md-3" style="margin-bottom:16px;">
-          <div style="background-color:#ffffff; border:1px solid #e5e7eb; border-radius:14px; padding:18px; height:100%; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+          <div style="background-color:#f9fafb; border:1px solid #e5e7eb; border-radius:14px; padding:18px; height:100%; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
             <h4 style="margin:0 0 6px; color:#1f2937; font-size:16px;">Inventory</h4>
             <ul style="margin:0; padding-left:18px; color:#4b5563;">
               <li>Low stock items with last 14-day sales</li>
@@ -950,7 +967,7 @@
           </div>
         </div>
         <div class="col-12 col-md-3" style="margin-bottom:16px;">
-          <div style="background-color:#ffffff; border:1px solid #e5e7eb; border-radius:14px; padding:18px; height:100%; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+          <div style="background-color:#f9fafb; border:1px solid #e5e7eb; border-radius:14px; padding:18px; height:100%; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
             <h4 style="margin:0 0 6px; color:#1f2937; font-size:16px;">HR</h4>
             <ul style="margin:0; padding-left:18px; color:#4b5563;">
               <li>Leaves pending approval this week</li>
@@ -960,7 +977,7 @@
         </div>
       </div>
 
-      <!-- Quick preview (Image Sizes NOT Changed, Border/Shadow Adjusted) -->
+      <!-- Screenshot Row (Layout preserved: row, margin-top:16px) -->
       <div class="row" style="margin-top:16px;">
         <div class="col-12 col-md-4" style="margin-bottom:16px;">
           <img src="./pre1.png" style="width:100%; border-radius:14px; border:1px solid #d1d5db; display:block; box-shadow: 0 10px 20px rgba(0,0,0,0.05);">
@@ -976,13 +993,13 @@
   </div>
    <div class="row">
        <div class="col-12" style="margin-bottom: 20px;">
-            <!-- Main UI Screenshot (Size NOT Changed, Border/Shadow Adjusted) -->
+            <!-- Main UI Screenshot (Layout preserved: col-12, margin-bottom: 20px, padding: 15px) -->
             <img src="./newui.png" alt="Custom Keyword Mapping Configuration in Odoo Settings" style="width: 100%; padding: 15px; border-radius: 16px; display: block; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.1), 0 0 0 1px #d1d5db;">
         </div>
       </div>
 
-  <!-- NEW SECTION 2: SETUP & CONFIGURATION -->
-  <section style="padding:70px 0; background-color:#f9fafb; border-top:1px solid #e5e7eb; border-bottom:1px solid #e5e7eb;"> <!-- Light Background -->
+  <!-- NEW SECTION 2: SETUP & CONFIGURATION (Layout preserved: padding 70px 0) -->
+  <section style="padding:70px 0; background-color:#f9fafb; border-top:1px solid #e5e7eb; border-bottom:1px solid #e5e7eb;">
     <div class="container" style="padding:0 15px;">
       <div class="row">
         <div class="col-12 text-center">
@@ -993,9 +1010,10 @@
         </div>
       </div>
 
+      <!-- Content Row (Layout preserved: row g-3) -->
       <div class="row g-3">
-        <!-- Card: White Background, Light Border/Shadow, Dark Text -->
         <div class="col-12 col-lg-7">
+          <!-- Card: White Background, Light Border/Shadow -->
           <div style="background-color:#ffffff; border:1px solid #e5e7eb; border-radius:16px; padding:18px; height:100%; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
             <ol style="margin:0; padding-left:22px; color:#1f2937;">
               <li style="margin-bottom:10px;"><strong>Get the module</strong> from the Odoo App Store.</li>
@@ -1009,8 +1027,8 @@
           </div>
         </div>
 
-        <!-- Card: Light Background, Light Border/Shadow, Dark Text -->
         <div class="col-12 col-lg-5">
+          <!-- Card: Light Background, Light Border/Shadow -->
           <div style="background-color:#f9fafb; border:1px solid #e5e7eb; border-radius:16px; padding:18px; box-shadow: 0 5px 15px rgba(0,0,0,0.03);">
             <h5 style="margin:0 0 8px; color:#1f2937; font-size:16px; font-weight:800;">Compatibility & Requirements</h5>
             <ul style="margin:0; padding-left:18px; color:#4b5563; font-size:14px;">
@@ -1036,7 +1054,7 @@
 
 
 <!-- =================================================================== -->
-<!-- START: EXPLORE OTHER INNOVATIONS SECTION -->
+<!-- START: EXPLORE OTHER INNOVATIONS SECTION (Layout preserved: padding 100px 0) -->
 <!-- =================================================================== -->
 <section style="
     background-color: #ffffff; /* White Background */
@@ -1074,11 +1092,12 @@
             </div>
         </div>
 
-        <!-- Two Product Cards: White Background, Light Shadow, Soft Hover -->
+        <!-- Two Product Cards (Layout preserved: row g-5 justify-content-center) -->
         <div class="row g-5 justify-content-center">
 
-            <!-- Card 1: AI Dashboard Builder -->
+            <!-- Card 1: AI Dashboard Builder (Layout preserved: col-12 col-lg-6 d-flex) -->
             <div class="col-12 col-lg-6 d-flex">
+                <!-- Card: Light Background, Light Border/Shadow, Soft Hover -->
                 <div style="
                     background-color: #f9fafb;
                     border: 1px solid #e5e7eb;
@@ -1089,7 +1108,7 @@
                     transition: transform 0.3s ease, box-shadow 0.3s ease;
                 " onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 35px -10px rgba(0,0,0,0.1), 0 10px 15px -8px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.05)';">
                     
-                    <!-- GIF Showcase (Size NOT Changed, Border Adjusted) -->
+                    <!-- GIF Showcase (Layout preserved: margin-bottom: 24px) -->
                     <div style="margin-bottom: 24px; border-radius: 1rem; overflow: hidden; border: 1px solid #e5e7eb; background-color: #f3f4f6; padding: 40px; text-align: center;">
                        <img src="./aidash.gif" alt="Niyu AI Dashboard Builder" style="width: 100%; display: block;">
                     </div>
@@ -1118,8 +1137,9 @@
                 </div>
             </div>
 
-            <!-- Card 2: Pro BigQuery Connector -->
+            <!-- Card 2: Pro BigQuery Connector (Layout preserved: col-12 col-lg-6 d-flex) -->
             <div class="col-12 col-lg-6 d-flex">
+                <!-- Card: Light Background, Light Border/Shadow, Soft Hover -->
                 <div style="
                     background-color: #f9fafb;
                     border: 1px solid #e5e7eb;
@@ -1130,7 +1150,7 @@
                     transition: transform 0.3s ease, box-shadow 0.3s ease;
                 " onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 35px -10px rgba(0,0,0,0.1), 0 10px 15px -8px rgba(0,0,0,0.08)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px -5px rgba(0,0,0,0.05), 0 8px 10px -6px rgba(0,0,0,0.05)';">
                     
-                    <!-- Image/Icon Showcase (Size NOT Changed, Border Adjusted) -->
+                    <!-- Image/Icon Showcase (Layout preserved: margin-bottom: 24px) -->
                     <div style="margin-bottom: 24px; border-radius: 1rem; overflow: hidden; border: 1px solid #e5e7eb; background-color: #f3f4f6; padding: 40px; text-align: center;">
                        <img src="./proconnector.gif" alt="Pro BigQuery Connector" style="width: 100%; display: block;">
                     </div>
@@ -1166,17 +1186,18 @@
 <!-- END: EXPLORE OTHER INNOVATIONS SECTION -->
 <!-- =================================================================== -->
   
-  <!-- FAQ -->
-<section style="padding: 120px 20px; background-color: #ffffff;"> <!-- White Background -->
+  <!-- FAQ (Layout preserved: padding 120px 20px) -->
+<section style="padding: 120px 20px; background-color: #ffffff;">
     <div style="max-width: 900px; margin: 0 auto;">
       <div style="text-align: center; margin-bottom: 80px;">
         <!-- Badge: Purple -->
         <span style="display: inline-block; background-color: rgba(139, 92, 246, 0.1); color: #9333ea; padding: 8px 16px; border-radius: 99px; font-weight: 600; margin-bottom: 24px; border: 1px solid rgba(139, 92, 246, 0.4);">FAQ</span>
         <h2 style="font-size: clamp(2.25rem, 5vw, 3.5rem); line-height: 1.2; font-weight: 700; letter-spacing: -0.03em; margin: 0; color: #1f2937;">Frequently Asked Questions</h2>
       </div>
-      <div style="border-top: 1px solid #d1d5db;"> <!-- Light Divider -->
+      <!-- FAQ List (Layout preserved: div, border-top: 1px solid #d1d5db) -->
+      <div style="border-top: 1px solid #d1d5db;">
         
-        <!-- FAQ Item: Dark Text -->
+        <!-- FAQ Item (Layout preserved: padding 32px 0, border-bottom: 1px solid #d1d5db) -->
         <div style="padding: 32px 0; border-bottom: 1px solid #d1d5db;">
           <h4 style="font-size: 1.25rem; font-weight: 600; margin: 0 0 12px 0; color: #1f2937;">What Odoo versions are supported?</h4>
           <p style="color: #4b5563; margin: 0;">Odoo 14 and later. Check the module listing for the most up-to-date compatibility information.</p>
@@ -1252,9 +1273,10 @@
     </div>
 </section>
 
-  <!-- FINAL CTA -->
+  <!-- FINAL CTA (Layout preserved: padding 120px 20px) -->
   <section style="padding: 120px 20px; background-color: #f9fafb;"> <!-- Light Background -->
     <div style="max-width: 1000px; margin: 0 auto; text-align: center; ">
+      <!-- CTA Card: Light Accent Background, Light Border/Shadow -->
       <div style="background-color:rgba(79, 70, 229, 0.1); padding: 100px 40px; border-radius: 2rem; border: 1px solid #c7d2fe; box-shadow: 0 30px 80px rgba(0,0,0,0.15);">
         <!-- Badge: Teal -->
         <span style="display: inline-block; background-color: rgba(20, 184, 166, 0.1); color: #2dd4bf; padding: 8px 16px; border-radius: 99px; font-weight: 600; margin-bottom: 24px; border: 1px solid rgba(20, 184, 166, 0.4);">READY TO UNLOCK YOUR DATA?</span>
