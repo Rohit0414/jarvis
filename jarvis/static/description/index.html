@@ -14,20 +14,14 @@
     border-color: rgba(79, 70, 229, 0.5) !important;
   }
 
-  /* NEW: Overlapping Card Style for Section Callouts */
-  .overlapping-callout-container {
-    position: relative;
-    padding-top: 150px; /* Space for the floating image above */
-  }
-
+  /* Overlapping Card Style for Section Callouts */
   .floating-card-top {
       position: absolute;
       width: 80%;
-      top: -100px; /* Move far above the image */
+      top: -100px; 
       left: 50%;
       transform: translateX(-50%);
       z-index: 10;
-      /* Style to make it pop */
       background: linear-gradient(135deg, #4f46e5, #7c3aed);
       color: white;
       padding: 30px;
@@ -41,9 +35,15 @@
       transform: perspective(1000px) rotateX(2deg); /* subtle 3D tilt */
       transition: transform 0.6s ease;
       box-shadow: 0 40px 80px -20px rgba(0,0,0,0.4), 0 0 50px rgba(79, 70, 229, 0.2);
+      width: 100%; /* MAXIMIZED IMAGE WIDTH */
   }
   .max-image-floating:hover {
       transform: perspective(1000px) rotateX(0deg) scale(1.01);
+  }
+  
+  /* Fix for inner padding on stacked images to truly maximize their size */
+  .max-visual-container {
+      padding: 0 !important;
   }
 </style>
 
@@ -97,7 +97,7 @@
 
 
   <!-- =================================================================== -->
-<!-- START: NEW UPDATE HIGHLIGHT BANNER -->
+<!-- START: NEW UPDATE HIGHLIGHT BANNER (Unchanged) -->
 <!-- =================================================================== -->
 <section style="padding: 40px 20px 80px 20px; background-color: #ffffff;">
   <div style="
@@ -106,7 +106,7 @@
     background-color: #f0f4ff; 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid #4f46e5;
+    border: 1px solid #4f46e5; 
     border-radius: 1rem;
     padding: 20px 30px;
     box-shadow: 0 10px 30px -10px rgba(79, 70, 229, 0.2);
@@ -252,25 +252,23 @@
         <div class="row g-4">
             
             <!-- Floating Top Card (Breaks the flow) -->
-            <!-- <div class="col-12">
+            <div class="col-12">
                 <div class="floating-card-top" style="
-                    background-color: #9281af; /* Strong, visible background */
-                    top: 0px; /* Aligns with the end of the text above */
-                    width: 70%; /* Smaller, more elegant box */
+                    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+                    top: 0px; 
+                    width: 70%;
                     padding: 20px 30px;
                 ">
-                    <h4 style=" color: #333333; font-size:1.5rem; font-weight:800; margin-bottom:5px;">Introducing Total SQL Transparency</h4>
-                    <p style="color: #555555; margin:0;">Every result is an open book. See the query, trust the data.</p>
+                    <h4 style="color:white; font-size:1.5rem; font-weight:800; margin-bottom:5px;">Introducing Total SQL Transparency</h4>
+                    <p style="color:rgba(255,255,255,0.9); margin:0;">Every result is an open book. See the query, trust the data.</p>
                 </div>
-            </div> -->
+            </div>
 
             <!-- Image (The Star) -->
-            <div class="col-12">
+            <div class="col-12 max-visual-container">
                 <img src="./sql.png" alt="The new Niyu AI UI showing visible SQL queries" class="max-image-floating" style="
-                    width: 100%;
-                    border-radius: 20px; /* Larger radius */
-                    display: block;
-                     /* Overlap with the card above */
+                    border-radius: 20px;
+                    margin-top: -80px; 
                     position: relative;
                     z-index: 5;
                     border: 1px solid #f9fafb;
@@ -278,7 +276,7 @@
             </div>
 
             <!-- Feature Cards (Staggered Below Image) -->
-            <div class="col-12" style="position: relative; z-index: 15;">
+            <div class="col-12" style="margin-top: -100px; position: relative; z-index: 15;">
                 <div class="row g-4 justify-content-center">
                     <div class="col-12 col-md-6 d-flex">
                         <div class="premium-card-light" style="background-color:#fefefe; border:2px solid #ec4899; border-radius:16px; padding:30px; height:100%; width:100%;">
@@ -309,7 +307,7 @@
 <!-- =================================================================== -->
 <section style="
     background-color: #f0f4ff; /* NEW LIGHT BLUE BACKGROUND */
-    padding: 60px 0 100px 0;
+    padding: 120px 0 100px 0;
     overflow: hidden;
     position: relative;
     border-top: 1px solid #e5e8ed;
@@ -344,35 +342,11 @@
         </div>
 
         <!-- NEW VISUAL LAYOUT (Staggered/Floating) -->
-        <div class="row g-4">
+        <div class="row g-5 align-items-center">
             
-            <!-- Image (Left Side) -->
-            <div class="col-12 col-lg-8 order-lg-1">
-                <div class="row g-4">
-                    <div class="col-12">
-                        <img src="./cha.png" alt="Niyu AI response with a 'Show Charts' button" class="max-image-floating" style="
-                            width: 100%;
-                            border-radius: 20px;
-                            display: block;
-                            border: 1px solid #e5e8ed;
-                        ">
-                    </div>
-                    <div class="col-12">
-                        <img src="./charts.png" alt="Niyu AI displaying generated charts like bar, line, and pie" class="max-image-floating" style="
-                            width: 100%;
-                            border-radius: 20px;
-                            display: block;
-                            border: 1px solid #e5e8ed;
-                            position: relative;
-                            z-index: 5;
-                        ">
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Right Side: Text Callouts (Staggered) -->
+            <!-- Left Side: Text Callouts (SHRUNK to col-lg-4) -->
             <div class="col-12 col-lg-4 order-lg-2">
-                 <div class="row g-4" style=""> <!-- Pushed down to align with the staggered images -->
+                 <div class="row g-4" style="margin-top: 150px;">
                     <div class="col-12">
                         <div class="premium-card-light" style="background-color:#ffffff; border:2px solid #2dd4bf; border-radius:16px; padding:24px; height:100%;">
                             <div style="font-size: 2rem; color: #2dd4bf; margin-bottom: 12px;">&#128202;</div>
@@ -393,6 +367,27 @@
                             <h4 style="color:#333333; font-size:1.25rem; font-weight:700; margin-bottom:12px;">From Insight to Action</h4>
                             <p style="color:#555555; font-size:1rem;">Visualizing trends and outliers helps you make faster, more confident decisions directly from your Odoo data without any extra steps.</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Side: Image/Screenshot (MAXIMIZED to col-lg-8) -->
+            <div class="col-12 col-lg-8 order-lg-1 max-visual-container">
+                <div class="row g-4">
+                    <div class="col-12">
+                        <img src="./cha.png" alt="Niyu AI response with a 'Show Charts' button" class="max-image-floating" style="
+                            border-radius: 20px;
+                            border: 1px solid #e5e8ed;
+                        ">
+                    </div>
+                    <div class="col-12">
+                        <img src="./charts.png" alt="Niyu AI displaying generated charts like bar, line, and pie" class="max-image-floating" style="
+                            border-radius: 20px;
+                            border: 1px solid #e5e8ed;
+                            margin-top: -100px; /* Overlap the image above */
+                            position: relative;
+                            z-index: 5;
+                        ">
                     </div>
                 </div>
             </div>
@@ -452,13 +447,11 @@
             </div>
           </div>
         <!-- Right Side: Image/Screenshot (MAXIMIZED to col-lg-8) -->
-        <div class="col-12 col-lg-8 order-lg-2">
-            <img src="./cha.png" alt="Custom Keyword Mapping Configuration in Odoo Settings" class="max-image-floating" style="
-                width: 100%; 
+        <div class="col-12 col-lg-8 order-lg-2 max-visual-container">
+            <img src="./custom.png" alt="Custom Keyword Mapping Configuration in Odoo Settings" class="max-image-floating" style="
                 border-radius: 20px; 
-                display: block; 
                 border: 1px solid #e5e8ed; 
-                margin-top: 150px; /* Pushed down for visual stagger */
+                margin-top: 150px; 
             ">
         </div>
       </div>
@@ -509,8 +502,8 @@
         <div class="row g-5 align-items-center">
 
             <!-- Left Side: Image/Screenshot (MAXIMIZED to col-lg-8) -->
-            <div class="col-12 col-lg-8 order-lg-1">
-                <img src="./newuipdf.png" alt="Custom Keyword Mapping Configuration in Odoo Settings" class="max-image-floating" style="width: 100%; border-radius: 20px; display: block; border: 1px solid #e5e8ed;">
+            <div class="col-12 col-lg-8 order-lg-1 max-visual-container">
+                <img src="./newuipdf.png" alt="Custom Keyword Mapping Configuration in Odoo Settings" class="max-image-floating" style="border-radius: 20px; display: block; border: 1px solid #e5e8ed;">
             </div>
 
             <!-- Right Side: Text Callouts (SHRUNK to col-lg-4) -->
@@ -541,7 +534,7 @@
 
 
 <!-- =================================================================== -->
-<!-- START: NEW SECTION 2 - MULTI-LANGUAGE SUPPORT (Alternating Layout) -->
+<!-- START: NEW SECTION 2 - MULTI-LANGUAGE SUPPORT (Overlapping Layout) -->
 <!-- =================================================================== -->
 <section style="
     background-color: #ffffff;
@@ -579,17 +572,17 @@
             </div>
         </div>
 
-        <!-- NEW ALTERNATING LAYOUT (4/8 Split, Text on Right) -->
+        <!-- NEW OVERLAPPING/STAGGERED LAYOUT (4/8 Split, Image on Right) -->
         <div class="row g-5 align-items-center">
 
             <!-- Left Side: Image/Screenshot (MAXIMIZED to col-lg-8) -->
-            <div class="col-12 col-lg-8 order-lg-1">
+            <div class="col-12 col-lg-8 order-lg-1 max-visual-container">
                 <div class="row g-4">
                     <div class="col-12">
-                        <img src="./newuilang.png" alt="Custom Keyword Mapping Configuration in Odoo Settings" class="max-image-floating" style="width: 100%; border-radius: 20px; display: block; border: 1px solid #e5e8ed;">
+                        <img src="./newuilang.png" alt="Custom Keyword Mapping Configuration in Odoo Settings" class="max-image-floating" style="border-radius: 20px; display: block; border: 1px solid #e5e8ed;">
                     </div>
-                    <div class="col-12">
-                        <img src="./newuiarabic.png" alt="Custom Keyword Mapping Configuration in Odoo Settings" class="max-image-floating" style="width: 100%; border-radius: 20px; display: block; border: 1px solid #e5e8ed; margin-top: -100px; position: relative; z-index: 5;">
+                    <div class="col-12 max-visual-container">
+                        <img src="./newuiarabic.png" alt="Custom Keyword Mapping Configuration in Odoo Settings" class="max-image-floating" style="border-radius: 20px; display: block; border: 1px solid #e5e8ed; margin-top: -100px; position: relative; z-index: 5;">
                     </div>
                 </div>
             </div>
@@ -687,7 +680,7 @@
                         </ol>
                     </div>
                     <!-- Right side: Full Image (7/12) -->
-                    <div class="col-12 col-md-7">
+                    <div class="col-12 col-md-7 max-visual-container">
                         <div style="border-radius: 12px; padding: 3px; background: linear-gradient(90deg, rgba(79, 70, 229, 0.6), rgba(236, 72, 153, 0.4)); box-shadow: 0 0 30px -5px rgba(79, 70, 229, 0.3);">
                             <img src="./per.png" alt="Administrator granting AI Analyst User access in Odoo user settings." style="width: 100%; border-radius: 10px; display: block; border: 1px solid #ffffff;">
                         </div>
