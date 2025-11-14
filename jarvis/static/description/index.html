@@ -357,35 +357,68 @@
     </div>
   </section>
 
-  <!-- SCHEMA HANDLING SECTION -->
+  <!-- SCHEMA HANDLING SECTION (Maximized Image and Restructured Content) -->
 <section class="parallax-bg" style="padding: 120px 0; background-color:#f7f9fc; border-top:1px solid #e5e8ed;">
     <div class="container" style="padding:0 15px;">
-      <div class="row align-items-center g-5"> <!-- Added g-5 for a larger gap -->
+      
+      <!-- TOP ROW: HEADER AND MAXIMIZED IMAGE -->
+      <div class="row align-items-center g-5">
         
-        <!-- Text Column (Now col-lg-5 - smaller text block) -->
-        <div class="col-12 col-lg-5">
+        <!-- Text Column (Now col-lg-4 - very tight text) -->
+        <div class="col-12 col-lg-4">
           <span style="display:inline-block; font-size:14px; font-weight:800; color:#78dcc0; background-color:#78dcc026; border:1px solid #78dcc066; border-radius:999px; padding:8px 16px; margin-bottom:10px;">SMART DATA MAPPING</span>
-          <h2 style="font-size: clamp(2.6rem, 5vw, 3.2rem); font-weight:900; margin:0 0 20px 0; color:#40a0ff; text-shadow: 0 0 10px rgba(64, 160, 255, 0.1);">Intelligent Schema Handling for BigQuery</h2>
-          <p style="font-size:1.25rem; color:#555555; margin-bottom:30px; font-weight: 500;">Our connector intelligently translates complex Odoo field types into clean, BigQuery-compatible columns, saving you countless hours of manual data wrangling and ensuring **data integrity** from source to insight.</p>
-          
-          <!-- Wrapped list in a visually distinct box for polish -->
-          <div class="feature-box" style="background-color:#ffffff; border-radius:20px; padding:30px; border:2px solid #78dcc0; box-shadow: 0 10px 30px -10px rgba(0,0,0,0.15);">
-            <ul style="color: #333333; padding-left: 20px; font-size: 1.15rem; margin: 0;">
-              <li style="margin-bottom:15px;"><strong style="color:#40a0ff;">Many2one Fields:</strong> Automatically exports both the related record's `ID` (e.g., `partner_id`) and its human-readable `Name` (e.g., `partner_name`) for easy joining and reporting.</li>
-              <li style="margin-bottom:15px;"><strong style="color:#40a0ff;">Selection Fields:</strong> Converts internal Odoo keys (e.g., `'draft'`, `'open'`) to their user-friendly labels (e.g., `'Draft'`, `'Open'`), making your BigQuery data instantly understandable.</li>
-              <li style="margin-bottom:15px;"><strong style="color:#40a0ff;">Date & Datetime:</strong> Ensures all date and datetime fields are correctly formatted to ISO 8601 standards, enabling seamless time-series analysis and filtering in BigQuery and your BI tools.</li>
-              <li style="margin-bottom:0px;"><strong style="color:#40a0ff;">Numeric & Boolean:</strong> Automatically maps Odoo numeric types to BigQuery `INTEGER`, `BIGNUMERIC`, or `FLOAT`, and boolean fields to `BOOL`, preserving data accuracy.</li>
-            </ul>
-          </div>
+          <h2 style="font-size: clamp(2.4rem, 5vw, 3.2rem); font-weight:900; margin:0 0 20px 0; color:#40a0ff; text-shadow: 0 0 10px rgba(64, 160, 255, 0.1);">Intelligent Schema Handling for BigQuery</h2>
+          <p style="font-size:1.25rem; color:#555555; margin-bottom:0; font-weight: 500;">Our connector intelligently translates complex Odoo field types into clean, BigQuery-compatible columns, saving you countless hours of manual data wrangling and ensuring **data integrity** from source to insight.</p>
         </div>
         
-        <!-- Image Column (Now col-lg-7 - much bigger) -->
-        <div class="col-12 col-lg-7">
+        <!-- Image Column (Now col-lg-8 - maximized image space) -->
+        <div class="col-12 col-lg-8">
           <img src="./cha.png" alt="Schema handling example" style="width: 100%; border-radius: 20px; display: block; box-shadow: 0 50px 120px -30px rgba(0,0,0,0.4), 0 0 0 2px #d0d0d0; transition: all 0.5s ease;"
                onmouseover="this.style.transform='scale(1.02)'; this.style.boxShadow='0 60px 140px -30px rgba(0,0,0,0.6)'; this.style.borderColor='#40a0ff';" 
                onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 50px 120px -30px rgba(0,0,0,0.4), 0 0 0 2px #d0d0d0'; this.style.borderColor='#d0d0d0';">
         </div>
       </div>
+
+      <!-- BOTTOM ROW: DETAILED FEATURES AS FLOATING CARDS -->
+      <div class="row g-4" style="margin-top: 80px;">
+        <div class="col-12">
+            <h3 style="text-align: center; font-size: 24px; font-weight: 800; color: #333333; margin-bottom: 30px; border-bottom: 2px solid #e5e8ed; padding-bottom: 15px; display: inline-block; width: 100%;">Field Type Translation Details</h3>
+        </div>
+        
+        <!-- Feature 1: Many2one -->
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="feature-box" style="border-radius:20px; padding:25px; height:100%; border:1px solid rgba(64, 160, 255, 0.5); box-shadow: 0 10px 20px -10px rgba(64, 160, 255, 0.2);">
+                <div style="font-size:1.5rem; color:#40a0ff; margin-bottom:10px; font-weight:900;">Many2one Fields</div>
+                <p style="margin:0; color:#555555; font-size:15px;">Automatically exports both the related record's `ID` (e.g., `partner_id`) and its human-readable `Name` (e.g., `partner_name`) for easy joining and reporting.</p>
+            </div>
+        </div>
+        
+        <!-- Feature 2: Selection Fields -->
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="feature-box" style="border-radius:20px; padding:25px; height:100%; border:1px solid rgba(120, 220, 200, 0.5); box-shadow: 0 10px 20px -10px rgba(120, 220, 200, 0.2);">
+                <div style="font-size:1.5rem; color:#78dcc0; margin-bottom:10px; font-weight:900;">Selection Fields</div>
+                <p style="margin:0; color:#555555; font-size:15px;">Converts internal Odoo keys (e.g., `'draft'`) to their user-friendly labels (e.g., `'Draft'`), making your BigQuery data instantly understandable for business users.</p>
+            </div>
+        </div>
+        
+        <!-- Feature 3: Date & Datetime -->
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="feature-box" style="border-radius:20px; padding:25px; height:100%; border:1px solid rgba(255, 223, 0, 0.5); box-shadow: 0 10px 20px -10px rgba(255, 223, 0, 0.2);">
+                <div style="font-size:1.5rem; color:#ffd700; margin-bottom:10px; font-weight:900;">Date & Datetime</div>
+                <p style="margin:0; color:#555555; font-size:15px;">Ensures all date and datetime fields are correctly formatted to ISO 8601 standards, enabling seamless time-series analysis and filtering in your BI tools.</p>
+            </div>
+        </div>
+
+        <!-- Feature 4: Numeric & Boolean -->
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="feature-box" style="border-radius:20px; padding:25px; height:100%; border:1px solid rgba(64, 160, 255, 0.5); box-shadow: 0 10px 20px -10px rgba(64, 160, 255, 0.2);">
+                <div style="font-size:1.5rem; color:#40a0ff; margin-bottom:10px; font-weight:900;">Numeric & Boolean</div>
+                <p style="margin:0; color:#555555; font-size:15px;">Automatically maps Odoo numeric types to BigQuery `INTEGER`/`FLOAT` and boolean fields to `BOOL`, preserving data accuracy and integrity.</p>
+            </div>
+        </div>
+        
+      </div>
+
     </div>
 </section>
 
