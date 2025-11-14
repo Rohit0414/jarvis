@@ -1,324 +1,316 @@
 <!-- static/description/index.html -->
+<!-- Bootstrap (for grid/flex utilities) -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-
 <style>
-  /* Minimalist animations for a professional feel */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  @keyframes subtlePulse {
-    0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4); }
-    70% { box-shadow: 0 0 0 10px rgba(59, 130, 246, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+  /* Animation for the glowing text effect in the hero section */
+  @keyframes background-pan {
+    0% { background-position: 0% center; }
+    100% { background-position: -200% center; }
   }
 
-  .hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-  .hover-lift:hover { transform: translateY(-5px); box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1) !important; }
+  /* Keyframe animation for subtle pulsing effect on CTA button */
+  @keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 82, 204, 0.4); }
+    70% { transform: scale(1.02); box-shadow: 0 0 0 15px rgba(0, 82, 204, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 82, 204, 0); }
+  }
 </style>
 
-<section style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1f2937; background-color: #ffffff; line-height: 1.6; overflow-x: hidden;">
+<section style="
+  background-color:#ffffff; color:#172B4D;
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height:1.6; margin:0; padding:0;
+">
 
   <!-- =======================
-  1. HERO SECTION: Clean, Centered, High Impact
+  HERO SECTION - Dynamic Two-Column Layout
   ======================== -->
-  <div style="position: relative; padding: 140px 20px 100px; background: radial-gradient(circle at 50% 0%, #f0f9ff 0%, #ffffff 60%);">
-    <div class="container" style="max-width: 1100px; text-align: center; position: relative; z-index: 2;">
-      
-      <!-- Badge -->
-      <span style="display: inline-block; padding: 8px 16px; background-color: #eff6ff; color: #2563eb; border: 1px solid #dbeafe; border-radius: 100px; font-size: 13px; font-weight: 700; margin-bottom: 24px; letter-spacing: 0.5px;">
-        ODOO &#8594; BIGQUERY &#8594; BI
-      </span>
-
-      <!-- Headline -->
-      <h1 style="font-size: clamp(3rem, 6vw, 5rem); font-weight: 800; letter-spacing: -0.03em; color: #111827; margin-bottom: 24px; line-height: 1.1;">
-        Your BI, <span style="background: linear-gradient(120deg, #2563eb, #06b6d4); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Supercharged.</span>
-      </h1>
-
-      <!-- Subheadline -->
-      <p style="font-size: 1.25rem; color: #4b5563; max-width: 750px; margin: 0 auto 50px;">
-        Sync Odoo data directly to BigQuery with one click. Connect Power BI, Looker, and Tableau to build enterprise-grade dashboards instantly.
-      </p>
-
-      <!-- Video Container (Floating Effect) -->
-      <div style="max-width: 900px; margin: 0 auto 60px; border-radius: 20px; padding: 10px; background: rgba(255,255,255,0.7); border: 1px solid #e5e7eb; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1); backdrop-filter: blur(10px);">
-        <div style="border-radius: 16px; overflow: hidden; background-color: #000;">
-           <video autoplay loop muted playsinline preload="auto" style="width: 100%; display: block;">
-              <source src="./preview.webm" type="video/webm">
-              <source src="static/description/q1.mp4" type="video/mp4">
-          </video>
+  <div class="container" style="padding: 120px 20px 100px 20px;">
+    <div class="row align-items-center g-5">
+      <!-- Left Column (Text Content) -->
+      <div class="col-lg-6">
+        <div style="display: inline-block; padding: 8px 18px; border-radius: 999px; font-size: 13px; font-weight: 700; color: #0052CC; background-color: #EBF4FF; margin-bottom: 24px;">
+          ODOO &#10140; BIGQUERY &#10140; YOUR BI PLATFORM
+        </div>
+        <h1 style="
+            font-size: clamp(3rem, 6vw, 4.5rem);
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+            margin: 0 0 24px 0;
+            color: #091E42;
+          ">
+          Your BI, Supercharged.
+        </h1>
+        <p style="font-size: 1.25rem; color: #5E6C84; margin: 0 auto 32px auto; max-width: 550px; font-weight: 400;">
+          One click to sync Odoo data directly to Google BigQuery. Instantly connect to Power BI, Looker Studio, and Tableau to build enterprise-grade dashboards.
+        </p>
+  
+        <!-- BI Logos -->
+        <div class="d-flex align-items-center" style="gap: 32px; margin-bottom: 32px;">
+          <img src="./copy.png" alt="Power BI Logo" style="height: 30px; opacity: 0.7;">
+          <img src="./2.png" alt="Looker Studio Logo" style="height: 60px; opacity: 0.7;">
+          <img src="./hd.png" alt="Tableau Logo" style="height: 50px; opacity: 0.7;">
         </div>
       </div>
 
-      <!-- Trusted By / Compatible With -->
-      <p style="font-size: 0.9rem; font-weight: 600; color: #9ca3af; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px;">Seamlessly Integrated With</p>
-      <div class="d-flex justify-content-center align-items-center flex-wrap" style="gap: 40px; opacity: 0.8;">
-        <img src="./copy.png" alt="Power BI" style="height: 32px; filter: grayscale(100%); transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
-        <img src="./2.png" alt="Looker" style="height: 50px; filter: grayscale(100%); transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
-        <img src="./hd.png" alt="Tableau" style="height: 45px; filter: grayscale(100%); transition: 0.3s;" onmouseover="this.style.filter='grayscale(0%)'" onmouseout="this.style.filter='grayscale(100%)'">
+      <!-- Right Column (Video) -->
+      <div class="col-lg-6">
+        <div style="border-radius: 1.25rem; padding: 5px; background: linear-gradient(135deg, #0052CC, #4DD0E1); box-shadow: 0 20px 40px -15px rgba(0, 82, 204, 0.3);">
+            <video autoplay loop muted playsinline preload="auto" style="width: 100%; display: block; border-radius: 1rem; background-color: #000;">
+                <source src="./preview.webm" type="video/webm">
+                <source src="static/description/q1.mp4" type="video/mp4">
+            </video>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- =======================
-  2. THE ENGINES (BI TOOLS) - Horizontal Cards Layout
+  BI INTEGRATIONS SHOWCASE - Clean Alternating Layout
   ======================== -->
-  <section style="padding: 100px 0; background-color: #ffffff;">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 style="font-weight: 800; font-size: 2.5rem; color: #111827;">Activate Your Analytics Stack</h2>
-        <p style="color: #6b7280; font-size: 1.1rem; max-width: 600px; margin: 0 auto;">Your BigQuery data is the fuel. Choose your engine.</p>
+  <section style="padding: 100px 24px; background-color: #F4F5F7; border-top: 1px solid #DFE1E6;">
+    <div class="container" style="max-width:1100px;">
+
+      <!-- Section Intro -->
+      <div style="text-align: center; max-width: 750px; margin: 0 auto 72px auto;">
+        <h2 style="font-size: clamp(2.2rem, 5vw, 2.8rem); font-weight: 800; letter-spacing: -1px; margin: 0 0 16px 0; color: #091E42;">
+          Activate Your Analytics Stack
+        </h2>
+        <p style="font-size: 1.1rem; color: #5E6C84; line-height: 1.6;">
+          Your BigQuery data is the fuel. These are the engines. Connect your clean, structured Odoo data to the platform of your choice and start building powerful, interactive dashboards that drive decisions.
+        </p>
       </div>
 
-      <div class="row g-4">
-        <!-- Card 1: Power BI -->
-        <div class="col-12 col-lg-4">
-          <div class="h-100 p-4 hover-lift" style="background: #ffffff; border: 1px solid #f3f4f6; border-radius: 24px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
-            <div style="height: 200px; background: #f8fafc; border-radius: 16px; margin-bottom: 24px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-               <video autoplay loop muted playsinline preload="auto" style="width: 100%; height: 100%; object-fit: cover;">
+      <!-- Power BI Panel -->
+      <div id="powerbi" style="margin-bottom: 80px;">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6">
+             <div style="border-radius: 16px; border: 1px solid #DFE1E6; padding: 8px; background-color: #FFFFFF; box-shadow: 0 10px 20px rgba(23, 43, 77, 0.05);">
+               <video autoplay loop muted playsinline preload="auto" style="width: 100%; display: block; border-radius: 10px; background-color: #eee;">
                   <source src="./powerbiconnection.webm" type="video/webm">
                </video>
-            </div>
-            <h3 style="font-weight: 700; font-size: 1.25rem; color: #1e293b; margin-bottom: 10px;">Power BI + BigQuery</h3>
-            <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 20px;">Build scalable models using Import Mode and Incremental Refresh for cost-effective dashboards.</p>
-            <ul style="list-style: none; padding: 0; font-size: 0.9rem; color: #475569;">
-              <li style="margin-bottom: 8px; display: flex;">&#10003; <span style="margin-left: 8px;">Native Connector Support</span></li>
-              <li style="margin-bottom: 8px; display: flex;">&#10003; <span style="margin-left: 8px;">Incremental Refresh Ready</span></li>
-              <li style="display: flex;">&#10003; <span style="margin-left: 8px;">DAX Measure Centralization</span></li>
-            </ul>
+             </div>
           </div>
-        </div>
-
-        <!-- Card 2: Looker Studio -->
-        <div class="col-12 col-lg-4">
-          <div class="h-100 p-4 hover-lift" style="background: #ffffff; border: 1px solid #f3f4f6; border-radius: 24px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
-            <div style="height: 200px; background: #f0fdfa; border-radius: 16px; margin-bottom: 24px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-              <img src="./lookerconnection.png" alt="Looker" style="width: 90%; border-radius: 8px;">
-            </div>
-            <h3 style="font-weight: 700; font-size: 1.25rem; color: #1e293b; margin-bottom: 10px;">Looker Studio + BigQuery</h3>
-            <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 20px;">Create shareable, fast dashboards using Viewer's Credentials and BI Engine acceleration.</p>
-            <ul style="list-style: none; padding: 0; font-size: 0.9rem; color: #475569;">
-              <li style="margin-bottom: 8px; display: flex;">&#10003; <span style="margin-left: 8px;">Direct Viewer Credentials</span></li>
-              <li style="margin-bottom: 8px; display: flex;">&#10003; <span style="margin-left: 8px;">Pre-aggregated Views</span></li>
-              <li style="display: flex;">&#10003; <span style="margin-left: 8px;">Data Extract Capability</span></li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Card 3: Tableau -->
-        <div class="col-12 col-lg-4">
-          <div class="h-100 p-4 hover-lift" style="background: #ffffff; border: 1px solid #f3f4f6; border-radius: 24px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
-            <div style="height: 200px; background: #fffbeb; border-radius: 16px; margin-bottom: 24px; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-              <img src="./tableauconnection.png" alt="Tableau" style="width: 90%; border-radius: 8px;">
-            </div>
-            <h3 style="font-weight: 700; font-size: 1.25rem; color: #1e293b; margin-bottom: 10px;">Tableau + BigQuery</h3>
-            <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 20px;">Enable deep visual storytelling with Live Connections or optimized Extracts for large datasets.</p>
-            <ul style="list-style: none; padding: 0; font-size: 0.9rem; color: #475569;">
-              <li style="margin-bottom: 8px; display: flex;">&#10003; <span style="margin-left: 8px;">Live & Extract Modes</span></li>
-              <li style="margin-bottom: 8px; display: flex;">&#10003; <span style="margin-left: 8px;">Complex Join Handling</span></li>
-              <li style="display: flex;">&#10003; <span style="margin-left: 8px;">Advanced Statistical Modeling</span></li>
+          <div class="col-lg-6">
+            <div style="display:inline-block; padding:8px 14px; border-radius:999px; font-weight:700; margin-bottom:16px; color:#0052CC; background-color: #EBF4FF;">&#128640; POWER BI + BIGQUERY</div>
+            <h3 style="margin:0 0 10px 0; color:#091E42; font-size:28px; font-weight:700;">Build a Production-Ready Model</h3>
+            <p style="margin:0 0 20px 0; color:#5E6C84; font-size:16px;">The definitive path for building scalable, high-performance BI. Connect with confidence and unlock advanced analytics.</p>
+            <ul style="margin:0; padding:0; color:#5E6C84; font-size:16px; list-style-type: none;">
+              <li style="margin-bottom:12px; display:flex; align-items:start;"><span style="color:#0052CC; margin-right:12px; font-weight:bold;">&#10003;</span><span>Utilize the native <strong>BigQuery Connector</strong> (Import Mode) for optimal performance.</span></li>
+              <li style="margin-bottom:12px; display:flex; align-items:start;"><span style="color:#0052CC; margin-right:12px; font-weight:bold;">&#10003;</span><span>Enable <strong>Incremental Refresh</strong> to significantly reduce refresh times and data costs.</span></li>
+              <li style="display:flex; align-items:start;"><span style="color:#0052CC; margin-right:12px; font-weight:bold;">&#10003;</span><span>Centralize logic within <strong>DAX Measures</strong> to ensure a single source of truth.</span></li>
             </ul>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- =======================
-  3. FEATURES - Minimal Grid
-  ======================== -->
-  <section style="padding: 80px 0; background-color: #f8fafc;">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-12 col-md-4">
-          <div style="padding: 30px; height: 100%; background: #fff; border-radius: 20px; border: 1px solid #e2e8f0;">
-            <div style="width: 50px; height: 50px; background: #eff6ff; color: #3b82f6; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px;">&#128279;</div>
-            <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; color: #1e293b;">Precise Filtering</h4>
-            <p style="font-size: 0.95rem; color: #64748b; margin: 0;">Use standard Odoo domains to export only what matters—active customers, posted invoices, or specific product lines.</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-4">
-          <div style="padding: 30px; height: 100%; background: #fff; border-radius: 20px; border: 1px solid #e2e8f0;">
-            <div style="width: 50px; height: 50px; background: #f0fdf4; color: #22c55e; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px;">&#128200;</div>
-            <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; color: #1e293b;">Column Selection</h4>
-            <p style="font-size: 0.95rem; color: #64748b; margin: 0;">Don't dump everything. Pick specific columns to reduce storage costs, improve speed, and ensure data privacy.</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-4">
-          <div style="padding: 30px; height: 100%; background: #fff; border-radius: 20px; border: 1px solid #e2e8f0;">
-            <div style="width: 50px; height: 50px; background: #fff7ed; color: #f97316; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-bottom: 20px;">&#9203;</div>
-            <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 12px; color: #1e293b;">Automated Incremental Sync</h4>
-            <p style="font-size: 0.95rem; color: #64748b; margin: 0;">Set it and forget it. Automatically sync only new or changed records to keep dashboards real-time without the cost.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =======================
-  4. ZIG-ZAG SECTIONS (Schema & Security)
-  ======================== -->
-  <section style="padding: 100px 0; background-color: #ffffff;">
-    <div class="container">
-      
-      <!-- Row 1: Schema (Text Left, Image Right) -->
-      <div class="row align-items-center mb-5 pb-5" style="border-bottom: 1px solid #f1f5f9;">
-        <div class="col-lg-6 pe-lg-5">
-           <span style="font-size: 12px; font-weight: 800; letter-spacing: 1px; color: #3b82f6; text-transform: uppercase; display: block; margin-bottom: 10px;">Smart Mapping</span>
-           <h2 style="font-weight: 800; color: #111827; margin-bottom: 20px;">Intelligent Schema Handling</h2>
-           <p style="color: #4b5563; margin-bottom: 20px;">We translate Odoo's complex data types into clean BigQuery columns automatically.</p>
-           <ul style="color: #4b5563; padding-left: 18px;">
-             <li style="margin-bottom: 10px;"><strong>Many2one:</strong> Exports ID + Name for easy joins.</li>
-             <li style="margin-bottom: 10px;"><strong>Selection:</strong> Converts keys to human-readable labels.</li>
-             <li style="margin-bottom: 10px;"><strong>Date/Time:</strong> ISO 8601 formatting for seamless BI compatibility.</li>
-           </ul>
-        </div>
-        <div class="col-lg-6 mt-4 mt-lg-0">
-           <img src="./schema.png" alt="Schema" style="width: 100%; border-radius: 16px; box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1); border: 1px solid #e5e7eb;">
-        </div>
-      </div>
-
-      <!-- Row 2: Security (Image Left, Text Right) -->
-      <div class="row align-items-center mt-5">
-        <div class="col-lg-6 order-2 order-lg-1 mt-4 mt-lg-0">
-           <img src="./security.png" alt="Security" style="width: 100%; border-radius: 16px; box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1); border: 1px solid #e5e7eb;">
-        </div>
-        <div class="col-lg-6 ps-lg-5 order-1 order-lg-2">
-           <span style="font-size: 12px; font-weight: 800; letter-spacing: 1px; color: #10b981; text-transform: uppercase; display: block; margin-bottom: 10px;">Enterprise Security</span>
-           <h2 style="font-weight: 800; color: #111827; margin-bottom: 20px;">Your Data, Your Control.</h2>
-           <p style="color: #4b5563; margin-bottom: 20px;">Security is the foundation. Data flows directly from Odoo to your Google Cloud project.</p>
-           <ul style="color: #4b5563; padding-left: 18px;">
-             <li style="margin-bottom: 10px;"><strong>No Middlemen:</strong> Direct HTTPS connection to Google API.</li>
-             <li style="margin-bottom: 10px;"><strong>Service Accounts:</strong> Uses standard GCP IAM authentication.</li>
-             <li style="margin-bottom: 10px;"><strong>Audit Logs:</strong> Full visibility within your own Google Cloud console.</li>
-           </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =======================
-  5. GALLERY GRID - Professional Photo Arrangement
-  ======================== -->
-  <section style="padding: 100px 0; background-color: #f8fafc;">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 style="font-weight: 800; color: #111827;">Inside the Connector</h2>
-        <p style="color: #6b7280;">A detailed look at the configuration interface.</p>
-      </div>
-
-      <!-- 2x2 Grid Layout for Screenshots -->
-      <div class="row g-4">
-        
-        <!-- Screenshot 1 -->
-        <div class="col-md-6">
-          <div style="background: #fff; padding: 15px; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); height: 100%;">
-            <img src="./do.png" alt="Export Config" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
-            <h5 style="font-size: 1rem; font-weight: 700; text-align: center; margin-bottom: 5px;">Export Configuration</h5>
-            <p style="font-size: 0.85rem; color: #64748b; text-align: center; margin: 0;">Visually define models and filters.</p>
-          </div>
-        </div>
-
-        <!-- Screenshot 2 -->
-        <div class="col-md-6">
-          <div style="background: #fff; padding: 15px; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); height: 100%;">
-            <img src="./in.png" alt="Logs" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
-            <h5 style="font-size: 1rem; font-weight: 700; text-align: center; margin-bottom: 5px;">Real-time Logs</h5>
-            <p style="font-size: 0.85rem; color: #64748b; text-align: center; margin: 0;">Monitor sync health instantly.</p>
-          </div>
-        </div>
-
-        <!-- Screenshot 3 -->
-        <div class="col-md-6">
-          <div style="background: #fff; padding: 15px; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); height: 100%;">
-            <img src="./co.png" alt="Mapping" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
-            <h5 style="font-size: 1rem; font-weight: 700; text-align: center; margin-bottom: 5px;">Advanced Mapping</h5>
-            <p style="font-size: 0.85rem; color: #64748b; text-align: center; margin: 0;">Control type conversions and naming.</p>
-          </div>
-        </div>
-
-        <!-- Screenshot 4 -->
-        <div class="col-md-6">
-          <div style="background: #fff; padding: 15px; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); height: 100%;">
-            <img src="./se.png" alt="Scheduling" style="width: 100%; border-radius: 8px; margin-bottom: 15px;">
-            <h5 style="font-size: 1rem; font-weight: 700; text-align: center; margin-bottom: 5px;">Automated Scheduler</h5>
-            <p style="font-size: 0.85rem; color: #64748b; text-align: center; margin: 0;">Set recurring incremental updates.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- =======================
-  6. SETUP & FAQ - Clean Lists
-  ======================== -->
-  <section style="padding: 100px 0; background-color: #ffffff;">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-10">
-          
-          <!-- Setup -->
-          <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: 20px; padding: 40px; margin-bottom: 80px;">
-            <h3 style="font-weight: 800; color: #0c4a6e; margin-bottom: 20px;">Quick Start Guide</h3>
-            <div class="row">
-              <div class="col-md-6">
-                <ol style="padding-left: 20px; color: #0369a1; font-weight: 500;">
-                  <li style="margin-bottom: 15px;">Install module in Odoo.</li>
-                  <li style="margin-bottom: 15px;">Create GCP Service Account.</li>
-                  <li style="margin-bottom: 15px;">Upload JSON Key to Odoo.</li>
-                </ol>
-              </div>
-              <div class="col-md-6">
-                <ol start="4" style="padding-left: 20px; color: #0369a1; font-weight: 500;">
-                   <li style="margin-bottom: 15px;">Create Export Profile.</li>
-                   <li style="margin-bottom: 15px;">Select fields & filters.</li>
-                   <li style="margin-bottom: 15px;">Run your first Sync!</li>
-                </ol>
-              </div>
+      <!-- Looker Studio Panel (Image on right) -->
+      <div id="looker" style="margin-bottom: 80px;">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div style="border-radius: 16px; border: 1px solid #DFE1E6; padding: 8px; background-color: #FFFFFF; box-shadow: 0 10px 20px rgba(23, 43, 77, 0.05);">
+              <img src="./lookerconnection.png" alt="Looker Studio Feature" style="width: 100%; display:block; border-radius:10px;">
             </div>
           </div>
+          <div class="col-lg-6 order-lg-1">
+            <div style="display:inline-block; padding:8px 14px; border-radius:999px; font-weight:700; margin-bottom:16px; color:#006644; background-color:#E3FCEF;">&#127760; LOOKER STUDIO + BIGQUERY</div>
+            <h3 style="margin:0 0 10px 0; color:#091E42; font-size:28px; font-weight:700;">Ship Insights at High Velocity</h3>
+            <p style="margin:0 0 20px 0; color:#5E6C84; font-size:16px;">Create beautiful, shareable dashboards that are fast, intuitive, and accessible to your entire team.</p>
+            <ul style="margin:0; padding:0; color:#5E6C84; font-size:16px; list-style-type: none;">
+              <li style="margin-bottom:12px; display:flex; align-items:start;"><span style="color:#006644; margin-right:12px; font-weight:bold;">&#10003;</span><span>Connect directly using <strong>Viewer's Credentials</strong> for robust data security.</span></li>
+              <li style="margin-bottom:12px; display:flex; align-items:start;"><span style="color:#006644; margin-right:12px; font-weight:bold;">&#10003;</span><span>Leverage BigQuery <strong>Views</strong> to pre-aggregate data and speed up dashboards.</span></li>
+              <li style="display:flex; align-items:start;"><span style="color:#006644; margin-right:12px; font-weight:bold;">&#10003;</span><span>Utilize <strong>Data Extracts</strong> for heavy pages to ensure near-instant load times.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-          <!-- FAQ Grid -->
-          <h3 style="text-align: center; font-weight: 800; margin-bottom: 40px;">Common Questions</h3>
-          <div class="row g-5">
-            <div class="col-md-6">
-              <h5 style="font-weight: 700;">What do I need?</h5>
-              <p style="color: #6b7280; font-size: 0.9rem;">Odoo v14+, GCP Account with BigQuery API, and a Service Account.</p>
-              
-              <h5 style="font-weight: 700; margin-top: 30px;">Is it secure?</h5>
-              <p style="color: #6b7280; font-size: 0.9rem;">Yes. Data travels HTTPS directly to Google. We don't see or store your data.</p>
-              
-              <h5 style="font-weight: 700; margin-top: 30px;">Custom fields supported?</h5>
-              <p style="color: #6b7280; font-size: 0.9rem;">Yes! The schema reader detects custom fields and models automatically.</p>
-            </div>
-             <div class="col-md-6">
-              <h5 style="font-weight: 700;">Are there monthly fees?</h5>
-              <p style="color: #6b7280; font-size: 0.9rem;">No. One-time module purchase. You only pay Google for BigQuery usage.</p>
-              
-              <h5 style="font-weight: 700; margin-top: 30px;">Can I schedule exports?</h5>
-              <p style="color: #6b7280; font-size: 0.9rem;">Yes. Use the built-in scheduler for hourly, daily, or weekly incremental syncs.</p>
-              
-              <h5 style="font-weight: 700; margin-top: 30px;">Support?</h5>
-              <p style="color: #6b7280; font-size: 0.9rem;">Contact <strong>info@niyulabs.com</strong>. Docs available at niyulabs.com.</p>
+      <!-- Tableau Panel -->
+      <div id="tableau">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6">
+            <div style="border-radius: 16px; border: 1px solid #DFE1E6; padding: 8px; background-color: #FFFFFF; box-shadow: 0 10px 20px rgba(23, 43, 77, 0.05);">
+             <img src="./tableauconnection.png" alt="Tableau Feature" style="width: 100%; display:block; border-radius:10px;">
             </div>
           </div>
+          <div class="col-lg-6">
+            <div style="display:inline-block; padding:8px 14px; border-radius:999px; font-weight:700; margin-bottom:16px; color:#BF2600; background-color:#FFECEB;">&#127912; TABLEAU + BIGQUERY</div>
+            <h3 style="margin:0 0 10px 0; color:#091E42; font-size:28px; font-weight:700;">Visual Storytelling & Deep Dives</h3>
+            <p style="margin:0 0 20px 0; color:#5E6C84; font-size:16px;">Connect Tableau's powerful analytics engine for unparalleled data exploration and insight.</p>
+            <ul style="margin:0; padding:0; color:#5E6C84; font-size:16px; list-style-type: none;">
+              <li style="margin-bottom:12px; display:flex; align-items:start;"><span style="color:#BF2600; margin-right:12px; font-weight:bold;">&#10003;</span><span>Utilize <strong>Live Connections</strong> for real-time data or create <strong>Extracts</strong> for performance.</span></li>
+              <li style="margin-bottom:12px; display:flex; align-items:start;"><span style="color:#BF2600; margin-right:12px; font-weight:bold;">&#10003;</span><span>Leverage Tableau's relationship model to easily handle complex joins.</span></li>
+              <li style="display:flex; align-items:start;"><span style="color:#BF2600; margin-right:12px; font-weight:bold;">&#10003;</span><span>Publish dashboards to Tableau Server or Cloud for seamless collaboration.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CORE FEATURES SECTION -->
+  <section style="padding:100px 0; background-color:#ffffff;">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <span style="display:inline-block; font-size:13px; font-weight:700; color:#0052CC; background-color:#EBF4FF; border-radius:999px; padding:8px 16px; margin-bottom:10px;">POWERFUL FEATURES</span>
+          <h2 style="font-size:34px; font-weight:800; margin:0 0 14px 0; color:#091E42;">Unmatched Control Over Your Data Pipeline</h2>
+          <p style="font-size:16px; color:#5E6C84; max-width:860px; margin:0 auto 22px;">Go beyond simple data dumps. Our connector gives you the tools to build an efficient, cost-effective, and automated data sync solution, tailored precisely to your business needs.</p>
+        </div>
+      </div>
 
+      <div class="row g-4" style="margin-top:24px;">
+        <div class="col-12 col-md-4">
+          <div style="background-color:#ffffff; border:1px solid #DFE1E6; border-radius:12px; padding:24px; height:100%; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 30px rgba(23, 43, 77, 0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+            <div style="font-size:2rem; color:#0052CC; margin-bottom:12px;">&#128279;</div>
+            <h4 style="margin:0 0 10px; color:#091E42; font-size:18px; font-weight:700;">Precise Record Filtering</h4>
+            <p style="margin:0; color:#5E6C84;">Use standard Odoo domain filters to sync only active customers, completed orders, or specific product lines, keeping your dataset lean and relevant.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div style="background-color:#ffffff; border:1px solid #DFE1E6; border-radius:12px; padding:24px; height:100%; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 30px rgba(23, 43, 77, 0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+            <div style="font-size:2rem; color:#0052CC; margin-bottom:12px;">&#128200;</div>
+            <h4 style="margin:0 0 10px; color:#091E42; font-size:18px; font-weight:700;">Targeted Column Selection</h4>
+            <p style="margin:0; color:#5E6C84;">Choose exactly which fields to send to BigQuery. This accelerates exports, simplifies models, and reduces storage and processing costs.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div style="background-color:#ffffff; border:1px solid #DFE1E6; border-radius:12px; padding:24px; height:100%; transition: all 0.3s ease;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 30px rgba(23, 43, 77, 0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none';">
+            <div style="font-size:2rem; color:#0052CC; margin-bottom:12px;">&#9203;</div>
+            <h4 style="margin:0 0 10px; color:#091E42; font-size:18px; font-weight:700;">Incremental & Automated Syncs</h4>
+            <p style="margin:0; color:#5E6C84;">Configure a schedule to sync only new or changed records. This keeps your BI dashboards updated without costly full-table reloads.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- =======================
-  7. FOOTER CTA - Full Width
-  ======================== -->
-  <section style="padding: 100px 20px; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color: #fff; text-align: center;">
-    <div class="container" style="max-width: 800px;">
-      <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 20px;">Ready to Transform Your Data?</h2>
-      <p style="color: #94a3b8; font-size: 1.2rem; margin-bottom: 40px;">Stop exporting CSVs manually. Automate your pipeline today.</p>
-      <a href="mailto:info@niyulabs.com" style="display: inline-block; padding: 18px 40px; background-color: #3b82f6; color: white; font-weight: 700; text-decoration: none; border-radius: 50px; font-size: 1.1rem; animation: subtlePulse 2s infinite;">
-        Get a Demo: info@niyulabs.com
-      </a>
+  <!-- SCHEMA & SECURITY SECTIONS (Combined Feel) -->
+  <section style="padding: 100px 0; background-color:#F4F5F7; border-top:1px solid #DFE1E6;">
+    <div class="container">
+        <!-- Schema Section -->
+        <div class="row align-items-center g-5" style="margin-bottom: 80px;">
+            <div class="col-lg-6">
+                <span style="display:inline-block; font-size:13px; font-weight:700; color:#006644; background-color:#E3FCEF; border-radius:999px; padding:8px 16px; margin-bottom:16px;">SMART DATA MAPPING</span>
+                <h2 style="font-weight:800; margin:0 0 14px 0; color:#091E42; font-size: 2.2rem;">Intelligent Schema Handling</h2>
+                <p style="font-size:1.1rem; color:#5E6C84; margin-bottom:24px;">Our connector intelligently translates complex Odoo fields into clean, BigQuery-compatible columns, saving you countless hours of manual data wrangling.</p>
+                <ul style="padding-left: 0; list-style-type:none; color: #172B4D; font-size: 1rem;">
+                  <li style="margin-bottom:12px;"><strong>Many2one Fields:</strong> Exports both ID and Name for easy joining.</li>
+                  <li style="margin-bottom:12px;"><strong>Selection Fields:</strong> Converts internal keys to user-friendly labels.</li>
+                  <li style="margin-bottom:12px;"><strong>Date & Datetime:</strong> Ensures all dates are correctly formatted to ISO 8601.</li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
+                 <img src="./schema.png" alt="Schema handling example" style="width: 100%; border-radius: 12px; display: block; box-shadow: 0 20px 40px -15px rgba(23, 43, 77, 0.2); border: 1px solid #DFE1E6;">
+            </div>
+        </div>
+        <!-- Security Section -->
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 order-lg-2">
+                <span style="display:inline-block; font-size:13px; font-weight:700; color:#BF2600; background-color:#FFECEB; border-radius:999px; padding:8px 16px; margin-bottom:16px;">ENTERPRISE-GRADE SECURITY</span>
+                <h2 style="font-weight:800; margin:0 0 14px 0; color:#091E42; font-size: 2.2rem;">Your Data, Your Control.</h2>
+                <p style="font-size:1.1rem; color:#5E6C84; margin-bottom:24px;">Your data flows directly and securely from your Odoo instance to your own Google Cloud project. No middlemen, no third-party servers, and complete ownership of your data's journey.</p>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+              <img src="./security.png" alt="Security configuration in Odoo" style="width: 100%; border-radius: 12px; display: block; box-shadow: 0 20px 40px -15px rgba(23, 43, 77, 0.2); border: 1px solid #DFE1E6;">
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- ADDITIONAL SCREENSHOTS SECTION - Professional 2x2 Grid -->
+  <section style="padding: 100px 20px; background-color: #ffffff; border-top: 1px solid #DFE1E6;">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 60px;">
+          <span style="display: inline-block; font-size: 13px; font-weight: 700; color: #0052CC; background-color: #EBF4FF; border-radius: 999px; padding: 8px 16px; margin-bottom: 10px;">IN-DEPTH LOOK</span>
+          <h2 style="font-size: clamp(2.2rem, 5vw, 2.8rem); font-weight: 800; letter-spacing: -1px; margin: 0 0 16px 0; color: #091E42;">
+            More Views of the Connector in Action
+          </h2>
+          <p style="font-size: 1.1rem; color: #5E6C84; line-height: 1.6; max-width: 700px; margin: auto;">
+            Dive deeper into the user interface and see how easily you can manage your data pipelines from within Odoo.
+          </p>
+        </div>
+  
+        <div class="row g-4">
+          <!-- Column 1 for Grid -->
+          <div class="col-lg-6 d-flex flex-column" style="gap: 2rem;">
+            <!-- Screenshot 1 -->
+            <div style="background-color: #ffffff; border: 1px solid #DFE1E6; border-radius: 12px; padding: 16px; box-shadow: 0 10px 20px rgba(23, 43, 77, 0.05);">
+              <img src="./do.png" alt="Export Profile Configuration" style="width: 100%; display: block; border-radius: 8px; margin-bottom: 12px;">
+              <p style="text-align: center; color: #091E42; font-size: 1rem; margin: 0; font-weight: 600;">Fig 1: Effortless Export Profile Configuration</p>
+            </div>
+            <!-- Screenshot 3 -->
+            <div style="background-color: #ffffff; border: 1px solid #DFE1E6; border-radius: 12px; padding: 16px; box-shadow: 0 10px 20px rgba(23, 43, 77, 0.05);">
+              <img src="./co.png" alt="Advanced Field Mapping" style="width: 100%; display: block; border-radius: 8px; margin-bottom: 12px;">
+              <p style="text-align: center; color: #091E42; font-size: 1rem; margin: 0; font-weight: 600;">Fig 3: Advanced Field Mapping Interface</p>
+            </div>
+          </div>
+          <!-- Column 2 for Grid -->
+          <div class="col-lg-6 d-flex flex-column" style="gap: 2rem;">
+            <!-- Screenshot 2 -->
+            <div style="background-color: #ffffff; border: 1px solid #DFE1E6; border-radius: 12px; padding: 16px; box-shadow: 0 10px 20px rgba(23, 43, 77, 0.05);">
+              <img src="./in.png" alt="Real-time Sync Status" style="width: 100%; display: block; border-radius: 8px; margin-bottom: 12px;">
+              <p style="text-align: center; color: #091E42; font-size: 1rem; margin: 0; font-weight: 600;">Fig 2: Real-time Sync Status & Logging</p>
+            </div>
+            <!-- Screenshot 4 -->
+            <div style="background-color: #ffffff; border: 1px solid #DFE1E6; border-radius: 12px; padding: 16px; box-shadow: 0 10px 20px rgba(23, 43, 77, 0.05);">
+              <img src="./se.png" alt="Automated Scheduling" style="width: 100%; display: block; border-radius: 8px; margin-bottom: 12px;">
+              <p style="text-align: center; color: #091E42; font-size: 1rem; margin: 0; font-weight: 600;">Fig 4: Automated Scheduling for Syncs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <!-- SETUP & CONFIGURATION -->
+  <section style="padding:100px 0; background-color:#F4F5F7; border-top:1px solid #DFE1E6;">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <span style="display:inline-block; font-size:13px; font-weight:700; color:#BF2600; background-color:#FFECEB; border-radius:999px; padding:8px 16px; margin-bottom:10px;">SEAMLESS DEPLOYMENT</span>
+          <h2 style="font-size:34px; font-weight:800; margin:0 0 14px 0; color:#091E42;">Installation & Effortless Configuration</h2>
+          <p style="font-size:16px; color:#5E6C84; max-width:860px; margin:0 auto 22px;">Get up and running in just a few straightforward steps, designed for both technical and business users.</p>
+        </div>
+      </div>
+      <div class="row g-4" style="margin-top:24px;">
+        <div class="col-12 col-lg-7">
+          <div style="background-color:#ffffff; border:1px solid #DFE1E6; border-radius:12px; padding:24px; height:100%;">
+            <h5 style="margin:0 0 16px; color:#091E42; font-size:20px; font-weight:700;">Quick Start Guide:</h5>
+            <ol style="margin:0; padding-left:22px; color:#172B4D; font-size:16px;">
+              <li style="margin-bottom:12px;"><strong>Acquire Module:</strong> Purchase and download from the Odoo App Store.</li>
+              <li style="margin-bottom:12px;"><strong>Install in Odoo:</strong> Add the module to your addons directory and install.</li>
+              <li style="margin-bottom:12px;"><strong>Google Cloud Setup:</strong> Create a <strong>Service Account</strong> and grant it "BigQuery Data Editor" & "BigQuery Job User" roles.</li>
+              <li style="margin-bottom:12px;"><strong>Secure Key Upload:</strong> In Odoo, navigate to <em>Settings &#8594; BigQuery Connector</em> and upload the JSON key.</li>
+              <li style="margin-bottom:12px;"><strong>Configure Export:</strong> Create an export profile, select a model, choose columns, and initiate your first sync!</li>
+            </ol>
+          </div>
+        </div>
+        <div class="col-12 col-lg-5">
+          <div style="background-color:#ffffff; border:1px solid #DFE1E6; border-radius:12px; padding:24px; height:100%;">
+            <h5 style="margin:0 0 12px; color:#091E42; font-size:20px; font-weight:700;">Requirements</h5>
+            <ul style="margin:0; padding-left:18px; color:#5E6C84; font-size:16px;">
+              <li style="margin-bottom:10px;"><strong>Odoo Version:</strong> 14, 15, 16, and newer.</li>
+              <li style="margin-bottom:10px;"><strong>Google Cloud:</strong> Active account with BigQuery API enabled.</li>
+              <li style="margin-bottom:10px;"><strong>Connectivity:</strong> Internet access from your Odoo server.</li>
+              <li style="margin-bottom:0px;"><strong>Deployment:</strong> On-premise or Cloud hosting.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section style="padding: 120px 20px; background-color: #ffffff;">
+    <div class="container" style="max-width: 900px;">
+      <div style="background-color:#0052CC; color: #ffffff; padding: 80px 40px; border-radius: 1.5rem; text-align: center; background-image: radial-gradient(circle at 100% 0%, rgba(255,255,255,0.1), transparent 30%);">
+        <h2 style="font-size: clamp(2rem, 5vw, 3rem); line-height: 1.2; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 20px; color:#ffffff;">Unlock Your Data's Full Potential</h2>
+        <p style="max-width: 600px; margin: 0 auto 40px; color: #DEEBFF; font-size: 1.1rem;">Stop struggling with manual data exports. Empower your team, build powerful real-time dashboards, and accelerate data-driven growth with our seamless and secure data pipeline.</p>
+        <a href="mailto:info@niyulabs.com" target="_blank" style="display: inline-block; background-color: #ffffff; color: #0052CC; padding: 16px 32px; font-size: 1.1rem; font-weight: 700; text-decoration: none; border-radius: 99px; transition: transform 0.2s ease; box-shadow: 0 4px 10px rgba(0,0,0,0.2);" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+          Contact Us for a Demo
+        </a>
+      </div>
     </div>
   </section>
 
