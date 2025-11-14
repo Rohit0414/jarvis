@@ -206,10 +206,11 @@
   <!-- =======================
   NEW BI INTEGRATIONS SHOWCASE - Themed Hover Glows
   ======================== -->
-  <section class="parallax-bg" style="padding: 120px 24px; background-color: #f7f9fc; border-top: 1px solid #e5e8ed; border-bottom: 1px solid #e5e8ed;">
+  <!-- The rest of your HTML/CSS remains the same, only this section is updated -->
+<section class="parallax-bg" style="padding: 120px 24px; background-color: #f7f9fc; border-top: 1px solid #e5e8ed; border-bottom: 1px solid #e5e8ed;">
     <div style="max-width:1200px; margin:0 auto;">
 
-      <!-- Section Intro -->
+      <!-- Section Intro is unchanged -->
       <div style="text-align: center; max-width: 750px; margin: 0 auto 80px auto;">
         <h2 style="font-size: clamp(2.8rem, 5vw, 3.5rem); font-weight: 900; letter-spacing: -2px; margin: 0 0 16px 0; color: #333333;">
           Activate Your Analytics Stack
@@ -219,27 +220,30 @@
         </p>
       </div>
 
-      <!-- Power BI Panel -->
+      <!-- Power BI Panel - 5/7 Split and Collapsed Content -->
       <div id="powerbi" style="margin-bottom: 60px;">
         <div class="row g-5 align-items-center premium-card hover-glow-blue" style="padding: 35px; border-radius: 24px; background: linear-gradient(145deg, #ffffff, #fcfdff); border: 1px solid #e5e8ed;">
-          <!-- Text Column (Reduced to col-lg-5) -->
+          <!-- Text Column (Now col-lg-5) -->
           <div class="col-lg-5">
             <div style="display:inline-block; padding:8px 14px; border-radius:999px; font-weight:700; margin-bottom:16px; border:2px solid rgba(64, 160, 255,.8); color:#40a0ff; background-color: rgba(64, 160, 255,.2); box-shadow: 0 0 10px rgba(64, 160, 255, 0.3);">🚀 POWER BI + BIGQUERY</div>
-            <h3 style="margin:0 0 10px 0; color:#333333; font-size:40px; font-weight:900;">Build a Production-Ready Model</h3>
-            <p style="margin:0 0 20px 0; color:#555555; line-height:1.7; font-size:18px;">The definitive path for building scalable, high-performance BI on an Odoo + BigQuery stack. Connect with confidence and unlock advanced analytics.</p>
-            <div style="border-radius:18px; background-color:#fefefe; border:1px solid #d0d0d0; padding:25px; box-shadow: inset 0 0 15px rgba(0,0,0,0.05);">
-              <div style="font-weight:800; color:#40a0ff; margin-bottom:12px; font-size:18px;">Key Plays for Power BI Integration</div>
-              <ul style="margin:0 0 0 20px; padding:0; color:#555555; line-height:1.8; font-size:16px;">
-                <li>Utilize the native <strong>BigQuery Connector</strong> (Import Mode) for optimal performance.</li>
-                <li>Enable <strong>Incremental Refresh</strong> on relevant date fields to significantly reduce refresh times and data transfer costs.</li>
-                <li>Centralize all complex business logic and calculations within <strong>DAX Measures</strong> to ensure a single, consistent source of truth.</li>
-                <li>Optimize data models by creating star schemas, enhancing query performance and report responsiveness.</li>
-              </ul>
+            <h3 style="margin:0 0 15px 0; color:#333333; font-size:40px; font-weight:900;">Build a Production-Ready Model</h3>
+            <p style="margin:0 0 30px 0; color:#555555; line-height:1.7; font-size:18px;">The definitive path for building scalable, high-performance BI on an Odoo + BigQuery stack. Connect with confidence and unlock advanced analytics.</p>
+            
+            <!-- CONSOLIDATED KEY PLAYS -->
+            <div style="border-radius:18px; background-color: #e6f0ff; /* Lighter blue background */ border:1px solid rgba(64, 160, 255, 0.5); padding:25px; box-shadow: inset 0 0 15px rgba(64, 160, 255, 0.1);">
+              <div style="font-weight:800; color:#40a0ff; margin-bottom:12px; font-size:18px;">Optimized for Scale</div>
+              <p style="margin:0 0 20px 0; color:#333333; line-height:1.8; font-size:16px;">
+                Leverage the native BigQuery Connector, enable **Incremental Refresh** for cost savings, and centralize complex business logic using **DAX Measures** to guarantee a single, high-performance source of truth.
+              </p>
+              <a href="#" style="display: inline-block; background-color: #40a0ff; color: #ffffff; padding: 10px 20px; font-size: 15px; font-weight: 700; text-decoration: none; border-radius: 99px; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(64, 160, 255, 0.5);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(64, 160, 255, 0.7)';">
+                Read the Integration Guide
+              </a>
             </div>
+            <!-- END CONSOLIDATED KEY PLAYS -->
           </div>
-          <!-- Video Column (Increased to col-lg-7) -->
+          <!-- Video Column (Now col-lg-7 - much bigger) -->
           <div class="col-lg-7">
-            <div style="border-radius: 16px; padding: 5px; background-color: rgba(64, 160, 255, 0.3); box-shadow: 0 15px 30px rgba(64, 160, 255, 0.3);">
+            <div style="border-radius: 16px; padding: 5px; background-color: rgba(64, 160, 255, 0.5); box-shadow: 0 15px 30px rgba(64, 160, 255, 0.5);">
               <video autoplay loop muted playsinline preload="auto" style="width: 100%; display: block; border-radius: 14px; background-color: #eee;">
                 <source src="./powerbiconnection.webm" type="video/webm">
                 Your browser does not support the video tag.
@@ -249,61 +253,67 @@
         </div>
       </div>
 
-      <!-- Looker Studio Panel -->
+      <!-- Looker Studio Panel - 5/7 Split and Collapsed Content -->
       <div id="looker" style="margin-bottom: 60px;">
         <div class="row g-5 align-items-center premium-card hover-glow-green" style="padding: 35px; border-radius: 24px; background: linear-gradient(145deg, #ffffff, #fcfdff); border: 1px solid #e5e8ed;">
-          <!-- Image Column (Increased to col-lg-7) -->
+          <!-- Image Column (Now col-lg-7 - much bigger) -->
           <div class="col-lg-7">
-            <div style="border-radius: 16px; padding: 5px; background-color: rgba(120, 220, 200, 0.3); box-shadow: 0 15px 30px rgba(120, 220, 200, 0.3);">
+            <div style="border-radius: 16px; padding: 5px; background-color: rgba(120, 220, 200, 0.5); box-shadow: 0 15px 30px rgba(120, 220, 200, 0.5);">
               <img src="./lookerconnection.png" alt="Looker Studio Feature" style="width: 100%; display:block; border-radius:14px;">
             </div>
           </div>
-          <!-- Text Column (Reduced to col-lg-5) -->
+          <!-- Text Column (Now col-lg-5) -->
           <div class="col-lg-5">
             <div style="display:inline-block; padding:8px 14px; border-radius:999px; font-weight:700; margin-bottom:16px; border:2px solid rgba(120, 220, 200, 0.8); color:#78dcc8; background-color:rgba(120, 220, 200, 0.2); box-shadow: 0 0 10px rgba(120, 220, 200, 0.3);">🌎 LOOKER STUDIO + BIGQUERY</div>
-            <h3 style="margin:0 0 10px 0; color:#333333; font-size:40px; font-weight:900;">Ship Insights at High Velocity</h3>
-            <p style="margin:0 0 20px 0; color:#555555; line-height:1.7; font-size:18px;">Create beautiful, shareable dashboards that are fast, intuitive, and accessible to your entire team, fostering a data-driven culture.</p>
-            <div style="border-radius:18px; background-color:#fefefe; border:1px solid #d0d0d0; padding:25px; box-shadow: inset 0 0 15px rgba(0,0,0,0.05);">
-              <div style="font-weight:800; color:#78dcc8; margin-bottom:12px; font-size:18px;">Key Plays for Looker Studio Integration</div>
-              <ul style="margin:0 0 0 20px; padding:0; color:#555555; line-height:1.8; font-size:16px;">
-                <li>Connect directly to BigQuery tables using <strong>Viewer's Credentials</strong> for robust data security and access control.</li>
-                <li>Leverage BigQuery <strong>Views</strong> to pre-aggregate and transform data, significantly speeding up dashboard load times.</li>
-                <li>Utilize <strong>Data Extracts</strong> for heavy or frequently accessed pages to ensure near-instant load times and reduce BigQuery query costs.</li>
-                <li>Design intuitive and interactive dashboards with Looker Studio's rich visualization capabilities.</li>
-              </ul>
+            <h3 style="margin:0 0 15px 0; color:#333333; font-size:40px; font-weight:900;">Ship Insights at High Velocity</h3>
+            <p style="margin:0 0 30px 0; color:#555555; line-height:1.7; font-size:18px;">Create beautiful, shareable dashboards that are fast, intuitive, and accessible to your entire team, fostering a data-driven culture.</p>
+            
+            <!-- CONSOLIDATED KEY PLAYS -->
+            <div style="border-radius:18px; background-color: #e8fff8; /* Lighter green background */ border:1px solid rgba(120, 220, 200, 0.5); padding:25px; box-shadow: inset 0 0 15px rgba(120, 220, 200, 0.1);">
+              <div style="font-weight:800; color:#78dcc8; margin-bottom:12px; font-size:18px;">Optimized for Velocity</div>
+              <p style="margin:0 0 20px 0; color:#333333; line-height:1.8; font-size:16px;">
+                Connect directly with Viewer's Credentials, leverage BigQuery **Views** for pre-aggregation, and utilize **Data Extracts** to ensure near-instant load times while minimizing query costs.
+              </p>
+              <a href="#" style="display: inline-block; background-color: #78dcc8; color: #333333; padding: 10px 20px; font-size: 15px; font-weight: 700; text-decoration: none; border-radius: 99px; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(120, 220, 200, 0.5);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(120, 220, 200, 0.7)';">
+                Read the Integration Guide
+              </a>
             </div>
+            <!-- END CONSOLIDATED KEY PLAYS -->
           </div>
         </div>
       </div>
 
-      <!-- Tableau Panel -->
+      <!-- Tableau Panel - 5/7 Split and Collapsed Content -->
       <div id="tableau" style="margin-bottom: 48px;">
         <div class="row g-5 align-items-center premium-card hover-glow-yellow" style="padding: 35px; border-radius: 24px; background: linear-gradient(145deg, #ffffff, #fcfdff); border: 1px solid #e5e8ed;">
-          <!-- Text Column (Reduced to col-lg-5) -->
+          <!-- Text Column (Now col-lg-5) -->
           <div class="col-lg-5">
             <div style="display:inline-block; padding:8px 14px; border-radius:999px; font-weight:700; margin-bottom:16px; border:2px solid rgba(255, 223, 0, 0.8); color:#ffd700; background-color:rgba(255, 223, 0, 0.2); box-shadow: 0 0 10px rgba(255, 223, 0, 0.3);">🎨 TABLEAU + BIGQUERY</div>
-            <h3 style="margin:0 0 10px 0; color:#333333; font-size:40px; font-weight:900;">Visual Storytelling & Deep Dives</h3>
-            <p style="margin:0 0 20px 0; color:#555555; line-height:1.7; font-size:18px;">Connect Tableau's powerful analytics engine to your BigQuery data for unparalleled data exploration and insight, empowering business users to ask and answer their own questions.</p>
-            <div style="border-radius:18px; background-color:#fefefe; border:1px solid #d0d0d0; padding:25px; box-shadow: inset 0 0 15px rgba(0,0,0,0.05);">
-              <div style="font-weight:800; color:#ffd700; margin-bottom:12px; font-size:18px;">Key Plays for Tableau Integration</div>
-              <ul style="margin:0 0 0 20px; padding:0; color:#555555; line-height:1.8; font-size:16px;">
-                <li>Utilize <strong>Live Connections</strong> for real-time data access or create optimized <strong>Extracts</strong> for superior performance on large datasets.</li>
-                <li>Leverage Tableau's intuitive relationship model to easily handle complex joins and data blending across multiple Odoo datasets.</li>
-                <li>Publish compelling dashboards and workbooks to Tableau Server or Cloud to facilitate seamless insight sharing and collaboration across your organization.</li>
-                <li>Harness Tableau's advanced features for spatial analysis, forecasting, and statistical modeling directly on your Odoo data.</li>
-              </ul>
+            <h3 style="margin:0 0 15px 0; color:#333333; font-size:40px; font-weight:900;">Visual Storytelling & Deep Dives</h3>
+            <p style="margin:0 0 30px 0; color:#555555; line-height:1.7; font-size:18px;">Connect Tableau's powerful analytics engine to your BigQuery data for unparalleled data exploration and insight, empowering business users to ask and answer their own questions.</p>
+            
+            <!-- CONSOLIDATED KEY PLAYS -->
+            <div style="border-radius:18px; background-color: #fffde6; /* Lighter yellow background */ border:1px solid rgba(255, 223, 0, 0.5); padding:25px; box-shadow: inset 0 0 15px rgba(255, 223, 0, 0.1);">
+              <div style="font-weight:800; color:#ffd700; margin-bottom:12px; font-size:18px;">Optimized for Exploration</div>
+              <p style="margin:0 0 20px 0; color:#333333; line-height:1.8; font-size:16px;">
+                Choose between **Live Connections** for real-time data or **Extracts** for high-speed performance, leveraging Tableau’s relationship model for complex joins and seamlessly publishing compelling dashboards.
+              </p>
+              <a href="#" style="display: inline-block; background-color: #ffd700; color: #333333; padding: 10px 20px; font-size: 15px; font-weight: 700; text-decoration: none; border-radius: 99px; transition: all 0.3s ease; box-shadow: 0 5px 15px rgba(255, 223, 0, 0.5);" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 8px 20px rgba(255, 223, 0, 0.7)';">
+                Read the Integration Guide
+              </a>
             </div>
+            <!-- END CONSOLIDATED KEY PLAYS -->
           </div>
-          <!-- Image Column (Increased to col-lg-7) -->
+          <!-- Image Column (Now col-lg-7 - much bigger) -->
           <div class="col-lg-7">
-            <div style="border-radius: 16px; padding: 5px; background-color:rgba(255, 223, 0, 0.3); box-shadow: 0 15px 30px rgba(255, 223, 0, 0.3);">
+            <div style="border-radius: 16px; padding: 5px; background-color:rgba(255, 223, 0, 0.5); box-shadow: 0 15px 30px rgba(255, 223, 0, 0.5);">
               <img src="./tableauconnection.png" alt="Tableau Feature" style="width: 100%; display:block; border-radius:14px;">
             </div>
           </div>
         </div>
       </div>
     </div>
-  </section>
+</section>
 
   <!-- KEY FEATURES SECTION -->
   <section class="parallax-bg" style="padding:100px 0; background-color:#ffffff; border-top:1px solid #e5e8ed;">
