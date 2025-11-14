@@ -40,7 +40,7 @@
 ">
 
   <!-- =======================
-  NEW HERO SECTION - Refined Color Palette
+  HERO SECTION
   ======================== -->
   <div style="padding: 180px 20px 140px 20px; text-align: center; overflow: hidden; position: relative; background-color: #fcfcfc;">
     <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('https://www.transparenttextures.com/patterns/white-prism.png'); opacity: 0.1; z-index: 1;"></div>
@@ -66,10 +66,9 @@
         Your BI, Supercharged.
       </h1>
       <p style="font-size: clamp(1.25rem, 3vw, 1.5rem); color: #555555; margin: 0 auto 48px auto; max-width: 720px; font-weight: 500;">
-        One click to sync Odoo data directly to Google BigQuery. Instantly connect to Power BI, Looker Studio, and Tableau to build enterprise-grade dashboards that empower your team and drive critical business decisions.
+        One click to sync Odoo data directly to Google BigQuery. Break free from data silos and create a single source of truth. Instantly connect to Power BI, Looker Studio, and Tableau to build enterprise-grade dashboards that empower your team and drive critical business decisions.
       </p>
 
-      <!-- BI Logos - Ensure you have these images in your module's static folder -->
       <div class="d-flex justify-content-center align-items-center" style="gap: 48px; margin-bottom: 48px; filter: grayscale(0.5) brightness(1.1);">
         <img src="./copy.png" alt="Power BI Logo" style="height: 35px; opacity: 0.9;">
         <img src="./2.png" alt="Looker Studio Logo" style="height: 70px; opacity: 0.9;">
@@ -82,7 +81,6 @@
         <div style="border-radius: 1.75rem; padding: 3px; background-color:  rgba(64, 160, 255, 0.6) !important; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.1) !important; position: relative !important;">
           <video autoplay loop muted playsinline preload="auto" style="width: 100%; display: block; border-radius: 1.75rem; background-color: #eee;">
             <source src="./preview.webm" type="video/webm">
-            <!-- Fallback: Add your MP4 video here -->
             <source src="static/description/q1.mp4" type="video/mp4">
           </video>
         </div>
@@ -91,12 +89,10 @@
   </div>
 
   <!-- =======================
-  NEW BI INTEGRATIONS SHOWCASE - Light Theme, Refined Colors
+  BI INTEGRATIONS SHOWCASE
   ======================== -->
   <section style="padding: 100px 24px; background-color: #f7f9fc; border-top: 1px solid #e5e8ed; border-bottom: 1px solid #e5e8ed;">
     <div style="max-width:1200px; margin:0 auto;">
-
-      <!-- Section Intro -->
       <div style="text-align: center; max-width: 750px; margin: 0 auto 72px auto;">
         <h2 style="font-size: clamp(2.5rem, 5vw, 3rem); font-weight: 800; letter-spacing: -2px; margin: 0 0 16px 0; color: #333333;">
           Activate Your Analytics Stack
@@ -109,27 +105,24 @@
       <!-- Power BI Panel -->
       <div id="powerbi" style="margin-bottom: 48px;">
         <div class="row g-5 align-items-center" style="padding: 28px; border-radius: 24px; background: linear-gradient(145deg, #ffffff, #fcfdff); border: 1px solid #e5e8ed; box-shadow: 0 50px 120px -30px rgba(0,0,0,.08);">
-          <!-- Text Column -->
           <div class="col-lg-6">
             <div style="display:inline-block; padding:8px 14px; border-radius:999px; font-weight:700; margin-bottom:16px; border:1px solid rgba(64, 160, 255,.4); color:#40a0ff; background-color: rgba(64, 160, 255,.1);">🚀 POWER BI + BIGQUERY</div>
             <h3 style="margin:0 0 10px 0; color:#333333; font-size:32px; font-weight:700;">Build a Production-Ready Model</h3>
-            <p style="margin:0 0 20px 0; color:#555555; line-height:1.7; font-size:16px;">The definitive path for building scalable, high-performance BI on an Odoo + BigQuery stack. Connect with confidence and unlock advanced analytics.</p>
+            <p style="margin:0 0 20px 0; color:#555555; line-height:1.7; font-size:16px;">The definitive path for building scalable, high-performance BI on an Odoo + BigQuery stack. Create custom reports for every department—from sales and finance to inventory and manufacturing—with confidence and unlock advanced analytics.</p>
             <div style="border-radius:14px; background-color:#fefefe; border:1px solid #e5e8ed; padding:18px;">
               <div style="font-weight:700; color:#333333; margin-bottom:10px; font-size:15px;">Key Plays for Power BI Integration</div>
               <ul style="margin:0 0 0 20px; padding:0; color:#555555; line-height:1.8; font-size:15px;">
                 <li>Utilize the native <strong>BigQuery Connector</strong> (Import Mode) for optimal performance.</li>
-                <li>Enable <strong>Incremental Refresh</strong> on relevant date fields to significantly reduce refresh times and data transfer costs.</li>
-                <li>Centralize all complex business logic and calculations within <strong>DAX Measures</strong> to ensure a single, consistent source of truth.</li>
+                <li>Enable <strong>Incremental Refresh</strong> to significantly reduce refresh times and data transfer costs.</li>
+                <li>Centralize all business logic within <strong>DAX Measures</strong> to ensure a single source of truth.</li>
                 <li>Optimize data models by creating star schemas, enhancing query performance and report responsiveness.</li>
               </ul>
             </div>
           </div>
-          <!-- Video Column -->
           <div class="col-lg-6">
             <div style="border-radius: 16px; padding: 3px; background: linear-gradient(120deg, rgba(64, 160, 255, .3), rgba(64, 160, 255, 0.05));">
               <video autoplay loop muted playsinline preload="auto" style="width: 100%; display: block; border-radius: 14px; background-color: #eee;">
                 <source src="./powerbiconnection.webm" type="video/webm">
-                Your browser does not support the video tag.
               </video>
             </div>
           </div>
@@ -139,25 +132,23 @@
       <!-- Looker Studio Panel -->
       <div id="looker" style="margin-bottom: 48px;">
         <div class="row g-5 align-items-center" style="padding: 28px; border-radius: 24px; background: linear-gradient(145deg, #ffffff, #fcfdff); border: 1px solid #e5e8ed; box-shadow: 0 50px 120px -30px rgba(0,0,0,.08);">
-          <!-- Image Column -->
-          <div class="col-lg-6">
-            <div style="border-radius: 16px; padding: 3px; background: linear-gradient(120deg, rgba(120, 220, 200, .3), rgba(120, 220, 200, 0.05));">
-              <img src="./lookerconnection.png" alt="Looker Studio Feature" style="width: 100%; display:block; border-radius:14px;">
-            </div>
-          </div>
-          <!-- Text Column -->
-          <div class="col-lg-6">
+          <div class="col-lg-6 order-lg-2">
             <div style="display:inline-block; padding:8px 14px; border-radius:999px; font-weight:700; margin-bottom:16px; border:1px solid rgba(120, 220, 200, 0.5); color:#78dcc8; background-color:rgba(120, 220, 200, 0.1);">🌎 LOOKER STUDIO + BIGQUERY</div>
             <h3 style="margin:0 0 10px 0; color:#333333; font-size:32px; font-weight:700;">Ship Insights at High Velocity</h3>
-            <p style="margin:0 0 20px 0; color:#555555; line-height:1.7; font-size:16px;">Create beautiful, shareable dashboards that are fast, intuitive, and accessible to your entire team, fostering a data-driven culture.</p>
+            <p style="margin:0 0 20px 0; color:#555555; line-height:1.7; font-size:16px;">Create beautiful, shareable dashboards that are fast, intuitive, and accessible to your entire team. Foster a data-driven culture by leveraging the seamless collaboration features within the Google ecosystem.</p>
             <div style="border-radius:14px; background-color:#fefefe; border:1px solid #e5e8ed; padding:18px;">
               <div style="font-weight:700; color:#333333; margin-bottom:10px; font-size:15px;">Key Plays for Looker Studio Integration</div>
               <ul style="margin:0 0 0 20px; padding:0; color:#555555; line-height:1.8; font-size:15px;">
-                <li>Connect directly to BigQuery tables using <strong>Viewer's Credentials</strong> for robust data security and access control.</li>
-                <li>Leverage BigQuery <strong>Views</strong> to pre-aggregate and transform data, significantly speeding up dashboard load times.</li>
-                <li>Utilize <strong>Data Extracts</strong> for heavy or frequently accessed pages to ensure near-instant load times and reduce BigQuery query costs.</li>
+                <li>Connect directly to BigQuery tables using <strong>Viewer's Credentials</strong> for robust data security.</li>
+                <li>Leverage BigQuery <strong>Views</strong> to pre-aggregate and transform data, speeding up dashboards.</li>
+                <li>Utilize <strong>Data Extracts</strong> for heavy pages to ensure near-instant load times and reduce costs.</li>
                 <li>Design intuitive and interactive dashboards with Looker Studio's rich visualization capabilities.</li>
               </ul>
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div style="border-radius: 16px; padding: 3px; background: linear-gradient(120deg, rgba(120, 220, 200, .3), rgba(120, 220, 200, 0.05));">
+              <img src="./lookerconnection.png" alt="Looker Studio Feature" style="width: 100%; display:block; border-radius:14px;">
             </div>
           </div>
         </div>
@@ -166,22 +157,20 @@
       <!-- Tableau Panel -->
       <div id="tableau" style="margin-bottom: 48px;">
         <div class="row g-5 align-items-center" style="padding: 28px; border-radius: 24px; background: linear-gradient(145deg, #ffffff, #fcfdff); border: 1px solid #e5e8ed; box-shadow: 0 50px 120px -30px rgba(0,0,0,.08);">
-          <!-- Text Column -->
           <div class="col-lg-6">
             <div style="display:inline-block; padding:8px 14px; border-radius:999px; font-weight:700; margin-bottom:16px; border:1px solid rgba(255, 223, 0, 0.5); color:#ffd700; background-color:rgba(255, 223, 0, 0.1);">🎨 TABLEAU + BIGQUERY</div>
             <h3 style="margin:0 0 10px 0; color:#333333; font-size:32px; font-weight:700;">Visual Storytelling & Deep Dives</h3>
-            <p style="margin:0 0 20px 0; color:#555555; line-height:1.7; font-size:16px;">Connect Tableau's powerful analytics engine to your BigQuery data for unparalleled data exploration and insight, empowering business users to ask and answer their own questions.</p>
+            <p style="margin:0 0 20px 0; color:#555555; line-height:1.7; font-size:16px;">Connect Tableau's powerful analytics engine to your BigQuery data for unparalleled data exploration. Empower business users to ask and answer their own questions, performing deep-dive investigations with its advanced analytical features.</p>
             <div style="border-radius:14px; background-color:#fefefe; border:1px solid #e5e8ed; padding:18px;">
               <div style="font-weight:700; color:#333333; margin-bottom:10px; font-size:15px;">Key Plays for Tableau Integration</div>
               <ul style="margin:0 0 0 20px; padding:0; color:#555555; line-height:1.8; font-size:15px;">
-                <li>Utilize <strong>Live Connections</strong> for real-time data access or create optimized <strong>Extracts</strong> for superior performance on large datasets.</li>
-                <li>Leverage Tableau's intuitive relationship model to easily handle complex joins and data blending across multiple Odoo datasets.</li>
-                <li>Publish compelling dashboards and workbooks to Tableau Server or Cloud to facilitate seamless insight sharing and collaboration across your organization.</li>
-                <li>Harness Tableau's advanced features for spatial analysis, forecasting, and statistical modeling directly on your Odoo data.</li>
+                <li>Utilize <strong>Live Connections</strong> for real-time data or create optimized <strong>Extracts</strong> for performance.</li>
+                <li>Leverage Tableau's relationship model to easily handle complex joins and data blending.</li>
+                <li>Publish workbooks to Tableau Server or Cloud to facilitate seamless insight sharing.</li>
+                <li>Harness advanced features for spatial analysis, forecasting, and statistical modeling.</li>
               </ul>
             </div>
           </div>
-          <!-- Image Column -->
           <div class="col-lg-6">
             <div style="border-radius: 16px; padding: 3px; background: linear-gradient(120deg, rgba(255, 223, 0, .3), rgba(255, 223, 0, 0.05));">
               <img src="./tableauconnection.png" alt="Tableau Feature" style="width: 100%; display:block; border-radius:14px;">
@@ -191,9 +180,25 @@
       </div>
     </div>
   </section>
+  
+  <!-- =======================
+  FULL WIDTH IMAGE SHOWCASE #1
+  ======================== -->
+  <section style="padding: 100px 0; background-color: #ffffff; border-top: 1px solid #e5e8ed;">
+      <div class="container" style="padding: 0 15px; text-align: center;">
+          <span style="display: inline-block; font-size: 14px; font-weight: 800; color: #40a0ff; background-color: #40a0ff26; border: 1px solid #40a0ff66; border-radius: 999px; padding: 8px 16px; margin-bottom: 10px;">VISUALIZE YOUR SUCCESS</span>
+          <h2 style="font-size: 34px; font-weight: 800; margin: 0 0 14px 0; color: #333333;">From Raw Data to Stunning Dashboards</h2>
+          <p style="font-size: 16px; color: #555555; max-width: 860px; margin: 0 auto 40px;">Transform millions of Odoo records into a clear, actionable executive dashboard. Below is an example of what you can build, providing a 360-degree view of your business performance in real-time.</p>
+      </div>
+      <div style="padding: 0 20px;">
+          <img src="./dashboard-showcase.png" alt="Full-size example of a beautiful BI dashboard" style="width: 100%; max-width: 1400px; margin: 0 auto; display: block; border-radius: 16px; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.15);">
+      </div>
+  </section>
 
-  <!-- KEY FEATURES SECTION -->
-  <section style="padding:70px 0; background-color:#ffffff; border-top:1px solid #e5e8ed;">
+  <!-- =======================
+  KEY FEATURES SECTION
+  ======================== -->
+  <section style="padding:100px 0; background-color:#f7f9fc; border-top:1px solid #e5e8ed;">
     <div class="container" style="padding:0 15px;">
       <div class="row">
         <div class="col-12 text-center">
@@ -205,53 +210,33 @@
 
       <div class="row g-4" style="margin-top:8px;">
         <div class="col-12 col-md-4">
-          <div class="d-flex flex-column" style="background-color:#fefefe; border:1px solid #e5e8ed; border-radius:16px; padding:24px; height:100%;">
+          <div class="d-flex flex-column" style="background-color:#ffffff; border:1px solid #e5e8ed; border-radius:16px; padding:24px; height:100%;">
             <div style="font-size:2rem; color:#40a0ff; margin-bottom:12px;">🔗</div>
             <h4 style="margin:0 0 10px; color:#333333; font-size:18px; font-weight:800;">Precise Record Filtering</h4>
-            <p style="margin:0; color:#555555;">Gain granular control by using standard Odoo domain filters to select exactly which records to export. Sync only active customers, completed orders, posted invoices, or specific product lines, keeping your BigQuery dataset lean, relevant, and optimized for analysis.</p>
+            <p style="margin:0; color:#555555;">Use standard Odoo domain filters to select exactly which records to export. Sync only active customers or posted invoices to keep your BigQuery dataset lean, reduce noise, and improve report accuracy.</p>
           </div>
         </div>
         <div class="col-12 col-md-4">
-          <div class="d-flex flex-column" style="background-color:#fefefe; border:1px solid #e5e8ed; border-radius:16px; padding:24px; height:100%;">
+          <div class="d-flex flex-column" style="background-color:#ffffff; border:1px solid #e5e8ed; border-radius:16px; padding:24px; height:100%;">
             <div style="font-size:2rem; color:#40a0ff; margin-bottom:12px;">📈</div>
             <h4 style="margin:0 0 10px; color:#333333; font-size:18px; font-weight:800;">Targeted Column Selection</h4>
-            <p style="margin:0; color:#555555;">Why export everything? Choose exactly which fields (columns) to send to BigQuery. This targeted approach accelerates export times, simplifies your BigQuery data models, and directly reduces your storage and processing costs, ensuring data privacy by design.</p>
+            <p style="margin:0; color:#555555;">Choose exactly which fields to send to BigQuery. This accelerates exports, simplifies data models, reduces storage costs, and makes the job of your data analysts significantly easier.</p>
           </div>
         </div>
         <div class="col-12 col-md-4">
-          <div class="d-flex flex-column" style="background-color:#fefefe; border:1px solid #e5e8ed; border-radius:16px; padding:24px; height:100%;">
+          <div class="d-flex flex-column" style="background-color:#ffffff; border:1px solid #e5e8ed; border-radius:16px; padding:24px; height:100%;">
             <div style="font-size:2rem; color:#40a0ff; margin-bottom:12px;">⏳</div>
             <h4 style="margin:0 0 10px; color:#333333; font-size:18px; font-weight:800;">Incremental & Automated Syncs</h4>
-            <p style="margin:0; color:#555555;">Set it and forget it! Configure a schedule and sync only new or changed records since the last run. This intelligent incremental loading keeps your BI dashboards updated automatically in near real-time without costly full-table reloads, saving time, bandwidth, and significant processing costs.</p>
+            <p style="margin:0; color:#555555;">Configure a schedule and sync only new or changed records. This keeps dashboards updated in near real-time without costly full-table reloads, saving time and dramatically reducing BigQuery processing costs.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SCHEMA HANDLING SECTION -->
-  <section style="padding: 100px 0; background-color:#f7f9fc; border-top:1px solid #e5e8ed;">
-    <div class="container" style="padding:0 15px;">
-      <div class="row align-items-center">
-        <div class="col-12 col-lg-6">
-          <span style="display:inline-block; font-size:14px; font-weight:800; color:#78dcc0; background-color:#78dcc026; border:1px solid #78dcc066; border-radius:999px; padding:8px 16px; margin-bottom:10px;">SMART DATA MAPPING</span>
-          <h2 style="font-size: clamp(2.2rem, 5vw, 2.8rem); font-weight:800; margin:0 0 14px 0; color:#40a0ff;">Intelligent Schema Handling for BigQuery</h2>
-          <p style="font-size:1.15rem; color:#555555; margin-bottom:24px;">Our connector intelligently translates complex Odoo field types into clean, BigQuery-compatible columns, saving you countless hours of manual data wrangling and ensuring data integrity from source to insight.</p>
-          <ul style="color: #333333; padding-left: 20px; font-size: 1.05rem;">
-            <li style="margin-bottom:12px;"><strong style="color:#40a0ff;">Many2one Fields:</strong> Automatically exports both the related record's `ID` (e.g., `partner_id`) and its human-readable `Name` (e.g., `partner_name`) for easy joining and reporting.</li>
-            <li style="margin-bottom:12px;"><strong style="color:#40a0ff;">Selection Fields:</strong> Converts internal Odoo keys (e.g., `'draft'`, `'open'`) to their user-friendly labels (e.g., `'Draft'`, `'Open'`), making your BigQuery data instantly understandable.</li>
-            <li style="margin-bottom:12px;"><strong style="color:#40a0ff;">Date & Datetime:</strong> Ensures all date and datetime fields are correctly formatted to ISO 8601 standards, enabling seamless time-series analysis and filtering in BigQuery and your BI tools.</li>
-            <li style="margin-bottom:12px;"><strong style="color:#40a0ff;">Numeric & Boolean:</strong> Automatically maps Odoo numeric types to BigQuery `INTEGER`, `BIGNUMERIC`, or `FLOAT`, and boolean fields to `BOOL`, preserving data accuracy.</li>
-          </ul>
-        </div>
-        <div class="col-12 col-lg-6">
-          <img src="./schema.png" alt="Schema handling example" style="width: 100%; border-radius: 16px; display: block; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.1), 0 0 0 1px #d0d0d0;">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECURITY SECTION -->
+  <!-- =======================
+  SECURITY SECTION (FULL WIDTH IMAGE #2)
+  ======================== -->
   <section style="
       background-color: #ffffff;
       padding: 120px 0;
@@ -263,38 +248,22 @@
     <div class="container" style="padding: 0 15px;">
       <div class="row mb-5">
         <div class="col-12 text-center">
-          <span style="
-                      display: inline-block;
-                      font-size: 14px;
-                      font-weight: 800;
-                      color: #40a0ff;
-                      background-color: rgba(64, 160, 255, 0.1);
-                      border: 1px solid rgba(64, 160, 255, 0.3);
-                      border-radius: 999px;
-                      padding: 8px 16px;
-                      margin-bottom: 16px;
-                  ">ENTERPRISE-GRADE SECURITY & CONTROL</span>
-          <h2 style="
-                      font-size: clamp(2.5rem, 5vw, 3.5rem);
-                      font-weight: 800;
-                      margin: 0 0 14px 0;
-                      color: #333333;
-                      text-shadow: 0 0 20px rgba(64, 160, 255, 0.1);
-                  ">Your Data, Your Control. Absolutely Secure.</h2>
-          <p style="font-size: 1.15rem; color: #555555; max-width: 860px; margin: 0 auto;">
-            Security is the foundational pillar of our connector. Your sensitive Odoo data flows directly and securely from your Odoo instance to *your own* Google Cloud project using a dedicated Service Account. This means no middlemen, no third-party servers, and complete ownership and auditability of your data's journey.
+          <span style="display: inline-block; font-size: 14px; font-weight: 800; color: #40a0ff; background-color: rgba(64, 160, 255, 0.1); border: 1px solid rgba(64, 160, 255, 0.3); border-radius: 999px; padding: 8px 16px; margin-bottom: 16px;">ENTERPRISE-GRADE SECURITY</span>
+          <h2 style="font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; margin: 0 0 14px 0; color: #333333;">Your Data, Your Control. Absolutely Secure.</h2>
+          <p style="font-size: 1.15rem; color: #555555; max-width: 860px; margin: 0 auto 50px;">
+            Security is the foundational pillar of our connector. Your data flows directly from your Odoo instance to *your own* Google Cloud project via an encrypted API connection. There are no middlemen and no third-party servers, ensuring complete ownership and auditability of your data's journey.
           </p>
         </div>
       </div>
-      <div class="row">
-        <div class="col-12">
-          <img src="./security.png" alt="Security configuration in Odoo" style="width: 100%; border-radius: 16px; display: block; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.1), 0 0 0 1px #d0d0d0;">
-        </div>
+      <div style="padding: 0 20px;">
+          <img src="./data-flow-diagram.png" alt="Full-size diagram showing the secure data flow from Odoo to BigQuery" style="width: 100%; max-width: 1200px; margin: 0 auto; display: block; border-radius: 16px; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.1);">
       </div>
     </div>
   </section>
-
-  <!-- GALLERY SECTION -->
+  
+  <!-- =======================
+  GALLERY SECTION
+  ======================== -->
   <section style="padding: 80px 20px; background-color: #f7f9fc; border-top: 1px solid #e5e8ed;">
     <div class="container">
       <div style="text-align: center; margin-bottom: 60px;">
@@ -303,32 +272,32 @@
           Connector in Action
         </h2>
         <p style="font-size: 1.15rem; color: #555555; line-height: 1.6;">
-          A closer look at the features and interface.
+          A closer look at the powerful, yet intuitive, user interface.
         </p>
       </div>
 
       <div class="row g-4">
         <div class="col-md-6">
           <div style="background-color: #ffffff; border: 1px solid #e5e8ed; border-radius: 16px; padding: 20px; box-shadow: 0 20px 60px -15px rgba(0,0,0,0.08);">
-            <img src="./do.png" alt="Detailed Odoo BigQuery Connector Screenshot 1" style="width: 100%; display: block; border-radius: 12px; margin-bottom: 15px;">
+            <img src="./do.png" alt="Screenshot 1: Export Profile Configuration" style="width: 100%; display: block; border-radius: 12px; margin-bottom: 15px;">
             <p style="text-align: center; color: #555555; font-size: 1.05rem; margin-bottom: 0; font-weight: 600;">Fig 1: Effortless Export Profile Configuration</p>
           </div>
         </div>
         <div class="col-md-6">
           <div style="background-color: #ffffff; border: 1px solid #e5e8ed; border-radius: 16px; padding: 20px; box-shadow: 0 20px 60px -15px rgba(0,0,0,0.08);">
-            <img src="./in.png" alt="Detailed Odoo BigQuery Connector Screenshot 2" style="width: 100%; display: block; border-radius: 12px; margin-bottom: 15px;">
+            <img src="./in.png" alt="Screenshot 2: Real-time Sync Status" style="width: 100%; display: block; border-radius: 12px; margin-bottom: 15px;">
             <p style="text-align: center; color: #555555; font-size: 1.05rem; margin-bottom: 0; font-weight: 600;">Fig 2: Real-time Sync Status & Detailed Logging</p>
           </div>
         </div>
         <div class="col-md-6">
           <div style="background-color: #ffffff; border: 1px solid #e5e8ed; border-radius: 16px; padding: 20px; box-shadow: 0 20px 60px -15px rgba(0,0,0,0.08);">
-            <img src="./co.png" alt="Detailed Odoo BigQuery Connector Screenshot 3 - Field Mapping" style="width: 100%; display: block; border-radius: 12px; margin-bottom: 15px;">
+            <img src="./co.png" alt="Screenshot 3: Field Mapping Interface" style="width: 100%; display: block; border-radius: 12px; margin-bottom: 15px;">
             <p style="text-align: center; color: #555555; font-size: 1.05rem; margin-bottom: 0; font-weight: 600;">Fig 3: Advanced Field Mapping Interface</p>
           </div>
         </div>
         <div class="col-md-6">
           <div style="background-color: #ffffff; border: 1px solid #e5e8ed; border-radius: 16px; padding: 20px; box-shadow: 0 20px 60px -15px rgba(0,0,0,0.08);">
-            <img src="./se.png" alt="Detailed Odoo BigQuery Connector Screenshot 4 - Scheduler" style="width: 100%; display: block; border-radius: 12px; margin-bottom: 15px;">
+            <img src="./se.png" alt="Screenshot 4: Scheduler" style="width: 100%; display: block; border-radius: 12px; margin-bottom: 15px;">
             <p style="text-align: center; color: #555555; font-size: 1.05rem; margin-bottom: 0; font-weight: 600;">Fig 4: Automated Scheduling for Incremental Syncs</p>
           </div>
         </div>
@@ -336,46 +305,9 @@
     </div>
   </section>
 
-  <!-- SETUP & CONFIGURATION -->
-  <section style="padding:70px 0; background-color:#f7f9fc; border-top:1px solid #e5e8ed;">
-    <div class="container" style="padding:0 15px;">
-      <div class="row">
-        <div class="col-12 text-center">
-          <span style="display:inline-block; font-size:14px; font-weight:800; color:#ffd700; background-color:#ffd70026; border:1px solid #ffd70066; border-radius:999px; padding:8px 16px; margin-bottom:10px;">SEAMLESS DEPLOYMENT</span>
-          <h2 style="font-size:34px; font-weight:800; margin:0 0 14px 0; color:#333333;">Installation & Effortless Configuration</h2>
-          <p style="font-size:16px; color:#555555; max-width:860px; margin:0 auto 22px;">From initial installation to your first successful data sync, get up and running in just a few straightforward steps, designed for both technical and business users.</p>
-        </div>
-      </div>
-      <div class="row g-3">
-        <div class="col-12 col-lg-7">
-          <div style="background-color:#ffffff; border:1px solid #e5e8ed; border-radius:16px; padding:24px; height:100%;">
-            <h5 style="margin:0 0 16px; color:#333333; font-size:20px; font-weight:800;">Quick Start Guide:</h5>
-            <ol style="margin:0; padding-left:22px; color:#333333; font-size:16px;">
-              <li style="margin-bottom:12px;"><strong>Acquire the Module:</strong> Purchase and download the "Odoo to BigQuery Connector" from the Odoo App Store.</li>
-              <li style="margin-bottom:12px;"><strong>Install in Odoo:</strong> Add the module to your custom addons directory and install it via Odoo's Apps menu (or deploy via Odoo.sh/your hosting provider).</li>
-              <li style="margin-bottom:12px;"><strong>Google Cloud Setup:</strong> In your Google Cloud Platform project, create a dedicated <strong>Service Account</strong> and grant it "BigQuery Data Editor" and "BigQuery Job User" roles for necessary permissions.</li>
-              <li style="margin-bottom:12px;"><strong>Secure Key Upload:</strong> Navigate to <em>Settings → BigQuery Connector</em> in Odoo and securely upload the JSON key file generated for your Google Cloud Service Account.</li>
-              <li style="margin-bottom:12px;"><strong>Configure Your First Export:</strong> Create a new export profile, select your desired Odoo model (e.g., `Sales Order`), choose the specific columns you need, set up any required filters, and initiate your first automated data sync!</li>
-            </ol>
-          </div>
-        </div>
-        <div class="col-12 col-lg-5">
-          <div style="background-color:#fefefe; border:1px solid #e5e8ed; border-radius:16px; padding:24px; height:100%;">
-            <h5 style="margin:0 0 12px; color:#333333; font-size:20px; font-weight:800;">Compatibility & Core Requirements</h5>
-            <ul style="margin:0; padding-left:18px; color:#555555; font-size:16px;">
-              <li style="margin-bottom:10px;"><strong>Odoo Version:</strong> Compatible with Odoo 14, 15, 16, and newer versions.</li>
-              <li style="margin-bottom:10px;"><strong>Google Cloud:</strong> An active Google Cloud Platform Account with BigQuery API enabled.</li>
-              <li style="margin-bottom:10px;"><strong>Connectivity:</strong> Reliable internet access from your Odoo server for API calls to Google Cloud.</li>
-              <li style="margin-bottom:10px;"><strong>Deployment:</strong> Fully functional with both On-premise Odoo installations and Odoo Cloud hosting environments.</li>
-              <li style="margin-bottom:0px;"><strong>Security Best Practice:</strong> We recommend using a dedicated Service Account with least-privilege permissions.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
+  <!-- =======================
+  FAQ SECTION
+  ======================== -->
   <section style="padding: 120px 20px; background-color: #ffffff; border-top: 1px solid #e5e8ed;">
     <div style="max-width: 900px; margin: 0 auto;">
       <div style="text-align: center; margin-bottom: 80px;">
@@ -384,43 +316,26 @@
         <p style="font-size: 1.1rem; color: #777777; margin-top: 20px;">Find quick answers to common questions about our Odoo to BigQuery Connector.</p>
       </div>
       <div style="border-top: 1px solid #d0d0d0;">
-        <div style="padding: 32px 0; border-bottom: 1px solid #d0d0d0;">
-          <h4 style="font-size: 1.25rem; font-weight: 600; margin: 0 0 12px 0; color: #333333;">What do I need to use this module?</h4>
-          <p style="color: #555555; margin: 0;">You will need an active Odoo instance (v14 or later), a Google Cloud account with BigQuery enabled, and a Service Account from that project with "BigQuery Data Editor" and "BigQuery Job User" permissions. This ensures secure and authenticated access to your BigQuery datasets.</p>
-        </div>
-        <div style="padding: 32px 0; border-bottom: 1px solid #d0d0d0;">
-          <h4 style="font-size: 1.25rem; font-weight: 600; margin: 0 0 12px 0; color: #333333;">How is my data kept secure during transfer?</h4>
-          <p style="color: #555555; margin: 0;">Data security is paramount. The connector establishes a direct, encrypted connection (via HTTPS) between your Odoo server and Google's BigQuery API. Your data is never routed through or stored on any third-party servers. Access is controlled entirely by the Google Cloud Service Account key that you securely provide and manage within your Odoo instance.</p>
-        </div>
-        <div style="padding: 32px 0; border-bottom: 1px solid #d0d0d0;">
-          <h4 style="font-size: 1.25rem; font-weight: 600; margin: 0 0 12px 0; color: #333333;">Does it work with my custom Odoo modules and fields?</h4>
-          <p style="color: #555555; margin: 0;">Absolutely. The connector is designed to dynamically read your entire Odoo database schema. This includes any custom modules you have installed, custom fields you have added to standard models, and completely new custom models. You can easily select these custom fields and models for export just like standard Odoo fields.</p>
-        </div>
-        <div style="padding: 32px 0; border-bottom: 1px solid #d0d0d0;">
-          <h4 style="font-size: 1.25rem; font-weight: 600; margin: 0 0 12px 0; color: #333333;">What are the costs involved in using this solution?</h4>
-          <p style="color: #555555; margin: 0;">You purchase the "Odoo to BigQuery Connector" module license one-time from the Odoo App Store. There are no additional recurring subscription fees from us. The only ongoing operational costs are for your usage of Google BigQuery (for data storage, streaming inserts, and querying), which is billed directly by Google Cloud based on your consumption.</p>
-        </div>
-        <div style="padding: 32px 0; border-bottom: 1px solid #d0d0d0;">
-          <h4 style="font-size: 1.25rem; font-weight: 600; margin: 0 0 12px 0; color: #333333;">Can I schedule automatic exports and incremental updates?</h4>
-          <p style="color: #555555; margin: 0;">Yes, absolutely. The module fully leverages Odoo's powerful built-in automation server (Scheduled Actions). You can configure any data export profile to run on a schedule you define – whether that's hourly, daily, weekly, or monthly – enabling fully automated, incremental data synchronization to BigQuery without any manual intervention.</p>
-        </div>
-        <div style="padding: 32px 0; border-bottom: 1px solid #d0d0d0;">
-          <h4 style="font-size: 1.25rem; font-weight: 600; margin: 0 0 12px 0; color: #333333;">Where can I find documentation or get support if I need help?</h4>
-          <p style="color: #555555; margin: 0;">Detailed documentation, including step-by-step setup guides and best practices, is available on this product page and on our official website at <em>https://niyulabs.com</em>. For technical support, bug reports, or any questions, please do not hesitate to contact our dedicated support team directly at <em>info@niyulabs.com</em>. We're here to help!</p>
-        </div>
+        <div style="padding: 32px 0; border-bottom: 1px solid #d0d0d0;"><h4 style="font-size: 1.25rem; font-weight: 600; margin: 0 0 12px 0; color: #333333;">Does it work with custom Odoo modules and fields?</h4><p style="color: #555555; margin: 0;">Absolutely. The connector dynamically reads your entire Odoo database schema. This includes custom modules, custom fields added to standard models, and new custom models. You can select these for export just like standard Odoo fields.</p></div>
+        <div style="padding: 32px 0; border-bottom: 1px solid #d0d0d0;"><h4 style="font-size: 1.25rem; font-weight: 600; margin: 0 0 12px 0; color: #333333;">How does the connector handle large volumes of data?</h4><p style="color: #555555; margin: 0;">The connector is built for performance. It processes records in optimized batches to handle millions of rows efficiently. For very large initial syncs, we recommend running the export during off-peak hours. Subsequent incremental syncs will then be extremely fast, only processing new or modified records.</p></div>
+        <div style="padding: 32px 0; border-bottom: 1px solid #d0d0d0;"><h4 style="font-size: 1.25rem; font-weight: 600; margin: 0 0 12px 0; color: #333333;">What are the ongoing costs?</h4><p style="color: #555555; margin: 0;">You purchase the module license one-time from the Odoo App Store. There are no recurring fees from us. The only ongoing costs are for your Google BigQuery usage (storage and querying), which is billed directly by Google Cloud based on your consumption.</p></div>
+        <div style="padding: 32px 0; border-bottom: 1px solid #d0d0d0;"><h4 style="font-size: 1.25rem; font-weight: 600; margin: 0 0 12px 0; color: #333333;">What happens if I delete a record in Odoo?</h4><p style="color: #555555; margin: 0;">The connector is optimized for appending and updating data (upsert logic). It does not perform hard deletes in BigQuery to preserve historical data integrity. We recommend a data archival strategy within BigQuery, such as filtering out records based on an `active` flag or a `last_updated_date` field, which can be easily managed in your BI tool.</p></div>
+        <div style="padding: 32px 0; border-bottom: 1px solid #d0d0d0;"><h4 style="font-size: 1.25rem; font-weight: 600; margin: 0 0 12px 0; color: #333333;">Where can I find documentation or get support?</h4><p style="color: #555555; margin: 0;">Detailed documentation is available on this product page and on our official website at <em>https://niyulabs.com</em>. For technical support, bug reports, or any questions, please contact our dedicated support team at <em>info@niyulabs.com</em>. We're here to help!</p></div>
       </div>
     </div>
   </section>
 
-  <!-- FINAL CTA -->
+  <!-- =======================
+  FINAL CTA
+  ======================== -->
   <section style="padding: 120px 20px; background-color: #f7f9fc;">
     <div style="max-width: 1000px; margin: 0 auto; text-align: center; ">
       <div style="background-color:rgba(64, 160, 255, 0.1); padding: 100px 40px; border-radius: 2rem; border: 1px solid #e5e8ed; box-shadow: 0 30px 80px rgba(0,0,0,0.05);">
-        <span style="display: inline-block; background-color: rgba(120, 220, 200, 0.15); color: #40a0ff; padding: 8px 16px; border-radius: 99px; font-weight: 600; margin-bottom: 24px; border: 1px solid rgba(120, 220, 200, 0.4);">READY TO UNLOCK YOUR DATA'S FULL POTENTIAL?</span>
+        <span style="display: inline-block; background-color: rgba(120, 220, 200, 0.15); color: #40a0ff; padding: 8px 16px; border-radius: 99px; font-weight: 600; margin-bottom: 24px; border: 1px solid rgba(120, 220, 200, 0.4);">UNLOCK YOUR DATA'S POTENTIAL</span>
         <h2 style="font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.2; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 20px; color:#40a0ff;">Transforming Odoo Data Integration Starts Here.</h2>
-        <p style="max-width: 700px; margin: 0 auto 50px; color: #555555; font-size: 1.15rem;">Stop struggling with manual data exports and start leveraging your Odoo data strategically. Empower your business analysts, build powerful, real-time dashboards, and accelerate data-driven business growth with our seamless, secure, and highly efficient data pipeline solution.</p>
+        <p style="max-width: 700px; margin: 0 auto 50px; color: #555555; font-size: 1.15rem;">Stop struggling with manual exports. Empower your team, build powerful real-time dashboards, and accelerate data-driven growth with our seamless and secure data pipeline. Join leading businesses who are turning their Odoo data into a competitive advantage.</p>
         <a href="mailto:info@niyulabs.com" target="_blank" style="display: inline-block; background-color: #40a0ff; color: #ffffff; padding: 18px 36px; font-size: 1.15rem; font-weight: 800; text-decoration: none; border-radius: 99px; transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; box-shadow: 0 8px 20px -5px rgba(64, 160, 255, 0.3), 0 5px 10px -5px rgba(64, 160, 255, 0.2), 0 0 40px 8px rgba(64, 160, 255, 0.25); animation: pulse 2s infinite ease-in-out;" onmouseover="this.style.transform='translateY(-7px) scale(1.03)'; this.style.boxShadow='0 12px 25px -7px rgba(64, 160, 255, 0.4), 0 8px 15px -7px rgba(64, 160, 255, 0.3), 0 0 50px 10px rgba(64, 160, 255, 0.35)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 8px 20px -5px rgba(64, 160, 255, 0.3), 0 5px 10px -5px rgba(64, 160, 255, 0.2), 0 0 40px 8px rgba(64, 160, 255, 0.25)';">
-          Contact Us for a Demo: info@niyulabs.com. Click here to get a live demo
+          Contact Us for a Live Demo
         </a>
       </div>
     </div>
