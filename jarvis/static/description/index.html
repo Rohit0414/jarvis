@@ -205,115 +205,141 @@
 
  
 <!-- =======================
-  SCROLLYTELLING SECTION
+  NEW BI INTEGRATIONS SHOWCASE - 3-Column Grid Layout
   ======================== -->
-<section style="background-color: #f7f9fc; border-top: 1px solid #e5e8ed; border-bottom: 1px solid #e5e8ed; position: relative;">
-  
-  <div class="container" style="max-width:1200px; padding-top: 100px; padding-bottom: 100px;">
+<section style="padding: 80px 24px; background-color: #f7f9fc; border-top: 1px solid #e5e8ed; border-bottom: 1px solid #e5e8ed;">
+    <div class="container" style="max-width: 1400px; margin: 0 auto;">
 
-    <!-- Intro Header -->
-    <div style="text-align: center; max-width: 750px; margin: 0 auto 100px auto;">
-      <h2 style="font-size: clamp(2.8rem, 5vw, 3.5rem); font-weight: 900; letter-spacing: -2px; margin: 0 0 16px 0; color: #333333;">
-        Activate Your Analytics Stack
-      </h2>
-      <p style="font-size: 1.25rem; color: #555555; line-height: 1.6;">
-        Your BigQuery data is the fuel. These are the engines. Scroll down to see how we connect your clean Odoo data to the platform of your choice.
-      </p>
-    </div>
+      <!-- Section Intro -->
+      <div style="text-align: center; max-width: 750px; margin: 0 auto 60px auto;">
+        <h2 style="font-size: 2.5rem; font-weight: 900; letter-spacing: -1px; margin-bottom: 16px; color: #333333;">
+          Activate Your Analytics Stack
+        </h2>
+        <p style="font-size: 1.15rem; color: #555555; line-height: 1.6;">
+          Your BigQuery data is the fuel. These are the engines. Connect your clean Odoo data to the platform of your choice and start building powerful dashboards.
+        </p>
+      </div>
 
-    <div class="row">
-      <!-- LEFT COLUMN: SCROLLABLE TEXT -->
-      <div class="col-lg-5">
+      <!-- 3-Column Grid Row -->
+      <div class="row">
         
-        <!-- STEP 1: POWER BI TEXT -->
-        <div class="text-step active" id="text-pbi" data-target="vis-pbi" style="min-height: 90vh; display: flex; flex-direction: column; justify-content: center; padding-bottom: 50px;">
-          <div style="display:inline-block; width: fit-content; padding:8px 14px; border-radius:999px; font-weight:700; margin-bottom:16px; border:2px solid rgba(64, 160, 255,.8); color:#40a0ff; background-color: rgba(64, 160, 255,.2); box-shadow: 0 0 10px rgba(64, 160, 255, 0.3);">&#128640; POWER BI + BIGQUERY</div>
-          <h3 style="margin:0 0 15px 0; color:#333333; font-size:40px; font-weight:900;">Build a Production-Ready Model</h3>
-          <p style="margin:0 0 30px 0; color:#555555; line-height:1.7; font-size:18px;">The definitive path for building scalable, high-performance BI on an Odoo + BigQuery stack.</p>
-          
-          <!-- Key Plays Box -->
-          <div style="border-radius:18px; background-color: #e6f0ff; border:1px solid rgba(64, 160, 255, 0.5); padding:25px; box-shadow: inset 0 0 15px rgba(64, 160, 255, 0.1);">
-            <div style="font-weight:800; color:#40a0ff; margin-bottom:12px; font-size:18px;">Optimized for Scale</div>
-            <p style="margin:0 0 20px 0; color:#333333; line-height:1.6; font-size:16px;">
-              Leverage the native BigQuery Connector, enable **Incremental Refresh**, and centralize logic with **DAX Measures**.
-            </p>
-            <a href="#" style="color: #40a0ff; font-weight: 700; text-decoration: none;">Read Guide &rarr;</a>
-          </div>
-        </div>
-
-        <!-- STEP 2: LOOKER STUDIO TEXT -->
-        <div class="text-step" id="text-looker" data-target="vis-looker" style="min-height: 90vh; display: flex; flex-direction: column; justify-content: center; padding-bottom: 50px;">
-          <div style="display:inline-block; width: fit-content; padding:8px 14px; border-radius:999px; font-weight:700; margin-bottom:16px; border:2px solid rgba(120, 220, 200, 0.8); color:#78dcc8; background-color:rgba(120, 220, 200, 0.2); box-shadow: 0 0 10px rgba(120, 220, 200, 0.3);">&#127758; LOOKER STUDIO + BIGQUERY</div>
-          <h3 style="margin:0 0 15px 0; color:#333333; font-size:40px; font-weight:900;">Ship Insights at High Velocity</h3>
-          <p style="margin:0 0 30px 0; color:#555555; line-height:1.7; font-size:18px;">Create beautiful, shareable dashboards that are fast, intuitive, and accessible to your entire team.</p>
-          
-          <!-- Key Plays Box -->
-          <div style="border-radius:18px; background-color: #e8fff8; border:1px solid rgba(120, 220, 200, 0.5); padding:25px; box-shadow: inset 0 0 15px rgba(120, 220, 200, 0.1);">
-            <div style="font-weight:800; color:#78dcc8; margin-bottom:12px; font-size:18px;">Optimized for Velocity</div>
-            <p style="margin:0 0 20px 0; color:#333333; line-height:1.6; font-size:16px;">
-              Connect directly with Viewer's Credentials and utilize **Data Extracts** for near-instant load times.
-            </p>
-            <a href="#" style="color: #78dcc8; font-weight: 700; text-decoration: none;">Read Guide &rarr;</a>
-          </div>
-        </div>
-
-        <!-- STEP 3: TABLEAU TEXT -->
-        <div class="text-step" id="text-tableau" data-target="vis-tableau" style="min-height: 90vh; display: flex; flex-direction: column; justify-content: center; padding-bottom: 50px;">
-          <div style="display:inline-block; width: fit-content; padding:8px 14px; border-radius:999px; font-weight:700; margin-bottom:16px; border:2px solid rgba(255, 223, 0, 0.8); color:#ffd700; background-color:rgba(255, 223, 0, 0.2); box-shadow: 0 0 10px rgba(255, 223, 0, 0.3);">&#127912; TABLEAU + BIGQUERY</div>
-          <h3 style="margin:0 0 15px 0; color:#333333; font-size:40px; font-weight:900;">Visual Storytelling & Deep Dives</h3>
-          <p style="margin:0 0 30px 0; color:#555555; line-height:1.7; font-size:18px;">Empower business users to ask and answer their own questions with powerful analytics.</p>
-          
-          <!-- Key Plays Box -->
-          <div style="border-radius:18px; background-color: #fffde6; border:1px solid rgba(255, 223, 0, 0.5); padding:25px; box-shadow: inset 0 0 15px rgba(255, 223, 0, 0.1);">
-            <div style="font-weight:800; color:#ffd700; margin-bottom:12px; font-size:18px;">Optimized for Exploration</div>
-            <p style="margin:0 0 20px 0; color:#333333; line-height:1.6; font-size:16px;">
-              Choose between **Live Connections** or **Extracts** and leverage Tableau’s relationship model for complex joins.
-            </p>
-            <a href="#" style="color: #ffd700; font-weight: 700; text-decoration: none;">Read Guide &rarr;</a>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- RIGHT COLUMN: STICKY VISUALS -->
-      <!-- 'sticky-top' is bootstrap, but we add custom top/height via inline style -->
-      <div class="col-lg-7 d-none d-lg-block">
-        <div style="position: -webkit-sticky; position: sticky; top: 15vh; height: 70vh; display: flex; align-items: center;">
-          
-          <!-- Visual Container Frame -->
-          <div id="visual-frame" style="width: 100%; position: relative; padding: 15px; border-radius: 24px; background: linear-gradient(145deg, #ffffff, #fcfdff); border: 1px solid #e5e8ed; box-shadow: 0 20px 50px rgba(0,0,0,0.08); transition: border-color 0.5s ease, box-shadow 0.5s ease;">
+        <!-- COLUMN 1: POWER BI -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div style="background: #ffffff; border-radius: 16px; overflow: hidden; height: 100%; border: 1px solid #e5e8ed; box-shadow: 0 4px 12px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
             
-            <!-- STACKED VISUALS (Absolute Positioning) -->
-            
-            <!-- 1. Power BI Visual -->
-            <div class="visual-item active" id="vis-pbi" style="position: relative; width: 100%;">
-              <div style="border-radius: 16px; padding: 5px; background-color: rgba(64, 160, 255, 0.5);">
-                <video autoplay loop muted playsinline style="width: 100%; display: block; border-radius: 14px; background-color: #eee;">
-                   <source src="./powerbiconnection.webm" type="video/webm">
-                </video>
-              </div>
+            <!-- Media Section (Top) -->
+            <div style="background-color: rgba(64, 160, 255, 0.1); padding: 20px; text-align: center; border-bottom: 1px solid #f0f0f0;">
+               <video autoplay loop muted playsinline preload="auto" style="width: 100%; max-height: 200px; object-fit: contain; display: block; border-radius: 8px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
+                <source src="./powerbiconnection.webm" type="video/webm">
+              </video>
             </div>
 
-            <!-- 2. Looker Visual -->
-            <div class="visual-item" id="vis-looker" style="position: absolute; top: 15px; left: 15px; right: 15px;">
-              <div style="border-radius: 16px; padding: 5px; background-color: rgba(120, 220, 200, 0.5);">
-                <img src="./lookerconnection.png" alt="Looker Studio" style="width: 100%; display:block; border-radius:14px;">
+            <!-- Content Section (Bottom) -->
+            <div style="padding: 30px; flex-grow: 1; display: flex; flex-direction: column;">
+              
+              <!-- Badge -->
+              <div style="margin-bottom: 15px;">
+                <span style="display:inline-block; padding: 6px 12px; border-radius: 50px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(64, 160, 255, 0.3); color: #40a0ff; background-color: rgba(64, 160, 255, 0.1);">
+                  &#128640; POWER BI
+                </span>
+              </div>
+
+              <h3 style="font-size: 1.5rem; font-weight: 800; color: #333; margin-bottom: 12px;">Production-Ready Models</h3>
+              <p style="color: #666; font-size: 1rem; line-height: 1.6; margin-bottom: 24px; flex-grow: 1;">
+                The definitive path for building scalable, high-performance BI. Leverage the native connector and <strong>Incremental Refresh</strong>.
+              </p>
+
+              <!-- Highlight Box -->
+              <div style="background-color: #f0f7ff; border-radius: 12px; padding: 20px; border: 1px solid rgba(64, 160, 255, 0.2);">
+                <div style="font-weight: 700; color: #40a0ff; margin-bottom: 8px; font-size: 0.95rem;">Optimized for Scale</div>
+                <p style="font-size: 0.9rem; color: #444; margin-bottom: 15px; line-height: 1.5;">
+                  Centralize business logic using DAX Measures for a single source of truth.
+                </p>
+                <a href="#" style="color: #40a0ff; font-weight: 700; text-decoration: none; font-size: 0.95rem;">Read Guide &rarr;</a>
               </div>
             </div>
-
-            <!-- 3. Tableau Visual -->
-            <div class="visual-item" id="vis-tableau" style="position: absolute; top: 15px; left: 15px; right: 15px;">
-              <div style="border-radius: 16px; padding: 5px; background-color: rgba(255, 223, 0, 0.5);">
-                 <img src="./tableauconnection.png" alt="Tableau" style="width: 100%; display:block; border-radius:14px;">
-              </div>
-            </div>
-
           </div>
         </div>
+
+        <!-- COLUMN 2: LOOKER STUDIO -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div style="background: #ffffff; border-radius: 16px; overflow: hidden; height: 100%; border: 1px solid #e5e8ed; box-shadow: 0 4px 12px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+            
+            <!-- Media Section (Top) -->
+            <div style="background-color: rgba(120, 220, 200, 0.1); padding: 20px; text-align: center; border-bottom: 1px solid #f0f0f0;">
+              <img src="./lookerconnection.png" alt="Looker Studio" style="width: 100%; max-height: 200px; object-fit: contain; display: block; border-radius: 8px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
+            </div>
+
+            <!-- Content Section (Bottom) -->
+            <div style="padding: 30px; flex-grow: 1; display: flex; flex-direction: column;">
+              
+              <!-- Badge -->
+              <div style="margin-bottom: 15px;">
+                <span style="display:inline-block; padding: 6px 12px; border-radius: 50px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(120, 220, 200, 0.3); color: #2da88e; background-color: rgba(120, 220, 200, 0.1);">
+                  &#127758; LOOKER STUDIO
+                </span>
+              </div>
+
+              <h3 style="font-size: 1.5rem; font-weight: 800; color: #333; margin-bottom: 12px;">High Velocity Insights</h3>
+              <p style="color: #666; font-size: 1rem; line-height: 1.6; margin-bottom: 24px; flex-grow: 1;">
+                Create beautiful, shareable dashboards that are fast and intuitive. Foster a data-driven culture instantly.
+              </p>
+
+              <!-- Highlight Box -->
+              <div style="background-color: #f0fdf9; border-radius: 12px; padding: 20px; border: 1px solid rgba(120, 220, 200, 0.2);">
+                <div style="font-weight: 700; color: #2da88e; margin-bottom: 8px; font-size: 0.95rem;">Optimized for Speed</div>
+                <p style="font-size: 0.9rem; color: #444; margin-bottom: 15px; line-height: 1.5;">
+                  Utilize <strong>Data Extracts</strong> and Views to ensure near-instant load times.
+                </p>
+                <a href="#" style="color: #2da88e; font-weight: 700; text-decoration: none; font-size: 0.95rem;">Read Guide &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- COLUMN 3: TABLEAU -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div style="background: #ffffff; border-radius: 16px; overflow: hidden; height: 100%; border: 1px solid #e5e8ed; box-shadow: 0 4px 12px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
+            
+            <!-- Media Section (Top) -->
+            <div style="background-color: rgba(255, 223, 0, 0.1); padding: 20px; text-align: center; border-bottom: 1px solid #f0f0f0;">
+              <img src="./tableauconnection.png" alt="Tableau" style="width: 100%; max-height: 200px; object-fit: contain; display: block; border-radius: 8px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
+            </div>
+
+            <!-- Content Section (Bottom) -->
+            <div style="padding: 30px; flex-grow: 1; display: flex; flex-direction: column;">
+              
+              <!-- Badge -->
+              <div style="margin-bottom: 15px;">
+                <span style="display:inline-block; padding: 6px 12px; border-radius: 50px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(230, 200, 0, 0.3); color: #dcb000; background-color: rgba(255, 223, 0, 0.1);">
+                  &#127912; TABLEAU
+                </span>
+              </div>
+
+              <h3 style="font-size: 1.5rem; font-weight: 800; color: #333; margin-bottom: 12px;">Deep Dive Analytics</h3>
+              <p style="color: #666; font-size: 1rem; line-height: 1.6; margin-bottom: 24px; flex-grow: 1;">
+                Connect a powerful analytics engine to your Odoo data. Empower users to ask and answer their own questions.
+              </p>
+
+              <!-- Highlight Box -->
+              <div style="background-color: #fffdec; border-radius: 12px; padding: 20px; border: 1px solid rgba(230, 200, 0, 0.2);">
+                <div style="font-weight: 700; color: #dcb000; margin-bottom: 8px; font-size: 0.95rem;">Optimized for Exploration</div>
+                <p style="font-size: 0.9rem; color: #444; margin-bottom: 15px; line-height: 1.5;">
+                  Choose <strong>Live Connections</strong> or Extracts and leverage complex joins.
+                </p>
+                <a href="#" style="color: #dcb000; font-weight: 700; text-decoration: none; font-size: 0.95rem;">Read Guide &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
-  </div>
 </section>
+
+
+
+
   <!-- KEY FEATURES SECTION -->
   <section class="parallax-bg" style="padding:100px 0; background-color:#ffffff; border-top:1px solid #e5e8ed;">
     <div class="container" style="padding:0 15px;">
