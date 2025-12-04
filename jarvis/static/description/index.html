@@ -244,14 +244,14 @@
 
  
 <!-- =======================
-  PREMIUM FLEXBOX LAYOUT - ENHANCED TYPOGRAPHY
+  AMAZING FLEXBOX LAYOUT - FIXED GAPS & PREMIUM STYLE
   ======================== -->
 <section style="padding: 100px 20px; background-color: #f9fafb; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; border-top: 1px solid #eef0f2;">
     <div style="max-width: 1250px; margin: 0 auto;">
 
       <!-- Header Section -->
-      <div style="text-align: center; margin-bottom: 70px;">
-        <h2 style="font-size: clamp(3rem, 5vw, 4rem); font-weight: 900; color: #1a1a1a; margin-bottom: 24px; letter-spacing: -1.5px; line-height: 1.1;">
+      <div style="text-align: center; margin-bottom: 80px;">
+        <h2 style="font-size: clamp(3rem, 5vw, 4.5rem); font-weight: 900; color: #1a1a1a; margin-bottom: 24px; letter-spacing: -2px; line-height: 1.1;">
           Activate Your Analytics Stack
         </h2>
         <p style="font-size: 1.35rem; color: #555555; max-width: 800px; margin: 0 auto; line-height: 1.6; font-weight: 400;">
@@ -260,90 +260,95 @@
       </div>
 
       <!-- Flex Container -->
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+      <!-- Added margin negative to offset card margins for perfect alignment -->
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: -15px;">
 
         <!-- CARD 1: POWER BI -->
-        <div style="flex: 1 1 340px; max-width: 400px; background: #ffffff; border: 1px solid rgba(0,0,0,0.06); border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px -10px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+        <!-- Added margin: 15px to force gap even if 'gap' property fails in Odoo -->
+        <div style="flex: 1 1 320px; max-width: 380px; margin: 15px; background: #ffffff; border: 1px solid rgba(0,0,0,0.06); border-radius: 24px; overflow: hidden; box-shadow: 0 20px 50px -10px rgba(0,0,0,0.1); transition: transform 0.3s ease; position: relative;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
           <!-- Top Media Area -->
           <div style="background-color: #f0f7ff; padding: 40px; display: flex; align-items: center; justify-content: center; height: 240px; border-bottom: 1px solid #eef6ff;">
-             <video autoplay loop muted playsinline preload="auto" style="max-width: 100%; max-height: 100%; box-shadow: 0 10px 30px rgba(64, 160, 255, 0.25); border-radius: 12px; transform: scale(1.05);">
+             <video autoplay loop muted playsinline preload="auto" style="max-width: 100%; max-height: 100%; box-shadow: 0 15px 35px rgba(64, 160, 255, 0.2); border-radius: 12px; transform: scale(1.05);">
                 <source src="./powerbiconnection.webm" type="video/webm">
               </video>
           </div>
           
           <!-- Content Area -->
-          <div style="padding: 40px 35px;">
-            <div style="margin-bottom: 20px;">
-               <span style="background: rgba(64, 160, 255, 0.1); color: #0078d4; padding: 8px 16px; border-radius: 100px; font-weight: 800; font-size: 22px; letter-spacing: 1.5px; text-transform: uppercase;">POWER BI</span>
-               <img src="./copy.png" alt="Power BI Logo" style="height: 40px; opacity: 0.9;">
-
+          <div style="padding: 35px;">
+            <!-- Badge & Logo Row -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
+               <span style="background: rgba(64, 160, 255, 0.1); color: #0078d4; padding: 8px 16px; border-radius: 100px; font-weight: 800; font-size: 11px; letter-spacing: 1px; text-transform: uppercase;">POWER BI</span>
+               <img src="./copy.png" alt="Power BI Logo" style="height: 32px; width: auto; opacity: 1;">
             </div>
+
             <h3 style="margin: 0 0 16px 0; font-size: 2rem; font-weight: 800; color: #222; letter-spacing: -0.5px; line-height: 1.2;">Production-Ready Models</h3>
-            <p style="color: #666; font-size: 1.125rem; line-height: 1.7; margin-bottom: 30px;">
+            <p style="color: #666; font-size: 1.1rem; line-height: 1.7; margin-bottom: 30px;">
               The definitive path for building scalable, high-performance BI on an Odoo + BigQuery stack.
             </p>
 
             <!-- Bottom Highlight Box -->
-            <div style="background: #fafbfc; border: 1px solid #eef0f2; padding: 25px; border-radius: 16px; border-left: 4px solid #40a0ff;">
-              <h5 style="color: #0078d4; font-weight: 800; font-size: 1rem; margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 0.5px;">Optimized for Scale</h5>
-              <p style="font-size: 1rem; color: #555; margin: 0 0 16px 0; line-height: 1.5;">Leverage Incremental Refresh and DAX Measures.</p>
-              <a href="#" style="color: #0078d4; font-weight: 800; text-decoration: none; font-size: 1rem; border-bottom: 2px solid rgba(64, 160, 255, 0.3);">Read Guide &rarr;</a>
+            <div style="background: #fafbfc; border: 1px solid #eef0f2; padding: 25px; border-radius: 16px; border-left: 5px solid #40a0ff;">
+              <h5 style="color: #0078d4; font-weight: 800; font-size: 0.95rem; margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 0.5px;">Optimized for Scale</h5>
+              <p style="font-size: 0.95rem; color: #555; margin: 0 0 16px 0; line-height: 1.5;">Leverage Incremental Refresh and DAX Measures.</p>
+              <a href="#" style="color: #0078d4; font-weight: 800; text-decoration: none; font-size: 0.95rem; border-bottom: 2px solid rgba(64, 160, 255, 0.3);">Read Guide &rarr;</a>
             </div>
           </div>
         </div>
 
         <!-- CARD 2: LOOKER STUDIO -->
-        <div style="flex: 1 1 340px; max-width: 400px; background: #ffffff; border: 1px solid rgba(0,0,0,0.06); border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px -10px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+        <div style="flex: 1 1 320px; max-width: 380px; margin: 15px; background: #ffffff; border: 1px solid rgba(0,0,0,0.06); border-radius: 24px; overflow: hidden; box-shadow: 0 20px 50px -10px rgba(0,0,0,0.1); transition: transform 0.3s ease; position: relative;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
           <!-- Top Media Area -->
           <div style="background-color: #f0fdf9; padding: 40px; display: flex; align-items: center; justify-content: center; height: 240px; border-bottom: 1px solid #ecfbf7;">
-             <img src="./lookerconnection.png" alt="Looker Studio" style="max-width: 100%; max-height: 100%; box-shadow: 0 10px 30px rgba(32, 201, 151, 0.25); border-radius: 12px; transform: scale(1.05);">
+             <img src="./lookerconnection.png" alt="Looker Studio" style="max-width: 100%; max-height: 100%; box-shadow: 0 15px 35px rgba(32, 201, 151, 0.2); border-radius: 12px; transform: scale(1.05);">
           </div>
           
           <!-- Content Area -->
-          <div style="padding: 40px 35px;">
-            <div style="margin-bottom: 20px;">
-               <span style="background: rgba(32, 201, 151, 0.1); color: #0ca678; padding: 8px 16px; border-radius: 100px; font-weight: 800; font-size: 22px; letter-spacing: 1.5px; text-transform: uppercase;">LOOKER STUDIO</span>
-                <img src="./2.png" alt="Looker Studio Logo" style="height: 80px; opacity: 0.9;">
-
+          <div style="padding: 35px;">
+            <!-- Badge & Logo Row -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
+               <span style="background: rgba(32, 201, 151, 0.1); color: #0ca678; padding: 8px 16px; border-radius: 100px; font-weight: 800; font-size: 11px; letter-spacing: 1px; text-transform: uppercase;">LOOKER STUDIO</span>
+               <img src="./2.png" alt="Looker Studio Logo" style="height: 32px; width: auto; opacity: 1;">
             </div>
+
             <h3 style="margin: 0 0 16px 0; font-size: 2rem; font-weight: 800; color: #222; letter-spacing: -0.5px; line-height: 1.2;">High Velocity Insights</h3>
-            <p style="color: #666; font-size: 1.125rem; line-height: 1.7; margin-bottom: 30px;">
+            <p style="color: #666; font-size: 1.1rem; line-height: 1.7; margin-bottom: 30px;">
               Create beautiful, shareable dashboards that are fast, intuitive, and accessible to your entire team.
             </p>
 
             <!-- Bottom Highlight Box -->
-            <div style="background: #fafbfc; border: 1px solid #eef0f2; padding: 25px; border-radius: 16px; border-left: 4px solid #20c997;">
-              <h5 style="color: #0ca678; font-weight: 800; font-size: 1rem; margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 0.5px;">Optimized for Speed</h5>
-              <p style="font-size: 1rem; color: #555; margin: 0 0 16px 0; line-height: 1.5;">Utilize Data Extracts for instant load times.</p>
-              <a href="#" style="color: #0ca678; font-weight: 800; text-decoration: none; font-size: 1rem; border-bottom: 2px solid rgba(32, 201, 151, 0.3);">Read Guide &rarr;</a>
+            <div style="background: #fafbfc; border: 1px solid #eef0f2; padding: 25px; border-radius: 16px; border-left: 5px solid #20c997;">
+              <h5 style="color: #0ca678; font-weight: 800; font-size: 0.95rem; margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 0.5px;">Optimized for Speed</h5>
+              <p style="font-size: 0.95rem; color: #555; margin: 0 0 16px 0; line-height: 1.5;">Utilize Data Extracts for instant load times.</p>
+              <a href="#" style="color: #0ca678; font-weight: 800; text-decoration: none; font-size: 0.95rem; border-bottom: 2px solid rgba(32, 201, 151, 0.3);">Read Guide &rarr;</a>
             </div>
           </div>
         </div>
 
         <!-- CARD 3: TABLEAU -->
-        <div style="flex: 1 1 340px; max-width: 400px; background: #ffffff; border: 1px solid rgba(0,0,0,0.06); border-radius: 24px; overflow: hidden; box-shadow: 0 20px 40px -10px rgba(0,0,0,0.08); transition: transform 0.3s ease;">
+        <div style="flex: 1 1 320px; max-width: 380px; margin: 15px; background: #ffffff; border: 1px solid rgba(0,0,0,0.06); border-radius: 24px; overflow: hidden; box-shadow: 0 20px 50px -10px rgba(0,0,0,0.1); transition: transform 0.3s ease; position: relative;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
           <!-- Top Media Area -->
           <div style="background-color: #fffdec; padding: 40px; display: flex; align-items: center; justify-content: center; height: 240px; border-bottom: 1px solid #fef9e0;">
-             <img src="./tableauconnection.png" alt="Tableau" style="max-width: 100%; max-height: 100%; box-shadow: 0 10px 30px rgba(230, 180, 0, 0.25); border-radius: 12px; transform: scale(1.05);">
+             <img src="./tableauconnection.png" alt="Tableau" style="max-width: 100%; max-height: 100%; box-shadow: 0 15px 35px rgba(230, 180, 0, 0.2); border-radius: 12px; transform: scale(1.05);">
           </div>
           
           <!-- Content Area -->
-          <div style="padding: 40px 35px;">
-            <div style="margin-bottom: 20px;">
-               <span style="background: rgba(255, 215, 0, 0.15); color: #b08d00; padding: 8px 16px; border-radius: 100px; font-weight: 800; font-size: 22px; letter-spacing: 1.5px; text-transform: uppercase;">TABLEAU</span>
-               <img src="./hd.png" alt="Tableau Logo" style="height: 65px; opacity: 0.9;">
-
+          <div style="padding: 35px;">
+            <!-- Badge & Logo Row -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
+               <span style="background: rgba(255, 215, 0, 0.15); color: #b08d00; padding: 8px 16px; border-radius: 100px; font-weight: 800; font-size: 11px; letter-spacing: 1px; text-transform: uppercase;">TABLEAU</span>
+               <img src="./hd.png" alt="Tableau Logo" style="height: 28px; width: auto; opacity: 1;">
             </div>
+
             <h3 style="margin: 0 0 16px 0; font-size: 2rem; font-weight: 800; color: #222; letter-spacing: -0.5px; line-height: 1.2;">Deep Dive Analytics</h3>
-            <p style="color: #666; font-size: 1.125rem; line-height: 1.7; margin-bottom: 30px;">
+            <p style="color: #666; font-size: 1.1rem; line-height: 1.7; margin-bottom: 30px;">
               Connect a powerful analytics engine to your BigQuery data for unparalleled exploration.
             </p>
 
             <!-- Bottom Highlight Box -->
-            <div style="background: #fafbfc; border: 1px solid #eef0f2; padding: 25px; border-radius: 16px; border-left: 4px solid #ffd700;">
-              <h5 style="color: #b08d00; font-weight: 800; font-size: 1rem; margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 0.5px;">Optimized for Exploration</h5>
-              <p style="font-size: 1rem; color: #555; margin: 0 0 16px 0; line-height: 1.5;">Leverage complex joins and Live Connections.</p>
-              <a href="#" style="color: #b08d00; font-weight: 800; text-decoration: none; font-size: 1rem; border-bottom: 2px solid rgba(255, 215, 0, 0.4);">Read Guide &rarr;</a>
+            <div style="background: #fafbfc; border: 1px solid #eef0f2; padding: 25px; border-radius: 16px; border-left: 5px solid #ffd700;">
+              <h5 style="color: #b08d00; font-weight: 800; font-size: 0.95rem; margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 0.5px;">Optimized for Exploration</h5>
+              <p style="font-size: 0.95rem; color: #555; margin: 0 0 16px 0; line-height: 1.5;">Leverage complex joins and Live Connections.</p>
+              <a href="#" style="color: #b08d00; font-weight: 800; text-decoration: none; font-size: 0.95rem; border-bottom: 2px solid rgba(255, 215, 0, 0.4);">Read Guide &rarr;</a>
             </div>
           </div>
         </div>
