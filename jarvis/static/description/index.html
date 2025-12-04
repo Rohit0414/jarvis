@@ -310,65 +310,100 @@
 
 
   <!-- KEY FEATURES SECTION -->
-  <section class="parallax-bg" style="padding:100px 0; background-color:#ffffff; border-top:1px solid #e5e8ed;">
-    <div class="container" style="padding:0 15px;">
-      <div class="row">
-        <div class="col-12 text-center">
-          <span style="display:inline-block; font-size:14px; font-weight:800; color:#40a0ff; background-color:#40a0ff26; border:1px solid #40a0ff66; border-radius:999px; padding:8px 16px; margin-bottom:10px;">POWERFUL FEATURES</span>
-          <h2 style="font-size:42px; font-weight:900; margin:0 0 14px 0; color:#333333;">Unmatched Control Over Your Data Pipeline</h2>
-          <p style="font-size:18px; color:#555555; max-width:860px; margin:0 auto 40px;">Go beyond simple data dumps. Our connector gives you the tools to build an efficient, cost-effective, and automated data sync solution, tailored precisely to your business needs.</p>
+  <section style="padding: 100px 0; background-color: #ffffff; border-top: 1px solid #e5e8ed; overflow: hidden;">
+    <div class="container" style="max-width: 1200px; padding: 0 20px;">
+      
+      <!-- HEADER -->
+      <div class="row justify-content-center">
+        <div class="col-12 text-center" style="margin-bottom: 80px;">
+          <span style="display:inline-block; font-size: 13px; font-weight: 800; color: #40a0ff; background-color: rgba(64, 160, 255, 0.1); border: 1px solid rgba(64, 160, 255, 0.3); border-radius: 50px; padding: 8px 16px; margin-bottom: 20px; letter-spacing: 0.5px;">POWERFUL FEATURES</span>
+          <h2 style="font-size: 42px; font-weight: 900; margin: 0 0 16px 0; color: #333333; letter-spacing: -1px;">Unmatched Control Over Your Data</h2>
+          <p style="font-size: 18px; color: #555555; max-width: 700px; margin: 0 auto; line-height: 1.6;">
+            Go beyond simple data dumps. Build an efficient, automated pipeline tailored precisely to your business needs.
+          </p>
         </div>
       </div>
 
-      <div class="row g-5" style="margin-top:8px;">
-        <div class="col-md-6">
-          <div class="feature-box" style="border-radius: 20px; padding: 25px; box-shadow: 0 20px 60px -15px rgba(0,0,0,0.08);">
-            <img src="./do.png" alt="Detailed Odoo BigQuery Connector Screenshot 1" style="width: 100%; display: block; border-radius: 16px; margin-bottom: 15px; border: 1px solid #e5e8ed;">
-            <p style="text-align: center; color: #555555; font-size: 1.1rem; margin-bottom: 0; font-weight: 600;">Fig 1: Effortless Export Profile Configuration</p>
+      <!-- FEATURE 1: PRECISE FILTERING (Image Right) -->
+      <div class="row align-items-center" style="margin-bottom: 100px;">
+        <!-- Text Column -->
+        <div class="col-lg-5 order-2 order-lg-1">
+          <div style="padding-right: 20px;">
+            <div style="font-size: 3rem; margin-bottom: 20px;">&#128279;</div>
+            <h3 style="font-size: 28px; font-weight: 800; color: #333; margin-bottom: 15px;">Precise Record Filtering</h3>
+            <p style="font-size: 17px; color: #666; line-height: 1.7; margin-bottom: 0;">
+              Gain granular control by using standard Odoo domain filters. Sync only <strong>active customers</strong>, completed orders, or specific product lines. Keep your BigQuery dataset lean, relevant, and optimized for analysis.
+            </p>
           </div>
         </div>
-         <div class="col-md-6">
-          <div class="feature-box" style="border-radius: 20px; padding: 25px; box-shadow: 0 20px 60px -15px rgba(0,0,0,0.08);">
-            <img src="./in.png" alt="Detailed Odoo BigQuery Connector Screenshot 2" style="width: 100%; display: block; border-radius: 16px; margin-bottom: 15px; border: 1px solid #e5e8ed;">
-            <p style="text-align: center; color: #555555; font-size: 1.1rem; margin-bottom: 0; font-weight: 600;">Fig 2: Real-time Sync Status & Detailed Logging</p>
+        <!-- Image Column -->
+        <div class="col-lg-7 order-1 order-lg-2 mb-4 mb-lg-0">
+          <div style="box-shadow: 0 20px 60px -10px rgba(0,0,0,0.12); border-radius: 16px; border: 1px solid #e5e8ed; overflow: hidden;">
+            <img src="./do.png" alt="Odoo Domain Filtering Screenshot" style="width: 100%; display: block;">
+            <div style="background: #f9fafb; padding: 10px; text-align: center; border-top: 1px solid #e5e8ed;">
+                <small style="color: #888; font-weight: 600;">Fig 1: Domain-based Record Filtering</small>
+            </div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="feature-box" style="border-radius: 20px; padding: 25px; box-shadow: 0 20px 60px -15px rgba(0,0,0,0.08);">
-            <img src="./co.png" alt="Detailed Odoo BigQuery Connector Screenshot 3 - Field Mapping" style="width: 100%; display: block; border-radius: 16px; margin-bottom: 15px; border: 1px solid #e5e8ed;">
-            <p style="text-align: center; color: #555555; font-size: 1.1rem; margin-bottom: 0; font-weight: 600;">Fig 3: Advanced Field Mapping Interface</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-4">
-          <div class="d-flex flex-column feature-box" style="border-radius:20px; padding:35px; height:100%;">
-            <div style="font-size:3rem; color:#40a0ff; margin-bottom:15px; text-shadow: 0 0 10px rgba(64, 160, 255, 0.2);">&#128279;</div>
-            <h4 style="margin:0 0 10px; color:#333333; font-size:22px; font-weight:900;">Precise Record Filtering</h4>
-            <p style="margin:0; color:#555555; font-size: 16px;">Gain granular control by using standard Odoo domain filters to select exactly which records to export. Sync only active customers, completed orders, posted invoices, or specific product lines, keeping your BigQuery dataset lean, relevant, and optimized for analysis.</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-4">
-          <div class="d-flex flex-column feature-box" style="border-radius:20px; padding:35px; height:100%;">
-            <div style="font-size:3rem; color:#40a0ff; margin-bottom:15px; text-shadow: 0 0 10px rgba(64, 160, 255, 0.2);">&#128200;</div>
-            <h4 style="margin:0 0 10px; color:#333333; font-size:22px; font-weight:900;">Targeted Column Selection</h4>
-            <p style="margin:0; color:#555555; font-size: 16px;">Why export everything? Choose exactly which fields (columns) to send to BigQuery. This targeted approach accelerates export times, simplifies your BigQuery data models, and directly reduces your storage and processing costs, ensuring data privacy by design.</p>
-          </div>
-        </div>
-        <div class="col-12 col-md-4">
-          <div class="d-flex flex-column feature-box" style="border-radius:20px; padding:35px; height:100%;">
-            <div style="font-size:3rem; color:#40a0ff; margin-bottom:15px; text-shadow: 0 0 10px rgba(64, 160, 255, 0.2);">&#9203;</div>
-            <h4 style="margin:0 0 10px; color:#333333; font-size:22px; font-weight:900;">Incremental & Automated Syncs</h4>
-            <p style="margin:0; color:#555555; font-size: 16px;">Set it and forget it! Configure a schedule and sync only new or changed records since the last run. This intelligent incremental loading keeps your BI dashboards updated automatically in near real-time without costly full-table reloads, saving time, bandwidth, and significant processing costs.</p>
-          </div>
-        </div>
-        
       </div>
-       <div class="row">
+
+      <!-- FEATURE 2: COLUMN SELECTION (Image Left) -->
+      <div class="row align-items-center" style="margin-bottom: 100px;">
+        <!-- Image Column -->
+        <div class="col-lg-7 mb-4 mb-lg-0">
+          <div style="box-shadow: 0 20px 60px -10px rgba(0,0,0,0.12); border-radius: 16px; border: 1px solid #e5e8ed; overflow: hidden;">
+            <img src="./co.png" alt="Column Selection Screenshot" style="width: 100%; display: block;">
+            <div style="background: #f9fafb; padding: 10px; text-align: center; border-top: 1px solid #e5e8ed;">
+                <small style="color: #888; font-weight: 600;">Fig 2: Targeted Field Mapping</small>
+            </div>
+          </div>
+        </div>
+        <!-- Text Column -->
+        <div class="col-lg-5">
+          <div style="padding-left: 20px;">
+            <div style="font-size: 3rem; margin-bottom: 20px;">&#128200;</div>
+            <h3 style="font-size: 28px; font-weight: 800; color: #333; margin-bottom: 15px;">Targeted Column Selection</h3>
+            <p style="font-size: 17px; color: #666; line-height: 1.7; margin-bottom: 0;">
+              Why export everything? Choose exactly which fields to send to BigQuery. This accelerates export times, simplifies your data models, and reduces cloud storage costs while ensuring <strong>data privacy by design</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FEATURE 3: INCREMENTAL EXPORT (Image Right) -->
+      <div class="row align-items-center" style="margin-bottom: 80px;">
+        <!-- Text Column -->
+        <div class="col-lg-5 order-2 order-lg-1">
+          <div style="padding-right: 20px;">
+            <div style="font-size: 3rem; margin-bottom: 20px;">&#9203;</div>
+            <h3 style="font-size: 28px; font-weight: 800; color: #333; margin-bottom: 15px;">Incremental & Automated</h3>
+            <p style="font-size: 17px; color: #666; line-height: 1.7; margin-bottom: 0;">
+              Set it and forget it! Sync only <strong>new or changed records</strong> since the last run. This intelligent incremental loading keeps your BI dashboards updated in near real-time without costly full-table reloads.
+            </p>
+          </div>
+        </div>
+        <!-- Image Column -->
+        <div class="col-lg-7 order-1 order-lg-2 mb-4 mb-lg-0">
+          <div style="box-shadow: 0 20px 60px -10px rgba(0,0,0,0.12); border-radius: 16px; border: 1px solid #e5e8ed; overflow: hidden;">
+            <img src="./in.png" alt="Incremental Export Log Screenshot" style="width: 100%; display: block;">
+            <div style="background: #f9fafb; padding: 10px; text-align: center; border-top: 1px solid #e5e8ed;">
+                <small style="color: #888; font-weight: 600;">Fig 3: Incremental Sync Logs</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FULL WIDTH BOTTOM IMAGE -->
+      <div class="row mt-5">
         <div class="col-12">
-          <img src="./fullbig.png" alt="Security configuration in Odoo" style="width: 100%; border-radius: 20px; display: block; box-shadow: 0 50px 120px -30px rgba(0,0,0,0.6), 0 0 0 2px rgba(64, 160, 255, 0.3);">
+          <div style="position: relative; border-radius: 24px; overflow: hidden; box-shadow: 0 50px 100px -20px rgba(64, 160, 255, 0.25); border: 1px solid #e5e8ed;">
+             <img src="./fullbig.png" alt="Full Configuration Overview" style="width: 100%; display: block;">
+          </div>
         </div>
       </div>
+
     </div>
-  </section>
+</section>
 
   <!-- SCHEMA HANDLING SECTION (Maximized Image and Restructured Content) -->
 <section class="parallax-bg" style="padding: 120px 0; background-color:#f7f9fc; border-top:1px solid #e5e8ed;">
