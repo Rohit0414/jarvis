@@ -205,130 +205,101 @@
 
  
 <!-- =======================
-  NEW BI INTEGRATIONS SHOWCASE - 3-Column Grid Layout
+  ROBUST FLEXBOX LAYOUT - FIXED WIDTH ISSUES
   ======================== -->
-<section style="padding: 80px 24px; background-color: #f7f9fc; border-top: 1px solid #e5e8ed; border-bottom: 1px solid #e5e8ed;">
-    <div class="container" style="max-width: 1400px; margin: 0 auto;">
+<section style="padding: 60px 20px; background-color: #f9fafb; font-family: 'Roboto', sans-serif;">
+    <div style="max-width: 1200px; margin: 0 auto;">
 
-      <!-- Section Intro -->
-      <div style="text-align: center; max-width: 750px; margin: 0 auto 60px auto;">
-        <h2 style="font-size: 2.5rem; font-weight: 900; letter-spacing: -1px; margin-bottom: 16px; color: #333333;">
+      <!-- Header Section -->
+      <div style="text-align: center; margin-bottom: 50px;">
+        <h2 style="font-size: 36px; font-weight: 900; color: #212529; margin-bottom: 20px;">
           Activate Your Analytics Stack
         </h2>
-        <p style="font-size: 1.15rem; color: #555555; line-height: 1.6;">
-          Your BigQuery data is the fuel. These are the engines. Connect your clean Odoo data to the platform of your choice and start building powerful dashboards.
+        <p style="font-size: 18px; color: #6c757d; max-width: 800px; margin: 0 auto; line-height: 1.6;">
+          Your BigQuery data is the fuel. These are the engines. Connect your clean Odoo data to the platform of your choice.
         </p>
       </div>
 
-      <!-- 3-Column Grid Row -->
-      <div class="row">
-        
-        <!-- COLUMN 1: POWER BI -->
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div style="background: #ffffff; border-radius: 16px; overflow: hidden; height: 100%; border: 1px solid #e5e8ed; box-shadow: 0 4px 12px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
-            
-            <!-- Media Section (Top) -->
-            <div style="background-color: rgba(64, 160, 255, 0.1); padding: 20px; text-align: center; border-bottom: 1px solid #f0f0f0;">
-               <video autoplay loop muted playsinline preload="auto" style="width: 100%; max-height: 200px; object-fit: contain; display: block; border-radius: 8px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
+      <!-- Flex Container (Replaces Bootstrap Row) -->
+      <!-- 'flex-wrap: wrap' prevents the squashing issue by letting items drop to a new line if needed -->
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+
+        <!-- CARD 1: POWER BI -->
+        <div style="flex: 1 1 300px; max-width: 380px; background: #ffffff; border: 1px solid #e9ecef; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+          <!-- Top Media Area -->
+          <div style="background-color: #f0f7ff; padding: 30px; display: flex; align-items: center; justify-content: center; height: 220px;">
+             <video autoplay loop muted playsinline preload="auto" style="max-width: 100%; max-height: 100%; box-shadow: 0 4px 15px rgba(64, 160, 255, 0.2); border-radius: 8px;">
                 <source src="./powerbiconnection.webm" type="video/webm">
               </video>
+          </div>
+          
+          <!-- Content Area -->
+          <div style="padding: 30px;">
+            <div style="margin-bottom: 15px;">
+               <span style="background: rgba(64, 160, 255, 0.1); color: #40a0ff; padding: 5px 12px; border-radius: 20px; font-weight: 700; font-size: 12px; letter-spacing: 0.5px;">POWER BI</span>
             </div>
+            <h3 style="margin: 0 0 15px 0; font-size: 24px; font-weight: 800; color: #343a40;">Production-Ready Models</h3>
+            <p style="color: #6c757d; line-height: 1.6; margin-bottom: 25px;">
+              The definitive path for building scalable, high-performance BI on an Odoo + BigQuery stack.
+            </p>
 
-            <!-- Content Section (Bottom) -->
-            <div style="padding: 30px; flex-grow: 1; display: flex; flex-direction: column;">
-              
-              <!-- Badge -->
-              <div style="margin-bottom: 15px;">
-                <span style="display:inline-block; padding: 6px 12px; border-radius: 50px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(64, 160, 255, 0.3); color: #40a0ff; background-color: rgba(64, 160, 255, 0.1);">
-                  &#128640; POWER BI
-                </span>
-              </div>
-
-              <h3 style="font-size: 1.5rem; font-weight: 800; color: #333; margin-bottom: 12px;">Production-Ready Models</h3>
-              <p style="color: #666; font-size: 1rem; line-height: 1.6; margin-bottom: 24px; flex-grow: 1;">
-                The definitive path for building scalable, high-performance BI. Leverage the native connector and <strong>Incremental Refresh</strong>.
-              </p>
-
-              <!-- Highlight Box -->
-              <div style="background-color: #f0f7ff; border-radius: 12px; padding: 20px; border: 1px solid rgba(64, 160, 255, 0.2);">
-                <div style="font-weight: 700; color: #40a0ff; margin-bottom: 8px; font-size: 0.95rem;">Optimized for Scale</div>
-                <p style="font-size: 0.9rem; color: #444; margin-bottom: 15px; line-height: 1.5;">
-                  Centralize business logic using DAX Measures for a single source of truth.
-                </p>
-                <a href="#" style="color: #40a0ff; font-weight: 700; text-decoration: none; font-size: 0.95rem;">Read Guide &rarr;</a>
-              </div>
+            <!-- Bottom Highlight Box -->
+            <div style="background: #f8f9fa; border: 1px solid #e9ecef; padding: 20px; border-radius: 12px;">
+              <h5 style="color: #40a0ff; font-weight: 700; font-size: 16px; margin: 0 0 8px 0;">Optimized for Scale</h5>
+              <p style="font-size: 14px; color: #495057; margin: 0 0 15px 0;">Leverage Incremental Refresh and DAX Measures.</p>
+              <a href="#" style="color: #40a0ff; font-weight: 700; text-decoration: none; font-size: 14px;">Read Guide &rarr;</a>
             </div>
           </div>
         </div>
 
-        <!-- COLUMN 2: LOOKER STUDIO -->
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div style="background: #ffffff; border-radius: 16px; overflow: hidden; height: 100%; border: 1px solid #e5e8ed; box-shadow: 0 4px 12px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
-            
-            <!-- Media Section (Top) -->
-            <div style="background-color: rgba(120, 220, 200, 0.1); padding: 20px; text-align: center; border-bottom: 1px solid #f0f0f0;">
-              <img src="./lookerconnection.png" alt="Looker Studio" style="width: 100%; max-height: 200px; object-fit: contain; display: block; border-radius: 8px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
+        <!-- CARD 2: LOOKER STUDIO -->
+        <div style="flex: 1 1 300px; max-width: 380px; background: #ffffff; border: 1px solid #e9ecef; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+          <!-- Top Media Area -->
+          <div style="background-color: #f0fdf9; padding: 30px; display: flex; align-items: center; justify-content: center; height: 220px;">
+             <img src="./lookerconnection.png" alt="Looker Studio" style="max-width: 100%; max-height: 100%; box-shadow: 0 4px 15px rgba(120, 220, 200, 0.2); border-radius: 8px;">
+          </div>
+          
+          <!-- Content Area -->
+          <div style="padding: 30px;">
+            <div style="margin-bottom: 15px;">
+               <span style="background: rgba(120, 220, 200, 0.1); color: #20c997; padding: 5px 12px; border-radius: 20px; font-weight: 700; font-size: 12px; letter-spacing: 0.5px;">LOOKER STUDIO</span>
             </div>
+            <h3 style="margin: 0 0 15px 0; font-size: 24px; font-weight: 800; color: #343a40;">High Velocity Insights</h3>
+            <p style="color: #6c757d; line-height: 1.6; margin-bottom: 25px;">
+              Create beautiful, shareable dashboards that are fast, intuitive, and accessible to your entire team.
+            </p>
 
-            <!-- Content Section (Bottom) -->
-            <div style="padding: 30px; flex-grow: 1; display: flex; flex-direction: column;">
-              
-              <!-- Badge -->
-              <div style="margin-bottom: 15px;">
-                <span style="display:inline-block; padding: 6px 12px; border-radius: 50px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(120, 220, 200, 0.3); color: #2da88e; background-color: rgba(120, 220, 200, 0.1);">
-                  &#127758; LOOKER STUDIO
-                </span>
-              </div>
-
-              <h3 style="font-size: 1.5rem; font-weight: 800; color: #333; margin-bottom: 12px;">High Velocity Insights</h3>
-              <p style="color: #666; font-size: 1rem; line-height: 1.6; margin-bottom: 24px; flex-grow: 1;">
-                Create beautiful, shareable dashboards that are fast and intuitive. Foster a data-driven culture instantly.
-              </p>
-
-              <!-- Highlight Box -->
-              <div style="background-color: #f0fdf9; border-radius: 12px; padding: 20px; border: 1px solid rgba(120, 220, 200, 0.2);">
-                <div style="font-weight: 700; color: #2da88e; margin-bottom: 8px; font-size: 0.95rem;">Optimized for Speed</div>
-                <p style="font-size: 0.9rem; color: #444; margin-bottom: 15px; line-height: 1.5;">
-                  Utilize <strong>Data Extracts</strong> and Views to ensure near-instant load times.
-                </p>
-                <a href="#" style="color: #2da88e; font-weight: 700; text-decoration: none; font-size: 0.95rem;">Read Guide &rarr;</a>
-              </div>
+            <!-- Bottom Highlight Box -->
+            <div style="background: #f8f9fa; border: 1px solid #e9ecef; padding: 20px; border-radius: 12px;">
+              <h5 style="color: #20c997; font-weight: 700; font-size: 16px; margin: 0 0 8px 0;">Optimized for Speed</h5>
+              <p style="font-size: 14px; color: #495057; margin: 0 0 15px 0;">Utilize Data Extracts for instant load times.</p>
+              <a href="#" style="color: #20c997; font-weight: 700; text-decoration: none; font-size: 14px;">Read Guide &rarr;</a>
             </div>
           </div>
         </div>
 
-        <!-- COLUMN 3: TABLEAU -->
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div style="background: #ffffff; border-radius: 16px; overflow: hidden; height: 100%; border: 1px solid #e5e8ed; box-shadow: 0 4px 12px rgba(0,0,0,0.05); display: flex; flex-direction: column;">
-            
-            <!-- Media Section (Top) -->
-            <div style="background-color: rgba(255, 223, 0, 0.1); padding: 20px; text-align: center; border-bottom: 1px solid #f0f0f0;">
-              <img src="./tableauconnection.png" alt="Tableau" style="width: 100%; max-height: 200px; object-fit: contain; display: block; border-radius: 8px; box-shadow: 0 8px 16px rgba(0,0,0,0.1);">
+        <!-- CARD 3: TABLEAU -->
+        <div style="flex: 1 1 300px; max-width: 380px; background: #ffffff; border: 1px solid #e9ecef; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+          <!-- Top Media Area -->
+          <div style="background-color: #fffdec; padding: 30px; display: flex; align-items: center; justify-content: center; height: 220px;">
+             <img src="./tableauconnection.png" alt="Tableau" style="max-width: 100%; max-height: 100%; box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2); border-radius: 8px;">
+          </div>
+          
+          <!-- Content Area -->
+          <div style="padding: 30px;">
+            <div style="margin-bottom: 15px;">
+               <span style="background: rgba(255, 215, 0, 0.1); color: #eebb00; padding: 5px 12px; border-radius: 20px; font-weight: 700; font-size: 12px; letter-spacing: 0.5px;">TABLEAU</span>
             </div>
+            <h3 style="margin: 0 0 15px 0; font-size: 24px; font-weight: 800; color: #343a40;">Deep Dive Analytics</h3>
+            <p style="color: #6c757d; line-height: 1.6; margin-bottom: 25px;">
+              Connect a powerful analytics engine to your BigQuery data for unparalleled exploration.
+            </p>
 
-            <!-- Content Section (Bottom) -->
-            <div style="padding: 30px; flex-grow: 1; display: flex; flex-direction: column;">
-              
-              <!-- Badge -->
-              <div style="margin-bottom: 15px;">
-                <span style="display:inline-block; padding: 6px 12px; border-radius: 50px; font-size: 0.85rem; font-weight: 700; border: 1px solid rgba(230, 200, 0, 0.3); color: #dcb000; background-color: rgba(255, 223, 0, 0.1);">
-                  &#127912; TABLEAU
-                </span>
-              </div>
-
-              <h3 style="font-size: 1.5rem; font-weight: 800; color: #333; margin-bottom: 12px;">Deep Dive Analytics</h3>
-              <p style="color: #666; font-size: 1rem; line-height: 1.6; margin-bottom: 24px; flex-grow: 1;">
-                Connect a powerful analytics engine to your Odoo data. Empower users to ask and answer their own questions.
-              </p>
-
-              <!-- Highlight Box -->
-              <div style="background-color: #fffdec; border-radius: 12px; padding: 20px; border: 1px solid rgba(230, 200, 0, 0.2);">
-                <div style="font-weight: 700; color: #dcb000; margin-bottom: 8px; font-size: 0.95rem;">Optimized for Exploration</div>
-                <p style="font-size: 0.9rem; color: #444; margin-bottom: 15px; line-height: 1.5;">
-                  Choose <strong>Live Connections</strong> or Extracts and leverage complex joins.
-                </p>
-                <a href="#" style="color: #dcb000; font-weight: 700; text-decoration: none; font-size: 0.95rem;">Read Guide &rarr;</a>
-              </div>
+            <!-- Bottom Highlight Box -->
+            <div style="background: #f8f9fa; border: 1px solid #e9ecef; padding: 20px; border-radius: 12px;">
+              <h5 style="color: #eebb00; font-weight: 700; font-size: 16px; margin: 0 0 8px 0;">Optimized for Exploration</h5>
+              <p style="font-size: 14px; color: #495057; margin: 0 0 15px 0;">Leverage complex joins and Live Connections.</p>
+              <a href="#" style="color: #eebb00; font-weight: 700; text-decoration: none; font-size: 14px;">Read Guide &rarr;</a>
             </div>
           </div>
         </div>
@@ -336,8 +307,6 @@
       </div>
     </div>
 </section>
-
-
 
 
   <!-- KEY FEATURES SECTION -->
