@@ -7,392 +7,492 @@
   line-height: 1.6;
 ">
 
-<div class="container my-5" style="max-width:1200px;">
+<div class="container my-5" style="max-width: 1140px;">
 
   <!-- HERO SECTION - SOLID DEEP NAVY -->
   <header class="p-5 mb-5" style="
-      background-color: #1e293b;
+      background-color: #0f172a;
       color: #ffffff;
-      border-radius: 24px;
+      border-radius: 28px;
       box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
      ">
-    <div class="row align-items-center g-5">
-      <div class="col-lg-8">
-        <div class="d-flex align-items-center gap-2 mb-3">
-            <span class="badge rounded-pill px-3 py-2" style="background-color: #3b82f6; font-weight: 600;">Odoo 14 &#183; 15 &#183; 16 &#183; 17 &#183; 18 &#183; 19</span>
-            <span class="badge rounded-pill px-3 py-2" style="background-color: #10b981; font-weight: 600;">Enterprise Ready</span>
-        </div>
-        
+    <div class="row align-items-center g-4">
+      <div class="col-md-8">
         <h1 class="mb-3" style="font-weight: 800; letter-spacing: -1.5px; font-size: 3.5rem;">
           Snowflake Connector Pro
         </h1>
 
-        <p class="mb-4" style="font-size: 1.2rem; opacity: 0.9; max-width: 800px;">
-          Synchronize your Odoo business data with Snowflake&#8217;s powerful data warehouse. 
-          Think like this: <b>Odoo is your shop/office system</b>, and <b>Snowflake is a big &#8220;data notebook&#8221;</b> where you can perform advanced reports and charts.
+        <p class="mb-3" style="font-size: 1.1rem; opacity: 0.95; max-width: 760px;">
+          This module helps you send your Odoo data to Snowflake.
+          Think like this: Odoo is your shop/office system, and Snowflake is a big &#8220;data notebook&#8221; where you can do
+          reports and charts.
         </p>
 
-        <p class="mb-5 opacity-75" style="font-size: 1rem; max-width: 800px;">
-          Choose exactly what to sync: <b>models</b> (like Sales Orders), <b>specific columns</b> (like customer name), and automate the entire process with incremental scheduling.
+        <p class="mb-4" style="font-size: 1.1rem; opacity: 0.95; max-width: 760px;">
+          You can choose what you want to send:
+          <b>which model</b> (like Sales Orders), <b>which columns</b> (like customer name), and then click export.
+          You can also turn on auto export so it keeps sending new changes again and again.
         </p>
 
-        <div class="p-4 rounded-4" style="background-color: rgba(255, 255, 255, 0.05); border-left: 5px solid #3b82f6;">
-          <div style="font-weight: 700; color: #60a5fa;" class="mb-2 text-uppercase small">The Workflow Example:</div>
-          <div style="opacity: 0.9; font-size: 1.1rem;">
-            Export <b>Sales Orders</b> &#8594; Open <b>Snowflake</b> &#8594; Instantly build <b>&#8220;Sales this month&#8221;</b> dashboards.
+        <div class="d-flex flex-wrap gap-2 mb-4">
+          <span class="badge rounded-pill px-3 py-2" style="background-color: #10b981;">Sync New Changes</span>
+          <span class="badge rounded-pill px-3 py-2" style="background-color: #3b82f6;">Auto Create Tables</span>
+          <span class="badge rounded-pill px-3 py-2" style="background-color: #334155;">Update + Insert</span>
+          <span class="badge rounded-pill px-3 py-2" style="background-color: #64748b;">Auto Schedule</span>
+          <span class="badge rounded-pill px-3 py-2" style="background-color: #f8fafc; color: #0f172a;">Odoo 16 &#183; 17 &#183; 18</span>
+        </div>
+
+        <div class="mt-4 d-flex flex-wrap gap-2">
+          <span class="px-3 py-2 rounded-3" style="background-color: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+            &#9989; Easy setup in Settings
+          </span>
+          <span class="px-3 py-2 rounded-3" style="background-color: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+            &#9989; Works with standard + custom models
+          </span>
+          <span class="px-3 py-2 rounded-3" style="background-color: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+            &#9989; Great for dashboards &#38; reports
+          </span>
+        </div>
+
+        <div class="mt-4 p-4 rounded-4" style="background-color: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+          <div style="font-weight: 700; color: #38bdf8; margin-bottom: 5px;">Super simple example:</div>
+          <div style="opacity: 0.95; line-height: 1.7;">
+            You export <b>Sales Orders</b> from Odoo &#8594; then you open Snowflake &#8594; and you can see the table &#8594;
+            and build a chart like &#8220;Sales this month&#8221;.
           </div>
         </div>
       </div>
 
-      <div class="col-lg-4 d-none d-lg-block text-center">
-        <div style="
-          font-size: 100px;
-          background-color: rgba(255, 255, 255, 0.03);
-          border: 1px solid rgba(255, 255, 255, 0.1);
-          border-radius: 50%;
-          width: 200px;
-          height: 200px;
-          line-height: 200px;
-          margin: 0 auto;
-        ">
+      <div class="col-md-4 text-center d-none d-md-block">
+        <div style="font-size: 84px; background-color: rgba(255,255,255,0.08); border-radius: 24px; padding: 30px; display: inline-block; border: 1px solid rgba(255,255,255,0.15);">
           &#10052;
         </div>
-        <div class="mt-4 fw-bold fs-4">Data Analytics Bridge</div>
-        <div class="small opacity-50 text-uppercase" style="letter-spacing: 2px;">Odoo &#10549; Snowflake</div>
+        <div class="mt-3 small" style="opacity: 0.9; font-weight: 600;">
+          Export Odoo data <br/> to Snowflake
+        </div>
+        <div class="mt-3 small" style="opacity: 0.92; background-color: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); border-radius: 14px; padding: 15px;">
+          <b>Good for:</b><br/>
+          Reports, dashboards, BI tools, and analytics.
+        </div>
       </div>
     </div>
   </header>
 
-  <!-- NAVIGATION -->
-  <nav class="mb-5 p-3 rounded-pill bg-white shadow-sm border d-flex justify-content-center flex-wrap gap-2 sticky-top" style="top: 20px; z-index: 1000; background-color: #1e293b;">
-      <a href="#setup" class="btn btn-sm rounded-pill px-4 fw-bold btn-outline-primary border-0">Setup Guide</a>
-      <a href="#queries" class="btn btn-sm rounded-pill px-4 fw-bold btn-outline-primary border-0">Create Export</a>
-      <a href="#domain" class="btn btn-sm rounded-pill px-4 fw-bold btn-outline-primary border-0">Domain Filters</a>
-      <a href="#incremental" class="btn btn-sm rounded-pill px-4 fw-bold btn-outline-primary border-0">Auto Sync</a>
-      <a href="#snowflake" class="btn btn-sm rounded-pill px-4 fw-bold btn-outline-primary border-0">Verify Data</a>
-      <a href="#troubleshoot" class="btn btn-sm rounded-pill px-4 fw-bold btn-outline-danger border-0">Fix Problems</a>
+  <!-- QUICK NAV -->
+  <nav class="mb-5 p-3 rounded-pill bg-white shadow-sm border sticky-top" style="top: 20px; z-index: 1000;">
+    <div class="d-flex flex-wrap align-items-center justify-content-center gap-2">
+      <span class="fw-bold me-2" style="font-size: 14px; color: #64748b;">Go to:</span>
+      <a href="#setup" style="background-color: #f1f5f9; color: #0f172a; text-decoration: none; padding: 6px 16px; border-radius: 20px; font-weight: 600; font-size: 14px;">Setup</a>
+      <a href="#queries" style="background-color: #f1f5f9; color: #0f172a; text-decoration: none; padding: 6px 16px; border-radius: 20px; font-weight: 600; font-size: 14px;">Create Export</a>
+      <a href="#domain" style="background-color: #f1f5f9; color: #0f172a; text-decoration: none; padding: 6px 16px; border-radius: 20px; font-weight: 600; font-size: 14px;">Filters</a>
+      <a href="#incremental" style="background-color: #f1f5f9; color: #0f172a; text-decoration: none; padding: 6px 16px; border-radius: 20px; font-weight: 600; font-size: 14px;">Auto Sync</a>
+      <a href="#snowflake" style="background-color: #f1f5f9; color: #0f172a; text-decoration: none; padding: 6px 16px; border-radius: 20px; font-weight: 600; font-size: 14px;">Verify Data</a>
+      <a href="#troubleshoot" style="background-color: #fef2f2; color: #dc2626; text-decoration: none; padding: 6px 16px; border-radius: 20px; font-weight: 600; font-size: 14px;">Fix Problems</a>
+    </div>
+    <div class="text-center mt-2 small text-muted">
+      Tip: If you are new, follow: <b>Setup &#8594; Create Export &#8594; Run Export &#8594; Check in Snowflake</b>.
+    </div>
   </nav>
 
-  <!-- CORE FEATURES -->
-  <section class="mb-5 py-4">
+  <!-- WHAT IT DOES -->
+  <section class="mb-5">
     <div class="text-center mb-5">
-      <h2 style="font-weight: 800; letter-spacing: -1px;">Module Capabilities</h2>
-      <p class="text-muted">A robust engine designed for high-performance data transfer.</p>
+      <h2 style="font-weight: 800; font-size: 2rem;">What does this module do?</h2>
+      <p class="text-muted" style="max-width: 760px; margin: 0 auto; font-size: 1.1rem;">
+        It connects Odoo to Snowflake. After that, your Odoo data can live inside Snowflake too. Then you can make reports, dashboards, and charts.
+      </p>
     </div>
 
     <div class="row g-4">
-      <div class="col-md-6 col-lg-3">
-        <div class="h-100 p-4 rounded-4 bg-white border shadow-sm text-center">
-          <div class="display-5 mb-3 text-primary">&#128640;</div>
-          <h5 class="fw-bold">Export Any Model</h5>
-          <p class="small text-muted mb-0">Sales, Invoices, Customers, Products, and even your own Custom Models.</p>
+      <div class="col-md-6">
+        <div class="h-100 p-4 rounded-4 bg-white border shadow-sm">
+          <h5 class="fw-bold mb-3" style="color: #3b82f6;">&#128640; Export Any Model</h5>
+          <p class="mb-2">You can export many things, like:</p>
+          <ul class="mb-0 text-muted">
+            <li>Sales Orders, Invoices, Customers, Products, Inventory, and custom models.</li>
+          </ul>
         </div>
       </div>
-      <div class="col-md-6 col-lg-3">
-        <div class="h-100 p-4 rounded-4 bg-white border shadow-sm text-center">
-          <div class="display-5 mb-3 text-success">&#128256;</div>
-          <h5 class="fw-bold">Delta Updates</h5>
-          <p class="small text-muted mb-0">Only pushes new or modified rows. Drastically reduces Snowflake costs.</p>
+
+      <div class="col-md-6">
+        <div class="h-100 p-4 rounded-4 bg-white border shadow-sm">
+          <h5 class="fw-bold mb-3" style="color: #10b981;">&#128256; Export Only New Changes</h5>
+          <p class="mb-2 text-muted">It does not keep exporting the same old data again and again. New rows and changed rows get exported. This is faster and saves Snowflake cost.</p>
         </div>
       </div>
-      <div class="col-md-6 col-lg-3">
-        <div class="h-100 p-4 rounded-4 bg-white border shadow-sm text-center">
-          <div class="display-5 mb-3 text-warning">&#9201;</div>
-          <h5 class="fw-bold">Auto Scheduler</h5>
-          <p class="small text-muted mb-0">Automate exports every 15 minutes for real-time reporting accuracy.</p>
+
+      <div class="col-md-6">
+        <div class="h-100 p-4 rounded-4 bg-white border shadow-sm">
+          <h5 class="fw-bold mb-3" style="color: #f59e0b;">&#9201; Auto Export (Schedule)</h5>
+          <p class="mb-2 text-muted">You can choose a time like every 15 minutes. Then Odoo will export automatically. Good for daily/weekly reporting and real-time dashboards.</p>
         </div>
       </div>
-      <div class="col-md-6 col-lg-3">
-        <div class="h-100 p-4 rounded-4 bg-white border shadow-sm text-center">
-          <div class="display-5 mb-3 text-info">&#10052;</div>
-          <h5 class="fw-bold">Smart Upsert</h5>
-          <p class="small text-muted mb-0">Intelligently merges data to prevent duplicates in your Snowflake warehouse.</p>
+
+      <div class="col-md-6">
+        <div class="h-100 p-4 rounded-4 bg-white border shadow-sm">
+          <h5 class="fw-bold mb-3" style="color: #6366f1;">&#10052; Safe Update in Snowflake</h5>
+          <p class="mb-2 text-muted">It will not create duplicate rows. If row already exists &#8594; it updates it. If row is new &#8594; it inserts it. This keeps the table clean.</p>
         </div>
       </div>
     </div>
+
+    <div class="mt-4 p-4 rounded-4 bg-white border shadow-sm">
+      <h5 class="fw-bold mb-2">Why do people use Snowflake?</h5>
+      <p class="mb-0 text-muted">Because Snowflake is great for analytics. It helps companies answer questions like: &#8220;How much did we sell this month?&#8221; &#8220;Which product sells the most?&#8221; &#8220;Who are our top customers?&#8221;</p>
+    </div>
   </section>
 
-  <!-- WORKFLOW STEPS -->
-  <section class="mb-5 py-5" style="background-color: #ffffff; border-radius: 32px; border: 1px solid #e2e8f0;">
-    <div class="container">
-      <h2 class="text-center fw-bold mb-5">Simplified Workflow</h2>
-      <div class="row g-4 text-center">
-          <div class="col-md-3">
-              <div class="p-3">
-                  <div class="display-6 mb-2">&#9881;</div>
-                  <h6 class="fw-bold">1. Setup</h6>
-                  <p class="small text-muted">Add credentials in Odoo Settings.</p>
-              </div>
-          </div>
-          <div class="col-md-3">
-              <div class="p-3">
-                  <div class="display-6 mb-2">&#128196;</div>
-                  <h6 class="fw-bold">2. Map</h6>
-                  <p class="small text-muted">Choose models and columns.</p>
-              </div>
-          </div>
-          <div class="col-md-3">
-              <div class="p-3">
-                  <div class="display-6 mb-2">&#9654;</div>
-                  <h6 class="fw-bold">3. Execute</h6>
-                  <p class="small text-muted">Run manually or auto-schedule.</p>
-              </div>
-          </div>
-          <div class="col-md-3">
-              <div class="p-3">
-                  <div class="display-6 mb-2">&#128202;</div>
-                  <h6 class="fw-bold">4. Analyze</h6>
-                  <p class="small text-muted">Build BI tools in Snowflake.</p>
-              </div>
-          </div>
+  <!-- HOW IT WORKS -->
+  <section class="mb-5 py-5" style="background-color: #ffffff; border-radius: 28px; border: 1px solid #e2e8f0;">
+    <div class="text-center mb-5">
+      <h2 style="font-weight: 800;">How it works</h2>
+      <p class="text-muted">You don&#8217;t need to write SQL. Just follow these steps.</p>
+    </div>
+
+    <div class="row g-4 text-center px-4">
+      <div class="col-md-3">
+        <div style="font-size: 40px; margin-bottom: 10px;">&#9881;</div>
+        <h6 class="fw-bold">1) Setup</h6>
+        <p class="small text-muted">Add Snowflake details in Settings</p>
+      </div>
+      <div class="col-md-3">
+        <div style="font-size: 40px; margin-bottom: 10px;">&#128196;</div>
+        <h6 class="fw-bold">2) Create Export</h6>
+        <p class="small text-muted">Pick model and columns</p>
+      </div>
+      <div class="col-md-3">
+        <div style="font-size: 40px; margin-bottom: 10px;">&#9654;</div>
+        <h6 class="fw-bold">3) Run / Auto Run</h6>
+        <p class="small text-muted">Click Run or enable Auto Export</p>
+      </div>
+      <div class="col-md-3">
+        <div style="font-size: 40px; margin-bottom: 10px;">&#128202;</div>
+        <h6 class="fw-bold">4) Check Data</h6>
+        <p class="small text-muted">See your table in Snowflake</p>
+      </div>
+    </div>
+
+    <div class="row g-4 mt-5 px-4">
+      <div class="col-md-6">
+        <div class="p-4 rounded-4" style="background-color: #f8fafc; border: 1px solid #e2e8f0;">
+          <h6 class="fw-bold mb-2">What happens when you click Export?</h6>
+          <ul class="mb-0 small text-muted">
+            <li>Odoo reads data from your model</li>
+            <li>It sends data to Snowflake</li>
+            <li>Snowflake saves it as a table</li>
+            <li>Next time, it sends only new/changed data</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="p-4 rounded-4" style="background-color: #f8fafc; border: 1px solid #e2e8f0;">
+          <h6 class="fw-bold mb-2">Good first export to test</h6>
+          <p class="mb-2 small text-muted">Start with a small model first, like Customers or Products. After it works, export bigger tables.</p>
+          <div class="p-2 rounded bg-white border font-monospace small">Example: <code>res.partner</code> (Customers) or <code>product.product</code> (Products)</div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- STEP 1: SETUP -->
-  <section id="setup" class="mb-5 pt-5">
+  <section id="setup" class="mb-5 pt-4">
     <div class="p-5 rounded-4 bg-white border shadow-sm">
-      <div class="d-flex align-items-center gap-3 mb-5">
-        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; font-weight: 800;">1</div>
-        <h2 class="fw-bold m-0">Setup Connection</h2>
+      <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+        <div>
+          <h2 style="font-weight: 800; margin-bottom: 5px;">Step 1: Setup Connection</h2>
+          <p class="text-muted mb-0">Do this one time.</p>
+        </div>
+        <span class="badge px-3 py-2" style="background-color: #10b981; border-radius: 20px;">Required Setup</span>
       </div>
 
       <div class="row g-5">
         <div class="col-lg-6">
-          <h5 class="fw-bold mb-4">&#128736; Find Settings Page</h5>
-          <p class="mb-4 text-muted">Navigate to: <b>Settings &#8594; Snowflake Connector Pro</b></p>
+          <h5 class="fw-bold mb-3">&#128736; Where is the Settings page?</h5>
+          <p class="mb-3 text-muted">Go to: <b>Settings &#8594; Snowflake Connector Pro</b></p>
           
-          <div class="p-4 rounded-4 mb-4" style="background-color: #f1f5f9;">
-            <h6 class="fw-bold mb-3 small text-uppercase">Connection Fields:</h6>
-            <ul class="small d-flex flex-column gap-2 mb-0 list-unstyled">
-                <li><b>&#183; Account:</b> Combine Account ID and Region (e.g., <code>HN81816.ap-south-1</code>)</li>
-                <li><b>&#183; User:</b> Snowflake login username</li>
-                <li><b>&#183; Password:</b> Snowflake login password</li>
-                <li><b>&#183; Warehouse:</b> Your compute engine (e.g., <code>COMPUTE_WH</code>)</li>
-                <li><b>&#183; Database:</b> Target container (e.g., <code>ODOO_DB</code>)</li>
-                <li><b>&#183; Schema:</b> target folder (e.g., <code>PUBLIC</code>)</li>
+          <div class="p-4 rounded-4 mb-4" style="background-color: #f1f5f9; border: 1px solid #e2e8f0;">
+            <h6 class="fw-bold mb-3 small text-uppercase" style="letter-spacing: 1px;">Fill these fields:</h6>
+            <ul class="list-unstyled mb-0 d-flex flex-column gap-2">
+              <li><b>&#183; Account:</b> (your Snowflake account name)</li>
+              <li><b>&#183; User:</b> (Snowflake username)</li>
+              <li><b>&#183; Password:</b> (Snowflake password)</li>
+              <li><b>&#183; Warehouse:</b> (example: <code>COMPUTE_WH</code>)</li>
+              <li><b>&#183; Database:</b> (example: <code>ODOO_DB</code>)</li>
+              <li><b>&#183; Schema:</b> (example: <code>PUBLIC</code>)</li>
+              <li><b>&#183; Role:</b> (optional)</li>
             </ul>
           </div>
 
-          <div class="p-4 rounded-4 bg-dark text-white mb-4">
-            <h6 class="fw-bold mb-2" style="color: #60a5fa;">How to find your Account ID</h6>
-            <p class="small opacity-75 mb-3">Execute this query in a Snowflake worksheet:</p>
-            <div class="p-2 bg-black rounded font-monospace small mb-3" style="color: #10b981;">
-                SELECT CURRENT_ACCOUNT(), CURRENT_REGION();
-            </div>
-            <div class="p-2 rounded small" style="background-color: rgba(255,255,255,0.1);">
-                &#128161; <b>Pro-Tip:</b> Use <code>ID.REGION</code> for the Account field.
-            </div>
+          <div class="p-4 rounded-4 bg-dark text-white shadow-lg mb-4">
+            <h6 class="fw-bold mb-2" style="color: #60a5fa;">How to find your Snowflake Account:</h6>
+            <p class="small opacity-75 mb-2">In Snowflake, open a worksheet and run this query:</p>
+            <div class="p-2 rounded bg-black mb-3" style="color: #4ade80; font-family: monospace;">SELECT CURRENT_ACCOUNT(), CURRENT_REGION();</div>
+            <p class="small mb-0">Combine them as: <code>ACCOUNT.REGION</code><br>Example: <code>HN81816.ap-south-1</code></p>
+          </div>
+
+          <div class="alert alert-info border-0 rounded-4">
+            &#128161; <b>Pro-Tip:</b> Make sure your Snowflake user can create tables and update data. Ask your admin if you see permission errors.
           </div>
         </div>
-        
+
         <div class="col-lg-6">
-          <div class="mb-4">
-            <div class="d-flex align-items-center gap-2 mb-2 text-muted small">&#128247; Settings Configuration Overview</div>
-            <img src="./acc.png" class="img-fluid rounded-4 border shadow-sm" style="width: 100%;" alt="Odoo Settings Screenshot">
-          </div>
-        </div>
-      </div>
-
-      <div class="row mt-4 g-4">
-          <div class="col-md-6">
-              <div class="d-flex align-items-center gap-2 mb-2 text-muted small">&#128247; Finding the Account & Region Query</div>
-              <img src="./account.png" class="img-fluid rounded-4 border shadow-sm" style="width: 100%;" alt="Snowflake Query Screenshot">
-          </div>
-          <div class="col-md-6">
-              <div class="d-flex align-items-center gap-2 mb-2 text-muted small">&#128247; Locating Database/Warehouse in Snowflake UI</div>
-              <img src="./databases.png" class="img-fluid rounded-4 border shadow-sm" style="width: 100%;" alt="Snowflake UI Screenshot">
-          </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- STEP 2: CREATE EXPORTS -->
-  <section id="queries" class="mb-5 pt-5">
-    <div class="p-5 rounded-4 bg-white border shadow-sm">
-      <div class="d-flex align-items-center gap-3 mb-5">
-        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; font-weight: 800;">2</div>
-        <h2 class="fw-bold m-0">Create an Export Profile</h2>
-      </div>
-
-      <div class="row g-5">
-        <div class="col-lg-6 order-lg-2">
-          <h5 class="fw-bold mb-4">What is an Export Profile?</h5>
-          <p class="text-muted mb-4">A saved mapping that tells Odoo exactly what to push to Snowflake. You can create multiple profiles for different models.</p>
-          
-          <div class="p-4 rounded-4 mb-4 border" style="background-color: #f8fafc;">
-            <h6 class="fw-bold mb-3 small text-uppercase">Profile Settings:</h6>
-            <ul class="small d-flex flex-column gap-3 mb-0 list-unstyled">
-                <li><b>&#183; Export Name:</b> Becomes the table name in Snowflake.</li>
-                <li><b>&#183; Odoo Model:</b> The source data (e.g., <code>sale.order</code>).</li>
-                <li><b>&#183; Columns:</b> Select fields to include. Fewer columns = Faster sync.</li>
-                <li><b>&#183; Domain Filter:</b> (Optional) Send only specific rows.</li>
-            </ul>
-          </div>
-
-          <div class="alert alert-info border-0 rounded-4 p-4 d-flex align-items-start gap-3">
-             <div class="fs-4">&#128161;</div>
-             <div>
-                <h6 class="fw-bold mb-1">Checklist Before Running:</h6>
-                <p class="small mb-0">Ensure the Odoo Model exists and you have selected at least one column for the export.</p>
-             </div>
-          </div>
-        </div>
-        
-        <div class="col-lg-6 order-lg-1">
-          <div class="mb-4">
-             <div class="d-flex align-items-center gap-2 mb-2 text-muted small">&#128247; Export Configuration Form</div>
-             <img src="./data.png" class="img-fluid rounded-4 border shadow-sm" style="width: 100%;" alt="Export Form">
-          </div>
-          <div class="mb-4">
-             <div class="d-flex align-items-center gap-2 mb-2 text-muted small">&#128247; Detailed Column Selection</div>
-             <img src="./snowflakedata.png" class="img-fluid rounded-4 border shadow-sm" style="width: 100%;" alt="Column Selection">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FILTERS -->
-  <section id="domain" class="mb-5">
-    <div class="p-5 rounded-4 bg-white border shadow-sm">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-7">
-          <h3 class="fw-bold mb-3">Domain Filters (Advanced Control)</h3>
-          <p class="text-muted mb-4">Filters allow you to export only relevant data. For example, syncing only <b>"Confirmed"</b> Sales Orders instead of Drafts.</p>
-          
-          <div class="row g-3">
-            <div class="col-md-6">
-              <div class="p-4 rounded-4 bg-light border-0">
-                <h6 class="fw-bold mb-2 small">Confirmed Orders:</h6>
-                <div class="p-2 bg-white border rounded font-monospace small" style="color: #2563eb;">[('state','=','sale')]</div>
-              </div>
+          <div class="text-center mb-4">
+            <span class="badge bg-dark mb-2">img/01-settings.png</span>
+            <div class="border rounded-4 overflow-hidden shadow">
+              <img src="./defaultwarehouse.png" style="width: 100%; display: block;" alt="Odoo Settings Screenshot">
             </div>
-            <div class="col-md-6">
-              <div class="p-4 rounded-4 bg-light border-0">
-                <h6 class="fw-bold mb-2 small">By Company & Amount:</h6>
-                <div class="p-2 bg-white border rounded font-monospace small" style="color: #2563eb;">[('company_id','=',1),('amount_total','&gt;',1000)]</div>
-              </div>
+          </div>
+          <div class="text-center">
+            <span class="badge bg-dark mb-2">img/01b-snowflake-role-db.png</span>
+            <div class="border rounded-4 overflow-hidden shadow">
+              <img src="./account.png" style="width: 100%; display: block;" alt="Snowflake UI Screenshot">
             </div>
           </div>
         </div>
-        <div class="col-lg-5">
-          <div class="p-4 rounded-4" style="background-color: #fdf2f8; border: 1px solid #fbcfe8;">
-            <h6 class="fw-bold text-danger mb-2">Sync Optimization</h6>
-            <p class="small text-muted mb-0">Start without filters to confirm connectivity. Add filters once successful to minimize warehouse compute time.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- STEP 3: AUTOMATION -->
-  <section id="incremental" class="mb-5 pt-5">
-    <div class="p-5 rounded-4 bg-white border shadow-sm">
-      <div class="d-flex align-items-center gap-3 mb-5">
-        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; font-weight: 800;">3</div>
-        <h2 class="fw-bold m-0">Automation & Incremental Sync</h2>
       </div>
 
-      <div class="row g-5">
-        <div class="col-lg-6">
-          <h5 class="fw-bold mb-4">How Incremental Sync Works</h5>
-          <p class="text-muted mb-4">This connector tracks the last sync timestamp. In the next run, it only looks for records updated after that time. This keeps your data warehouse up-to-date with minimal resource impact.</p>
-          
-          <div class="p-4 rounded-4 mb-4" style="background-color: #f1f5f9;">
-            <h6 class="fw-bold mb-2">Scheduling Intervals</h6>
-            <p class="small text-muted mb-0">Define how often the automation runs. We recommend 15 minutes for sales and 60 minutes for inventory/product data.</p>
-          </div>
-
-          <div class="p-4 rounded-4 border bg-white shadow-sm d-flex gap-3 align-items-start">
-             <div class="fs-3 text-warning">&#128161;</div>
-             <p class="small text-muted mb-0"><b>Note:</b> You can always run a manual export by clicking <b>"Run Export"</b> even if automation is enabled.</p>
-          </div>
+      <div class="row g-4 mt-4">
+        <div class="col-md-6 text-center">
+            <span class="badge bg-dark mb-2">img/01c-find-account.png</span>
+            <div class="border rounded-4 overflow-hidden shadow">
+              <img src="./account.png" style="width: 100%; display: block;" alt="Find Account">
+            </div>
         </div>
-        
-        <div class="col-lg-6">
-          <div class="mb-4">
-            <div class="d-flex align-items-center gap-2 mb-2 text-muted small">&#128247; Automation Settings Toggle</div>
-            <img src="./charts.png" class="img-fluid rounded-4 border shadow-sm" style="width: 100%;" alt="Automation Screenshot">
-          </div>
-          <div class="mb-4">
-            <div class="d-flex align-items-center gap-2 mb-2 text-muted small">&#128247; Manual Execution Button</div>
-            <img src="./cha.png" class="img-fluid rounded-4 border shadow-sm" style="width: 100%;" alt="Run Export Screenshot">
-          </div>
+        <div class="col-md-6 text-center">
+            <span class="badge bg-dark mb-2">img/01d-username-left.png</span>
+            <div class="border rounded-4 overflow-hidden shadow">
+              <img src="./data.png" style="width: 100%; display: block;" alt="Username Location">
+            </div>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- STEP 4: VERIFICATION -->
-  <section id="snowflake" class="mb-5 pt-5">
-    <div class="p-5 rounded-4 bg-white border shadow-sm">
-      <div class="d-flex align-items-center gap-3 mb-5">
-        <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 45px; height: 45px; font-weight: 800;">4</div>
-        <h2 class="fw-bold m-0">Verification in Snowflake</h2>
-      </div>
-
-      <div class="row g-5">
-        <div class="col-lg-6">
-          <h5 class="fw-bold mb-4">Confirming Your Data Flow</h5>
-          <p class="text-muted mb-4">After the export completes, you will find your Odoo records as a structured table in your selected Snowflake database.</p>
-          
-          <div class="p-4 rounded-4 bg-dark text-white font-monospace mb-4 shadow-lg">
-             <div class="small text-info mb-2">-- Run this to check row count:</div>
-             <div style="font-size: 14px;">SELECT COUNT(*) FROM ODOO_DB.PUBLIC.SALE_ORDER_LINE;</div>
-          </div>
-
-          <div class="p-4 rounded-4 bg-light border-0">
-            <h6 class="fw-bold mb-3 small text-uppercase">Check via Snowflake UI:</h6>
-            <ul class="small text-muted ps-3 mb-0 d-flex flex-column gap-3">
-              <li><b>&#183; Data Preview:</b> Navigate to <b>Data &#8594; Databases</b> and select your schema to preview raw rows.</li>
-              <li><b>&#183; Worksheets:</b> Run SQL queries like <code>SELECT * FROM &lt;TABLE&gt; LIMIT 50;</code> to verify columns.</li>
-              <li><b>&#183; Staging Logic:</b> Data is safely moved via temporary tables to ensure integrity.</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="col-lg-6">
-          <div class="mb-4">
-            <div class="d-flex align-items-center gap-2 mb-2 text-muted small">&#128247; Database & Table Explorer in Snowflake</div>
-            <img src="./bi.png" class="img-fluid rounded-4 border shadow-sm" style="width: 100%;" alt="Snowflake Table List">
-          </div>
-          <div class="mb-4">
-            <div class="d-flex align-items-center gap-2 mb-2 text-muted small">&#128247; Raw Data Results in Snowflake Worksheet</div>
-            <img src="./cha.png" class="img-fluid rounded-4 border shadow-sm" style="width: 100%;" alt="Snowflake Result Set">
-          </div>
-          <div class="mb-0 text-center">
-            <div class="d-flex align-items-center gap-2 mb-2 text-muted small">&#128247; Column Structure Preview</div>
-            <img src="./snowflakedata.png" class="img-fluid rounded-4 border shadow-sm" style="width: 100%;" alt="Snowflake Data Preview">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- TROUBLESHOOTING -->
-  <section id="troubleshoot" class="mb-5">
-    <div class="p-5 rounded-4 bg-white border shadow-sm" style="border-left: 10px solid #ef4444 !important;">
-      <h2 class="fw-bold mb-4">Fixing Common Problems</h2>
-      <p class="text-muted mb-5">If the sync fails, check these common configuration blockers.</p>
       
-      <div class="row g-4">
-        <div class="col-md-6">
-          <div class="p-4 rounded-4 bg-light h-100 border-0">
-            <h6 class="fw-bold mb-3">Validation Checklist:</h6>
-            <ul class="small text-muted ps-3 mb-0 d-flex flex-column gap-2">
-              <li>Is the Account ID including the region? (e.g. <code>xyz.us-east-1</code>)</li>
-              <li>Does your Snowflake user have <code>CREATE TABLE</code> permissions?</li>
-              <li>Are your Database and Schema names spelled correctly (Case Sensitive)?</li>
-              <li>Try a manual export for a small model (5-10 rows) first.</li>
+      <div class="mt-4 p-4 rounded-4 bg-light border">
+        <h6 class="fw-bold mb-2">Simple meaning of Snowflake words:</h6>
+        <ul class="mb-0 small text-muted">
+            <li><b>Warehouse:</b> the &#8220;engine&#8221; Snowflake uses to run work</li>
+            <li><b>Database:</b> a big container for your tables</li>
+            <li><b>Schema:</b> a folder inside the database</li>
+            <li><b>Role:</b> permissions (what the user is allowed to do)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 2: EXPORTS -->
+  <section id="queries" class="mb-5 pt-4">
+    <div class="p-5 rounded-4 bg-white border shadow-sm">
+      <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+        <div>
+          <h2 style="font-weight: 800; margin-bottom: 5px;">Step 2: Create an Export</h2>
+          <p class="text-muted mb-0">Choose what to send to Snowflake.</p>
+        </div>
+        <span class="badge px-3 py-2" style="background-color: #3b82f6; border-radius: 20px;">Mapping Data</span>
+      </div>
+
+      <div class="row g-5">
+        <div class="col-lg-12">
+            <span class="badge bg-dark mb-2">img/02-export-form.png</span>
+            <div class="border rounded-4 overflow-hidden shadow mb-5">
+              <img src="./data.png" style="width: 100%; display: block;" alt="Export Form">
+            </div>
+        </div>
+        
+        <div class="col-lg-6">
+          <h5 class="fw-bold mb-3">What is an Export?</h5>
+          <p class="text-muted mb-4">It is like a saved &#8220;export button&#8221;. Once you create it, you can run it anytime. You can also create many exports, one for each model you want.</p>
+          
+          <div class="p-4 rounded-4 border bg-light">
+            <h6 class="fw-bold mb-3 small text-uppercase">Simple meaning of fields:</h6>
+            <ul class="list-unstyled mb-0 d-flex flex-column gap-2 small">
+              <li><b>&#183; Export Name:</b> Table name in Snowflake. Use snake_case (e.g., <code>sale_order</code>).</li>
+              <li><b>&#183; Odoo Model:</b> Which Odoo model you want to export.</li>
+              <li><b>&#183; Columns:</b> Which fields you want. Pick only what you need to keep it fast.</li>
+              <li><b>&#183; Interval:</b> How often it runs in minutes (for Auto Export).</li>
             </ul>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="p-4 rounded-4 border bg-white h-100 shadow-sm text-center">
-             <div class="d-flex align-items-center gap-2 mb-2 text-muted small">&#128247; Error Log Preview</div>
-             <img src="./charts.png" class="img-fluid rounded shadow-sm opacity-50" style="max-height: 120px; object-fit: cover; width: 100%;" alt="Error View">
-             <p class="small text-muted mt-3 mb-0">Most errors are permission-based or warehouse suspension issues.</p>
+
+        <div class="col-lg-6">
+            <span class="badge bg-dark mb-2">img/02b-columns.png</span>
+            <div class="border rounded-4 overflow-hidden shadow">
+              <img src="./snowflakedata.png" style="width: 100%; display: block;" alt="Column Selector">
+            </div>
+        </div>
+      </div>
+
+      <div id="domain" class="mt-5 p-5 rounded-4" style="background-color: #f8fafc; border: 1px solid #e2e8f0;">
+        <h3 class="fw-bold mb-3">Domain Filter (Optional)</h3>
+        <p class="text-muted mb-4">A domain filter means: &#8220;export only some rows&#8221;. If you don&#8217;t add a filter, it exports everything.</p>
+        
+        <div class="row g-4">
+          <div class="col-md-6">
+            <h6 class="fw-bold small text-uppercase text-primary">Examples:</h6>
+            <div class="p-3 bg-white border rounded mb-3">
+              <div class="small text-muted mb-1">Only confirmed Sales Orders:</div>
+              <code style="font-weight: bold;">[('state','=','sale')]</code>
+            </div>
+            <div class="p-3 bg-white border rounded">
+              <div class="small text-muted mb-1">Company 1 &#38; Amount > 1000:</div>
+              <code style="font-weight: bold;">[('company_id','=',1),('amount_total','&gt;',1000)]</code>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <h6 class="fw-bold small text-uppercase text-primary">Tips:</h6>
+            <ul class="small text-muted ps-3 mb-0">
+              <li>Start without filter to confirm basic sync works.</li>
+              <li>Use Odoo&#8217;s list view search to test your filter logic first.</li>
+              <li>Filters help keep Snowflake clean and lower your costs.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4 p-4 rounded-4" style="background-color: #f0f9ff; border: 1px solid #bae6fd;">
+        <h6 class="fw-bold mb-2">Tiny checklist before you run:</h6>
+        <ul class="mb-0 small text-muted ps-3">
+            <li>Did you choose the correct model?</li>
+            <li>Did you select columns?</li>
+            <li>Is Snowflake connection saved?</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 3: AUTO EXPORT -->
+  <section id="incremental" class="mb-5 pt-4">
+    <div class="p-5 rounded-4 bg-white border shadow-sm">
+      <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+        <div>
+          <h2 style="font-weight: 800; margin-bottom: 5px;">Step 3: Auto Export (Incremental Sync)</h2>
+          <p class="text-muted mb-0">Keep Snowflake updated automatically.</p>
+        </div>
+        <span class="badge px-3 py-2" style="background-color: #f59e0b; border-radius: 20px;">Automation</span>
+      </div>
+
+      <div class="row g-5">
+        <div class="col-lg-6">
+          <h5 class="fw-bold mb-3">What is &#8220;incremental&#8221; sync?</h5>
+          <p class="text-muted mb-4">It means: export only what is new or changed. Old rows are not re-sent, saving Snowflake credits and Odoo resources.</p>
+          
+          <div class="p-4 rounded-4 border bg-light mb-4">
+            <h6 class="fw-bold mb-2">Interval Minutes:</h6>
+            <p class="small text-muted mb-0">Set how often the auto-sync runs. 15 minutes is typical for Sales. Use 60 minutes for large master data.</p>
+          </div>
+          
+          <div class="alert alert-info border-0 rounded-4">
+            &#128161; <b>Manual Override:</b> You can always click <b>&#8220;Run Export&#8221;</b> manually even if automation is turned off.
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="text-center mb-4">
+            <span class="badge bg-dark mb-2">img/03-automation.png</span>
+            <div class="border rounded-4 overflow-hidden shadow">
+              <img src="./charts.png" style="width: 100%; display: block;" alt="Auto Export Settings">
+            </div>
+          </div>
+          <div class="text-center">
+            <span class="badge bg-dark mb-2">img/03-run-export.png</span>
+            <div class="border rounded-4 overflow-hidden shadow">
+              <img src="./cha.png" style="width: 100%; display: block;" alt="Run Export Button">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 4: VERIFY -->
+  <section id="snowflake" class="mb-5 pt-4">
+    <div class="p-5 rounded-4 bg-white border shadow-sm">
+      <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4">
+        <div>
+          <h2 style="font-weight: 800; margin-bottom: 5px;">Step 4: Check Data in Snowflake</h2>
+          <p class="text-muted mb-0">Verify your tables and rows.</p>
+        </div>
+        <span class="badge px-3 py-2" style="background-color: #6366f1; border-radius: 20px;">Verification</span>
+      </div>
+
+      <div class="row g-5">
+        <div class="col-lg-12">
+            <span class="badge bg-dark mb-2">img/04-snowflake-tables.png</span>
+            <div class="border rounded-4 overflow-hidden shadow mb-5">
+              <img src="./bi.png" style="width: 100%; display: block;" alt="Snowflake Tables">
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+          <h5 class="fw-bold mb-3">Where is the data?</h5>
+          <p class="text-muted mb-4">It goes into your Snowflake Database and Schema. The table name matches your Odoo Export Profile Name.</p>
+          
+          <div class="p-4 rounded-4 bg-dark text-white shadow-lg mb-4 font-monospace">
+            <div style="color: #60a5fa; margin-bottom: 5px;">-- Verify row count in Snowflake</div>
+            SELECT COUNT(*) FROM ODOO_DB.PUBLIC.SALE_ORDER_LINE;
+          </div>
+          
+          <div class="p-4 rounded-4 border bg-light mb-4">
+            <h6 class="fw-bold mb-2 small text-uppercase">Check via Snowflake UI:</h6>
+            <ul class="ps-3 small text-muted">
+                <li><b>Database Preview:</b> Open Data &#8594; Databases &#8594; Choose Table &#8594; Preview Rows.</li>
+                <li><b>Worksheets:</b> Run queries to see column mapping and data types.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+            <span class="badge bg-dark mb-2">img/05-snowflake-results.png</span>
+            <div class="border rounded-4 overflow-hidden shadow mb-4">
+              <img src="./cha.png" style="width: 100%; display: block;" alt="Snowflake Results">
+            </div>
+            
+            <span class="badge bg-dark mb-2">img/04b-database-preview.png</span>
+            <div class="border rounded-4 overflow-hidden shadow mb-4">
+              <img src="./snowflakedata.png" style="width: 100%; display: block;" alt="Data Preview">
+            </div>
+        </div>
+        
+        <div class="col-lg-12">
+            <span class="badge bg-dark mb-2">img/04c-worksheets.png</span>
+            <div class="border rounded-4 overflow-hidden shadow">
+              <img src="./defaultwarehouse.png" style="width: 100%; display: block;" alt="Snowflake Worksheet">
+            </div>
+        </div>
+      </div>
+
+      <div class="mt-4 p-4 rounded-4 bg-light border">
+        <h6 class="fw-bold mb-2">What happens inside?</h6>
+        <p class="small text-muted mb-0">Module sends data to a temporary table &#8594; then updates the main table safely &#8594; temporary table is deleted automatically. Exporting again is safe; changed Odoo rows will update Snowflake rows.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TROUBLESHOOT -->
+  <section id="troubleshoot" class="mb-5 pt-4">
+    <div class="p-5 rounded-4 bg-white border shadow-sm" style="border-left: 10px solid #ef4444 !important;">
+      <h2 class="fw-bold mb-4">Fix Problems (Troubleshooting)</h2>
+      <p class="text-muted mb-5">Most problems are just wrong settings or missing permissions. Use these checks.</p>
+      
+      <div class="row g-5">
+        <div class="col-md-7">
+          <div class="p-4 rounded-4 border-0 mb-4" style="background-color: #fef2f2;">
+            <h6 class="fw-bold mb-3 text-danger">Check these:</h6>
+            <ul class="mb-0 small text-muted d-flex flex-column gap-2">
+              <li><b>Account ID:</b> Does it include the region (e.g., <code>id.region</code>)?</li>
+              <li><b>Warehouse/DB/Schema:</b> Do the names exist exactly as shown in Snowflake?</li>
+              <li><b>Permissions:</b> Ask your admin to allow <code>CREATE TABLE</code> and <code>MERGE</code>.</li>
+            </ul>
+          </div>
+          <div class="alert alert-warning border-0 rounded-4 mb-0">
+             &#9888; <b>Important:</b> If you changed Snowflake table types before, you may need to delete the table once and re-export.
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="text-center">
+            <span class="badge bg-dark mb-2">img/06-error.png</span>
+            <div class="border rounded shadow-sm opacity-50">
+              <img src="./charts.png" style="width: 100%; max-height: 200px; object-fit: cover;" alt="Error State">
+            </div>
+            <p class="small text-muted mt-2">Error logs help identify credential issues.</p>
           </div>
         </div>
       </div>
@@ -402,42 +502,54 @@
   <!-- FAQ -->
   <section class="mb-5 py-5">
     <h2 class="text-center fw-bold mb-5">FAQ</h2>
-    <div class="row g-4 text-center">
-        <div class="col-md-4">
-            <div class="p-4 bg-white rounded-4 border shadow-sm h-100">
-                <h6 class="fw-bold text-primary">Data Safety?</h6>
-                <p class="small text-muted mb-0">We use safe UPSERT logic. Old rows are updated and new ones are added without duplicates.</p>
-            </div>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="p-4 bg-white rounded-4 border shadow-sm h-100">
+          <h6 class="fw-bold text-primary">Will it delete my data?</h6>
+          <p class="small text-muted mb-0">No. It updates old rows and adds new rows safely.</p>
         </div>
-        <div class="col-md-4">
-            <div class="p-4 bg-white rounded-4 border shadow-sm h-100">
-                <h6 class="fw-bold text-primary">Big Data Scaling?</h6>
-                <p class="small text-muted mb-0">Yes. The connector processes data in batches, ensuring your Odoo server stays fast.</p>
-            </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 bg-white rounded-4 border shadow-sm h-100">
+          <h6 class="fw-bold text-primary">Can it handle big data?</h6>
+          <p class="small text-muted mb-0">Yes. It sends data in batches and only sends changes.</p>
         </div>
-        <div class="col-md-4">
-            <div class="p-4 bg-white rounded-4 border shadow-sm h-100">
-                <h6 class="fw-bold text-primary">Custom Fields?</h6>
-                <p class="small text-muted mb-0">Fully supported. Both standard fields and Odoo Studio custom fields can be synced.</p>
-            </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 bg-white rounded-4 border shadow-sm h-100">
+          <h6 class="fw-bold text-primary">Works with custom models?</h6>
+          <p class="small text-muted mb-0">Yes. Both standard and custom models are supported.</p>
         </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 bg-white rounded-4 border shadow-sm h-100">
+          <h6 class="fw-bold text-primary">Do I need SQL?</h6>
+          <p class="small text-muted mb-0">No. You just choose model and columns from the UI.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 bg-white rounded-4 border shadow-sm h-100">
+          <h6 class="fw-bold text-primary">Can I stop auto export?</h6>
+          <p class="small text-muted mb-0">Yes. Turn off the Auto Export toggle anytime.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 bg-white rounded-4 border shadow-sm h-100">
+          <h6 class="fw-bold text-primary">Where do I see my tables?</h6>
+          <p class="small text-muted mb-0">In Snowflake: Database &#8594; Schema &#8594; Tables.</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- SUPPORT -->
   <footer class="text-center p-5 rounded-4 bg-white border shadow-sm">
-    <div class="display-6 mb-3 text-primary">&#128231;</div>
-    <h4 class="fw-bold mb-2">Need Technical Assistance?</h4>
-    <p class="text-muted mb-4">Our engineers are available to assist with Snowflake setup and Odoo mapping.</p>
-    <div class="d-flex justify-content-center gap-4 flex-wrap">
-        <div class="d-flex align-items-center gap-2">
-            <span class="fw-bold">Email:</span>
-            <span class="text-primary fw-bold">info@niyulabs.com</span>
-        </div>
-        <div class="d-flex align-items-center gap-2">
-            <span class="fw-bold">Web:</span>
-            <span class="text-primary fw-bold">niyulabs.com</span>
-        </div>
+    <div style="font-size: 3rem; margin-bottom: 1rem;">&#128231;</div>
+    <h4 class="fw-bold mb-2">Need Technical Help?</h4>
+    <p class="text-muted mb-4">We can help you setup and run exports. If you are stuck, email our engineering team.</p>
+    <div class="d-flex justify-content-center gap-5 flex-wrap fw-bold">
+        <span>Email: <span class="text-primary">info@niyulabs.com</span></span>
+        <span>Web: <span class="text-primary">niyulabs.com</span></span>
     </div>
   </footer>
 
