@@ -309,6 +309,85 @@
             </ul>
           </div>
 
+          <!-- NEW: HOW TO FIND ACCOUNT + USERNAME (STEP 1 DETAILS) -->
+          <div class="mt-4 p-4 rounded-4 bg-white border" style="border-color:#e2e8f0 !important;">
+            <h5 class="mb-2">How to find your Snowflake Account (Step 1)</h5>
+            <p class="mb-2" style="line-height:1.7;">
+              In Snowflake, open a worksheet and run this query:
+            </p>
+
+            <pre class="p-3 rounded-3 bg-light border" style="border-color:#e2e8f0 !important; margin:0;">
+          SELECT CURRENT_ACCOUNT(), CURRENT_REGION(), CURRENT_ORGANIZATION_NAME();
+            </pre>
+
+            <div class="mt-3 text-muted" style="line-height:1.7;">
+              After you run it, Snowflake will show values like:
+              <ul class="mb-0 mt-2">
+                <li><b>CURRENT_ACCOUNT()</b> = your account id (example: <code>HN81816</code>)</li>
+                <li><b>CURRENT_REGION()</b> = your region (example: <code>ap-south-1</code>)</li>
+                <li><b>CURRENT_ORGANIZATION_NAME()</b> = your org name (for reference)</li>
+              </ul>
+            </div>
+
+            <div class="mt-3 p-3 rounded-3 bg-light border" style="border-color:#e2e8f0 !important;">
+              <div class="fw-semibold mb-1">What to enter in Odoo “Account”:</div>
+              <div style="line-height:1.7;">
+                Enter it like this:
+                <code>CURRENT_ACCOUNT().CURRENT_REGION()</code><br/>
+                Example: <code>HN81816.ap-south-1</code>
+              </div>
+            </div>
+
+            <div class="alert alert-info mt-3 mb-0">
+              ✅ This is the easiest way to confirm which Snowflake account you are using.
+            </div>
+          </div>
+
+          <div class="mt-4 p-4 rounded-4 bg-white border" style="border-color:#e2e8f0 !important;">
+            <h5 class="mb-2">Where to find your Snowflake Username + Password</h5>
+            <p class="mb-2" style="line-height:1.7;">
+              In Snowflake, on the left side you will see your <b>username</b>.
+              Use that same username in Odoo Settings.
+            </p>
+            <p class="mb-0" style="line-height:1.7;">
+              Your <b>Password</b> is your Snowflake login password.
+            </p>
+          </div>
+
+          <!-- NEW: STEP 1 SCREENSHOTS -->
+          <div class="mt-4 p-3 rounded-4 bg-white border" style="border-color:#e2e8f0 !important;">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <div class="fw-semibold">&#128247; Screenshot: Find Account (Run CURRENT_ACCOUNT query)</div>
+              <span class="badge bg-dark">img/01c-find-account.png</span>
+            </div>
+            <img
+              src="./account.png"
+              alt="Find Snowflake account using CURRENT_ACCOUNT query"
+              class="img-fluid rounded-3"
+              style="border:1px solid #e2e8f0;"
+            />
+            <p class="small text-muted mt-2 mb-0">
+              This screenshot should show running:
+              <code>SELECT CURRENT_ACCOUNT(), CURRENT_REGION(), CURRENT_ORGANIZATION_NAME();</code>
+            </p>
+          </div>
+
+          <div class="mt-4 p-3 rounded-4 bg-white border" style="border-color:#e2e8f0 !important;">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <div class="fw-semibold">&#128247; Screenshot: Username location (left side)</div>
+              <span class="badge bg-dark">img/01d-username-left.png</span>
+            </div>
+            <img
+              src="./data.png"
+              alt="Snowflake username shown on the left side"
+              class="img-fluid rounded-3"
+              style="border:1px solid #e2e8f0;"
+            />
+            <p class="small text-muted mt-2 mb-0">
+              This screenshot should clearly show the Snowflake username. Use it in Odoo Settings → User.
+            </p>
+          </div>
+
           <div class="mt-4 p-4 rounded-4 bg-white border" style="border-color:#e2e8f0 !important;">
             <h6 class="mb-2">Simple meaning of Snowflake words</h6>
             <ul class="mb-0">
@@ -664,6 +743,53 @@
             </ul>
           </div>
         </div>
+
+                <!-- NEW: WHERE TO CHECK DATA IN SNOWFLAKE UI -->
+        <div class="mt-4 p-4 rounded-4 bg-white border" style="border-color:#e2e8f0 !important;">
+          <h6 class="mb-2">How to check exported data in Snowflake (UI)</h6>
+          <ul class="mb-0">
+            <li><b>Database Preview:</b> Open <b>Data → Databases</b>, then select your Database + Schema, open the table and preview rows.</li>
+            <li><b>Worksheets:</b> Open <b>Worksheets</b>, run SQL like <code>SELECT COUNT(*)</code> or <code>SELECT * LIMIT 100</code>.</li>
+          </ul>
+          <div class="mt-3 small text-muted" style="line-height:1.7;">
+            Tip: On the left side of Snowflake you can also see which user you are logged in with.
+          </div>
+        </div>
+
+        <!-- NEW: STEP 4 SCREENSHOTS -->
+        <div class="mt-4 p-3 rounded-4 bg-white border" style="border-color:#e2e8f0 !important;">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <div class="fw-semibold">&#128247; Screenshot: Database Preview (Table rows)</div>
+            <span class="badge bg-dark">img/04b-database-preview.png</span>
+          </div>
+          <img
+            src="./snowflakedata.png"
+            class="img-fluid rounded-3"
+            alt="Snowflake database preview of exported table"
+            style="border:1px solid #e2e8f0;"
+          />
+          <p class="small text-muted mt-2 mb-0">
+            This screenshot should show the exported table opened in Snowflake and data visible in preview.
+          </p>
+        </div>
+
+        <div class="mt-4 p-3 rounded-4 bg-white border" style="border-color:#e2e8f0 !important;">
+          <div class="d-flex justify-content-between align-items-center mb-2">
+            <div class="fw-semibold">&#128247; Screenshot: Worksheets (Run a query)</div>
+            <span class="badge bg-dark">img/04c-worksheets.png</span>
+          </div>
+          <img
+            src="./defaultwarehouse.png"
+            class="img-fluid rounded-3"
+            alt="Snowflake worksheets query showing exported data"
+            style="border:1px solid #e2e8f0;"
+          />
+          <p class="small text-muted mt-2 mb-0">
+            This screenshot should show running a query in Worksheets, for example:
+            <code>SELECT COUNT(*) FROM &lt;DB&gt;.&lt;SCHEMA&gt;.&lt;TABLE&gt;;</code>
+          </p>
+        </div>
+
 
         <div class="col-md-12">
           <div class="p-3 rounded-4 bg-white border" style="border-color:#e2e8f0 !important;">
