@@ -1,3 +1,4 @@
+
 <body style="
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
   background: #f8fafc;
@@ -141,54 +142,196 @@
     </div>
   </section>
 
-  <!-- SETTINGS -->
+  <!-- CONNECTION WITH SCREENSHOTS -->
   <section class="mb-5">
     <div class="p-5 rounded-4 bg-white border"
-       style="box-shadow:0 12px 24px rgba(0,0,0,0.06);">
-      <h2 style="font-weight:700;">Snowflake Connection Setup</h2>
-      <p class="text-muted mb-4">
-        Settings → Snowflake Connector Pro
-      </p>
-
-      <div class="row">
-        <div class="col-md-6">
-          <ul>
-            <li>Snowflake Account</li>
-            <li>Snowflake User</li>
-            <li>Password / Key Auth</li>
-            <li>Warehouse</li>
-          </ul>
+      style="box-shadow:0 12px 24px rgba(0,0,0,0.06);">
+      <div class="d-flex flex-wrap align-items-end justify-content-between gap-3 mb-3">
+        <div>
+          <h2 style="font-weight:700; margin-bottom:6px;">Connection Setup (with screenshots)</h2>
+          <p class="text-muted mb-0">Configure once → then create exports anytime</p>
         </div>
+        <span class="badge rounded-pill bg-success">Recommended first step</span>
+      </div>
+
+      <div class="row g-4 mt-2">
         <div class="col-md-6">
-          <ul>
-            <li>Database</li>
-            <li>Schema</li>
-            <li>Role (optional)</li>
-          </ul>
+          <div class="p-4 rounded-4 border bg-light" style="border-color:#e2e8f0 !important;">
+            <h5 class="mb-3">&#128736; Where to configure</h5>
+            <p class="mb-2">
+              Go to: <b>Settings → Snowflake Connector Pro</b>
+            </p>
+            <ul class="mb-0">
+              <li><b>Account</b> (example: <code>XXXX.region</code>)</li>
+              <li><b>User</b> (Snowflake username)</li>
+              <li><b>Password / Key Auth</b></li>
+              <li><b>Warehouse</b> (ex: <code>COMPUTE_WH</code>)</li>
+              <li><b>Database</b> (ex: <code>ODOO_DB</code>)</li>
+              <li><b>Schema</b> (ex: <code>PUBLIC</code>)</li>
+              <li><b>Role</b> (optional)</li>
+            </ul>
+          </div>
+
+          <div class="alert alert-info mt-4 mb-0">
+            &#128161; Ensure the selected Snowflake role has permissions:
+            <code>CREATE TABLE</code>, <code>ALTER TABLE</code>, <code>MERGE</code>, <code>DROP TABLE</code>.
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="p-3 rounded-4 bg-white border" style="border-color:#e2e8f0 !important;">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <div class="fw-semibold">&#128247; Screenshot: Settings Screen</div>
+              <span class="badge bg-dark">img/01-settings.png</span>
+            </div>
+            <img
+              src="img/01-settings.png"
+              alt="Snowflake Connector Pro Settings"
+              class="img-fluid rounded-3"
+              style="border:1px solid #e2e8f0;"
+            />
+            <p class="small text-muted mt-2 mb-0">
+              Tip: Customers can find Account/Region/Org info inside Snowflake UI (top bar / account menu).
+            </p>
+          </div>
         </div>
       </div>
 
-      <div class="alert alert-info mt-3 mb-0">
-        &#128161; Ensure the Snowflake role has CREATE, ALTER, MERGE permissions.
-      </div>
     </div>
   </section>
 
-  <!-- DOMAIN FILTER -->
+  <!-- EXPORT WORKFLOW WITH SCREENSHOTS -->
   <section class="mb-5">
-    <div class="p-5 rounded-4 bg-white border">
-      <h2 style="font-weight:700;">Advanced Domain Filters</h2>
-      <p class="text-muted">
-        Export only the data you need
+    <div class="p-5 rounded-4 bg-white border"
+      style="box-shadow:0 12px 24px rgba(0,0,0,0.06);">
+      <h2 style="font-weight:700;">How export works (with screenshots)</h2>
+      <p class="text-muted mb-4">
+        Create an Export Query → choose model & columns → run export → verify in Snowflake
       </p>
 
-      <pre class="p-3 rounded-3 bg-light border mb-3">
-[('state','=','done')]
-      </pre>
+      <!-- Step 1 -->
+      <div class="row g-4 align-items-start mb-4">
+        <div class="col-md-6">
+          <div class="p-4 rounded-4 bg-light border" style="border-color:#e2e8f0 !important;">
+            <h5 class="mb-2">Step 1 — Create Export Query</h5>
+            <ol class="mb-0">
+              <li>Open <b>Snowflake Connector Pro → Manage Queries</b></li>
+              <li>Click <b>New</b></li>
+              <li>Set <b>Export Name</b> (this becomes the target table name)</li>
+            </ol>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="p-3 rounded-4 bg-white border" style="border-color:#e2e8f0 !important;">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <div class="fw-semibold">&#128247; Screenshot: Create Query</div>
+              <span class="badge bg-dark">img/02-query-form.png</span>
+            </div>
+            <img src="img/02-query-form.png" class="img-fluid rounded-3"
+                 alt="Create Export Query Screen" style="border:1px solid #e2e8f0;"/>
+          </div>
+        </div>
+      </div>
 
-      <pre class="p-3 rounded-3 bg-light border">
-[('company_id','=',1),('amount_total','&gt;',1000)]
-      </pre>
+      <!-- Step 2 -->
+      <div class="row g-4 align-items-start mb-4">
+        <div class="col-md-6 order-md-2">
+          <div class="p-4 rounded-4 bg-light border" style="border-color:#e2e8f0 !important;">
+            <h5 class="mb-2">Step 2 — Choose Model, Columns & Filters</h5>
+            <ul class="mb-0">
+              <li>Select the <b>Odoo Model</b> you want to export</li>
+              <li>Select the <b>Columns</b></li>
+              <li>(Optional) Add a <b>Domain Filter</b> to export only matching records</li>
+            </ul>
+            <div class="mt-3 p-3 rounded-3 bg-white border" style="border-color:#e2e8f0 !important;">
+              <div class="small text-muted">Example domain filter:</div>
+              <code>[('state','=','done')]</code>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 order-md-1">
+          <div class="p-3 rounded-4 bg-white border" style="border-color:#e2e8f0 !important;">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <div class="fw-semibold">&#128247; Screenshot: Columns & Filters</div>
+              <span class="badge bg-dark">img/02-query-form.png</span>
+            </div>
+            <img src="img/02-query-form.png" class="img-fluid rounded-3"
+                 alt="Columns and Filters" style="border:1px solid #e2e8f0;"/>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="row g-4 align-items-start mb-4">
+        <div class="col-md-6">
+          <div class="p-4 rounded-4 bg-light border" style="border-color:#e2e8f0 !important;">
+            <h5 class="mb-2">Step 3 — Run Export or Enable Automation</h5>
+            <ul class="mb-0">
+              <li>Click <b>Run Export</b> to export immediately</li>
+              <li>Enable <b>Incremental Auto Export</b> to schedule background sync</li>
+              <li>Set <b>Sync Interval (Minutes)</b></li>
+            </ul>
+            <div class="alert alert-success mt-3 mb-0">
+              ✅ Incremental sync exports only new/updated records automatically.
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="p-3 rounded-4 bg-white border" style="border-color:#e2e8f0 !important;">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <div class="fw-semibold">&#128247; Screenshot: Run Export</div>
+              <span class="badge bg-dark">img/03-run-export.png</span>
+            </div>
+            <img src="img/03-run-export.png" class="img-fluid rounded-3"
+                 alt="Run Export Button" style="border:1px solid #e2e8f0;"/>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="row g-4 align-items-start">
+        <div class="col-md-6 order-md-2">
+          <div class="p-4 rounded-4 bg-light border" style="border-color:#e2e8f0 !important;">
+            <h5 class="mb-2">Step 4 — Verify in Snowflake</h5>
+            <p class="mb-2">
+              After export, your table appears in Snowflake under:
+              <code>DATABASE.SCHEMA.TABLE</code>
+            </p>
+            <ul class="mb-0">
+              <li>Target table is auto-created if missing</li>
+              <li>Data is upserted using <b>MERGE</b> (no duplicates)</li>
+              <li>Staging tables are created temporarily and then removed</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 order-md-1">
+          <div class="p-3 rounded-4 bg-white border" style="border-color:#e2e8f0 !important;">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <div class="fw-semibold">&#128247; Screenshot: Snowflake Tables</div>
+              <span class="badge bg-dark">img/04-snowflake-tables.png</span>
+            </div>
+            <img src="img/04-snowflake-tables.png" class="img-fluid rounded-3"
+                 alt="Snowflake Tables View" style="border:1px solid #e2e8f0;"/>
+            <p class="small text-muted mt-2 mb-0">
+              Optional: add a second screenshot showing query results in Snowflake.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Optional Extra Screenshot -->
+      <div class="mt-4 p-3 rounded-4 bg-white border" style="border-color:#e2e8f0 !important;">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <div class="fw-semibold">&#128247; Optional Screenshot: Results</div>
+          <span class="badge bg-dark">img/05-snowflake-results.png</span>
+        </div>
+        <img src="img/05-snowflake-results.png" class="img-fluid rounded-3"
+             alt="Snowflake Query Results" style="border:1px solid #e2e8f0;"/>
+        <p class="small text-muted mt-2 mb-0">
+          Tip: Show <code>SELECT COUNT(*)</code> or a simple query to prove export worked.
+        </p>
+      </div>
+
     </div>
   </section>
 
@@ -238,3 +381,4 @@
 </div>
 
 </body>
+
