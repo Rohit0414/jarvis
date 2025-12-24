@@ -15,11 +15,6 @@
     radial-gradient(1000px 600px at 50% 120%, rgba(99, 102, 241, 0.12), transparent 60%);
 ">
 
-  <!-- TOP INFO BAR -->
-  <!-- <div style="padding: 20px; font-size: 0.9rem; color: #6b7280; font-weight: 600;">
-    Last updated: December 2025 | Version: 18.0.2.1.0 | Odoo 16 &#183; 17 &#183; 18
-  </div> -->
-
   <!-- HERO SECTION -->
   <header style="padding: 100px 20px 80px 20px; text-align: center; background-color: transparent;">
     <div style="max-width: 1000px; margin: 0 auto;">
@@ -164,13 +159,15 @@
   <!-- STEP 1: SETUP -->
   <section id="setup" style="padding: 100px 0; background-color: #ffffff;">
     <div class="container">
-      <div class="row align-items-center mb-5">
-        <div class="col-lg-7">
+      <div class="row mb-5">
+        <div class="col-12 text-center mb-5">
           <span style="color: #3b82f6; font-weight: 900; font-size: 14px; text-transform: uppercase;">Setup Connection</span>
           <h2 style="font-size: 42px; font-weight: 900; margin-top: 10px;">Step 1: Snowflake Setup</h2>
           <p style="font-size: 1.1rem; color: #4b5563;">Go to: <b>Settings &#8594; Snowflake Connector Pro</b></p>
-          
-          <div style="background-color: #f9fafb; border: 1px solid #e5e7eb; border-radius: 20px; padding: 30px; margin-bottom: 30px;">
+        </div>
+
+        <div class="col-12 mb-5">
+          <div style="background-color: #f9fafb; border: 1px solid #e5e7eb; border-radius: 20px; padding: 40px; max-width: 900px; margin: 0 auto;">
             <h6 style="font-weight: 800; margin-bottom: 15px;">Fill these fields:</h6>
             <ul style="list-style: none; padding: 0;">
               <li>&#183; <b>Account:</b> Your Snowflake Account ID</li>
@@ -180,32 +177,37 @@
               <li>&#183; <b>Role:</b> (Optional)</li>
             </ul>
           </div>
-
-          <div style="padding: 30px; background-color: #1e293b; color: #ffffff; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
-            <h6 style="font-weight: 800; color: #38bdf8; margin-bottom: 15px;">How to find your Account ID:</h6>
-            <p class="small opacity-75 mb-3">In Snowflake, run this query in a worksheet:</p>
-            <code style="color: #4ade80; display: block; background: #000; padding: 15px; border-radius: 10px; font-size: 14px;">SELECT CURRENT_ACCOUNT(), CURRENT_REGION(), CURRENT_ORGANIZATION_NAME();</code>
-            <p class="small mt-3 opacity-75"><b>Account field entry:</b> Combine them as <code>ACCOUNT.REGION</code> (e.g., <code>HN81816.ap-south-1</code>)</p>
-          </div>
         </div>
-        <div class="col-lg-5">
-           <p class="text-center fw-bold text-muted small">&#128247; Settings Screenshot</p>
-           <img src="./settings.png" style="width: 100%; border-radius: 20px; box-shadow: 0 40px 100px rgba(0,0,0,0.2); border: 1px solid #e5e7eb;">
+
+        <div class="col-12 text-center">
+           <p class="fw-bold text-muted small">&#128247; Settings Screenshot</p>
+           <img src="./settings.png" style="width: 100%; max-width: 1000px; border-radius: 20px; box-shadow: 0 40px 100px rgba(0,0,0,0.2); border: 1px solid #e5e7eb; margin-bottom: 60px;">
+        </div>
+
+        <div class="col-12">
+            <div style="padding: 40px; background-color: #1e293b; color: #ffffff; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.1); max-width: 900px; margin: 0 auto 60px;">
+                <h6 style="font-weight: 800; color: #38bdf8; margin-bottom: 15px;">How to find your Account ID:</h6>
+                <p class="small opacity-75 mb-3">In Snowflake, run this query in a worksheet:</p>
+                <code style="color: #4ade80; display: block; background: #000; padding: 15px; border-radius: 10px; font-size: 14px;">SELECT CURRENT_ACCOUNT(), CURRENT_REGION(), CURRENT_ORGANIZATION_NAME();</code>
+                <p class="small mt-3 opacity-75"><b>Account field entry:</b> Combine them as <code>ACCOUNT.REGION</code> (e.g., <code>HN81816.ap-south-1</code>)</p>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="row g-4 justify-content-center">
+                <div class="col-12 text-center">
+                    <p class="fw-bold text-muted small">&#128247; Finding Account query</p>
+                    <img src="./snowaccount.png" style="width: 100%; max-width: 900px; border-radius: 15px; border: 1px solid #e5e7eb; margin-bottom: 40px;">
+                </div>
+                <div class="col-12 text-center">
+                    <p class="fw-bold text-muted small">&#128247; Username location</p>
+                    <img src="./username.png" style="width: 100%; max-width: 900px; border-radius: 15px; border: 1px solid #e5e7eb;">
+                </div>
+            </div>
         </div>
       </div>
 
-      <div class="row g-4 mt-5">
-        <div class="col-md-6">
-          <p class="text-center fw-bold text-muted small">&#128247; Finding Account query</p>
-          <img src="./snowaccount.png" style="width: 100%; border-radius: 15px; border: 1px solid #e5e7eb;">
-        </div>
-        <div class="col-md-6">
-          <p class="text-center fw-bold text-muted small">&#128247; Username location</p>
-          <img src="./username.png" style="width: 100%; border-radius: 15px; border: 1px solid #e5e7eb;">
-        </div>
-      </div>
-
-      <div class="mt-5 p-4 rounded-4" style="background-color: #f8fafc; border: 1px solid #e5e7eb;">
+      <div class="mt-5 p-4 rounded-4" style="background-color: #f8fafc; border: 1px solid #e5e7eb; max-width: 900px; margin: 0 auto;">
         <h6 style="font-weight: 800; margin-bottom: 10px;">Simple meaning of Snowflake words:</h6>
         <div class="row g-3 small text-muted">
           <div class="col-md-6"><b>Warehouse:</b> The engine used to run work.</div>
@@ -215,7 +217,7 @@
         </div>
       </div>
 
-      <div style="margin-top: 20px; padding: 20px; background-color: #f0fdf4; border-radius: 15px; border: 1px solid #10b981;">
+      <div style="margin-top: 20px; padding: 20px; background-color: #f0fdf4; border-radius: 15px; border: 1px solid #10b981; max-width: 900px; margin-left: auto; margin-right: auto;">
         <p style="margin:0; font-size: 14px;">&#9989; <b>Success Tip:</b> Ensure your Snowflake user can create tables. Ask your admin if you hit permission errors.</p>
       </div>
     </div>
@@ -231,35 +233,41 @@
       </div>
 
       <div class="row g-5">
-        <div class="col-lg-6">
-          <h5 style="font-weight: 800; margin-bottom: 20px;">What is an Export?</h5>
-          <p class="mb-4">It is like a saved &#8220;export button&#8221;. You can create many exports, one for each model you want.</p>
-          
-          <div style="background-color: #ffffff; border: 1px solid #e5e7eb; border-radius: 20px; padding: 30px; margin-bottom: 30px;">
-            <h6 style="font-weight: 800; margin-bottom: 15px;">Simple meaning of fields:</h6>
-            <ul style="list-style: none; padding: 0;" class="small text-muted">
-              <li style="margin-bottom: 10px;">&#183; <b>Export Name:</b> Snowflake table name (e.g., <code>sale_order</code>).</li>
-              <li style="margin-bottom: 10px;">&#183; <b>Odoo Model:</b> Which model to export.</li>
-              <li style="margin-bottom: 10px;">&#183; <b>Columns:</b> Which fields you want.</li>
-              <li style="margin-bottom: 10px;">&#183; <b>Auto Export:</b> Toggle automatic sync.</li>
-              <li>&#183; <b>Interval:</b> Run frequency in minutes.</li>
-            </ul>
+        <div class="col-12 text-center">
+          <div style="max-width: 900px; margin: 0 auto; text-align: left;">
+              <h5 style="font-weight: 800; margin-bottom: 20px;">What is an Export?</h5>
+              <p class="mb-4">It is like a saved &#8220;export button&#8221;. You can create many exports, one for each model you want.</p>
+              
+              <div style="background-color: #ffffff; border: 1px solid #e5e7eb; border-radius: 20px; padding: 30px; margin-bottom: 30px;">
+                <h6 style="font-weight: 800; margin-bottom: 15px;">Simple meaning of fields:</h6>
+                <ul style="list-style: none; padding: 0;" class="small text-muted">
+                  <li style="margin-bottom: 10px;">&#183; <b>Export Name:</b> Snowflake table name (e.g., <code>sale_order</code>).</li>
+                  <li style="margin-bottom: 10px;">&#183; <b>Odoo Model:</b> Which model to export.</li>
+                  <li style="margin-bottom: 10px;">&#183; <b>Columns:</b> Which fields you want.</li>
+                  <li style="margin-bottom: 10px;">&#183; <b>Auto Export:</b> Toggle automatic sync.</li>
+                  <li>&#183; <b>Interval:</b> Run frequency in minutes.</li>
+                </ul>
+              </div>
           </div>
-          
-          <h6 style="font-weight: 800;">What columns should you pick?</h6>
-          <p class="small text-muted mb-0">Pick only columns you really need. This makes export faster. For sales: customer, date, total. For inventory: product, quantity.</p>
         </div>
-        <div class="col-lg-6 text-center">
+
+        <div class="col-12 text-center">
            <p class="fw-bold text-muted small">&#128247; Export Form</p>
-           <img src="./export.png" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); margin-bottom: 20px; border: 1px solid #e5e7eb;">
+           <img src="./export.png" style="width: 100%; max-width: 1000px; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); margin-bottom: 40px; border: 1px solid #e5e7eb;">
+           
+           <div style="max-width: 900px; margin: 0 auto 40px; text-align: left;">
+                <h6 style="font-weight: 800;">What columns should you pick?</h6>
+                <p class="small text-muted mb-0">Pick only columns you really need. This makes export faster. For sales: customer, date, total. For inventory: product, quantity.</p>
+           </div>
+
            <p class="fw-bold text-muted small">&#128247; Selecting Columns</p>
-           <img src="./columns.png" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); border: 1px solid #e5e7eb;">
+           <img src="./columns.png" style="width: 100%; max-width: 1000px; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); border: 1px solid #e5e7eb;">
         </div>
       </div>
 
       <div id="domain" style="margin-top: 80px; padding: 50px; background-color: #ffffff; border-radius: 30px; border: 1px solid #e5e7eb;">
-        <h3 style="font-weight: 900; margin-bottom: 20px;">Domain Filter <span style="font-weight: 400; color: #6b7280;">(Optional)</span></h3>
-        <p class="text-muted mb-4">A domain filter means: &#8220;export only some rows&#8221;. If you don&#8217;t add a filter, it exports everything.</p>
+        <h3 style="font-weight: 900; margin-bottom: 20px; text-align: center;">Domain Filter <span style="font-weight: 400; color: #6b7280;">(Optional)</span></h3>
+        <p class="text-muted mb-4 text-center">A domain filter means: &#8220;export only some rows&#8221;. If you don&#8217;t add a filter, it exports everything.</p>
         
         <div class="row g-4">
           <div class="col-md-6">
@@ -284,7 +292,7 @@
         </div>
       </div>
 
-      <div style="margin-top: 30px; padding: 25px; background-color: #fffbeb; border-radius: 15px; border: 1px solid #fcd34d;">
+      <div style="margin-top: 30px; padding: 25px; background-color: #fffbeb; border-radius: 15px; border: 1px solid #fcd34d; max-width: 900px; margin-left: auto; margin-right: auto;">
         <h6 style="font-weight: 800; margin-bottom: 5px;">&#128203; Pre-Export Checklist:</h6>
         <p style="margin:0; font-size: 14px;">Did you pick the model? Selected columns? Connection saved? If yes, click Run!</p>
       </div>
@@ -294,29 +302,34 @@
   <!-- STEP 3: AUTOMATION -->
   <section id="incremental" style="padding: 100px 0; background-color: #ffffff;">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
+      <div class="row">
+        <div class="col-12 text-center mb-5">
           <span style="color: #3b82f6; font-weight: 900; font-size: 14px; text-transform: uppercase;">Step 03</span>
           <h2 style="font-size: 42px; font-weight: 900; margin-top: 10px;">Auto Export & Sync</h2>
           <p style="font-size: 1.1rem; color: #4b5563;">This helps Snowflake stay updated automatically without manual intervention.</p>
-          
-          <div style="background-color: #f1f5f9; border-radius: 20px; padding: 35px; margin-top: 30px;">
+        </div>
+
+        <div class="col-12">
+          <div style="background-color: #f1f5f9; border-radius: 20px; padding: 40px; margin-bottom: 60px; max-width: 900px; margin-left: auto; margin-right: auto;">
             <h5 style="font-weight: 800;">What is &#8220;incremental&#8221; sync?</h5>
             <p class="small text-muted">It means: export only what is new or changed. Old rows are not re-sent, saving credits.</p>
             <hr>
             <h5 style="font-weight: 800;">Interval Minutes:</h5>
             <p class="small text-muted">How often auto export runs. Try 15 minutes for normal use, or 30-60 for huge databases.</p>
           </div>
-          
-          <div style="margin-top: 20px; padding: 20px; background-color: #eff6ff; border-radius: 15px; border: 1px solid #3b82f6;">
-            <p style="margin:0; font-size: 14px;">&#128161; <b>Manual Run:</b> You can always click &#8220;Run Export&#8221; manually even if auto-export is OFF.</p>
-          </div>
         </div>
-        <div class="col-lg-6">
-           <p class="text-center fw-bold text-muted small">&#128247; Automation Toggle</p>
-           <img src="./autoexport.png" style="width: 100%; border-radius: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.1); border: 1px solid #e5e7eb; margin-bottom: 20px;">
-           <p class="text-center fw-bold text-muted small">&#128247; Run Export Action</p>
-           <img src="./runexport.png" style="width: 100%; border-radius: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.1); border: 1px solid #e5e7eb;">
+
+        <div class="col-12 text-center">
+           <p class="fw-bold text-muted small">&#128247; Automation Toggle</p>
+           <img src="./autoexport.png" style="width: 100%; max-width: 1000px; border-radius: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.1); border: 1px solid #e5e7eb; margin-bottom: 40px;">
+           <p class="fw-bold text-muted small">&#128247; Run Export Action</p>
+           <img src="./runexport.png" style="width: 100%; max-width: 1000px; border-radius: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.1); border: 1px solid #e5e7eb; margin-bottom: 40px;">
+        </div>
+
+        <div class="col-12">
+            <div style="padding: 20px; background-color: #eff6ff; border-radius: 15px; border: 1px solid #3b82f6; max-width: 900px; margin: 0 auto;">
+                <p style="margin:0; font-size: 14px; text-align: center;">&#128161; <b>Manual Run:</b> You can always click &#8220;Run Export&#8221; manually even if auto-export is OFF.</p>
+            </div>
         </div>
       </div>
     </div>
@@ -332,8 +345,8 @@
       </div>
 
       <div class="row g-5">
-        <div class="col-lg-6">
-          <div style="background-color: #ffffff; border: 1px solid #e5e7eb; border-radius: 25px; padding: 40px; box-shadow: 0 20px 50px rgba(0,0,0,0.05);">
+        <div class="col-12">
+          <div style="background-color: #ffffff; border: 1px solid #e5e7eb; border-radius: 25px; padding: 40px; box-shadow: 0 20px 50px rgba(0,0,0,0.05); max-width: 900px; margin: 0 auto;">
             <h5 style="font-weight: 800; margin-bottom: 20px;">Where is the data?</h5>
             <p class="small text-muted mb-4">Table name is your Export Name. It is created automatically in your Database and Schema on the first run.</p>
             
@@ -349,19 +362,18 @@
             </ul>
           </div>
         </div>
-        <div class="col-lg-6 text-center">
+
+        <div class="col-12 text-center">
            <p class="fw-bold text-muted small">&#128247; Table List</p>
-           <img src="./tablelist.png" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); margin-bottom: 20px; border: 1px solid #e5e7eb;">
+           <img src="./tablelist.png" style="width: 100%; max-width: 1000px; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); margin-bottom: 40px; border: 1px solid #e5e7eb;">
            <p class="fw-bold text-muted small">&#128247; Database Preview</p>
-           <img src="./datapreview.png" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); border: 1px solid #e5e7eb;">
-        </div>
-        <div class="col-lg-12">
-            <p class="text-center fw-bold text-muted small">&#128247; Run Worksheet Query</p>
-            <img src="./worksheetquery.png" style="width: 100%; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); border: 1px solid #e5e7eb;">
+           <img src="./datapreview.png" style="width: 100%; max-width: 1000px; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); margin-bottom: 40px; border: 1px solid #e5e7eb;">
+           <p class="fw-bold text-muted small">&#128247; Run Worksheet Query</p>
+           <img src="./worksheetquery.png" style="width: 100%; max-width: 1000px; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.1); border: 1px solid #e5e7eb;">
         </div>
       </div>
 
-      <div style="margin-top: 50px; padding: 35px; background-color: #ffffff; border-radius: 20px; border: 1px solid #e5e7eb;">
+      <div style="margin-top: 50px; padding: 35px; background-color: #ffffff; border-radius: 20px; border: 1px solid #e5e7eb; max-width: 900px; margin: 0 auto;">
         <h6 style="font-weight: 800; margin-bottom: 10px;">What happens inside?</h6>
         <p class="small text-muted mb-0">The module sends data to a temporary table &#8594; updates the main table safely &#8594; deletes the temp table. Exporting again is safe; it only syncs changes.</p>
       </div>
@@ -377,8 +389,8 @@
       </div>
 
       <div class="row g-5">
-        <div class="col-lg-7">
-          <div style="background-color: #ffffff; padding: 40px; border-radius: 25px; box-shadow: 0 20px 40px rgba(159,18,57,0.1); border: 1px solid #fecaca;">
+        <div class="col-12">
+          <div style="background-color: #ffffff; padding: 40px; border-radius: 25px; box-shadow: 0 20px 40px rgba(159,18,57,0.1); border: 1px solid #fecaca; max-width: 900px; margin: 0 auto;">
             <h6 style="font-weight: 800; margin-bottom: 20px;">Checklist:</h6>
             <ul class="text-muted">
               <li>Account ID correct? (ID.REGION)</li>
@@ -391,9 +403,9 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-5 text-center">
+        <div class="col-12 text-center">
            <p class="fw-bold text-muted small">&#128247; Error Log Check</p>
-           <img src="./charts.png" style="width: 100%; border-radius: 20px; border: 1px solid #fecaca; filter: grayscale(1); opacity: 0.6;">
+           <img src="./charts.png" style="width: 100%; max-width: 800px; border-radius: 20px; border: 1px solid #fecaca; filter: grayscale(1); opacity: 0.6;">
         </div>
       </div>
     </div>
