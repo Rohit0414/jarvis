@@ -4,39 +4,39 @@
 <!-- MAIN CONTAINER -->
 <section style="
   background-color: #ffffff; 
-  color: #1f2937; 
+  color: #334155; 
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.7; 
   margin: 0; 
   padding: 0;
   background-image:
-    radial-gradient(circle at 90% -20%, rgba(59, 130, 246, 0.12), transparent 50%),
-    radial-gradient(circle at -20% 30%, rgba(45, 212, 191, 0.08), transparent 50%);
+    radial-gradient(circle at 90% -20%, rgba(79, 70, 229, 0.12), transparent 50%),
+    radial-gradient(circle at -20% 30%, rgba(139, 92, 246, 0.08), transparent 50%);
 ">
 
   <!-- HERO SECTION -->
   <header style="padding: 110px 20px 70px 20px; text-align: center;">
     <div style="margin: 0 auto;">
-      <h1 style="font-size: clamp(3.2rem, 7vw, 4.6rem); line-height: 1.1; font-weight: 900; letter-spacing: -0.05em; margin: 0 0 26px 0; color: #0f172a;"> 
-        <span style="background: linear-gradient(90deg, #ef4444, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Amazon Redshift</span> Connector
+      <h1 style="font-size: clamp(3.2rem, 7vw, 4.6rem); line-height: 1.1; font-weight: 900; letter-spacing: -0.05em; margin: 0 0 26px 0; color: #1e1b4b;"> 
+        <span style="background: linear-gradient(90deg, #6366f1, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Amazon Redshift</span> Connector
       </h1>
       
-      <p style="font-size: 1.25rem; color: #4b5563; max-width: 980px; margin: 0 auto 44px; line-height: 1.85;">
+      <p style="font-size: 1.25rem; color: #475569; max-width: 980px; margin: 0 auto 44px; line-height: 1.85;">
         Export your Odoo data to <b>Amazon Redshift</b> using an <b>S3 bucket</b> pipeline. Get fast analytics, dashboards, and BI reporting.
-        <b>Odoo runs operations</b> — <b>Redshift runs analytics</b>.
+        <b>Odoo runs operations</b> &#8212; <b>Redshift runs analytics</b>.
       </p>
 
       <div class="d-flex flex-wrap justify-content-center gap-2 mb-5">
-        <span style="background-color: #10b981; color: white; padding: 10px 24px; border-radius: 100px; font-weight: 800; font-size: 14px; box-shadow: 0 4px 15px rgba(16,185,129,0.2);">Incremental Sync</span>
-        <span style="background-color: #ef4444; color: white; padding: 10px 24px; border-radius: 100px; font-weight: 800; font-size: 14px; box-shadow: 0 4px 15px rgba(239,68,68,0.2);">S3 → COPY → MERGE</span>
+        <span style="background-color: #4f46e5; color: white; padding: 10px 24px; border-radius: 100px; font-weight: 800; font-size: 14px; box-shadow: 0 4px 15px rgba(79,70,229,0.2);">Incremental Sync</span>
+        <span style="background-color: #7c3aed; color: white; padding: 10px 24px; border-radius: 100px; font-weight: 800; font-size: 14px; box-shadow: 0 4px 15px rgba(124,58,237,0.2);">S3 &#8594; COPY &#8594; MERGE</span>
         <span style="background-color: #1e293b; color: white; padding: 10px 24px; border-radius: 100px; font-weight: 800; font-size: 14px;">Auto Create Tables</span>
         <span style="background-color: #64748b; color: white; padding: 10px 24px; border-radius: 100px; font-weight: 800; font-size: 14px;">Auto Schedule</span>
       </div>
 
-      <div style="background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 32px; padding: 38px; max-width: 920px; margin: 0 auto; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.1);">
-        <h5 style="font-weight: 900; color: #0f172a; margin-bottom: 14px;">✅ Super Simple Example</h5>
+      <div style="background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 32px; padding: 38px; max-width: 920px; margin: 0 auto; box-shadow: 0 40px 100px -20px rgba(79,70,229,0.1);">
+        <h5 style="font-weight: 900; color: #1e1b4b; margin-bottom: 14px;">&#9989; Super Simple Example</h5>
         <p style="margin: 0; font-size: 1.1rem; color: #475569;">
-          Export <b>Sales Orders</b> from Odoo → the connector uploads a <b>CSV.GZ</b> to <b>S3</b> → Redshift <b>COPY</b> loads it →
+          Export <b>Sales Orders</b> from Odoo &#8594; the connector uploads a <b>CSV.GZ</b> to <b>S3</b> &#8594; Redshift <b>COPY</b> loads it &#8594;
           you open <b>Redshift Query Editor</b> and run <b>SELECT</b> to see the table.
         </p>
       </div>
@@ -50,16 +50,16 @@
   <!-- QUICK NAV -->
   <nav style="position: sticky; top: 0; z-index: 100; background-color: rgba(255,255,255,0.86); backdrop-filter: blur(12px); border-bottom: 1px solid #e2e8f0; padding: 14px 0;">
     <div class="container d-flex justify-content-center gap-3 flex-wrap">
-      <a href="#benefits" style="text-decoration: none; color: #1e293b; font-weight: 800; font-size: 13px;">Benefits</a>
-      <a href="#how" style="text-decoration: none; color: #1e293b; font-weight: 800; font-size: 13px;">How it Works</a>
-      <a href="#aws" style="text-decoration: none; color: #1e293b; font-weight: 800; font-size: 13px;">AWS Setup</a>
-      <a href="#redshift" style="text-decoration: none; color: #1e293b; font-weight: 800; font-size: 13px;">Redshift Setup</a>
-      <a href="#odoo" style="text-decoration: none; color: #1e293b; font-weight: 800; font-size: 13px;">Odoo Setup</a>
-      <a href="#export" style="text-decoration: none; color: #1e293b; font-weight: 800; font-size: 13px;">Create Export</a>
-      <a href="#verify" style="text-decoration: none; color: #1e293b; font-weight: 800; font-size: 13px;">Verify in Query Editor</a>
-      <a href="#autosync" style="text-decoration: none; color: #1e293b; font-weight: 800; font-size: 13px;">Auto Sync</a>
-      <a href="#security" style="text-decoration: none; color: #1e293b; font-weight: 800; font-size: 13px;">Security</a>
-      <a href="#troubleshoot" style="text-decoration: none; color: #dc2626; font-weight: 900; font-size: 13px;">Fix Problems</a>
+      <a href="#benefits" style="text-decoration: none; color: #4338ca; font-weight: 800; font-size: 13px;">Benefits</a>
+      <a href="#how" style="text-decoration: none; color: #4338ca; font-weight: 800; font-size: 13px;">How it Works</a>
+      <a href="#aws" style="text-decoration: none; color: #4338ca; font-weight: 800; font-size: 13px;">AWS Setup</a>
+      <a href="#redshift" style="text-decoration: none; color: #4338ca; font-weight: 800; font-size: 13px;">Redshift Setup</a>
+      <a href="#odoo" style="text-decoration: none; color: #4338ca; font-weight: 800; font-size: 13px;">Odoo Setup</a>
+      <a href="#export" style="text-decoration: none; color: #4338ca; font-weight: 800; font-size: 13px;">Create Export</a>
+      <a href="#verify" style="text-decoration: none; color: #4338ca; font-weight: 800; font-size: 13px;">Verify in Query Editor</a>
+      <a href="#autosync" style="text-decoration: none; color: #4338ca; font-weight: 800; font-size: 13px;">Auto Sync</a>
+      <a href="#security" style="text-decoration: none; color: #4338ca; font-weight: 800; font-size: 13px;">Security</a>
+      <a href="#troubleshoot" style="text-decoration: none; color: #b91c1c; font-weight: 900; font-size: 13px;">Fix Problems</a>
     </div>
   </nav>
 
@@ -67,16 +67,16 @@
   <section id="benefits" style="padding: 95px 0; background-color: #ffffff;">
     <div class="container">
       <div class="text-center mb-5">
-        <h2 style="font-size: 42px; font-weight: 900; color: #0f172a;">What does this connector do?</h2>
+        <h2 style="font-size: 42px; font-weight: 900; color: #1e1b4b;">What does this connector do?</h2>
         <p style="color: #64748b; font-size: 1.2rem; max-width: 920px; margin: 0 auto;">
-          It connects <b>Odoo → S3 → Amazon Redshift</b> so your Odoo data becomes analytics-ready tables in Redshift.
+          It connects <b>Odoo &#8594; S3 &#8594; Amazon Redshift</b> so your Odoo data becomes analytics-ready tables in Redshift.
         </p>
       </div>
 
       <div class="row g-4">
         <div class="col-md-6">
-          <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 24px; padding: 38px; height: 100%;">
-            <h4 style="font-weight: 900; margin-bottom: 16px;">🚀 Export Any Model</h4>
+          <div style="background-color: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 24px; padding: 38px; height: 100%;">
+            <h4 style="font-weight: 900; margin-bottom: 16px; color: #4338ca;">&#128640; Export Any Model</h4>
             <p class="mb-2">Export any Odoo model (standard or custom), for example:</p>
             <ul style="color: #4b5563; margin-bottom: 0;">
               <li>Sales Orders, Invoices, Customers</li>
@@ -87,8 +87,8 @@
         </div>
 
         <div class="col-md-6">
-          <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 24px; padding: 38px; height: 100%;">
-            <h4 style="font-weight: 900; margin-bottom: 16px;">🔁 Incremental (New + Changed)</h4>
+          <div style="background-color: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 24px; padding: 38px; height: 100%;">
+            <h4 style="font-weight: 900; margin-bottom: 16px; color: #4338ca;">&#128257; Incremental (New + Changed)</h4>
             <p style="color: #4b5563; margin-bottom: 0;">
               It exports only new rows and updated rows using a cursor (like <code>write_date</code> + <code>id</code>).
               This saves time, cost, and avoids duplicate rows.
@@ -97,8 +97,8 @@
         </div>
 
         <div class="col-md-6">
-          <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 24px; padding: 38px; height: 100%;">
-            <h4 style="font-weight: 900; margin-bottom: 16px;">⚡ Fast Loading with S3 COPY</h4>
+          <div style="background-color: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 24px; padding: 38px; height: 100%;">
+            <h4 style="font-weight: 900; margin-bottom: 16px; color: #4338ca;">&#9889; Fast Loading with S3 COPY</h4>
             <p style="color: #4b5563; margin-bottom: 0;">
               Instead of slow row-by-row inserts, it uploads a compressed CSV to S3 and uses Redshift <b>COPY</b>
               for high-speed ingestion.
@@ -107,8 +107,8 @@
         </div>
 
         <div class="col-md-6">
-          <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 24px; padding: 38px; height: 100%;">
-            <h4 style="font-weight: 900; margin-bottom: 16px;">⏱ Auto Export (Schedule)</h4>
+          <div style="background-color: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 24px; padding: 38px; height: 100%;">
+            <h4 style="font-weight: 900; margin-bottom: 16px; color: #4338ca;">&#9201; Auto Export (Schedule)</h4>
             <p style="color: #4b5563; margin-bottom: 0;">
               Enable Auto Export and choose an interval. The connector resumes from the last cursor.
               It runs in batches and stops safely when the time limit is reached.
@@ -117,9 +117,9 @@
         </div>
       </div>
 
-      <div style="margin-top: 40px; padding: 38px; background-color: #fff7ed; border-radius: 24px; border: 1px solid #fed7aa;">
-        <h5 style="font-weight: 900; color: #9a3412;">Why Redshift?</h5>
-        <p style="margin: 0; color: #9a3412;">
+      <div style="margin-top: 40px; padding: 38px; background-color: #fffbeb; border-radius: 24px; border: 1px solid #fde68a;">
+        <h5 style="font-weight: 900; color: #92400e;">Why Redshift?</h5>
+        <p style="margin: 0; color: #92400e;">
           Redshift is built for analytics at scale. Use it for BI dashboards, finance reporting, cohort analysis, and large joins that are slow in OLTP databases.
         </p>
       </div>
@@ -130,29 +130,29 @@
   <section id="how" style="padding: 95px 0; background-color: #f8fafc; border-top: 1px solid #e2e8f0;">
     <div class="container">
       <div class="text-center mb-5">
-        <h2 style="font-size: 36px; font-weight: 900;">How it works (Odoo → S3 → Redshift)</h2>
+        <h2 style="font-size: 36px; font-weight: 900; color: #1e1b4b;">How it works (Odoo &#8594; S3 &#8594; Redshift)</h2>
         <p style="color: #64748b;">No manual SQL needed. The connector handles staging, COPY, and MERGE.</p>
       </div>
 
       <div class="row g-4 text-center mb-5">
         <div class="col-md-3">
-          <div style="font-size: 42px; margin-bottom: 10px;">🪣</div>
-          <h6 style="font-weight: 900;">1) Upload to S3</h6>
+          <div style="font-size: 42px; margin-bottom: 10px;">&#129667;</div>
+          <h6 style="font-weight: 900; color: #4338ca;">1) Upload to S3</h6>
           <p class="small text-muted">Odoo creates CSV.GZ and uploads to your bucket</p>
         </div>
         <div class="col-md-3">
-          <div style="font-size: 42px; margin-bottom: 10px;">📥</div>
-          <h6 style="font-weight: 900;">2) COPY to staging</h6>
+          <div style="font-size: 42px; margin-bottom: 10px;">&#128229;</div>
+          <h6 style="font-weight: 900; color: #4338ca;">2) COPY to staging</h6>
           <p class="small text-muted">Redshift reads that S3 file using an IAM Role</p>
         </div>
         <div class="col-md-3">
-          <div style="font-size: 42px; margin-bottom: 10px;">🔁</div>
-          <h6 style="font-weight: 900;">3) MERGE to final</h6>
+          <div style="font-size: 42px; margin-bottom: 10px;">&#128257;</div>
+          <h6 style="font-weight: 900; color: #4338ca;">3) MERGE to final</h6>
           <p class="small text-muted">Updates existing rows and inserts new rows</p>
         </div>
         <div class="col-md-3">
-          <div style="font-size: 42px; margin-bottom: 10px;">🧹</div>
-          <h6 style="font-weight: 900;">4) Cleanup + Cursor</h6>
+          <div style="font-size: 42px; margin-bottom: 10px;">&#129529;</div>
+          <h6 style="font-weight: 900; color: #4338ca;">4) Cleanup + Cursor</h6>
           <p class="small text-muted">Drops staging & saves last_sync/last_id for next run</p>
         </div>
       </div>
@@ -160,7 +160,7 @@
       <div class="row g-4">
         <div class="col-md-6">
           <div style="background-color: #ffffff; padding: 34px; border-radius: 24px; border: 1px solid #e2e8f0; height: 100%;">
-            <h6 style="font-weight: 900; margin-bottom: 12px;">Where is the data stored?</h6>
+            <h6 style="font-weight: 900; margin-bottom: 12px; color: #1e1b4b;">Where is the data stored?</h6>
             <ul class="small text-muted mb-0">
               <li><b>Final analytics table</b> is in <b>Redshift</b> (Query Editor shows it).</li>
               <li><b>S3 files</b> are usually <b>temporary</b> (optional keep/delete).</li>
@@ -170,18 +170,18 @@
         </div>
         <div class="col-md-6">
           <div style="background-color: #ffffff; padding: 34px; border-radius: 24px; border: 1px solid #e2e8f0; height: 100%;">
-            <h6 style="font-weight: 900; margin-bottom: 12px;">Why you may not see files in S3?</h6>
+            <h6 style="font-weight: 900; margin-bottom: 12px; color: #1e1b4b;">Why you may not see files in S3?</h6>
             <p class="small text-muted mb-0">
               By default, many setups delete S3 files after COPY to reduce storage and keep data private.
-              If you want to keep them, enable a “Keep S3 files” option (or ask your admin to disable auto-delete).
+              If you want to keep them, enable a &#8220;Keep S3 files&#8221; option (or ask your admin to disable auto-delete).
             </p>
           </div>
         </div>
       </div>
 
-      <div style="margin-top: 32px; padding: 18px 22px; background-color: #eff6ff; border-radius: 16px; border: 1px solid #bfdbfe;">
-        <div style="color: #1e40af; font-weight: 800;">Pro Tip</div>
-        <div style="color: #1e40af;">
+      <div style="margin-top: 32px; padding: 18px 22px; background-color: #eef2ff; border-radius: 16px; border: 1px solid #c7d2fe;">
+        <div style="color: #3730a3; font-weight: 800;">Pro Tip</div>
+        <div style="color: #3730a3;">
           Test first with a smaller model like <code>res.partner</code> or <code>product.product</code>, then move to large tables.
         </div>
       </div>
@@ -191,8 +191,8 @@
   <!-- AWS SETUP -->
   <section id="aws" style="padding: 95px 0; background-color: #ffffff;">
     <div class="container">
-      <span style="color: #ef4444; font-weight: 900; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">AWS Setup</span>
-      <h2 style="font-size: 42px; font-weight: 900; margin: 10px 0 18px;">Step 1: Create S3 Bucket + IAM Permissions</h2>
+      <span style="color: #6366f1; font-weight: 900; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">AWS Setup</span>
+      <h2 style="font-size: 42px; font-weight: 900; margin: 10px 0 18px; color: #1e1b4b;">Step 1: Create S3 Bucket + IAM Permissions</h2>
       <p style="font-size: 1.1rem; color: #4b5563; margin-bottom: 34px;">
         You need an S3 bucket where Odoo uploads batches, and an IAM Role so Redshift can read those files for COPY.
       </p>
@@ -200,9 +200,9 @@
       <div class="row g-4">
         <div class="col-lg-6">
           <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 24px; padding: 34px; height: 100%;">
-            <h5 style="font-weight: 900; margin-bottom: 14px;">1A) Create an S3 bucket</h5>
+            <h5 style="font-weight: 900; margin-bottom: 14px; color: #4338ca;">1A) Create an S3 bucket</h5>
             <ol style="color: #475569; margin-bottom: 0;">
-              <li>Open AWS Console → search <b>S3</b></li>
+              <li>Open AWS Console &#8594; search <b>S3</b></li>
               <li>Click <b>Create bucket</b></li>
               <li>Choose a name (example: <code>niyu-redshift-odoo-exports</code>)</li>
               <li>Pick a region (example: <code>ap-south-1</code>)</li>
@@ -211,17 +211,17 @@
             </ol>
 
             <div style="margin-top: 18px; padding: 14px 16px; border-radius: 14px; border: 1px dashed #cbd5e1; background: #ffffff;">
-              <div style="font-weight: 800; color: #0f172a;">📌 Where to find your bucket later?</div>
-              <div class="small text-muted">AWS Console → S3 → Buckets → click your bucket name</div>
+              <div style="font-weight: 800; color: #0f172a;">&#128204; Where to find your bucket later?</div>
+              <div class="small text-muted">AWS Console &#8594; S3 &#8594; Buckets &#8594; click your bucket name</div>
             </div>
           </div>
         </div>
 
         <div class="col-lg-6">
           <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 24px; padding: 34px; height: 100%;">
-            <h5 style="font-weight: 900; margin-bottom: 14px;">1B) Create IAM Role for Redshift COPY</h5>
+            <h5 style="font-weight: 900; margin-bottom: 14px; color: #4338ca;">1B) Create IAM Role for Redshift COPY</h5>
             <ol style="color: #475569; margin-bottom: 0;">
-              <li>AWS Console → search <b>IAM</b> → <b>Roles</b></li>
+              <li>AWS Console &#8594; search <b>IAM</b> &#8594; <b>Roles</b></li>
               <li>Click <b>Create role</b></li>
               <li>Trusted entity: <b>AWS service</b></li>
               <li>Use case: select <b>Redshift</b> (or Redshift Serverless)</li>
@@ -230,8 +230,8 @@
             </ol>
 
             <div style="margin-top: 18px; padding: 14px 16px; border-radius: 14px; border: 1px dashed #cbd5e1; background: #ffffff;">
-              <div style="font-weight: 800; color: #0f172a;">📌 Where to find Role ARN?</div>
-              <div class="small text-muted">AWS Console → IAM → Roles → click role → copy <b>ARN</b> from Summary</div>
+              <div style="font-weight: 800; color: #0f172a;">&#128204; Where to find Role ARN?</div>
+              <div class="small text-muted">AWS Console &#8594; IAM &#8594; Roles &#8594; click role &#8594; copy <b>ARN</b> from Summary</div>
             </div>
           </div>
         </div>
@@ -240,18 +240,18 @@
       <!-- Screenshots -->
       <div class="row g-4 mt-4">
         <div class="col-12">
-          <p style="font-weight: 800; color: #64748b; font-size: 14px; margin: 0 0 12px; text-align: center;">📷 Screenshot: Create S3 Bucket</p>
-          <img src="./aws-s3-create-bucket.png" style="width: 100%; border-radius: 20px; box-shadow: 0 35px 80px rgba(0,0,0,0.12); border: 1px solid #e2e8f0;">
+          <p style="font-weight: 800; color: #64748b; font-size: 14px; margin: 0 0 12px; text-align: center;">&#128247; Screenshot: Create S3 Bucket</p>
+          <img src="./aws-s3-create-bucket.png" style="width: 100%; border-radius: 20px; box-shadow: 0 35px 80px rgba(79,70,229,0.12); border: 1px solid #e2e8f0;">
         </div>
         <div class="col-12">
-          <p style="font-weight: 800; color: #64748b; font-size: 14px; margin: 0 0 12px; text-align: center;">📷 Screenshot: Find IAM Role ARN</p>
-          <img src="./aws-iam-role-arn.png" style="width: 100%; border-radius: 20px; box-shadow: 0 35px 80px rgba(0,0,0,0.08); border: 1px solid #e2e8f0;">
+          <p style="font-weight: 800; color: #64748b; font-size: 14px; margin: 0 0 12px; text-align: center;">&#128247; Screenshot: Find IAM Role ARN</p>
+          <img src="./aws-iam-role-arn.png" style="width: 100%; border-radius: 20px; box-shadow: 0 35px 80px rgba(79,70,229,0.08); border: 1px solid #e2e8f0;">
         </div>
       </div>
 
       <!-- Minimal Policies -->
-      <div style="margin-top: 34px; padding: 34px; background-color: #0f172a; color: #ffffff; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.22);">
-        <h5 style="font-weight: 900; color: #f59e0b; margin-bottom: 10px;">Required IAM Permissions (simple)</h5>
+      <div style="margin-top: 34px; padding: 34px; background-color: #1e1b4b; color: #ffffff; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.22);">
+        <h5 style="font-weight: 900; color: #fbbf24; margin-bottom: 10px;">Required IAM Permissions (simple)</h5>
         <p class="small opacity-75 mb-3">
           You normally need <b>two permission sets</b>:
           <b>(1) Odoo uploader</b> to write files to S3,
@@ -261,7 +261,7 @@
         <div class="row g-3">
           <div class="col-lg-6">
             <div style="background: #000; padding: 18px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.12);">
-              <div style="font-weight: 900; color: #38bdf8; margin-bottom: 10px;">(A) Odoo uploader policy (PutObject)</div>
+              <div style="font-weight: 900; color: #818cf8; margin-bottom: 10px;">(A) Odoo uploader policy (PutObject)</div>
               <pre style="margin:0; white-space: pre-wrap; font-size: 12.5px; line-height: 1.55; color: #e5e7eb;">{
   "Version": "2012-10-17",
   "Statement": [
@@ -290,7 +290,7 @@
 
           <div class="col-lg-6">
             <div style="background: #000; padding: 18px; border-radius: 14px; border: 1px solid rgba(255,255,255,0.12);">
-              <div style="font-weight: 900; color: #38bdf8; margin-bottom: 10px;">(B) Redshift COPY role policy (GetObject)</div>
+              <div style="font-weight: 900; color: #818cf8; margin-bottom: 10px;">(B) Redshift COPY role policy (GetObject)</div>
               <pre style="margin:0; white-space: pre-wrap; font-size: 12.5px; line-height: 1.55; color: #e5e7eb;">{
   "Version": "2012-10-17",
   "Statement": [
@@ -314,17 +314,17 @@
         </div>
 
         <div style="margin-top: 14px;" class="small opacity-75">
-          If you enable “Delete S3 file after COPY”, add <code>s3:DeleteObject</code> permission to the Odoo uploader policy.
+          If you enable &#8220;Delete S3 file after COPY&#8221;, add <code>s3:DeleteObject</code> permission to the Odoo uploader policy.
         </div>
       </div>
     </div>
   </section>
 
   <!-- REDSHIFT SETUP -->
-  <section id="redshift" style="padding: 95px 0; background-color: #f8fafc; border-top: 1px solid #e2e8f0;">
+  <section id="redshift" style="padding: 95px 0; background-color: #f5f3ff; border-top: 1px solid #ddd6fe;">
     <div class="container">
-      <span style="color: #ef4444; font-weight: 900; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">Redshift Setup</span>
-      <h2 style="font-size: 42px; font-weight: 900; margin: 10px 0 18px;">Step 2: Create Redshift (Serverless) + Get Host/Namespace</h2>
+      <span style="color: #6366f1; font-weight: 900; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">Redshift Setup</span>
+      <h2 style="font-size: 42px; font-weight: 900; margin: 10px 0 18px; color: #1e1b4b;">Step 2: Create Redshift (Serverless) + Get Host/Namespace</h2>
       <p style="font-size: 1.1rem; color: #4b5563; margin-bottom: 34px;">
         You will copy the <b>Workgroup endpoint (host)</b>, choose a <b>database name</b>, and ensure the IAM Role is associated so COPY can read from S3.
       </p>
@@ -332,9 +332,9 @@
       <div class="row g-4">
         <div class="col-lg-6">
           <div style="background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 24px; padding: 34px; height: 100%;">
-            <h5 style="font-weight: 900; margin-bottom: 14px;">2A) Create Redshift Serverless (recommended)</h5>
+            <h5 style="font-weight: 900; margin-bottom: 14px; color: #4338ca;">2A) Create Redshift Serverless (recommended)</h5>
             <ol style="color: #475569; margin-bottom: 0;">
-              <li>AWS Console → search <b>Amazon Redshift</b></li>
+              <li>AWS Console &#8594; search <b>Amazon Redshift</b></li>
               <li>Choose <b>Redshift Serverless</b></li>
               <li>Create <b>Namespace</b> and <b>Workgroup</b></li>
               <li>Set admin user/password (or use existing)</li>
@@ -353,9 +353,9 @@
 
         <div class="col-lg-6">
           <div style="background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 24px; padding: 34px; height: 100%;">
-            <h5 style="font-weight: 900; margin-bottom: 14px;">2B) Where to find Host + Database</h5>
+            <h5 style="font-weight: 900; margin-bottom: 14px; color: #4338ca;">2B) Where to find Host + Database</h5>
             <ul style="color: #475569; margin-bottom: 0;">
-              <li><b>Host (endpoint):</b> Redshift Console → Serverless → <b>Workgroups</b> → click your workgroup → copy <b>Endpoint</b></li>
+              <li><b>Host (endpoint):</b> Redshift Console &#8594; Serverless &#8594; <b>Workgroups</b> &#8594; click your workgroup &#8594; copy <b>Endpoint</b></li>
               <li><b>Database name:</b> often <code>dev</code> by default (or what you set)</li>
               <li><b>Port:</b> typically <code>5439</code></li>
               <li><b>Username/Password:</b> from your Redshift admin/db user</li>
@@ -371,22 +371,22 @@
         </div>
       </div>
 
-      <div style="margin-top: 18px; padding: 22px; background-color: #fff7ed; border-radius: 18px; border: 1px solid #fed7aa;">
-        <div style="font-weight: 900; color: #9a3412; margin-bottom: 6px;">⚠️ Important: Associate IAM Role with Workgroup (COPY permission)</div>
-        <div style="color: #9a3412;">
-          If COPY fails with “role is not associated”, go to:
-          <b>Redshift Serverless → Workgroup → Permissions / IAM roles</b> and attach the same Role ARN you use for COPY.
+      <div style="margin-top: 18px; padding: 22px; background-color: #fffbeb; border-radius: 18px; border: 1px solid #fde68a;">
+        <div style="font-weight: 900; color: #92400e; margin-bottom: 6px;">&#9888; Important: Associate IAM Role with Workgroup (COPY permission)</div>
+        <div style="color: #92400e;">
+          If COPY fails with &#8220;role is not associated&#8221;, go to:
+          <b>Redshift Serverless &#8594; Workgroup &#8594; Permissions / IAM roles</b> and attach the same Role ARN you use for COPY.
         </div>
       </div>
 
       <!-- Screenshots -->
       <div class="row g-4 mt-4">
         <div class="col-12">
-          <p style="font-weight: 800; color: #64748b; font-size: 14px; margin: 0 0 12px; text-align: center;">📷 Screenshot: Workgroup Endpoint (Host)</p>
+          <p style="font-weight: 800; color: #64748b; font-size: 14px; margin: 0 0 12px; text-align: center;">&#128247; Screenshot: Workgroup Endpoint (Host)</p>
           <img src="./redshift-workgroup-endpoint.png" style="width: 100%; border-radius: 20px; box-shadow: 0 35px 80px rgba(0,0,0,0.10); border: 1px solid #e2e8f0;">
         </div>
         <div class="col-12">
-          <p style="font-weight: 800; color: #64748b; font-size: 14px; margin: 0 0 12px; text-align: center;">📷 Screenshot: Attach IAM Role to Workgroup</p>
+          <p style="font-weight: 800; color: #64748b; font-size: 14px; margin: 0 0 12px; text-align: center;">&#128247; Screenshot: Attach IAM Role to Workgroup</p>
           <img src="./redshift-attach-iam-role.png" style="width: 100%; border-radius: 20px; box-shadow: 0 35px 80px rgba(0,0,0,0.08); border: 1px solid #e2e8f0;">
         </div>
       </div>
@@ -396,36 +396,36 @@
   <!-- ODOO SETUP -->
   <section id="odoo" style="padding: 95px 0; background-color: #ffffff;">
     <div class="container">
-      <span style="color: #ef4444; font-weight: 900; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">Odoo Setup</span>
-      <h2 style="font-size: 42px; font-weight: 900; margin: 10px 0 18px;">Step 3: Configure the Connector in Odoo</h2>
+      <span style="color: #6366f1; font-weight: 900; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">Odoo Setup</span>
+      <h2 style="font-size: 42px; font-weight: 900; margin: 10px 0 18px; color: #1e1b4b;">Step 3: Configure the Connector in Odoo</h2>
       <p style="font-size: 1.1rem; color: #4b5563; margin-bottom: 34px;">
-        Go to: <b>Settings → Amazon Redshift Connector</b> (or your module menu). Fill Redshift + S3 settings.
+        Go to: <b>Settings &#8594; Amazon Redshift Connector</b> (or your module menu). Fill Redshift + S3 settings.
       </p>
 
       <div class="row g-4">
         <div class="col-lg-6">
           <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 24px; padding: 34px; height: 100%;">
-            <h5 style="font-weight: 900; margin-bottom: 14px;">Redshift fields to fill</h5>
+            <h5 style="font-weight: 900; margin-bottom: 14px; color: #4338ca;">Redshift fields to fill</h5>
             <ul style="list-style: none; padding-left: 0; margin-bottom: 0; color: #475569;">
-              <li style="margin-bottom: 10px;">• <b>Host:</b> Workgroup endpoint</li>
-              <li style="margin-bottom: 10px;">• <b>Port:</b> 5439</li>
-              <li style="margin-bottom: 10px;">• <b>Database:</b> usually <code>dev</code></li>
-              <li style="margin-bottom: 10px;">• <b>User / Password:</b> Redshift DB user</li>
-              <li style="margin-bottom: 10px;">• <b>Schema:</b> e.g. <code>odoo</code></li>
-              <li>• <b>COPY IAM Role ARN:</b> role that can read S3</li>
+              <li style="margin-bottom: 10px;">&#8226; <b>Host:</b> Workgroup endpoint</li>
+              <li style="margin-bottom: 10px;">&#8226; <b>Port:</b> 5439</li>
+              <li style="margin-bottom: 10px;">&#8226; <b>Database:</b> usually <code>dev</code></li>
+              <li style="margin-bottom: 10px;">&#8226; <b>User / Password:</b> Redshift DB user</li>
+              <li style="margin-bottom: 10px;">&#8226; <b>Schema:</b> e.g. <code>odoo</code></li>
+              <li>&#8226; <b>COPY IAM Role ARN:</b> role that can read S3</li>
             </ul>
           </div>
         </div>
 
         <div class="col-lg-6">
           <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 24px; padding: 34px; height: 100%;">
-            <h5 style="font-weight: 900; margin-bottom: 14px;">S3 fields to fill</h5>
+            <h5 style="font-weight: 900; margin-bottom: 14px; color: #4338ca;">S3 fields to fill</h5>
             <ul style="list-style: none; padding-left: 0; margin-bottom: 0; color: #475569;">
-              <li style="margin-bottom: 10px;">• <b>Bucket:</b> your bucket name</li>
-              <li style="margin-bottom: 10px;">• <b>Region:</b> same as bucket region</li>
-              <li style="margin-bottom: 10px;">• <b>Prefix:</b> e.g. <code>odoo_exports/</code></li>
-              <li style="margin-bottom: 10px;">• <b>Keep S3 files:</b> ON to keep, OFF to auto-delete after COPY</li>
-              <li>• <b>Compression:</b> CSV.GZ (recommended)</li>
+              <li style="margin-bottom: 10px;">&#8226; <b>Bucket:</b> your bucket name</li>
+              <li style="margin-bottom: 10px;">&#8226; <b>Region:</b> same as bucket region</li>
+              <li style="margin-bottom: 10px;">&#8226; <b>Prefix:</b> e.g. <code>odoo_exports/</code></li>
+              <li style="margin-bottom: 10px;">&#8226; <b>Keep S3 files:</b> ON to keep, OFF to auto-delete after COPY</li>
+              <li>&#8226; <b>Compression:</b> CSV.GZ (recommended)</li>
             </ul>
           </div>
         </div>
@@ -433,15 +433,15 @@
 
       <div class="row g-4 mt-2">
         <div class="col-lg-12">
-          <div style="background-color: #0f172a; color: #ffffff; border-radius: 24px; padding: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.20);">
-            <h5 style="font-weight: 900; color: #34d399; margin-bottom: 10px;">AWS credentials for S3 upload (important)</h5>
+          <div style="background-color: #1e1b4b; color: #ffffff; border-radius: 24px; padding: 30px; box-shadow: 0 20px 40px rgba(79,70,229,0.20);">
+            <h5 style="font-weight: 900; color: #fbbf24; margin-bottom: 10px;">AWS credentials for S3 upload (important)</h5>
             <p class="small opacity-75 mb-3">
               Odoo must be able to upload the CSV to S3. Choose ONE method:
             </p>
             <div class="row g-3">
               <div class="col-lg-6">
                 <div style="background:#000; border-radius: 14px; padding: 16px; border: 1px solid rgba(255,255,255,0.12);">
-                  <div style="font-weight: 900; color: #38bdf8; margin-bottom: 6px;">Option A (Recommended): Instance Role</div>
+                  <div style="font-weight: 900; color: #818cf8; margin-bottom: 6px;">Option A (Recommended): Instance Role</div>
                   <div class="small opacity-75">
                     If Odoo runs on EC2, attach an <b>IAM Role</b> to the EC2 instance. No access keys stored in Odoo.
                   </div>
@@ -449,10 +449,10 @@
               </div>
               <div class="col-lg-6">
                 <div style="background:#000; border-radius: 14px; padding: 16px; border: 1px solid rgba(255,255,255,0.12);">
-                  <div style="font-weight: 900; color: #38bdf8; margin-bottom: 6px;">Option B: Access Key + Secret</div>
+                  <div style="font-weight: 900; color: #818cf8; margin-bottom: 6px;">Option B: Access Key + Secret</div>
                   <div class="small opacity-75">
                     Provide <b>AWS_ACCESS_KEY_ID</b> and <b>AWS_SECRET_ACCESS_KEY</b> (best via server env vars).
-                    Use the “Odoo uploader policy” shown earlier.
+                    Use the &#8220;Odoo uploader policy&#8221; shown earlier.
                   </div>
                 </div>
               </div>
@@ -467,13 +467,13 @@
 
       <!-- Screenshot -->
       <div style="margin: 34px 0 0; text-align: center;">
-        <p style="font-weight: 800; color: #64748b; font-size: 14px; margin-bottom: 12px;">📷 Screenshot: Odoo Redshift Settings</p>
+        <p style="font-weight: 800; color: #64748b; font-size: 14px; margin-bottom: 12px;">&#128247; Screenshot: Odoo Redshift Settings</p>
         <img src="./odoo-redshift-settings.png" style="width: 100%; border-radius: 20px; box-shadow: 0 35px 85px rgba(0,0,0,0.12); border: 1px solid #e2e8f0;">
       </div>
 
       <div style="margin-top: 18px; padding: 16px 18px; background-color: #f0fdf4; border-radius: 16px; border: 1px solid #10b981;">
         <p style="margin: 0; font-size: 14px; color: #166534;">
-          ✅ <b>Test Tip:</b> After saving settings, run a small export first. If it loads in Query Editor, your connection is correct.
+          &#9989; <b>Test Tip:</b> After saving settings, run a small export first. If it loads in Query Editor, your connection is correct.
         </p>
       </div>
     </div>
@@ -483,33 +483,33 @@
   <section id="export" style="padding: 95px 0; background-color: #f8fafc; border-top: 1px solid #e2e8f0;">
     <div class="container">
       <div class="text-center mb-5">
-        <span style="color: #ef4444; font-weight: 900; font-size: 13px; text-transform: uppercase;">Step 4</span>
-        <h2 style="font-size: 42px; font-weight: 900; margin-top: 10px;">Create an Export in Odoo</h2>
+        <span style="color: #6366f1; font-weight: 900; font-size: 13px; text-transform: uppercase;">Step 4</span>
+        <h2 style="font-size: 42px; font-weight: 900; margin-top: 10px; color: #1e1b4b;">Create an Export in Odoo</h2>
         <p style="color: #64748b; font-size: 1.15rem;">Pick model and fields. Run now or schedule it.</p>
       </div>
 
       <div style="background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 24px; padding: 40px; margin-bottom: 30px;">
-        <h5 style="font-weight: 900; margin-bottom: 16px;">What is an Export?</h5>
+        <h5 style="font-weight: 900; margin-bottom: 16px; color: #1e1b4b;">What is an Export?</h5>
         <p class="mb-4 text-muted">
-          An Export is a saved “sync definition” (table name + model + fields + filter + schedule).
+          An Export is a saved &#8220;sync definition&#8221; (table name + model + fields + filter + schedule).
           You can create many exports (Sales Orders, Invoices, Customers, etc.).
         </p>
 
-        <h6 style="font-weight: 900; margin-bottom: 12px;">Common fields</h6>
+        <h6 style="font-weight: 900; margin-bottom: 12px; color: #4338ca;">Common fields</h6>
         <ul style="list-style: none; padding-left: 0;" class="text-muted">
-          <li style="margin-bottom: 10px;">• <b>Export Name:</b> final Redshift table name (example: <code>sale_order</code>)</li>
-          <li style="margin-bottom: 10px;">• <b>Odoo Model:</b> which model you export</li>
-          <li style="margin-bottom: 10px;">• <b>Columns:</b> fields you want in Redshift</li>
-          <li style="margin-bottom: 10px;">• <b>Domain Filter:</b> optional, export only some rows</li>
-          <li style="margin-bottom: 10px;">• <b>Batch Size:</b> example 50,000 rows</li>
-          <li>• <b>Time Limit:</b> stop safely and resume next run</li>
+          <li style="margin-bottom: 10px;">&#8226; <b>Export Name:</b> final Redshift table name (example: <code>sale_order</code>)</li>
+          <li style="margin-bottom: 10px;">&#8226; <b>Odoo Model:</b> which model you export</li>
+          <li style="margin-bottom: 10px;">&#8226; <b>Columns:</b> fields you want in Redshift</li>
+          <li style="margin-bottom: 10px;">&#8226; <b>Domain Filter:</b> optional, export only some rows</li>
+          <li style="margin-bottom: 10px;">&#8226; <b>Batch Size:</b> example 50,000 rows</li>
+          <li>&#8226; <b>Time Limit:</b> stop safely and resume next run</li>
         </ul>
       </div>
 
       <div class="row g-4">
         <div class="col-lg-6">
           <div style="background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 24px; padding: 34px; height: 100%;">
-            <h6 style="font-weight: 900; margin-bottom: 10px;">Domain filter examples</h6>
+            <h6 style="font-weight: 900; margin-bottom: 10px; color: #4338ca;">Domain filter examples</h6>
             <p class="small text-muted mb-2">Only confirmed Sales Orders:</p>
             <div style="background: #f8fafc; padding: 12px; border: 1px solid #e2e8f0; border-radius: 12px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace; font-size: 12.5px;">
               [('state','=','sale')]
@@ -523,7 +523,7 @@
 
         <div class="col-lg-6">
           <div style="background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 24px; padding: 34px; height: 100%;">
-            <h6 style="font-weight: 900; margin-bottom: 10px;">What happens on Run?</h6>
+            <h6 style="font-weight: 900; margin-bottom: 10px; color: #4338ca;">What happens on Run?</h6>
             <ul class="text-muted small mb-0">
               <li>Fetches one batch from Odoo</li>
               <li>Uploads CSV.GZ to S3</li>
@@ -539,11 +539,11 @@
       <!-- Screenshots -->
       <div class="row g-4 mt-4">
         <div class="col-12">
-          <p style="font-weight: 800; color: #64748b; font-size: 14px; margin: 0 0 12px; text-align: center;">📷 Screenshot: Export Form</p>
+          <p style="font-weight: 800; color: #64748b; font-size: 14px; margin: 0 0 12px; text-align: center;">&#128247; Screenshot: Export Form</p>
           <img src="./odoo-export-form.png" style="width: 100%; border-radius: 20px; box-shadow: 0 35px 80px rgba(0,0,0,0.10); border: 1px solid #e2e8f0;">
         </div>
         <div class="col-12">
-          <p style="font-weight: 800; color: #64748b; font-size: 14px; margin: 0 0 12px; text-align: center;">📷 Screenshot: Select Columns</p>
+          <p style="font-weight: 800; color: #64748b; font-size: 14px; margin: 0 0 12px; text-align: center;">&#128247; Screenshot: Select Columns</p>
           <img src="./odoo-export-columns.png" style="width: 100%; border-radius: 20px; box-shadow: 0 35px 80px rgba(0,0,0,0.08); border: 1px solid #e2e8f0;">
         </div>
       </div>
@@ -554,33 +554,33 @@
   <section id="verify" style="padding: 95px 0; background-color: #ffffff;">
     <div class="container">
       <div class="text-center mb-5">
-        <span style="color: #ef4444; font-weight: 900; font-size: 13px; text-transform: uppercase;">Step 5</span>
-        <h2 style="font-size: 42px; font-weight: 900; margin-top: 10px;">Check Data in Redshift Query Editor</h2>
+        <span style="color: #6366f1; font-weight: 900; font-size: 13px; text-transform: uppercase;">Step 5</span>
+        <h2 style="font-size: 42px; font-weight: 900; margin-top: 10px; color: #1e1b4b;">Check Data in Redshift Query Editor</h2>
         <p style="color: #64748b; font-size: 1.15rem;">
           After export, the table appears in your Redshift database and you can query it.
         </p>
       </div>
 
-      <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 24px; padding: 40px; box-shadow: 0 15px 40px rgba(0,0,0,0.04);">
-        <h5 style="font-weight: 900; margin-bottom: 14px;">Where to open Query Editor</h5>
+      <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 24px; padding: 40px; box-shadow: 0 15px 40px rgba(79,70,229,0.04);">
+        <h5 style="font-weight: 900; margin-bottom: 14px; color: #1e1b4b;">Where to open Query Editor</h5>
         <ol class="text-muted mb-4">
-          <li>AWS Console → Amazon Redshift</li>
-          <li>Left menu → <b>Query editor v2</b></li>
+          <li>AWS Console &#8594; Amazon Redshift</li>
+          <li>Left menu &#8594; <b>Query editor v2</b></li>
           <li>Connect to your <b>Workgroup</b></li>
           <li>Select your database (e.g., <code>dev</code>)</li>
           <li>Run a query</li>
         </ol>
 
-        <div style="background-color: #0f172a; color: #fff; padding: 22px; border-radius: 16px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace; font-size: 13px;">
-          <span style="color: #f59e0b; font-weight: 900;">-- Quick checks</span><br><br>
+        <div style="background-color: #1e1b4b; color: #fff; padding: 22px; border-radius: 16px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace; font-size: 13px;">
+          <span style="color: #fbbf24; font-weight: 900;">-- Quick checks</span><br><br>
           SELECT COUNT(*) FROM odoo.sale_order;<br>
           SELECT * FROM odoo.sale_order LIMIT 50;
         </div>
 
-        <div style="margin-top: 18px; padding: 14px 16px; border-radius: 16px; border: 1px solid #bfdbfe; background: #eff6ff;">
-          <div style="font-weight: 900; color: #1e40af;">Table naming</div>
-          <div style="color: #1e40af;">
-            Your <b>Export Name</b> becomes your Redshift table name. Example export <code>res_partner</code> → table <code>odoo.res_partner</code>.
+        <div style="margin-top: 18px; padding: 14px 16px; border-radius: 16px; border: 1px solid #c7d2fe; background: #eef2ff;">
+          <div style="font-weight: 900; color: #3730a3;">Table naming</div>
+          <div style="color: #3730a3;">
+            Your <b>Export Name</b> becomes your Redshift table name. Example export <code>res_partner</code> &#8594; table <code>odoo.res_partner</code>.
           </div>
         </div>
       </div>
@@ -588,11 +588,11 @@
       <!-- Screenshots -->
       <div class="row g-4 mt-4">
         <div class="col-12">
-          <p style="font-weight: 800; color: #64748b; font-size: 14px; margin: 0 0 12px; text-align: center;">📷 Screenshot: Open Query Editor v2</p>
+          <p style="font-weight: 800; color: #64748b; font-size: 14px; margin: 0 0 12px; text-align: center;">&#128247; Screenshot: Open Query Editor v2</p>
           <img src="./redshift-query-editor-open.png" style="width: 100%; border-radius: 20px; box-shadow: 0 35px 80px rgba(0,0,0,0.10); border: 1px solid #e2e8f0;">
         </div>
         <div class="col-12">
-          <p style="font-weight: 800; color: #64748b; font-size: 14px; margin: 0 0 12px; text-align: center;">📷 Screenshot: See Tables in Schema</p>
+          <p style="font-weight: 800; color: #64748b; font-size: 14px; margin: 0 0 12px; text-align: center;">&#128247; Screenshot: See Tables in Schema</p>
           <img src="./redshift-query-editor-tables.png" style="width: 100%; border-radius: 20px; box-shadow: 0 35px 80px rgba(0,0,0,0.08); border: 1px solid #e2e8f0;">
         </div>
       </div>
@@ -600,11 +600,11 @@
   </section>
 
   <!-- AUTO SYNC + TIME LIMIT -->
-  <section id="autosync" style="padding: 95px 0; background-color: #f8fafc; border-top: 1px solid #e2e8f0;">
+  <section id="autosync" style="padding: 95px 0; background-color: #f5f3ff; border-top: 1px solid #ddd6fe;">
     <div class="container">
       <div class="text-center mb-5">
-        <span style="color: #ef4444; font-weight: 900; font-size: 13px; text-transform: uppercase;">Automation</span>
-        <h2 style="font-size: 42px; font-weight: 900; margin-top: 10px;">Auto Export + Time Limit Resume (No Thread Explosion)</h2>
+        <span style="color: #6366f1; font-weight: 900; font-size: 13px; text-transform: uppercase;">Automation</span>
+        <h2 style="font-size: 42px; font-weight: 900; margin-top: 10px; color: #1e1b4b;">Auto Export + Time Limit Resume (No Thread Explosion)</h2>
         <p style="color: #64748b; font-size: 1.15rem;">
           The connector runs in batches. If a time limit is reached, it stops safely and continues next run from the saved cursor.
         </p>
@@ -613,7 +613,7 @@
       <div class="row g-4">
         <div class="col-lg-6">
           <div style="background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 24px; padding: 34px; height: 100%;">
-            <h5 style="font-weight: 900; margin-bottom: 12px;">How resume works</h5>
+            <h5 style="font-weight: 900; margin-bottom: 12px; color: #4338ca;">How resume works</h5>
             <ul class="text-muted mb-0">
               <li>Every batch updates <b>last_sync</b> and <b>last_id</b></li>
               <li>On next run, it fetches the next batch using that cursor</li>
@@ -625,20 +625,20 @@
 
         <div class="col-lg-6">
           <div style="background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 24px; padding: 34px; height: 100%;">
-            <h5 style="font-weight: 900; margin-bottom: 12px;">Recommended settings</h5>
+            <h5 style="font-weight: 900; margin-bottom: 12px; color: #4338ca;">Recommended settings</h5>
             <ul class="text-muted mb-0">
-              <li><b>Batch size:</b> 25k–50k (start with 10k for first test)</li>
-              <li><b>Time limit:</b> 60–120 seconds</li>
-              <li><b>Auto export interval:</b> 10–30 minutes</li>
+              <li><b>Batch size:</b> 25k&#8211;50k (start with 10k for first test)</li>
+              <li><b>Time limit:</b> 60&#8211;120 seconds</li>
+              <li><b>Auto export interval:</b> 10&#8211;30 minutes</li>
               <li><b>One export at a time:</b> avoid running many heavy exports in parallel</li>
             </ul>
           </div>
         </div>
       </div>
 
-      <div style="margin-top: 18px; padding: 22px; background-color: #fff7ed; border-radius: 18px; border: 1px solid #fed7aa;">
-        <div style="font-weight: 900; color: #9a3412; margin-bottom: 6px;">Avoid hitting Odoo worker/thread limits</div>
-        <div style="color: #9a3412;">
+      <div style="margin-top: 18px; padding: 22px; background-color: #fffbeb; border-radius: 18px; border: 1px solid #fde68a;">
+        <div style="font-weight: 900; color: #92400e; margin-bottom: 6px;">Avoid hitting Odoo worker/thread limits</div>
+        <div style="color: #92400e;">
           Keep exports <b>short</b> (time limit) and let cron resume later. Do not run 20 exports at the same minute.
           Use staggered intervals (example: Sales every 15 min, Partners every 30 min).
         </div>
@@ -646,7 +646,7 @@
 
       <div class="row g-4 mt-4">
         <div class="col-12">
-          <p style="font-weight: 800; color: #64748b; font-size: 14px; margin: 0 0 12px; text-align: center;">📷 Screenshot: Auto Export Toggle</p>
+          <p style="font-weight: 800; color: #64748b; font-size: 14px; margin: 0 0 12px; text-align: center;">&#128247; Screenshot: Auto Export Toggle</p>
           <img src="./odoo-auto-export.png" style="width: 100%; border-radius: 20px; box-shadow: 0 35px 80px rgba(0,0,0,0.08); border: 1px solid #e2e8f0;">
         </div>
       </div>
@@ -657,15 +657,15 @@
   <section id="security" style="padding: 95px 0; background-color: #ffffff;">
     <div class="container">
       <div class="text-center mb-5">
-        <span style="color: #ef4444; font-weight: 900; font-size: 13px; text-transform: uppercase;">Security</span>
-        <h2 style="font-size: 42px; font-weight: 900; margin-top: 10px;">Security Best Practices</h2>
+        <span style="color: #6366f1; font-weight: 900; font-size: 13px; text-transform: uppercase;">Security</span>
+        <h2 style="font-size: 42px; font-weight: 900; margin-top: 10px; color: #1e1b4b;">Security Best Practices</h2>
         <p style="color: #64748b; font-size: 1.15rem;">Keep your bucket private and use least-privilege IAM roles.</p>
       </div>
 
       <div class="row g-4">
         <div class="col-md-6">
           <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 24px; padding: 34px; height: 100%;">
-            <h5 style="font-weight: 900; margin-bottom: 12px;">✅ S3 bucket</h5>
+            <h5 style="font-weight: 900; margin-bottom: 12px; color: #4338ca;">&#9989; S3 bucket</h5>
             <ul class="text-muted mb-0">
               <li>Block all public access = ON</li>
               <li>Use a prefix like <code>odoo_exports/</code></li>
@@ -676,7 +676,7 @@
         </div>
         <div class="col-md-6">
           <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 24px; padding: 34px; height: 100%;">
-            <h5 style="font-weight: 900; margin-bottom: 12px;">✅ IAM roles</h5>
+            <h5 style="font-weight: 900; margin-bottom: 12px; color: #4338ca;">&#9989; IAM roles</h5>
             <ul class="text-muted mb-0">
               <li>Separate roles: uploader vs COPY role</li>
               <li>Limit permissions to bucket + prefix only</li>
@@ -687,9 +687,9 @@
         </div>
       </div>
 
-      <div style="margin-top: 18px; padding: 18px; background-color: #eff6ff; border-radius: 16px; border: 1px solid #bfdbfe;">
-        <div style="font-weight: 900; color: #1e40af;">Data privacy note</div>
-        <div style="color: #1e40af;">
+      <div style="margin-top: 18px; padding: 18px; background-color: #eef2ff; border-radius: 16px; border: 1px solid #c7d2fe;">
+        <div style="font-weight: 900; color: #3730a3;">Data privacy note</div>
+        <div style="color: #3730a3;">
           If you keep S3 files, treat the bucket as sensitive. It contains raw exported data.
           If you delete after COPY, S3 stays clean and private.
         </div>
@@ -698,33 +698,33 @@
   </section>
 
   <!-- TROUBLESHOOT -->
-  <section id="troubleshoot" style="padding: 95px 0; background-color: #fff1f2; border-top: 1px solid #fecaca;">
+  <section id="troubleshoot" style="padding: 95px 0; background-color: #fffbeb; border-top: 1px solid #fde68a;">
     <div class="container">
       <div class="text-center mb-5">
-        <h2 style="font-size: 42px; font-weight: 900; color: #9f1239;">Fix Problems (Most Common)</h2>
-        <p style="color: #be123c; font-size: 1.15rem;">Almost always: missing permissions or wrong endpoint.</p>
+        <h2 style="font-size: 42px; font-weight: 900; color: #92400e;">Fix Problems (Most Common)</h2>
+        <p style="color: #b45309; font-size: 1.15rem;">Almost always: missing permissions or wrong endpoint.</p>
       </div>
 
-      <div style="background-color: #ffffff; padding: 44px; border-radius: 32px; box-shadow: 0 20px 40px rgba(159,18,57,0.10); border: 1px solid #fecaca;">
-        <h5 style="font-weight: 900; margin-bottom: 18px;">Error → Fix</h5>
+      <div style="background-color: #ffffff; padding: 44px; border-radius: 32px; box-shadow: 0 20px 40px rgba(146,64,14,0.10); border: 1px solid #fde68a;">
+        <h5 style="font-weight: 900; margin-bottom: 18px; color: #1e1b4b;">Error &#8594; Fix</h5>
 
         <div class="mb-4">
-          <div style="font-weight: 900; color: #9f1239;">1) NoCredentialsError: Unable to locate credentials</div>
+          <div style="font-weight: 900; color: #b45309;">1) NoCredentialsError: Unable to locate credentials</div>
           <div class="text-muted">
             Odoo cannot upload to S3. Add AWS credentials using Instance Role (recommended) or Access Key/Secret.
           </div>
         </div>
 
         <div class="mb-4">
-          <div style="font-weight: 900; color: #9f1239;">2) Role is not associated to cluster/workgroup</div>
+          <div style="font-weight: 900; color: #b45309;">2) Role is not associated to cluster/workgroup</div>
           <div class="text-muted">
             The IAM Role ARN used in COPY must be attached to Redshift.
-            Go to <b>Redshift Serverless → Workgroup → Permissions / IAM roles</b> and attach the Role.
+            Go to <b>Redshift Serverless &#8594; Workgroup &#8594; Permissions / IAM roles</b> and attach the Role.
           </div>
         </div>
 
         <div class="mb-4">
-          <div style="font-weight: 900; color: #9f1239;">3) S3 AccessDenied during COPY</div>
+          <div style="font-weight: 900; color: #b45309;">3) S3 AccessDenied during COPY</div>
           <div class="text-muted">
             The COPY role is missing <code>s3:GetObject</code> or the bucket policy blocks access.
             Confirm the role has permission to <code>arn:aws:s3:::YOUR_BUCKET/odoo_exports/*</code>.
@@ -732,20 +732,20 @@
         </div>
 
         <div class="mb-4">
-          <div style="font-weight: 900; color: #9f1239;">4) Can’t connect to host / timeout</div>
+          <div style="font-weight: 900; color: #b45309;">4) Can&#8217;t connect to host / timeout</div>
           <div class="text-muted">
             Network issue. Redshift workgroup is inside a VPC. Ensure Odoo server can reach it (VPC routing / security group / public accessibility).
           </div>
         </div>
 
         <div class="mb-0">
-          <div style="font-weight: 900; color: #9f1239;">5) Time limit reached (not an error)</div>
+          <div style="font-weight: 900; color: #b45309;">5) Time limit reached (not an error)</div>
           <div class="text-muted">
             This is expected for large tables. The connector stopped safely and saved cursor. Run again or let Auto Export resume.
           </div>
         </div>
 
-        <div style="margin-top: 22px; padding: 16px 18px; background-color: #fffbeb; border-radius: 16px; border: 1px solid #f59e0b;">
+        <div style="margin-top: 22px; padding: 16px 18px; background-color: #fef3c7; border-radius: 16px; border: 1px solid #fbbf24;">
           <div style="font-weight: 900; color: #92400e;">Support Tip</div>
           <div style="color: #92400e; font-size: 14px;">
             If you contact support, share: workgroup endpoint, database name, region, S3 bucket name/prefix, and the exact error message.
@@ -754,8 +754,8 @@
       </div>
 
       <div style="margin-top: 34px; text-align: center;">
-        <div style="font-weight: 900; color: #9f1239; font-size: 14px; margin-bottom: 10px;">📷 Screenshot: Example Error Location</div>
-        <img src="./odoo-redshift-error.png" style="width: 100%; border-radius: 24px; border: 1px solid #fecaca; box-shadow: 0 30px 70px rgba(159,18,57,0.10);">
+        <div style="font-weight: 900; color: #92400e; font-size: 14px; margin-bottom: 10px;">&#128247; Screenshot: Example Error Location</div>
+        <img src="./odoo-redshift-error.png" style="width: 100%; border-radius: 24px; border: 1px solid #fde68a; box-shadow: 0 30px 70px rgba(146,64,14,0.10);">
       </div>
     </div>
   </section>
@@ -764,26 +764,26 @@
   <section style="padding: 95px 0; background-color: #ffffff;">
     <div class="container">
       <div class="text-center mb-5">
-        <h2 style="font-size: 42px; font-weight: 900;">FAQ</h2>
+        <h2 style="font-size: 42px; font-weight: 900; color: #1e1b4b;">FAQ</h2>
       </div>
 
       <div class="row g-4">
         <div class="col-md-4">
           <div style="background-color: #f8fafc; padding: 28px; border-radius: 24px; height: 100%; border: 1px solid #e2e8f0;">
-            <h6 style="font-weight: 900;">Will it duplicate my rows?</h6>
+            <h6 style="font-weight: 900; color: #4338ca;">Will it duplicate my rows?</h6>
             <p class="small text-muted mb-0">No. It uses staging + MERGE to update existing rows and insert new rows.</p>
           </div>
         </div>
         <div class="col-md-4">
           <div style="background-color: #f8fafc; padding: 28px; border-radius: 24px; height: 100%; border: 1px solid #e2e8f0;">
-            <h6 style="font-weight: 900;">Do I need SQL knowledge?</h6>
+            <h6 style="font-weight: 900; color: #4338ca;">Do I need SQL knowledge?</h6>
             <p class="small text-muted mb-0">No. You only select model + columns in Odoo. SQL is optional for analytics later.</p>
           </div>
         </div>
         <div class="col-md-4">
           <div style="background-color: #f8fafc; padding: 28px; border-radius: 24px; height: 100%; border: 1px solid #e2e8f0;">
-            <h6 style="font-weight: 900;">Will I always see S3 files?</h6>
-            <p class="small text-muted mb-0">Not always. Many setups delete after COPY. Enable “Keep S3 files” if needed.</p>
+            <h6 style="font-weight: 900; color: #4338ca;">Will I always see S3 files?</h6>
+            <p class="small text-muted mb-0">Not always. Many setups delete after COPY. Enable &#8220;Keep S3 files&#8221; if needed.</p>
           </div>
         </div>
       </div>
@@ -793,18 +793,18 @@
   <!-- FOOTER -->
   <footer style="padding: 95px 0; text-align: center; background-color: #ffffff; border-top: 1px solid #e2e8f0;">
     <div class="container">
-      <div style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); padding: 78px 40px; border-radius: 48px; box-shadow: 0 40px 100px -20px rgba(15,23,42,0.3);">
+      <div style="background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%); padding: 78px 40px; border-radius: 48px; box-shadow: 0 40px 100px -20px rgba(30,27,75,0.3);">
         <h2 style="font-size: 3.2rem; font-weight: 900; color: #ffffff; margin-bottom: 18px;">Need Help?</h2>
-        <p style="font-size: 1.2rem; color: #94a3b8; margin-bottom: 46px; max-width: 760px; margin-left: auto; margin-right: auto;">
+        <p style="font-size: 1.2rem; color: #c7d2fe; margin-bottom: 46px; max-width: 760px; margin-left: auto; margin-right: auto;">
           We can help with AWS setup, IAM permissions, and troubleshooting.
         </p>
         <div class="d-flex justify-content-center gap-5 flex-wrap fw-bold">
-          <span style="font-size: 1.1rem; color: white;">📩 <a href="mailto:info@niyulabs.com" style="color: #38bdf8; text-decoration: none;">info@niyulabs.com</a></span>
-          <span style="font-size: 1.1rem; color: white;">🌐 <a href="https://niyulabs.com" style="color: #38bdf8; text-decoration: none;">niyulabs.com</a></span>
+          <span style="font-size: 1.1rem; color: white;">&#128233; <a href="mailto:info@niyulabs.com" style="color: #818cf8; text-decoration: none;">info@niyulabs.com</a></span>
+          <span style="font-size: 1.1rem; color: white;">&#127760; <a href="https://niyulabs.com" style="color: #818cf8; text-decoration: none;">niyulabs.com</a></span>
         </div>
       </div>
       <p style="margin-top: 54px; color: #94a3b8; font-weight: 700; font-size: 14px;">
-        Last updated: December 2025 | Version: 18.0.2.1.0 | Odoo 16 · 17 · 18
+        Last updated: December 2025 | Version: 18.0.2.1.0 | Odoo 16 &#183; 17 &#183; 18
       </p>
     </div>
   </footer>
