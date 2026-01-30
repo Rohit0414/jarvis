@@ -110,6 +110,7 @@
         <a href="#storage" style="text-decoration: none; color: #1e293b; font-weight: 600; font-size: 14px; padding: 6px 14px; border-radius: 8px;">Storage & SAS</a>
         <a href="#queries" style="text-decoration: none; color: #0078d4; font-weight: 700; font-size: 14px; padding: 6px 14px; border-radius: 8px; background: rgba(0,120,212,0.08);">Odoo Config</a>
         <a href="#networking" style="text-decoration: none; color: #1e293b; font-weight: 600; font-size: 14px; padding: 6px 14px; border-radius: 8px;">Security</a>
+        <a href="#visualize" style="text-decoration: none; color: #1e293b; font-weight: 600; font-size: 14px; padding: 6px 14px; border-radius: 8px;">Query Data</a>
         <a href="#incremental" style="text-decoration: none; color: #1e293b; font-weight: 600; font-size: 14px; padding: 6px 14px; border-radius: 8px;">Sync Logic</a>
         <a href="#troubleshoot" style="text-decoration: none; color: #dc2626; font-weight: 700; font-size: 14px; padding: 6px 14px; border-radius: 8px;">Troubleshoot</a>
       </div>
@@ -307,8 +308,10 @@
         </ul>
       </div>
 
-      <p style="font-weight: 700; color: #64748b; font-size: 14px; margin-bottom: 12px;">&#128247; Azure Synapse Overview</p>
-      <img src="./synapse_overview.png" alt="Azure Synapse Overview" style="width: 100%; border-radius: 16px; box-shadow: 0 20px 60px -20px rgba(0,0,0,0.2); border: 1px solid #e2e8f0;">
+      <p style="font-weight: 700; color: #64748b; font-size: 14px; margin-bottom: 12px;">&#128247; Synapse workspace overview — Essentials (Dedicated SQL endpoint, odoo_dedicated pool)</p>
+      <img src="./synapse_overview.png" alt="Azure Synapse Overview Essentials" style="width: 100%; border-radius: 16px; box-shadow: 0 20px 60px -20px rgba(0,0,0,0.2); border: 1px solid #e2e8f0; margin-bottom: 24px;">
+      <p style="font-weight: 700; color: #64748b; font-size: 14px; margin-bottom: 12px;">&#128247; Synapse Analytics workspace dashboard — Ingest, Explore, Visualize</p>
+      <img src="./synapse_workspace_dashboard.png" alt="Synapse Workspace Dashboard" style="width: 100%; border-radius: 16px; box-shadow: 0 20px 60px -20px rgba(0,0,0,0.2); border: 1px solid #e2e8f0;">
     </div>
   </section>
 
@@ -353,8 +356,14 @@
         </ul>
       </div>
 
-      <p style="font-weight: 700; color: #64748b; font-size: 14px; margin-bottom: 12px; text-align: center;">&#128247; Generating SAS Token in Azure Storage</p>
-      <img src="./storage_sas.png" alt="Storage SAS" style="width: 100%; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 12px 40px -12px rgba(0,0,0,0.12);">
+      <p style="font-weight: 700; color: #64748b; font-size: 14px; margin-bottom: 12px;">&#128247; Create storage account — Basics (Resource group: rg-odoo-synapse)</p>
+      <img src="./azure_create_storage.png" alt="Create Storage Account" style="width: 100%; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 12px 40px -12px rgba(0,0,0,0.12); margin-bottom: 24px;">
+      <p style="font-weight: 700; color: #64748b; font-size: 14px; margin-bottom: 12px;">&#128247; Storage center — Find your ADLS accounts (niyuadlscentral, niyusynapseadls)</p>
+      <img src="./azure_storage_center.png" alt="Storage Center Blob Storage" style="width: 100%; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 12px 40px -12px rgba(0,0,0,0.12); margin-bottom: 24px;">
+      <p style="font-weight: 700; color: #64748b; font-size: 14px; margin-bottom: 12px;">&#128247; Storage account properties — Verify Hierarchical namespace: Enabled (ADLS Gen2)</p>
+      <img src="./azure_storage_properties.png" alt="Storage Account Properties" style="width: 100%; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 12px 40px -12px rgba(0,0,0,0.12); margin-bottom: 24px;">
+      <p style="font-weight: 700; color: #64748b; font-size: 14px; margin-bottom: 12px;">&#128247; Generate SAS — Containers &#8594; right‑click container &#8594; Generate SAS</p>
+      <img src="./azure_generate_sas.png" alt="Generate SAS Token" style="width: 100%; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 12px 40px -12px rgba(0,0,0,0.12);">
 
       <div style="margin-top: 40px; padding: 28px 36px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 20px;">
         <h6 style="font-weight: 800; margin-bottom: 16px;">Common settings</h6>
@@ -406,8 +415,7 @@
         </ul>
       </div>
 
-      <p style="font-weight: 700; color: #64748b; font-size: 14px; margin-bottom: 12px;">&#128247; Synapse Networking Page</p>
-      <img src="./networking_firewall.png" alt="Networking Firewall" style="width: 100%; border-radius: 16px; box-shadow: 0 20px 60px -20px rgba(0,0,0,0.12); border: 1px solid #e2e8f0;">
+      <p style="font-size: 13px; color: #94a3b8;">Synapse Workspace &#8594; Networking &#8594; Add client IP for your Odoo server</p>
     </div>
   </section>
 
@@ -558,6 +566,21 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- QUERY IN SYNAPSE STUDIO -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <section id="visualize" style="padding: 80px 20px; background: #f8fafc; border-top: 1px solid #e2e8f0;">
+    <div class="container" style="max-width: 900px;">
+      <h2 style="font-size: 2rem; font-weight: 900; margin-bottom: 12px;">Query Your Odoo Data in Synapse Studio</h2>
+      <p style="color: #64748b; font-size: 1.1rem; margin-bottom: 32px;">Once data is synced, open Synapse Studio &#8594; Data &#8594; SQL database (odoo_dedicated) &#8594; New SQL script. Run queries like <code>SELECT * FROM dbo.res_partner</code>.</p>
+      <div style="background: #fffbeb; border: 1px solid #fcd34d; border-radius: 16px; padding: 20px 24px; margin-bottom: 24px;">
+        <strong style="color: #92400e;">&#9888; Ensure your Dedicated SQL pool is Online</strong> — if paused, Odoo cannot write and queries will fail. Resume from Azure Portal.
+      </div>
+      <p style="font-weight: 700; color: #64748b; font-size: 14px; margin-bottom: 12px;">&#128247; Synapse Studio SQL script — Connect to odoo_dedicated, query Odoo tables</p>
+      <img src="./synapse_sql_query.png" alt="Synapse Studio SQL Query" style="width: 100%; border-radius: 16px; box-shadow: 0 20px 60px -20px rgba(0,0,0,0.15); border: 1px solid #e2e8f0;">
     </div>
   </section>
 
