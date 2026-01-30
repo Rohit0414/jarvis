@@ -1,151 +1,738 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<odoo>
-    <record id="res_config_settings_view_form_synapse" model="ir.ui.view">
-        <field name="name">res.config.settings.view.form.synapse</field>
-        <field name="model">res.config.settings</field>
-        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
-        <field name="arch" type="xml">
+<!-- Bootstrap 5 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>html{scroll-behavior:smooth;} a{transition:color .2s,background .2s;}</style>
 
-            <!-- Inject into settings container -->
-            <xpath expr="//form" position="inside">
+<section style="
+  background-color: #fafbfc;
+  color: #1a1d21;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
+  background-image: 
+    radial-gradient(ellipse 120% 80% at 50% -30%, rgba(0, 120, 212, 0.18), transparent 50%),
+    radial-gradient(ellipse 80% 60% at 100% 50%, rgba(88, 166, 255, 0.1), transparent 50%),
+    radial-gradient(ellipse 60% 40% at 0% 80%, rgba(0, 184, 212, 0.06), transparent 50%);
+">
 
-                <app data-string="Microsoft Azure Synapse"
-                     string="Microsoft Azure Synapse"
-                     name="odoo_synapse"
-                     logo="/odoo_synapse/static/description/niyulabs.png">
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- HERO SECTION — FULL SCREEN -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <header style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 120px 24px 80px; text-align: center;">
+    <div class="container-fluid" style="max-width: 1400px; width: 100%;">
+      <div style="
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background-color:  rgba(88,166,255,0.05);
+        border: 1px solid rgba(0,120,212,0.2);
+        padding: 8px 20px;
+        border-radius: 100px;
+        margin-bottom: 30px;
+        font-size: 13px;
+        font-weight: 700;
+        color: #0078d4;
+        letter-spacing: 0.5px;
+      ">⚡ Odoo Connector · Microsoft Intelligent Data Platform</div>
 
-                    <div class="app_settings_block"
-                         data-string="Microsoft Azure Synapse"
-                         string="Microsoft Azure Synapse"
-                         name="azure_synapse_block">
+      <h1 style="
+        font-size: clamp(2.8rem, 6vw, 4.2rem);
+        line-height: 1.1;
+        font-weight: 900;
+        letter-spacing: -0.03em;
+        margin: 0 0 24px 0;
+        color: #0d1117;
+      ">
+        <span style=" -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Azure Synapse</span> Connector
+      </h1>
 
-                        <!-- Header -->
-                        <div class="row align-items-center o_mb16">
-                            <div class="col-12">
-                                <h2 class="o_settings_title">Microsoft Azure Synapse</h2>
-                                <div class="text-muted">
-                                    Stage CSV to <b>ADLS Gen2</b> and load into <b>Dedicated SQL pool</b> using <b>COPY INTO</b>.
-                                </div>
-                            </div>
-                        </div>
+      <p style="font-size: 1.25rem; color: #57606a; max-width: 720px; margin: 0 auto 40px; line-height: 1.8;">
+        Bring your Odoo data into the Microsoft Intelligent Data Platform. Scale from simple tracking to <b>Enterprise-grade Analytics</b> with Azure Synapse. <b>Odoo handles the daily grind</b>—<b>Azure Synapse builds the big picture</b> for your executive team.
+      </p>
 
-                        <!-- Quick checklist -->
-                        <div class="row o_mb16">
-                            <div class="col-12">
-                                <div class="alert alert-info mb-0">
-                                    <b>Quick checklist</b>
-                                    <ul class="mb-0">
-                                        <li>Dedicated SQL pool is created and running.</li>
-                                        <li>User has permission to run <code>COPY INTO</code> and create/load target tables.</li>
-                                        <li>SAS token has access to the container (read/write/list as needed).</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+    
 
-                        <div class="row mt16 o_settings_container">
+      <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
+        <span style="background-color: #006cbd; color: white; padding: 10px 22px; border-radius: 100px; font-weight: 700; font-size: 13px; box-shadow: 0 4px 14px rgba(0,120,212,0.35);">ADLS Gen2 Support</span>
+        <span style="background-color:  #059669; color: white; padding: 10px 22px; border-radius: 100px; font-weight: 700; font-size: 13px; box-shadow: 0 4px 14px rgba(13,148,136,0.3);">Incremental Sync</span>
+        <span style="background-color:  #0f172a; color: white; padding: 10px 22px; border-radius: 100px; font-weight: 700; font-size: 13px; box-shadow: 0 4px 14px rgba(0,0,0,0.2);">Dedicated SQL Pools</span>
+        <span style="background-color:  #4f46e5; color: white; padding: 10px 22px; border-radius: 100px; font-weight: 700; font-size: 13px; box-shadow: 0 4px 14px rgba(99,102,241,0.3);">Power BI Native</span>
+      </div>
 
-                            <!-- Synapse SQL -->
-                            <div class="col-12 col-lg-6 o_setting_box">
-                                <div class="o_setting_left_pane">
-                                    <i class="fa fa-database" role="img" aria-label="Synapse SQL"/>
-                                </div>
+      <div style="
+        background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+        border: 1px solid #e2e8f0;
+        border-radius: 28px;
+        padding: 40px 56px;
+        max-width: 1000px;
+        margin: 0 auto;
+        box-shadow: 0 8px 40px -12px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,120,212,0.05);
+      ">
+        <h5 style="font-weight: 800; color: #0f172a; margin-bottom: 12px; font-size: 1.2rem;">&#10024; The Modern Data Pipeline</h5>
+        <p style="margin: 0; font-size: 1.15rem; color: #475569;">
+          Export <b>Odoo Records</b> &#8594; Land in <b>Azure Data Lake</b> &#8594; Sync to <b>Dedicated SQL Pool</b> &#8594; Visualize in <b>Power BI</b>
+        </p>
+      </div>
+    </div>
+  </header>
 
-                                <div class="o_setting_right_pane">
-                                    <div class="o_form_label">Synapse SQL (Dedicated Pool)</div>
-                                    <div class="text-muted o_mb8">
-                                        Your workspace SQL endpoint + dedicated pool database + credentials.
-                                    </div>
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- WHERE TO FIND — QUICK REFERENCE -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <div style="
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid #e2e8f0;
+    padding: 16px 0;
+    box-shadow: 0 2px 20px -8px rgba(0,0,0,0.08);
+  ">
+    <div class="container-fluid" style="max-width: 1400px; width: 100%;">
+      <div class="d-flex flex-wrap justify-content-center align-items-center gap-3">
+        <span style="font-weight: 800; font-size: 12px; color: #64748b; text-transform: uppercase; letter-spacing: 1px;">&#128269; Where to find</span>
+        <a href="#what" style="text-decoration: none; color: #1e293b; font-weight: 600; font-size: 14px; padding: 6px 14px; border-radius: 8px; transition: all 0.2s;">Benefits</a>
+        <a href="#how" style="text-decoration: none; color: #1e293b; font-weight: 600; font-size: 14px; padding: 6px 14px; border-radius: 8px;">How it Works</a>
+        <a href="#setup" style="text-decoration: none; color: #1e293b; font-weight: 600; font-size: 14px; padding: 6px 14px; border-radius: 8px;">Azure Setup</a>
+        <a href="#storage" style="text-decoration: none; color: #1e293b; font-weight: 600; font-size: 14px; padding: 6px 14px; border-radius: 8px;">Storage & SAS</a>
+        <a href="#queries" style="text-decoration: none; color: #0078d4; font-weight: 700; font-size: 14px; padding: 6px 14px; border-radius: 8px; background: rgba(0,120,212,0.08);">Odoo Config</a>
+        <a href="#networking" style="text-decoration: none; color: #1e293b; font-weight: 600; font-size: 14px; padding: 6px 14px; border-radius: 8px;">Security</a>
+        <a href="#visualize" style="text-decoration: none; color: #1e293b; font-weight: 600; font-size: 14px; padding: 6px 14px; border-radius: 8px;">Query Data</a>
+        <a href="#incremental" style="text-decoration: none; color: #1e293b; font-weight: 600; font-size: 14px; padding: 6px 14px; border-radius: 8px;">Sync Logic</a>
+        <a href="#troubleshoot" style="text-decoration: none; color: #dc2626; font-weight: 700; font-size: 14px; padding: 6px 14px; border-radius: 8px;">Troubleshoot</a>
+      </div>
+    </div>
+  </div>
 
-                                    <div class="mt16">
-                                        <label for="synapse_sql_server"/>
-                                        <field name="synapse_sql_server"
-                                               placeholder="yourworkspace.sql.azuresynapse.net"/>
-                                        <div class="text-muted">
-                                            Example: <code>niyu-ws.sql.azuresynapse.net</code>
-                                        </div>
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- ODOO NAVIGATION MAP — FULL WIDTH -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <section style="padding: 80px 24px; background: #ffffff;">
+    <div class="container-fluid" style="max-width: 1400px; width: 100%;">
+      <div style="
+        background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+        border: 1px solid #bfdbfe;
+        border-radius: 20px;
+        padding: 36px 40px;
+        box-shadow: 0 4px 24px -4px rgba(0,120,212,0.15);
+      ">
+        <h3 style="font-weight: 900; color: #1e40af; margin-bottom: 24px; font-size: 1.4rem;">&#128205; Where to Find Everything in Odoo</h3>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div style="background: #fff; border-radius: 12px; padding: 20px; border: 1px solid #e0e7ff;">
+              <div style="font-size: 11px; font-weight: 800; color: #6366f1; text-transform: uppercase; margin-bottom: 8px;">Install App</div>
+              <p style="margin: 0; font-size: 15px; color: #334155;">Apps &#8594; Update Apps List &#8594; Search "Azure Synapse" &#8594; Install</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div style="background: #fff; border-radius: 12px; padding: 20px; border: 1px solid #e0e7ff;">
+              <div style="font-size: 11px; font-weight: 800; color: #6366f1; text-transform: uppercase; margin-bottom: 8px;">Connection Settings</div>
+              <p style="margin: 0; font-size: 15px; color: #334155;">Settings &#8594; left sidebar &#8594; <b>Microsoft Azure Synapse</b></p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div style="background: #fff; border-radius: 12px; padding: 20px; border: 1px solid #e0e7ff;">
+              <div style="font-size: 11px; font-weight: 800; color: #6366f1; text-transform: uppercase; margin-bottom: 8px;">Export Profiles</div>
+              <p style="margin: 0; font-size: 15px; color: #334155;">Main menu &#8594; Azure Synapse Connector &#8594; Export Profiles</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div style="background: #fff; border-radius: 12px; padding: 20px; border: 1px solid #e0e7ff;">
+              <div style="font-size: 11px; font-weight: 800; color: #6366f1; text-transform: uppercase; margin-bottom: 8px;">Run / Schedule Sync</div>
+              <p style="margin: 0; font-size: 15px; color: #334155;">Export Profile form &#8594; Run Export / Cron Schedule</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-                                        <div class="o_mt16">
-                                            <label for="synapse_sql_database"/>
-                                            <field name="synapse_sql_database"
-                                                   placeholder="Dedicated SQL pool database"/>
-                                        </div>
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- CAPABILITIES — FULL WIDTH -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <section id="what" style="padding: 80px 24px; background: #f8fafc; border-top: 1px solid #e2e8f0;">
+    <div class="container-fluid" style="max-width: 1400px; width: 100%;">
+      <div class="text-center mb-5">
+        <h2 style="font-size: 2.25rem; font-weight: 900; color: #0f172a;">Enterprise Data Capabilities</h2>
+        <p style="color: #64748b; font-size: 1.15rem;">Scale your Odoo analytics using Microsoft's most powerful data warehouse.</p>
+      </div>
 
-                                        <div class="o_mt16">
-                                            <label for="synapse_sql_username"/>
-                                            <field name="synapse_sql_username" placeholder="username"/>
-                                        </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 20px; padding: 32px; height: 100%; box-shadow: 0 4px 20px -8px rgba(0,0,0,0.06); transition: transform 0.2s;">
+            <div style="font-size: 32px; margin-bottom: 16px;">&#128640;</div>
+            <h5 style="font-weight: 800; margin-bottom: 12px; font-size: 1.1rem;">Unlimited Model Export</h5>
+            <p style="color: #64748b; font-size: 14px; margin-bottom: 12px;">Transfer any Odoo data point to Azure:</p>
+            <ul style="color: #4b5563; font-size: 14px; margin: 0; padding-left: 18px;">
+              <li>CRM Leads, Sales Pipelines</li>
+              <li>Accounting Ledgers, Invoices</li>
+              <li>Inventory & Manufacturing BoMs</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 20px; padding: 32px; height: 100%; box-shadow: 0 4px 20px -8px rgba(0,0,0,0.06);">
+            <div style="font-size: 32px; margin-bottom: 16px;">&#128256;</div>
+            <h5 style="font-weight: 800; margin-bottom: 12px; font-size: 1.1rem;">Delta Sync Technology</h5>
+            <p style="color: #64748b; font-size: 14px; margin: 0;">Only pushes changes (Update/Insert). Minimizes storage costs and speeds up sync cycles.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 20px; padding: 32px; height: 100%; box-shadow: 0 4px 20px -8px rgba(0,0,0,0.06);">
+            <div style="font-size: 32px; margin-bottom: 16px;">&#9201;</div>
+            <h5 style="font-weight: 800; margin-bottom: 12px; font-size: 1.1rem;">Automated Pipelines</h5>
+            <p style="color: #64748b; font-size: 14px; margin: 0;">Schedule exports every 15 min or hourly. Power BI stays fresh without manual clicks.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 20px; padding: 32px; height: 100%; box-shadow: 0 4px 20px -8px rgba(0,0,0,0.06);">
+            <div style="font-size: 32px; margin-bottom: 16px;">&#128203;</div>
+            <h5 style="font-weight: 800; margin-bottom: 12px; font-size: 1.1rem;">Schema Auto-Mapping</h5>
+            <p style="color: #64748b; font-size: 14px; margin: 0;">Auto-creates tables in Dedicated SQL Pool with Odoo-to-Synapse type conversion.</p>
+          </div>
+        </div>
+      </div>
 
-                                        <div class="o_mt16">
-                                            <label for="synapse_sql_password"/>
-                                            <field name="synapse_sql_password"
-                                                   password="True"
-                                                   placeholder="password"/>
-                                            <div class="text-muted">
-                                                Tip: use a dedicated service user (not your personal account).
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+      <div style="margin-top: 40px; padding: 32px 40px; background: linear-gradient(135deg, #eff6ff, #dbeafe); border-radius: 20px; border: 1px solid #bfdbfe;">
+        <h5 style="font-weight: 800; color: #1e40af;">Why use Azure Synapse?</h5>
+        <p style="margin: 0; color: #1e40af; font-size: 1.05rem;">Azure Synapse combines data warehousing and big data analytics. Query Odoo data with SQL, Python, or Spark and connect natively to Power BI for boardroom-ready visuals.</p>
+      </div>
+    </div>
+  </section>
 
-                            <!-- ADLS Gen2 -->
-                            <div class="col-12 col-lg-6 o_setting_box">
-                                <div class="o_setting_left_pane">
-                                    <i class="fa fa-cloud" role="img" aria-label="ADLS Gen2"/>
-                                </div>
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- HOW IT WORKS — FULL WIDTH -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <section id="how" style="padding: 80px 24px; background: #ffffff; border-top: 1px solid #e2e8f0;">
+    <div class="container-fluid" style="max-width: 1400px; width: 100%;">
+      <div class="text-center mb-5">
+        <h2 style="font-size: 2.25rem; font-weight: 900;">High-Level Workflow</h2>
+        <p style="color: #64748b;">A seamless 4-step journey from Odoo to your Dashboard.</p>
+      </div>
 
-                                <div class="o_setting_right_pane">
-                                    <div class="o_form_label">ADLS Gen2 Staging</div>
-                                    <div class="text-muted o_mb8">
-                                        Where export CSV files are staged before Synapse loads them.
-                                    </div>
+      <div class="row g-4 text-center mb-5">
+        <div class="col-6 col-md-3">
+          <div style="width: 56px; height: 56px; margin: 0 auto 12px; background: linear-gradient(135deg, #0078d4, #50e6ff); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #fff;">&#9729;</div>
+          <h6 style="font-weight: 800;">1) Azure Setup</h6>
+          <p class="small text-muted mb-0">Configure Synapse & ADLS Gen2</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <div style="width: 56px; height: 56px; margin: 0 auto 12px; background: linear-gradient(135deg, #059669, #10b981); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #fff;">&#128274;</div>
+          <h6 style="font-weight: 800;">2) Authentication</h6>
+          <p class="small text-muted mb-0">Secure Odoo with SAS Tokens</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <div style="width: 56px; height: 56px; margin: 0 auto 12px; background: linear-gradient(135deg, #6366f1, #818cf8); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #fff;">&#128228;</div>
+          <h6 style="font-weight: 800;">3) Mapping</h6>
+          <p class="small text-muted mb-0">Pick Odoo models & fields</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <div style="width: 56px; height: 56px; margin: 0 auto 12px; background: linear-gradient(135deg, #0f172a, #334155); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #fff;">&#128202;</div>
+          <h6 style="font-weight: 800;">4) Visualization</h6>
+          <p class="small text-muted mb-0">Query SQL in Synapse Studio</p>
+        </div>
+      </div>
 
-                                    <div class="mt16">
-                                        <label for="synapse_storage_account"/>
-                                        <field name="synapse_storage_account"
-                                               placeholder="mystorageaccount"/>
-                                        <div class="text-muted">
-                                            Storage account name only (no <code>.blob.core.windows.net</code>).
-                                        </div>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div style="background: #f8fafc; padding: 32px; border-radius: 20px; border: 1px solid #e2e8f0; height: 100%;">
+            <h6 style="font-weight: 800; margin-bottom: 16px;">How we ensure data integrity?</h6>
+            <ul class="small text-muted mb-0" style="padding-left: 18px;">
+              <li style="margin-bottom: 10px;">Odoo Python objects converted to Parquet/CSV.</li>
+              <li style="margin-bottom: 10px;">Files staged in your private Azure Data Lake.</li>
+              <li style="margin-bottom: 10px;">PolyBase/COPY moves data into SQL Pools.</li>
+              <li>Row-level comparison prevents duplicates.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div style="background: #f8fafc; padding: 32px; border-radius: 20px; border: 1px solid #e2e8f0; height: 100%;">
+            <h6 style="font-weight: 800; margin-bottom: 16px;">Ideal for these scenarios</h6>
+            <p class="small text-muted mb-3">Merge Odoo data with External Sales, IoT streams, or legacy SQL in one Azure Workspace.</p>
+            <div style="background: #fff; padding: 16px; border-radius: 12px; font-family: monospace; font-size: 13px; border: 1px solid #e2e8f0;">Power BI Desktop &#8596; Azure Synapse &#8596; Odoo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-                                        <div class="o_mt16">
-                                            <label for="synapse_storage_container"/>
-                                            <field name="synapse_storage_container"
-                                                   placeholder="container / file-system"/>
-                                            <div class="text-muted">
-                                                Example: <code>synapse</code> or <code>odoo-exports</code>
-                                            </div>
-                                        </div>
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- STEP 1: AZURE SETUP — FULL WIDTH -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <section id="setup" style="padding: 80px 24px; background: #f8fafc; border-top: 1px solid #e2e8f0;">
+    <div class="container-fluid" style="max-width: 1600px; width: 100%;">
+      <div style="
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        background: rgba(0,120,212,0.1);
+        color: #0078d4;
+        padding: 8px 16px;
+        border-radius: 100px;
+        font-weight: 800;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 16px;
+      ">Step 01 · Azure Configuration</div>
 
-                                        <div class="o_mt16">
-                                            <label for="synapse_storage_sas"/>
-                                            <field name="synapse_storage_sas"
-                                                   password="True"
-                                                   placeholder="?sv=...&amp;ss=...&amp;sp=..."/>
-                                            <div class="text-muted">
-                                                Paste the full SAS token (starts with <code>?sv=</code>). Keep it secret.
-                                            </div>
-                                        </div>
-                                    </div>
+      <h2 style="font-size: 2rem; font-weight: 900; margin-bottom: 12px;">Find Workspace Endpoints</h2>
+      <p style="color: #64748b; font-size: 1.1rem; margin-bottom: 32px;">Open your <b>Azure Portal</b> and navigate to your Synapse Workspace.</p>
 
-                                    <!-- OPTIONAL: if you have a method+field in python
-                                    <div class="o_mt16">
-                                        <button type="object" name="action_test_synapse_connection"
-                                                class="btn btn-primary">
-                                            Test Connection
-                                        </button>
-                                    </div>
-                                    -->
-                                </div>
-                            </div>
+      <div style="
+        background: #fff;
+        border: 1px solid #e2e8f0;
+        border-radius: 20px;
+        padding: 32px 40px;
+        margin-bottom: 40px;
+        box-shadow: 0 4px 24px -8px rgba(0,0,0,0.08);
+      ">
+        <h6 style="font-weight: 800; margin-bottom: 20px; font-size: 1.1rem;">Details to capture in Azure Portal:</h6>
+        <ul style="list-style: none; padding: 0; font-size: 1.05rem;">
+          <li style="margin-bottom: 12px;">&#183; <b>SQL Endpoint:</b> Copy "Workspace SQL endpoint" (ends in .sql.azuresynapse.net)</li>
+          <li style="margin-bottom: 12px;">&#183; <b>SQL Pool Name:</b> Your Dedicated Pool name (e.g. <code>SalesDW</code>)</li>
+          <li style="margin-bottom: 12px;">&#183; <b>SQL Auth:</b> SQL Admin username and password</li>
+        </ul>
+      </div>
 
-                        </div>
-                    </div>
-                </app>
+      <p style="font-weight: 700; color: #64748b; font-size: 14px; margin-bottom: 12px;">&#128247; Synapse workspace overview — Essentials (Dedicated SQL endpoint, odoo_dedicated pool)</p>
+      <img src="./synapse_overview.png" alt="Azure Synapse Overview Essentials" style="width: 100%; max-width: 100%; border-radius: 20px; box-shadow: 0 24px 80px -24px rgba(0,0,0,0.25); border: 1px solid #e2e8f0; margin-bottom: 32px; display: block;">
+      <p style="font-weight: 700; color: #64748b; font-size: 14px; margin-bottom: 12px;">&#128247; Synapse Analytics workspace dashboard — Ingest, Explore, Visualize</p>
+      <img src="./synapse_workspace_dashboard.png" alt="Synapse Workspace Dashboard" style="width: 100%; max-width: 100%; border-radius: 20px; box-shadow: 0 24px 80px -24px rgba(0,0,0,0.25); border: 1px solid #e2e8f0; display: block;">
+    </div>
+  </section>
 
-            </xpath>
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- STEP 2: STORAGE & SAS — FULL WIDTH -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <section id="storage" style="padding: 80px 24px; background: #ffffff; border-top: 1px solid #e2e8f0;">
+    <div class="container-fluid" style="max-width: 1600px; width: 100%;">
+      <div style="
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        background: rgba(16,185,129,0.1);
+        color: #059669;
+        padding: 8px 16px;
+        border-radius: 100px;
+        font-weight: 800;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 16px;
+      ">Step 02 · ADLS Gen2 Storage</div>
 
-        </field>
-    </record>
-</odoo>
+      <h2 style="font-size: 2rem; font-weight: 900; margin-bottom: 12px;">Secure Landing Zone</h2>
+
+      <div style="
+        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+        color: #fff;
+        border-radius: 20px;
+        padding: 36px 40px;
+        box-shadow: 0 24px 60px -16px rgba(0,0,0,0.35);
+        margin: 32px 0 40px;
+        border: 1px solid rgba(255,255,255,0.06);
+      ">
+        <h6 style="font-weight: 800; color: #38bdf8; margin-bottom: 16px;">The SAS Token Checklist</h6>
+        <p class="small opacity-75 mb-3">Azure Synapse requires ADLS Gen2 storage for data transfers.</p>
+        <ul class="small opacity-75" style="padding-left: 20px;">
+          <li>Storage Account &#8594; Shared access signature</li>
+          <li>Allowed services: <b>Blob</b> · Resource types: <b>Service, Container, Object</b></li>
+          <li>Permissions: <b>Read, Write, List, Create, Delete</b></li>
+          <li>Generate SAS and copy the token string</li>
+        </ul>
+      </div>
+
+      <p style="font-weight: 700; color: #64748b; font-size: 14px; margin-bottom: 12px;">&#128247; Create storage account — Basics (Resource group: rg-odoo-synapse)</p>
+      <img src="./azure_create_storage.png" alt="Create Storage Account" style="width: 100%; max-width: 100%; border-radius: 20px; border: 1px solid #e2e8f0; box-shadow: 0 24px 80px -24px rgba(0,0,0,0.15); margin-bottom: 32px; display: block;">
+      <p style="font-weight: 700; color: #64748b; font-size: 14px; margin-bottom: 12px;">&#128247; Storage center — Find your ADLS accounts (niyuadlscentral, niyusynapseadls)</p>
+      <img src="./azure_storage_center.png" alt="Storage Center Blob Storage" style="width: 100%; max-width: 100%; border-radius: 20px; border: 1px solid #e2e8f0; box-shadow: 0 24px 80px -24px rgba(0,0,0,0.15); margin-bottom: 32px; display: block;">
+      <p style="font-weight: 700; color: #64748b; font-size: 14px; margin-bottom: 12px;">&#128247; Storage account properties — Verify Hierarchical namespace: Enabled (ADLS Gen2)</p>
+      <img src="./azure_storage_properties.png" alt="Storage Account Properties" style="width: 100%; max-width: 100%; border-radius: 20px; border: 1px solid #e2e8f0; box-shadow: 0 24px 80px -24px rgba(0,0,0,0.15); margin-bottom: 32px; display: block;">
+      <p style="font-weight: 700; color: #64748b; font-size: 14px; margin-bottom: 12px;">&#128247; Generate SAS — Containers &#8594; right‑click container &#8594; Generate SAS</p>
+      <img src="./synapse_sql_query.png" alt="Generate SAS Token" style="width: 100%; max-width: 100%; border-radius: 20px; border: 1px solid #e2e8f0; box-shadow: 0 24px 80px -24px rgba(0,0,0,0.15); display: block;">
+
+      <div style="margin-top: 40px; padding: 28px 36px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 20px;">
+        <h6 style="font-weight: 800; margin-bottom: 16px;">Common settings</h6>
+        <div class="row g-3 small text-muted">
+          <div class="col-md-6"><b>Hierarchical Namespace:</b> Must be ENABLED (ADLS Gen2)</div>
+          <div class="col-md-6"><b>Container:</b> Create a container named "synapse"</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- STEP 3: NETWORKING — FULL WIDTH -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <section id="networking" style="padding: 80px 24px; background: #f8fafc; border-top: 1px solid #e2e8f0;">
+    <div class="container-fluid" style="max-width: 1400px; width: 100%;">
+      <div style="
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        background: rgba(99,102,241,0.1);
+        color: #6366f1;
+        padding: 8px 16px;
+        border-radius: 100px;
+        font-weight: 800;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 16px;
+      ">Step 03 · Security & Firewall</div>
+
+      <h2 style="font-size: 2rem; font-weight: 900; margin-bottom: 12px;">Allow Odoo Access</h2>
+
+      <div style="
+        background: #fff;
+        border: 1px solid #e2e8f0;
+        border-radius: 20px;
+        padding: 32px 40px;
+        margin-bottom: 40px;
+        box-shadow: 0 4px 24px -8px rgba(0,0,0,0.06);
+      ">
+        <h5 style="font-weight: 800; margin-bottom: 12px;">Firewall exceptions</h5>
+        <p class="text-muted mb-3">Azure is secure by default. Allow connections from Odoo to Synapse.</p>
+        <hr style="opacity: 0.15; margin: 24px 0;">
+        <ul class="text-muted" style="padding-left: 20px;">
+          <li>Synapse Workspace &#8594; Networking</li>
+          <li>Toggle <b>"Allow Azure services and resources to access this workspace"</b> to ON</li>
+          <li>Click <b>+ Add client IP</b> for your Odoo server IP</li>
+        </ul>
+      </div>
+
+      <p style="font-size: 13px; color: #94a3b8;">Synapse Workspace &#8594; Networking &#8594; Add client IP for your Odoo server</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- STEP 4: ODOO CONFIG — FULL WIDTH -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <section id="queries" style="padding: 80px 24px; background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%); border-top: 1px solid #e2e8f0;">
+    <div class="container-fluid" style="max-width: 1600px; width: 100%;">
+      <div style="
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        background: rgba(0,120,212,0.1);
+        color: #0078d4;
+        padding: 8px 16px;
+        border-radius: 100px;
+        font-weight: 800;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 16px;
+      ">Step 04 · Odoo Configuration</div>
+
+      <h2 style="font-size: 2rem; font-weight: 900; margin-bottom: 8px;">Connection Settings</h2>
+      <p style="color: #64748b; font-size: 1.1rem; margin-bottom: 8px;">Required configuration for ADLS Gen2 &#8594; Synapse COPY INTO.</p>
+
+      <div style="
+        background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+        border: 1px solid #6ee7b7;
+        border-radius: 16px;
+        padding: 24px 28px;
+        margin-bottom: 48px;
+        box-shadow: 0 4px 20px -4px rgba(5,150,105,0.2);
+      ">
+        <div style="font-size: 12px; font-weight: 800; color: #059669; text-transform: uppercase; margin-bottom: 10px;">&#128205; Where to find in Odoo</div>
+        <p style="margin: 0; font-size: 1.15rem; color: #065f46; font-weight: 600;">Settings</p>
+        <p style="margin: 6px 0 0 0; font-size: 1.05rem; color: #047857;">&#8594; Left sidebar under Connectors &#8594; <b>Microsoft Azure Synapse</b></p>
+        <p style="margin: 12px 0 0 0; font-size: 13px; color: #0d9488;">(Sits alongside Redshift, Snowflake, BigQuery connectors)</p>
+      </div>
+
+      <!-- Connection Fields — Styled Cards -->
+      <div class="row g-4 mb-5">
+        <div class="col-lg-6">
+          <div style="
+            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+            border: 1px solid #e2e8f0;
+            border-radius: 24px;
+            padding: 32px 36px;
+            height: 100%;
+            box-shadow: 0 8px 32px -12px rgba(0,120,212,0.15);
+            border-left: 4px solid #0078d4;
+          ">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px;">
+              <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #0078d4, #50e6ff); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 24px;">&#128268;</div>
+              <div>
+                <h5 style="font-weight: 800; margin: 0; color: #0f172a;">Synapse SQL</h5>
+                <p style="margin: 4px 0 0 0; font-size: 13px; color: #64748b;">Dedicated Pool</p>
+              </div>
+            </div>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="margin-bottom: 18px; padding: 14px 18px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0;">
+                <div style="font-size: 11px; font-weight: 700; color: #0078d4; text-transform: uppercase; margin-bottom: 6px;">Server Name</div>
+                <div style="font-size: 14px; color: #334155; font-family: monospace;">&lt;workspace&gt;.sql.azuresynapse.net</div>
+              </li>
+              <li style="margin-bottom: 18px; padding: 14px 18px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0;">
+                <div style="font-size: 11px; font-weight: 700; color: #0078d4; text-transform: uppercase; margin-bottom: 6px;">Admin Username</div>
+                <div style="font-size: 14px; color: #334155;">Your SQL pool admin (e.g. synapseadmin)</div>
+              </li>
+              <li style="padding: 14px 18px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0;">
+                <div style="font-size: 11px; font-weight: 700; color: #0078d4; text-transform: uppercase; margin-bottom: 6px;">Password</div>
+                <div style="font-size: 14px; color: #334155;">SQL admin password (masked)</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div style="
+            background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
+            border: 1px solid #bbf7d0;
+            border-radius: 24px;
+            padding: 32px 36px;
+            height: 100%;
+            box-shadow: 0 8px 32px -12px rgba(16,185,129,0.2);
+            border-left: 4px solid #10b981;
+          ">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px;">
+              <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #059669, #34d399); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 24px;">&#128230;</div>
+              <div>
+                <h5 style="font-weight: 800; margin: 0; color: #0f172a;">ADLS Gen2 Staging</h5>
+                <p style="margin: 4px 0 0 0; font-size: 13px; color: #64748b;">Data Lake Storage</p>
+              </div>
+            </div>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="margin-bottom: 18px; padding: 14px 18px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0;">
+                <div style="font-size: 11px; font-weight: 700; color: #059669; text-transform: uppercase; margin-bottom: 6px;">Account Name</div>
+                <div style="font-size: 14px; color: #334155;">Your ADLS Gen2 storage account</div>
+              </li>
+              <li style="margin-bottom: 18px; padding: 14px 18px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0;">
+                <div style="font-size: 11px; font-weight: 700; color: #059669; text-transform: uppercase; margin-bottom: 6px;">Container Name</div>
+                <div style="font-size: 14px; color: #334155;">e.g. <code style="background: #f1f5f9; padding: 2px 8px; border-radius: 6px;">synapse</code></div>
+              </li>
+              <li style="padding: 14px 18px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0;">
+                <div style="font-size: 11px; font-weight: 700; color: #059669; text-transform: uppercase; margin-bottom: 6px;">Shared Access Signature (SAS) Token</div>
+                <div style="font-size: 13px; color: #334155;">Full SAS token from Azure (sv=...&amp;ss=b&amp;srt=co...)</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <p style="font-weight: 700; color: #64748b; font-size: 14px; margin-bottom: 12px; text-align: center;">&#128247; Microsoft Azure Synapse settings in Odoo</p>
+      <img src="./odoosettingsynapse.png" alt="Odoo Microsoft Azure Synapse Settings" style="width: 100%; max-width: 100%; border-radius: 24px; box-shadow: 0 32px 96px -24px rgba(0,0,0,0.25), 0 0 0 1px rgba(0,120,212,0.08); border: 1px solid #e2e8f0; display: block;">
+
+      <div style="margin-top: 60px; padding: 40px; background: #f8fafc; border-radius: 24px; border: 1px solid #e2e8f0;">
+        <h3 style="font-weight: 900; margin-bottom: 16px;">Selecting Data & Domains</h3>
+        <p style="color: #64748b; margin-bottom: 28px;">Choose what to sync. You don't need the entire database—only the tables you need for analytics.</p>
+
+        <div style="
+          background: #ecfdf5;
+          border: 1px solid #a7f3d0;
+          border-radius: 16px;
+          padding: 20px 24px;
+          margin-bottom: 28px;
+        ">
+          <div style="font-size: 12px; font-weight: 800; color: #059669; text-transform: uppercase; margin-bottom: 8px;">&#128205; Where to find</div>
+          <p style="margin: 0; font-size: 1.05rem; color: #065f46;"><b>Export Profile</b> form &#8594; Model / Fields / Domain filter tabs</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div style="background: #fff; padding: 28px; border-radius: 16px; border: 1px solid #e2e8f0; height: 100%;">
+              <h6 style="font-weight: 800; margin-bottom: 14px;">Filter logic examples</h6>
+              <p class="small text-muted mb-1">Sync only Invoices from 2024:</p>
+              <div style="background: #f1f5f9; padding: 12px; border: 1px solid #cbd5e1; font-family: monospace; border-radius: 10px; margin-bottom: 18px; font-size: 13px;">[('invoice_date','&gt;=','2024-01-01')]</div>
+              <p class="small text-muted mb-1">Sync only "Done" Stock Moves:</p>
+              <div style="background: #f1f5f9; padding: 12px; border: 1px solid #cbd5e1; font-family: monospace; border-radius: 10px; font-size: 13px;">[('state','=','done')]</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div style="background: #fff; padding: 28px; border-radius: 16px; border: 1px solid #e2e8f0; height: 100%;">
+              <h6 style="font-weight: 800; margin-bottom: 14px;">Best practices</h6>
+              <ul class="text-muted" style="font-size: 14px; padding-left: 20px;">
+                <li style="margin-bottom: 10px;">Select only required fields to minimize IO</li>
+                <li style="margin-bottom: 10px;">Test connection before full sync</li>
+                <li>Use Domain filters to exclude test/archived data</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- QUERY IN SYNAPSE STUDIO — FULL WIDTH -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <section id="visualize" style="padding: 80px 24px; background: #f8fafc; border-top: 1px solid #e2e8f0;">
+    <div class="container-fluid" style="max-width: 1600px; width: 100%;">
+      <h2 style="font-size: 2rem; font-weight: 900; margin-bottom: 12px;">Query Your Odoo Data in Synapse Studio</h2>
+      <p style="color: #64748b; font-size: 1.1rem; margin-bottom: 32px;">Once data is synced, open Synapse Studio &#8594; Data &#8594; SQL database (odoo_dedicated) &#8594; New SQL script. Run queries like <code>SELECT * FROM dbo.res_partner</code>.</p>
+      <div style="background: #fffbeb; border: 1px solid #fcd34d; border-radius: 16px; padding: 20px 24px; margin-bottom: 24px;">
+        <strong style="color: #92400e;">&#9888; Ensure your Dedicated SQL pool is Online</strong> — if paused, Odoo cannot write and queries will fail. Resume from Azure Portal.
+      </div>
+      <p style="font-weight: 700; color: #64748b; font-size: 14px; margin-bottom: 12px;">&#128247; Synapse Studio SQL script — Connect to odoo_dedicated, query Odoo tables</p>
+      <img src="./synapse_sql_query.png" alt="Synapse Studio SQL Query" style="width: 100%; max-width: 100%; border-radius: 24px; box-shadow: 0 32px 96px -24px rgba(0,0,0,0.2); border: 1px solid #e2e8f0; display: block;">
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- INCREMENTAL SYNC — FULL WIDTH -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <section id="incremental" style="padding: 80px 24px; background: #f8fafc; border-top: 1px solid #e2e8f0;">
+    <div class="container-fluid" style="max-width: 1400px; width: 100%;">
+      <div class="text-center mb-5">
+        <h2 style="font-size: 2rem; font-weight: 900;">The Power of Incremental Sync</h2>
+        <p style="font-size: 1.1rem; color: #64748b;">Keep Azure Synapse updated without overloading your server.</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div style="background: #fff; border-radius: 20px; padding: 36px; height: 100%; border: 1px solid #e2e8f0;">
+            <h5 style="font-weight: 800; margin-bottom: 14px;">1. Full Export (First Time)</h5>
+            <p class="text-muted mb-4">On first run, Odoo sends all records matching your filter to Azure. Establishes the baseline table.</p>
+            <h5 style="font-weight: 800; margin-bottom: 14px;">2. Delta / Incremental Sync</h5>
+            <p class="text-muted mb-0">Later runs use a watermark. Odoo checks <code>write_date</code> and exports only rows modified since last sync.</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div style="
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #fff;
+            border-radius: 20px;
+            padding: 36px;
+            height: 100%;
+            border: 1px solid rgba(255,255,255,0.06);
+          ">
+            <h5 style="font-weight: 800; color: #38bdf8; margin-bottom: 14px;">The Merge Process</h5>
+            <p class="small text-muted mb-2">When data arrives in Synapse:</p>
+            <ul class="small opacity-75" style="padding-left: 20px;">
+              <li><b>Matching ID:</b> Update existing row</li>
+              <li><b>New ID:</b> Insert new record</li>
+              <li><b>Result:</b> Mirrored table ready for Power BI</li>
+            </ul>
+            <img src="./sync_process_diag.png" alt="Sync Process" style="width: 100%; border-radius: 12px; margin-top: 20px; border: 1px solid rgba(255,255,255,0.1);">
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 40px; background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 16px; padding: 20px 24px;">
+        <div style="font-size: 12px; font-weight: 800; color: #059669; text-transform: uppercase; margin-bottom: 8px;">&#128205; Where to configure sync schedule</div>
+        <p style="margin: 0; font-size: 1.05rem; color: #065f46;">Export Profile &#8594; <b>Schedule</b> / Cron field, or use Odoo Scheduled Actions</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- TROUBLESHOOTING — FULL WIDTH -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <section id="troubleshoot" style="padding: 80px 24px; background: linear-gradient(180deg, #fef2f2 0%, #fff1f2 100%); border-top: 1px solid #fecaca;">
+    <div class="container-fluid" style="max-width: 1400px; width: 100%;">
+      <div class="text-center mb-5">
+        <h2 style="font-size: 2rem; font-weight: 900; color: #9f1239;">Troubleshooting Guide</h2>
+        <p style="color: #be123c; font-size: 1.1rem;">Quick fixes for common Azure connectivity issues.</p>
+      </div>
+
+      <div style="
+        background: #fff;
+        padding: 40px;
+        border-radius: 24px;
+        box-shadow: 0 16px 48px -16px rgba(159,18,57,0.15);
+        border: 1px solid #fecaca;
+        margin-bottom: 40px;
+      ">
+        <h6 style="font-weight: 800; margin-bottom: 24px; font-size: 1.2rem;">Final sanity check</h6>
+        <div class="row g-4">
+          <div class="col-md-6">
+            <ul style="color: #4b5563; font-size: 1.05rem; padding-left: 20px;">
+              <li style="margin-bottom: 14px;"><b>SQL Pool Status:</b> Is your Dedicated Pool "Online"? (If paused, Odoo can't write)</li>
+              <li style="margin-bottom: 14px;"><b>Networking:</b> Is the Odoo server IP in the firewall whitelist?</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul style="color: #4b5563; font-size: 1.05rem; padding-left: 20px;">
+              <li style="margin-bottom: 14px;"><b>SAS Permissions:</b> Does the SAS include 'Write' and 'Create'?</li>
+              <li style="margin-bottom: 14px;"><b>SQL Credentials:</b> Verify SQL Admin password recently?</li>
+            </ul>
+          </div>
+        </div>
+        <div style="margin-top: 28px; padding: 24px; background: #fffbeb; border-radius: 16px; border: 1px solid #fcd34d;">
+          <p style="margin: 0; font-size: 15px; color: #92400e;">&#9888; <b>Pro tip:</b> Use the "Test Connection" button in Odoo before a large export. It validates storage and SQL in seconds.</p>
+        </div>
+      </div>
+
+      <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 16px; padding: 20px 24px;">
+        <div style="font-size: 12px; font-weight: 800; color: #059669; text-transform: uppercase; margin-bottom: 8px;">&#128205; Where to test connection</div>
+        <p style="margin: 0; font-size: 1.05rem; color: #065f46;">Settings &#8594; <b>Microsoft Azure Synapse</b> (sidebar) &#8594; <b>Test Connection</b> or Save</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- FAQ — FULL WIDTH -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <section id="faq" style="padding: 80px 24px; background: #ffffff; border-top: 1px solid #e2e8f0;">
+    <div class="container-fluid" style="max-width: 1400px; width: 100%;">
+      <div class="text-center mb-5">
+        <h2 style="font-size: 2rem; font-weight: 900;">Synapse Connector FAQ</h2>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div style="background: #f8fafc; padding: 28px; border-radius: 20px; height: 100%; border: 1px solid #e2e8f0;">
+            <h6 style="font-weight: 800; margin-bottom: 10px;">Does it work with Serverless Pools?</h6>
+            <p class="small text-muted mb-0">Optimized for Dedicated SQL Pools for consistent Power BI performance.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div style="background: #f8fafc; padding: 28px; border-radius: 20px; height: 100%; border: 1px solid #e2e8f0;">
+            <h6 style="font-weight: 800; margin-bottom: 10px;">What version of Odoo?</h6>
+            <p class="small text-muted mb-0">Odoo Community, Enterprise & Odoo.sh — Versions 16, 17, 18.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div style="background: #f8fafc; padding: 28px; border-radius: 20px; height: 100%; border: 1px solid #e2e8f0;">
+            <h6 style="font-weight: 800; margin-bottom: 10px;">Is there a row limit?</h6>
+            <p class="small text-muted mb-0">No. Azure Synapse scales to Petabytes. Limit is Odoo server memory for large batches.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div style="background: #f8fafc; padding: 28px; border-radius: 20px; height: 100%; border: 1px solid #e2e8f0;">
+            <h6 style="font-weight: 800; margin-bottom: 10px;">Can I sync binary files?</h6>
+            <p class="small text-muted mb-0">Structured data (text, numbers, dates) only. Attachments via ADLS links, not SQL pools.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div style="background: #f8fafc; padding: 28px; border-radius: 20px; height: 100%; border: 1px solid #e2e8f0;">
+            <h6 style="font-weight: 800; margin-bottom: 10px;">Does it support Power BI?</h6>
+            <p class="small text-muted mb-0">Yes! Use the native Azure Synapse connector in Power BI Desktop once data is in the SQL pool.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div style="background: #f8fafc; padding: 28px; border-radius: 20px; height: 100%; border: 1px solid #e2e8f0;">
+            <h6 style="font-weight: 800; margin-bottom: 10px;">Is my data safe?</h6>
+            <p class="small text-muted mb-0">100%. Data stays in your infrastructure—Odoo to your Azure account directly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <!-- FOOTER — FULL WIDTH -->
+  <!-- ═══════════════════════════════════════════════════════════════ -->
+  <footer style="padding: 100px 0; text-align: center; background-color: #ffffff; border-top: 1px solid #e2e8f0;">
+    <div class="container">
+      <div style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); padding: 80px 40px; border-radius: 48px; box-shadow: 0 40px 100px -20px rgba(15,23,42,0.3);">
+        <h2 style="font-size: 3.5rem; font-weight: 900; color: #ffffff; margin-bottom: 20px;">Need Help?</h2>
+        <p style="font-size: 1.35rem; color: #94a3b8; margin-bottom: 50px; max-width: 700px; margin-left: auto; margin-right: auto;">Our team can assist with setup, mapping, and troubleshooting.</p>
+        <div class="d-flex justify-content-center gap-5 flex-wrap fw-bold">
+          <span style="font-size: 1.2rem; color: white;">&#128231; <a href="mailto:info@niyulabs.com" style="color: #38bdf8; text-decoration: none;">info@niyulabs.com</a></span>
+          <span style="font-size: 1.2rem; color: white;">&#127760; <a href="https://niyulabs.com" style="color: #38bdf8; text-decoration: none;">niyulabs.com</a></span>
+        </div>
+      </div>
+      <p style="margin-top: 60px; color: #94a3b8; font-weight: 600; font-size: 14px;">Last updated: December 2025 | Version: 18.0.2.1.0 | Odoo 16 &#183; 17 &#183; 18</p>
+    </div>
+  </footer>
+
+</section>
