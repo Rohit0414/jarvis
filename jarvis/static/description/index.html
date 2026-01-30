@@ -138,8 +138,8 @@
           </div>
           <div class="col-md-6">
             <div style="background: #fff; border-radius: 12px; padding: 20px; border: 1px solid #e0e7ff;">
-              <div style="font-size: 11px; font-weight: 800; color: #6366f1; text-transform: uppercase; margin-bottom: 8px;">Settings & Credentials</div>
-              <p style="margin: 0; font-size: 15px; color: #334155;">Settings &#8594; [Azure Synapse Connector] &#8594; Configuration</p>
+              <div style="font-size: 11px; font-weight: 800; color: #6366f1; text-transform: uppercase; margin-bottom: 8px;">Connection Settings</div>
+              <p style="margin: 0; font-size: 15px; color: #334155;">Settings &#8594; left sidebar &#8594; <b>Microsoft Azure Synapse</b></p>
             </div>
           </div>
           <div class="col-md-6">
@@ -412,10 +412,10 @@
   </section>
 
   <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- STEP 4: ODOO CONFIG — WHERE TO FIND -->
+  <!-- STEP 4: ODOO CONFIG — CONNECTION FIELDS -->
   <!-- ═══════════════════════════════════════════════════════════════ -->
-  <section id="queries" style="padding: 80px 20px; background: #ffffff; border-top: 1px solid #e2e8f0;">
-    <div class="container" style="max-width: 900px;">
+  <section id="queries" style="padding: 80px 20px; background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%); border-top: 1px solid #e2e8f0;">
+    <div class="container" style="max-width: 960px;">
       <div style="
         display: inline-flex;
         align-items: center;
@@ -431,39 +431,95 @@
         margin-bottom: 16px;
       ">Step 04 · Odoo Configuration</div>
 
-      <h2 style="font-size: 2rem; font-weight: 900; margin-bottom: 12px;">Build Your Export Profile</h2>
-      <p style="color: #64748b; font-size: 1.1rem; margin-bottom: 32px;">Paste your Azure details into the Odoo Connector settings.</p>
+      <h2 style="font-size: 2rem; font-weight: 900; margin-bottom: 8px;">Connection Settings</h2>
+      <p style="color: #64748b; font-size: 1.1rem; margin-bottom: 8px;">Required configuration for ADLS Gen2 &#8594; Synapse COPY INTO.</p>
 
       <div style="
         background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
-        border: 1px solid #a7f3d0;
+        border: 1px solid #6ee7b7;
         border-radius: 16px;
-        padding: 20px 24px;
-        margin-bottom: 32px;
+        padding: 24px 28px;
+        margin-bottom: 48px;
+        box-shadow: 0 4px 20px -4px rgba(5,150,105,0.2);
       ">
-        <div style="font-size: 12px; font-weight: 800; color: #059669; text-transform: uppercase; margin-bottom: 8px;">&#128205; Where to find in Odoo</div>
-        <p style="margin: 0; font-size: 1.05rem; color: #065f46;"><b>Settings</b> &#8594; Azure Synapse Connector &#8594; <b>Configuration</b> (or via main app menu)</p>
+        <div style="font-size: 12px; font-weight: 800; color: #059669; text-transform: uppercase; margin-bottom: 10px;">&#128205; Where to find in Odoo</div>
+        <p style="margin: 0; font-size: 1.15rem; color: #065f46; font-weight: 600;">Settings</p>
+        <p style="margin: 6px 0 0 0; font-size: 1.05rem; color: #047857;">&#8594; Left sidebar under Connectors &#8594; <b>Microsoft Azure Synapse</b></p>
+        <p style="margin: 12px 0 0 0; font-size: 13px; color: #0d9488;">(Sits alongside Redshift, Snowflake, BigQuery connectors)</p>
       </div>
 
-      <div style="
-        background: #fff;
-        border: 1px solid #e2e8f0;
-        border-radius: 20px;
-        padding: 32px 40px;
-        margin-bottom: 40px;
-        box-shadow: 0 4px 24px -8px rgba(0,0,0,0.06);
-      ">
-        <h6 style="font-weight: 800; margin-bottom: 20px;">Setting up the Connector</h6>
-        <ul style="list-style: none; padding: 0;" class="text-muted">
-          <li style="margin-bottom: 14px;">&#183; <b>Workspace SQL Endpoint:</b> Your Synapse URL</li>
-          <li style="margin-bottom: 14px;">&#183; <b>Database:</b> Your SQL Pool name</li>
-          <li style="margin-bottom: 14px;">&#183; <b>Storage Account:</b> Your ADLS Gen2 name</li>
-          <li style="margin-bottom: 14px;">&#183; <b>SAS Token:</b> Secret from Step 2</li>
-        </ul>
+      <!-- Connection Fields — Styled Cards -->
+      <div class="row g-4 mb-5">
+        <div class="col-lg-6">
+          <div style="
+            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+            border: 1px solid #e2e8f0;
+            border-radius: 24px;
+            padding: 32px 36px;
+            height: 100%;
+            box-shadow: 0 8px 32px -12px rgba(0,120,212,0.15);
+            border-left: 4px solid #0078d4;
+          ">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px;">
+              <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #0078d4, #50e6ff); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 24px;">&#128268;</div>
+              <div>
+                <h5 style="font-weight: 800; margin: 0; color: #0f172a;">Synapse SQL</h5>
+                <p style="margin: 4px 0 0 0; font-size: 13px; color: #64748b;">Dedicated Pool</p>
+              </div>
+            </div>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="margin-bottom: 18px; padding: 14px 18px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0;">
+                <div style="font-size: 11px; font-weight: 700; color: #0078d4; text-transform: uppercase; margin-bottom: 6px;">Server Name</div>
+                <div style="font-size: 14px; color: #334155; font-family: monospace;">&lt;workspace&gt;.sql.azuresynapse.net</div>
+              </li>
+              <li style="margin-bottom: 18px; padding: 14px 18px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0;">
+                <div style="font-size: 11px; font-weight: 700; color: #0078d4; text-transform: uppercase; margin-bottom: 6px;">Admin Username</div>
+                <div style="font-size: 14px; color: #334155;">Your SQL pool admin (e.g. synapseadmin)</div>
+              </li>
+              <li style="padding: 14px 18px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0;">
+                <div style="font-size: 11px; font-weight: 700; color: #0078d4; text-transform: uppercase; margin-bottom: 6px;">Password</div>
+                <div style="font-size: 14px; color: #334155;">SQL admin password (masked)</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div style="
+            background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
+            border: 1px solid #bbf7d0;
+            border-radius: 24px;
+            padding: 32px 36px;
+            height: 100%;
+            box-shadow: 0 8px 32px -12px rgba(16,185,129,0.2);
+            border-left: 4px solid #10b981;
+          ">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px;">
+              <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #059669, #34d399); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 24px;">&#128230;</div>
+              <div>
+                <h5 style="font-weight: 800; margin: 0; color: #0f172a;">ADLS Gen2 Staging</h5>
+                <p style="margin: 4px 0 0 0; font-size: 13px; color: #64748b;">Data Lake Storage</p>
+              </div>
+            </div>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="margin-bottom: 18px; padding: 14px 18px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0;">
+                <div style="font-size: 11px; font-weight: 700; color: #059669; text-transform: uppercase; margin-bottom: 6px;">Account Name</div>
+                <div style="font-size: 14px; color: #334155;">Your ADLS Gen2 storage account</div>
+              </li>
+              <li style="margin-bottom: 18px; padding: 14px 18px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0;">
+                <div style="font-size: 11px; font-weight: 700; color: #059669; text-transform: uppercase; margin-bottom: 6px;">Container Name</div>
+                <div style="font-size: 14px; color: #334155;">e.g. <code style="background: #f1f5f9; padding: 2px 8px; border-radius: 6px;">synapse</code></div>
+              </li>
+              <li style="padding: 14px 18px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0;">
+                <div style="font-size: 11px; font-weight: 700; color: #059669; text-transform: uppercase; margin-bottom: 6px;">Shared Access Signature (SAS) Token</div>
+                <div style="font-size: 13px; color: #334155;">Full SAS token from Azure (sv=...&amp;ss=b&amp;srt=co...)</div>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
 
-      <p style="font-weight: 700; color: #64748b; font-size: 14px; margin-bottom: 12px;">&#128247; Odoo Settings Form</p>
-      <img src="./odoo_azure_config.png" alt="Odoo Azure Config" style="width: 100%; border-radius: 16px; box-shadow: 0 20px 60px -20px rgba(0,0,0,0.12); border: 1px solid #e2e8f0;">
+      <p style="font-weight: 700; color: #64748b; font-size: 14px; margin-bottom: 12px; text-align: center;">&#128247; Microsoft Azure Synapse settings in Odoo</p>
+      <img src="./odoo_synapse_settings.png" alt="Odoo Microsoft Azure Synapse Settings" style="width: 100%; border-radius: 20px; box-shadow: 0 24px 64px -16px rgba(0,0,0,0.2), 0 0 0 1px rgba(0,120,212,0.1); border: 1px solid #e2e8f0;">
 
       <div style="margin-top: 60px; padding: 40px; background: #f8fafc; border-radius: 24px; border: 1px solid #e2e8f0;">
         <h3 style="font-weight: 900; margin-bottom: 16px;">Selecting Data & Domains</h3>
@@ -592,7 +648,7 @@
 
       <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 16px; padding: 20px 24px;">
         <div style="font-size: 12px; font-weight: 800; color: #059669; text-transform: uppercase; margin-bottom: 8px;">&#128205; Where to test connection</div>
-        <p style="margin: 0; font-size: 1.05rem; color: #065f46;">Settings &#8594; Azure Synapse Connector &#8594; Configuration form &#8594; <b>Test Connection</b> button</p>
+        <p style="margin: 0; font-size: 1.05rem; color: #065f46;">Settings &#8594; <b>Microsoft Azure Synapse</b> (sidebar) &#8594; <b>Test Connection</b> or Save</p>
       </div>
     </div>
   </section>
