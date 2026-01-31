@@ -1842,23 +1842,101 @@
   </div>
 </section>
 
-    <!-- ========== CREATING PURCHASE ORDERS ========== -->
-    <section class="mb-5 p-4 text-white" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); border-radius: 16px;">
-        <h2 class="h3 fw-bold mb-3 d-flex align-items-center"><span class="me-2">&#128722;</span> Creating purchase orders</h2>
-        <p class="mb-4" style="opacity: 0.9;">Purchase orders are created from forecast lines that have suggested_buy &gt; 0 and a vendor (first supplier on the product). Lines are grouped by vendor; one PO per vendor with origin <strong>Niyu Smart Stock</strong>. Each order line uses the product, suggested_buy as quantity, and the vendor’s price from the product’s first seller.</p>
-        <div class="row g-4">
-            <div class="col-md-6">
-                <div class="p-3 bg-white bg-opacity-25 rounded h-100">
-                    <strong>From the list:</strong> Use the cart button on a row to create POs for that single record (same logic: one vendor, one PO). You can also select multiple rows and run the server action <strong>Create Purchase Orders</strong> (binding on niyu.forecast.result) to create POs for all selected lines grouped by vendor.
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="p-3 bg-white bg-opacity-25 rounded h-100">
-                    <strong>From the form:</strong> Click <strong>Create Purchase Order</strong> in the header to create a PO for that product only (if it has suggested_buy &gt; 0 and a vendor). After creation, the action opens the list of generated POs (purchase.order) in list and form view.
-                </div>
-            </div>
+   <!-- ========== CREATING PURCHASE ORDERS ========== -->
+<section class="mb-5">
+  
+  <!-- Main Hero Card -->
+  <div class="position-relative overflow-hidden text-white" 
+       style="border-radius: 24px; background: linear-gradient(135deg, #059669 0%, #065f46 100%); box-shadow: 0 20px 25px -5px rgba(5, 150, 105, 0.3);">
+    
+    <!-- Decorative Background Elements (Glass/Glow effects) -->
+    <div style="position: absolute; top: -100px; right: -50px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%); border-radius: 50%;"></div>
+    <div style="position: absolute; bottom: -50px; left: -50px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); border-radius: 50%;"></div>
+
+    <div class="p-5 position-relative z-1">
+      
+      <!-- Header -->
+      <div class="text-center mb-5">
+        <div class="d-inline-flex align-items-center justify-content-center mb-3 shadow-lg" 
+             style="width: 64px; height: 64px; background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); border-radius: 50%; border: 1px solid rgba(255,255,255,0.3); font-size: 2rem;">
+          &#128722;
         </div>
-    </section>
+        <h2 class="h2 fw-bold text-white">Creating purchase orders</h2>
+        <p class="mx-auto text-white opacity-75" style="max-width: 700px; font-size: 1.1rem;">
+          Turn predictions into action. The system automatically converts valid forecasts into grouped POs with a single click.
+        </p>
+      </div>
+
+      <!-- Logic Visualizer -->
+      <div class="d-flex flex-wrap justify-content-center gap-3 mb-5">
+        <div class="px-4 py-2 rounded-pill d-flex align-items-center" style="background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1);">
+          <span class="fw-bold me-2 text-warning">Input:</span> 
+          <span class="font-monospace small opacity-75">suggested_buy > 0</span>
+        </div>
+        <div class="d-none d-md-block text-white opacity-50 align-self-center">&#8594;</div>
+        <div class="px-4 py-2 rounded-pill d-flex align-items-center" style="background: rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1);">
+          <span class="fw-bold me-2 text-warning">Check:</span> 
+          <span class="font-monospace small opacity-75">Has Vendor</span>
+        </div>
+        <div class="d-none d-md-block text-white opacity-50 align-self-center">&#8594;</div>
+        <div class="px-4 py-2 rounded-pill d-flex align-items-center" style="background: rgba(255,255,255,0.9); color: #065f46;">
+          <span class="fw-bold me-2">&#10024; Output:</span> 
+          <span class="small fw-bold">PO Grouped by Vendor</span>
+        </div>
+      </div>
+
+      <!-- Methods Grid (Glass Cards) -->
+      <div class="row g-4">
+        
+        <!-- Method 1: From List -->
+        <div class="col-md-6">
+          <div class="h-100 p-4 rounded-4" 
+               style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); transition: transform 0.3s ease;"
+               onmouseover="this.style.background='rgba(255, 255, 255, 0.15)'; this.style.transform='translateY(-5px)';"
+               onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'; this.style.transform='translateY(0)';">
+            
+            <div class="d-flex align-items-center mb-3">
+              <span class="fs-3 me-3">&#128450;</span>
+              <h5 class="fw-bold mb-0">From Smart Stock List</h5>
+            </div>
+            
+            <p class="small text-white opacity-75 mb-3 lh-lg">
+              Ideal for bulk processing.
+            </p>
+            <ul class="list-unstyled small text-white opacity-90 mb-0">
+              <li class="mb-2 d-flex"><span class="me-2">&#8226;</span> <strong>Cart Icon:</strong> Click on any row to create a PO for just that item.</li>
+              <li class="d-flex"><span class="me-2">&#8226;</span> <strong>Bulk Action:</strong> Select multiple rows &rarr; Action &rarr; <span class="text-decoration-underline">Create Purchase Orders</span>. Items are automatically grouped into one PO per vendor.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Method 2: From Form -->
+        <div class="col-md-6">
+          <div class="h-100 p-4 rounded-4" 
+               style="background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); transition: transform 0.3s ease;"
+               onmouseover="this.style.background='rgba(255, 255, 255, 0.15)'; this.style.transform='translateY(-5px)';"
+               onmouseout="this.style.background='rgba(255, 255, 255, 0.1)'; this.style.transform='translateY(0)';">
+            
+            <div class="d-flex align-items-center mb-3">
+              <span class="fs-3 me-3">&#128196;</span>
+              <h5 class="fw-bold mb-0">From Forecast Form</h5>
+            </div>
+            
+            <p class="small text-white opacity-75 mb-3 lh-lg">
+              Ideal for reviewing specific products.
+            </p>
+            <ul class="list-unstyled small text-white opacity-90 mb-0">
+              <li class="mb-2 d-flex"><span class="me-2">&#8226;</span> <strong>Header Button:</strong> Click the primary <span class="border border-white border-opacity-50 px-1 rounded mx-1" style="font-size: 0.85em;">Create Purchase Order</span> button.</li>
+              <li class="d-flex"><span class="me-2">&#8226;</span> <strong>Result:</strong> Immediately creates the PO and redirects you to it. Origin field is set to "Niyu Smart Stock".</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
 
     <!-- ========== HOW TO USE ========== -->
     <section class="mb-5">
