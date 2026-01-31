@@ -1697,26 +1697,150 @@
     </div>
   </div>
 </section>
-    <!-- ========== FORECAST FORM VIEW ========== -->
-    <section class="mb-5">
-      <h2 class="h4 fw-bold text-dark mb-4"><span class="me-2">&#128201;</span> Forecast form view</h2>
-      <div class="row">
-        <div class="col-lg-6">
-            <p class="mb-3">Clicking a product in the list or "Review" in the Command Center opens the forecast form ("AI Forecast").</p>
-            <ul class="list-group list-group-flush mb-4 border rounded">
-                <li class="list-group-item"><strong>Header:</strong> Button <strong>Create Purchase Order</strong> (primary), visible only when suggested_buy &gt; 0.</li>
-                <li class="list-group-item"><strong>Sheet:</strong> Title with product_id (readonly). Two groups: (1) Current stock, Forecast 30d (AI demand), Suggested buy (bold). (2) Status (badge), Days of coverage, Last updated (last_updated).</li>
-                <li class="list-group-item"><strong>Notebook:</strong> Tab <strong>AI Prediction Graph</strong> — custom widget <code class="bg-light px-1 rounded">niyu_chart</code> on the <code class="bg-light px-1 rounded">chart_data</code> field (JSON from Niyu cloud with time series for the sparkline/chart).</li>
-            </ul>
-        </div>
-        <div class="col-lg-6">
-            <div class="p-3 bg-light rounded border text-center h-100 d-flex flex-column justify-content-center">
-                <small class="text-uppercase fw-bold text-muted mb-2 d-block">Screenshot — Forecast form</small>
-                <img src="screenshot_forecast_form.png" alt="Forecast form and AI Prediction Graph" class="img-fluid rounded shadow-sm" style="border: 4px solid white;" />
+  <!-- ========== FORECAST FORM VIEW ========== -->
+<section class="mb-5">
+  
+  <!-- Main Wrapper -->
+  <div class="position-relative bg-white overflow-hidden" 
+       style="border-radius: 24px; border: 1px solid #e2e8f0; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.01);">
+    
+    <!-- Top Gradient Accent (Pink/Purple for AI/Analytics theme) -->
+    <div style="height: 6px; background: linear-gradient(90deg, #ec4899 0%, #8b5cf6 100%);"></div>
+
+    <div class="p-5">
+
+      <!-- Section Header -->
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-8">
+          <div class="d-flex align-items-center mb-3">
+            <div class="d-flex align-items-center justify-content-center me-3 shadow-sm" 
+                 style="width: 56px; height: 56px; background: linear-gradient(135deg, #db2777 0%, #be185d 100%); color: white; border-radius: 16px; font-size: 1.75rem;">
+              &#128201;
             </div>
+            <div>
+              <h2 class="h2 fw-bold text-dark mb-0">Forecast Form View</h2>
+              <span class="badge bg-light text-primary border mt-2">Inventory &rarr; Product &rarr; Forecast</span>
+            </div>
+          </div>
+          <p class="text-muted fs-5 mb-0" style="max-width: 700px; line-height: 1.6;">
+            The detailed breakdown. Review individual product predictions, status, and historical trends before ordering.
+          </p>
         </div>
       </div>
-    </section>
+
+      <div class="row g-5 align-items-center">
+        
+        <!-- Left Column: UI Breakdown -->
+        <div class="col-lg-6">
+          <div class="d-flex flex-column gap-4">
+            
+            <!-- Feature 1: The Header Action -->
+            <div class="p-3 bg-white border rounded-4 shadow-sm position-relative overflow-hidden" 
+                 style="transition: transform 0.3s ease;"
+                 onmouseover="this.style.transform='translateX(5px)'; this.style.borderColor='#ec4899';" 
+                 onmouseout="this.style.transform='translateX(0)'; this.style.borderColor='#dee2e6';">
+              <div class="d-flex align-items-start">
+                <div class="me-3 mt-1 text-primary fs-4">&#128722;</div>
+                <div>
+                  <h6 class="fw-bold text-dark">Dynamic Action Header</h6>
+                  <p class="small text-muted mb-2">
+                    Primary button <strong>Create Purchase Order</strong> appears strictly when logic dictates:
+                  </p>
+                  <div class="d-inline-block px-3 py-1 bg-light border rounded small font-monospace text-secondary">
+                    if suggested_buy > 0
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Feature 2: The Data Sheet -->
+            <div class="p-3 bg-white border rounded-4 shadow-sm position-relative overflow-hidden" 
+                 style="transition: transform 0.3s ease;"
+                 onmouseover="this.style.transform='translateX(5px)'; this.style.borderColor='#8b5cf6';" 
+                 onmouseout="this.style.transform='translateX(0)'; this.style.borderColor='#dee2e6';">
+              <div class="d-flex align-items-start">
+                <div class="me-3 mt-1 text-primary fs-4">&#128196;</div>
+                <div>
+                  <h6 class="fw-bold text-dark">Smart Data Sheet</h6>
+                  <p class="small text-muted mb-2">Organized into two logical groups for quick decision making:</p>
+                  <ul class="mb-0 small text-secondary ps-3">
+                    <li><strong>Supply:</strong> Current Stock, AI Demand, Suggested Buy (Bold).</li>
+                    <li><strong>Health:</strong> Status Badge, Days Coverage, Last Updated.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Feature 3: The AI Graph -->
+            <div class="p-3 bg-white border rounded-4 shadow-sm position-relative overflow-hidden" 
+                 style="transition: transform 0.3s ease;"
+                 onmouseover="this.style.transform='translateX(5px)'; this.style.borderColor='#10b981';" 
+                 onmouseout="this.style.transform='translateX(0)'; this.style.borderColor='#dee2e6';">
+              <div class="d-flex align-items-start">
+                <div class="me-3 mt-1 text-primary fs-4">&#128200;</div>
+                <div>
+                  <h6 class="fw-bold text-dark">AI Prediction Graph</h6>
+                  <p class="small text-muted mb-2">
+                    Found in the notebook tab. A custom widget renders the JSON payload from the cloud.
+                  </p>
+                  <div class="d-flex gap-2">
+                    <code class="small bg-primary-subtle text-primary px-2 py-1 rounded">widget="niyu_chart"</code>
+                    <code class="small bg-light border px-2 py-1 rounded">field: chart_data</code>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right Column: Visual Mockup -->
+        <div class="col-lg-6">
+          <!-- Browser Window Frame -->
+          <div class="mx-auto shadow-lg" style="max-width: 500px; border-radius: 12px; overflow: hidden;">
+            
+            <!-- Window Bar -->
+            <div class="bg-dark p-2 d-flex align-items-center justify-content-between" 
+                 style="background: #1e293b; border-bottom: 1px solid #334155;">
+               <div class="d-flex gap-2 ms-2">
+                 <div style="width: 10px; height: 10px; background: #ef4444; border-radius: 50%;"></div>
+                 <div style="width: 10px; height: 10px; background: #f59e0b; border-radius: 50%;"></div>
+                 <div style="width: 10px; height: 10px; background: #22c55e; border-radius: 50%;"></div>
+               </div>
+               <div class="text-secondary small font-monospace opacity-50 pe-3">AI Forecast Details</div>
+            </div>
+            
+            <!-- Image Container -->
+            <div class="bg-light position-relative" style="min-height: 350px;">
+                 <img src="screenshot_forecast_form.png" 
+                      alt="Forecast Form Screenshot" 
+                      class="img-fluid w-100 h-100 object-fit-cover"
+                      style="opacity: 0.95;"
+                      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                 
+                 <!-- Fallback Placeholder -->
+                 <div class="d-none w-100 position-absolute top-0 bottom-0 d-flex flex-column align-items-center justify-content-center bg-light text-muted p-5 text-center">
+                    <span class="fs-1 mb-3 text-secondary">&#128202;</span>
+                    <span class="fw-bold text-dark mb-2">Visual Placeholder</span>
+                    <span class="small">screenshot_forecast_form.png</span>
+                    <p class="small mt-3 text-muted">Shows the "AI Prediction Graph" tab active.</p>
+                 </div>
+            </div>
+            
+            <!-- Bottom Bar -->
+            <div class="bg-white p-3 border-top d-flex align-items-center justify-content-between">
+                <span class="small fw-bold text-primary">Status: Healthy</span>
+                <button class="btn btn-sm btn-primary disabled opacity-75" style="font-size: 0.75rem;">Create Purchase Order</button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
 
     <!-- ========== CREATING PURCHASE ORDERS ========== -->
     <section class="mb-5 p-4 text-white" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); border-radius: 16px;">
