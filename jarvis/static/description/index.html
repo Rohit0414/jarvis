@@ -1507,40 +1507,196 @@
 </section>
 
     <!-- ========== SMART STOCK LIST ========== -->
-    <section class="mb-5">
-      <h2 class="h4 fw-bold text-dark mb-4"><span class="me-2">&#128220;</span> Smart Stock list</h2>
-      <p class="text-muted mb-4">Opened from Command Center via <strong>Inventory List</strong> or from the same menu. It is the list view of <strong>niyu.forecast.result</strong> with title "Smart Stock". Default filter applied: <strong>Need Purchase</strong> (suggested_buy &gt; 0). Default order: coverage_status (critical/out first) then suggested_buy descending.</p>
-      
-      <div class="table-responsive mb-4">
-        <table class="table table-bordered table-striped align-middle bg-white">
-            <thead class="bg-light">
-                <tr>
-                    <th style="width: 30%">Column</th>
-                    <th>Details</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td><strong>Product</strong></td><td>product_id (required, unique per record).</td></tr>
-                <tr><td><strong>Status</strong></td><td>coverage_status with badge widget: Critical (&lt; 7 days), Overstock (&gt; 60 days), Healthy, Stockout (danger/muted/warning/success decorations).</td></tr>
-                <tr><td><strong>Current Qty</strong></td><td>from product.qty_available (optional show).</td></tr>
-                <tr><td><strong>Days Coverage</strong></td><td>days_of_coverage (optional show).</td></tr>
-                <tr><td><strong>AI Demand (30d)</strong></td><td>forecast_30d (optional show).</td></tr>
-                <tr><td><strong>Suggested Buy</strong></td><td>computed, bold, with sum "Total Buy".</td></tr>
-                <tr><td><strong>Capital Needed</strong></td><td>cost_to_restock (optional hide, with sum "Total Capital").</td></tr>
-                <tr><td><strong>Action</strong></td><td>button <strong>Create Purchase Order</strong> (cart icon), visible only when suggested_buy &gt; 0.</td></tr>
-            </tbody>
-        </table>
+<section class="mb-5">
+  
+  <!-- Main Wrapper -->
+  <div class="position-relative bg-white overflow-hidden" 
+       style="border-radius: 24px; border: 1px solid #e2e8f0; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.01);">
+    
+    <!-- Top Gradient Accent (Blue/Slate for "List/Data" theme) -->
+    <div style="height: 6px; background: linear-gradient(90deg, #3b82f6 0%, #64748b 100%);"></div>
+
+    <div class="p-5">
+
+      <!-- Section Header -->
+      <div class="row align-items-end mb-5">
+        <div class="col-lg-8">
+          <div class="d-flex align-items-center mb-3">
+            <div class="d-flex align-items-center justify-content-center me-3 shadow-sm" 
+                 style="width: 56px; height: 56px; background: linear-gradient(135deg, #1e293b 0%, #334155 100%); color: white; border-radius: 16px; font-size: 1.75rem;">
+              &#128220;
+            </div>
+            <div>
+              <h2 class="h2 fw-bold text-dark mb-0">Smart Stock List</h2>
+              <span class="badge bg-light text-primary border mt-2">Model: niyu.forecast.result</span>
+            </div>
+          </div>
+          <p class="text-muted fs-5 mb-0" style="max-width: 700px; line-height: 1.6;">
+            The actionable heart of the system. A calculated list view prioritizing what needs to be bought right now.
+          </p>
+        </div>
+        
+        <!-- Quick Access Tip -->
+        <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+          <div class="d-inline-flex align-items-center px-3 py-2 rounded-pill bg-primary-subtle text-primary border border-primary-subtle small fw-bold">
+            <span class="me-2">&#128640;</span> Default Filter: "Need Purchase" (>0)
+          </div>
+        </div>
       </div>
 
-      <p class="mb-2"><strong>Row decorations:</strong> Rows in critical/out are danger; warning for overstock; info for suggested_buy &gt; 0 and normal.</p>
-      <p class="mb-4"><strong>Search / filters:</strong> Search by product_id. Group filters: <strong>Critical Risk</strong> (coverage_status in critical, out), <strong>Need Purchase</strong> (suggested_buy &gt; 0), <strong>Healthy</strong> (suggested_buy = 0). Group by Product available.</p>
-      
-      <div class="p-3 bg-light rounded border text-center">
-        <small class="text-uppercase fw-bold text-muted mb-2 d-block">Screenshot — Smart Stock list</small>
-        <img src="screenshot_smart_stock_list.png" alt="Smart Stock list view" class="img-fluid rounded shadow-sm" style="max-height: 400px; border: 4px solid white;" />
-      </div>
-    </section>
+      <div class="row g-5">
+        
+        <!-- Left Column: Data Structure (The Table Replacement) -->
+        <div class="col-lg-7">
+          <div class="card border-0 shadow-sm h-100" style="background: #f8fafc; border-radius: 16px;">
+            <div class="card-header bg-white border-bottom p-4" style="border-top-left-radius: 16px; border-top-right-radius: 16px;">
+              <h5 class="fw-bold text-dark mb-0">&#128194; Columns &amp; Logic</h5>
+            </div>
+            <div class="card-body p-0">
+              
+              <!-- List Item 1 -->
+              <div class="d-flex align-items-start p-3 border-bottom bg-white transition-hover">
+                <div class="me-3 mt-1 text-secondary">&#128230;</div>
+                <div class="flex-grow-1">
+                  <div class="d-flex justify-content-between">
+                    <strong class="text-dark">Product</strong>
+                    <code class="small text-muted bg-light px-1 rounded">product_id</code>
+                  </div>
+                  <p class="small text-muted mb-0">Required. Unique per record.</p>
+                </div>
+              </div>
 
+              <!-- List Item 2 -->
+              <div class="d-flex align-items-start p-3 border-bottom bg-white transition-hover">
+                <div class="me-3 mt-1 text-secondary">&#128737;</div>
+                <div class="flex-grow-1">
+                  <div class="d-flex justify-content-between">
+                    <strong class="text-dark">Status Badge</strong>
+                    <code class="small text-muted bg-light px-1 rounded">coverage_status</code>
+                  </div>
+                  <p class="small text-muted mb-0">
+                    <span class="badge bg-danger-subtle text-danger border border-danger-subtle me-1">Critical</span>
+                    <span class="badge bg-success-subtle text-success border border-success-subtle me-1">Healthy</span>
+                    <span class="badge bg-warning-subtle text-warning border border-warning-subtle">Overstock</span>
+                  </p>
+                </div>
+              </div>
+
+              <!-- List Item 3 -->
+              <div class="d-flex align-items-start p-3 border-bottom bg-white transition-hover">
+                <div class="me-3 mt-1 text-secondary">&#129302;</div>
+                <div class="flex-grow-1">
+                  <div class="d-flex justify-content-between">
+                    <strong class="text-dark">AI Demand (30d)</strong>
+                    <code class="small text-muted bg-light px-1 rounded">forecast_30d</code>
+                  </div>
+                  <p class="small text-muted mb-0">Predicted sales for next 30 days.</p>
+                </div>
+              </div>
+
+              <!-- List Item 4 -->
+              <div class="d-flex align-items-start p-3 border-bottom bg-white transition-hover" style="background: #f0fdf4;">
+                <div class="me-3 mt-1 text-success">&#128722;</div>
+                <div class="flex-grow-1">
+                  <div class="d-flex justify-content-between">
+                    <strong class="text-success">Suggested Buy</strong>
+                    <span class="badge bg-success text-white">Computed</span>
+                  </div>
+                  <p class="small text-muted mb-0">Max(0, Forecast - Stock). <strong>Sum displayed in footer.</strong></p>
+                </div>
+              </div>
+
+              <!-- List Item 5 -->
+              <div class="d-flex align-items-start p-3 border-bottom bg-white transition-hover">
+                <div class="me-3 mt-1 text-secondary">&#128176;</div>
+                <div class="flex-grow-1">
+                  <div class="d-flex justify-content-between">
+                    <strong class="text-dark">Capital Needed</strong>
+                    <code class="small text-muted bg-light px-1 rounded">cost_to_restock</code>
+                  </div>
+                  <p class="small text-muted mb-0">Cost to fulfill suggestion. (Optional visibility).</p>
+                </div>
+              </div>
+
+              <!-- List Item 6 -->
+              <div class="d-flex align-items-start p-3 bg-white transition-hover" style="border-bottom-left-radius: 16px; border-bottom-right-radius: 16px;">
+                <div class="me-3 mt-1 text-primary">&#9889;</div>
+                <div class="flex-grow-1">
+                  <div class="d-flex justify-content-between">
+                    <strong class="text-primary">Action</strong>
+                    <span class="badge bg-primary text-white">Button</span>
+                  </div>
+                  <p class="small text-muted mb-0">Cart icon. Visible only when suggested buy > 0.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Visual Legend & Screenshot -->
+        <div class="col-lg-5 d-flex flex-column">
+          
+          <!-- Visual Legend Card -->
+          <div class="mb-4 p-4 bg-white border rounded-4 shadow-sm">
+            <h6 class="fw-bold text-dark mb-3">Visual Status Legend</h6>
+            
+            <div class="d-flex align-items-center mb-2 p-2 rounded" style="background: #fef2f2; border-left: 4px solid #ef4444;">
+              <span class="badge bg-danger rounded-pill me-2">Danger</span>
+              <small class="text-danger fw-bold">Critical / Out</small>
+              <small class="text-muted ms-auto">High Priority</small>
+            </div>
+
+            <div class="d-flex align-items-center mb-2 p-2 rounded" style="background: #fffbeb; border-left: 4px solid #f59e0b;">
+              <span class="badge bg-warning text-dark rounded-pill me-2">Warning</span>
+              <small class="text-dark fw-bold" style="color: #b45309 !important;">Overstock</small>
+              <small class="text-muted ms-auto">> 60 Days</small>
+            </div>
+
+            <div class="d-flex align-items-center p-2 rounded" style="background: #eff6ff; border-left: 4px solid #3b82f6;">
+              <span class="badge bg-primary rounded-pill me-2">Info</span>
+              <small class="text-primary fw-bold">Need Purchase</small>
+              <small class="text-muted ms-auto">Normal Buy</small>
+            </div>
+          </div>
+
+          <!-- Screenshot Mockup -->
+          <div class="mt-auto">
+            <div class="bg-dark rounded-top-4 p-2 d-flex align-items-center" 
+                 style="background: #1e293b; border-bottom: 1px solid #334155; border-top-left-radius: 12px; border-top-right-radius: 12px;">
+               <div class="d-flex gap-2 ms-2">
+                 <div style="width: 10px; height: 10px; background: #64748b; border-radius: 50%;"></div>
+                 <div style="width: 10px; height: 10px; background: #64748b; border-radius: 50%;"></div>
+               </div>
+               <div class="mx-auto text-secondary small font-monospace opacity-50">Smart Stock List</div>
+            </div>
+            
+            <div class="bg-light position-relative overflow-hidden border-start border-end border-bottom" 
+                 style="height: 250px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-color: #cbd5e1 !important;">
+                 
+                 <img src="screenshot_smart_stock_list.png" 
+                      alt="Smart Stock List Screenshot" 
+                      class="img-fluid w-100 h-100 object-fit-cover"
+                      style="opacity: 0.9;"
+                      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                 
+                 <!-- Fallback -->
+                 <div class="d-none w-100 h-100 flex-column align-items-center justify-content-center bg-light text-muted">
+                    <span class="fs-1 mb-2 opacity-25">&#128450;</span>
+                    <span class="small opacity-50">screenshot_smart_stock_list.png</span>
+                 </div>
+            </div>
+            <div class="text-center mt-2">
+              <small class="text-muted fst-italic">Supports Group By: Product, Vendor, Category</small>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
     <!-- ========== FORECAST FORM VIEW ========== -->
     <section class="mb-5">
       <h2 class="h4 fw-bold text-dark mb-4"><span class="me-2">&#128201;</span> Forecast form view</h2>
