@@ -1,738 +1,616 @@
-<!-- Bootstrap 5 -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>html{scroll-behavior:smooth;} a{transition:color .2s,background .2s;}</style>
+<div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; color: #1a1a2e; line-height: 1.65; max-width: 960px; margin: 0 auto;">
 
-<section style="
-  background-color: #fafbfc;
-  color: #1a1d21;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  line-height: 1.7;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  width: 100%;
-  min-height: 100vh;
-  background-image: 
-    radial-gradient(ellipse 120% 80% at 50% -30%, rgba(0, 120, 212, 0.18), transparent 50%),
-    radial-gradient(ellipse 80% 60% at 100% 50%, rgba(88, 166, 255, 0.1), transparent 50%),
-    radial-gradient(ellipse 60% 40% at 0% 80%, rgba(0, 184, 212, 0.06), transparent 50%);
-">
-
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- HERO SECTION — FULL SCREEN -->
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <header style="min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 120px 24px 80px; text-align: center;">
-    <div class="container-fluid" style="max-width: 1400px; width: 100%;">
-      <div style="
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        background-color:  rgba(88,166,255,0.05);
-        border: 1px solid rgba(0,120,212,0.2);
-        padding: 8px 20px;
-        border-radius: 100px;
-        margin-bottom: 30px;
-        font-size: 13px;
-        font-weight: 700;
-        color: #0078d4;
-        letter-spacing: 0.5px;
-      ">&#9889; Odoo Connector &#183; Microsoft Intelligent Data Platform</div>
-
-      <h1 style="
-        font-size: clamp(2.8rem, 6vw, 4.2rem);
-        line-height: 1.1;
-        font-weight: 900;
-        letter-spacing: -0.03em;
-        margin: 0 0 24px 0;
-        color: #0d1117;
-      ">
-        <span style=" -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Azure Synapse</span> Connector
-      </h1>
-
-      <p style="font-size: 1.25rem; color: #57606a; max-width: 720px; margin: 0 auto 40px; line-height: 1.8;">
-        Bring your Odoo data into the Microsoft Intelligent Data Platform. Scale from simple tracking to <b>Enterprise-grade Analytics</b> with Azure Synapse. <b>Odoo handles the daily grind</b>—<b>Azure Synapse builds the big picture</b> for your executive team.
-      </p>
-
-    
-
-      <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
-        <span style="background-color: #006cbd; color: white; padding: 10px 22px; border-radius: 100px; font-weight: 700; font-size: 13px; box-shadow: 0 4px 14px rgba(0,120,212,0.35);">ADLS Gen2 Support</span>
-        <span style="background-color:  #059669; color: white; padding: 10px 22px; border-radius: 100px; font-weight: 700; font-size: 13px; box-shadow: 0 4px 14px rgba(13,148,136,0.3);">Incremental Sync</span>
-        <span style="background-color:  #0f172a; color: white; padding: 10px 22px; border-radius: 100px; font-weight: 700; font-size: 13px; box-shadow: 0 4px 14px rgba(0,0,0,0.2);">Dedicated SQL Pools</span>
-        <span style="background-color:  #4f46e5; color: white; padding: 10px 22px; border-radius: 100px; font-weight: 700; font-size: 13px; box-shadow: 0 4px 14px rgba(99,102,241,0.3);">Power BI Native</span>
-      </div>
-
-      <div style="
-        background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
-        border: 1px solid #e2e8f0;
-        border-radius: 28px;
-        padding: 40px 56px;
-        max-width: 1000px;
-        margin: 0 auto;
-        box-shadow: 0 8px 40px -12px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,120,212,0.05);
-      ">
-        <h5 style="font-weight: 800; color: #0f172a; margin-bottom: 12px; font-size: 1.2rem;">&#10024; The Modern Data Pipeline</h5>
-        <p style="margin: 0; font-size: 1.15rem; color: #475569;">
-          Export <b>Odoo Records</b> &#8594; Land in <b>Azure Data Lake</b> &#8594; Sync to <b>Dedicated SQL Pool</b> &#8594; Visualize in <b>Power BI</b>
-        </p>
-      </div>
-    </div>
-  </header>
-
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- WHERE TO FIND — QUICK REFERENCE -->
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <div style="
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(255,255,255,0.92);
-    backdrop-filter: blur(16px);
-    border-bottom: 1px solid #e2e8f0;
-    padding: 16px 0;
-    box-shadow: 0 2px 20px -8px rgba(0,0,0,0.08);
-  ">
-    <div class="container-fluid" style="max-width: 1400px; width: 100%;">
-      <div class="d-flex flex-wrap justify-content-center align-items-center gap-3">
-        <span style="font-weight: 800; font-size: 12px; color: #64748b; text-transform: uppercase; letter-spacing: 1px;">&#128269; Where to find</span>
-        <a href="#what" style="text-decoration: none; color: #1e293b; font-weight: 600; font-size: 14px; padding: 6px 14px; border-radius: 8px; transition: all 0.2s;">Benefits</a>
-        <a href="#how" style="text-decoration: none; color: #1e293b; font-weight: 600; font-size: 14px; padding: 6px 14px; border-radius: 8px;">How it Works</a>
-        <a href="#setup" style="text-decoration: none; color: #1e293b; font-weight: 600; font-size: 14px; padding: 6px 14px; border-radius: 8px;">Azure Setup</a>
-        <a href="#storage" style="text-decoration: none; color: #1e293b; font-weight: 600; font-size: 14px; padding: 6px 14px; border-radius: 8px;">Storage & SAS</a>
-        <a href="#queries" style="text-decoration: none; color: #0078d4; font-weight: 700; font-size: 14px; padding: 6px 14px; border-radius: 8px; background: rgba(0,120,212,0.08);">Odoo Config</a>
-        <a href="#networking" style="text-decoration: none; color: #1e293b; font-weight: 600; font-size: 14px; padding: 6px 14px; border-radius: 8px;">Security</a>
-        <a href="#visualize" style="text-decoration: none; color: #1e293b; font-weight: 600; font-size: 14px; padding: 6px 14px; border-radius: 8px;">Query Data</a>
-        <a href="#incremental" style="text-decoration: none; color: #1e293b; font-weight: 600; font-size: 14px; padding: 6px 14px; border-radius: 8px;">Sync Logic</a>
-        <a href="#troubleshoot" style="text-decoration: none; color: #dc2626; font-weight: 700; font-size: 14px; padding: 6px 14px; border-radius: 8px;">Troubleshoot</a>
-      </div>
-    </div>
+  <!-- ========== HERO ========== -->
+  <div style="text-align: center; padding: 2.5rem 0 3rem; border-bottom: 2px solid #e2e8f0;">
+    <p style="margin: 0 0 0.5rem; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: #6366f1;">Niyu Labs</p>
+    <h1 style="margin: 0; font-size: 2.5rem; font-weight: 800; letter-spacing: -0.03em; color: #0f172a;">Inventory Forecast</h1>
+    <p style="margin: 1rem 0 0; font-size: 1.15rem; color: #64748b;">AI-powered demand forecasting and smart reordering for Odoo. One of the flagship solutions by Niyu Labs for inventory planning.</p>
   </div>
 
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- ODOO NAVIGATION MAP — FULL WIDTH -->
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <section style="padding: 80px 24px; background: #ffffff;">
-    <div class="container-fluid" style="max-width: 1400px; width: 100%;">
-      <div style="
-        background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
-        border: 1px solid #bfdbfe;
-        border-radius: 20px;
-        padding: 36px 40px;
-        box-shadow: 0 4px 24px -4px rgba(0,120,212,0.15);
-      ">
-        <h3 style="font-weight: 900; color: #1e40af; margin-bottom: 24px; font-size: 1.4rem;">&#128205; Where to Find Everything in Odoo</h3>
-        <div class="row g-4">
-          <div class="col-md-6">
-            <div style="background: #fff; border-radius: 12px; padding: 20px; border: 1px solid #e0e7ff;">
-              <div style="font-size: 11px; font-weight: 800; color: #6366f1; text-transform: uppercase; margin-bottom: 8px;">Install App</div>
-              <p style="margin: 0; font-size: 15px; color: #334155;">Apps &#8594; Update Apps List &#8594; Search "Azure Synapse" &#8594; Install</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div style="background: #fff; border-radius: 12px; padding: 20px; border: 1px solid #e0e7ff;">
-              <div style="font-size: 11px; font-weight: 800; color: #6366f1; text-transform: uppercase; margin-bottom: 8px;">Connection Settings</div>
-              <p style="margin: 0; font-size: 15px; color: #334155;">Settings &#8594; left sidebar &#8594; <b>Microsoft Azure Synapse</b></p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div style="background: #fff; border-radius: 12px; padding: 20px; border: 1px solid #e0e7ff;">
-              <div style="font-size: 11px; font-weight: 800; color: #6366f1; text-transform: uppercase; margin-bottom: 8px;">Export Profiles</div>
-              <p style="margin: 0; font-size: 15px; color: #334155;">Main menu &#8594; Azure Synapse Connector &#8594; Export Profiles</p>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div style="background: #fff; border-radius: 12px; padding: 20px; border: 1px solid #e0e7ff;">
-              <div style="font-size: 11px; font-weight: 800; color: #6366f1; text-transform: uppercase; margin-bottom: 8px;">Run / Schedule Sync</div>
-              <p style="margin: 0; font-size: 15px; color: #334155;">Export Profile form &#8594; Run Export / Cron Schedule</p>
-            </div>
-          </div>
+  <!-- ========== QUICK START ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Quick start</h2>
+    <p style="margin: 0 0 1rem; color: #334155;">Get up and running in four steps:</p>
+    <ol style="margin: 0 0 1rem 1.5rem; color: #475569;">
+      <li>Install the module and go to <strong>Inventory → Configuration → Settings</strong>. In <strong>Niyu AI Configuration</strong>, enter your <strong>Niyu License Key</strong> (from niyulabs.com) and click <strong>Save</strong>.</li>
+      <li>Click <strong>Run Initial Sync</strong>. Wait for the success message; results appear in about 1 minute.</li>
+      <li>Open <strong>Inventory → Niyu AI</strong> to see the Command Center (KPIs and Replenishment Board).</li>
+      <li>Click <strong>Inventory List</strong> to see the full Smart Stock list. Use the cart icon or <strong>Create Purchase Order</strong> to generate POs from the forecast.</li>
+    </ol>
+  </section>
+
+  <!-- ========== PREREQUISITES ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Prerequisites</h2>
+    <p style="margin: 0 0 1rem; color: #334155;">Before using Inventory Forecast, ensure:</p>
+    <ul style="margin: 0 0 1rem 1.25rem; color: #475569;">
+      <li><strong>Odoo apps</strong> — Stock (Inventory), Sales, and Purchase are installed. The module depends on them.</li>
+      <li><strong>Sales history</strong> — You have confirmed Sales Orders (state Sale or Done) with order date in the last 2 years. Quotations and drafts are not used.</li>
+      <li><strong>Products</strong> — Products you want to forecast are Storable or Consumable (not Service). Set product type in Inventory → Products → product form.</li>
+      <li><strong>Vendors (for POs)</strong> — Products you want to reorder have at least one supplier on the Purchase tab. The first supplier is used for suggested buy and PO creation.</li>
+      <li><strong>License key</strong> — You have a Niyu License Key from niyulabs.com. Enter it in Inventory → Configuration → Settings → Niyu AI Configuration.</li>
+      <li><strong>Network</strong> — Your Odoo server can reach api.niyulabs.com over HTTPS (port 443) for sync and polling.</li>
+    </ul>
+  </section>
+
+  <!-- ========== OVERVIEW ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Overview</h2>
+    <p style="margin: 0 0 1rem; color: #334155;">Inventory Forecast connects your Odoo sales history to Niyu’s cloud AI to predict demand per product for the next 30 days. It computes suggested order quantities, days of coverage, capital needed to restock, and revenue at risk. You get a Command Center dashboard, a full Smart Stock list with status badges and filters, and one-click purchase order generation grouped by vendor.</p>
+    <div style="display: flex; flex-wrap: wrap; margin: 0 -0.75rem;">
+      <div style="flex: 1 1 30%; min-width: 200px; padding: 0 0.75rem; margin-bottom: 1rem;">
+        <div style="background: linear-gradient(135deg, #eef2ff 0%, #fff 100%); border-radius: 12px; padding: 1.5rem; border: 1px solid #c7d2fe;">
+          <div style="width: 44px; height: 44px; background: #4f46e5; color: #fff; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 0.75rem; font-size: 1.25rem;">📈</div>
+          <strong style="color: #3730a3; font-size: 1rem;">30-day AI demand</strong>
+          <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #475569;">Per-product forecast from your last 2 years of confirmed sales, processed by Niyu cloud.</p>
+        </div>
+      </div>
+      <div style="flex: 1 1 30%; min-width: 200px; padding: 0 0.75rem; margin-bottom: 1rem;">
+        <div style="background: linear-gradient(135deg, #ecfdf5 0%, #fff 100%); border-radius: 12px; padding: 1.5rem; border: 1px solid #a7f3d0;">
+          <div style="width: 44px; height: 44px; background: #059669; color: #fff; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 0.75rem; font-size: 1.25rem;">🛒</div>
+          <strong style="color: #065f46; font-size: 1rem;">Suggested buy & capital</strong>
+          <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #475569;">Quantity to order and cost (standard price × suggested buy) to cover the next 30 days.</p>
+        </div>
+      </div>
+      <div style="flex: 1 1 30%; min-width: 200px; padding: 0 0.75rem; margin-bottom: 1rem;">
+        <div style="background: linear-gradient(135deg, #fffbeb 0%, #fff 100%); border-radius: 12px; padding: 1.5rem; border: 1px solid #fde68a;">
+          <div style="width: 44px; height: 44px; background: #d97706; color: #fff; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 0.75rem; font-size: 1.25rem;">⚡</div>
+          <strong style="color: #92400e; font-size: 1rem;">One-click POs</strong>
+          <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: #475569;">Generate purchase orders by vendor from the forecast list or from a single product form.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- CAPABILITIES — FULL WIDTH -->
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <section id="what" style="padding: 80px 24px; background: #f8fafc; border-top: 1px solid #e2e8f0;">
-    <div class="container-fluid" style="max-width: 1400px; width: 100%;">
-      <div class="text-center mb-5">
-        <h2 style="font-size: 2.25rem; font-weight: 900; color: #0f172a;">Enterprise Data Capabilities</h2>
-        <p style="color: #64748b; font-size: 1.15rem;">Scale your Odoo analytics using Microsoft's most powerful data warehouse.</p>
-      </div>
+  <!-- ========== BENEFITS ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Benefits</h2>
+    <p style="margin: 0 0 1rem; color: #334155;">Why use Inventory Forecast:</p>
+    <ul style="margin: 0 0 1rem 1.25rem; color: #475569;">
+      <li><strong>Reduce stockouts</strong> — AI predicts demand so you reorder before running out; focus on Critical and Stockout items first.</li>
+      <li><strong>Optimize capital</strong> — See Restock Capital and per-product cost to restock; order what you need instead of overbuying.</li>
+      <li><strong>Save time</strong> — One dashboard (Command Center) and one list (Smart Stock) instead of manual spreadsheets; one-click POs grouped by vendor.</li>
+      <li><strong>Revenue at Risk visibility</strong> — Know how much potential revenue is lost when products are out of stock.</li>
+      <li><strong>Data-driven reordering</strong> — Suggested buy is based on 2 years of sales and current stock, not guesswork.</li>
+    </ul>
+  </section>
 
-      <div class="row g-4">
-        <div class="col-md-6 col-lg-3">
-          <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 20px; padding: 32px; height: 100%; box-shadow: 0 4px 20px -8px rgba(0,0,0,0.06); transition: transform 0.2s;">
-            <div style="font-size: 32px; margin-bottom: 16px;">&#128640;</div>
-            <h5 style="font-weight: 800; margin-bottom: 12px; font-size: 1.1rem;">Unlimited Model Export</h5>
-            <p style="color: #64748b; font-size: 14px; margin-bottom: 12px;">Transfer any Odoo data point to Azure:</p>
-            <ul style="color: #4b5563; font-size: 14px; margin: 0; padding-left: 18px;">
-              <li>CRM Leads, Sales Pipelines</li>
-              <li>Accounting Ledgers, Invoices</li>
-              <li>Inventory & Manufacturing BoMs</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 20px; padding: 32px; height: 100%; box-shadow: 0 4px 20px -8px rgba(0,0,0,0.06);">
-            <div style="font-size: 32px; margin-bottom: 16px;">&#128256;</div>
-            <h5 style="font-weight: 800; margin-bottom: 12px; font-size: 1.1rem;">Delta Sync Technology</h5>
-            <p style="color: #64748b; font-size: 14px; margin: 0;">Only pushes changes (Update/Insert). Minimizes storage costs and speeds up sync cycles.</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 20px; padding: 32px; height: 100%; box-shadow: 0 4px 20px -8px rgba(0,0,0,0.06);">
-            <div style="font-size: 32px; margin-bottom: 16px;">&#9201;</div>
-            <h5 style="font-weight: 800; margin-bottom: 12px; font-size: 1.1rem;">Automated Pipelines</h5>
-            <p style="color: #64748b; font-size: 14px; margin: 0;">Schedule exports every 15 min or hourly. Power BI stays fresh without manual clicks.</p>
-          </div>
-        </div>
-        <div class="col-md-6 col-lg-3">
-          <div style="background: #fff; border: 1px solid #e2e8f0; border-radius: 20px; padding: 32px; height: 100%; box-shadow: 0 4px 20px -8px rgba(0,0,0,0.06);">
-            <div style="font-size: 32px; margin-bottom: 16px;">&#128203;</div>
-            <h5 style="font-weight: 800; margin-bottom: 12px; font-size: 1.1rem;">Schema Auto-Mapping</h5>
-            <p style="color: #64748b; font-size: 14px; margin: 0;">Auto-creates tables in Dedicated SQL Pool with Odoo-to-Synapse type conversion.</p>
-          </div>
-        </div>
-      </div>
+  <!-- ========== FEATURES ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Features</h2>
+    <p style="margin: 0 0 1rem; color: #334155;">Inventory Forecast includes the following capabilities:</p>
+    <ul style="margin: 0 0 1rem 1.25rem; color: #475569;">
+      <li><strong>AI 30-day demand</strong> — Per-product forecast for the next 30 days from your last 2 years of confirmed sales, processed by Niyu cloud.</li>
+      <li><strong>Command Center</strong> — Dashboard under Inventory → Niyu AI with Revenue at Risk, Critical Items, Restock Capital, and Last AI Sync status.</li>
+      <li><strong>Replenishment Board</strong> — Top 50 items needing reorder with 30-day trend sparkline, stockout date, lead time, suggested buy, and Review action.</li>
+      <li><strong>Smart Stock list</strong> — Full forecast list with Product, Status badge (Critical / Overstock / Healthy / Stockout), Current Qty, Days Coverage, AI Demand, Suggested Buy, Capital Needed, and per-row Create PO button.</li>
+      <li><strong>Filters</strong> — Critical Risk, Need Purchase, Healthy; optional Group by Product.</li>
+      <li><strong>One-click purchase orders</strong> — From list (single row or multi-select + action) or from product form; POs grouped by vendor with origin &quot;Niyu Smart Stock&quot;.</li>
+      <li><strong>AI Prediction Graph</strong> — Form tab with chart from Niyu cloud (time series / sparkline data).</li>
+      <li><strong>Daily automatic sync</strong> — Optional scheduled action (e.g. 02:00) to run a new forecast every day.</li>
+      <li><strong>Background processing</strong> — Forecast runs in the cloud; polling cron checks every minute until results are ready (~1 minute).</li>
+      <li><strong>Concurrent-sync guard</strong> — Only one forecast job at a time; stale jobs (&gt; 15 min) are cleared automatically.</li>
+    </ul>
+  </section>
 
-      <div style="margin-top: 40px; padding: 32px 40px; background: linear-gradient(135deg, #eff6ff, #dbeafe); border-radius: 20px; border: 1px solid #bfdbfe;">
-        <h5 style="font-weight: 800; color: #1e40af;">Why use Azure Synapse?</h5>
-        <p style="margin: 0; color: #1e40af; font-size: 1.05rem;">Azure Synapse combines data warehousing and big data analytics. Query Odoo data with SQL, Python, or Spark and connect natively to Power BI for boardroom-ready visuals.</p>
-      </div>
+  <!-- ========== USE CASES ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Use cases</h2>
+    <p style="margin: 0 0 1rem; color: #334155;">Inventory Forecast fits well when:</p>
+    <ul style="margin: 0 0 1rem 1.25rem; color: #475569;">
+      <li><strong>Retail or e‑commerce</strong> — You sell many SKUs and need to know what to reorder and how much, without manual analysis.</li>
+      <li><strong>Wholesale / distribution</strong> — You manage multiple vendors; the module groups POs by vendor and uses the first supplier per product.</li>
+      <li><strong>Seasonal or variable demand</strong> — AI uses 2 years of history to capture trends and seasonality for the 30-day forecast.</li>
+      <li><strong>Stock and purchase already in Odoo</strong> — You use Stock, Sales, and Purchase; products have vendors and confirmed SOs so forecasts and POs are actionable.</li>
+      <li><strong>Daily or weekly replenishment</strong> — Run the forecast daily (cron) or on demand; check Command Center and create POs from the Smart Stock list.</li>
+    </ul>
+  </section>
+
+  <!-- ========== HOW IT WORKS ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">How it works</h2>
+    <p style="margin: 0 0 1rem; color: #334155;">When you run a forecast (manually from Settings or via the daily cron), Odoo collects daily sales by product from confirmed Sales Orders of the last 2 years for storable and consumable products. This data is compressed (gzip) and sent to <strong>api.niyulabs.com</strong> with your license key. The cloud returns a job ID; a scheduled action polls every 1 minute until the job is done. Results are then written into <strong>niyu.forecast.result</strong>: forecast quantity, chart JSON, and last sync time. Suggested buy is computed as max(0, forecast_30d − current_stock). Days of coverage and status (Critical / Overstock / Healthy / Stockout) are computed from current stock and the 30-day demand.</p>
+    <ul style="margin: 0.5rem 0 0 1.25rem; color: #475569;">
+      <li>Data source: <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">sale_order_line</code> + <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">sale_order</code> (state in sale/done, date_order last 2 years), product type product/consu.</li>
+      <li>Concurrent syncs: only one forecast job at a time; if a job is older than 15 minutes it is cleared and a new one can start.</li>
+      <li>Polling cron: <strong>Niyu AI: Poll Forecast Results</strong> runs every 1 minute when active; it is woken when a job is started and can be put to sleep when no jobs remain.</li>
+      <li>Daily cron: <strong>Niyu AI: Daily Demand Forecast</strong> runs once per day (e.g. 02:00) to start a new forecast automatically.</li>
+    </ul>
+  </section>
+
+  <!-- ========== WHAT GETS SYNCED ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">What gets synced</h2>
+    <p style="margin: 0 0 0.75rem; color: #334155;"><strong>Sent to Niyu cloud (request)</strong></p>
+    <p style="margin: 0 0 1rem; color: #475569;">Odoo builds a list of objects: <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">{ "product_id": &lt;id&gt;, "date": "YYYY-MM-DD", "qty": &lt;float&gt; }</code> for each (product, day) from confirmed SOs in the last 2 years. The list is JSON-encoded, gzip-compressed, and POSTed to <strong>api.niyulabs.com/forecast</strong> with headers <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">X-License-Key</code>, <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">Content-Encoding: gzip</code>, <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">Content-Type: application/json</code>. Response (200): <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">{ "job_id": "&lt;string&gt;" }</code>.</p>
+    <p style="margin: 0 0 0.75rem; color: #334155;"><strong>Received from cloud (poll result)</strong></p>
+    <p style="margin: 0 0 1rem; color: #475569;">Polling GETs <strong>api.niyulabs.com/result/&lt;job_id&gt;</strong> with <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">X-License-Key</code>. When <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">status</code> is <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">"done"</code>, <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">data</code> is a list of objects per product: <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">product_id</code>, <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">forecast_qty</code>, <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">chart_data</code> (JSON string). Odoo writes these into <strong>niyu.forecast.result</strong> (create or update by product_id), sets last_updated, last_sync_time, and last_sync_status.</p>
+  </section>
+
+  <!-- ========== KEY CONCEPTS ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Key concepts</h2>
+    <p style="margin: 0 0 1rem; color: #334155;">Core terms used throughout the module:</p>
+    <ul style="margin: 0 0 1rem 1.25rem; color: #475569;">
+      <li><strong>AI Demand (30d) / forecast_30d</strong> — The predicted quantity of a product that will be sold (or needed) in the next 30 days. Comes from Niyu cloud based on your last 2 years of sales.</li>
+      <li><strong>Suggested buy</strong> — Quantity you should order: max(0, AI Demand 30d − current stock). Zero when you have enough stock to cover the forecast.</li>
+      <li><strong>Days of coverage / Days left</strong> — How many days current stock will last at the forecasted daily demand (forecast_30d ÷ 30). Used to derive status.</li>
+      <li><strong>Coverage status</strong> — Stockout (out of stock), Critical (&lt; 7 days), Healthy (7–60 days), or Overstock (&gt; 60 days). Drives row colors and filters.</li>
+      <li><strong>Revenue at Risk</strong> — Sum of (forecast_30d × list_price) for products with zero stock. Potential revenue lost if you don’t restock.</li>
+      <li><strong>Restock Capital / Capital Needed</strong> — Money needed to fulfill suggested buys: suggested_buy × standard_price per product; Restock Capital is the total across all items needing purchase.</li>
+      <li><strong>Last AI Sync</strong> — When the last forecast run completed and results were written to Odoo. Shown in the Command Center header.</li>
+    </ul>
+  </section>
+
+  <!-- ========== WORKFLOW (STEP-BY-STEP) ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Workflow (step-by-step)</h2>
+    <p style="margin: 0 0 1rem; color: #334155;">End-to-end flow from sync to purchase:</p>
+    <ol style="margin: 0 0 1rem 1.5rem; color: #475569;">
+      <li><strong>Trigger</strong> — You click <strong>Run Initial Sync</strong> in Settings, or the daily cron runs (e.g. 02:00).</li>
+      <li><strong>Data collection</strong> — Odoo reads confirmed Sales Orders (last 2 years), aggregates daily sales per product (storable/consumable only).</li>
+      <li><strong>Send to cloud</strong> — Payload (product_id, date, qty) is compressed (gzip) and POSTed to api.niyulabs.com with your license key. Cloud returns a job_id.</li>
+      <li><strong>Polling</strong> — The scheduled action <strong>Niyu AI: Poll Forecast Results</strong> runs every minute. It GETs the result for job_id until status is &quot;done&quot; (typically ~1 minute).</li>
+      <li><strong>Results in Odoo</strong> — For each product, forecast_30d and chart_data are written (create or update) in niyu.forecast.result. last_sync_time and last_sync_status are updated.</li>
+      <li><strong>You see data</strong> — Command Center and Smart Stock list show updated KPIs, suggested buy, status, and Replenishment Board. Open Inventory → Niyu AI or Inventory List.</li>
+      <li><strong>Create POs</strong> — From the list (cart icon or multi-select + Action → Create Purchase Orders) or from a product form (Create Purchase Order). POs are grouped by vendor with origin &quot;Niyu Smart Stock&quot;.</li>
+    </ol>
+  </section>
+
+  <!-- ========== COMMAND CENTER ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Command Center</h2>
+    <p style="margin: 0 0 1rem; color: #334155;">The main entry point is <strong>Inventory → Niyu AI</strong>. It opens the Command Center: a dashboard with KPIs and a replenishment table.</p>
+    <p style="margin: 0 0 1rem; color: #475569;"><strong>Header:</strong> Title &quot;Command Center&quot;, a badge with <strong>Last AI Sync</strong> (from system parameter <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">niyu.last_sync_time</code>), and a sync status badge: <strong>Active</strong> (success), <strong>Error</strong> (with tooltip from <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">niyu.last_sync_msg</code>), or <strong>Syncing...</strong> (processing). A button <strong>Inventory List</strong> opens the Smart Stock list.</p>
+    <p style="margin: 0 0 0.75rem; color: #475569;"><strong>KPI cards (three columns):</strong></p>
+    <ul style="margin: 0 0 1rem 1.25rem; color: #475569;">
+      <li><strong>Revenue at Risk</strong> — Sum of (forecast_30d × list_price) for products with current stock = 0. Potential revenue loss if those stockouts persist.</li>
+      <li><strong>Critical Items</strong> — Count of forecast records with <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">coverage_status</code> in (critical, out).</li>
+      <li><strong>Restock Capital</strong> — Sum of (suggested_buy × standard_price) for all lines with suggested_buy &gt; 0. Capital needed to fulfill the next 30 days.</li>
+    </ul>
+    <p style="margin: 0 0 0.75rem; color: #475569;"><strong>Replenishment Board:</strong> Table of up to 50 items with suggested_buy &gt; 0, ordered by days_of_coverage ascending then suggested_buy descending. Columns: Product name + Vendor, 30-Day Trend (sparkline from chart_data), Stockout In (date or &quot;Stockout&quot; / &quot;Safe&quot;), Lead Time (days from first vendor), Suggested Buy (units), and a <strong>Review</strong> button that opens the forecast form. Filter toggles: <strong>All</strong> or <strong>Critical Only</strong> (items with days &lt; 7 or stockout).</p>
+    <div style="background: #f8fafc; border-radius: 12px; padding: 1.5rem; border: 1px solid #e2e8f0; margin-top: 1rem;">
+      <p style="margin: 0 0 0.75rem; font-size: 0.85rem; font-weight: 600; color: #475569;">Screenshot: Command Center</p>
+      <img src="screenshot_command_center.png" alt="Command Center dashboard" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #e2e8f0; display: block;" />
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- HOW IT WORKS — FULL WIDTH -->
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <section id="how" style="padding: 80px 24px; background: #ffffff; border-top: 1px solid #e2e8f0;">
-    <div class="container-fluid" style="max-width: 1400px; width: 100%;">
-      <div class="text-center mb-5">
-        <h2 style="font-size: 2.25rem; font-weight: 900;">High-Level Workflow</h2>
-        <p style="color: #64748b;">A seamless 4-step journey from Odoo to your Dashboard.</p>
-      </div>
+  <!-- ========== SCREENSHOTS INDEX ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Screenshots index</h2>
+    <p style="margin: 0 0 1rem; color: #334155;">This documentation references the following screenshots. Add the image files to <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">static/description/</code> with the exact filenames below.</p>
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+      <thead>
+        <tr style="background: #f1f5f9;">
+          <th style="text-align: left; padding: 0.6rem 0.75rem; border: 1px solid #e2e8f0;">Filename</th>
+          <th style="text-align: left; padding: 0.6rem 0.75rem; border: 1px solid #e2e8f0;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;"><code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">screenshot_command_center.png</code></td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Command Center: header (Last AI Sync, status), KPI cards, Replenishment Board.</td></tr>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;"><code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">screenshot_smart_stock_list.png</code></td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Smart Stock list: columns, status badges, filters, cart icon.</td></tr>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;"><code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">screenshot_forecast_form.png</code></td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Forecast form: product, groups, AI Prediction Graph tab.</td></tr>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;"><code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">screenshot_settings.png</code></td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Inventory Settings: Niyu AI Configuration (license key, Run Initial Sync).</td></tr>
+      </tbody>
+    </table>
+  </section>
 
-      <div class="row g-4 text-center mb-5">
-        <div class="col-6 col-md-3">
-          <div style="width: 56px; height: 56px; margin: 0 auto 12px; background: linear-gradient(135deg, #0078d4, #50e6ff); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #fff;">&#9729;</div>
-          <h6 style="font-weight: 800;">1) Azure Setup</h6>
-          <p class="small text-muted mb-0">Configure Synapse & ADLS Gen2</p>
-        </div>
-        <div class="col-6 col-md-3">
-          <div style="width: 56px; height: 56px; margin: 0 auto 12px; background: linear-gradient(135deg, #059669, #10b981); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #fff;">&#128274;</div>
-          <h6 style="font-weight: 800;">2) Authentication</h6>
-          <p class="small text-muted mb-0">Secure Odoo with SAS Tokens</p>
-        </div>
-        <div class="col-6 col-md-3">
-          <div style="width: 56px; height: 56px; margin: 0 auto 12px; background: linear-gradient(135deg, #6366f1, #818cf8); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #fff;">&#128228;</div>
-          <h6 style="font-weight: 800;">3) Mapping</h6>
-          <p class="small text-muted mb-0">Pick Odoo models & fields</p>
-        </div>
-        <div class="col-6 col-md-3">
-          <div style="width: 56px; height: 56px; margin: 0 auto 12px; background: linear-gradient(135deg, #0f172a, #334155); border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 24px; color: #fff;">&#128202;</div>
-          <h6 style="font-weight: 800;">4) Visualization</h6>
-          <p class="small text-muted mb-0">Query SQL in Synapse Studio</p>
-        </div>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-md-6">
-          <div style="background: #f8fafc; padding: 32px; border-radius: 20px; border: 1px solid #e2e8f0; height: 100%;">
-            <h6 style="font-weight: 800; margin-bottom: 16px;">How we ensure data integrity?</h6>
-            <ul class="small text-muted mb-0" style="padding-left: 18px;">
-              <li style="margin-bottom: 10px;">Odoo Python objects converted to Parquet/CSV.</li>
-              <li style="margin-bottom: 10px;">Files staged in your private Azure Data Lake.</li>
-              <li style="margin-bottom: 10px;">PolyBase/COPY moves data into SQL Pools.</li>
-              <li>Row-level comparison prevents duplicates.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div style="background: #f8fafc; padding: 32px; border-radius: 20px; border: 1px solid #e2e8f0; height: 100%;">
-            <h6 style="font-weight: 800; margin-bottom: 16px;">Ideal for these scenarios</h6>
-            <p class="small text-muted mb-3">Merge Odoo data with External Sales, IoT streams, or legacy SQL in one Azure Workspace.</p>
-            <div style="background: #fff; padding: 16px; border-radius: 12px; font-family: monospace; font-size: 13px; border: 1px solid #e2e8f0;">Power BI Desktop &#8596; Azure Synapse &#8596; Odoo</div>
-          </div>
-        </div>
-      </div>
+  <!-- ========== SMART STOCK LIST ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Smart Stock list</h2>
+    <p style="margin: 0 0 1rem; color: #334155;">Opened from Command Center via <strong>Inventory List</strong> or from the same menu. It is the list view of <strong>niyu.forecast.result</strong> with title &quot;Smart Stock&quot;. Default filter applied: <strong>Need Purchase</strong> (suggested_buy &gt; 0). Default order: coverage_status (critical/out first) then suggested_buy descending.</p>
+    <p style="margin: 0 0 0.75rem; color: #475569;"><strong>Columns:</strong></p>
+    <ul style="margin: 0 0 1rem 1.25rem; color: #475569;">
+      <li><strong>Product</strong> — product_id (required, unique per record).</li>
+      <li><strong>Status</strong> — coverage_status with badge widget: Critical (&lt; 7 days), Overstock (&gt; 60 days), Healthy, Stockout (danger/muted/warning/success decorations).</li>
+      <li><strong>Current Qty</strong> — from product.qty_available (optional show).</li>
+      <li><strong>Days Coverage</strong> — days_of_coverage (optional show).</li>
+      <li><strong>AI Demand (30d)</strong> — forecast_30d (optional show).</li>
+      <li><strong>Suggested Buy</strong> — computed, bold, with sum &quot;Total Buy&quot;.</li>
+      <li><strong>Capital Needed</strong> — cost_to_restock (optional hide, with sum &quot;Total Capital&quot;).</li>
+      <li><strong>Action</strong> — button <strong>Create Purchase Order</strong> (cart icon), visible only when suggested_buy &gt; 0.</li>
+    </ul>
+    <p style="margin: 0 0 0.75rem; color: #475569;"><strong>Row decorations:</strong> Rows in critical/out are danger; warning for overstock; info for suggested_buy &gt; 0 and normal.</p>
+    <p style="margin: 0 0 0.75rem; color: #475569;"><strong>Search / filters:</strong> Search by product_id. Group filters: <strong>Critical Risk</strong> (coverage_status in critical, out), <strong>Need Purchase</strong> (suggested_buy &gt; 0), <strong>Healthy</strong> (suggested_buy = 0). Group by Product available.</p>
+    <div style="background: #f8fafc; border-radius: 12px; padding: 1.5rem; border: 1px solid #e2e8f0; margin-top: 1rem;">
+      <p style="margin: 0 0 0.75rem; font-size: 0.85rem; font-weight: 600; color: #475569;">Screenshot: Smart Stock list</p>
+      <img src="screenshot_smart_stock_list.png" alt="Smart Stock list view" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #e2e8f0; display: block;" />
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- STEP 1: AZURE SETUP — FULL WIDTH -->
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <section id="setup" style="padding: 80px 24px; background: #f8fafc; border-top: 1px solid #e2e8f0;">
-    <div class="container-fluid" style="max-width: 1600px; width: 100%;">
-      <div style="
-        display: inline-flex;
-        align-items: center;
-        gap: 12px;
-        background: rgba(0,120,212,0.1);
-        color: #0078d4;
-        padding: 8px 16px;
-        border-radius: 100px;
-        font-weight: 800;
-        font-size: 12px;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        margin-bottom: 16px;
-      ">Step 01 · Azure Configuration</div>
-
-      <h2 style="font-size: 2rem; font-weight: 900; margin-bottom: 12px;">Find Workspace Endpoints</h2>
-      <p style="color: #64748b; font-size: 1.1rem; margin-bottom: 32px;">Open your <b>Azure Portal</b> and navigate to your Synapse Workspace.</p>
-
-      <div style="
-        background: #fff;
-        border: 1px solid #e2e8f0;
-        border-radius: 20px;
-        padding: 32px 40px;
-        margin-bottom: 40px;
-        box-shadow: 0 4px 24px -8px rgba(0,0,0,0.08);
-      ">
-        <h6 style="font-weight: 800; margin-bottom: 20px; font-size: 1.1rem;">Details to capture in Azure Portal:</h6>
-        <ul style="list-style: none; padding: 0; font-size: 1.05rem;">
-          <li style="margin-bottom: 12px;">&#183; <b>SQL Endpoint:</b> Copy "Workspace SQL endpoint" (ends in .sql.azuresynapse.net)</li>
-          <li style="margin-bottom: 12px;">&#183; <b>SQL Pool Name:</b> Your Dedicated Pool name (e.g. <code>SalesDW</code>)</li>
-          <li style="margin-bottom: 12px;">&#183; <b>SQL Auth:</b> SQL Admin username and password</li>
-        </ul>
-      </div>
-
-      <p style="font-weight: 700; color: #64748b; font-size: 14px; margin-bottom: 12px;">&#128247; Synapse workspace overview — Essentials (Dedicated SQL endpoint, odoo_dedicated pool)</p>
-      <img src="./synapse_overview.png" alt="Azure Synapse Overview Essentials" style="width: 100%; max-width: 100%; border-radius: 20px; box-shadow: 0 24px 80px -24px rgba(0,0,0,0.25); border: 1px solid #e2e8f0; margin-bottom: 32px; display: block;">
-      <p style="font-weight: 700; color: #64748b; font-size: 14px; margin-bottom: 12px;">&#128247; Synapse Analytics workspace dashboard — Ingest, Explore, Visualize</p>
-      <img src="./synapse_workspace_dashboard.png" alt="Synapse Workspace Dashboard" style="width: 100%; max-width: 100%; border-radius: 20px; box-shadow: 0 24px 80px -24px rgba(0,0,0,0.25); border: 1px solid #e2e8f0; display: block;">
+  <!-- ========== FORECAST FORM VIEW ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Forecast form view</h2>
+    <p style="margin: 0 0 1rem; color: #334155;">Clicking a product in the list or &quot;Review&quot; in the Command Center opens the forecast form (&quot;AI Forecast&quot;).</p>
+    <p style="margin: 0 0 0.75rem; color: #475569;"><strong>Header:</strong> Button <strong>Create Purchase Order</strong> (primary), visible only when suggested_buy &gt; 0.</p>
+    <p style="margin: 0 0 0.75rem; color: #475569;"><strong>Sheet:</strong> Title with product_id (readonly). Two groups: (1) Current stock, Forecast 30d (AI demand), Suggested buy (bold). (2) Status (badge), Days of coverage, Last updated (last_updated).</p>
+    <p style="margin: 0 0 0.75rem; color: #475569;"><strong>Notebook:</strong> Tab <strong>AI Prediction Graph</strong> — custom widget <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">niyu_chart</code> on the <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">chart_data</code> field (JSON from Niyu cloud with time series for the sparkline/chart).</p>
+    <div style="background: #f8fafc; border-radius: 12px; padding: 1.5rem; border: 1px solid #e2e8f0; margin-top: 1rem;">
+      <p style="margin: 0 0 0.75rem; font-size: 0.85rem; font-weight: 600; color: #475569;">Screenshot: Forecast form with AI Prediction Graph</p>
+      <img src="screenshot_forecast_form.png" alt="Forecast form and AI Prediction Graph" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #e2e8f0; display: block;" />
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- STEP 2: STORAGE & SAS — FULL WIDTH -->
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <section id="storage" style="padding: 80px 24px; background: #ffffff; border-top: 1px solid #e2e8f0;">
-    <div class="container-fluid" style="max-width: 1600px; width: 100%;">
-      <div style="
-        display: inline-flex;
-        align-items: center;
-        gap: 12px;
-        background: rgba(16,185,129,0.1);
-        color: #059669;
-        padding: 8px 16px;
-        border-radius: 100px;
-        font-weight: 800;
-        font-size: 12px;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        margin-bottom: 16px;
-      ">Step 02 · ADLS Gen2 Storage</div>
+  <!-- ========== CREATING PURCHASE ORDERS ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Creating purchase orders</h2>
+    <p style="margin: 0 0 1rem; color: #334155;">Purchase orders are created from forecast lines that have suggested_buy &gt; 0 and a vendor (first supplier on the product). Lines are grouped by vendor; one PO per vendor with origin <strong>Niyu Smart Stock</strong>. Each order line uses the product, suggested_buy as quantity, and the vendor’s price from the product’s first seller.</p>
+    <p style="margin: 0 0 0.75rem; color: #475569;"><strong>From the list:</strong> Use the cart button on a row to create POs for that single record (same logic: one vendor, one PO). You can also select multiple rows and run the server action <strong>Create Purchase Orders</strong> (binding on niyu.forecast.result) to create POs for all selected lines grouped by vendor.</p>
+    <p style="margin: 0 0 0.75rem; color: #475569;"><strong>From the form:</strong> Click <strong>Create Purchase Order</strong> in the header to create a PO for that product only (if it has suggested_buy &gt; 0 and a vendor). After creation, the action opens the list of generated POs (purchase.order) in list and form view.</p>
+  </section>
 
-      <h2 style="font-size: 2rem; font-weight: 900; margin-bottom: 12px;">Secure Landing Zone</h2>
+  <!-- ========== HOW TO USE ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">How to use</h2>
 
-      <div style="
-        background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-        color: #fff;
-        border-radius: 20px;
-        padding: 36px 40px;
-        box-shadow: 0 24px 60px -16px rgba(0,0,0,0.35);
-        margin: 32px 0 40px;
-        border: 1px solid rgba(255,255,255,0.06);
-      ">
-        <h6 style="font-weight: 800; color: #38bdf8; margin-bottom: 16px;">The SAS Token Checklist</h6>
-        <p class="small opacity-75 mb-3">Azure Synapse requires ADLS Gen2 storage for data transfers.</p>
-        <ul class="small opacity-75" style="padding-left: 20px;">
-          <li>Storage Account &#8594; Shared access signature</li>
-          <li>Allowed services: <b>Blob</b> · Resource types: <b>Service, Container, Object</b></li>
-          <li>Permissions: <b>Read, Write, List, Create, Delete</b></li>
-          <li>Generate SAS and copy the token string</li>
-        </ul>
-      </div>
+    <p style="margin: 0 0 0.75rem; font-weight: 600; color: #334155;">First-time setup</p>
+    <ol style="margin: 0 0 1.5rem 1.5rem; color: #475569;">
+      <li>Go to <strong>Inventory → Configuration → Settings</strong>.</li>
+      <li>Scroll to <strong>Niyu AI Configuration</strong>.</li>
+      <li>Enter your <strong>Niyu License Key</strong> (get it at niyulabs.com) and click <strong>Save</strong>.</li>
+      <li>Click <strong>Run Initial Sync</strong>. Wait for the success message; results appear in about 1 minute.</li>
+      <li>Open <strong>Inventory → Niyu AI</strong> to see the Command Center and replenishment data.</li>
+    </ol>
 
-      <p style="font-weight: 700; color: #64748b; font-size: 14px; margin-bottom: 12px;">&#128247; Create storage account — Basics (Resource group: rg-odoo-synapse)</p>
-      <img src="./azure_create_storage.png" alt="Create Storage Account" style="width: 100%; max-width: 100%; border-radius: 20px; border: 1px solid #e2e8f0; box-shadow: 0 24px 80px -24px rgba(0,0,0,0.15); margin-bottom: 32px; display: block;">
-      <p style="font-weight: 700; color: #64748b; font-size: 14px; margin-bottom: 12px;">&#128247; Storage center — Find your ADLS accounts (niyuadlscentral, niyusynapseadls)</p>
-      <img src="./azure_storage_center.png" alt="Storage Center Blob Storage" style="width: 100%; max-width: 100%; border-radius: 20px; border: 1px solid #e2e8f0; box-shadow: 0 24px 80px -24px rgba(0,0,0,0.15); margin-bottom: 32px; display: block;">
-      <p style="font-weight: 700; color: #64748b; font-size: 14px; margin-bottom: 12px;">&#128247; Storage account properties — Verify Hierarchical namespace: Enabled (ADLS Gen2)</p>
-      <img src="./azure_storage_properties.png" alt="Storage Account Properties" style="width: 100%; max-width: 100%; border-radius: 20px; border: 1px solid #e2e8f0; box-shadow: 0 24px 80px -24px rgba(0,0,0,0.15); margin-bottom: 32px; display: block;">
-      <p style="font-weight: 700; color: #64748b; font-size: 14px; margin-bottom: 12px;">&#128247; Generate SAS — Containers &#8594; right‑click container &#8594; Generate SAS</p>
-      <img src="./synapse_sql_query.png" alt="Generate SAS Token" style="width: 100%; max-width: 100%; border-radius: 20px; border: 1px solid #e2e8f0; box-shadow: 0 24px 80px -24px rgba(0,0,0,0.15); display: block;">
+    <p style="margin: 0 0 0.75rem; font-weight: 600; color: #334155;">Daily workflow</p>
+    <ol style="margin: 0 0 1.5rem 1.5rem; color: #475569;">
+      <li>Open <strong>Inventory → Niyu AI</strong> (Command Center). Check <strong>Last AI Sync</strong> and the three KPI cards (Revenue at Risk, Critical Items, Restock Capital).</li>
+      <li>Use the <strong>Replenishment Board</strong> to see top items. Toggle <strong>Critical Only</strong> to focus on items with &lt; 7 days coverage or stockout.</li>
+      <li>Click <strong>Inventory List</strong> to open the full Smart Stock list (default filter: Need Purchase).</li>
+      <li>To create POs: select one or more rows and click the cart icon on a row, or use the <strong>Action</strong> menu → <strong>Create Purchase Orders</strong> for selected lines. Review the generated POs and confirm as needed.</li>
+    </ol>
 
-      <div style="margin-top: 40px; padding: 28px 36px; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 20px;">
-        <h6 style="font-weight: 800; margin-bottom: 16px;">Common settings</h6>
-        <div class="row g-3 small text-muted">
-          <div class="col-md-6"><b>Hierarchical Namespace:</b> Must be ENABLED (ADLS Gen2)</div>
-          <div class="col-md-6"><b>Container:</b> Create a container named "synapse"</div>
-        </div>
-      </div>
+    <p style="margin: 0 0 0.75rem; font-weight: 600; color: #334155;">Viewing a product forecast</p>
+    <ol style="margin: 0 0 1.5rem 1.5rem; color: #475569;">
+      <li>From the Command Center, click <strong>Review</strong> on a row to open that product’s forecast form.</li>
+      <li>Or from the Smart Stock list, click a product row to open the form.</li>
+      <li>On the form you see Current stock, AI Demand (30d), Suggested buy, Status, Days of coverage, and Last updated. Open the <strong>AI Prediction Graph</strong> tab to see the chart.</li>
+      <li>If the product has suggested_buy &gt; 0, use <strong>Create Purchase Order</strong> in the header to generate a PO for that product.</li>
+    </ol>
+
+    <p style="margin: 0 0 0.75rem; font-weight: 600; color: #334155;">Running a new forecast</p>
+    <ol style="margin: 0 0 1.5rem 1.5rem; color: #475569;">
+      <li>Go to <strong>Inventory → Configuration → Settings</strong> → <strong>Niyu AI Configuration</strong>.</li>
+      <li>Click <strong>Run Initial Sync</strong>. If a forecast is already running, you’ll see a warning; wait a moment and try again. Results refresh in about 1 minute.</li>
+      <li>Optional: use <strong>Automation → Scheduled Actions</strong> to adjust <strong>Niyu AI: Daily Demand Forecast</strong> (e.g. time of day) so forecasts run automatically every day.</li>
+    </ol>
+
+    <p style="margin: 0 0 0.75rem; font-weight: 600; color: #334155;">Using filters on the Smart Stock list</p>
+    <ul style="margin: 0 0 1rem 1.25rem; color: #475569;">
+      <li><strong>Critical Risk</strong> — Only items with status Critical or Stockout (&lt; 7 days or out of stock).</li>
+      <li><strong>Need Purchase</strong> — Only items with Suggested buy &gt; 0 (default when opening the list).</li>
+      <li><strong>Healthy</strong> — Only items with Suggested buy = 0 (no reorder needed).</li>
+      <li>Use the search bar to find a product by name. Use <strong>Group by Product</strong> if you want to group results.</li>
+    </ul>
+  </section>
+
+  <!-- ========== MENU & NAVIGATION ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Menu &amp; navigation</h2>
+    <p style="margin: 0 0 1rem; color: #334155;">Where to find everything:</p>
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+      <thead>
+        <tr style="background: #f1f5f9;">
+          <th style="text-align: left; padding: 0.6rem 0.75rem; border: 1px solid #e2e8f0;">Where</th>
+          <th style="text-align: left; padding: 0.6rem 0.75rem; border: 1px solid #e2e8f0;">What you get</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;"><strong>Inventory → Niyu AI</strong></td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Command Center (dashboard + Replenishment Board). Button &quot;Inventory List&quot; opens Smart Stock list.</td></tr>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;"><strong>Inventory → Niyu AI</strong> (then Inventory List)</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Smart Stock list — full forecast with filters and Create PO actions.</td></tr>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;"><strong>Inventory → Configuration → Settings</strong></td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Niyu AI Configuration: License key and Run Initial Sync.</td></tr>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;"><strong>Automation → Scheduled Actions</strong></td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Niyu AI: Poll Forecast Results; Niyu AI: Daily Demand Forecast.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ========== TIPS & BEST PRACTICES ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Tips &amp; best practices</h2>
+    <ul style="margin: 0 0 1rem 1.25rem; color: #475569;">
+      <li>Keep at least one <strong>vendor (supplier)</strong> on every storable product you want to reorder; otherwise Suggested buy won’t create a PO.</li>
+      <li>Run a sync after big sales events or season changes so the 30-day forecast reflects recent demand.</li>
+      <li>Start with the <strong>Critical Risk</strong> or <strong>Critical Only</strong> view to tackle stockouts and &lt; 7 days coverage first.</li>
+      <li>Use <strong>Capital Needed</strong> (optional column in Smart Stock list) to plan budget; use the list footer sum for total restock capital.</li>
+      <li>Review generated POs before confirming: quantities come from Suggested buy; you can adjust lines or discard a PO if needed.</li>
+      <li>If you don’t want daily automatic syncs, disable or delete the scheduled action <strong>Niyu AI: Daily Demand Forecast</strong> and run <strong>Run Initial Sync</strong> manually when you want a refresh.</li>
+    </ul>
+  </section>
+
+  <!-- ========== COVERAGE STATUS LOGIC ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Coverage status logic</h2>
+    <p style="margin: 0 0 1rem; color: #334155;">Status is computed from current stock, forecast_30d, and derived daily demand (forecast_30d / 30).</p>
+    <ul style="margin: 0 0 1rem 1.25rem; color: #475569;">
+      <li><strong>Stockout</strong> — current_stock ≤ 0 and forecast_30d &gt; 0. Days of coverage = 0.</li>
+      <li><strong>Critical</strong> — days_of_coverage &lt; 7 (and not stockout).</li>
+      <li><strong>Overstock (Warning)</strong> — days_of_coverage &gt; 60.</li>
+      <li><strong>Healthy</strong> — otherwise (7 ≤ days ≤ 60).</li>
+      <li>If forecast_30d = 0 and current_stock &gt; 0, days_of_coverage is set to 999 (treated as &quot;Safe&quot; in the dashboard).</li>
+    </ul>
+    <p style="margin: 1rem 0 0.5rem; font-weight: 600; color: #334155;">Status badges at a glance</p>
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+      <thead>
+        <tr style="background: #f1f5f9;">
+          <th style="text-align: left; padding: 0.6rem 0.75rem; border: 1px solid #e2e8f0;">Badge</th>
+          <th style="text-align: left; padding: 0.6rem 0.75rem; border: 1px solid #e2e8f0;">Meaning</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;"><span style="display: inline-block; padding: 0.2rem 0.5rem; border-radius: 4px; background: #fef2f2; color: #b91c1c; font-weight: 600;">Stockout</span></td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Out of stock; demand &gt; 0. Reorder as soon as possible.</td></tr>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;"><span style="display: inline-block; padding: 0.2rem 0.5rem; border-radius: 4px; background: #fef2f2; color: #b91c1c; font-weight: 600;">Critical (&lt; 7 Days)</span></td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Less than 7 days of stock left at current demand. Prioritize reorder.</td></tr>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;"><span style="display: inline-block; padding: 0.2rem 0.5rem; border-radius: 4px; background: #fefce8; color: #a16207; font-weight: 600;">Overstock (&gt; 60 Days)</span></td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">More than 60 days of coverage. Consider reducing orders.</td></tr>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;"><span style="display: inline-block; padding: 0.2rem 0.5rem; border-radius: 4px; background: #f0fdf4; color: #15803d; font-weight: 600;">Healthy</span></td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Between 7 and 60 days of coverage. No urgent action.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ========== CONFIGURATION ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Configuration</h2>
+    <p style="margin: 0 0 1rem; color: #334155;">Go to <strong>Inventory → Configuration → Settings</strong>. Below the warehouse block you will see <strong>Niyu AI Configuration</strong>.</p>
+    <ul style="margin: 0 0 1rem 1.25rem; color: #475569;">
+      <li><strong>Niyu License Key</strong> — stored in system parameter <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">niyu.license_key</code>. Get your key from niyulabs.com. Required to run forecast; if missing, manual run raises an error and the daily cron skips silently.</li>
+      <li><strong>Run Initial Sync</strong> — button that triggers the same logic as the daily cron (action_start_forecast). Use it after saving the license key to run the first forecast. A success notification tells you results will appear in about 1 minute.</li>
+    </ul>
+    <div style="background: #f8fafc; border-radius: 12px; padding: 1.5rem; border: 1px solid #e2e8f0; margin-top: 1rem;">
+      <p style="margin: 0 0 0.75rem; font-size: 0.85rem; font-weight: 600; color: #475569;">Screenshot: Inventory Settings — Niyu AI Configuration</p>
+      <img src="screenshot_settings.png" alt="Niyu AI Configuration in Settings" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #e2e8f0; display: block;" />
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- STEP 3: NETWORKING — FULL WIDTH -->
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <section id="networking" style="padding: 80px 24px; background: #f8fafc; border-top: 1px solid #e2e8f0;">
-    <div class="container-fluid" style="max-width: 1400px; width: 100%;">
-      <div style="
-        display: inline-flex;
-        align-items: center;
-        gap: 12px;
-        background: rgba(99,102,241,0.1);
-        color: #6366f1;
-        padding: 8px 16px;
-        border-radius: 100px;
-        font-weight: 800;
-        font-size: 12px;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        margin-bottom: 16px;
-      ">Step 03 · Security & Firewall</div>
+  <!-- ========== TROUBLESHOOTING & FAQ ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Troubleshooting &amp; FAQ</h2>
+    <p style="margin: 0 0 0.75rem; font-weight: 600; color: #334155;">&quot;No sales history found&quot;</p>
+    <p style="margin: 0 0 1rem; color: #475569;">You need confirmed Sales Orders (state Sale or Done) with order date in the last 2 years, for Storable or Consumable products. Quotations and draft/canceled orders are ignored. Check that products have type Storable or Consumable (Inventory app → Products).</p>
+    <p style="margin: 0 0 0.75rem; font-weight: 600; color: #334155;">&quot;Please enter your Niyu API Key in Settings &gt; Inventory&quot;</p>
+    <p style="margin: 0 0 1rem; color: #475569;">Go to Inventory → Configuration → Settings, scroll to Niyu AI Configuration, enter your license key from niyulabs.com, and Save. Then run Run Initial Sync.</p>
+    <p style="margin: 0 0 0.75rem; font-weight: 600; color: #334155;">&quot;A forecast is already running&quot;</p>
+    <p style="margin: 0 0 1rem; color: #475569;">Only one forecast job runs at a time. Wait about 1 minute for the current job to finish; the status badge will change from Syncing... to Active. If it stays on Syncing... for more than 15 minutes, the job may be stale and will be cleared on the next run so you can start a new one.</p>
+    <p style="margin: 0 0 0.75rem; font-weight: 600; color: #334155;">No Create PO button or cart icon</p>
+    <p style="margin: 0 0 1rem; color: #475569;">Suggested buy must be &gt; 0 and the product must have at least one vendor (Supplier). Add a vendor on the product form (Purchase tab) and run a sync if needed.</p>
+    <p style="margin: 0 0 0.75rem; font-weight: 600; color: #334155;">Sync status shows Error</p>
+    <p style="margin: 0 0 1rem; color: #475569;">Hover the Error badge for the message (e.g. invalid key, rate limit, cloud error). Check your license key, ensure you’re not over rate limits, and try Run Initial Sync again. If the problem persists, contact Niyu Labs support.</p>
+    <p style="margin: 0 0 0.75rem; font-weight: 600; color: #334155;">When do results appear after Run Initial Sync?</p>
+    <p style="margin: 0 0 1rem; color: #475569;">Usually within about 1 minute. The polling cron runs every minute. Refresh the Command Center or Smart Stock list to see updated data and Last AI Sync time.</p>
+  </section>
 
-      <h2 style="font-size: 2rem; font-weight: 900; margin-bottom: 12px;">Allow Odoo Access</h2>
+  <!-- ========== ERROR MESSAGES REFERENCE ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Error messages reference</h2>
+    <p style="margin: 0 0 1rem; color: #334155;">Common errors and what to do:</p>
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+      <thead>
+        <tr style="background: #f1f5f9;">
+          <th style="text-align: left; padding: 0.6rem 0.75rem; border: 1px solid #e2e8f0;">Message / Symptom</th>
+          <th style="text-align: left; padding: 0.6rem 0.75rem; border: 1px solid #e2e8f0;">Cause / Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">&quot;Please enter your Niyu API Key in Settings &gt; Inventory&quot;</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">License key missing. Add it in Inventory → Configuration → Settings → Niyu AI Configuration, Save, then Run Initial Sync.</td></tr>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">&quot;No sales history found&quot;</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">No confirmed SOs in last 2 years for storable/consumable products. Confirm some Sales Orders and ensure product types are correct.</td></tr>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">&quot;A forecast is already running&quot;</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Another sync is in progress. Wait ~1 minute or up to 15 minutes; if stuck, the job will be cleared and you can run again.</td></tr>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">&quot;Invalid License Key&quot; / 403</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Key invalid or suspended. Check the key at niyulabs.com and re-enter in Settings.</td></tr>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">&quot;Rate Limit Reached&quot; / 429</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Too many requests. Wait and try Run Initial Sync again later; consider spacing out manual syncs.</td></tr>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">&quot;Connection Failed&quot; / timeout</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Server cannot reach api.niyulabs.com. Check firewall, proxy, and DNS; ensure HTTPS (443) is allowed.</td></tr>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Sync status badge shows &quot;Error&quot;</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Hover the badge for the stored message (niyu.last_sync_msg). Fix the cause (e.g. key, rate limit) and run Run Initial Sync again.</td></tr>
+      </tbody>
+    </table>
+  </section>
 
-      <div style="
-        background: #fff;
-        border: 1px solid #e2e8f0;
-        border-radius: 20px;
-        padding: 32px 40px;
-        margin-bottom: 40px;
-        box-shadow: 0 4px 24px -8px rgba(0,0,0,0.06);
-      ">
-        <h5 style="font-weight: 800; margin-bottom: 12px;">Firewall exceptions</h5>
-        <p class="text-muted mb-3">Azure is secure by default. Allow connections from Odoo to Synapse.</p>
-        <hr style="opacity: 0.15; margin: 24px 0;">
-        <ul class="text-muted" style="padding-left: 20px;">
-          <li>Synapse Workspace &#8594; Networking</li>
-          <li>Toggle <b>"Allow Azure services and resources to access this workspace"</b> to ON</li>
-          <li>Click <b>+ Add client IP</b> for your Odoo server IP</li>
-        </ul>
-      </div>
-
-      <p style="font-size: 13px; color: #94a3b8;">Synapse Workspace &#8594; Networking &#8594; Add client IP for your Odoo server</p>
+  <!-- ========== QUICK REFERENCE CARD ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Quick reference card</h2>
+    <p style="margin: 0 0 1rem; color: #334155;">One-page cheat sheet:</p>
+    <div style="background: #f8fafc; border-radius: 12px; padding: 1.5rem; border: 1px solid #e2e8f0;">
+      <p style="margin: 0 0 0.5rem; font-weight: 600; color: #334155;">Where to go</p>
+      <ul style="margin: 0 0 1rem 1.25rem; color: #475569; font-size: 0.95rem;">
+        <li><strong>Command Center</strong> — Inventory → Niyu AI</li>
+        <li><strong>Smart Stock list</strong> — Inventory → Niyu AI → Inventory List (or same menu)</li>
+        <li><strong>Settings / License / Run Sync</strong> — Inventory → Configuration → Settings → Niyu AI Configuration</li>
+        <li><strong>Scheduled actions</strong> — Automation → Scheduled Actions (search &quot;Niyu&quot;)</li>
+      </ul>
+      <p style="margin: 0 0 0.5rem; font-weight: 600; color: #334155;">Key actions</p>
+      <ul style="margin: 0 0 1rem 1.25rem; color: #475569; font-size: 0.95rem;">
+        <li><strong>Run a new forecast</strong> — Settings → Niyu AI Configuration → Run Initial Sync</li>
+        <li><strong>Create PO from one product</strong> — Smart Stock list: cart icon on row; or open product form → Create Purchase Order</li>
+        <li><strong>Create POs for many products</strong> — Smart Stock list: select rows → Action → Create Purchase Orders</li>
+        <li><strong>Focus on critical items</strong> — Command Center: toggle Critical Only; Smart Stock list: filter Critical Risk</li>
+      </ul>
+      <p style="margin: 0 0 0.5rem; font-weight: 600; color: #334155;">System parameters (technical)</p>
+      <ul style="margin: 0 0 0 1.25rem; color: #475569; font-size: 0.95rem;">
+        <li><code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">niyu.license_key</code> — API key</li>
+        <li><code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">niyu.last_sync_time</code> — Last sync datetime</li>
+        <li><code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">niyu.last_sync_status</code> — success | error | processing</li>
+        <li><code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">niyu.last_sync_msg</code> — Error message when status is error</li>
+      </ul>
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- STEP 4: ODOO CONFIG — FULL WIDTH -->
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <section id="queries" style="padding: 80px 24px; background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%); border-top: 1px solid #e2e8f0;">
-    <div class="container-fluid" style="max-width: 1600px; width: 100%;">
-      <div style="
-        display: inline-flex;
-        align-items: center;
-        gap: 12px;
-        background: rgba(0,120,212,0.1);
-        color: #0078d4;
-        padding: 8px 16px;
-        border-radius: 100px;
-        font-weight: 800;
-        font-size: 12px;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        margin-bottom: 16px;
-      ">Step 04 · Odoo Configuration</div>
-
-      <h2 style="font-size: 2rem; font-weight: 900; margin-bottom: 8px;">Connection Settings</h2>
-      <p style="color: #64748b; font-size: 1.1rem; margin-bottom: 8px;">Required configuration for ADLS Gen2 &#8594; Synapse COPY INTO.</p>
-
-      <div style="
-        background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
-        border: 1px solid #6ee7b7;
-        border-radius: 16px;
-        padding: 24px 28px;
-        margin-bottom: 48px;
-        box-shadow: 0 4px 20px -4px rgba(5,150,105,0.2);
-      ">
-        <div style="font-size: 12px; font-weight: 800; color: #059669; text-transform: uppercase; margin-bottom: 10px;">&#128205; Where to find in Odoo</div>
-        <p style="margin: 0; font-size: 1.15rem; color: #065f46; font-weight: 600;">Settings</p>
-        <p style="margin: 6px 0 0 0; font-size: 1.05rem; color: #047857;">&#8594; Left sidebar under Connectors &#8594; <b>Microsoft Azure Synapse</b></p>
-        <p style="margin: 12px 0 0 0; font-size: 13px; color: #0d9488;">(Sits alongside Redshift, Snowflake, BigQuery connectors)</p>
-      </div>
-
-      <!-- Connection Fields — Styled Cards -->
-      <div class="row g-4 mb-5">
-        <div class="col-lg-6">
-          <div style="
-            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
-            border: 1px solid #e2e8f0;
-            border-radius: 24px;
-            padding: 32px 36px;
-            height: 100%;
-            box-shadow: 0 8px 32px -12px rgba(0,120,212,0.15);
-            border-left: 4px solid #0078d4;
-          ">
-            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px;">
-              <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #0078d4, #50e6ff); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 24px;">&#128268;</div>
-              <div>
-                <h5 style="font-weight: 800; margin: 0; color: #0f172a;">Synapse SQL</h5>
-                <p style="margin: 4px 0 0 0; font-size: 13px; color: #64748b;">Dedicated Pool</p>
-              </div>
-            </div>
-            <ul style="list-style: none; padding: 0; margin: 0;">
-              <li style="margin-bottom: 18px; padding: 14px 18px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0;">
-                <div style="font-size: 11px; font-weight: 700; color: #0078d4; text-transform: uppercase; margin-bottom: 6px;">Server Name</div>
-                <div style="font-size: 14px; color: #334155; font-family: monospace;">&lt;workspace&gt;.sql.azuresynapse.net</div>
-              </li>
-              <li style="margin-bottom: 18px; padding: 14px 18px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0;">
-                <div style="font-size: 11px; font-weight: 700; color: #0078d4; text-transform: uppercase; margin-bottom: 6px;">Admin Username</div>
-                <div style="font-size: 14px; color: #334155;">Your SQL pool admin (e.g. synapseadmin)</div>
-              </li>
-              <li style="padding: 14px 18px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0;">
-                <div style="font-size: 11px; font-weight: 700; color: #0078d4; text-transform: uppercase; margin-bottom: 6px;">Password</div>
-                <div style="font-size: 14px; color: #334155;">SQL admin password (masked)</div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div style="
-            background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
-            border: 1px solid #bbf7d0;
-            border-radius: 24px;
-            padding: 32px 36px;
-            height: 100%;
-            box-shadow: 0 8px 32px -12px rgba(16,185,129,0.2);
-            border-left: 4px solid #10b981;
-          ">
-            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px;">
-              <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #059669, #34d399); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 24px;">&#128230;</div>
-              <div>
-                <h5 style="font-weight: 800; margin: 0; color: #0f172a;">ADLS Gen2 Staging</h5>
-                <p style="margin: 4px 0 0 0; font-size: 13px; color: #64748b;">Data Lake Storage</p>
-              </div>
-            </div>
-            <ul style="list-style: none; padding: 0; margin: 0;">
-              <li style="margin-bottom: 18px; padding: 14px 18px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0;">
-                <div style="font-size: 11px; font-weight: 700; color: #059669; text-transform: uppercase; margin-bottom: 6px;">Account Name</div>
-                <div style="font-size: 14px; color: #334155;">Your ADLS Gen2 storage account</div>
-              </li>
-              <li style="margin-bottom: 18px; padding: 14px 18px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0;">
-                <div style="font-size: 11px; font-weight: 700; color: #059669; text-transform: uppercase; margin-bottom: 6px;">Container Name</div>
-                <div style="font-size: 14px; color: #334155;">e.g. <code style="background: #f1f5f9; padding: 2px 8px; border-radius: 6px;">synapse</code></div>
-              </li>
-              <li style="padding: 14px 18px; background: #fff; border-radius: 12px; border: 1px solid #e2e8f0;">
-                <div style="font-size: 11px; font-weight: 700; color: #059669; text-transform: uppercase; margin-bottom: 6px;">Shared Access Signature (SAS) Token</div>
-                <div style="font-size: 13px; color: #334155;">Full SAS token from Azure (sv=...&amp;ss=b&amp;srt=co...)</div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <p style="font-weight: 700; color: #64748b; font-size: 14px; margin-bottom: 12px; text-align: center;">&#128247; Microsoft Azure Synapse settings in Odoo</p>
-      <img src="./odoosettingsynapse.png" alt="Odoo Microsoft Azure Synapse Settings" style="width: 100%; max-width: 100%; border-radius: 24px; box-shadow: 0 32px 96px -24px rgba(0,0,0,0.25), 0 0 0 1px rgba(0,120,212,0.08); border: 1px solid #e2e8f0; display: block;">
-
-      <div style="margin-top: 60px; padding: 40px; background: #f8fafc; border-radius: 24px; border: 1px solid #e2e8f0;">
-        <h3 style="font-weight: 900; margin-bottom: 16px;">Selecting Data & Domains</h3>
-        <p style="color: #64748b; margin-bottom: 28px;">Choose what to sync. You don't need the entire database—only the tables you need for analytics.</p>
-
-        <div style="
-          background: #ecfdf5;
-          border: 1px solid #a7f3d0;
-          border-radius: 16px;
-          padding: 20px 24px;
-          margin-bottom: 28px;
-        ">
-          <div style="font-size: 12px; font-weight: 800; color: #059669; text-transform: uppercase; margin-bottom: 8px;">&#128205; Where to find</div>
-          <p style="margin: 0; font-size: 1.05rem; color: #065f46;"><b>Export Profile</b> form &#8594; Model / Fields / Domain filter tabs</p>
-        </div>
-
-        <div class="row g-4">
-          <div class="col-md-6">
-            <div style="background: #fff; padding: 28px; border-radius: 16px; border: 1px solid #e2e8f0; height: 100%;">
-              <h6 style="font-weight: 800; margin-bottom: 14px;">Filter logic examples</h6>
-              <p class="small text-muted mb-1">Sync only Invoices from 2024:</p>
-              <div style="background: #f1f5f9; padding: 12px; border: 1px solid #cbd5e1; font-family: monospace; border-radius: 10px; margin-bottom: 18px; font-size: 13px;">[('invoice_date','&gt;=','2024-01-01')]</div>
-              <p class="small text-muted mb-1">Sync only "Done" Stock Moves:</p>
-              <div style="background: #f1f5f9; padding: 12px; border: 1px solid #cbd5e1; font-family: monospace; border-radius: 10px; font-size: 13px;">[('state','=','done')]</div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div style="background: #fff; padding: 28px; border-radius: 16px; border: 1px solid #e2e8f0; height: 100%;">
-              <h6 style="font-weight: 800; margin-bottom: 14px;">Best practices</h6>
-              <ul class="text-muted" style="font-size: 14px; padding-left: 20px;">
-                <li style="margin-bottom: 10px;">Select only required fields to minimize IO</li>
-                <li style="margin-bottom: 10px;">Test connection before full sync</li>
-                <li>Use Domain filters to exclude test/archived data</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <!-- ========== SCHEDULED ACTIONS ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Scheduled actions</h2>
+    <p style="margin: 0 0 0.75rem; color: #475569;"><strong>Niyu AI: Poll Forecast Results</strong> — Model <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">niyu.polling.job</code>, method <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">cron_check_results</code>. Interval: every 1 minute. Default: <strong>inactive (sleeping)</strong>. Activated when you start a forecast; when there are no more jobs, it can be deactivated again. For each job, it GETs <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">api.niyulabs.com/result/{job_id}</code> with the license key. When status is &quot;done&quot;, it writes forecast_30d and chart_data to niyu.forecast.result (create or update by product_id), sets last_sync_time and last_sync_status to success, then deletes the job. Jobs older than 30 minutes are deleted.</p>
+    <p style="margin: 0 0 0.75rem; color: #475569;"><strong>Niyu AI: Daily Demand Forecast</strong> — Model <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">niyu.sync.engine</code>, method <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">action_start_forecast</code>. Interval: 1 day. Default: <strong>active</strong>. Next run typically at 02:00. Starts a new forecast job (same as Run Initial Sync); if no license key is set, it exits without error.</p>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- QUERY IN SYNAPSE STUDIO — FULL WIDTH -->
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <section id="visualize" style="padding: 80px 24px; background: #f8fafc; border-top: 1px solid #e2e8f0;">
-    <div class="container-fluid" style="max-width: 1600px; width: 100%;">
-      <h2 style="font-size: 2rem; font-weight: 900; margin-bottom: 12px;">Query Your Odoo Data in Synapse Studio</h2>
-      <p style="color: #64748b; font-size: 1.1rem; margin-bottom: 32px;">Once data is synced, open Synapse Studio &#8594; Data &#8594; SQL database (odoo_dedicated) &#8594; New SQL script. Run queries like <code>SELECT * FROM dbo.res_partner</code>.</p>
-      <div style="background: #fffbeb; border: 1px solid #fcd34d; border-radius: 16px; padding: 20px 24px; margin-bottom: 24px;">
-        <strong style="color: #92400e;">&#9888; Ensure your Dedicated SQL pool is Online</strong> — if paused, Odoo cannot write and queries will fail. Resume from Azure Portal.
-      </div>
-      <p style="font-weight: 700; color: #64748b; font-size: 14px; margin-bottom: 12px;">&#128247; Synapse Studio SQL script — Connect to odoo_dedicated, query Odoo tables</p>
-      <img src="./synapse_sql_query.png" alt="Synapse Studio SQL Query" style="width: 100%; max-width: 100%; border-radius: 24px; box-shadow: 0 32px 96px -24px rgba(0,0,0,0.2); border: 1px solid #e2e8f0; display: block;">
-    </div>
+  <!-- ========== DATA REQUIREMENTS ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Data requirements</h2>
+    <ul style="margin: 0 0 1rem 1.25rem; color: #475569;">
+      <li>Confirmed Sales Orders (state sale or done) with date_order within the last 2 years.</li>
+      <li>Products must be Storable or Consumable (product or consu in product.template type/detailed_type).</li>
+      <li>For suggested buy and PO generation, products should have at least one vendor (seller); the first supplier and its delay/price are used.</li>
+      <li>If no sales history is found when starting a forecast, a UserError is raised with a clear message to check the above.</li>
+    </ul>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- INCREMENTAL SYNC — FULL WIDTH -->
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <section id="incremental" style="padding: 80px 24px; background: #f8fafc; border-top: 1px solid #e2e8f0;">
-    <div class="container-fluid" style="max-width: 1400px; width: 100%;">
-      <div class="text-center mb-5">
-        <h2 style="font-size: 2rem; font-weight: 900;">The Power of Incremental Sync</h2>
-        <p style="font-size: 1.1rem; color: #64748b;">Keep Azure Synapse updated without overloading your server.</p>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-lg-6">
-          <div style="background: #fff; border-radius: 20px; padding: 36px; height: 100%; border: 1px solid #e2e8f0;">
-            <h5 style="font-weight: 800; margin-bottom: 14px;">1. Full Export (First Time)</h5>
-            <p class="text-muted mb-4">On first run, Odoo sends all records matching your filter to Azure. Establishes the baseline table.</p>
-            <h5 style="font-weight: 800; margin-bottom: 14px;">2. Delta / Incremental Sync</h5>
-            <p class="text-muted mb-0">Later runs use a watermark. Odoo checks <code>write_date</code> and exports only rows modified since last sync.</p>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div style="
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            color: #fff;
-            border-radius: 20px;
-            padding: 36px;
-            height: 100%;
-            border: 1px solid rgba(255,255,255,0.06);
-          ">
-            <h5 style="font-weight: 800; color: #38bdf8; margin-bottom: 14px;">The Merge Process</h5>
-            <p class="small text-muted mb-2">When data arrives in Synapse:</p>
-            <ul class="small opacity-75" style="padding-left: 20px;">
-              <li><b>Matching ID:</b> Update existing row</li>
-              <li><b>New ID:</b> Insert new record</li>
-              <li><b>Result:</b> Mirrored table ready for Power BI</li>
-            </ul>
-            <img src="./sync_process_diag.png" alt="Sync Process" style="width: 100%; border-radius: 12px; margin-top: 20px; border: 1px solid rgba(255,255,255,0.1);">
-          </div>
-        </div>
-      </div>
-
-      <div style="margin-top: 40px; background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 16px; padding: 20px 24px;">
-        <div style="font-size: 12px; font-weight: 800; color: #059669; text-transform: uppercase; margin-bottom: 8px;">&#128205; Where to configure sync schedule</div>
-        <p style="margin: 0; font-size: 1.05rem; color: #065f46;">Export Profile &#8594; <b>Schedule</b> / Cron field, or use Odoo Scheduled Actions</p>
-      </div>
-    </div>
+  <!-- ========== LIMITATIONS ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Limitations</h2>
+    <p style="margin: 0 0 1rem; color: #334155;">Things to keep in mind:</p>
+    <ul style="margin: 0 0 1rem 1.25rem; color: #475569;">
+      <li><strong>First vendor only</strong> — Suggested buy and PO creation use the product’s first supplier (first row in the Purchase tab). Multiple suppliers per product are not split across POs.</li>
+      <li><strong>2 years of sales</strong> — Only confirmed SOs with order date in the last 2 years are used. Older history is ignored.</li>
+      <li><strong>Replenishment Board cap</strong> — The Command Center table shows up to 50 items (those with suggested_buy &gt; 0, ordered by days of coverage then suggested buy). Use the full Smart Stock list for all products.</li>
+      <li><strong>Storable and consumable only</strong> — Service products and other types are excluded from the sync query.</li>
+      <li><strong>One forecast job at a time</strong> — A new sync cannot start until the current job finishes or is cleared (e.g. after 15 minutes).</li>
+      <li><strong>No lead-time adjustment in suggested buy</strong> — Suggested buy is demand minus current stock; it does not add extra buffer for vendor lead time (you can add safety stock or adjust POs manually).</li>
+    </ul>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- TROUBLESHOOTING — FULL WIDTH -->
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <section id="troubleshoot" style="padding: 80px 24px; background: linear-gradient(180deg, #fef2f2 0%, #fff1f2 100%); border-top: 1px solid #fecaca;">
-    <div class="container-fluid" style="max-width: 1400px; width: 100%;">
-      <div class="text-center mb-5">
-        <h2 style="font-size: 2rem; font-weight: 900; color: #9f1239;">Troubleshooting Guide</h2>
-        <p style="color: #be123c; font-size: 1.1rem;">Quick fixes for common Azure connectivity issues.</p>
-      </div>
-
-      <div style="
-        background: #fff;
-        padding: 40px;
-        border-radius: 24px;
-        box-shadow: 0 16px 48px -16px rgba(159,18,57,0.15);
-        border: 1px solid #fecaca;
-        margin-bottom: 40px;
-      ">
-        <h6 style="font-weight: 800; margin-bottom: 24px; font-size: 1.2rem;">Final sanity check</h6>
-        <div class="row g-4">
-          <div class="col-md-6">
-            <ul style="color: #4b5563; font-size: 1.05rem; padding-left: 20px;">
-              <li style="margin-bottom: 14px;"><b>SQL Pool Status:</b> Is your Dedicated Pool "Online"? (If paused, Odoo can't write)</li>
-              <li style="margin-bottom: 14px;"><b>Networking:</b> Is the Odoo server IP in the firewall whitelist?</li>
-            </ul>
-          </div>
-          <div class="col-md-6">
-            <ul style="color: #4b5563; font-size: 1.05rem; padding-left: 20px;">
-              <li style="margin-bottom: 14px;"><b>SAS Permissions:</b> Does the SAS include 'Write' and 'Create'?</li>
-              <li style="margin-bottom: 14px;"><b>SQL Credentials:</b> Verify SQL Admin password recently?</li>
-            </ul>
-          </div>
-        </div>
-        <div style="margin-top: 28px; padding: 24px; background: #fffbeb; border-radius: 16px; border: 1px solid #fcd34d;">
-          <p style="margin: 0; font-size: 15px; color: #92400e;">&#9888; <b>Pro tip:</b> Use the "Test Connection" button in Odoo before a large export. It validates storage and SQL in seconds.</p>
-        </div>
-      </div>
-
-      <div style="background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 16px; padding: 20px 24px;">
-        <div style="font-size: 12px; font-weight: 800; color: #059669; text-transform: uppercase; margin-bottom: 8px;">&#128205; Where to test connection</div>
-        <p style="margin: 0; font-size: 1.05rem; color: #065f46;">Settings &#8594; <b>Microsoft Azure Synapse</b> (sidebar) &#8594; <b>Test Connection</b> or Save</p>
-      </div>
-    </div>
+  <!-- ========== GLOSSARY ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Glossary</h2>
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+      <thead>
+        <tr style="background: #f1f5f9;">
+          <th style="text-align: left; padding: 0.6rem 0.75rem; border: 1px solid #e2e8f0;">Term</th>
+          <th style="text-align: left; padding: 0.6rem 0.75rem; border: 1px solid #e2e8f0;">Definition</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Command Center</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Dashboard under Inventory → Niyu AI: KPIs (Revenue at Risk, Critical Items, Restock Capital) and Replenishment Board.</td></tr>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Smart Stock list</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Full list of forecast records (niyu.forecast.result) with filters and Create PO actions.</td></tr>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Replenishment Board</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Table on the Command Center showing top 50 items needing reorder, with sparkline, stockout date, lead time, suggested buy.</td></tr>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Run Initial Sync</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Button in Settings that starts a new forecast job (same as the daily cron logic).</td></tr>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Niyu License Key</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">API key from niyulabs.com, stored in system parameter niyu.license_key. Required to run forecast.</td></tr>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Origin &quot;Niyu Smart Stock&quot;</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Purchase orders created by the module have this origin so you can filter or report on them in Purchase.</td></tr>
+      </tbody>
+    </table>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- FAQ — FULL WIDTH -->
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <section id="faq" style="padding: 80px 24px; background: #ffffff; border-top: 1px solid #e2e8f0;">
-    <div class="container-fluid" style="max-width: 1400px; width: 100%;">
-      <div class="text-center mb-5">
-        <h2 style="font-size: 2rem; font-weight: 900;">Synapse Connector FAQ</h2>
-      </div>
-
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div style="background: #f8fafc; padding: 28px; border-radius: 20px; height: 100%; border: 1px solid #e2e8f0;">
-            <h6 style="font-weight: 800; margin-bottom: 10px;">Does it work with Serverless Pools?</h6>
-            <p class="small text-muted mb-0">Optimized for Dedicated SQL Pools for consistent Power BI performance.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div style="background: #f8fafc; padding: 28px; border-radius: 20px; height: 100%; border: 1px solid #e2e8f0;">
-            <h6 style="font-weight: 800; margin-bottom: 10px;">What version of Odoo?</h6>
-            <p class="small text-muted mb-0">Odoo Community, Enterprise & Odoo.sh — Versions 16, 17, 18.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div style="background: #f8fafc; padding: 28px; border-radius: 20px; height: 100%; border: 1px solid #e2e8f0;">
-            <h6 style="font-weight: 800; margin-bottom: 10px;">Is there a row limit?</h6>
-            <p class="small text-muted mb-0">No. Azure Synapse scales to Petabytes. Limit is Odoo server memory for large batches.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div style="background: #f8fafc; padding: 28px; border-radius: 20px; height: 100%; border: 1px solid #e2e8f0;">
-            <h6 style="font-weight: 800; margin-bottom: 10px;">Can I sync binary files?</h6>
-            <p class="small text-muted mb-0">Structured data (text, numbers, dates) only. Attachments via ADLS links, not SQL pools.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div style="background: #f8fafc; padding: 28px; border-radius: 20px; height: 100%; border: 1px solid #e2e8f0;">
-            <h6 style="font-weight: 800; margin-bottom: 10px;">Does it support Power BI?</h6>
-            <p class="small text-muted mb-0">Yes! Use the native Azure Synapse connector in Power BI Desktop once data is in the SQL pool.</p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div style="background: #f8fafc; padding: 28px; border-radius: 20px; height: 100%; border: 1px solid #e2e8f0;">
-            <h6 style="font-weight: 800; margin-bottom: 10px;">Is my data safe?</h6>
-            <p class="small text-muted mb-0">100%. Data stays in your infrastructure—Odoo to your Azure account directly.</p>
-          </div>
-        </div>
-      </div>
-    </div>
+  <!-- ========== FIELDS REFERENCE ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Fields reference (niyu.forecast.result)</h2>
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+      <thead>
+        <tr style="background: #f1f5f9;">
+          <th style="text-align: left; padding: 0.6rem 0.75rem; border: 1px solid #e2e8f0;">Field</th>
+          <th style="text-align: left; padding: 0.6rem 0.75rem; border: 1px solid #e2e8f0;">Type / Origin</th>
+          <th style="text-align: left; padding: 0.6rem 0.75rem; border: 1px solid #e2e8f0;">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">product_id</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Many2one (product.product)</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Product; unique per record.</td></tr>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">current_stock</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Related (qty_available)</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Current quantity on hand.</td></tr>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">forecast_30d</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Float</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">AI demand for next 30 days (from Niyu cloud).</td></tr>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">suggested_buy</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Computed</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">max(0, forecast_30d − current_stock).</td></tr>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">has_vendor</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Computed</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">True if product has at least one seller.</td></tr>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">chart_data</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Text (JSON)</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Chart/time series from cloud (e.g. key &quot;v&quot; for sparkline).</td></tr>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">last_updated</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Datetime</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">When this record was last updated from a sync.</td></tr>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">daily_sales</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Computed</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">forecast_30d / 30.</td></tr>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">days_of_coverage</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Computed</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">current_stock / daily_sales (or 0 / 999 as per status logic).</td></tr>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">coverage_status</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Selection</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">critical | warning | normal | out (see Coverage status logic).</td></tr>
+        <tr><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">cost_to_restock</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">Computed</td><td style="padding: 0.5rem 0.75rem; border: 1px solid #e2e8f0;">suggested_buy × product.standard_price.</td></tr>
+      </tbody>
+    </table>
   </section>
 
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <!-- FOOTER — FULL WIDTH -->
-  <!-- ═══════════════════════════════════════════════════════════════ -->
-  <footer style="padding: 100px 0; text-align: center; background-color: #ffffff; border-top: 1px solid #e2e8f0;">
-    <div class="container">
-      <div style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); padding: 80px 40px; border-radius: 48px; box-shadow: 0 40px 100px -20px rgba(15,23,42,0.3);">
-        <h2 style="font-size: 3.5rem; font-weight: 900; color: #ffffff; margin-bottom: 20px;">Need Help?</h2>
-        <p style="font-size: 1.35rem; color: #94a3b8; margin-bottom: 50px; max-width: 700px; margin-left: auto; margin-right: auto;">Our team can assist with setup, mapping, and troubleshooting.</p>
-        <div class="d-flex justify-content-center gap-5 flex-wrap fw-bold">
-          <span style="font-size: 1.2rem; color: white;">&#128231; <a href="mailto:info@niyulabs.com" style="color: #38bdf8; text-decoration: none;">info@niyulabs.com</a></span>
-          <span style="font-size: 1.2rem; color: white;">&#127760; <a href="https://niyulabs.com" style="color: #38bdf8; text-decoration: none;">niyulabs.com</a></span>
-        </div>
-      </div>
-      <p style="margin-top: 60px; color: #94a3b8; font-weight: 600; font-size: 14px;">Last updated: December 2025 | Version: 18.0.2.1.0 | Odoo 16 &#183; 17 &#183; 18</p>
-    </div>
-  </footer>
+  <!-- ========== INTEGRATION WITH ODOO ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Integration with Odoo</h2>
+    <p style="margin: 0 0 1rem; color: #334155;">Inventory Forecast uses standard Odoo apps as follows:</p>
+    <ul style="margin: 0 0 1rem 1.25rem; color: #475569;">
+      <li><strong>Inventory (Stock)</strong> — Current stock comes from <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">product.qty_available</code>. Products must be Storable or Consumable. The module adds the <strong>Niyu AI</strong> menu under the main Inventory menu.</li>
+      <li><strong>Sales</strong> — Forecast input is built from confirmed Sales Orders (sale/done) and their lines: product, date, quantity. Only last 2 years of order dates are used.</li>
+      <li><strong>Purchase</strong> — Created POs are standard <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">purchase.order</code> records. Vendor, quantity (suggested_buy), and unit price come from the product’s first supplier. Origin is set to &quot;Niyu Smart Stock&quot; so you can filter or report on them.</li>
+      <li><strong>Web</strong> — Command Center and the niyu_chart widget use Odoo’s backend assets (OWL / JS).</li>
+    </ul>
+  </section>
 
-</section>
+  <!-- ========== DATA & PRIVACY ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Data &amp; privacy</h2>
+    <p style="margin: 0 0 1rem; color: #334155;">What is sent to Niyu cloud: aggregated sales data only — product ID, date (day), and quantity sold per day. No customer names, order IDs, or other PII. Data is compressed (gzip) and sent over HTTPS to <strong>api.niyulabs.com</strong> with your license key in the request header. The cloud returns forecast quantities and chart data per product; these are stored in Odoo in <strong>niyu.forecast.result</strong>. Your license key is stored in Odoo system parameters (<code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">niyu.license_key</code>). For full terms and data handling, see niyulabs.com.</p>
+  </section>
+
+  <!-- ========== REPORTING & EXPORTS ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Reporting &amp; exports</h2>
+    <p style="margin: 0 0 1rem; color: #334155;">How to use the data for reporting:</p>
+    <ul style="margin: 0 0 1rem 1.25rem; color: #475569;">
+      <li><strong>Smart Stock list</strong> — Use Odoo’s list view options: show/hide columns (e.g. Capital Needed, Days Coverage), apply filters (Critical Risk, Need Purchase, Healthy), then export to Excel/CSV via the list view action menu for your own analysis or reports.</li>
+      <li><strong>Purchase orders from Niyu</strong> — All POs created by the module have origin <strong>Niyu Smart Stock</strong>. In Purchase, filter or group by Origin to see only AI-generated orders, or build reports (e.g. total value, by vendor) for restock analytics.</li>
+      <li><strong>Command Center KPIs</strong> — Revenue at Risk, Critical Items count, and Restock Capital are computed live from niyu.forecast.result; they reflect the last sync. Use them in daily standups or dashboards; for historical tracking, export the Smart Stock list after each sync or use Odoo reporting on purchase orders.</li>
+    </ul>
+  </section>
+
+  <!-- ========== SECURITY & PERMISSIONS ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Security &amp; permissions</h2>
+    <p style="margin: 0 0 1rem; color: #334155;">Who can use Inventory Forecast:</p>
+    <ul style="margin: 0 0 1rem 1.25rem; color: #475569;">
+      <li><strong>Stock / Inventory User</strong> — The module grants read, write, create, and delete on <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">niyu.forecast.result</code>, <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">niyu.sync.engine</code>, and <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">niyu.polling.job</code> to <strong>stock.group_stock_user</strong>. Users with Inventory access can see the Niyu AI menu, open Command Center and Smart Stock list, run Run Initial Sync (if they can access Settings), and create POs from the forecast.</li>
+      <li><strong>Settings</strong> — Only users who can access <strong>Inventory → Configuration → Settings</strong> can view or change the Niyu License Key and run Run Initial Sync from there. Restrict Settings access if you want to limit who can trigger a sync or change the key.</li>
+      <li><strong>License key storage</strong> — The key is stored in <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">ir.config_parameter</code> (niyu.license_key). Protect access to technical parameters if you need to limit who can see the key.</li>
+    </ul>
+  </section>
+
+  <!-- ========== SUPPORT & RESOURCES ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Support &amp; resources</h2>
+    <p style="margin: 0 0 1rem; color: #334155;">Where to get help and more information:</p>
+    <ul style="margin: 0 0 1rem 1.25rem; color: #475569;">
+      <li><strong>Website</strong> — niyulabs.com for product information, licensing, and terms.</li>
+      <li><strong>License key</strong> — Get your Niyu License Key from niyulabs.com. Enter it in Inventory → Configuration → Settings → Niyu AI Configuration.</li>
+      <li><strong>Support</strong> — For technical issues, sync errors, or billing questions, contact Niyu Labs via the channels provided on niyulabs.com.</li>
+      <li><strong>Odoo Apps</strong> — This documentation is bundled with the module; you can also find it in the app description in your Odoo Apps menu.</li>
+    </ul>
+  </section>
+
+  <!-- ========== DEPENDENCIES & ACCESS ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Dependencies and access</h2>
+    <p style="margin: 0 0 0.75rem; color: #475569;"><strong>Module depends on:</strong> stock, sale_management, purchase, web.</p>
+    <p style="margin: 0 0 0.75rem; color: #475569;"><strong>Access rights:</strong> stock.group_stock_user has read/write/create/unlink on niyu.forecast.result, niyu.sync.engine, and niyu.polling.job.</p>
+  </section>
+
+  <!-- ========== PERFORMANCE & SCALE ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Performance &amp; scale</h2>
+    <p style="margin: 0 0 1rem; color: #334155;">Considerations for large catalogs and high volume:</p>
+    <ul style="margin: 0 0 1rem 1.25rem; color: #475569;">
+      <li><strong>Sync payload</strong> — Sales data is aggregated by (product, day) over 2 years. More products and more orders mean a larger payload; gzip keeps it smaller. The cloud may take slightly longer for very large datasets; results typically appear within 1–2 minutes.</li>
+      <li><strong>Replenishment Board</strong> — Only the top 50 items (by days of coverage then suggested buy) are loaded on the Command Center. The full Smart Stock list loads all forecast records; use filters (Critical Risk, Need Purchase) to reduce visible rows and improve list performance.</li>
+      <li><strong>Polling cron</strong> — Runs every 1 minute only when a job exists. It does a single GET per job; impact on the server is low.</li>
+      <li><strong>Daily cron</strong> — One forecast per day. If you need more frequent syncs, you can create a custom scheduled action that calls the same sync logic; respect Niyu’s rate limits.</li>
+    </ul>
+  </section>
+
+  <!-- ========== FREQUENTLY ASKED QUESTIONS ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Frequently asked questions</h2>
+    <p style="margin: 0 0 0.75rem; font-weight: 600; color: #334155;">Can I run the forecast more than once a day?</p>
+    <p style="margin: 0 0 1rem; color: #475569;">Yes. Use Run Initial Sync in Settings whenever you want. Only one job runs at a time; wait for the current one to finish (~1 minute) before starting another. Respect Niyu’s rate limits if you run very frequently.</p>
+    <p style="margin: 0 0 0.75rem; font-weight: 600; color: #334155;">Can I change the suggested quantity before creating the PO?</p>
+    <p style="margin: 0 0 1rem; color: #475569;">The module creates POs with the suggested_buy quantity. After the PO is created, you can edit the order lines in the purchase order form (quantity, price) before confirming. The forecast list is not updated when you change the PO.</p>
+    <p style="margin: 0 0 0.75rem; font-weight: 600; color: #334155;">Why does a product not appear in the forecast list?</p>
+    <p style="margin: 0 0 1rem; color: #475569;">Forecast records are created or updated only for products that have sales history in the last 2 years (confirmed SOs) and are Storable or Consumable. If a product has no sales in that period, the cloud may not return it; new products will appear after they have sold and you run a sync.</p>
+    <p style="margin: 0 0 0.75rem; font-weight: 600; color: #334155;">Can I use a different vendor than the first supplier?</p>
+    <p style="margin: 0 0 1rem; color: #475569;">PO creation uses the first supplier (first row on the product’s Purchase tab). To use another vendor, reorder the suppliers on the product so the desired vendor is first, or create the PO manually from the forecast data.</p>
+    <p style="margin: 0 0 0.75rem; font-weight: 600; color: #334155;">Does the module work with multi-warehouse or multi-company?</p>
+    <p style="margin: 0 0 1rem; color: #475569;">Current stock is from <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">product.qty_available</code> (company-wide available quantity). The module does not split by warehouse or company in the forecast or PO creation. Use standard Odoo multi-warehouse rules for stock by location.</p>
+  </section>
+
+  <!-- ========== TECHNICAL REFERENCE (DEVELOPERS) ========== -->
+  <section style="padding: 2.5rem 0;">
+    <h2 style="font-size: 1.5rem; font-weight: 800; color: #0f172a; margin-bottom: 1.25rem; padding-bottom: 0.5rem; border-bottom: 2px solid #6366f1;">Technical reference (developers)</h2>
+    <p style="margin: 0 0 1rem; color: #334155;">For developers extending or debugging the module:</p>
+    <ul style="margin: 0 0 1rem 1.25rem; color: #475569;">
+      <li><strong>Models</strong> — <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">niyu.forecast.result</code> (forecast records), <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">niyu.sync.engine</code> (abstract, sync logic), <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">niyu.polling.job</code> (job_id, start_time for polling).</li>
+      <li><strong>Sync entry point</strong> — <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">niyu.sync.engine</code> <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">action_start_forecast()</code>. Call with <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">from_cron=True</code> in context for silent skip when no license key.</li>
+      <li><strong>Polling</strong> — <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">niyu.polling.job</code> <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">cron_check_results()</code>. Writes to niyu.forecast.result and sets niyu.last_sync_time, niyu.last_sync_status, niyu.last_sync_msg.</li>
+      <li><strong>Dashboard data</strong> — <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">niyu.forecast.result</code> <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">get_dashboard_stats()</code> returns critical count, capital, revenue_risk, last_sync, sync_status, sync_msg, top_items (with sparkline from chart_data).</li>
+      <li><strong>API base</strong> — <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">https://api.niyulabs.com</code>. Endpoints: POST <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">/forecast</code>, GET <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">/result/&lt;job_id&gt;</code>. Header: <code style="background: #f1f5f9; padding: 0.15rem 0.4rem; border-radius: 4px;">X-License-Key</code>.</li>
+    </ul>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <div style="margin-top: 3rem; padding: 2rem 0; border-top: 2px solid #e2e8f0; text-align: center;">
+    <p style="margin: 0; font-size: 0.95rem; color: #64748b;">Inventory Forecast — a major project by <strong style="color: #6366f1;">Niyu Labs</strong></p>
+    <p style="margin: 0.5rem 0 0; font-size: 0.85rem; color: #94a3b8;">niyulabs.com</p>
+  </div>
+
+</div>
