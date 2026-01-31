@@ -1,350 +1,243 @@
-<!-- Bootstrap CSS CDN included for Flexbox functionality -->
+<!-- Bootstrap CSS CDN -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<div class="container-fluid p-0" style="font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #f8fafc; color: #1e293b; line-height: 1.8; overflow-x: hidden;">
+<div class="container-fluid p-0" style="font-family: 'Inter', 'Segoe UI', Roboto, sans-serif; background-color: #f8fafc; color: #0f172a; line-height: 1.8;">
 
-  <!-- ========== SECTION 1: DYNAMIC HERO ========== -->
-  <div class="position-relative overflow-hidden py-5 mb-5" style="background: linear-gradient(135deg, #4338ca 0%, #6366f1 100%); color: white; border-bottom-left-radius: 5rem; border-bottom-right-radius: 5rem; box-shadow: 0 25px 50px -12px rgba(67, 56, 202, 0.25);">
-    <!-- Floating Blur Elements -->
-    <div style="position: absolute; top: -10%; left: -5%; width: 400px; height: 400px; background: rgba(255,255,255,0.1); filter: blur(80px); border-radius: 50%;"></div>
-    <div style="position: absolute; bottom: 0; right: 0; width: 500px; height: 500px; background: rgba(0,0,0,0.1); filter: blur(100px); border-radius: 50%;"></div>
+    <!-- ========== 1. THE VISION: HERO SECTION ========== -->
+    <header class="position-relative overflow-hidden pt-5 pb-5 text-white" style="background: linear-gradient(135deg, #4338ca 0%, #1e1b4b 100%); border-bottom-left-radius: 5rem; border-bottom-right-radius: 5rem; box-shadow: 0 20px 50px rgba(67, 56, 202, 0.3);">
+        <!-- Animated Background Blur -->
+        <div style="position: absolute; top: -20%; left: -10%; width: 600px; height: 600px; background: rgba(99, 102, 241, 0.15); filter: blur(120px); border-radius: 50%;"></div>
+        <div style="position: absolute; bottom: -10%; right: -5%; width: 500px; height: 500px; background: rgba(79, 70, 229, 0.2); filter: blur(100px); border-radius: 50%;"></div>
+        
+        <div class="container position-relative z-1 py-5 text-center">
+            <div class="mb-4">
+                <span style="background: rgba(255,255,255,0.1); backdrop-filter: blur(12px); padding: 0.7rem 2rem; border-radius: 50px; border: 1px solid rgba(255,255,255,0.2); font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; font-size: 0.8rem;">
+                    &#128640; NIYU LABS INVENTORY INTELLIGENCE
+                </span>
+            </div>
+            <h1 class="display-2 fw-bold mb-4" style="letter-spacing: -2px; line-height: 1.1;">The Future of Odoo <br><span style="color: #818cf8;">Demand Planning</span></h1>
+            <p class="lead mx-auto mb-5" style="max-width: 900px; font-size: 1.5rem; color: #c7d2fe; font-weight: 300;">
+                Traditional reordering rules are static. Our AI is dynamic. We process your sales history in the cloud to tell you exactly what to buy, when to buy it, and how much profit is at risk today.
+            </p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <div class="px-4 py-3 bg-white text-primary rounded-4 fw-bold shadow-lg">&#129504; 30-Day AI Demand</div>
+                <div class="px-4 py-3 bg-white text-primary rounded-4 fw-bold shadow-lg">&#128176; Capital Optimization</div>
+                <div class="px-4 py-3 bg-white text-primary rounded-4 fw-bold shadow-lg">&#128200; Revenue-at-Risk Monitoring</div>
+            </div>
+        </div>
+    </header>
 
-    <div class="container position-relative z-1 text-center py-5">
-      <div class="mb-4">
-        <span style="background: rgba(255,255,255,0.2); padding: 0.7rem 2rem; border-radius: 50px; font-weight: 800; letter-spacing: 0.25em; text-transform: uppercase; font-size: 0.85rem; backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.3);">
-          &#128640; Niyu AI Solutions
-        </span>
-      </div>
-      <h1 class="display-2 fw-bold mb-3" style="letter-spacing: -2px; text-shadow: 0 10px 20px rgba(0,0,0,0.2);">Inventory Forecast</h1>
-      <p class="lead mx-auto mb-5" style="max-width: 850px; color: #e0e7ff; font-size: 1.5rem; font-weight: 300;">
-        Transform your Odoo sales data into a predictive powerhouse. Eliminate stockouts, free up stagnant capital, and automate your entire procurement cycle with cloud-driven intelligence.
-      </p>
-      <div class="d-flex flex-wrap justify-content-center gap-3">
-        <div class="px-4 py-2 bg-white text-primary rounded-pill fw-bold shadow-sm" style="transition: transform 0.3s ease;">&#129302; AI Demand Sensing</div>
-        <div class="px-4 py-2 bg-white text-primary rounded-pill fw-bold shadow-sm">&#128200; Predictive Analytics</div>
-        <div class="px-4 py-2 bg-white text-primary rounded-pill fw-bold shadow-sm">&#128666; Smart Replenishment</div>
-      </div>
+    <div class="container mt-5">
+
+        <!-- ========== 2. THE CAPABILITIES: WHAT CAN IT DO? ========== -->
+        <section class="mb-5 py-5">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <h6 class="text-primary fw-bold text-uppercase mb-2" style="letter-spacing: 2px;">&#128641; Core Capabilities</h6>
+                    <h2 class="display-5 fw-bold mb-4">A complete brain for <br>your warehouse.</h2>
+                    <p class="text-muted fs-5">Inventory Forecast is not just a report; it is a real-time decision-making engine integrated into Odoo.</p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Capability 1 -->
+                <div class="col-md-4">
+                    <div class="p-5 bg-white border rounded-5 h-100 shadow-sm hover-up">
+                        <div class="display-4 mb-4 text-primary">&#129302;</div>
+                        <h4 class="fw-bold">Predictive Sensing</h4>
+                        <p class="text-muted">Analyzes 24 months of <code>sale.order.line</code> data to detect seasonality, upward trends, and product decay cycles with 98% accuracy.</p>
+                    </div>
+                </div>
+                <!-- Capability 2 -->
+                <div class="col-md-4">
+                    <div class="p-5 bg-white border rounded-5 h-100 shadow-sm hover-up">
+                        <div class="display-4 mb-4 text-danger">&#9888;</div>
+                        <h4 class="fw-bold">Risk Management</h4>
+                        <p class="text-muted">Calculates "Revenue at Risk"—the literal dollar value of sales you will lose if you do not restock out-of-stock items immediately.</p>
+                    </div>
+                </div>
+                <!-- Capability 3 -->
+                <div class="col-md-4">
+                    <div class="p-5 bg-white border rounded-5 h-100 shadow-sm hover-up">
+                        <div class="display-4 mb-4 text-success">&#128666;</div>
+                        <h4 class="fw-bold">Auto-Replenish</h4>
+                        <p class="text-muted">Automatically groups hundreds of suggested buys into consolidated Purchase Orders by Vendor, saving hours of manual data entry.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 3. THE "WHY": WHY THIS IS THE BEST OPTION ========== -->
+        <section class="mb-5 p-5 text-white" style="background: #0f172a; border-radius: 4rem; overflow: hidden; position: relative;">
+            <div style="position: absolute; top:0; right:0; opacity: 0.1; font-size: 20rem;">&#128142;</div>
+            <div class="row position-relative z-1">
+                <div class="col-lg-8">
+                    <h2 class="display-5 fw-bold mb-4">Why is this the best option <br>for your business?</h2>
+                    <p class="fs-5 text-secondary mb-5">Compared to standard Odoo reordering rules or manual Excel sheets, Niyu AI offers professional-grade supply chain intelligence.</p>
+                    
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <h5 class="fw-bold text-primary">&#128187; Asynchronous Cloud Processing</h5>
+                            <p class="small text-secondary">Heavy AI calculations happen on our servers, not yours. Your Odoo stays fast and responsive even with 50,000+ SKUs.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="fw-bold text-primary">&#128274; Data Integrity & Security</h5>
+                            <p class="small text-secondary">We only use confirmed sales data. We use Gzip compression and TLS encryption to ensure your data is always secure and lightweight.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="fw-bold text-primary">&#128200; Visual Decision Making</h5>
+                            <p class="small text-secondary">Interactive Sparklines and AI Prediction Graphs show you the "Future Trend" so you can visually verify every reorder suggestion.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="fw-bold text-primary">&#128176; Capital Efficiency</h5>
+                            <p class="small text-secondary">Stop overbuying. The AI identifies "Overstock" (60+ days) so you can stop ordering items that aren't moving.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 4. THE GUIDE: HOW TO USE THIS MODULE ========== -->
+        <section class="mb-5 py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold text-uppercase">&#128099; Step-by-Step Guide</h6>
+                <h2 class="display-6 fw-bold">Mastering your Forecast</h2>
+            </div>
+
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="sticky-top" style="top: 2rem;">
+                        <div class="p-4 bg-primary text-white rounded-5 shadow-lg">
+                            <h4 class="fw-bold mb-3">Daily Workflow</h4>
+                            <p class="small mb-0 opacity-75">Follow this simple 15-minute daily routine to keep your warehouse perfectly stocked.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <!-- Step 1 -->
+                    <div class="d-flex mb-5">
+                        <div class="me-4"><span class="badge bg-light text-primary rounded-circle p-3 fs-4 shadow-sm border">01</span></div>
+                        <div>
+                            <h4 class="fw-bold">Initial Training & Sync</h4>
+                            <p class="text-muted">Navigate to <strong>Inventory &rarr; Configuration &rarr; Settings</strong>. Enter your License Key and click <strong>Run Initial Sync</strong>. The AI now learns your specific sales patterns from the last 2 years.</p>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="d-flex mb-5">
+                        <div class="me-4"><span class="badge bg-light text-primary rounded-circle p-3 fs-4 shadow-sm border">02</span></div>
+                        <div>
+                            <h4 class="fw-bold">Check the Command Center</h4>
+                            <p class="text-muted">Open <strong>Inventory &rarr; Niyu AI</strong>. Review your High-Level KPIs. Is your Revenue at Risk increasing? Are there items in "Critical" status? This dashboard prioritizes your morning tasks.</p>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="d-flex mb-5">
+                        <div class="me-4"><span class="badge bg-light text-primary rounded-circle p-3 fs-4 shadow-sm border">03</span></div>
+                        <div>
+                            <h4 class="fw-bold">Review Smart Stock List</h4>
+                            <p class="text-muted">Browse the full list. Use the <strong>Filters</strong> to see only "Critical Risk" or "Need Purchase." Verify the <strong>Suggested Buy</strong> quantity against the AI Graph for high-value items.</p>
+                        </div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="d-flex mb-5">
+                        <div class="me-4"><span class="badge bg-light text-primary rounded-circle p-3 fs-4 shadow-sm border">04</span></div>
+                        <div>
+                            <h4 class="fw-bold">Execute Purchase Orders</h4>
+                            <p class="text-muted">Select the items you wish to restock. Click <strong>Action &rarr; Create Purchase Orders</strong>. Odoo will instantly generate Draft POs grouped by Vendor, ready for your approval.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 5. TECH SPECS: RICH CONTENT FOR DECISION MAKERS ========== -->
+        <section class="mb-5 p-5 bg-white border" style="border-radius: 4rem;">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <h3 class="fw-bold mb-4">&#129514; Smart Status Logic</h3>
+                    <p class="text-muted">Our AI categorizes every product into one of four "Health States" based on Days of Coverage:</p>
+                    <div class="d-flex flex-column gap-3">
+                        <div class="p-3 rounded-4 border-start border-5 border-danger bg-light">
+                            <strong class="text-danger">Out/Critical (0-7 Days):</strong> You are losing money. Restock immediately.
+                        </div>
+                        <div class="p-3 rounded-4 border-start border-5 border-success bg-light">
+                            <strong class="text-success">Healthy (7-60 Days):</strong> Optimal stock levels. No action required.
+                        </div>
+                        <div class="p-3 rounded-4 border-start border-5 border-warning bg-light">
+                            <strong class="text-warning">Overstock (60+ Days):</strong> Capital is locked. Do not reorder.
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <h3 class="fw-bold mb-4">&#128274; Security & Sync Guards</h3>
+                    <p class="text-muted">Built for Enterprise reliability with fail-safe mechanisms:</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-3 d-flex align-items-center"><span class="me-3 fs-4">&#10004;</span> <strong>Concurrent-Sync Guard:</strong> Prevents database locks by allowing only one forecast run at a time.</li>
+                        <li class="mb-3 d-flex align-items-center"><span class="me-3 fs-4">&#10004;</span> <strong>Gzip Payload:</strong> Transfers are optimized for slow internet connections or high SKU counts.</li>
+                        <li class="mb-3 d-flex align-items-center"><span class="me-3 fs-4">&#10004;</span> <strong>Stale Job Auto-Clear:</strong> If a cloud connection drops, the system auto-resets after 15 minutes.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 6. FAQ & PREREQUISITES ========== -->
+        <section class="mb-5 pb-5">
+            <div class="text-center mb-5">
+                <h2 class="display-6 fw-bold">&#129657; FAQ & Success Requirements</h2>
+            </div>
+            <div class="row g-4 mx-auto" style="max-width: 1000px;">
+                <div class="col-md-6">
+                    <div class="p-4 bg-white border shadow-sm rounded-5 h-100">
+                        <h6 class="fw-bold mb-2">&#128511; Why is my suggested buy zero?</h6>
+                        <p class="small text-muted mb-0">The AI only suggests a buy if <code>Forecasted Demand &gt; Current Stock</code>. If you have enough stock to cover the next 30 days, the suggested buy remains zero to protect your cash flow.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-4 bg-white border shadow-sm rounded-5 h-100">
+                        <h6 class="fw-bold mb-2">&#128221; Required Sales History</h6>
+                        <p class="small text-muted mb-0">The engine requires "Confirmed" or "Done" Sales Orders. Draft quotations are ignored to prevent noise in the AI model. We recommend at least 6 months of data for high accuracy.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-4 bg-white border shadow-sm rounded-5 h-100">
+                        <h6 class="fw-bold mb-2">&#128273; Where is my License Key?</h6>
+                        <p class="small text-muted mb-0">Sign up at <strong>niyulabs.com</strong>. Your unique key will be available on your customer dashboard under "My Modules."</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="p-4 bg-white border shadow-sm rounded-5 h-100">
+                        <h6 class="fw-bold mb-2">&#128722; How are vendors selected?</h6>
+                        <p class="small text-muted mb-0">The module automatically uses the first vendor listed in the product's "Purchase" tab. Ensure at least one vendor is configured to enable automated PO generation.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </div>
-  </div>
 
-  <div class="container">
-
-    <!-- ========== SECTION 2: THE BENTO VALUE GRID ========== -->
-    <section class="mb-5">
-      <div class="row g-4">
-        <div class="col-lg-8">
-          <div class="p-5 h-100 text-white position-relative overflow-hidden shadow-lg" style="background: #1e293b; border-radius: 3rem; border: 1px solid #334155; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.01)'" onmouseout="this.style.transform='scale(1)'">
-            <div class="position-relative z-1">
-              <div class="display-4 mb-4" style="opacity: 0.9;">&#129504;</div>
-              <h2 class="display-6 fw-bold mb-4">Why AI-Driven Forecasting?</h2>
-              <p class="fs-5 text-secondary mb-4">Static reorder points are a thing of the past. Our cloud engine calculates demand based on the last 2 years of confirmed sales, factoring in seasonality, market velocity, and growth trends to give you a precise 30-day outlook.</p>
-              <div class="row g-4 mt-2">
-                <div class="col-md-4">
-                  <div class="p-3 bg-dark bg-opacity-50 rounded-4 border border-secondary text-center">
-                    <h3 class="fw-bold text-primary mb-0">98%</h3>
-                    <small class="text-uppercase opacity-50">Accuracy</small>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="p-3 bg-dark bg-opacity-50 rounded-4 border border-secondary text-center">
-                    <h3 class="fw-bold text-primary mb-0">&lt;60s</h3>
-                    <small class="text-uppercase opacity-50">Sync Time</small>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="p-3 bg-dark bg-opacity-50 rounded-4 border border-secondary text-center">
-                    <h3 class="fw-bold text-primary mb-0">Auto</h3>
-                    <small class="text-uppercase opacity-50">Updating</small>
-                  </div>
-                </div>
-              </div>
+    <!-- ========== 7. THE FINALE: PRO FOOTER ========== -->
+    <footer class="py-5 bg-white border-top">
+        <div class="container text-center">
+            <div class="mb-4">
+                <h4 class="fw-bold text-primary">NIYU LABS</h4>
+                <p class="text-muted px-auto mx-auto" style="max-width: 500px;">We specialize in bringing Enterprise-level Data Science to Odoo Warehouse Management.</p>
             </div>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="p-5 h-100 shadow-sm border bg-white" style="border-radius: 3rem; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
-            <div class="fs-1 mb-3 text-primary">&#128176;</div>
-            <h3 class="fw-bold mb-3">Optimize Capital</h3>
-            <p class="text-muted">Stop tying up money in "Dead Stock." Our system identifies overstock levels (60+ days) and tells you exactly which products are draining your cash flow.</p>
-            <hr class="my-4">
-            <div class="fs-1 mb-3 text-danger">&#9888;</div>
-            <h3 class="fw-bold mb-3">Revenue at Risk</h3>
-            <p class="text-muted">Instantly visualize how much potential revenue you are losing due to current stockouts or critical inventory levels.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== SECTION 3: THE COMMAND CENTER REVEAL ========== -->
-    <section class="mb-5 py-5 rounded-5" style="background: #ffffff; border: 1px solid #e2e8f0; box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05);">
-      <div class="container px-5">
-        <div class="row align-items-center">
-          <div class="col-lg-6 mb-5 mb-lg-0">
-            <div class="d-flex align-items-center mb-3">
-              <span class="fs-2 me-3">&#128187;</span>
-              <h2 class="h1 fw-bold mb-0">The Command Center</h2>
+            <div class="d-flex justify-content-center gap-4 mb-4 small fw-bold text-muted text-uppercase" style="letter-spacing: 1px;">
+                <a href="#" class="text-decoration-none text-dark">Support Center</a>
+                <a href="#" class="text-decoration-none text-dark">Cloud Status</a>
+                <a href="#" class="text-decoration-none text-dark">API Docs</a>
             </div>
-            <p class="fs-5 text-muted mb-4">Your mission control for replenishment. This centralized dashboard under <strong>Inventory &rarr; Niyu AI</strong> provides real-time KPIs for your warehouse health.</p>
-            <div class="d-flex flex-column gap-3">
-              <div class="d-flex align-items-start p-3 rounded-4" style="background: #f1f5f9;">
-                <span class="fs-4 me-3">&#128202;</span>
-                <div>
-                  <h6 class="fw-bold mb-1">Live Revenue Tracking</h6>
-                  <p class="small text-muted mb-0">Sum of <code>forecast_30d &times; price</code> for all items with zero stock.</p>
-                </div>
-              </div>
-              <div class="d-flex align-items-start p-3 rounded-4" style="background: #f1f5f9;">
-                <span class="fs-4 me-3">&#128737;</span>
-                <div>
-                  <h6 class="fw-bold mb-1">Critical Item Alerts</h6>
-                  <p class="small text-muted mb-0">Instant count of items with less than 7 days of coverage.</p>
-                </div>
-              </div>
-              <div class="d-flex align-items-start p-3 rounded-4" style="background: #f1f5f9;">
-                <span class="fs-4 me-3">&#128176;</span>
-                <div>
-                  <h6 class="fw-bold mb-1">Capital Needed</h6>
-                  <p class="small text-muted mb-0">The exact total cash required to restock to healthy levels.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <div class="p-4 bg-dark rounded-5 shadow-2xl position-relative" style="min-height: 400px; box-shadow: 0 30px 60px -12px rgba(0,0,0,0.3);">
-              <!-- Terminal UI Mockup -->
-              <div class="d-flex gap-2 mb-4">
-                <div style="width:12px; height:12px; background:#ff5f56; border-radius:50%"></div>
-                <div style="width:12px; height:12px; background:#ffbd2e; border-radius:50%"></div>
-                <div style="width:12px; height:12px; background:#27c93f; border-radius:50%"></div>
-              </div>
-              <div class="font-monospace small text-white-50">
-                <p class="text-success mb-2">[$] niyu-ai-engine --run-forecast</p>
-                <p class="text-info mb-2">&gt; Analyzing sale.order.line history...</p>
-                <p class="text-info mb-2">&gt; Applying Seasonal Trend Model (v2.4)</p>
-                <p class="text-warning mb-2">&gt; Syncing results to Odoo DB...</p>
-                <hr style="border-color: #334155;">
-                <div class="p-3 rounded bg-white bg-opacity-10 border border-white border-opacity-10">
-                  <p class="text-white mb-1">RESULT SUCCESS</p>
-                  <p class="small mb-0">Forecast: 1,240 SKUs processed</p>
-                  <p class="small mb-0">Sync Time: 42 seconds</p>
-                </div>
-              </div>
-            </div>
-          </div>
+            <hr class="w-25 mx-auto mb-4">
+            <p class="small text-muted">&copy; 2024 Niyu Labs AI. Optimized for Odoo 15.0 - 17.0+.</p>
         </div>
-      </div>
-    </section>
-
-    <!-- ========== SECTION 4: HOW IT WORKS ROADMAP ========== -->
-    <section class="mb-5 py-5">
-      <div class="text-center mb-5">
-        <h2 class="display-5 fw-bold">&#128641; 4 Steps to Automation</h2>
-        <p class="text-muted">Launch your forecasting journey in under 5 minutes.</p>
-      </div>
-      <div class="row g-4">
-        <!-- Step 1 -->
-        <div class="col-md-3">
-          <div class="text-center p-4 h-100 bg-white shadow-sm border border-bottom-0" style="border-radius: 2rem 2rem 0 0; border-bottom: 4px solid #6366f1 !important;">
-            <div class="mx-auto mb-3 shadow-sm d-flex align-items-center justify-content-center fw-bold text-white fs-4" style="width: 70px; height: 70px; border-radius: 50%; background: #6366f1;">&#9881;</div>
-            <h5 class="fw-bold">1. Configuration</h5>
-            <p class="small text-muted">Go to <strong>Inventory &rarr; Settings</strong>. Enter your Niyu License Key and save.</p>
-          </div>
-        </div>
-        <!-- Step 2 -->
-        <div class="col-md-3">
-          <div class="text-center p-4 h-100 bg-white shadow-sm border border-bottom-0" style="border-radius: 2rem 2rem 0 0; border-bottom: 4px solid #8b5cf6 !important;">
-            <div class="mx-auto mb-3 shadow-sm d-flex align-items-center justify-content-center fw-bold text-white fs-4" style="width: 70px; height: 70px; border-radius: 50%; background: #8b5cf6;">&#128259;</div>
-            <h5 class="fw-bold">2. Data Sync</h5>
-            <p class="small text-muted">Click <strong>Run Initial Sync</strong>. Odoo pushes compressed sales data to the AI cloud.</p>
-          </div>
-        </div>
-        <!-- Step 3 -->
-        <div class="col-md-3">
-          <div class="text-center p-4 h-100 bg-white shadow-sm border border-bottom-0" style="border-radius: 2rem 2rem 0 0; border-bottom: 4px solid #ec4899 !important;">
-            <div class="mx-auto mb-3 shadow-sm d-flex align-items-center justify-content-center fw-bold text-white fs-4" style="width: 70px; height: 70px; border-radius: 50%; background: #ec4899;">&#128187;</div>
-            <h5 class="fw-bold">3. Insights</h5>
-            <p class="small text-muted">Review results in the <strong>Replenishment Board</strong>. Check days coverage per SKU.</p>
-          </div>
-        </div>
-        <!-- Step 4 -->
-        <div class="col-md-3">
-          <div class="text-center p-4 h-100 bg-white shadow-sm border border-bottom-0" style="border-radius: 2rem 2rem 0 0; border-bottom: 4px solid #10b981 !important;">
-            <div class="mx-auto mb-3 shadow-sm d-flex align-items-center justify-content-center fw-bold text-white fs-4" style="width: 70px; height: 70px; border-radius: 50%; background: #10b981;">&#128722;</div>
-            <h5 class="fw-bold">4. Action</h5>
-            <p class="small text-muted">Generate grouped Purchase Orders with one click for all items needing purchase.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== SECTION 5: THE SMART STOCK LIST DEEP DIVE ========== -->
-    <section class="mb-5">
-      <div class="p-5 bg-white shadow-sm border" style="border-radius: 3rem;">
-        <div class="row g-5">
-          <div class="col-lg-5">
-            <h2 class="fw-bold mb-4">&#128221; The Smart Stock List</h2>
-            <p class="text-muted mb-4">This isn't just another report. It’s an actionable tool that simplifies your daily procurement. We prioritize your work by showing you exactly what is failing first.</p>
-            <ul class="list-unstyled d-flex flex-column gap-3">
-              <li class="d-flex align-items-center p-2 rounded-3 bg-light">
-                <span class="fs-4 me-3">&#128737;</span>
-                <span class="small"><strong>Dynamic Status:</strong> Critical (&lt;7d), Healthy (7-60d), Overstock (&gt;60d).</span>
-              </li>
-              <li class="d-flex align-items-center p-2 rounded-3 bg-light">
-                <span class="fs-4 me-3">&#128200;</span>
-                <span class="small"><strong>AI Prediction Graph:</strong> Interactive chart available in the form view.</span>
-              </li>
-              <li class="d-flex align-items-center p-2 rounded-3 bg-light">
-                <span class="fs-4 me-3">&#128722;</span>
-                <span class="small"><strong>Suggested Buy:</strong> Automatically calculated as <code>Demand - Stock</code>.</span>
-              </li>
-            </ul>
-          </div>
-          <div class="col-lg-7">
-            <!-- Mock List UI -->
-            <div class="p-3 bg-light rounded-4 border">
-              <div class="d-flex justify-content-between align-items-center mb-3 px-2">
-                <span class="fw-bold small">Product List Preview</span>
-                <span class="badge bg-primary rounded-pill">Model: niyu.forecast.result</span>
-              </div>
-              <div class="table-responsive">
-                <table class="table table-hover align-middle mb-0" style="font-size: 0.85rem;">
-                  <thead class="table-dark">
-                    <tr>
-                      <th class="rounded-start">Product</th>
-                      <th>30d Demand</th>
-                      <th>Stock</th>
-                      <th>Status</th>
-                      <th class="rounded-end">Action</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr style="background: #fef2f2;">
-                      <td><strong>AI Smart Watch</strong></td>
-                      <td>420</td>
-                      <td>12</td>
-                      <td><span class="badge bg-danger">Critical</span></td>
-                      <td><button class="btn btn-sm btn-outline-primary py-0 px-2">&#128722;</button></td>
-                    </tr>
-                    <tr>
-                      <td>Gaming Mouse v2</td>
-                      <td>1,200</td>
-                      <td>850</td>
-                      <td><span class="badge bg-success">Healthy</span></td>
-                      <td><button class="btn btn-sm btn-outline-primary py-0 px-2" disabled>&#10003;</button></td>
-                    </tr>
-                    <tr style="background: #fffbeb;">
-                      <td>USB-C Cable</td>
-                      <td>50</td>
-                      <td>4,200</td>
-                      <td><span class="badge bg-warning text-dark">Overstock</span></td>
-                      <td><button class="btn btn-sm btn-outline-primary py-0 px-2" disabled>&#10003;</button></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== SECTION 6: PREREQUISITES CHECKLIST ========== -->
-    <section class="mb-5 p-5" style="background: #f1f5f9; border-radius: 3rem;">
-      <div class="text-center mb-5">
-        <h2 class="fw-bold">&#10004; Preparation Checklist</h2>
-        <p class="text-muted">Ensure your Odoo instance is ready for the Niyu AI brain.</p>
-      </div>
-      <div class="row g-4">
-        <div class="col-md-6">
-          <div class="p-4 bg-white shadow-sm rounded-4 h-100 border-start border-5 border-success">
-            <h5 class="fw-bold mb-3">&#128221; Data Quality</h5>
-            <ul class="small text-muted ps-3">
-              <li><strong>Confirmed Orders:</strong> AI only reads Sales Orders in "Sale" or "Done" state.</li>
-              <li><strong>Storable Products:</strong> Only Storable or Consumable products are forecasted (no Services).</li>
-              <li><strong>Date Range:</strong> At least 6 months of sales history is recommended for accuracy.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="p-4 bg-white shadow-sm rounded-4 h-100 border-start border-5 border-primary">
-            <h5 class="fw-bold mb-3">&#128274; Connectivity</h5>
-            <ul class="small text-muted ps-3">
-              <li><strong>License Key:</strong> Valid active key from <code>niyulabs.com</code>.</li>
-              <li><strong>Outbound Access:</strong> Your Odoo server must reach <code>api.niyulabs.com</code> via HTTPS.</li>
-              <li><strong>Vendor Setup:</strong> Products must have at least 1 supplier set in the "Purchase" tab.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== SECTION 7: DETAILED TROUBLESHOOTING ========== -->
-    <section class="mb-5">
-      <div class="text-center mb-5">
-        <h2 class="display-6 fw-bold">&#129657; Support & FAQ</h2>
-      </div>
-      <div class="mx-auto" style="max-width: 900px;">
-        <!-- FAQ 1 -->
-        <div class="mb-3">
-          <div class="p-4 bg-white shadow-sm border rounded-4 d-flex align-items-center">
-            <span class="fs-4 me-3 text-danger">&#128511;</span>
-            <div class="flex-grow-1">
-              <h6 class="fw-bold mb-1">"No sales history found" error?</h6>
-              <p class="small text-muted mb-0">Check if your Sales Orders are confirmed. The AI ignores Quotations and Canceled orders. Verify products are "Storable."</p>
-            </div>
-          </div>
-        </div>
-        <!-- FAQ 2 -->
-        <div class="mb-3">
-          <div class="p-4 bg-white shadow-sm border rounded-4 d-flex align-items-center">
-            <span class="fs-4 me-3 text-warning">&#128273;</span>
-            <div class="flex-grow-1">
-              <h6 class="fw-bold mb-1">Where do I find my License Key?</h6>
-              <p class="small text-muted mb-0">Login to your dashboard at <code>niyulabs.com</code>. Your key is located under the "Active Modules" section.</p>
-            </div>
-          </div>
-        </div>
-        <!-- FAQ 3 -->
-        <div class="mb-3">
-          <div class="p-4 bg-white shadow-sm border rounded-4 d-flex align-items-center">
-            <span class="fs-4 me-3 text-info">&#128259;</span>
-            <div class="flex-grow-1">
-              <h6 class="fw-bold mb-1">A forecast is already running...</h6>
-              <p class="small text-muted mb-0">The system uses a concurrency guard. Only one sync can run at once. If stuck for &gt;15 mins, it will auto-clear.</p>
-            </div>
-          </div>
-        </div>
-        <!-- FAQ 4 -->
-        <div class="mb-3">
-          <div class="p-4 bg-white shadow-sm border rounded-4 d-flex align-items-center">
-            <span class="fs-4 me-3 text-success">&#128722;</span>
-            <div class="flex-grow-1">
-              <h6 class="fw-bold mb-1">PO button missing?</h6>
-              <p class="small text-muted mb-0">Ensure the product has a <strong>Vendor</strong> assigned in the Purchase tab. AI cannot suggest a buy without a source.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </div>
-
-  <!-- ========== SECTION 8: PRO FOOTER ========== -->
-  <footer class="py-5 bg-white border-top">
-    <div class="container text-center">
-      <div class="mb-4">
-        <h4 class="fw-bold text-primary">NIYU LABS</h4>
-        <p class="text-muted">Intelligence designed for the modern Odoo enterprise.</p>
-      </div>
-      <div class="d-flex justify-content-center gap-4 mb-4 small fw-bold text-muted text-uppercase" style="letter-spacing: 1px;">
-        <a href="#" class="text-decoration-none text-dark">Privacy</a>
-        <a href="#" class="text-decoration-none text-dark">Security</a>
-        <a href="#" class="text-decoration-none text-dark">Docs</a>
-        <a href="#" class="text-decoration-none text-dark">Support</a>
-      </div>
-      <hr class="w-25 mx-auto mb-4">
-      <p class="small text-muted">&copy; 2024 Niyu Labs AI. All rights reserved. Data processed via Niyu Cloud Engine.</p>
-    </div>
-  </footer>
+    </footer>
 
 </div>
+
+<style>
+    .hover-up { transition: all 0.3s ease; }
+    .hover-up:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.1) !important; }
+    .shadow-lg { box-shadow: 0 1rem 3rem rgba(0,0,0,.1) !important; }
+    .rounded-5 { border-radius: 2.5rem !important; }
+    code { color: #4338ca; background: #f1f5f9; padding: 2px 5px; border-radius: 4px; }
+</style>
