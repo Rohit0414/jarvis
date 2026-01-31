@@ -498,31 +498,182 @@
   </div>
 </section>
     <!-- ========== FEATURES ========== -->
-    <section class="mb-5">
-      <div class="p-4" style="background-color: #fff; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);">
-        <h2 class="h3 fw-bold text-dark mb-4 border-bottom pb-3 d-flex align-items-center"><span class="me-2">&#10024;</span> Features</h2>
-        <div class="row g-4">
-            <div class="col-md-6">
-                <ul class="list-unstyled">
-                    <li class="mb-3"><strong>&#129302; AI 30-day demand</strong> — Per-product forecast for the next 30 days from your last 2 years of confirmed sales, processed by Niyu cloud.</li>
-                    <li class="mb-3"><strong>&#128187; Command Center</strong> — Dashboard under Inventory &rarr; Niyu AI with Revenue at Risk, Critical Items, Restock Capital, and Last AI Sync status.</li>
-                    <li class="mb-3"><strong>&#128203; Replenishment Board</strong> — Top 50 items needing reorder with 30-day trend sparkline, stockout date, lead time, suggested buy, and Review action.</li>
-                    <li class="mb-3"><strong>&#128450; Smart Stock list</strong> — Full forecast list with Product, Status badge (Critical / Overstock / Healthy / Stockout), Current Qty, Days Coverage, AI Demand, Suggested Buy, Capital Needed, and per-row Create PO button.</li>
-                    <li class="mb-3"><strong>&#129514; Filters</strong> — Critical Risk, Need Purchase, Healthy; optional Group by Product.</li>
-                </ul>
-            </div>
-            <div class="col-md-6">
-                <ul class="list-unstyled">
-                    <li class="mb-3"><strong>&#9889; One-click purchase orders</strong> — From list (single row or multi-select + action) or from product form; POs grouped by vendor with origin "Niyu Smart Stock".</li>
-                    <li class="mb-3"><strong>&#128200; AI Prediction Graph</strong> — Form tab with chart from Niyu cloud (time series / sparkline data).</li>
-                    <li class="mb-3"><strong>&#128197; Daily automatic sync</strong> — Optional scheduled action (e.g. 02:00) to run a new forecast every day.</li>
-                    <li class="mb-3"><strong>&#9729; Background processing</strong> — Forecast runs in the cloud; polling cron checks every minute until results are ready (~1 minute).</li>
-                    <li class="mb-3"><strong>&#128274; Concurrent-sync guard</strong> — Only one forecast job at a time; stale jobs (&gt; 15 min) are cleared automatically.</li>
-                </ul>
-            </div>
+   <section class="mb-5">
+  
+  <!-- Section Header -->
+  <div class="mb-5 text-center" style="padding: 20px;">
+    <span class="d-inline-block py-1 px-3 rounded-pill bg-light text-primary fw-bold small text-uppercase mb-3" style="letter-spacing: 1px;">Capabilities</span>
+    <h2 class="h2 fw-bold text-dark"><span class="me-2">&#10024;</span> Everything you need</h2>
+    <p class="text-muted mx-auto" style="max-width: 600px;">Comprehensive tools to predict demand, visualize risk, and automate replenishment.</p>
+  </div>
+
+  <div class="row g-4">
+
+    <!-- Column 1 -->
+    <div class="col-lg-6">
+      <div class="d-flex flex-column gap-4">
+        
+        <!-- Feature 1: AI Demand -->
+        <div class="d-flex align-items-start p-4 bg-white position-relative" 
+             style="border-radius: 20px; border: 1px solid #f1f5f9; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease;"
+             onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.05)'; this.style.borderColor='#c7d2fe';"
+             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)'; this.style.borderColor='#f1f5f9';">
+          <div class="flex-shrink-0 d-flex align-items-center justify-content-center me-3 shadow-sm" 
+               style="width: 56px; height: 56px; background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); color: white; border-radius: 16px; font-size: 1.75rem;">
+            &#129302;
+          </div>
+          <div>
+            <h5 class="fw-bold text-dark mb-1">AI 30-day demand</h5>
+            <p class="text-muted small mb-0 lh-base">Per-product forecast for the next 30 days from your last 2 years of confirmed sales, processed by Niyu cloud.</p>
+          </div>
         </div>
+
+        <!-- Feature 2: Command Center -->
+        <div class="d-flex align-items-start p-4 bg-white position-relative" 
+             style="border-radius: 20px; border: 1px solid #f1f5f9; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease;"
+             onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.05)'; this.style.borderColor='#bfdbfe';"
+             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)'; this.style.borderColor='#f1f5f9';">
+          <div class="flex-shrink-0 d-flex align-items-center justify-content-center me-3 shadow-sm" 
+               style="width: 56px; height: 56px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; border-radius: 16px; font-size: 1.75rem;">
+            &#128187;
+          </div>
+          <div>
+            <h5 class="fw-bold text-dark mb-1">Command Center</h5>
+            <p class="text-muted small mb-0 lh-base">Dashboard under Inventory &rarr; Niyu AI with Revenue at Risk, Critical Items, Restock Capital, and Sync status.</p>
+          </div>
+        </div>
+
+        <!-- Feature 3: Replenishment Board -->
+        <div class="d-flex align-items-start p-4 bg-white position-relative" 
+             style="border-radius: 20px; border: 1px solid #f1f5f9; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease;"
+             onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.05)'; this.style.borderColor='#a5f3fc';"
+             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)'; this.style.borderColor='#f1f5f9';">
+          <div class="flex-shrink-0 d-flex align-items-center justify-content-center me-3 shadow-sm" 
+               style="width: 56px; height: 56px; background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); color: white; border-radius: 16px; font-size: 1.75rem;">
+            &#128203;
+          </div>
+          <div>
+            <h5 class="fw-bold text-dark mb-1">Replenishment Board</h5>
+            <p class="text-muted small mb-0 lh-base">Top 50 items needing reorder with 30-day trend sparkline, stockout date, lead time, and suggested buy.</p>
+          </div>
+        </div>
+
+        <!-- Feature 4: Smart Stock List -->
+        <div class="d-flex align-items-start p-4 bg-white position-relative" 
+             style="border-radius: 20px; border: 1px solid #f1f5f9; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease;"
+             onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.05)'; this.style.borderColor='#e2e8f0';"
+             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)'; this.style.borderColor='#f1f5f9';">
+          <div class="flex-shrink-0 d-flex align-items-center justify-content-center me-3 shadow-sm" 
+               style="width: 56px; height: 56px; background: linear-gradient(135deg, #64748b 0%, #475569 100%); color: white; border-radius: 16px; font-size: 1.75rem;">
+            &#128450;
+          </div>
+          <div>
+            <h5 class="fw-bold text-dark mb-1">Smart Stock list</h5>
+            <p class="text-muted small mb-0 lh-base">Full forecast list with Status badges (Critical / Overstock), AI Demand, Capital Needed, and Create PO actions.</p>
+          </div>
+        </div>
+
+        <!-- Feature 5: Filters -->
+        <div class="d-flex align-items-start p-4 bg-white position-relative" 
+             style="border-radius: 20px; border: 1px solid #f1f5f9; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease;"
+             onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.05)'; this.style.borderColor='#ddd6fe';"
+             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)'; this.style.borderColor='#f1f5f9';">
+          <div class="flex-shrink-0 d-flex align-items-center justify-content-center me-3 shadow-sm" 
+               style="width: 56px; height: 56px; background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); color: white; border-radius: 16px; font-size: 1.75rem;">
+            &#129514;
+          </div>
+          <div>
+            <h5 class="fw-bold text-dark mb-1">Smart Filters</h5>
+            <p class="text-muted small mb-0 lh-base">Quickly focus on what matters: Critical Risk, Need Purchase, or Healthy items. Group by Product available.</p>
+          </div>
+        </div>
+
       </div>
-    </section>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="col-lg-6">
+      <div class="d-flex flex-column gap-4">
+        
+        <!-- Feature 6: One-click POs -->
+        <div class="d-flex align-items-start p-4 bg-white position-relative" 
+             style="border-radius: 20px; border: 1px solid #f1f5f9; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease;"
+             onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.05)'; this.style.borderColor='#fde68a';"
+             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)'; this.style.borderColor='#f1f5f9';">
+          <div class="flex-shrink-0 d-flex align-items-center justify-content-center me-3 shadow-sm" 
+               style="width: 56px; height: 56px; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; border-radius: 16px; font-size: 1.75rem;">
+            &#9889;
+          </div>
+          <div>
+            <h5 class="fw-bold text-dark mb-1">One-click purchase orders</h5>
+            <p class="text-muted small mb-0 lh-base">Generate POs by vendor from the list or product form. POs are grouped by vendor with origin "Niyu Smart Stock".</p>
+          </div>
+        </div>
+
+        <!-- Feature 7: AI Graph -->
+        <div class="d-flex align-items-start p-4 bg-white position-relative" 
+             style="border-radius: 20px; border: 1px solid #f1f5f9; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease;"
+             onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.05)'; this.style.borderColor='#fbcfe8';"
+             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)'; this.style.borderColor='#f1f5f9';">
+          <div class="flex-shrink-0 d-flex align-items-center justify-content-center me-3 shadow-sm" 
+               style="width: 56px; height: 56px; background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); color: white; border-radius: 16px; font-size: 1.75rem;">
+            &#128200;
+          </div>
+          <div>
+            <h5 class="fw-bold text-dark mb-1">AI Prediction Graph</h5>
+            <p class="text-muted small mb-0 lh-base">Interactive chart in the forecast form tab visualization the time series data from Niyu cloud.</p>
+          </div>
+        </div>
+
+        <!-- Feature 8: Daily Sync -->
+        <div class="d-flex align-items-start p-4 bg-white position-relative" 
+             style="border-radius: 20px; border: 1px solid #f1f5f9; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease;"
+             onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.05)'; this.style.borderColor='#bbf7d0';"
+             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)'; this.style.borderColor='#f1f5f9';">
+          <div class="flex-shrink-0 d-flex align-items-center justify-content-center me-3 shadow-sm" 
+               style="width: 56px; height: 56px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; border-radius: 16px; font-size: 1.75rem;">
+            &#128197;
+          </div>
+          <div>
+            <h5 class="fw-bold text-dark mb-1">Daily automatic sync</h5>
+            <p class="text-muted small mb-0 lh-base">Optional scheduled action (e.g. 02:00) runs a new forecast every day so your data is always fresh.</p>
+          </div>
+        </div>
+
+        <!-- Feature 9: Background Processing -->
+        <div class="d-flex align-items-start p-4 bg-white position-relative" 
+             style="border-radius: 20px; border: 1px solid #f1f5f9; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease;"
+             onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.05)'; this.style.borderColor='#bae6fd';"
+             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)'; this.style.borderColor='#f1f5f9';">
+          <div class="flex-shrink-0 d-flex align-items-center justify-content-center me-3 shadow-sm" 
+               style="width: 56px; height: 56px; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; border-radius: 16px; font-size: 1.75rem;">
+            &#9729;
+          </div>
+          <div>
+            <h5 class="fw-bold text-dark mb-1">Background processing</h5>
+            <p class="text-muted small mb-0 lh-base">Forecast runs in the cloud; intelligent polling checks for results so your Odoo server isn't bogged down.</p>
+          </div>
+        </div>
+
+        <!-- Feature 10: Sync Guard -->
+        <div class="d-flex align-items-start p-4 bg-white position-relative" 
+             style="border-radius: 20px; border: 1px solid #f1f5f9; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease;"
+             onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.05)'; this.style.borderColor='#fecaca';"
+             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)'; this.style.borderColor='#f1f5f9';">
+          <div class="flex-shrink-0 d-flex align-items-center justify-content-center me-3 shadow-sm" 
+               style="width: 56px; height: 56px; background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); color: white; border-radius: 16px; font-size: 1.75rem;">
+            &#128274;
+          </div>
+          <div>
+            <h5 class="fw-bold text-dark mb-1">Concurrent-sync guard</h5>
+            <p class="text-muted small mb-0 lh-base">Prevents conflicts by allowing only one forecast job at a time; automatically clears stale jobs (> 15 min).</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- ========== USE CASES ========== -->
     <section class="mb-5">
