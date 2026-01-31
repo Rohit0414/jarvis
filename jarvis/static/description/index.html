@@ -676,31 +676,149 @@
 </section>
 
     <!-- ========== USE CASES ========== -->
-    <section class="mb-5">
-      <h2 class="h4 fw-bold text-dark mb-4 d-flex align-items-center"><span class="me-2" style="color: #6366f1;">&#128188;</span> Use cases</h2>
-      <div class="d-flex flex-wrap gap-3">
-        <div class="flex-fill p-3 bg-white rounded shadow-sm border" style="min-width: 250px;">
-            <div class="fw-bold mb-2 text-primary">Retail or e‑commerce</div>
-            <p class="small text-muted m-0">You sell many SKUs and need to know what to reorder and how much, without manual analysis.</p>
-        </div>
-        <div class="flex-fill p-3 bg-white rounded shadow-sm border" style="min-width: 250px;">
-            <div class="fw-bold mb-2 text-primary">Wholesale / distribution</div>
-            <p class="small text-muted m-0">You manage multiple vendors; the module groups POs by vendor and uses the first supplier per product.</p>
-        </div>
-        <div class="flex-fill p-3 bg-white rounded shadow-sm border" style="min-width: 250px;">
-            <div class="fw-bold mb-2 text-primary">Seasonal or variable demand</div>
-            <p class="small text-muted m-0">AI uses 2 years of history to capture trends and seasonality for the 30-day forecast.</p>
-        </div>
-        <div class="flex-fill p-3 bg-white rounded shadow-sm border" style="min-width: 250px;">
-            <div class="fw-bold mb-2 text-primary">Stock and purchase already in Odoo</div>
-            <p class="small text-muted m-0">You use Stock, Sales, and Purchase; products have vendors and confirmed SOs so forecasts and POs are actionable.</p>
-        </div>
-        <div class="flex-fill p-3 bg-white rounded shadow-sm border" style="min-width: 250px;">
-            <div class="fw-bold mb-2 text-primary">Daily or weekly replenishment</div>
-            <p class="small text-muted m-0">Run the forecast daily (cron) or on demand; check Command Center and create POs from the Smart Stock list.</p>
+   <section class="mb-5">
+  
+  <!-- Header -->
+  <div class="text-center mb-5">
+    <div class="d-inline-flex align-items-center justify-content-center mb-2 shadow-sm" 
+         style="width: 56px; height: 56px; background: #e0e7ff; color: #4338ca; border-radius: 50%; font-size: 1.75rem;">
+      &#128188;
+    </div>
+    <h2 class="h2 fw-bold mt-3 text-dark">Who is this for?</h2>
+    <p class="text-muted mx-auto" style="max-width: 600px;">
+      Whether you are a retailer or a distributor, Inventory Forecast adapts to your business model.
+    </p>
+  </div>
+
+  <div class="row g-4 justify-content-center">
+
+    <!-- Use Case 1: Retail -->
+    <div class="col-lg-4 col-md-6">
+      <div class="h-100 position-relative bg-white overflow-hidden" 
+           style="border-radius: 20px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); border: 1px solid #f1f5f9; transition: all 0.3s ease;"
+           onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.1)';"
+           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)';">
+        
+        <!-- Gradient Top Bar -->
+        <div style="height: 6px; background: linear-gradient(90deg, #ec4899 0%, #8b5cf6 100%);"></div>
+        
+        <div class="p-4">
+          <div class="d-flex align-items-center mb-3">
+            <div class="d-flex align-items-center justify-content-center me-3" 
+                 style="width: 48px; height: 48px; background: #fdf2f8; color: #db2777; border-radius: 12px; font-size: 1.5rem;">
+              &#127978;
+            </div>
+            <h5 class="fw-bold mb-0 text-dark">Retail or E-commerce</h5>
+          </div>
+          <p class="text-muted small mb-0 lh-lg">
+            You sell a high volume of SKUs and need to know exactly what to reorder and how much, effectively eliminating manual spreadsheet analysis.
+          </p>
         </div>
       </div>
-    </section>
+    </div>
+
+    <!-- Use Case 2: Wholesale -->
+    <div class="col-lg-4 col-md-6">
+      <div class="h-100 position-relative bg-white overflow-hidden" 
+           style="border-radius: 20px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); border: 1px solid #f1f5f9; transition: all 0.3s ease;"
+           onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.1)';"
+           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)';">
+        
+        <!-- Gradient Top Bar -->
+        <div style="height: 6px; background: linear-gradient(90deg, #3b82f6 0%, #06b6d4 100%);"></div>
+        
+        <div class="p-4">
+          <div class="d-flex align-items-center mb-3">
+            <div class="d-flex align-items-center justify-content-center me-3" 
+                 style="width: 48px; height: 48px; background: #eff6ff; color: #2563eb; border-radius: 12px; font-size: 1.5rem;">
+              &#128230;
+            </div>
+            <h5 class="fw-bold mb-0 text-dark">Wholesale &amp; Distro</h5>
+          </div>
+          <p class="text-muted small mb-0 lh-lg">
+            You manage complex vendor relationships. The module automatically groups POs by vendor and selects the primary supplier per product.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Use Case 3: Seasonal -->
+    <div class="col-lg-4 col-md-6">
+      <div class="h-100 position-relative bg-white overflow-hidden" 
+           style="border-radius: 20px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); border: 1px solid #f1f5f9; transition: all 0.3s ease;"
+           onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.1)';"
+           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)';">
+        
+        <!-- Gradient Top Bar -->
+        <div style="height: 6px; background: linear-gradient(90deg, #f59e0b 0%, #ef4444 100%);"></div>
+        
+        <div class="p-4">
+          <div class="d-flex align-items-center mb-3">
+            <div class="d-flex align-items-center justify-content-center me-3" 
+                 style="width: 48px; height: 48px; background: #fffbeb; color: #d97706; border-radius: 12px; font-size: 1.5rem;">
+              &#128200;
+            </div>
+            <h5 class="fw-bold mb-0 text-dark">Variable Demand</h5>
+          </div>
+          <p class="text-muted small mb-0 lh-lg">
+            For seasonal or trending products, the AI analyzes 2 full years of history to accurately capture trends and seasonality for the next 30 days.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Use Case 4: Existing Odoo Users -->
+    <div class="col-lg-6 col-md-6">
+      <div class="h-100 position-relative bg-white overflow-hidden" 
+           style="border-radius: 20px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); border: 1px solid #f1f5f9; transition: all 0.3s ease;"
+           onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.1)';"
+           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)';">
+        
+        <!-- Gradient Top Bar -->
+        <div style="height: 6px; background: linear-gradient(90deg, #8b5cf6 0%, #6366f1 100%);"></div>
+        
+        <div class="p-4">
+          <div class="d-flex align-items-center mb-3">
+            <div class="d-flex align-items-center justify-content-center me-3" 
+                 style="width: 48px; height: 48px; background: #f5f3ff; color: #7c3aed; border-radius: 12px; font-size: 1.5rem;">
+              &#128279;
+            </div>
+            <h5 class="fw-bold mb-0 text-dark">Native Odoo Integration</h5>
+          </div>
+          <p class="text-muted small mb-0 lh-lg">
+            Perfect if you already use Stock, Sales, and Purchase. Products have vendors and confirmed Sales Orders, making forecasts immediately actionable without data migration.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Use Case 5: Routine Replenishment -->
+    <div class="col-lg-6 col-md-6">
+      <div class="h-100 position-relative bg-white overflow-hidden" 
+           style="border-radius: 20px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); border: 1px solid #f1f5f9; transition: all 0.3s ease;"
+           onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.1)';"
+           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)';">
+        
+        <!-- Gradient Top Bar -->
+        <div style="height: 6px; background: linear-gradient(90deg, #10b981 0%, #3b82f6 100%);"></div>
+        
+        <div class="p-4">
+          <div class="d-flex align-items-center mb-3">
+            <div class="d-flex align-items-center justify-content-center me-3" 
+                 style="width: 48px; height: 48px; background: #ecfdf5; color: #059669; border-radius: 12px; font-size: 1.5rem;">
+              &#128197;
+            </div>
+            <h5 class="fw-bold mb-0 text-dark">Daily Replenishment</h5>
+          </div>
+          <p class="text-muted small mb-0 lh-lg">
+            Ideal for daily or weekly purchasing routines. Run the forecast (via cron or manually), check the Command Center KPIs, and create POs in minutes.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 
     <!-- ========== HOW IT WORKS ========== -->
     <section class="mb-5 p-4" style="background: #eef2ff; border-radius: 16px;">
