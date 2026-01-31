@@ -2095,80 +2095,149 @@
     </div>
   </div>
 </section>
-    <!-- ========== MENU & NAVIGATION ========== -->
-    <section class="mb-5">
-      <h2 class="h4 fw-bold text-dark mb-4"><span class="me-2">&#129517;</span> Menu &amp; navigation</h2>
-      <div class="table-responsive">
-        <table class="table table-hover border bg-white shadow-sm" style="border-radius: 12px; overflow: hidden;">
-            <thead class="bg-light text-uppercase text-muted small">
-                <tr>
-                    <th class="py-3 ps-4">Where</th>
-                    <th class="py-3">What you get</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr><td class="ps-4 fw-bold">Inventory &rarr; Niyu AI</td><td>Command Center (dashboard + Replenishment Board). Button "Inventory List" opens Smart Stock list.</td></tr>
-                <tr><td class="ps-4 fw-bold">Inventory &rarr; Niyu AI (then Inventory List)</td><td>Smart Stock list — full forecast with filters and Create PO actions.</td></tr>
-                <tr><td class="ps-4 fw-bold">Inventory &rarr; Configuration &rarr; Settings</td><td>Niyu AI Configuration: License key and Run Initial Sync.</td></tr>
-                <tr><td class="ps-4 fw-bold">Automation &rarr; Scheduled Actions</td><td>Niyu AI: Poll Forecast Results; Niyu AI: Daily Demand Forecast.</td></tr>
-            </tbody>
-        </table>
-      </div>
-    </section>
 
-   
-    <!-- ========== COVERAGE STATUS LOGIC ========== -->
-    <section class="mb-5">
-      <h2 class="h4 fw-bold text-dark mb-4"><span class="me-2">&#129504;</span> Coverage status logic</h2>
-      <p class="mb-3 text-muted">Status is computed from current stock, forecast_30d, and derived daily demand (forecast_30d / 30).</p>
-      
-      <div class="row g-3 mb-4">
-        <div class="col-md-6">
-            <div class="bg-white p-3 border rounded shadow-sm h-100">
-                <ul class="list-unstyled mb-0">
-                    <li class="mb-2"><strong>Stockout</strong> — current_stock &le; 0 and forecast_30d &gt; 0. Days of coverage = 0.</li>
-                    <li class="mb-2"><strong>Critical</strong> — days_of_coverage &lt; 7 (and not stockout).</li>
-                    <li class="mb-2"><strong>Overstock (Warning)</strong> — days_of_coverage &gt; 60.</li>
-                    <li class="mb-2"><strong>Healthy</strong> — otherwise (7 &le; days &le; 60).</li>
-                    <li class="mb-0">If forecast_30d = 0 and current_stock &gt; 0, days_of_coverage is set to 999 (treated as "Safe" in the dashboard).</li>
-                </ul>
-            </div>
-        </div>
-        <div class="col-md-6">
-             <table class="table table-sm table-bordered bg-white text-center shadow-sm" style="border-radius: 8px; overflow: hidden;">
-              <thead class="bg-light">
-                <tr><th>Badge</th><th class="text-start">Meaning</th></tr>
-              </thead>
-              <tbody>
-                <tr><td><span style="display: inline-block; padding: 0.2rem 0.6rem; border-radius: 20px; background: #fef2f2; color: #b91c1c; font-weight: 700; font-size: 0.8rem;">Stockout</span></td><td class="text-start small">Out of stock; demand &gt; 0. Reorder ASAP.</td></tr>
-                <tr><td><span style="display: inline-block; padding: 0.2rem 0.6rem; border-radius: 20px; background: #fef2f2; color: #b91c1c; font-weight: 700; font-size: 0.8rem;">Critical</span></td><td class="text-start small">Less than 7 days stock. Prioritize.</td></tr>
-                <tr><td><span style="display: inline-block; padding: 0.2rem 0.6rem; border-radius: 20px; background: #fefce8; color: #a16207; font-weight: 700; font-size: 0.8rem;">Overstock</span></td><td class="text-start small">&gt; 60 days coverage. Reduce orders.</td></tr>
-                <tr><td><span style="display: inline-block; padding: 0.2rem 0.6rem; border-radius: 20px; background: #f0fdf4; color: #15803d; font-weight: 700; font-size: 0.8rem;">Healthy</span></td><td class="text-start small">7–60 days coverage. No action.</td></tr>
-              </tbody>
-            </table>
-        </div>
-      </div>
-    </section>
+   <!-- ========== CONFIGURATION ========== -->
+<section class="mb-5">
+  
+  <!-- Main Wrapper -->
+  <div class="position-relative bg-white overflow-hidden" 
+       style="border-radius: 24px; border: 1px solid #e2e8f0; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.01);">
+    
+    <!-- Top Gradient Accent (Slate/Graphite for "Settings" theme) -->
+    <div style="height: 6px; background: linear-gradient(90deg, #334155 0%, #64748b 100%);"></div>
 
-    <!-- ========== CONFIGURATION ========== -->
-    <section class="mb-5">
-      <div class="card bg-white border-0 shadow-sm" style="border-radius: 12px;">
-        <div class="card-body p-4 d-flex flex-column flex-md-row align-items-center">
-            <div class="flex-grow-1 pe-md-4">
-                <h2 class="h4 fw-bold text-dark mb-3"><span class="me-2">&#128295;</span> Configuration</h2>
-                <p class="text-muted mb-3">Go to <strong>Inventory &rarr; Configuration &rarr; Settings</strong>. Below the warehouse block you will see <strong>Niyu AI Configuration</strong>.</p>
-                <ul class="small text-muted mb-0">
-                  <li class="mb-2"><strong>Niyu License Key</strong> — stored in system parameter <code class="bg-light px-1">niyu.license_key</code>. Get your key from niyulabs.com. Required to run forecast; if missing, manual run raises an error and the daily cron skips silently.</li>
-                  <li><strong>Run Initial Sync</strong> — button that triggers the same logic as the daily cron (action_start_forecast). Use it after saving the license key to run the first forecast. A success notification tells you results will appear in about 1 minute.</li>
-                </ul>
+    <div class="p-5">
+
+      <!-- Section Header -->
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-8">
+          <div class="d-flex align-items-center mb-3">
+            <div class="d-flex align-items-center justify-content-center me-3 shadow-sm" 
+                 style="width: 56px; height: 56px; background: linear-gradient(135deg, #1e293b 0%, #475569 100%); color: white; border-radius: 16px; font-size: 1.75rem;">
+              &#128295;
             </div>
-            <div class="mt-4 mt-md-0 text-center">
-                <small class="text-uppercase fw-bold text-muted mb-2 d-block">Screenshot — Settings</small>
-                <img src="screenshot_settings.png" alt="Niyu AI Configuration in Settings" class="img-fluid rounded shadow-sm border" style="max-width: 250px;" />
+            <div>
+              <h2 class="h2 fw-bold text-dark mb-0">System Configuration</h2>
+              <span class="badge bg-light text-secondary border mt-2">One-time Setup</span>
             </div>
+          </div>
+          <p class="text-muted fs-5 mb-0" style="max-width: 700px; line-height: 1.6;">
+            Connect your Odoo instance to the Niyu Cloud Engine.
+          </p>
         </div>
       </div>
-    </section>
+
+      <div class="row g-5 align-items-center">
+        
+        <!-- Left Column: Instructions -->
+        <div class="col-lg-6">
+          
+          <!-- Breadcrumb Visual -->
+          <div class="mb-4">
+             <h6 class="fw-bold text-dark text-uppercase small mb-2" style="letter-spacing: 0.5px;">Location</h6>
+             <div class="d-flex align-items-center bg-light border rounded-pill px-3 py-2 text-secondary small fw-bold">
+                <span>Inventory</span>
+                <span class="mx-2 text-muted">&rarr;</span>
+                <span>Config</span>
+                <span class="mx-2 text-muted">&rarr;</span>
+                <span>Settings</span>
+                <span class="mx-2 text-muted">&rarr;</span>
+                <span class="text-primary">Niyu AI</span>
+             </div>
+          </div>
+
+          <!-- Instruction Blocks -->
+          <div class="d-flex flex-column gap-3">
+            
+            <!-- Key Block -->
+            <div class="p-3 bg-white border rounded-4 shadow-sm position-relative overflow-hidden transition-hover"
+                 style="transition: all 0.3s ease;"
+                 onmouseover="this.style.borderColor='#64748b'; this.style.transform='translateX(5px)'"
+                 onmouseout="this.style.borderColor='#dee2e6'; this.style.transform='translateX(0)'">
+              <div class="d-flex align-items-start">
+                <div class="me-3 mt-1 text-secondary fs-4">&#128273;</div>
+                <div>
+                  <h6 class="fw-bold text-dark">1. License Key</h6>
+                  <p class="small text-muted mb-2">
+                    Enter the active key from <strong>niyulabs.com</strong>.
+                  </p>
+                  <div class="d-flex gap-2 align-items-center">
+                    <span class="badge bg-secondary-subtle text-secondary border border-secondary-subtle">Required</span>
+                    <code class="small text-muted">niyu.license_key</code>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sync Block -->
+            <div class="p-3 bg-white border rounded-4 shadow-sm position-relative overflow-hidden transition-hover"
+                 style="transition: all 0.3s ease;"
+                 onmouseover="this.style.borderColor='#64748b'; this.style.transform='translateX(5px)'"
+                 onmouseout="this.style.borderColor='#dee2e6'; this.style.transform='translateX(0)'">
+              <div class="d-flex align-items-start">
+                <div class="me-3 mt-1 text-secondary fs-4">&#128259;</div>
+                <div>
+                  <h6 class="fw-bold text-dark">2. Run Initial Sync</h6>
+                  <p class="small text-muted mb-2">
+                    Click the button to trigger your first prediction.
+                  </p>
+                  <div class="d-flex gap-2 align-items-center">
+                    <span class="badge bg-secondary-subtle text-secondary border border-secondary-subtle">Action</span>
+                    <span class="small text-muted fst-italic">Results in ~1 min</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right Column: Browser Mockup -->
+        <div class="col-lg-6">
+          <div class="position-relative">
+            
+            <!-- Decorative Blob Behind -->
+            <div style="position: absolute; top: -20px; right: -20px; width: 200px; height: 200px; background: radial-gradient(circle, #e2e8f0 0%, transparent 70%); border-radius: 50%; z-index: 0;"></div>
+
+            <!-- Browser Window -->
+            <div class="mx-auto shadow-lg position-relative z-1" style="max-width: 500px; border-radius: 12px; overflow: hidden; border: 1px solid #cbd5e1;">
+              
+              <!-- Window Bar -->
+              <div class="bg-dark p-2 d-flex align-items-center" 
+                   style="background: #1e293b; border-bottom: 1px solid #334155;">
+                 <div class="d-flex gap-2 ms-2">
+                   <div style="width: 10px; height: 10px; background: #64748b; border-radius: 50%;"></div>
+                   <div style="width: 10px; height: 10px; background: #64748b; border-radius: 50%;"></div>
+                   <div style="width: 10px; height: 10px; background: #64748b; border-radius: 50%;"></div>
+                 </div>
+                 <div class="mx-auto text-secondary small font-monospace opacity-50 pe-4">Odoo Settings</div>
+              </div>
+              
+              <!-- Image Container -->
+              <div class="bg-light position-relative" style="min-height: 250px;">
+                   <img src="screenshot_settings.png" 
+                        alt="Settings Screenshot" 
+                        class="img-fluid w-100 h-100 object-fit-cover"
+                        style="opacity: 0.95;"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                   
+                   <!-- Fallback Placeholder -->
+                   <div class="d-none w-100 position-absolute top-0 bottom-0 d-flex flex-column align-items-center justify-content-center bg-light text-muted p-5 text-center">
+                      <span class="fs-1 mb-3 text-secondary">&#9881;</span>
+                      <span class="fw-bold text-dark mb-2">Settings Snapshot</span>
+                      <span class="small">screenshot_settings.png</span>
+                   </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
 
     <!-- ========== TROUBLESHOOTING & FAQ ========== -->
     <section class="mb-5">
