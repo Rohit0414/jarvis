@@ -820,34 +820,187 @@
   </div>
 </section>
 
-    <!-- ========== HOW IT WORKS ========== -->
-    <section class="mb-5 p-4" style="background: #eef2ff; border-radius: 16px;">
-      <h2 class="h3 fw-bold text-dark mb-3"><span class="me-2">&#9881;</span> How it works</h2>
-      <p class="mb-3">When you run a forecast (manually from Settings or via the daily cron), Odoo collects daily sales by product from confirmed Sales Orders of the last 2 years for storable and consumable products. This data is compressed (gzip) and sent to <strong>api.niyulabs.com</strong> with your license key. The cloud returns a job ID; a scheduled action polls every 1 minute until the job is done. Results are then written into <strong>niyu.forecast.result</strong>: forecast quantity, chart JSON, and last sync time. Suggested buy is computed as max(0, forecast_30d − current_stock). Days of coverage and status (Critical / Overstock / Healthy / Stockout) are computed from current stock and the 30-day demand.</p>
-      <div class="d-flex flex-wrap gap-2">
-        <span class="badge bg-white text-dark border p-2 fw-normal">Data source: <code style="color: #d63384;">sale_order_line</code> + <code style="color: #d63384;">sale_order</code></span>
-        <span class="badge bg-white text-dark border p-2 fw-normal">Concurrent syncs: Single job lock</span>
-        <span class="badge bg-white text-dark border p-2 fw-normal">Polling cron: Every 1 min</span>
-        <span class="badge bg-white text-dark border p-2 fw-normal">Daily cron: Once per day</span>
-      </div>
-    </section>
+   <!-- ========== HOW IT WORKS (Process Pipeline) ========== -->
+<section class="mb-5">
+  <div class="position-relative p-5" style="background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%); border-radius: 24px; border: 1px solid #e0e7ff; overflow: hidden;">
+    
+    <!-- Background Decor -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(#6366f1 0.5px, transparent 0.5px); background-size: 20px 20px; opacity: 0.05; pointer-events: none;"></div>
 
-    <!-- ========== WHAT GETS SYNCED ========== -->
-    <section class="mb-5">
-      <div class="card shadow-sm border-0" style="border-radius: 12px;">
-        <div class="card-header bg-white fw-bold py-3"><span class="me-2">&#128259;</span> What gets synced</div>
-        <div class="card-body">
-            <div class="mb-4">
-                <h6 class="text-primary fw-bold">Sent to Niyu cloud (request)</h6>
-                <p class="small text-muted mb-2">Odoo builds a list of objects: <code class="bg-light px-1 rounded">{ "product_id": &lt;id&gt;, "date": "YYYY-MM-DD", "qty": &lt;float&gt; }</code> for each (product, day) from confirmed SOs in the last 2 years. The list is JSON-encoded, gzip-compressed, and POSTed to <strong>api.niyulabs.com/forecast</strong> with headers <code class="bg-light px-1 rounded">X-License-Key</code>, <code class="bg-light px-1 rounded">Content-Encoding: gzip</code>, <code class="bg-light px-1 rounded">Content-Type: application/json</code>. Response (200): <code class="bg-light px-1 rounded">{ "job_id": "&lt;string&gt;" }</code>.</p>
-            </div>
-            <div>
-                <h6 class="text-success fw-bold">Received from cloud (poll result)</h6>
-                <p class="small text-muted mb-0">Polling GETs <strong>api.niyulabs.com/result/&lt;job_id&gt;</strong> with <code class="bg-light px-1 rounded">X-License-Key</code>. When <code class="bg-light px-1 rounded">status</code> is <code class="bg-light px-1 rounded">"done"</code>, <code class="bg-light px-1 rounded">data</code> is a list of objects per product: <code class="bg-light px-1 rounded">product_id</code>, <code class="bg-light px-1 rounded">forecast_qty</code>, <code class="bg-light px-1 rounded">chart_data</code> (JSON string). Odoo writes these into <strong>niyu.forecast.result</strong> (create or update by product_id), sets last_updated, last_sync_time, and last_sync_status.</p>
-            </div>
+    <div class="text-center position-relative z-1 mb-5">
+      <span class="badge bg-white text-primary shadow-sm border px-3 py-2 rounded-pill text-uppercase mb-3" style="letter-spacing: 1px;">The Engine</span>
+      <h2 class="h2 fw-bold text-dark">How it works</h2>
+      <p class="text-muted mx-auto" style="max-width: 600px;">From your database to the cloud and back. A seamless, secure, and automated loop.</p>
+    </div>
+
+    <!-- Process Steps -->
+    <div class="row g-4 position-relative z-1">
+      
+      <!-- Step 1: Collect -->
+      <div class="col-lg-3 col-md-6">
+        <div class="h-100 p-4 bg-white text-center position-relative" 
+             style="border-radius: 20px; box-shadow: 0 10px 30px -5px rgba(0,0,0,0.05); border-bottom: 4px solid #3b82f6; transition: transform 0.3s ease;"
+             onmouseover="this.style.transform='translateY(-5px)'" 
+             onmouseout="this.style.transform='translateY(0)'">
+          <div class="d-inline-flex align-items-center justify-content-center mb-3 shadow-sm" 
+               style="width: 60px; height: 60px; background: #eff6ff; color: #3b82f6; border-radius: 50%; font-size: 1.5rem;">
+            &#128269;
+          </div>
+          <h5 class="fw-bold text-dark">1. Collect</h5>
+          <p class="small text-muted mb-0">Odoo aggregates daily sales from confirmed Orders (last 2 years). Data is compressed (gzip) for speed.</p>
         </div>
       </div>
-    </section>
+
+      <!-- Step 2: Process -->
+      <div class="col-lg-3 col-md-6">
+        <div class="h-100 p-4 bg-white text-center position-relative" 
+             style="border-radius: 20px; box-shadow: 0 10px 30px -5px rgba(0,0,0,0.05); border-bottom: 4px solid #8b5cf6; transition: transform 0.3s ease;"
+             onmouseover="this.style.transform='translateY(-5px)'" 
+             onmouseout="this.style.transform='translateY(0)'">
+          <div class="d-inline-flex align-items-center justify-content-center mb-3 shadow-sm" 
+               style="width: 60px; height: 60px; background: #f5f3ff; color: #8b5cf6; border-radius: 50%; font-size: 1.5rem;">
+            &#9729;
+          </div>
+          <h5 class="fw-bold text-dark">2. AI Cloud</h5>
+          <p class="small text-muted mb-0">Secure HTTPS push to <strong>api.niyulabs.com</strong>. The AI crunching happens remotely, returning a Job ID.</p>
+        </div>
+      </div>
+
+      <!-- Step 3: Poll -->
+      <div class="col-lg-3 col-md-6">
+        <div class="h-100 p-4 bg-white text-center position-relative" 
+             style="border-radius: 20px; box-shadow: 0 10px 30px -5px rgba(0,0,0,0.05); border-bottom: 4px solid #f59e0b; transition: transform 0.3s ease;"
+             onmouseover="this.style.transform='translateY(-5px)'" 
+             onmouseout="this.style.transform='translateY(0)'">
+          <div class="d-inline-flex align-items-center justify-content-center mb-3 shadow-sm" 
+               style="width: 60px; height: 60px; background: #fffbeb; color: #f59e0b; border-radius: 50%; font-size: 1.5rem;">
+            &#9203;
+          </div>
+          <h5 class="fw-bold text-dark">3. Poll</h5>
+          <p class="small text-muted mb-0">A smart cron checks status every minute. It sleeps when idle and wakes only when a job is active.</p>
+        </div>
+      </div>
+
+      <!-- Step 4: Sync -->
+      <div class="col-lg-3 col-md-6">
+        <div class="h-100 p-4 bg-white text-center position-relative" 
+             style="border-radius: 20px; box-shadow: 0 10px 30px -5px rgba(0,0,0,0.05); border-bottom: 4px solid #10b981; transition: transform 0.3s ease;"
+             onmouseover="this.style.transform='translateY(-5px)'" 
+             onmouseout="this.style.transform='translateY(0)'">
+          <div class="d-inline-flex align-items-center justify-content-center mb-3 shadow-sm" 
+               style="width: 60px; height: 60px; background: #ecfdf5; color: #10b981; border-radius: 50%; font-size: 1.5rem;">
+            &#128229;
+          </div>
+          <h5 class="fw-bold text-dark">4. Result</h5>
+          <p class="small text-muted mb-0">Forecasts, charts, and suggested buys are written to Odoo. Statuses (Critical, Healthy) are updated.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Tech Specs Footer -->
+    <div class="mt-5 pt-4 border-top d-flex justify-content-center flex-wrap gap-3 position-relative z-1">
+      <span class="d-inline-flex align-items-center bg-white px-3 py-2 rounded-pill border shadow-sm small text-secondary">
+        <span class="me-2 text-primary">&#128193;</span> Data: sale_order_line + sale_order
+      </span>
+      <span class="d-inline-flex align-items-center bg-white px-3 py-2 rounded-pill border shadow-sm small text-secondary">
+        <span class="me-2 text-primary">&#128274;</span> Security: Single Job Lock
+      </span>
+      <span class="d-inline-flex align-items-center bg-white px-3 py-2 rounded-pill border shadow-sm small text-secondary">
+        <span class="me-2 text-primary">&#9200;</span> Daily Cron: ~02:00
+      </span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== WHAT GETS SYNCED (Data Terminal) ========== -->
+<section class="mb-5">
+  <h2 class="h4 fw-bold text-dark mb-4 d-flex align-items-center">
+    <span class="me-2" style="color: #6366f1;">&#128242;</span> Data Payload
+  </h2>
+  
+  <div class="row g-4">
+    
+    <!-- Outbound (Request) -->
+    <div class="col-lg-6">
+      <div class="h-100 overflow-hidden d-flex flex-column" style="background: #1e293b; border-radius: 16px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); border: 1px solid #334155;">
+        <!-- Terminal Header -->
+        <div class="d-flex align-items-center justify-content-between px-3 py-2" style="background: #0f172a; border-bottom: 1px solid #334155;">
+          <div class="d-flex gap-2">
+            <div style="width: 10px; height: 10px; border-radius: 50%; background: #ef4444;"></div>
+            <div style="width: 10px; height: 10px; border-radius: 50%; background: #f59e0b;"></div>
+            <div style="width: 10px; height: 10px; border-radius: 50%; background: #22c55e;"></div>
+          </div>
+          <span class="text-secondary small fw-bold text-uppercase">Outbound Request</span>
+          <span style="opacity: 0;">...</span>
+        </div>
+        
+        <!-- Terminal Body -->
+        <div class="p-4 flex-grow-1 font-monospace" style="color: #cbd5e1; font-size: 0.9rem;">
+          <div class="mb-3">
+            <span style="color: #a78bfa;">POST</span> <span style="color: #fff;">api.niyulabs.com/forecast</span>
+          </div>
+          <div class="mb-3 p-3 rounded" style="background: #0f172a; border-left: 3px solid #a78bfa;">
+            <div class="mb-1" style="color: #94a3b8;">// Headers</div>
+            <div class="mb-2">
+              X-License-Key: <span style="color: #fca5a5;">*****</span><br>
+              Content-Encoding: <span style="color: #86efac;">gzip</span>
+            </div>
+            <div class="mb-1" style="color: #94a3b8;">// Body (JSON)</div>
+            <div>
+              [<br>
+              &nbsp;&nbsp;{ <span style="color: #93c5fd;">"product_id"</span>: 12, <span style="color: #93c5fd;">"date"</span>: "2023-10-01", <span style="color: #93c5fd;">"qty"</span>: 5.0 },<br>
+              &nbsp;&nbsp;...<br>
+              ]
+            </div>
+          </div>
+          <p class="small text-secondary m-0">
+            <span class="me-2">&#8593;</span> Sending aggregated sales history (prod, date, qty).
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Inbound (Response) -->
+    <div class="col-lg-6">
+      <div class="h-100 overflow-hidden d-flex flex-column" style="background: #1e293b; border-radius: 16px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); border: 1px solid #334155;">
+        <!-- Terminal Header -->
+        <div class="d-flex align-items-center justify-content-between px-3 py-2" style="background: #0f172a; border-bottom: 1px solid #334155;">
+          <div class="d-flex gap-2">
+            <div style="width: 10px; height: 10px; border-radius: 50%; background: #ef4444;"></div>
+            <div style="width: 10px; height: 10px; border-radius: 50%; background: #f59e0b;"></div>
+            <div style="width: 10px; height: 10px; border-radius: 50%; background: #22c55e;"></div>
+          </div>
+          <span class="text-secondary small fw-bold text-uppercase">Inbound Result</span>
+          <span style="opacity: 0;">...</span>
+        </div>
+        
+        <!-- Terminal Body -->
+        <div class="p-4 flex-grow-1 font-monospace" style="color: #cbd5e1; font-size: 0.9rem;">
+          <div class="mb-3">
+            <span style="color: #22c55e;">GET</span> <span style="color: #fff;">api.niyulabs.com/result/{job_id}</span>
+          </div>
+          <div class="mb-3 p-3 rounded" style="background: #0f172a; border-left: 3px solid #22c55e;">
+            <div class="mb-1" style="color: #94a3b8;">// Response (Status: Done)</div>
+            <div>
+              {<br>
+              &nbsp;&nbsp;<span style="color: #93c5fd;">"status"</span>: <span style="color: #86efac;">"done"</span>,<br>
+              &nbsp;&nbsp;<span style="color: #93c5fd;">"data"</span>: [<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;{ <span style="color: #93c5fd;">"product_id"</span>: 12, <span style="color: #93c5fd;">"forecast_qty"</span>: 42, <span style="color: #93c5fd;">"chart_data"</span>: "{...}" }<br>
+              &nbsp;&nbsp;]<br>
+              }
+            </div>
+          </div>
+          <p class="small text-secondary m-0">
+            <span class="me-2">&#8595;</span> Receiving prediction, charts, and status.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
 
     <!-- ========== KEY CONCEPTS ========== -->
     <section class="mb-5">
