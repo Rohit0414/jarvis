@@ -2272,17 +2272,111 @@
 
    
   <!-- ========== FOOTER ========== -->
-  <div
-    style="
-      margin-top: 1.35rem;
-      padding: 1.7rem 0 0.3rem;
-      border-top: 1px solid rgba(226, 232, 240, 0.95);
-      text-align: center;
-    "
-  >
-    <p style="margin: 0; font-size: 0.98rem; color: #475569;">
-      Inventory Forecast — a major project by <strong style="color: #6366f1;">Niyu Labs</strong>
-    </p>
-    <p style="margin: 0.5rem 0 0; font-size: 0.86rem; color: #94a3b8;">niyulabs.com</p>
+  <div style="margin-top: 3rem; padding: 3rem 2rem; background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%); border-top: 2px solid #e0e7ff; position: relative; overflow: hidden;">
+    
+    <!-- Decorative Background Elements -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(#6366f1 0.5px, transparent 0.5px); background-size: 20px 20px; opacity: 0.03; pointer-events: none;"></div>
+    
+    <div class="container position-relative z-1">
+      
+      <!-- Main Footer Content -->
+      <div class="row align-items-center mb-4 pb-4 border-bottom border-primary border-opacity-10">
+        
+        <!-- Left: Branding -->
+        <div class="col-lg-5 mb-4 mb-lg-0">
+          <div class="d-flex align-items-center mb-3">
+            <div class="d-flex align-items-center justify-content-center me-3 shadow-sm" 
+                 style="width: 52px; height: 52px; background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); color: white; border-radius: 14px; font-size: 1.5rem; border: 2px solid white;">
+              &#128640;
+            </div>
+            <div>
+              <h5 class="fw-bold text-dark mb-0" style="letter-spacing: -0.5px;">Inventory Forecast</h5>
+              <small class="text-muted">Powered by Niyu Labs</small>
+            </div>
+          </div>
+          <p class="text-muted small mb-0" style="max-width: 350px; line-height: 1.6;">
+            AI-powered demand forecasting and smart reordering for Odoo. Make data-driven inventory decisions with confidence.
+          </p>
+        </div>
+
+        <!-- Center: Quick Links -->
+        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+          <h6 class="fw-bold text-dark text-uppercase small mb-3" style="letter-spacing: 0.5px;">Quick Links</h6>
+          <ul class="list-unstyled d-flex flex-column gap-2">
+            <li><a href="#" class="text-primary text-decoration-none small fw-500 hover-underline">Documentation</a></li>
+            <li><a href="#" class="text-primary text-decoration-none small fw-500 hover-underline">Support</a></li>
+            <li><a href="#" class="text-primary text-decoration-none small fw-500 hover-underline">License</a></li>
+          </ul>
+        </div>
+
+        <!-- Right: Social/CTA -->
+        <div class="col-lg-4 col-md-6">
+          <h6 class="fw-bold text-dark text-uppercase small mb-3" style="letter-spacing: 0.5px;">Connect</h6>
+          <div class="d-flex gap-2 mb-3">
+            <a href="https://niyulabs.com" target="_blank" rel="noopener" 
+               class="d-inline-flex align-items-center justify-content-center rounded-2 shadow-sm transition" 
+               style="width: 40px; height: 40px; background: white; border: 1px solid #e2e8f0; color: #6366f1; text-decoration: none; transition: all 0.2s ease;"
+               onmouseover="this.style.background='#6366f1'; this.style.color='white'; this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 20px -5px rgba(99, 102, 241, 0.2)';"
+               onmouseout="this.style.background='white'; this.style.color='#6366f1'; this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.02)';"
+               title="Visit Niyu Labs">
+              &#128729;
+            </a>
+            <a href="https://github.com" target="_blank" rel="noopener" 
+               class="d-inline-flex align-items-center justify-content-center rounded-2 shadow-sm transition" 
+               style="width: 40px; height: 40px; background: white; border: 1px solid #e2e8f0; color: #1e293b; text-decoration: none; transition: all 0.2s ease;"
+               onmouseover="this.style.background='#1e293b'; this.style.color='white'; this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 20px -5px rgba(30, 41, 59, 0.2)';"
+               onmouseout="this.style.background='white'; this.style.color='#1e293b'; this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.02)';"
+               title="GitHub">
+              &#128187;
+            </a>
+          </div>
+          <p class="text-muted small mb-0">
+            <strong class="text-dark">Ready to optimize?</strong><br>
+            <a href="https://niyulabs.com" class="text-primary text-decoration-none fw-bold small">Get started →</a>
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Bottom: Stats & Copyright -->
+      <div class="row align-items-center text-center text-lg-start">
+        
+        <!-- Left: Stats -->
+        <div class="col-lg-6 mb-3 mb-lg-0">
+          <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-4">
+            <div>
+              <div class="fw-bold text-primary" style="font-size: 1.25rem;">30</div>
+              <small class="text-muted">Day Forecast</small>
+            </div>
+            <div style="width: 1px; background: #cbd5e1; opacity: 0.5;"></div>
+            <div>
+              <div class="fw-bold text-primary" style="font-size: 1.25rem;">API</div>
+              <small class="text-muted">Cloud Powered</small>
+            </div>
+            <div style="width: 1px; background: #cbd5e1; opacity: 0.5;"></div>
+            <div>
+              <div class="fw-bold text-primary" style="font-size: 1.25rem;">100%</div>
+              <small class="text-muted">Odoo Native</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Copyright -->
+        <div class="col-lg-6 text-lg-end">
+          <p class="small text-muted mb-0">
+            © <span id="year">2024</span> <strong>Niyu Labs</strong>. All rights reserved. | 
+            <a href="#" class="text-muted text-decoration-none me-2">Privacy</a>
+            <a href="#" class="text-muted text-decoration-none">Terms</a>
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
   </div>
 </div>
