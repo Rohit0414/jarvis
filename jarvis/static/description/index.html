@@ -139,24 +139,163 @@
   </div>
 </section>
 
-    <!-- ========== PREREQUISITES ========== -->
-    <section class="mb-5">
-      <h2 class="h4 fw-bold text-dark mb-4 d-flex align-items-center">
-        <span class="me-2" style="color: #6366f1;">&#128221;</span> Prerequisites
-      </h2>
-      <div class="bg-white p-4 shadow-sm" style="border-radius: 1rem; border-left: 5px solid #6366f1;">
-        <p class="mb-3 text-secondary">Before using Inventory Forecast, ensure:</p>
-        <ul class="list-unstyled mb-0">
-          <li class="mb-2 d-flex align-items-start"><span class="me-2 text-success fw-bold">&#10004;</span> <span><strong>Odoo apps</strong> — Stock (Inventory), Sales, and Purchase are installed. The module depends on them.</span></li>
-          <li class="mb-2 d-flex align-items-start"><span class="me-2 text-success fw-bold">&#10004;</span> <span><strong>Sales history</strong> — You have confirmed Sales Orders (state Sale or Done) with order date in the last 2 years. Quotations and drafts are not used.</span></li>
-          <li class="mb-2 d-flex align-items-start"><span class="me-2 text-success fw-bold">&#10004;</span> <span><strong>Products</strong> — Products you want to forecast are Storable or Consumable (not Service). Set product type in Inventory &rarr; Products &rarr; product form.</span></li>
-          <li class="mb-2 d-flex align-items-start"><span class="me-2 text-success fw-bold">&#10004;</span> <span><strong>Vendors (for POs)</strong> — Products you want to reorder have at least one supplier on the Purchase tab. The first supplier is used for suggested buy and PO creation.</span></li>
-          <li class="mb-2 d-flex align-items-start"><span class="me-2 text-success fw-bold">&#10004;</span> <span><strong>License key</strong> — You have a Niyu License Key from niyulabs.com. Enter it in Inventory &rarr; Configuration &rarr; Settings &rarr; Niyu AI Configuration.</span></li>
-          <li class="mb-0 d-flex align-items-start"><span class="me-2 text-success fw-bold">&#10004;</span> <span><strong>Network</strong> — Your Odoo server can reach api.niyulabs.com over HTTPS (port 443) for sync and polling.</span></li>
-        </ul>
-      </div>
-    </section>
+   <section class="mb-5">
+  
+  <!-- Header -->
+  <div class="d-flex align-items-center mb-4">
+    <div class="d-flex align-items-center justify-content-center shadow-sm me-3" 
+         style="width: 48px; height: 48px; background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); color: #166534; border-radius: 14px; font-size: 1.25rem; border: 1px solid #bbf7d0;">
+      &#128221;
+    </div>
+    <div>
+      <h2 class="h3 fw-bold m-0" style="color: #1e293b;">Prerequisites</h2>
+      <p class="text-muted small m-0">Ensure these 6 items are ready before you start.</p>
+    </div>
+  </div>
 
+  <!-- Grid of Cards -->
+  <div class="row g-3">
+    
+    <!-- Item 1: Odoo Apps -->
+    <div class="col-md-6">
+      <div class="d-flex align-items-start p-3 h-100 bg-white" 
+           style="border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: all 0.2s ease;"
+           onmouseover="this.style.transform='translateY(-3px)'; this.style.borderColor='#6366f1'; this.style.boxShadow='0 10px 20px -5px rgba(99, 102, 241, 0.1)';"
+           onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#e2e8f0'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.02)';">
+        
+        <div class="flex-shrink-0 me-3">
+          <div class="d-flex align-items-center justify-content-center" 
+               style="width: 32px; height: 32px; background: #e0e7ff; color: #4338ca; border-radius: 50%; font-weight: bold; font-size: 0.9rem;">
+            1
+          </div>
+        </div>
+        <div>
+          <h6 class="fw-bold text-dark mb-1">Odoo Apps Installed</h6>
+          <p class="mb-0 text-muted" style="font-size: 0.9rem; line-height: 1.5;">
+            Stock (Inventory), Sales, and Purchase must be installed. The module depends on their data structures.
+          </p>
+        </div>
+        <div class="ms-auto ps-2 text-success" style="font-size: 1.2rem;">&#10004;</div>
+      </div>
+    </div>
+
+    <!-- Item 2: Sales History -->
+    <div class="col-md-6">
+      <div class="d-flex align-items-start p-3 h-100 bg-white" 
+           style="border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: all 0.2s ease;"
+           onmouseover="this.style.transform='translateY(-3px)'; this.style.borderColor='#6366f1'; this.style.boxShadow='0 10px 20px -5px rgba(99, 102, 241, 0.1)';"
+           onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#e2e8f0'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.02)';">
+        
+        <div class="flex-shrink-0 me-3">
+          <div class="d-flex align-items-center justify-content-center" 
+               style="width: 32px; height: 32px; background: #e0e7ff; color: #4338ca; border-radius: 50%; font-weight: bold; font-size: 0.9rem;">
+            2
+          </div>
+        </div>
+        <div>
+          <h6 class="fw-bold text-dark mb-1">Sales History</h6>
+          <p class="mb-0 text-muted" style="font-size: 0.9rem; line-height: 1.5;">
+            Confirmed Sales Orders (state Sale or Done) within the last 2 years. Drafts/Quotations are ignored.
+          </p>
+        </div>
+        <div class="ms-auto ps-2 text-success" style="font-size: 1.2rem;">&#10004;</div>
+      </div>
+    </div>
+
+    <!-- Item 3: Products -->
+    <div class="col-md-6">
+      <div class="d-flex align-items-start p-3 h-100 bg-white" 
+           style="border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: all 0.2s ease;"
+           onmouseover="this.style.transform='translateY(-3px)'; this.style.borderColor='#6366f1'; this.style.boxShadow='0 10px 20px -5px rgba(99, 102, 241, 0.1)';"
+           onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#e2e8f0'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.02)';">
+        
+        <div class="flex-shrink-0 me-3">
+          <div class="d-flex align-items-center justify-content-center" 
+               style="width: 32px; height: 32px; background: #e0e7ff; color: #4338ca; border-radius: 50%; font-weight: bold; font-size: 0.9rem;">
+            3
+          </div>
+        </div>
+        <div>
+          <h6 class="fw-bold text-dark mb-1">Product Configuration</h6>
+          <p class="mb-0 text-muted" style="font-size: 0.9rem; line-height: 1.5;">
+            Products must be <strong>Storable</strong> or <strong>Consumable</strong>. Service products are excluded from forecasting.
+          </p>
+        </div>
+        <div class="ms-auto ps-2 text-success" style="font-size: 1.2rem;">&#10004;</div>
+      </div>
+    </div>
+
+    <!-- Item 4: Vendors -->
+    <div class="col-md-6">
+      <div class="d-flex align-items-start p-3 h-100 bg-white" 
+           style="border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: all 0.2s ease;"
+           onmouseover="this.style.transform='translateY(-3px)'; this.style.borderColor='#6366f1'; this.style.boxShadow='0 10px 20px -5px rgba(99, 102, 241, 0.1)';"
+           onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#e2e8f0'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.02)';">
+        
+        <div class="flex-shrink-0 me-3">
+          <div class="d-flex align-items-center justify-content-center" 
+               style="width: 32px; height: 32px; background: #e0e7ff; color: #4338ca; border-radius: 50%; font-weight: bold; font-size: 0.9rem;">
+            4
+          </div>
+        </div>
+        <div>
+          <h6 class="fw-bold text-dark mb-1">Vendors for POs</h6>
+          <p class="mb-0 text-muted" style="font-size: 0.9rem; line-height: 1.5;">
+            Products must have at least one supplier in the Purchase tab. The first supplier is used for suggested buy.
+          </p>
+        </div>
+        <div class="ms-auto ps-2 text-success" style="font-size: 1.2rem;">&#10004;</div>
+      </div>
+    </div>
+
+    <!-- Item 5: License Key -->
+    <div class="col-md-6">
+      <div class="d-flex align-items-start p-3 h-100 bg-white" 
+           style="border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: all 0.2s ease;"
+           onmouseover="this.style.transform='translateY(-3px)'; this.style.borderColor='#6366f1'; this.style.boxShadow='0 10px 20px -5px rgba(99, 102, 241, 0.1)';"
+           onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#e2e8f0'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.02)';">
+        
+        <div class="flex-shrink-0 me-3">
+          <div class="d-flex align-items-center justify-content-center" 
+               style="width: 32px; height: 32px; background: #e0e7ff; color: #4338ca; border-radius: 50%; font-weight: bold; font-size: 0.9rem;">
+            5
+          </div>
+        </div>
+        <div>
+          <h6 class="fw-bold text-dark mb-1">Niyu License Key</h6>
+          <p class="mb-0 text-muted" style="font-size: 0.9rem; line-height: 1.5;">
+            Active key from niyulabs.com entered in Inventory &rarr; Configuration &rarr; Settings.
+          </p>
+        </div>
+        <div class="ms-auto ps-2 text-success" style="font-size: 1.2rem;">&#10004;</div>
+      </div>
+    </div>
+
+    <!-- Item 6: Network -->
+    <div class="col-md-6">
+      <div class="d-flex align-items-start p-3 h-100 bg-white" 
+           style="border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: all 0.2s ease;"
+           onmouseover="this.style.transform='translateY(-3px)'; this.style.borderColor='#6366f1'; this.style.boxShadow='0 10px 20px -5px rgba(99, 102, 241, 0.1)';"
+           onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#e2e8f0'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.02)';">
+        
+        <div class="flex-shrink-0 me-3">
+          <div class="d-flex align-items-center justify-content-center" 
+               style="width: 32px; height: 32px; background: #e0e7ff; color: #4338ca; border-radius: 50%; font-weight: bold; font-size: 0.9rem;">
+            6
+          </div>
+        </div>
+        <div>
+          <h6 class="fw-bold text-dark mb-1">Network Access</h6>
+          <p class="mb-0 text-muted" style="font-size: 0.9rem; line-height: 1.5;">
+            Odoo server must be able to reach <strong>api.niyulabs.com</strong> over HTTPS (port 443).
+          </p>
+        </div>
+        <div class="ms-auto ps-2 text-success" style="font-size: 1.2rem;">&#10004;</div>
+      </div>
+    </div>
+
+  </div>
+</section>
     <!-- ========== OVERVIEW ========== -->
     <section class="mb-5 position-relative" style="padding: 4rem 2rem; background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.05) 0%, transparent 70%); border-radius: 2rem;">
   
