@@ -169,101 +169,180 @@
     </div>
   </section>
 
-  <!-- PRICING TABLE -->
-  <section style="padding: 120px 0; background-color: #ffffff;">
-    <div class="container">
-      <div class="text-center mb-5">
-        <h2 style="font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight:900; color: #1f2937;">Transparent <span style="color:#0ea5e9;">Pricing</span></h2>
-        <p style="font-size:1.25rem; color:#4b5563;">Download for free. Scale when you're ready.</p>
-      </div>
+ <!-- =================================================================== -->
+<!-- START: REIMAGINED PRICING SECTION -->
+<!-- =================================================================== -->
+<section style="padding: 120px 0; background-color: #ffffff; position: relative; overflow: hidden;">
+    <!-- Subtle Background Glow -->
+    <div style="position: absolute; top: 20%; left: 50%; transform: translateX(-50%); width: 600px; height: 600px; background: radial-gradient(circle, rgba(14, 165, 233, 0.05) 0%, transparent 70%); z-index: 0;"></div>
 
-      <div style="background:#ffffff; border-radius:28px; overflow:hidden; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.15); border:1px solid #e5e7eb;">
-        <table style="width:100%; border-collapse:collapse; text-align:left;">
-          <thead>
-            <tr style="background:#f9fafb; border-bottom:2px solid #e5e7eb;">
-              <th style="padding:30px; font-weight:800; font-size:1.2rem; color: #1f2937;">CAPABILITY</th>
-              <th style="padding:30px; font-weight:800; font-size:1.2rem; color:#0ea5e9;">FREE FOREVER</th>
-              <th style="padding:30px; font-weight:800; font-size:1.2rem; color:#10b981; background: rgba(16, 185, 129, 0.05);">PRO &#128081;</th>
-              <th style="padding:30px; font-weight:800; font-size:1.2rem; color: #1f2937;">ENTERPRISE</th>
-            </tr>
-          </thead>
-          <tbody style="font-size:1.15rem; color: #4b5563;">
-            <tr style="border-bottom:1px solid #f3f4f6;">
-              <td style="padding:25px; font-weight:700; color: #1f2937;">Product Limit</td>
-              <td style="padding:25px;">Top 20 SKUs</td>
-              <td style="padding:25px; font-weight:800; color: #1f2937; background: rgba(16, 185, 129, 0.05);">10,000 SKUs</td>
-              <td style="padding:25px;">Unlimited</td>
-            </tr>
-            <tr style="border-bottom:1px solid #f3f4f6;">
-              <td style="padding:25px; font-weight:700; color: #1f2937;">Forecasting Engine</td>
-              <td style="padding:25px;">Standard</td>
-              <td style="padding:25px; font-weight:800; color: #10b981; background: rgba(16, 185, 129, 0.05);">Advanced AutoARIMA</td>
-              <td style="padding:25px;">Custom Models</td>
-            </tr>
-            <tr style="border-bottom:1px solid #f3f4f6;">
-              <td style="padding:25px; font-weight:700; color: #1f2937;">Sync Speed</td>
-              <td style="padding:25px;">Weekly</td>
-              <td style="padding:25px; font-weight:800; color: #1f2937; background: rgba(16, 185, 129, 0.05);">Daily Updates</td>
-              <td style="padding:25px;">Real-time / Hourly</td>
-            </tr>
-            <tr style="background:#f9fafb;">
-              <td style="padding:35px 25px; font-weight:900; font-size: 1.3rem; color: #1f2937;">MONTHLY COST</td>
-              <td style="padding:35px 25px; font-weight:900; font-size: 1.5rem; color: #0ea5e9;">$0</td>
-              <td style="padding:35px 25px; font-weight:900; font-size: 2rem; color: #10b981; background: rgba(16, 185, 129, 0.05);">$49</td>
-              <td style="padding:35px 25px; font-weight:900; font-size: 1.3rem;">Contact Us</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECURITY & COMPLIANCE -->
-  <section style="padding: 100px 0; background-color: #ffffff;">
-    <div class="container">
-      <div style="background: #0f172a; border-radius: 2.5rem; padding: 70px; color: white; position: relative; overflow: hidden; box-shadow: 0 50px 100px -20px rgba(15, 23, 42, 0.4);">
-        <!-- Radial Glow -->
-        <div style="position: absolute; top: -50%; right: -20%; width: 600px; height: 600px; background: rgba(14, 165, 233, 0.15); filter: blur(120px); border-radius: 50%;"></div>
-        
-        <div class="row align-items-center g-5">
-          <div class="col-md-7">
-            <span style="color:#0ea5e9; font-weight:800; letter-spacing:1px; font-size:14px; display:block; margin-bottom:15px;">TRUST & PRIVACY</span>
-            <h2 style="font-size: 2.8rem; font-weight: 900; margin-bottom: 30px;">Your Data <span style="color:#0ea5e9;">Stays Yours.</span></h2>
-            <ul style="font-size: 1.2rem; list-style: none; padding: 0;">
-              <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
-                <span style="margin-right:15px;">&#128737;</span> 
-                <div><strong>Zero Data Retention:</strong> We process your sales history in-memory and discard it instantly after the forecast is generated.</div>
-              </li>
-              <li style="margin-bottom: 20px; display: flex; align-items: flex-start;">
-                <span style="margin-right:15px;">&#128274;</span> 
-                <div><strong>Military-Grade Encryption:</strong> All data transfer is GZIP compressed and SSL encrypted via HTTPS.</div>
-              </li>
-              <li style="display: flex; align-items: flex-start;">
-                <span style="margin-right:15px;">&#128269;</span> 
-                <div><strong>Read-Only Access:</strong> Our engine only reads historical sales volume. We never delete or modify your Odoo records.</div>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-5 text-center">
-             <div style="font-size: 12rem; opacity: 0.2;">&#128274;</div>
-          </div>
+    <div class="container" style="position: relative; z-index: 1;">
+        <div class="text-center mb-5">
+            <span style="display:inline-block; font-size:14px; font-weight:800; color:#0ea5e9; background-color:#e0f2fe; border:1px solid #bae6fd; border-radius:999px; padding:8px 16px; margin-bottom:16px;">PRICING PLANS</span>
+            <h2 style="font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight:900; color: #1f2937; margin-bottom: 20px;">Transparent <span style="color:#0ea5e9;">Value</span>, No Surprises.</h2>
+            <p style="font-size:1.25rem; color:#4b5563; max-width: 600px; margin: 0 auto;">Download for free to audit your stock. Upgrade to automate your growth.</p>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- FINAL CTA -->
-  <section style="padding: 120px 20px; text-align: center; background-color: #ffffff;">
-    <div style="max-width: 1000px; margin: 0 auto; background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 100%); padding: 100px 40px; border-radius: 3.5rem; color: white; box-shadow: 0 40px 120px -20px rgba(14, 165, 233, 0.6);">
-      <h2 style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; margin-bottom: 20px; letter-spacing: -0.02em;">Ready to Automate Your Purchasing?</h2>
-      <p style="font-size: 1.5rem; margin-bottom: 60px; font-weight: 500; opacity: 0.95;">Download the module today and run your first AI Inventory Health Audit for free.</p>
-      
-      <a href="https://apps.odoo.com/apps/modules/browse?search=Niyu+Labs" target="_blank" style="display: inline-block; background-color: #ffffff; color: #0ea5e9; padding: 22px 60px; font-size: 1.5rem; font-weight: 900; text-decoration: none; border-radius: 99px; transition: transform 0.3s ease, box-shadow 0.3s ease; box-shadow: 0 20px 40px rgba(0,0,0,0.2);" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 30px 60px rgba(0,0,0,0.3)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.2)';">
-        &#128230; Download Niyu AI Smart Stock &#8594;
-      </a>
-      
-      <div style="margin-top: 50px; font-weight: 800; letter-spacing: 4px; opacity: 0.6; font-size: 1rem;">NIYU LABS</div>
+        <div class="row g-4 justify-content-center">
+            <!-- Free Tier -->
+            <div class="col-12 col-lg-4">
+                <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 2rem; padding: 40px; height: 100%; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <h3 style="font-size: 1.5rem; font-weight: 800; color: #1f2937; margin-bottom: 10px;">Free Forever</h3>
+                    <div style="margin-bottom: 25px;">
+                        <span style="font-size: 2.5rem; font-weight: 900; color: #1f2937;">$0</span>
+                        <span style="color: #6b7280;">/month</span>
+                    </div>
+                    <ul style="list-style: none; padding: 0; margin: 0 0 30px 0; color: #4b5563; font-size: 1.1rem; line-height: 2;">
+                        <li>&#9989; Top 20 SKUs Analysis</li>
+                        <li>&#9989; Standard AI Forecasting</li>
+                        <li>&#9989; Weekly Data Sync</li>
+                        <li>&#9989; Email Support</li>
+                    </ul>
+                    <a href="#" style="display: block; text-align: center; padding: 15px; border: 2px solid #e5e7eb; border-radius: 99px; color: #1f2937; text-decoration: none; font-weight: 800; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#0ea5e9'; this.style.color='#0ea5e9';">Download Now</a>
+                </div>
+            </div>
+
+            <!-- Pro Tier (Highlighted) -->
+            <div class="col-12 col-lg-4">
+                <div style="background: #ffffff; border: 3px solid #0ea5e9; border-radius: 2rem; padding: 40px; height: 100%; position: relative; box-shadow: 0 30px 60px -15px rgba(14, 165, 233, 0.3); transform: scale(1.05); z-index: 2;">
+                    <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #0ea5e9; color: white; padding: 5px 20px; border-radius: 99px; font-size: 0.9rem; font-weight: 800; letter-spacing: 1px;">MOST POPULAR</div>
+                    <h3 style="font-size: 1.5rem; font-weight: 800; color: #1f2937; margin-bottom: 10px;">Pro Plan &#128081;</h3>
+                    <div style="margin-bottom: 25px;">
+                        <span style="font-size: 3rem; font-weight: 900; color: #1f2937;">$49</span>
+                        <span style="color: #6b7280;">/month</span>
+                    </div>
+                    <ul style="list-style: none; padding: 0; margin: 0 0 30px 0; color: #4b5563; font-size: 1.1rem; line-height: 2;">
+                        <li>&#9989; <strong>10,000 SKUs</strong> Capacity</li>
+                        <li>&#9989; <strong>Advanced AutoARIMA</strong> AI</li>
+                        <li>&#9989; <strong>Daily</strong> Automated Sync</li>
+                        <li>&#9989; Priority PO Generation</li>
+                        <li>&#9989; Priority Support</li>
+                    </ul>
+                    <a href="#" style="display: block; text-align: center; padding: 15px; background: #0ea5e9; color: white; border-radius: 99px; text-decoration: none; font-weight: 800; box-shadow: 0 10px 20px rgba(14, 165, 233, 0.3); transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">Get 30 Days Free Trial</a>
+                </div>
+            </div>
+
+            <!-- Enterprise Tier -->
+            <div class="col-12 col-lg-4">
+                <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 2rem; padding: 40px; height: 100%; transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                    <h3 style="font-size: 1.5rem; font-weight: 800; color: #1f2937; margin-bottom: 10px;">Enterprise</h3>
+                    <div style="margin-bottom: 25px;">
+                        <span style="font-size: 2rem; font-weight: 900; color: #1f2937;">Custom</span>
+                    </div>
+                    <ul style="list-style: none; padding: 0; margin: 0 0 30px 0; color: #4b5563; font-size: 1.1rem; line-height: 2;">
+                        <li>&#9989; <strong>Unlimited</strong> SKUs</li>
+                        <li>&#9989; Custom ML Model Training</li>
+                        <li>&#9989; <strong>Hourly</strong> Real-time Sync</li>
+                        <li>&#9989; Dedicated Account Manager</li>
+                        <li>&#9989; Multi-Warehouse Logic</li>
+                    </ul>
+                    <a href="#" style="display: block; text-align: center; padding: 15px; border: 2px solid #e5e7eb; border-radius: 99px; color: #1f2937; text-decoration: none; font-weight: 800; transition: all 0.3s ease;" onmouseover="this.style.borderColor='#1f2937';">Contact Sales</a>
+                </div>
+            </div>
+        </div>
     </div>
-  </section>
+</section>
+
+<!-- =================================================================== -->
+<!-- START: MODERN SECURITY GRID -->
+<!-- =================================================================== -->
+<section style="padding: 100px 0; background-color: #ffffff;">
+    <div class="container">
+        <div style="background: #0f172a; border-radius: 3rem; padding: 80px 40px; color: white; position: relative; overflow: hidden; box-shadow: 0 50px 100px -20px rgba(15, 23, 42, 0.4);">
+            <!-- Background Mesh Gradients -->
+            <div style="position: absolute; top: -10%; right: -10%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(14, 165, 233, 0.2) 0%, transparent 70%);"></div>
+            <div style="position: absolute; bottom: -10%; left: -10%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);"></div>
+
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <span style="color:#0ea5e9; font-weight:800; letter-spacing:2px; font-size:14px; display:block; margin-bottom:15px;">DATA INTEGRITY</span>
+                    <h2 style="font-size: clamp(2.2rem, 4vw, 3rem); font-weight: 900; margin-bottom: 40px; line-height: 1.2;">Your Business Intelligence,<br><span style="color:#0ea5e9;">Strictly Private.</span></h2>
+                    
+                    <div class="row g-4">
+                        <!-- Privacy Item 1 -->
+                        <div class="col-12">
+                            <div style="display: flex; gap: 20px; background: rgba(255,255,255,0.03); padding: 25px; border-radius: 1.5rem; border: 1px solid rgba(255,255,255,0.05);">
+                                <div style="font-size: 32px;">&#128737;</div>
+                                <div>
+                                    <h4 style="font-weight: 800; font-size: 1.25rem; margin-bottom: 5px;">Zero Data Retention</h4>
+                                    <p style="color: #94a3b8; margin: 0; font-size: 1rem;">Sales history is processed in volatile memory and purged instantly after forecasting.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Privacy Item 2 -->
+                        <div class="col-12">
+                            <div style="display: flex; gap: 20px; background: rgba(255,255,255,0.03); padding: 25px; border-radius: 1.5rem; border: 1px solid rgba(255,255,255,0.05);">
+                                <div style="font-size: 32px;">&#128274;</div>
+                                <div>
+                                    <h4 style="font-weight: 800; font-size: 1.25rem; margin-bottom: 5px;">SSL-Layered Transit</h4>
+                                    <p style="color: #94a3b8; margin: 0; font-size: 1rem;">Military-grade HTTPS encryption ensures your data is never exposed during sync.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Privacy Item 3 -->
+                        <div class="col-12">
+                            <div style="display: flex; gap: 20px; background: rgba(255,255,255,0.03); padding: 25px; border-radius: 1.5rem; border: 1px solid rgba(255,255,255,0.05);">
+                                <div style="font-size: 32px;">&#128269;</div>
+                                <div>
+                                    <h4 style="font-weight: 800; font-size: 1.25rem; margin-bottom: 5px;">Immutable Odoo Records</h4>
+                                    <p style="color: #94a3b8; margin: 0; font-size: 1rem;">The engine is read-only. It provides insights without ever modifying your existing records.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center d-none d-lg-block">
+                    <!-- Modern Visual Shield -->
+                    <div style="position: relative; display: inline-block;">
+                        <div style="font-size: 15rem; color: #0ea5e9; filter: drop-shadow(0 0 30px rgba(14, 165, 233, 0.4)); opacity: 0.8;">&#128274;</div>
+                        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 200px; height: 200px; border: 2px dashed rgba(14, 165, 233, 0.3); border-radius: 50%; animation: spin 20s linear infinite;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- =================================================================== -->
+<!-- START: HIGH-IMPACT FINAL CTA -->
+<!-- =================================================================== -->
+<section style="padding: 120px 20px; background-color: #ffffff;">
+    <div style="max-width: 1100px; margin: 0 auto; position: relative;">
+        <!-- Mesh Gradient Card -->
+        <div style="background: linear-gradient(135deg, #0ea5e9 0%, #6366f1 50%, #a855f7 100%); padding: 100px 40px; border-radius: 4rem; color: white; text-align: center; box-shadow: 0 40px 120px -20px rgba(99, 102, 241, 0.5); overflow: hidden;">
+            
+            <!-- Abstract Shapes for "Amazing" feel -->
+            <div style="position: absolute; top: -10%; left: -5%; width: 300px; height: 300px; background: rgba(255,255,255,0.1); border-radius: 50%; filter: blur(60px);"></div>
+            <div style="position: absolute; bottom: -10%; right: -5%; width: 300px; height: 300px; background: rgba(0,0,0,0.1); border-radius: 50%; filter: blur(60px);"></div>
+
+            <div style="position: relative; z-index: 1;">
+                <h2 style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; margin-bottom: 25px; letter-spacing: -0.03em; line-height: 1.1;">Stop Guessing. <br><span style="color: #f0f9ff;">Start Forecasting.</span></h2>
+                <p style="font-size: 1.4rem; margin-bottom: 60px; font-weight: 500; max-width: 700px; margin-left: auto; margin-right: auto; opacity: 0.95; line-height: 1.6;">Join forward-thinking Odoo users who have eliminated stockouts and optimized their working capital with Niyu AI.</p>
+                
+                <div class="d-flex flex-column flex-md-row gap-3 justify-content-center align-items-center">
+                    <a href="https://apps.odoo.com/apps/modules/browse?search=Niyu+Labs" target="_blank" style="display: inline-block; background-color: #ffffff; color: #0ea5e9; padding: 22px 50px; font-size: 1.4rem; font-weight: 900; text-decoration: none; border-radius: 99px; transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); box-shadow: 0 20px 40px rgba(0,0,0,0.15);" onmouseover="this.style.transform='scale(1.05) translateY(-5px)'; this.style.boxShadow='0 30px 60px rgba(0,0,0,0.2)';" onmouseout="this.style.transform='scale(1) translateY(0)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.15)';" >
+                        &#128230; Download Niyu AI Smart Stock
+                    </a>
+                </div>
+                
+                <div style="margin-top: 60px; display: flex; justify-content: center; gap: 40px; opacity: 0.8; font-weight: 700; font-size: 0.9rem; letter-spacing: 2px;">
+                    <span style="display: flex; align-items: center; gap: 8px;">&#10004; ODOO 14-19+</span>
+                    <span style="display: flex; align-items: center; gap: 8px;">&#10004; NO CREDIT CARD</span>
+                    <span style="display: flex; align-items: center; gap: 8px;">&#10004; EASY SETUP</span>
+                </div>
+            </div>
+        </div>
+        
+        <div style="margin-top: 40px; text-align: center; font-weight: 800; letter-spacing: 5px; color: #cbd5e1; font-size: 1.1rem;">NIYU LABS</div>
+    </div>
+</section>
+
+<!-- CSS Animation for the Security Spinning Border -->
+<style>
+@keyframes spin {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+</style>
 
 </section>
