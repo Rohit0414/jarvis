@@ -1,10 +1,10 @@
 <!-- WRAPPER: Centers content and sets the font stack -->
-<div style="font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #334155; line-height: 1.6; max-width: 1100px; margin: 0 auto; background-color: #f8fafc;">
+<div style="font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #334155; line-height: 1.6; max-width: 1100px; margin: 0 auto; background-color: #ffffff;">
 
   <!-- =========================================================
-       HERO SECTION: Dark Gradient for High Impact
+       HERO SECTION: Dark Gradient
        ========================================================= -->
-  <header style="background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); padding: 4rem 2rem 5rem; color: #ffffff; text-align: center; border-radius: 0 0 40px 40px; margin-bottom: 3rem;">
+  <header style="background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); padding: 4rem 2rem 5rem; color: #ffffff; text-align: center; border-radius: 0 0 40px 40px; margin-bottom: 4rem;">
     
     <!-- The "Badge" -->
     <div style="display: inline-block; background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); padding: 0.5rem 1.2rem; border-radius: 50px; font-weight: 600; font-size: 0.9rem; margin-bottom: 1.5rem; backdrop-filter: blur(5px);">
@@ -36,8 +36,8 @@
       </div>
     </div>
 
-    <!-- The Hero Image (Floating Effect) -->
-    <div style="max-width: 900px; margin: 0 auto; border-radius: 16px; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); border: 1px solid rgba(255, 255, 255, 0.1);">
+    <!-- The Hero Image (Full Width Container) -->
+    <div style="max-width: 100%; margin: 0 auto; border-radius: 12px; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); border: 4px solid rgba(255, 255, 255, 0.1);">
       <img src="niyu_hero_dashboard.png" alt="Niyu AI Command Center" style="width: 100%; height: auto; display: block;">
     </div>
     <p style="margin-top: 1rem; font-size: 0.9rem; color: #94a3b8; font-style: italic;">
@@ -47,102 +47,110 @@
   </header>
 
   <!-- =========================================================
-       THE PROBLEM: 3-Column Cards
+       THE PROBLEM: Cards
        ========================================================= -->
-  <section style="padding: 2rem 2rem 4rem; max-width: 1000px; margin: 0 auto;">
+  <section style="padding: 0 2rem 4rem; max-width: 1000px; margin: 0 auto;">
     <h2 style="text-align: center; font-size: 2rem; font-weight: 800; color: #0f172a; margin-bottom: 2.5rem;">
       Is your inventory costing you money?
     </h2>
     
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
-      
       <!-- Card 1 -->
-      <div style="background: #ffffff; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); border: 1px solid #e2e8f0;">
+      <div style="background: #f8fafc; padding: 2rem; border-radius: 16px; border: 1px solid #e2e8f0;">
         <div style="font-size: 2rem; margin-bottom: 1rem;">&#128110;</div>
         <h3 style="margin: 0 0 0.5rem; font-size: 1.2rem; font-weight: 700; color: #0f172a;">The Static Rule Trap</h3>
         <p style="margin: 0; color: #64748b; font-size: 0.95rem;">
-          Odoo's default reordering rules are dumb. They don't know Christmas is coming or that you went viral on TikTok. They reorder too late.
+          Odoo's default reordering rules are dumb. They don't know Christmas is coming or that you went viral on TikTok.
         </p>
       </div>
-
       <!-- Card 2 -->
-      <div style="background: #ffffff; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); border: 1px solid #e2e8f0;">
+      <div style="background: #f8fafc; padding: 2rem; border-radius: 16px; border: 1px solid #e2e8f0;">
         <div style="font-size: 2rem; margin-bottom: 1rem;">&#128201;</div>
         <h3 style="margin: 0 0 0.5rem; font-size: 1.2rem; font-weight: 700; color: #0f172a;">Stockouts = Lost Customers</h3>
         <p style="margin: 0; color: #64748b; font-size: 0.95rem;">
           When you run out of stock, you don't just lose a sale—you hand your customer directly to your competitor.
         </p>
       </div>
-
       <!-- Card 3 -->
-      <div style="background: #ffffff; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); border: 1px solid #e2e8f0;">
+      <div style="background: #f8fafc; padding: 2rem; border-radius: 16px; border: 1px solid #e2e8f0;">
         <div style="font-size: 2rem; margin-bottom: 1rem;">&#128168;</div>
         <h3 style="margin: 0 0 0.5rem; font-size: 1.2rem; font-weight: 700; color: #0f172a;">Panic Buying</h3>
         <p style="margin: 0; color: #64748b; font-size: 0.95rem;">
           Stop paying for expedited shipping because you forgot to order. Niyu predicts demand 30 days in advance.
         </p>
       </div>
-
     </div>
   </section>
 
   <!-- =========================================================
-       FEATURE DEEP DIVES (Zig Zag Layout Concept)
+       FEATURE 1: FULL WIDTH IMAGE
        ========================================================= -->
-  
-  <!-- Feature 1 -->
-  <section style="background: #ffffff; padding: 4rem 2rem; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
-    <div style="max-width: 1000px; margin: 0 auto;">
+  <section style="background: #ffffff; padding: 4rem 2rem; border-top: 1px solid #e2e8f0;">
+    <div style="max-width: 800px; margin: 0 auto 2.5rem; text-align: center;">
       <div style="display: inline-block; background: #fee2e2; color: #991b1b; padding: 0.3rem 0.8rem; border-radius: 6px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; letter-spacing: 0.05em;">Priority #1</div>
-      <h3 style="font-size: 2rem; font-weight: 800; color: #0f172a; margin: 0 0 1rem;">Smart Prioritization</h3>
-      <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem; max-width: 800px;">
+      <h3 style="font-size: 2.2rem; font-weight: 800; color: #0f172a; margin: 0 0 1rem;">Smart Prioritization</h3>
+      <p style="font-size: 1.15rem; color: #475569;">
         Niyu classifies your inventory health instantly. Look for the <span style="background:#fecaca; color:#991b1b; padding:2px 6px; border-radius:4px; font-weight:700;">Critical (&lt; 7 Days)</span> badges. We filter the noise so you only spend capital where it's needed.
       </p>
-      <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); border: 1px solid #e2e8f0;">
-        <img src="niyu_stock_priorities.png" alt="Smart Stock List View with Status Badges" style="width: 100%; height: auto; display: block;">
-      </div>
+    </div>
+    
+    <!-- FULL SIZE IMAGE CONTAINER -->
+    <div style="width: 100%; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.1); border: 1px solid #e2e8f0;">
+      <img src="niyu_stock_priorities.png" alt="Smart Stock List View with Status Badges" style="width: 100%; height: auto; display: block;">
     </div>
   </section>
 
-  <!-- Feature 2 -->
-  <section style="background: #f8fafc; padding: 4rem 2rem; border-bottom: 1px solid #e2e8f0;">
-    <div style="max-width: 1000px; margin: 0 auto;">
+  <!-- =========================================================
+       FEATURE 2: FULL WIDTH IMAGE
+       ========================================================= -->
+  <section style="background: #f8fafc; padding: 4rem 2rem; border-top: 1px solid #e2e8f0;">
+    <div style="max-width: 800px; margin: 0 auto 2.5rem; text-align: center;">
       <div style="display: inline-block; background: #dbeafe; color: #1e40af; padding: 0.3rem 0.8rem; border-radius: 6px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; letter-spacing: 0.05em;">Analysis</div>
-      <h3 style="font-size: 2rem; font-weight: 800; color: #0f172a; margin: 0 0 1rem;">Data Transparency</h3>
-      <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem; max-width: 800px;">
+      <h3 style="font-size: 2.2rem; font-weight: 800; color: #0f172a; margin: 0 0 1rem;">Data Transparency</h3>
+      <p style="font-size: 1.15rem; color: #475569;">
         We show you the math. Compare your <strong>Current Qty</strong> against the <strong>AI Demand (30d)</strong> prediction side-by-side. Niyu calculates the exact "Suggested Buy" amount.
       </p>
-      <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); border: 1px solid #e2e8f0;">
-        <img src="niyu_stock_analysis.png" alt="Smart Stock List View with AI Calculations" style="width: 100%; height: auto; display: block;">
-      </div>
+    </div>
+
+    <!-- FULL SIZE IMAGE CONTAINER -->
+    <div style="width: 100%; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.1); border: 1px solid #e2e8f0;">
+      <img src="niyu_stock_analysis.png" alt="Smart Stock List View with AI Calculations" style="width: 100%; height: auto; display: block;">
     </div>
   </section>
 
-  <!-- Feature 3 -->
-  <section style="background: #ffffff; padding: 4rem 2rem; border-bottom: 1px solid #e2e8f0;">
-    <div style="max-width: 1000px; margin: 0 auto;">
+  <!-- =========================================================
+       FEATURE 3: FULL WIDTH IMAGE
+       ========================================================= -->
+  <section style="background: #ffffff; padding: 4rem 2rem; border-top: 1px solid #e2e8f0;">
+    <div style="max-width: 800px; margin: 0 auto 2.5rem; text-align: center;">
       <div style="display: inline-block; background: #f3e8ff; color: #6b21a8; padding: 0.3rem 0.8rem; border-radius: 6px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; letter-spacing: 0.05em;">Forecasting</div>
-      <h3 style="font-size: 2rem; font-weight: 800; color: #0f172a; margin: 0 0 1rem;">Visual Confidence (The "Why")</h3>
-      <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem; max-width: 800px;">
-        Don't trust a black box? Neither do we. Every product gets a 30-day forecast chart directly in the form view.
+      <h3 style="font-size: 2.2rem; font-weight: 800; color: #0f172a; margin: 0 0 1rem;">Visual Confidence (The "Why")</h3>
+      <p style="font-size: 1.15rem; color: #475569;">
+        Don't trust a black box? Neither do we. Every product gets a 30-day forecast chart directly in the form view so you can see the trend.
       </p>
-      <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); border: 1px solid #e2e8f0;">
-        <img src="niyu_forecast_graph.png" alt="Product Demand Forecast Chart" style="width: 100%; height: auto; display: block;">
-      </div>
+    </div>
+
+    <!-- FULL SIZE IMAGE CONTAINER -->
+    <div style="width: 100%; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.1); border: 1px solid #e2e8f0;">
+      <img src="niyu_forecast_graph.png" alt="Product Demand Forecast Chart" style="width: 100%; height: auto; display: block;">
     </div>
   </section>
 
-  <!-- Feature 4 -->
-  <section style="background: #f8fafc; padding: 4rem 2rem; border-bottom: 1px solid #e2e8f0;">
-    <div style="max-width: 1000px; margin: 0 auto;">
+  <!-- =========================================================
+       FEATURE 4: FULL WIDTH IMAGE
+       ========================================================= -->
+  <section style="background: #f8fafc; padding: 4rem 2rem; border-top: 1px solid #e2e8f0;">
+    <div style="max-width: 800px; margin: 0 auto 2.5rem; text-align: center;">
       <div style="display: inline-block; background: #ecfccb; color: #3f6212; padding: 0.3rem 0.8rem; border-radius: 6px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; letter-spacing: 0.05em;">Automation</div>
-      <h3 style="font-size: 2rem; font-weight: 800; color: #0f172a; margin: 0 0 1rem;">One-Click RFQ Generation</h3>
-      <p style="font-size: 1.1rem; color: #475569; margin-bottom: 2rem; max-width: 800px;">
+      <h3 style="font-size: 2.2rem; font-weight: 800; color: #0f172a; margin: 0 0 1rem;">One-Click RFQ Generation</h3>
+      <p style="font-size: 1.15rem; color: #475569;">
         Select your critical items, click "Generate RFQs," and Niyu automatically groups them by Vendor and creates draft Purchase Orders.
       </p>
-      <div style="border-radius: 12px; overflow: hidden; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); border: 1px solid #e2e8f0;">
-        <img src="niyu_rfq_result.png" alt="Generated RFQs List" style="width: 100%; height: auto; display: block;">
-      </div>
+    </div>
+
+    <!-- FULL SIZE IMAGE CONTAINER -->
+    <div style="width: 100%; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.1); border: 1px solid #e2e8f0;">
+      <img src="niyu_rfq_result.png" alt="Generated RFQs List" style="width: 100%; height: auto; display: block;">
     </div>
   </section>
 
