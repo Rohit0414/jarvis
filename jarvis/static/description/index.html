@@ -3,42 +3,41 @@
 
 <!-- MAIN CONTAINER -->
 <section style="
-  background-color: #ffffff; 
-  color: #1f2937; 
+  background-color: #020617; 
+  color: #f1f5f9; 
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  line-height: 1.7; 
+  line-height: 1.8; 
   margin: 0; 
   padding: 0;
-  /* VIBRANT GRADIENT BACKGROUND */
-  background-image:
-    radial-gradient(circle at 90% -20%, rgba(124, 58, 237, 0.15), transparent 50%),
-    radial-gradient(circle at -20% 30%, rgba(236, 72, 153, 0.1), transparent 50%);
+  background-image: 
+    radial-gradient(circle at 0% 0%, rgba(124, 58, 237, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 100% 100%, rgba(6, 182, 212, 0.1) 0%, transparent 40%);
 ">
 
   <!-- ==============================================
        1. HERO SECTION
        ============================================== -->
-  <header style="padding: 120px 20px 80px 20px; text-align: center;">
-    <div style=" margin: 0 auto;">
+  <header style="padding: 140px 20px 100px 20px; text-align: center;">
+    <div style="max-width: 1200px; margin: 0 auto;">
       
-      <div style="display: inline-block; background-color: #fdf4ff; color: #c026d3; padding: 6px 16px; border-radius: 50px; font-size: 13px; font-weight: 700; border: 1px solid #f0abfc; margin-bottom: 25px;">
+      <div style="display: inline-block; background: rgba(124, 58, 237, 0.1); color: #a78bfa; padding: 8px 20px; border-radius: 50px; font-size: 14px; font-weight: 700; border: 1px solid rgba(124, 58, 237, 0.3); margin-bottom: 30px; text-transform: uppercase; letter-spacing: 1px;">
         &#10024; Verified for Odoo 19.0
       </div>
 
-      <h1 style="font-size: clamp(3.5rem, 8vw, 5rem); line-height: 1.1; font-weight: 900; letter-spacing: -0.05em; margin: 0 0 30px 0; color: #0f172a;"> 
-        <span style="background: linear-gradient(90deg, #7c3aed, #db2777); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Niyu AI</span> Smart Stock
+      <h1 style="font-size: clamp(3.5rem, 8vw, 6rem); line-height: 1; font-weight: 900; letter-spacing: -0.05em; margin: 0 0 30px 0; color: #ffffff;"> 
+        <span style="background: linear-gradient(to right, #818cf8, #c084fc, #fb7185); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Niyu AI</span> Smart Stock
       </h1>
       
-      <p style="font-size: 1.35rem; color: #4b5563; max-width: 850px; margin: 0 auto 50px; line-height: 1.8;">
-        <b>Odoo tells you what you have. Niyu tells you what to buy.</b><br>
-        Turn your historical sales data into a precise, 30-day purchasing plan. Stop using static "Min/Max" rules and start using AI to eliminate stockouts.
+      <p style="font-size: 1.5rem; color: #94a3b8; max-width: 900px; margin: 0 auto 60px; line-height: 1.6;">
+        <b>Stop guessing your purchasing needs.</b><br>
+        Niyu turns your Odoo history into a precise 30-day plan using advanced neural networks. Eliminate stockouts and free up your cash flow instantly.
       </p>
 
-       <!-- DASHBOARD SHOWCASE VIDEO -->
-       <div class="video-showcase-container" style="padding: 0 0 60px 0; ">
-        <div style="max-width: 1300px; margin: 0 auto; padding: 0 20px;">
-          <div class="video-showcase-wrapper" style="border-radius: 2rem; padding: 5px; background-color: rgba(64, 160, 255, 0.8) !important; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.4) !important; position: relative !important; border: 1px solid rgba(255,255,255,0.4);">
-            <video autoplay loop muted playsinline preload="auto" style="width: 100%; display: block; border-radius: 2rem; background-color: #eee;">
+      <!-- VIDEO / DASHBOARD SHOWCASE -->
+      <div style="padding: 0 0 80px 0;">
+        <div style="max-width: 1400px; margin: 0 auto; padding: 0 20px;">
+          <div style="border-radius: 2.5rem; padding: 10px; background: linear-gradient(135deg, rgba(124, 58, 237, 0.5), rgba(6, 182, 212, 0.5)); box-shadow: 0 0 80px rgba(124, 58, 237, 0.3);">
+            <video autoplay loop muted playsinline preload="auto" style="width: 100%; display: block; border-radius: 2rem; background-color: #0f172a;">
               <source src="./snowflakevideo.webm" type="video/webm">
               <source src="static/description/q1.mp4" type="video/mp4">
             </video>
@@ -46,37 +45,29 @@
         </div>
       </div>
 
-      <!-- ADDED CONTENT BETWEEN VIDEO AND PILLS -->
-      <div style="max-width: 850px; margin: 0 auto 40px; text-align: center;">
-        <h4 style="font-weight: 800; color: #1e293b;">The Power of Predictive Accuracy</h4>
-        <p style="color: #64748b; font-size: 1.1rem;">Watch your stock transform from a static list into a dynamic, AI-driven asset. Niyu monitors every SKU movement to ensure your cash is always invested in high-velocity products.</p>
+      <!-- DESCRIPTIVE BRIDGE -->
+      <div style="max-width: 800px; margin: 0 auto 60px; text-align: center;">
+        <h2 style="font-weight: 800; color: #ffffff; margin-bottom: 20px;">Real-Time Velocity Tracking</h2>
+        <p style="color: #94a3b8; font-size: 1.2rem;">As seen in the dashboard above, Niyu provides a high-fidelity view of your stock velocity. We don't just look at inventory levels; we analyze the <i>speed</i> of every SKU to predict the exact moment of stock exhaustion.</p>
       </div>
 
       <!-- Feature Pills -->
-      <div class="d-flex flex-wrap justify-content-center gap-2 mb-5">
-          <span style="background-color: #7c3aed; color: white; padding: 10px 24px; border-radius: 100px; font-weight: 700; font-size: 14px; box-shadow: 0 4px 15px rgba(124, 58, 237, 0.2);">Viral Spike Detection</span>
-          <span style="background-color: #db2777; color: white; padding: 10px 24px; border-radius: 100px; font-weight: 700; font-size: 14px; box-shadow: 0 4px 15px rgba(219, 39, 119, 0.2);">Auto-Draft POs</span>
-          <span style="background-color: #1e293b; color: white; padding: 10px 24px; border-radius: 100px; font-weight: 700; font-size: 14px;">30-Day Forecast</span>
-          <span style="background-color: #64748b; color: white; padding: 10px 24px; border-radius: 100px; font-weight: 700; font-size: 14px;">Seasonality Aware</span>
+      <div class="d-flex flex-wrap justify-content-center gap-3 mb-5">
+          <span style="background: #1e1b4b; color: #818cf8; padding: 12px 28px; border-radius: 100px; font-weight: 700; font-size: 15px; border: 1px solid #312e81;">Viral Spike Detection</span>
+          <span style="background: #1e1b4b; color: #c084fc; padding: 12px 28px; border-radius: 100px; font-weight: 700; font-size: 15px; border: 1px solid #4c1d95;">Auto-Draft POs</span>
+          <span style="background: #1e1b4b; color: #fb7185; padding: 12px 28px; border-radius: 100px; font-weight: 700; font-size: 15px; border: 1px solid #881337;">30-Day Forecast</span>
+          <span style="background: #1e1b4b; color: #2dd4bf; padding: 12px 28px; border-radius: 100px; font-weight: 700; font-size: 15px; border: 1px solid #134e4a;">Seasonality Aware</span>
       </div>
 
-      <!-- Simple Example Box -->
-      <div style="background-color: #ffffff; border: 2px solid #7c3aed; border-radius: 32px; padding: 40px; max-width: 850px; margin: 0 auto; box-shadow: 0 40px 100px -20px rgba(124, 58, 237, 0.15);">
-        <h5 style="font-weight: 800; color: #7c3aed; margin-bottom: 15px;">&#10024; The "Real World" Problem:</h5>
-        <p style="margin: 0; font-size: 1.15rem; color: #475569;">
-          You set a Minimum Rule of 10 units. But next month is December (Christmas). If Odoo waits until you hit 10 units to reorder, <b>you will run out instantly.</b> Niyu knows Christmas is coming and tells you to buy 500 units <i>today</i>.
-        </p>
-      </div>
-
-      <!-- ADDED CONTENT BETWEEN BOX AND HERO IMAGE -->
-      <div style="padding: 60px 0 20px; text-align: center;">
-          <h3 style="font-weight: 900; color: #0f172a;">Visualize Your Future Inventory</h3>
-          <p style="color: #64748b; max-width: 700px; margin: 0 auto;">Below is the standard Niyu dashboard view. It provides an immediate overview of stock health, lead times, and projected purchase requirements.</p>
-      </div>
-
-      <!-- NEW IMAGE 1 (FULL SIZE) -->
-      <div style="max-width: 1400px; margin: 20px auto 0; padding: 0 20px;">
-        <img src="./autoexport.png" alt="Niyu Secondary Dashboard View" style="width: 100%; height: auto; display: block; border-radius: 1.5rem; background-color: #fff; border: 1px solid #e2e8f0; box-shadow: 0 20px 60px rgba(124, 58, 237, 0.1);">
+      <!-- FULL SIZE PHOTO 1 (Auto Export) -->
+      <div style="max-width: 1400px; margin: 80px auto; padding: 0 20px;">
+        <div style="text-align: left; margin-bottom: 40px;">
+            <h3 style="font-weight: 900; color: #ffffff;">Automatic Data Synchronization</h3>
+            <p style="color: #94a3b8; max-width: 700px;">Niyu works silently in the background, exporting your latest sales data and inventory moves to our AI core without affecting your Odoo server performance.</p>
+        </div>
+        <div style="border-radius: 2rem; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 40px 100px rgba(0,0,0,0.5);">
+            <img src="./autoexport.png" alt="Auto Export Interface" style="width: 100%; height: auto; display: block;">
+        </div>
       </div>
 
     </div>
@@ -85,46 +76,46 @@
   <!-- ==============================================
        2. STICKY NAV
        ============================================== -->
-  <nav style="position: sticky; top: 0; z-index: 100; background-color: rgba(255,255,255,0.95); backdrop-filter: blur(12px); border-bottom: 2px solid #7c3aed; padding: 15px 0;">
-    <div class="container d-flex justify-content-center gap-4 flex-wrap">
-      <a href="#problem" style="text-decoration: none; color: #1e293b; font-weight: 700; font-size: 14px;">Why Niyu?</a>
-      <a href="#how" style="text-decoration: none; color: #1e293b; font-weight: 700; font-size: 14px;">How it Works</a>
-      <a href="#features" style="text-decoration: none; color: #1e293b; font-weight: 700; font-size: 14px;">Features</a>
-      <a href="#pricing" style="text-decoration: none; color: #7c3aed; font-weight: 800; font-size: 14px; text-transform: uppercase;">Pricing</a>
-      <a href="#setup" style="text-decoration: none; color: #1e293b; font-weight: 700; font-size: 14px;">Setup</a>
-      <a href="#faq" style="text-decoration: none; color: #1e293b; font-weight: 700; font-size: 14px;">FAQ</a>
+  <nav style="position: sticky; top: 0; z-index: 100; background: rgba(2, 6, 23, 0.8); backdrop-filter: blur(15px); border-bottom: 1px solid rgba(255,255,255,0.1); padding: 20px 0;">
+    <div class="container d-flex justify-content-center gap-5 flex-wrap">
+      <a href="#problem" style="text-decoration: none; color: #94a3b8; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Why Niyu?</a>
+      <a href="#how" style="text-decoration: none; color: #94a3b8; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">How it Works</a>
+      <a href="#features" style="text-decoration: none; color: #94a3b8; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Features</a>
+      <a href="#pricing" style="text-decoration: none; color: #fb7185; font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Pricing</a>
+      <a href="#setup" style="text-decoration: none; color: #94a3b8; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">Setup</a>
+      <a href="#faq" style="text-decoration: none; color: #94a3b8; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">FAQ</a>
     </div>
   </nav>
 
   <!-- ==============================================
-       3. THE PROBLEM
+       3. THE PROBLEM (Modern Cards)
        ============================================== -->
-  <section id="problem" style="padding: 100px 0; background-color: #fff5f7;">
+  <section id="problem" style="padding: 120px 0; background-color: rgba(255,255,255,0.02);">
     <div class="container">
       <div class="text-center mb-5">
-        <h2 style="font-size: 42px; font-weight: 900; color: #0f172a;">Why are you losing money?</h2>
-        <p style="color: #64748b; font-size: 1.25rem;">Inventory is a balancing act. Most companies get it wrong.</p>
+        <h2 style="font-size: 42px; font-weight: 900; color: #ffffff;">The Hidden Costs of Bad Inventory</h2>
+        <p style="color: #94a3b8; font-size: 1.25rem;">Standard Odoo rules are static. Your business is dynamic.</p>
       </div>
       <div class="row g-4">
         <div class="col-md-4">
-          <div style="background-color: #ffffff; border: 2px solid #fecaca; border-radius: 24px; padding: 40px; height: 100%;">
-            <div style="font-size: 40px; margin-bottom: 15px;">&#128308;</div>
-            <h4 style="font-weight: 800; margin-bottom: 15px; color: #9f1239;">The Stockout</h4>
-            <p style="color: #881337;">You run out of your best-seller. Customers go to Amazon. You lose the sale AND the customer lifetime value.</p>
+          <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(244, 63, 94, 0.3); border-radius: 32px; padding: 50px; height: 100%;">
+            <div style="font-size: 40px; margin-bottom: 20px;">&#128308;</div>
+            <h4 style="font-weight: 800; margin-bottom: 20px; color: #fb7185;">The Stockout</h4>
+            <p style="color: #94a3b8;">You run out of your best-seller. Customers go to competitors. You lose the sale AND the customer lifetime value.</p>
           </div>
         </div>
         <div class="col-md-4">
-          <div style="background-color: #ffffff; border: 2px solid #fde68a; border-radius: 24px; padding: 40px; height: 100%;">
-            <div style="font-size: 40px; margin-bottom: 15px;">&#128176;</div>
-            <h4 style="font-weight: 800; margin-bottom: 15px; color: #92400e;">The Dead Stock</h4>
-            <p style="color: #78350f;">You bought too much of a product that is dying. Now your cash is frozen in warehouse boxes that gather dust.</p>
+          <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 32px; padding: 50px; height: 100%;">
+            <div style="font-size: 40px; margin-bottom: 20px;">&#128176;</div>
+            <h4 style="font-weight: 800; margin-bottom: 20px; color: #fbbf24;">The Dead Stock</h4>
+            <p style="color: #94a3b8;">You bought too much of a dying product. Your cash is frozen in warehouse boxes gathering dust instead of growing your brand.</p>
           </div>
         </div>
         <div class="col-md-4">
-          <div style="background-color: #ffffff; border: 2px solid #d8b4fe; border-radius: 24px; padding: 40px; height: 100%;">
-            <div style="font-size: 40px; margin-bottom: 15px;">&#9992;&#65039;</div>
-            <h4 style="font-weight: 800; margin-bottom: 15px; color: #6b21a8;">The Panic Buy</h4>
-            <p style="color: #581c87;">You realized too late that you needed stock. Now you have to pay double for Air Freight just to keep the line moving.</p>
+          <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(139, 92, 246, 0.3); border-radius: 32px; padding: 50px; height: 100%;">
+            <div style="font-size: 40px; margin-bottom: 20px;">&#9992;&#65039;</div>
+            <h4 style="font-weight: 800; margin-bottom: 20px; color: #a78bfa;">The Panic Buy</h4>
+            <p style="color: #94a3b8;">Ordering too late forces you into expensive air freight just to keep the line moving. Niyu helps you order 45 days in advance.</p>
           </div>
         </div>
       </div>
@@ -132,142 +123,130 @@
   </section>
 
   <!-- ==============================================
-       4. HOW IT WORKS (DETAILED STEPS)
+       4. HOW IT WORKS (Cinematic Layout)
        ============================================== -->
-  <section id="how" style="padding: 100px 0; background-color: #f8fafc; border-top: 1px solid #e2e8f0;">
+  <section id="how" style="padding: 120px 0; background-color: #020617;">
     <div class="container">
       <div class="text-center mb-5">
-        <h2 style="font-size: 48px; font-weight: 900; color: #0f172a;">How Niyu Solves It</h2>
-        <p style="color: #64748b; font-size: 1.2rem;">Automated Intelligence in 3 Steps.</p>
+        <h2 style="font-size: 48px; font-weight: 900; color: #ffffff;">How Niyu Solves It</h2>
+        <p style="color: #94a3b8; font-size: 1.25rem;">From Raw Data to Intelligence in Seconds.</p>
       </div>
 
       <!-- Step 1 -->
-      <div style="background-color: #ffffff; border-radius: 32px; padding: 60px 40px; margin-bottom: 60px; border: 1px solid #e2e8f0; box-shadow: 0 20px 40px rgba(0,0,0,0.03);">
-        <div class="row align-items-center mb-4">
-            <div class="col-lg-7">
-                <div style="display: inline-block; background-color: #e0f2fe; color: #0284c7; font-weight: 800; padding: 5px 15px; border-radius: 20px; margin-bottom: 15px;">STEP 1</div>
-                <h3 style="font-size: 36px; font-weight: 800; margin-bottom: 20px; color: #0f172a;">Ingest & Cleanse</h3>
-                <p style="color: #64748b; font-size: 18px; line-height: 1.8;">
-                    We pull 24 months of history. But raw data is dirty. Niyu automatically removes "outliers" (like that one time a B2B client bought 1,000 units).
+      <div style="margin-bottom: 120px;">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6">
+                <div style="color: #818cf8; font-weight: 900; font-size: 18px; margin-bottom: 10px;">01. INGEST & CLEANSE</div>
+                <h3 style="font-size: 42px; font-weight: 800; margin-bottom: 25px; color: #ffffff;">Data Neutralization</h3>
+                <p style="color: #94a3b8; font-size: 1.1rem; line-height: 1.8;">
+                    Niyu pulls 24 months of historical history. Raw data is often "noisy"—one-off B2B bulk orders or temporary glitches can ruin a forecast. Our AI identifies and removes these outliers automatically.
                 </p>
-                <ul style="color: #475569; font-size: 16px; list-style: none; padding: 0;">
-                    <li style="margin-bottom: 10px;"><b>&#10003;</b> Sales Orders & POS Orders</li>
-                    <li style="margin-bottom: 10px;"><b>&#10003;</b> Stock Moves & Returns</li>
-                    <li style="margin-bottom: 10px;"><b>&#10003;</b> Outlier Detection Algorithms</li>
-                </ul>
             </div>
-            <div class="col-lg-5" style="background-color: #f0f9ff; border-radius: 20px; padding: 30px; border-left: 5px solid #0284c7;">
-                <h5 style="font-weight: 800; color: #0369a1;">Data Refinement</h5>
-                <p style="margin: 0; color: #075985;">Our cleaning algorithms ensure that temporary sales spikes or one-off large orders don't skew your future purchasing plans.</p>
+            <div class="col-lg-6">
+                <div style="background: rgba(129, 140, 248, 0.1); border: 1px solid #312e81; border-radius: 20px; padding: 30px;">
+                    <ul style="color: #ffffff; list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 15px;">&#10003; Automated Outlier Detection</li>
+                        <li style="margin-bottom: 15px;">&#10003; Stock Move Normalization</li>
+                        <li>&#10003; Returns Handling</li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <img src="./autoexport.png" alt="Ingest Data" style="width: 100%; height: auto; display: block; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+        <img src="./autoexport.png" alt="Data Flow" style="width: 100%; height: auto; border-radius: 2rem; border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 40px 100px rgba(0,0,0,0.6);">
       </div>
 
       <!-- Step 2 -->
-      <div style="background-color: #ffffff; border-radius: 32px; padding: 60px 40px; margin-bottom: 60px; border: 1px solid #e2e8f0; box-shadow: 0 20px 40px rgba(0,0,0,0.03);">
-        <div class="row align-items-center mb-4">
-            <div class="col-lg-7">
-                <div style="display: inline-block; background-color: #f3e8ff; color: #7c3aed; font-weight: 800; padding: 5px 15px; border-radius: 20px; margin-bottom: 15px;">STEP 2</div>
-                <h3 style="font-size: 36px; font-weight: 800; margin-bottom: 20px; color: #0f172a;">AI Processing (AutoARIMA)</h3>
-                <p style="color: #64748b; font-size: 18px; line-height: 1.8;">
-                    Our engine runs thousands of statistical models per SKU. It detects seasonality (annual cycles) and recent trends (velocity shifts).
+      <div style="margin-bottom: 120px;">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6 order-lg-2">
+                <div style="color: #c084fc; font-weight: 900; font-size: 18px; margin-bottom: 10px;">02. AI PROCESSING</div>
+                <h3 style="font-size: 42px; font-weight: 800; margin-bottom: 25px; color: #ffffff;">Neural Velocity Models</h3>
+                <p style="color: #94a3b8; font-size: 1.1rem; line-height: 1.8;">
+                    Our AutoARIMA v2 engine runs thousands of statistical simulations per SKU. It learns your unique seasonality cycles—knowing exactly how much your umbrella sales spike in October versus July.
                 </p>
-                <ul style="color: #475569; font-size: 16px; list-style: none; padding: 0;">
-                    <li style="margin-bottom: 10px;"><b>&#10003;</b> 30-Day Forward Forecast</li>
-                    <li style="margin-bottom: 10px;"><b>&#10003;</b> Safety Stock Buffer Calculation</li>
-                    <li style="margin-bottom: 10px;"><b>&#10003;</b> Confidence Intervals</li>
-                </ul>
             </div>
-            <div class="col-lg-5" style="background-color: #faf5ff; border-radius: 20px; padding: 30px; border-left: 5px solid #7c3aed;">
-                <h5 style="font-weight: 800; color: #6b21a8;">Pattern Recognition</h5>
-                <p style="margin: 0; color: #581c87;">Beyond simple averages, Niyu identifies the "rhythm" of your business, accounting for holidays, weekends, and marketing-driven trends.</p>
+            <div class="col-lg-6 order-lg-1">
+                <div style="background: rgba(192, 132, 252, 0.1); border: 1px solid #581c87; border-radius: 20px; padding: 30px;">
+                    <ul style="color: #ffffff; list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 15px;">&#10003; 30-Day Forward Forecast</li>
+                        <li style="margin-bottom: 15px;">&#10003; Dynamic Safety Stock Buffers</li>
+                        <li>&#10003; Trend Shift Analysis</li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <img src="./autoexport.png" alt="AI Engine" style="width: 100%; height: auto; display: block; border-radius: 20px; box-shadow: 0 10px 30px rgba(124, 58, 237, 0.1);">
+        <img src="./autoexport.png" alt="AI Logic" style="width: 100%; height: auto; border-radius: 2rem; border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 40px 100px rgba(0,0,0,0.6);">
       </div>
 
       <!-- Step 3 -->
-      <div style="background-color: #ffffff; border-radius: 32px; padding: 60px 40px; margin-bottom: 60px; border: 1px solid #e2e8f0; box-shadow: 0 20px 40px rgba(0,0,0,0.03);">
-        <div class="row align-items-center mb-4">
-            <div class="col-lg-7">
-                <div style="display: inline-block; background-color: #fce7f3; color: #db2777; font-weight: 800; padding: 5px 15px; border-radius: 20px; margin-bottom: 15px;">STEP 3</div>
-                <h3 style="font-size: 36px; font-weight: 800; margin-bottom: 20px; color: #0f172a;">Actionable Output</h3>
-                <p style="color: #64748b; font-size: 18px; line-height: 1.8;">
-                    We don't just give you a graph. We give you a <b>Draft Purchase Order</b> in Odoo, grouped by vendor with optimal quantities.
+      <div>
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6">
+                <div style="color: #fb7185; font-weight: 900; font-size: 18px; margin-bottom: 10px;">03. ACTIONABLE OUTPUT</div>
+                <h3 style="font-size: 42px; font-weight: 800; margin-bottom: 25px; color: #ffffff;">Auto-Draft Purchase Orders</h3>
+                <p style="color: #94a3b8; font-size: 1.1rem; line-height: 1.8;">
+                    Niyu translates complex math into clicks. We generate draft POs in Odoo, grouped by vendor, with the exact quantities needed to maintain stock for the next 30 days.
                 </p>
-                <ul style="color: #475569; font-size: 16px; list-style: none; padding: 0;">
-                    <li style="margin-bottom: 10px;"><b>&#10003;</b> Grouped by Vendor</li>
-                    <li style="margin-bottom: 10px;"><b>&#10003;</b> Optimal Quantities Pre-Filled</li>
-                    <li style="margin-bottom: 10px;"><b>&#10003;</b> One-Click Confirmation</li>
-                </ul>
             </div>
-            <div class="col-lg-5" style="background-color: #fff1f2; border-radius: 20px; padding: 30px; border-left: 5px solid #db2777;">
-                <h5 style="font-weight: 800; color: #9f1239;">Procurement Workflow</h5>
-                <p style="margin: 0; color: #881337;">Close the loop instantly. Our integration turns complex mathematical predictions into clickable orders ready for your approval.</p>
+            <div class="col-lg-6">
+                <div style="background: rgba(251, 113, 133, 0.1); border: 1px solid #881337; border-radius: 20px; padding: 30px;">
+                    <ul style="color: #ffffff; list-style: none; padding: 0; margin: 0;">
+                        <li style="margin-bottom: 15px;">&#10003; Multi-Vendor Consolidation</li>
+                        <li style="margin-bottom: 15px;">&#10003; Lead Time Correction</li>
+                        <li>&#10003; One-Click Order Approval</li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <img src="./autoexport.png" alt="Output POs" style="width: 100%; height: auto; display: block; border-radius: 20px; box-shadow: 0 10px 30px rgba(219, 39, 119, 0.1);">
+        <img src="./autoexport.png" alt="Actionable POs" style="width: 100%; height: auto; border-radius: 2rem; border: 1px solid rgba(255,255,255,0.05); box-shadow: 0 40px 100px rgba(0,0,0,0.6);">
       </div>
-    </div>
-  </section>
 
-  <!-- ==============================================
-       DEEP DIVE SECTION
-       ============================================== -->
-  <section style="padding: 100px 0; background-color: #ffffff;">
-    <div class="container">
-        <div class="text-center mb-5">
-            <h2 style="font-size: 36px; font-weight: 900; color: #0f172a;">Deep Dive Analysis</h2>
-            <p style="color: #64748b; max-width: 800px; margin: 0 auto 30px;">Get a granular view of your stock velocity. Niyu maps out exactly when your stock will hit zero and when you need to trigger your next shipment based on real-world lead times.</p>
-        </div>
-        <img src="./autoexport.png" alt="Full Analysis Report" style="width: 100%; height: auto; display: block; border-radius: 32px; border: 1px solid #e2e8f0; box-shadow: 0 40px 80px rgba(0,0,0,0.08);">
     </div>
   </section>
 
   <!-- ==============================================
        5. FEATURES GRID
        ============================================== -->
-  <section id="features" style="padding: 100px 0; background-color: #f8fafc; border-top: 1px solid #e2e8f0;">
+  <section id="features" style="padding: 120px 0; background-color: rgba(255,255,255,0.02);">
     <div class="container">
       <div class="text-center mb-5">
-        <h2 style="font-size: 36px; font-weight: 900; color: #0f172a;">Advanced Capabilities</h2>
+        <h2 style="font-size: 42px; font-weight: 900; color: #ffffff;">Advanced Capabilities</h2>
       </div>
       <div class="row g-4">
         <div class="col-md-4">
-            <div style="background-color: #ffffff; padding: 30px; border-radius: 20px; height: 100%; border: 1px solid #e2e8f0;">
-                <h5 style="font-weight: 800; margin-bottom: 10px; color: #7c3aed;">&#128200; Viral Detection</h5>
-                <p style="font-size: 14px; color: #64748b;">Detects if an item starts selling 300% faster than usual (e.g., Social Media trend) and triggers an alert.</p>
+            <div style="background: #0f172a; padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05);">
+                <h5 style="color: #818cf8; font-weight: 800; margin-bottom: 15px;">&#128200; Viral Detection</h5>
+                <p style="color: #94a3b8; font-size: 15px;">Detects if an item starts selling 300% faster than usual and triggers a priority alert.</p>
             </div>
         </div>
         <div class="col-md-4">
-            <div style="background-color: #ffffff; padding: 30px; border-radius: 20px; height: 100%; border: 1px solid #e2e8f0;">
-                <h5 style="font-weight: 800; margin-bottom: 10px; color: #db2777;">&#128178; Cash Flow Plan</h5>
-                <p style="font-size: 14px; color: #64748b;">"You need $42,000 for next month's stock." We translate SKUs into currency for finance teams.</p>
+            <div style="background: #0f172a; padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05);">
+                <h5 style="color: #fb7185; font-weight: 800; margin-bottom: 15px;">&#128178; Cash Flow Plan</h5>
+                <p style="color: #94a3b8; font-size: 15px;">Know exactly how many dollars you need for next month's stock before you spend them.</p>
             </div>
         </div>
         <div class="col-md-4">
-            <div style="background-color: #ffffff; padding: 30px; border-radius: 20px; height: 100%; border: 1px solid #e2e8f0;">
-                <h5 style="font-weight: 800; margin-bottom: 10px; color: #7c3aed;">&#127881; Seasonality</h5>
-                <p style="font-size: 14px; color: #64748b;">Knows that you sell 5x more umbrellas in October and 10x more toys in December.</p>
+            <div style="background: #0f172a; padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05);">
+                <h5 style="color: #818cf8; font-weight: 800; margin-bottom: 15px;">&#127881; Seasonality</h5>
+                <p style="color: #94a3b8; font-size: 15px;">Smart analysis of annual trends ensures you are never understocked during holidays.</p>
             </div>
         </div>
         <div class="col-md-4">
-            <div style="background-color: #ffffff; padding: 30px; border-radius: 20px; height: 100%; border: 1px solid #e2e8f0;">
-                <h5 style="font-weight: 800; margin-bottom: 10px; color: #db2777;">&#128666; Lead Time Logic</h5>
-                <p style="font-size: 14px; color: #64748b;">If it takes 45 days to ship from China, Niyu tells you to order 45 days before stockout.</p>
+            <div style="background: #0f172a; padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05);">
+                <h5 style="color: #fb7185; font-weight: 800; margin-bottom: 15px;">&#128666; Lead Time Logic</h5>
+                <p style="color: #94a3b8; font-size: 15px;">If shipping takes 6 weeks, Niyu tells you to order today to avoid tomorrow's stockout.</p>
             </div>
         </div>
         <div class="col-md-4">
-            <div style="background-color: #ffffff; padding: 30px; border-radius: 20px; height: 100%; border: 1px solid #e2e8f0;">
-                <h5 style="font-weight: 800; margin-bottom: 10px; color: #7c3aed;">&#128274; Security First</h5>
-                <p style="font-size: 14px; color: #64748b;">Stateless architecture. We process data in RAM and wipe it immediately. No long-term storage.</p>
+            <div style="background: #0f172a; padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05);">
+                <h5 style="color: #818cf8; font-weight: 800; margin-bottom: 15px;">&#128274; Security First</h5>
+                <p style="color: #94a3b8; font-size: 15px;">Stateless architecture. Data is processed in encrypted memory and purged instantly.</p>
             </div>
         </div>
         <div class="col-md-4">
-            <div style="background-color: #ffffff; padding: 30px; border-radius: 20px; height: 100%; border: 1px solid #e2e8f0;">
-                <h5 style="font-weight: 800; margin-bottom: 10px; color: #db2777;">&#9729; Cloud Power</h5>
-                <p style="font-size: 14px; color: #64748b;">Zero load on your Odoo server. We do the math on high-performance GPU clusters.</p>
+            <div style="background: #0f172a; padding: 40px; border-radius: 24px; border: 1px solid rgba(255,255,255,0.05);">
+                <h5 style="color: #fb7185; font-weight: 800; margin-bottom: 15px;">&#9729; Cloud Power</h5>
+                <p style="color: #94a3b8; font-size: 15px;">We use dedicated GPU clusters to run forecasts, leaving your Odoo server 100% free.</p>
             </div>
         </div>
       </div>
@@ -277,41 +256,41 @@
   <!-- ==============================================
        6. PRICING
        ============================================== -->
-  <section id="pricing" style="padding: 100px 0; background-color: #0f172a; position: relative;">
-    <div class="container" style="position: relative; z-index: 2;">
+  <section id="pricing" style="padding: 120px 0; background-color: #020617;">
+    <div class="container">
         <div class="text-center mb-5">
-            <h2 style="font-size: 42px; font-weight: 900; color: white;">Simple, Transparent Pricing</h2>
+            <h2 style="font-size: 42px; font-weight: 900; color: #ffffff;">Simple, Scalable Pricing</h2>
         </div>
         <div class="row g-4 align-items-center justify-content-center">
             <div class="col-md-4">
-                <div style="background-color: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 40px; color: white;">
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 32px; padding: 50px; color: #ffffff;">
                     <h4 style="font-weight: 800;">Free Audit</h4>
-                    <span style="font-size: 48px; font-weight: 800;">$0</span>
-                    <ul style="list-style: none; padding: 0; margin-top: 30px; font-size: 14px; line-height: 2.2; color: #cbd5e1;">
+                    <span style="font-size: 56px; font-weight: 900;">$0</span>
+                    <ul style="list-style: none; padding: 0; margin-top: 40px; color: #94a3b8; line-height: 2.2;">
                         <li>&#10003; Top 20 SKUs Analysis</li>
-                        <li>&#10003; Basic Forecasting</li>
+                        <li>&#10003; Weekly Cloud Sync</li>
                         <li>&#10003; Community Support</li>
                     </ul>
                 </div>
             </div>
             <div class="col-md-4">
-                <div style="background-color: #ffffff; border: 3px solid #7c3aed; border-radius: 24px; padding: 50px 40px; transform: scale(1.05);">
-                    <h4 style="font-weight: 800; color: #7c3aed;">Pro Plan</h4>
-                    <span style="font-size: 56px; font-weight: 800; color: #0f172a;">$49</span><span style="color: #64748b; font-size: 16px;">/mo</span>
-                    <ul style="list-style: none; padding: 0; margin-top: 30px; font-size: 14px; line-height: 2.2; color: #334155; font-weight: 600;">
-                        <li>&#10003; 10,000 SKUs Capacity</li>
-                        <li>&#10003; Daily Automated Sync</li>
-                        <li>&#10003; Draft PO Generation</li>
+                <div style="background: #ffffff; border-radius: 32px; padding: 60px 50px; transform: scale(1.1); color: #020617; box-shadow: 0 0 80px rgba(124, 58, 237, 0.4);">
+                    <h4 style="font-weight: 900; color: #7c3aed;">Pro Plan</h4>
+                    <span style="font-size: 64px; font-weight: 900;">$49</span><span style="font-size: 18px; color: #64748b;">/mo</span>
+                    <ul style="list-style: none; padding: 0; margin-top: 40px; line-height: 2.2; font-weight: 600;">
+                        <li><span style="color: #7c3aed;">&#10003;</span> 10,000 SKUs Capacity</li>
+                        <li><span style="color: #7c3aed;">&#10003;</span> Daily Automated Sync</li>
+                        <li><span style="color: #7c3aed;">&#10003;</span> Draft PO Generation</li>
                     </ul>
                 </div>
             </div>
             <div class="col-md-4">
-                <div style="background-color: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 40px; color: white;">
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 32px; padding: 50px; color: #ffffff;">
                     <h4 style="font-weight: 800;">Enterprise</h4>
-                    <span style="font-size: 48px; font-weight: 800;">Custom</span>
-                    <ul style="list-style: none; padding: 0; margin-top: 30px; font-size: 14px; line-height: 2.2; color: #cbd5e1;">
-                        <li>&#10003; Unlimited SKUs</li>
-                        <li>&#10003; Multi-Warehouse</li>
+                    <span style="font-size: 56px; font-weight: 900;">Custom</span>
+                    <ul style="list-style: none; padding: 0; margin-top: 40px; color: #94a3b8; line-height: 2.2;">
+                        <li>&#10003; Multi-Warehouse Logic</li>
+                        <li>&#10003; Custom Model Training</li>
                         <li>&#10003; Dedicated Manager</li>
                     </ul>
                 </div>
@@ -321,25 +300,24 @@
   </section>
 
   <!-- ==============================================
-       7. SETUP
+       7. SETUP (FULL SIZE PHOTO)
        ============================================== -->
-  <section id="setup" style="padding: 100px 0; background-color: #f1f5f9; border-top: 1px solid #e2e8f0;">
+  <section id="setup" style="padding: 120px 0; background-color: rgba(255,255,255,0.02);">
     <div class="container">
         <div class="text-center mb-5">
-             <h2 style="font-size: 42px; font-weight: 900; color: #0f172a;">Configuration</h2>
-             <p style="color: #64748b; font-size: 1.1rem; max-width: 700px; margin: 0 auto;">Getting started is easy. Within minutes, Niyu will begin processing your sales history to build your first inventory intelligence report.</p>
+             <h2 style="font-size: 42px; font-weight: 900; color: #ffffff;">Ready in Minutes</h2>
+             <p style="color: #94a3b8;">No complex IT projects. Just connect and forecast.</p>
         </div>
-        <div style="background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 24px; padding: 40px; margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
-          <ul style="list-style: none; padding: 0; font-size: 1.1rem; color: #475569;">
-            <li style="margin-bottom: 15px;">1. <b>Install Module:</b> No extra libraries required.</li>
-            <li style="margin-bottom: 15px;">2. <b>Connect API:</b> Enter your Niyu API Key in Settings.</li>
-            <li style="margin-bottom: 15px;">3. <b>Run Audit:</b> Click "Sync Now" to see your first forecast.</li>
+        <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 32px; padding: 50px; margin-bottom: 60px;">
+          <ul style="list-style: none; padding: 0; font-size: 1.25rem; color: #ffffff;">
+            <li style="margin-bottom: 20px;">1. <b>Install Module:</b> Just like any other Odoo app.</li>
+            <li style="margin-bottom: 20px;">2. <b>Connect API:</b> Enter your key in the settings panel.</li>
+            <li>3. <b>Run Baseline:</b> Watch Niyu audit your entire inventory history.</li>
           </ul>
         </div>
-        <!-- FULL SIZE IMAGE -->
-        <div style="text-align: center;">
-            <p style="font-weight: 800; color: #7c3aed; margin-bottom: 20px;">Odoo Integration Settings Screen</p>
-            <img src="./autoexport.png" style="width: 100%; height: auto; display: block; border-radius: 24px; border: 1px solid #e2e8f0; box-shadow: 0 40px 100px rgba(0,0,0,0.1);">
+        <!-- FULL SIZE SETUP IMAGE -->
+        <div style="border-radius: 2rem; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 0 100px rgba(0,0,0,0.5);">
+            <img src="./autoexport.png" alt="Setup Guide" style="width: 100%; height: auto; display: block;">
         </div>
     </div>
   </section>
@@ -347,34 +325,34 @@
   <!-- ==============================================
        8. FAQ
        ============================================== -->
-  <section id="faq" style="padding: 100px 0; background-color: #ffffff;">
+  <section id="faq" style="padding: 120px 0; background-color: #020617;">
     <div class="container">
       <div class="text-center mb-5">
-        <h2 style="font-size: 42px; font-weight: 900; color: #0f172a;">Frequently Asked Questions</h2>
+        <h2 style="font-size: 42px; font-weight: 900; color: #ffffff;">FAQ</h2>
       </div>
       <div class="row g-4">
         <div class="col-md-6">
-          <div style="background-color: #f8fafc; padding: 30px; border-radius: 24px; height: 100%; border: 1px solid #e2e8f0; border-left: 5px solid #7c3aed;">
-            <h6 style="font-weight: 800;">Is my data safe?</h6>
-            <p class="small text-muted mb-0">Yes. We use a stateless architecture. We process sales velocity in memory and purge it immediately after the forecast is generated. No data is retained.</p>
+          <div style="background: rgba(255,255,255,0.03); padding: 40px; border-radius: 24px; height: 100%; border-left: 4px solid #818cf8;">
+            <h6 style="font-weight: 800; color: #ffffff;">Is my data safe?</h6>
+            <p style="color: #94a3b8; margin: 0;">Yes. We use a stateless architecture. We process sales velocity in memory and purge it immediately. No data is retained on our side.</p>
           </div>
         </div>
         <div class="col-md-6">
-          <div style="background-color: #f8fafc; padding: 30px; border-radius: 24px; height: 100%; border: 1px solid #e2e8f0; border-left: 5px solid #db2777;">
-            <h6 style="font-weight: 800;">Does it work with Multi-Company?</h6>
-            <p class="small text-muted mb-0">Yes. You can configure Niyu for separate companies or warehouses within your Odoo instance.</p>
+          <div style="background: rgba(255,255,255,0.03); padding: 40px; border-radius: 24px; height: 100%; border-left: 4px solid #fb7185;">
+            <h6 style="font-weight: 800; color: #ffffff;">Does it work with Multi-Company?</h6>
+            <p style="color: #94a3b8; margin: 0;">Yes. You can configure Niyu for separate companies or separate warehouse clusters within a single Odoo instance.</p>
           </div>
         </div>
         <div class="col-md-6">
-          <div style="background-color: #f8fafc; padding: 30px; border-radius: 24px; height: 100%; border: 1px solid #e2e8f0; border-left: 5px solid #7c3aed;">
-            <h6 style="font-weight: 800;">Can I keep my old rules?</h6>
-            <p class="small text-muted mb-0">Yes. Niyu can run alongside Odoo's Reordering Rules. Use Niyu for proactive planning and Odoo rules as a safety net.</p>
+          <div style="background: rgba(255,255,255,0.03); padding: 40px; border-radius: 24px; height: 100%; border-left: 4px solid #818cf8;">
+            <h6 style="font-weight: 800; color: #ffffff;">Can I keep my old rules?</h6>
+            <p style="color: #94a3b8; margin: 0;">Yes. Niyu can run alongside Odoo's Reordering Rules. Use Niyu for proactive planning and Odoo rules as a safety net.</p>
           </div>
         </div>
         <div class="col-md-6">
-          <div style="background-color: #f8fafc; padding: 30px; border-radius: 24px; height: 100%; border: 1px solid #e2e8f0; border-left: 5px solid #db2777;">
-            <h6 style="font-weight: 800;">What versions of Odoo?</h6>
-            <p class="small text-muted mb-0">Compatible with Odoo 14, 15, 16, 17, 18, and 19 (Community & Enterprise).</p>
+          <div style="background: rgba(255,255,255,0.03); padding: 40px; border-radius: 24px; height: 100%; border-left: 4px solid #fb7185;">
+            <h6 style="font-weight: 800; color: #ffffff;">What versions of Odoo?</h6>
+            <p style="color: #94a3b8; margin: 0;">Compatible with Odoo 14 through 19 (Community & Enterprise).</p>
           </div>
         </div>
       </div>
@@ -384,21 +362,21 @@
   <!-- ==============================================
        9. FOOTER
        ============================================== -->
-  <footer style="padding: 100px 0; text-align: center; background-color: #f8fafc; border-top: 1px solid #e2e8f0;">
+  <footer style="padding: 120px 0; text-align: center; background-color: #020617; border-top: 1px solid rgba(255,255,255,0.1);">
     <div class="container">
-      <div style="background-color: #1e293b; padding: 80px 40px; border-radius: 48px; box-shadow: 0 40px 100px -20px rgba(15,23,42,0.5);">
-        <h2 style="font-size: 3.5rem; font-weight: 900; color: #ffffff; margin-bottom: 20px;">Ready to Optimize?</h2>
-        <p style="font-size: 1.35rem; color: #cbd5e1; margin-bottom: 50px; max-width: 700px; margin-left: auto; margin-right: auto;">
-            Download the free module today. Audit your top 20 items at no cost.
+      <div style="background: linear-gradient(135deg, #4338ca 0%, #312e81 100%); padding: 100px 40px; border-radius: 60px; box-shadow: 0 40px 100px rgba(0,0,0,0.5);">
+        <h2 style="font-size: 4rem; font-weight: 900; color: #ffffff; margin-bottom: 20px;">Ready to Optimize?</h2>
+        <p style="font-size: 1.5rem; color: #c7d2fe; margin-bottom: 60px; max-width: 800px; margin-left: auto; margin-right: auto;">
+            Audit your top 20 items today for free. Experience the power of AI-driven procurement.
         </p>
         <div class="d-flex justify-content-center gap-5 flex-wrap fw-bold">
            <a href="https://apps.odoo.com/apps/modules/browse?search=Niyu" target="_blank" 
-             style="background-color: #ffffff; color: #7c3aed; padding: 20px 50px; border-radius: 50px; font-weight: 900; font-size: 20px; text-decoration: none; box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);">
-              Download Module
+             style="background-color: #ffffff; color: #4338ca; padding: 25px 60px; border-radius: 100px; font-weight: 900; font-size: 20px; text-decoration: none; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+              Download Now
           </a>
         </div>
       </div>
-      <p style="margin-top: 60px; color: #6d798a; font-weight: 600; font-size: 14px;">Last updated: October 2025 | Version: 19.0.1.0.0 | Niyu Labs</p>
+      <p style="margin-top: 80px; color: #475569; font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: 2px;">Last updated: October 2025 | Version: 19.0.1.0.0 | Niyu Labs</p>
     </div>
   </footer>
 
