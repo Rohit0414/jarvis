@@ -11,55 +11,67 @@
   padding: 0;
 ">
 
-  <!-- ==============================================
-       1. HERO SECTION (UPGRADED VISUALS - NO DELETIONS)
+ <!-- ==============================================
+       1. HERO SECTION (UPGRADED VISUALS - SOLID HEX & PREMIUM)
        ============================================== -->
-  <header style="padding: 160px 0 100px 0; text-align: center; background-color: radial-gradient(circle at top, #1e1b4b 0%, #0f172a 100%); position: relative; overflow: hidden;">
+  <header style="padding: 160px 0 120px 0; text-align: center; background-color: #0f172a; position: relative; overflow: hidden; border-bottom: 1px solid #1e1b4b;">
     
-    <!-- ADDED: High-tech background glow -->
-    <div style="position: absolute; top: -10%; left: 50%; transform: translateX(-50%); width: 100%; height: 500px; background-color: radial-gradient(rgba(124, 58, 237, 0.1), transparent); pointer-events: none;"></div>
+    <!-- Deep Solid Accent Glow (Using high-transparency solid hex) -->
+    <div style="position: absolute; top: -150px; left: 50%; transform: translateX(-50%); width: 1000px; height: 500px; background-color: #1e1b4b; opacity: 0.5; filter: blur(120px); border-radius: 50%; pointer-events: none;"></div>
 
     <div class="container" style="position: relative; z-index: 10;">
       <!-- Floating Status Badge -->
-      <div style="display: inline-block; background-color: rgba(124, 58, 237, 0.15); color: #a78bfa; padding: 12px 28px; border-radius: 100px; font-size: 14px; font-weight: 800; border: 1px solid rgba(167, 139, 250, 0.3); margin-bottom: 50px; letter-spacing: 2px; text-transform: uppercase; backdrop-filter: blur(10px);">
-        &#10024; Verified for Odoo 19.0
+      <div style="display: inline-block; background-color: #1e1b4b; color: #a78bfa; padding: 12px 28px; border-radius: 100px; font-size: 13px; font-weight: 800; border: 1px solid #7c3aed; margin-bottom: 60px; letter-spacing: 2px; text-transform: uppercase; box-shadow: 0 0 20px rgba(124, 58, 237, 0.2);">
+        <span style="color: #ffffff; margin-right: 8px;">&#10024;</span> Neural Engine Verified for Odoo 19.0
       </div>
 
-      <h1 style="font-size: clamp(3.5rem, 10vw, 7.5rem); line-height: 0.9; font-weight: 900; letter-spacing: -0.06em; margin-bottom: 40px; color: #503c3c;"> 
-        Predict the <br> <span style="background-color: #7c3aed; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Unpredictable.</span>
+      <h1 style="font-size: clamp(3.5rem, 10vw, 8rem); line-height: 0.85; font-weight: 900; letter-spacing: -0.06em; margin-bottom: 45px; color: #ffffff;"> 
+        Predict the <br> <span style="color: #7c3aed;">Unpredictable.</span>
       </h1>
       
-      <p style="font-size: 1.6rem; color: #94a3b8; max-width: 900px; margin: 0 auto 100px; line-height: 1.5; font-weight: 400;">
+      <p style="font-size: 1.6rem; color: #94a3b8; max-width: 900px; margin: 0 auto 100px; line-height: 1.5; font-weight: 400; opacity: 0.9;">
         Stop guessing. Niyu uses Neural Networks to audit your Odoo sales history <br> and generate a surgical 30-day purchasing plan.
       </p>
 
       <!-- MASSIVE CINEMATIC VIDEO DISPLAY - ENHANCED FRAME -->
       <div style="padding: 0 20px; position: relative;">
-        <!-- ADDED: Floating Metric Node Left -->
-        <div style="position: absolute; left: 0%; top: 20%; background-color: rgba(15, 23, 42, 0.8); border-color: 1px solid rgba(255,255,255,0.1); padding: 20px; border-radius: 20px; backdrop-filter: blur(10px); z-index: 11; text-align: left;" class="d-none d-xl-block">
-            <div style="color: #7c3aed; font-weight: 900; font-size: 24px;">99.2%</div>
-            <div style="color: #94a3b8; font-size: 10px; text-transform: uppercase; letter-spacing: 1px;">Forecast Accuracy</div>
+        
+        <!-- Metric Node Left -->
+        <div style="position: absolute; left: 2%; top: 15%; background-color: #1e1b4b; border: 1px solid #7c3aed; padding: 25px; border-radius: 24px; backdrop-filter: blur(10px); z-index: 15; text-align: left; box-shadow: 0 20px 40px rgba(0,0,0,0.4);" class="d-none d-xl-block">
+            <div style="color: #7c3aed; font-weight: 900; font-size: 28px; line-height: 1;">99.2%</div>
+            <div style="color: #94a3b8; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; margin-top: 8px; font-weight: 700;">Forecast Accuracy</div>
+            <div style="width: 40px; height: 2px; background-color: #7c3aed; margin-top: 15px;"></div>
         </div>
 
-        <div style="max-width: 1400px; margin: 0 auto; border-radius: 4rem; padding: 15px; background-color: rgba(255, 255, 255, 0.05); box-shadow: 0 60px 120px -20px rgba(0, 0, 0, 0.8); border: 1px solid rgba(255, 255, 255, 0.1);">
-          <video autoplay loop muted playsinline preload="auto" style="width: 100%; display: block; border-radius: 3rem; background-color: #000;">
-            <source src="./snowflakevideo.webm" type="video/webm">
-            <source src="static/description/q1.mp4" type="video/mp4">
-          </video>
+        <!-- Metric Node Right -->
+        <div style="position: absolute; right: 2%; bottom: 15%; background-color: #1e1b4b; border: 1px solid #db2777; padding: 25px; border-radius: 24px; backdrop-filter: blur(10px); z-index: 15; text-align: left; box-shadow: 0 20px 40px rgba(0,0,0,0.4);" class="d-none d-xl-block">
+            <div style="color: #db2777; font-weight: 900; font-size: 28px; line-height: 1;">&#8734;</div>
+            <div style="color: #94a3b8; font-size: 10px; text-transform: uppercase; letter-spacing: 2px; margin-top: 8px; font-weight: 700;">SKU Capacity</div>
+            <div style="width: 40px; height: 2px; background-color: #db2777; margin-top: 15px;"></div>
         </div>
 
-        <!-- ADDED: Floating Metric Node Right -->
-        <div style="position: absolute; right: 0%; bottom: 20%; background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255,255,255,0.1); padding: 20px; border-radius: 20px; backdrop-filter: blur(10px); z-index: 11; text-align: left;" class="d-none d-xl-block">
-            <div style="color: #db2777; font-weight: 900; font-size: 24px;">&#8734;</div>
-            <div style="color: #94a3b8; font-size: 10px; text-transform: uppercase; letter-spacing: 1px;">SKU Capacity</div>
+        <!-- Video Container -->
+        <div style="max-width: 1350px; margin: 0 auto; border-radius: 3.5rem; padding: 12px; background-color: #1e1b4b; box-shadow: 0 80px 150px -30px #000000; border: 1px solid rgba(255, 255, 255, 0.1);">
+          <div style="border-radius: 2.8rem; overflow: hidden; background-color: #000000;">
+            <video autoplay loop muted playsinline preload="auto" style="width: 100%; display: block; border-radius: 2.8rem; filter: contrast(1.05);">
+                <source src="./snowflakevideo.webm" type="video/webm">
+                <source src="static/description/q1.mp4" type="video/mp4">
+            </video>
+          </div>
         </div>
       </div>
 
       <!-- Feature Pill Row -->
-      <div class="d-flex flex-wrap justify-content-center gap-3 mt-5">
-          <span style="background-color: #7c3aed; color: #ffffff; padding: 15px 35px; border-radius: 100px; font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">&#128680; Spike Detection</span>
-          <span style="background-color: #db2777; color: #ffffff; padding: 15px 35px; border-radius: 100px; font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">&#9881; Auto-Draft POs</span>
-          <span style="background-color: #ffffff; color: #0f172a; padding: 15px 35px; border-radius: 100px; font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 1px;">&#128200; 30-Day Forecast</span>
+      <div class="d-flex flex-wrap justify-content-center gap-4 mt-5">
+          <span style="background-color: #7c3aed; color: #ffffff; padding: 18px 45px; border-radius: 100px; font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; box-shadow: 0 10px 20px rgba(124, 58, 237, 0.3);">
+            <span style="margin-right: 12px;">&#128680;</span> Spike Detection
+          </span>
+          <span style="background-color: #db2777; color: #ffffff; padding: 18px 45px; border-radius: 100px; font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; box-shadow: 0 10px 20px rgba(219, 39, 119, 0.3);">
+            <span style="margin-right: 12px;">&#9881;</span> Auto-Draft POs
+          </span>
+          <span style="background-color: #ffffff; color: #0f172a; padding: 18px 45px; border-radius: 100px; font-weight: 800; font-size: 14px; text-transform: uppercase; letter-spacing: 2px; border: 1px solid #e2e8f0;">
+            <span style="margin-right: 12px;">&#128200;</span> 30-Day Forecast
+          </span>
       </div>
     </div>
   </header>
