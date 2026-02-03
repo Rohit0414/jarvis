@@ -122,73 +122,101 @@
   </section>
 
   <!-- ==============================================
-       4. HOW IT WORKS (Detailed Steps)
+       4. HOW IT WORKS (RE-ARRANGED FOR FULL SIZE PHOTOS)
        ============================================== -->
   <section id="how" style="padding: 100px 0; background-color: #f8fafc; border-top: 1px solid #e2e8f0; background-image: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);">
     <div class="container">
       <div class="text-center mb-5">
-        <h2 style="font-size: 36px; font-weight: 900; color: #0f172a;">How Niyu Solves It</h2>
-        <p style="color: #64748b;">Automated Intelligence in 3 Steps.</p>
+        <h2 style="font-size: 48px; font-weight: 900; color: #0f172a;">How Niyu Solves It</h2>
+        <p style="color: #64748b; font-size: 1.2rem;">Automated Intelligence in 3 Steps.</p>
       </div>
 
-      <!-- Step 1 -->
-      <div style="background-color: #ffffff; border-radius: 24px; padding: 40px; margin-bottom: 30px; border: 1px solid #e2e8f0; display: flex; flex-wrap: wrap; align-items: center; box-shadow: 0 10px 40px rgba(0,0,0,0.05);">
-        <div style="flex: 1; min-width: 300px; padding-right: 30px;">
-            <div style="display: inline-block; background-color: #e0f2fe; color: #0284c7; font-weight: 800; padding: 5px 15px; border-radius: 20px; margin-bottom: 15px;">STEP 1</div>
-            <h3 style="font-size: 28px; font-weight: 800; margin-bottom: 15px; color: #0f172a;">Ingest & Cleanse</h3>
-            <p style="color: #64748b; font-size: 16px; margin-bottom: 20px;">
-                We pull 24 months of history. But raw data is dirty. Niyu automatically removes "outliers" (like that one time a B2B client bought 1,000 units).
-            </p>
-            <ul style="color: #475569; font-size: 14px;">
-                <li>&#10003; Sales Orders & POS Orders</li>
-                <li>&#10003; Stock Moves & Returns</li>
-                <li>&#10003; Outlier Detection Algorithms</li>
-            </ul>
+      <!-- Step 1: Vertical Layout for Full Width Image -->
+      <div style="background-color: #ffffff; border-radius: 32px; padding: 60px 40px; margin-bottom: 60px; border: 1px solid #e2e8f0; box-shadow: 0 20px 40px rgba(0,0,0,0.03);">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-7">
+                <div style="display: inline-block; background-color: #e0f2fe; color: #0284c7; font-weight: 800; padding: 5px 15px; border-radius: 20px; margin-bottom: 15px;">STEP 1</div>
+                <h3 style="font-size: 36px; font-weight: 800; margin-bottom: 20px; color: #0f172a;">Ingest & Cleanse</h3>
+                <p style="color: #64748b; font-size: 18px; line-height: 1.8;">
+                    We pull 24 months of history. But raw data is dirty. Niyu automatically removes "outliers" (like that one time a B2B client bought 1,000 units).
+                </p>
+            </div>
+            <div class="col-lg-5">
+                <ul style="color: #475569; font-size: 16px; list-style: none; padding: 0;">
+                    <li style="margin-bottom: 10px;"><b style="color:#0284c7;">&#10003;</b> Sales Orders & POS Orders</li>
+                    <li style="margin-bottom: 10px;"><b style="color:#0284c7;">&#10003;</b> Stock Moves & Returns</li>
+                    <li style="margin-bottom: 10px;"><b style="color:#0284c7;">&#10003;</b> Outlier Detection Algorithms</li>
+                </ul>
+            </div>
         </div>
-        <div style="flex: 1; min-width: 300px; text-align: center; padding: 10px;">
-             <img src="./niyu_forecast_graph.png" alt="Graph" style="width: 100%; height: auto; border-radius: 12px; border: 1px solid #f1f5f9; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
-        </div>
-      </div>
-
-      <!-- Step 2 -->
-      <div style="background-color: #ffffff; border-radius: 24px; padding: 40px; margin-bottom: 30px; border: 1px solid #e2e8f0; display: flex; flex-wrap: wrap; align-items: center; box-shadow: 0 10px 40px rgba(0,0,0,0.05);">
-        <div style="flex: 1; min-width: 300px; padding-right: 30px;">
-            <div style="display: inline-block; background-color: #f3e8ff; color: #7c3aed; font-weight: 800; padding: 5px 15px; border-radius: 20px; margin-bottom: 15px;">STEP 2</div>
-            <h3 style="font-size: 28px; font-weight: 800; margin-bottom: 15px; color: #0f172a;">AI Processing (AutoARIMA)</h3>
-            <p style="color: #64748b; font-size: 16px; margin-bottom: 20px;">
-                Our engine runs thousands of statistical models per SKU. It detects seasonality (annual cycles) and recent trends (velocity shifts).
-            </p>
-            <ul style="color: #475569; font-size: 14px;">
-                <li>&#10003; 30-Day Forward Forecast</li>
-                <li>&#10003; Safety Stock Buffer Calculation</li>
-                <li>&#10003; Confidence Intervals</li>
-            </ul>
-        </div>
-        <div style="flex: 1; min-width: 300px; text-align: center; padding: 10px;">
-             <!-- NEW IMAGE 2 (Replacing placeholder div) -->
-             <img src="./niyu_ai_processing.png" alt="AI Processing Illustration" style="width: 100%; height: auto; border-radius: 12px; border: 1px solid #7c3aed; box-shadow: 0 5px 15px rgba(124, 58, 237, 0.15);">
+        <!-- FULL SIZE PHOTO 1 -->
+        <div style="border-radius: 20px; overflow: hidden; border: 1px solid #f1f5f9; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+            <img src="./niyu_forecast_graph.png" alt="Data Cleaning" style="width: 100%; height: auto; display: block;">
         </div>
       </div>
 
-      <!-- Step 3 -->
-      <div style="background-color: #ffffff; border-radius: 24px; padding: 40px; margin-bottom: 30px; border: 1px solid #e2e8f0; display: flex; flex-wrap: wrap; align-items: center; box-shadow: 0 10px 40px rgba(0,0,0,0.05);">
-        <div style="flex: 1; min-width: 300px; padding-right: 30px;">
-            <div style="display: inline-block; background-color: #fce7f3; color: #db2777; font-weight: 800; padding: 5px 15px; border-radius: 20px; margin-bottom: 15px;">STEP 3</div>
-            <h3 style="font-size: 28px; font-weight: 800; margin-bottom: 15px; color: #0f172a;">Actionable Output</h3>
-            <p style="color: #64748b; font-size: 16px; margin-bottom: 20px;">
-                We don't just give you a graph. We give you a <b>Draft Purchase Order</b> in Odoo.
-            </p>
-            <ul style="color: #475569; font-size: 14px;">
-                <li>&#10003; Grouped by Vendor</li>
-                <li>&#10003; Optimal Quantities Pre-Filled</li>
-                <li>&#10003; One-Click Confirmation</li>
-            </ul>
+      <!-- Step 2: Vertical Layout for Full Width Image -->
+      <div style="background-color: #ffffff; border-radius: 32px; padding: 60px 40px; margin-bottom: 60px; border: 1px solid #e2e8f0; box-shadow: 0 20px 40px rgba(0,0,0,0.03);">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-7">
+                <div style="display: inline-block; background-color: #f3e8ff; color: #7c3aed; font-weight: 800; padding: 5px 15px; border-radius: 20px; margin-bottom: 15px;">STEP 2</div>
+                <h3 style="font-size: 36px; font-weight: 800; margin-bottom: 20px; color: #0f172a;">AI Processing (AutoARIMA)</h3>
+                <p style="color: #64748b; font-size: 18px; line-height: 1.8;">
+                    Our engine runs thousands of statistical models per SKU. It detects seasonality (annual cycles) and recent trends (velocity shifts).
+                </p>
+            </div>
+            <div class="col-lg-5">
+                <ul style="color: #475569; font-size: 16px; list-style: none; padding: 0;">
+                    <li style="margin-bottom: 10px;"><b style="color:#7c3aed;">&#10003;</b> 30-Day Forward Forecast</li>
+                    <li style="margin-bottom: 10px;"><b style="color:#7c3aed;">&#10003;</b> Safety Stock Buffer Calculation</li>
+                    <li style="margin-bottom: 10px;"><b style="color:#7c3aed;">&#10003;</b> Confidence Intervals</li>
+                </ul>
+            </div>
         </div>
-        <div style="flex: 1; min-width: 300px; text-align: center; padding: 10px;">
-             <img src="./niyu_hero_dashboard.png" alt="Dashboard" style="width: 100%; height: auto; border-radius: 12px; border: 1px solid #f1f5f9; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
+        <!-- FULL SIZE PHOTO 2 (NEW ADDITION) -->
+        <div style="border-radius: 20px; overflow: hidden; border: 1px solid #f1f5f9; box-shadow: 0 10px 30px rgba(124, 58, 237, 0.1);">
+            <img src="./niyu_ai_processing.png" alt="AI Engine" style="width: 100%; height: auto; display: block;" onerror="this.src='./niyu_forecast_graph.png'">
         </div>
       </div>
 
+      <!-- Step 3: Vertical Layout for Full Width Image -->
+      <div style="background-color: #ffffff; border-radius: 32px; padding: 60px 40px; border: 1px solid #e2e8f0; box-shadow: 0 20px 40px rgba(0,0,0,0.03);">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-7">
+                <div style="display: inline-block; background-color: #fce7f3; color: #db2777; font-weight: 800; padding: 5px 15px; border-radius: 20px; margin-bottom: 15px;">STEP 3</div>
+                <h3 style="font-size: 36px; font-weight: 800; margin-bottom: 20px; color: #0f172a;">Actionable Output</h3>
+                <p style="color: #64748b; font-size: 18px; line-height: 1.8;">
+                    We don't just give you a graph. We give you a <b>Draft Purchase Order</b> in Odoo, grouped by vendor with optimal quantities.
+                </p>
+            </div>
+            <div class="col-lg-5">
+                <ul style="color: #475569; font-size: 16px; list-style: none; padding: 0;">
+                    <li style="margin-bottom: 10px;"><b style="color:#db2777;">&#10003;</b> Grouped by Vendor</li>
+                    <li style="margin-bottom: 10px;"><b style="color:#db2777;">&#10003;</b> Optimal Quantities Pre-Filled</li>
+                    <li style="margin-bottom: 10px;"><b style="color:#db2777;">&#10003;</b> One-Click Confirmation</li>
+                </ul>
+            </div>
+        </div>
+        <!-- FULL SIZE PHOTO 3 -->
+        <div style="border-radius: 20px; overflow: hidden; border: 1px solid #f1f5f9; box-shadow: 0 10px 30px rgba(219, 39, 119, 0.1);">
+            <img src="./niyu_hero_dashboard.png" alt="Draft Purchase Orders" style="width: 100%; height: auto; display: block;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==============================================
+       NEW SECTION: DETAILED ANALYSIS SHOWCASE (PHOTO 4)
+       ============================================== -->
+  <section style="padding: 100px 0; background-color: #ffffff;">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 style="font-size: 36px; font-weight: 900; color: #0f172a;">Deep Dive Analysis</h2>
+            <p style="color: #64748b;">Visualize velocity and stock trends for every SKU.</p>
+        </div>
+        <div style="border-radius: 32px; overflow: hidden; border: 1px solid #e2e8f0; box-shadow: 0 40px 80px rgba(0,0,0,0.08);">
+            <img src="./niyu_analysis_report.png" alt="Full Analysis Report" style="width: 100%; height: auto; display: block;" onerror="this.src='./niyu_hero_dashboard.png'">
+        </div>
     </div>
   </section>
 
