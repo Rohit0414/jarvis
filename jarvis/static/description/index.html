@@ -6,124 +6,73 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- 2. ULTRA PREMIUM STYLES -->
+    <!-- 2. STYLES -->
     <style>
-        /* --- CORE & UTILS --- */
+        /* CORE */
         #niyu-doc { line-height: 1.6; -webkit-font-smoothing: antialiased; }
         .font-mono { font-family: 'JetBrains Mono', monospace; }
         
-        /* Aurora Gradients */
+        /* GRADIENDS */
         .aurora-bg {
-            background: 
-                radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
-                radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
-                radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
+            background: radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
             background-size: 100% 100%;
         }
-        
-        .text-gradient-gold {
-            background: linear-gradient(135deg, #FFF 0%, #cbd5e1 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .text-gradient-brand {
-            background: linear-gradient(135deg, #4f46e5 0%, #ec4899 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+        .text-gradient-gold { background: linear-gradient(135deg, #FFF 0%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .text-gradient-brand { background: linear-gradient(135deg, #4f46e5 0%, #ec4899 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 
-        /* --- GLASSMORPHISM PRO --- */
+        /* GLASS & CARDS */
         .glass-panel {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.6); box-shadow: 0 10px 40px -10px rgba(0,0,0,0.05); border-radius: 20px;
         }
-
         .glass-dark {
-            background: rgba(15, 23, 42, 0.6);
-            backdrop-filter: blur(24px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: white;
+            background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(24px); border: 1px solid rgba(255, 255, 255, 0.1); color: white;
         }
+        .feature-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease; height: 100%; border: 1px solid #e2e8f0; background: white; border-radius: 24px; overflow: hidden;
+        }
+        .feature-card:hover { transform: translateY(-5px); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08); border-color: #cbd5e1; }
 
-        /* --- NAV DOCK --- */
+        /* NAV */
         .nav-dock {
-            background: rgba(15, 23, 42, 0.9);
-            backdrop-filter: blur(16px);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 100px;
-            padding: 6px;
-            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.5);
+            background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.1); border-radius: 100px; padding: 6px;
         }
-        .nav-item-dock {
-            color: #94a3b8; padding: 8px 20px; text-decoration: none; font-size: 13px; font-weight: 600; transition: all 0.2s; border-radius: 100px;
-        }
+        .nav-item-dock { color: #94a3b8; padding: 8px 24px; text-decoration: none; font-size: 13px; font-weight: 600; transition: all 0.2s; border-radius: 100px; }
         .nav-item-dock:hover { color: #fff; background: rgba(255,255,255,0.1); }
         .nav-item-dock.active { background: #4f46e5; color: white; }
 
-        /* --- CARDS & GRID --- */
-        .feature-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            height: 100%;
-            border: 1px solid #e2e8f0;
-            background: white;
-            border-radius: 24px;
-            overflow: hidden;
-        }
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
-            border-color: #cbd5e1;
-        }
-
-        /* --- ANIMATIONS --- */
-        @keyframes pulse-ring {
-            0% { transform: scale(0.33); opacity: 0.5; }
-            80%, 100% { opacity: 0; }
-        }
-        .pulsing-dot {
-            position: relative;
-            width: 8px; height: 8px; border-radius: 50%; background: #22c55e;
-        }
-        .pulsing-dot::before {
-            content: ''; position: absolute; left: -4px; top: -4px; width: 16px; height: 16px;
-            border-radius: 50%; background: #22c55e; animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
-        }
-
-        @keyframes float-y {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0); }
-        }
-        .floating { animation: float-y 4s ease-in-out infinite; }
-
-        /* --- TYPOGRAPHY --- */
+        /* UTILS */
         .display-super { font-size: clamp(3rem, 7vw, 6rem); letter-spacing: -0.04em; line-height: 0.95; font-weight: 900; }
         .section-padding { padding: 120px 0; }
+        
+        /* Spreadsheet Pattern for "Old Way" */
+        .bg-spreadsheet {
+            background-color: #f8fafc;
+            background-image: linear-gradient(#e2e8f0 1px, transparent 1px), linear-gradient(90deg, #e2e8f0 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        /* Icon Circles */
+        .icon-circle { width: 60px; height: 60px; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 28px; margin-bottom: 20px; }
+
+        /* Animation */
+        @keyframes float-y { 0% { transform: translateY(0); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0); } }
+        .floating { animation: float-y 5s ease-in-out infinite; }
     </style>
 
     <!-- ==============================================
          3. DARK HERO SECTION
          ============================================== -->
     <header class="position-relative text-white overflow-hidden" style="background-color: #020617; min-height: 850px;">
-        
-        <!-- Aurora Background -->
+        <!-- Aurora -->
         <div class="position-absolute top-0 start-0 w-100 h-100 aurora-bg"></div>
-        
-        <!-- Grid Overlay -->
-        <div class="position-absolute top-0 start-0 w-100 h-100" 
-             style="background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 50px 50px; mask-image: linear-gradient(to bottom, black 40%, transparent 100%);">
-        </div>
+        <div class="position-absolute top-0 start-0 w-100 h-100" style="background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 50px 50px; mask-image: linear-gradient(to bottom, black 40%, transparent 100%);"></div>
 
         <div class="container position-relative z-2 pt-5">
-            <!-- Top Nav -->
+            <!-- Nav -->
             <div class="d-flex justify-content-center mb-5">
                 <nav class="nav-dock d-flex gap-1">
-                    <a href="#compare" class="nav-item-dock">Before vs After</a>
+                    <a href="#compare" class="nav-item-dock">Strategy</a>
                     <a href="#features" class="nav-item-dock">Intelligence</a>
                     <a href="#pricing" class="nav-item-dock active">Pricing</a>
                     <a href="#faq" class="nav-item-dock">FAQ</a>
@@ -132,50 +81,43 @@
 
             <div class="row align-items-center mt-5 pt-4">
                 <div class="col-lg-12 text-center">
-                    <!-- Status Pill -->
                     <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill border border-secondary border-opacity-50 bg-white bg-opacity-10 mb-4 backdrop-blur">
-                        <div class="pulsing-dot"></div>
+                        <span class="spinner-grow spinner-grow-sm text-success" style="width: 0.5rem; height: 0.5rem;" role="status"></span>
                         <span class="font-mono text-white-50" style="font-size: 12px; letter-spacing: 1px;">SYSTEM ONLINE V19.0</span>
                     </div>
 
-                    <h1 class="display-super mb-4">
-                        Supply Chain <br> 
-                        <span class="text-gradient-gold">Superpowers.</span>
-                    </h1>
-                    
+                    <h1 class="display-super mb-4">Supply Chain <br> <span class="text-gradient-gold">Superpowers.</span></h1>
                     <p class="lead text-white-50 mx-auto mb-5" style="max-width: 700px; font-size: 1.25rem;">
-                        The first AI Purchasing Agent for Odoo. Niyu audits your history, predicts spikes, and auto-drafts POs so you never stock out again.
+                        The first AI Purchasing Agent for Odoo. Niyu audits your history, predicts spikes, and auto-drafts POs.
                     </p>
 
-                    <!-- Hero Visual / Dashboard Mockup -->
+                    <!-- Hero Visual -->
                     <div class="position-relative mx-auto mt-5" style="max-width: 1000px;">
                         
                         <!-- Floating Card Left -->
                         <div class="position-absolute top-50 start-0 translate-middle-y d-none d-xl-block floating" style="left: -80px !important; z-index: 3;">
-                            <div class="glass-dark p-3 rounded-4 shadow-lg" style="width: 220px;">
+                            <div class="glass-dark p-3 rounded-4 shadow-lg text-start" style="width: 220px;">
                                 <div class="d-flex gap-3 align-items-center mb-3">
-                                    <div class="bg-danger rounded-3 p-2"><i class="bi bi-graph-up-arrow text-white"></i></div>
+                                    <div class="bg-danger rounded-3 p-2 d-flex"><i class="bi bi-graph-up-arrow text-white"></i></div>
                                     <div>
-                                        <div class="text-white-50" style="font-size: 10px;">VELOCITY ALERT</div>
-                                        <div class="fw-bold">+240% Sales</div>
+                                        <div class="text-white-50" style="font-size: 10px; font-weight: 700;">VELOCITY ALERT</div>
+                                        <div class="fw-bold text-white">+240% Sales</div>
                                     </div>
                                 </div>
-                                <div class="progress bg-white bg-opacity-10" style="height: 4px;">
-                                    <div class="progress-bar bg-danger" style="width: 85%"></div>
-                                </div>
+                                <div class="progress bg-white bg-opacity-10" style="height: 4px;"><div class="progress-bar bg-danger" style="width: 85%"></div></div>
                             </div>
                         </div>
 
                         <!-- Main Video Container -->
-                        <div class="rounded-4 border border-secondary border-opacity-25 shadow-lg overflow-hidden position-relative bg-dark" style="box-shadow: 0 0 100px rgba(79, 70, 229, 0.2);">
-                             <!-- Mac Window Dots -->
+                        <div class="rounded-4 border border-secondary border-opacity-50 shadow-lg overflow-hidden position-relative bg-dark" style="box-shadow: 0 0 120px rgba(79, 70, 229, 0.25);">
+                             <!-- Mac Dots -->
                             <div class="bg-dark border-bottom border-secondary border-opacity-25 px-3 py-2 d-flex gap-2">
                                 <div class="rounded-circle bg-danger" style="width: 10px; height: 10px;"></div>
                                 <div class="rounded-circle bg-warning" style="width: 10px; height: 10px;"></div>
                                 <div class="rounded-circle bg-success" style="width: 10px; height: 10px;"></div>
                             </div>
                             <div class="position-relative" style="padding-top: 56.25%;">
-                                <video autoplay loop muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
+                                <video autoplay loop muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.9;">
                                     <source src="./snowflakevideo.webm" type="video/webm">
                                     <source src="static/description/q1.mp4" type="video/mp4">
                                 </video>
@@ -189,14 +131,13 @@
                         <div class="position-absolute top-50 end-0 translate-middle-y d-none d-xl-block floating" style="right: -80px !important; z-index: 3; animation-delay: 1s;">
                             <div class="glass-dark p-3 rounded-4 shadow-lg text-start" style="width: 220px;">
                                 <div class="d-flex justify-content-between mb-2">
-                                    <span class="text-white-50" style="font-size: 11px;">REORDER SUGGESTION</span>
-                                    <span class="badge bg-success bg-opacity-20 text-success">Approved</span>
+                                    <span class="text-white-50" style="font-size: 10px; font-weight: 700;">DRAFT PO #902</span>
+                                    <span class="badge bg-success bg-opacity-20 text-success" style="font-size: 9px;">READY</span>
                                 </div>
-                                <div class="fw-bold fs-5">4,500 Units</div>
+                                <div class="fw-bold fs-5 text-white">4,500 Units</div>
                                 <div class="text-white-50 small mt-1">Vendor: Azure Interior</div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -204,33 +145,33 @@
     </header>
 
     <!-- ==============================================
-         4. STATS STRIP
+         4. STATS
          ============================================== -->
     <div class="border-bottom bg-white">
         <div class="container py-4">
-            <div class="row text-center divide-x">
+            <div class="row text-center">
                 <div class="col-md-3">
-                    <div class="fw-bold fs-4 text-dark">4 Minutes</div>
-                    <div class="text-secondary small text-uppercase fw-bold">Setup Time</div>
+                    <div class="fw-black fs-4 text-dark">4 Minutes</div>
+                    <div class="text-secondary small text-uppercase fw-bold ls-1">Setup Time</div>
                 </div>
                 <div class="col-md-3 border-start">
-                    <div class="fw-bold fs-4 text-dark">99.2%</div>
-                    <div class="text-secondary small text-uppercase fw-bold">Forecast Accuracy</div>
+                    <div class="fw-black fs-4 text-dark">99.2%</div>
+                    <div class="text-secondary small text-uppercase fw-bold ls-1">Accuracy</div>
                 </div>
                 <div class="col-md-3 border-start">
-                    <div class="fw-bold fs-4 text-dark">v14-v19</div>
-                    <div class="text-secondary small text-uppercase fw-bold">Odoo Support</div>
+                    <div class="fw-black fs-4 text-dark">v14-v19</div>
+                    <div class="text-secondary small text-uppercase fw-bold ls-1">Supported</div>
                 </div>
                 <div class="col-md-3 border-start">
-                    <div class="fw-bold fs-4 text-dark">Stateless</div>
-                    <div class="text-secondary small text-uppercase fw-bold">Data Security</div>
+                    <div class="fw-black fs-4 text-dark">Stateless</div>
+                    <div class="text-secondary small text-uppercase fw-bold ls-1">Security</div>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- ==============================================
-         5. THE "OLD WAY" COMPARISON
+         5. COMPARISON (Improved)
          ============================================== -->
     <section id="compare" class="section-padding bg-light">
         <div class="container">
@@ -241,33 +182,32 @@
             
             <div class="row g-0 rounded-5 overflow-hidden shadow-lg border">
                 <!-- Old Way -->
-                <div class="col-lg-6 bg-white p-5 border-end position-relative" style="background: repeating-linear-gradient(45deg, #f8fafc, #f8fafc 10px, #ffffff 10px, #ffffff 20px);">
+                <div class="col-lg-6 bg-spreadsheet p-5 border-end position-relative">
                     <div class="position-absolute top-0 start-50 translate-middle-x mt-4 badge bg-secondary text-white px-3 py-2">THE OLD WAY</div>
-                    <div class="mt-5 text-center grayscale opacity-50">
+                    <div class="mt-5 text-center grayscale opacity-75">
                         <div class="display-1 mb-3">📉</div>
-                        <h3 class="fw-bold text-secondary">Manual Excel Hell</h3>
-                        <ul class="list-unstyled mt-4 text-start mx-auto" style="max-width: 300px;">
-                            <li class="mb-3 text-danger"><i class="bi bi-x-circle-fill me-2"></i> Static formulas break easily</li>
-                            <li class="mb-3 text-danger"><i class="bi bi-x-circle-fill me-2"></i> Ignores seasonality spikes</li>
-                            <li class="mb-3 text-danger"><i class="bi bi-x-circle-fill me-2"></i> "Gut feeling" purchasing</li>
-                            <li class="mb-3 text-danger"><i class="bi bi-x-circle-fill me-2"></i> 4-5 hours per week work</li>
+                        <h3 class="fw-bold text-dark">Manual Excel Hell</h3>
+                        <ul class="list-unstyled mt-4 text-start mx-auto fw-medium" style="max-width: 300px; color: #64748b;">
+                            <li class="mb-3"><i class="bi bi-x-circle-fill text-danger me-2"></i> Static formulas break easily</li>
+                            <li class="mb-3"><i class="bi bi-x-circle-fill text-danger me-2"></i> Ignores seasonality spikes</li>
+                            <li class="mb-3"><i class="bi bi-x-circle-fill text-danger me-2"></i> "Gut feeling" purchasing</li>
+                            <li class="mb-3"><i class="bi bi-x-circle-fill text-danger me-2"></i> 4-5 hours per week work</li>
                         </ul>
                     </div>
                 </div>
 
                 <!-- Niyu Way -->
                 <div class="col-lg-6 p-5 position-relative text-white overflow-hidden" style="background: #0f172a;">
-                     <div class="position-absolute top-0 start-0 w-100 h-100 opacity-25" style="background: radial-gradient(circle at top right, #4f46e5, transparent);"></div>
-                    
-                    <div class="position-absolute top-0 start-50 translate-middle-x mt-4 badge bg-primary text-white px-3 py-2 shadow-lg glow">WITH NIYU</div>
+                    <div class="position-absolute top-0 start-0 w-100 h-100 opacity-25" style="background: radial-gradient(circle at top right, #4f46e5, transparent);"></div>
+                    <div class="position-absolute top-0 start-50 translate-middle-x mt-4 badge bg-primary text-white px-3 py-2 shadow-lg">WITH NIYU</div>
                     <div class="mt-5 text-center position-relative z-1">
                         <div class="display-1 mb-3">🚀</div>
                         <h3 class="fw-bold text-white">Automated Intelligence</h3>
-                        <ul class="list-unstyled mt-4 text-start mx-auto" style="max-width: 300px;">
-                            <li class="mb-3 text-success fw-bold"><i class="bi bi-check-circle-fill me-2"></i> Neural forecasting</li>
-                            <li class="mb-3 text-success fw-bold"><i class="bi bi-check-circle-fill me-2"></i> Detects Viral Trends</li>
-                            <li class="mb-3 text-success fw-bold"><i class="bi bi-check-circle-fill me-2"></i> Data-backed Draft POs</li>
-                            <li class="mb-3 text-success fw-bold"><i class="bi bi-check-circle-fill me-2"></i> 4 minutes per week work</li>
+                        <ul class="list-unstyled mt-4 text-start mx-auto fw-bold" style="max-width: 300px;">
+                            <li class="mb-3 text-success"><i class="bi bi-check-circle-fill me-2"></i> Neural forecasting</li>
+                            <li class="mb-3 text-success"><i class="bi bi-check-circle-fill me-2"></i> Detects Viral Trends</li>
+                            <li class="mb-3 text-success"><i class="bi bi-check-circle-fill me-2"></i> Data-backed Draft POs</li>
+                            <li class="mb-3 text-success"><i class="bi bi-check-circle-fill me-2"></i> 4 minutes per week work</li>
                         </ul>
                     </div>
                 </div>
@@ -276,13 +216,13 @@
     </section>
 
     <!-- ==============================================
-         6. BENTO GRID FEATURES
+         6. FEATURES (Icons Fixed)
          ============================================== -->
     <section id="features" class="section-padding bg-white">
         <div class="container">
             <div class="row align-items-end mb-5">
                 <div class="col-lg-8">
-                    <h2 class="fw-black display-5 mb-0">Everything you need <br> to <span class="text-gradient-brand">scale supply.</span></h2>
+                    <h2 class="fw-black display-5 mb-0">Scale <span class="text-gradient-brand">Supply.</span></h2>
                 </div>
                 <div class="col-lg-4 text-lg-end">
                     <p class="text-secondary m-0">Modular features designed for the Odoo ecosystem.</p>
@@ -290,55 +230,52 @@
             </div>
 
             <div class="row g-4">
-                <!-- Tall Card Left -->
+                <!-- Neural Core -->
                 <div class="col-lg-4">
                     <div class="feature-card p-4 d-flex flex-column h-100 bg-light">
                         <div class="mb-auto">
-                            <div class="fs-1 mb-3 bg-white d-inline-block p-3 rounded-circle shadow-sm">🧠</div>
+                            <div class="icon-circle bg-white shadow-sm text-primary">🧠</div>
                             <h4 class="fw-bold">Neural Core</h4>
                             <p class="text-secondary">Our engine ingests 24 months of data, cleans outliers, and runs simulations to predict the future.</p>
                         </div>
                         <div class="mt-4 bg-white rounded-3 p-3 border shadow-sm">
                             <div class="d-flex justify-content-between small mb-2">
-                                <span class="text-muted">Prediction Confidence</span>
-                                <span class="fw-bold text-primary">High</span>
+                                <span class="text-muted fw-bold">Confidence</span>
+                                <span class="fw-bold text-success">99.8%</span>
                             </div>
-                            <div class="progress" style="height: 6px;">
-                                <div class="progress-bar bg-primary" style="width: 92%"></div>
-                            </div>
+                            <div class="progress" style="height: 6px;"><div class="progress-bar bg-success" style="width: 99%"></div></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- 2x2 Grid Right -->
                 <div class="col-lg-8">
                     <div class="row g-4">
                         <div class="col-md-6">
                             <div class="feature-card p-4 h-100">
-                                <i class="bi bi-calendar-range text-primary fs-3 mb-3 d-block"></i>
+                                <div class="icon-circle bg-primary bg-opacity-10 text-primary"><i class="bi bi-calendar-range"></i></div>
                                 <h5 class="fw-bold">Seasonality</h5>
-                                <p class="text-secondary small">Automatically ramps up stock before Christmas and ramps down in January. You don't have to tell it to.</p>
+                                <p class="text-secondary small">Automatically ramps up stock before Christmas and ramps down in January.</p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="feature-card p-4 h-100">
-                                <i class="bi bi-lightning-charge text-warning fs-3 mb-3 d-block"></i>
+                                <div class="icon-circle bg-warning bg-opacity-10 text-warning"><i class="bi bi-lightning-charge-fill"></i></div>
                                 <h5 class="fw-bold">Spike Detection</h5>
-                                <p class="text-secondary small">If a B2B client buys your whole stock, Niyu flags it as an "anomaly" so it doesn't skew your forecast.</p>
+                                <p class="text-secondary small">If a B2B client buys your whole stock, Niyu flags it as an "anomaly".</p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="feature-card p-4 h-100">
-                                <i class="bi bi-piggy-bank text-danger fs-3 mb-3 d-block"></i>
+                                <div class="icon-circle bg-danger bg-opacity-10 text-danger"><i class="bi bi-piggy-bank-fill"></i></div>
                                 <h5 class="fw-bold">Dead Stock Killer</h5>
-                                <p class="text-secondary small">Identifies capital tied up in slow-moving SKUs and suggests liquidation strategies.</p>
+                                <p class="text-secondary small">Identifies capital tied up in slow-moving SKUs and suggests liquidation.</p>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="feature-card p-4 h-100" style="background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%); color: white; border: none;">
-                                <i class="bi bi-shield-lock text-white fs-3 mb-3 d-block"></i>
+                                <div class="icon-circle bg-white bg-opacity-20 text-white"><i class="bi bi-shield-lock-fill"></i></div>
                                 <h5 class="fw-bold">Stateless Security</h5>
-                                <p class="text-white-50 small">We process math in RAM and purge data instantly. Your sales history never stays on our servers.</p>
+                                <p class="text-white-50 small">We process math in RAM and purge data instantly.</p>
                             </div>
                         </div>
                     </div>
@@ -348,52 +285,28 @@
     </section>
 
     <!-- ==============================================
-         7. TECH SPECS (Terminal)
+         7. TECH SPECS
          ============================================== -->
     <section class="py-5 bg-dark border-top border-secondary border-opacity-25">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-5 text-white">
-                    <h3 class="fw-bold mb-3">Built for Developers, <br> Loved by Managers.</h3>
+                    <h3 class="fw-bold mb-3">Built for Developers.</h3>
                     <p class="text-white-50">Niyu installs as a standard Odoo module but offloads the heavy lifting to our cloud GPU clusters.</p>
                     <div class="d-flex gap-4 mt-4">
-                        <div>
-                            <div class="fs-3 fw-bold text-primary">GPU</div>
-                            <div class="text-secondary small">Acceleration</div>
-                        </div>
-                        <div>
-                            <div class="fs-3 fw-bold text-primary">AES-256</div>
-                            <div class="text-secondary small">Encryption</div>
-                        </div>
-                        <div>
-                            <div class="fs-3 fw-bold text-primary">API</div>
-                            <div class="text-secondary small">Connectivity</div>
-                        </div>
+                        <div><div class="fs-3 fw-bold text-primary">GPU</div><div class="text-secondary small">Acceleration</div></div>
+                        <div><div class="fs-3 fw-bold text-primary">AES-256</div><div class="text-secondary small">Encryption</div></div>
+                        <div><div class="fs-3 fw-bold text-primary">API</div><div class="text-secondary small">Connectivity</div></div>
                     </div>
                 </div>
                 <div class="col-lg-7">
                     <div class="bg-black border border-secondary border-opacity-50 rounded-3 p-4 font-mono shadow-lg" style="font-size: 13px;">
                         <div class="text-secondary mb-2"># Processing Cycle Log</div>
-                        <div class="d-flex text-success">
-                            <span class="me-3 opacity-50">10:00:01</span>
-                            <span>initiating_neural_handshake()</span>
-                        </div>
-                        <div class="d-flex text-white">
-                            <span class="me-3 opacity-50 text-secondary">10:00:02</span>
-                            <span>exporting_sales_history [limit=24mo]... OK</span>
-                        </div>
-                        <div class="d-flex text-white">
-                            <span class="me-3 opacity-50 text-secondary">10:00:03</span>
-                            <span>detecting_outliers(method='IQR')... found 12 anomalies</span>
-                        </div>
-                        <div class="d-flex text-warning">
-                            <span class="me-3 opacity-50 text-secondary">10:00:04</span>
-                            <span>calculating_lead_time_variance...</span>
-                        </div>
-                        <div class="d-flex text-primary">
-                            <span class="me-3 opacity-50 text-secondary">10:00:05</span>
-                            <span>generating_draft_po(vendor='Azure')... CREATED PO00922</span>
-                        </div>
+                        <div class="d-flex text-success"><span class="me-3 opacity-50">10:00:01</span><span>initiating_neural_handshake()</span></div>
+                        <div class="d-flex text-white"><span class="me-3 opacity-50 text-secondary">10:00:02</span><span>exporting_sales_history [limit=24mo]... OK</span></div>
+                        <div class="d-flex text-white"><span class="me-3 opacity-50 text-secondary">10:00:03</span><span>detecting_outliers(method='IQR')... found 12 anomalies</span></div>
+                        <div class="d-flex text-warning"><span class="me-3 opacity-50 text-secondary">10:00:04</span><span>calculating_lead_time_variance...</span></div>
+                        <div class="d-flex text-primary"><span class="me-3 opacity-50 text-secondary">10:00:05</span><span>generating_draft_po(vendor='Azure')... CREATED PO00922</span></div>
                         <div class="mt-2 text-white blink">_</div>
                     </div>
                 </div>
@@ -402,7 +315,7 @@
     </section>
 
     <!-- ==============================================
-         8. PRICING CARDS
+         8. PRICING
          ============================================== -->
     <section id="pricing" class="section-padding" style="background: #f8fafc;">
         <div class="container">
@@ -412,7 +325,6 @@
             </div>
 
             <div class="row g-4 justify-content-center">
-                <!-- Free Tier -->
                 <div class="col-md-5 col-lg-4">
                     <div class="glass-panel p-5 h-100 d-flex flex-column bg-white">
                         <div class="fw-bold text-secondary text-uppercase ls-1 small mb-3">Community</div>
@@ -427,11 +339,9 @@
                     </div>
                 </div>
 
-                <!-- Pro Tier -->
                 <div class="col-md-5 col-lg-4">
                     <div class="glass-panel p-5 h-100 d-flex flex-column position-relative overflow-hidden bg-white" style="border: 2px solid #4f46e5;">
                         <div class="position-absolute top-0 end-0 bg-primary text-white text-uppercase fw-bold px-3 py-1" style="border-bottom-left-radius: 12px; font-size: 10px;">Recommended</div>
-                        
                         <div class="fw-bold text-primary text-uppercase ls-1 small mb-3">Growth</div>
                         <div class="display-4 fw-black mb-1">$49</div>
                         <div class="text-secondary mb-4">Per Month</div>
@@ -453,11 +363,11 @@
          ============================================== -->
     <footer class="py-5 bg-white border-top">
         <div class="container text-center">
-            <div class="d-inline-block bg-light rounded-4 p-5 mb-5 border">
+            <div class="d-inline-block bg-light rounded-4 p-5 mb-5 border shadow-sm">
                 <h3 class="fw-black mb-3">Ready to optimize?</h3>
                 <p class="text-secondary mb-4">Join 500+ Odoo companies predicting the future.</p>
                 <div class="d-flex justify-content-center gap-3">
-                    <a href="#" class="btn btn-dark rounded-pill px-4 py-2 fw-bold">Download Module</a>
+                    <a href="#" class="btn btn-dark rounded-pill px-4 py-2 fw-bold shadow">Download Module</a>
                     <a href="#" class="btn btn-outline-secondary rounded-pill px-4 py-2 fw-bold">Read Documentation</a>
                 </div>
             </div>
