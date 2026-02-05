@@ -1,284 +1,104 @@
 <!-- static/description/index.html -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<section style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif; line-height:1.7; margin:0; padding:0; overflow-x:hidden;">
+<section style="font-family:'Plus Jakarta Sans', sans-serif; background-color: #ffffff; color: #0f172a; overflow-x: hidden;">
 
-  <!-- 1. HERO SECTION (Dark & Vibrant) -->
-  <header style="background-color:#030712; padding: 140px 20px 80px 20px; text-align: center; position:relative; overflow: hidden; background-image: radial-gradient(circle at 20% 20%, rgba(45, 212, 191, 0.15), transparent 50%), radial-gradient(circle at 80% 80%, rgba(99, 102, 241, 0.15), transparent 50%);">
-    <div style="max-width: 100%; margin: 0 auto; position:relative; z-index:2;">
-      <h1 class="o_app_page_title" style="font-size: clamp(3.5rem, 8vw, 6rem); line-height: 0.95; font-weight: 900; letter-spacing: -0.06em; margin: 0 0 30px 0; color: #f9fafb;">
-        Predict the <br><span style="color:#2dd4bf; text-shadow: 0 0 30px rgba(45, 212, 191, 0.3);">Unpredictable.</span>
-      </h1>
-      <p style="font-size: clamp(1.25rem, 3vw, 1.6rem); font-weight: 500; color: #9ca3af; max-width: 850px; margin: 0 auto 60px; line-height: 1.5;">
-        Stop guessing stock levels. Niyu uses Neural Networks to audit your Odoo sales history and generate surgical 30-day purchasing plans instantly.
-      </p>
-
-      <div class="d-flex justify-content-center gap-4 flex-wrap" style="margin-bottom: 60px;">
-          <div style="display: flex; align-items: center; gap: 10px; font-weight: 700; color: #f9fafb; font-size: 14px; background: rgba(255,255,255,0.05); padding: 8px 16px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.1);">
-            <div style="width: 8px; height: 8px; background: #2dd4bf; border-radius: 50%; box-shadow: 0 0 10px #2dd4bf;"></div> Spike Detection
-          </div>
-          <div style="display: flex; align-items: center; gap: 10px; font-weight: 700; color: #f9fafb; font-size: 14px; background: rgba(255,255,255,0.05); padding: 8px 16px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.1);">
-            <div style="width: 8px; height: 8px; background: #10b981; border-radius: 50%; box-shadow: 0 0 10px #10b981;"></div> Auto-Draft POs
-          </div>
-          <div style="display: flex; align-items: center; gap: 10px; font-weight: 700; color: #f9fafb; font-size: 14px; background: rgba(255,255,255,0.05); padding: 8px 16px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.1);">
-            <div style="width: 8px; height: 8px; background: #0ea5e9; border-radius: 50%; box-shadow: 0 0 10px #0ea5e9;"></div> 99.4% Accuracy
-          </div>
-      </div>
-
-      <div style="max-width: 1100px; margin: 0 auto;">
-        <div style="border-radius: 2rem; padding: 4px; background: linear-gradient(135deg, #2dd4bf, #0ea5e9); box-shadow: 0 40px 100px -20px rgba(0,0,0,0.8);">
-            <video playsinline controls style="width: 100%; display: block; border-radius: calc(2rem - 4px); background-color: #000;">
-                <source src="./short.webm" type="video/webm">
-                <source src="./snowflakevideo.webm" type="video/mp4">
-            </video>
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- 2. STATISTICS STRIP (Vibrant Teal) -->
-  <section style="padding: 50px 0; background: #0d9488; color: white;">
-    <div class="container">
-        <div class="row g-4 text-center">
-            <div class="col-6 col-md-3">
-                <div style="font-size: 36px; font-weight: 900;">99.4%</div>
-                <div style="font-size: 12px; font-weight: 800; text-transform: uppercase; opacity: 0.8;">Forecast Accuracy</div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div style="font-size: 36px; font-weight: 900;">-35%</div>
-                <div style="font-size: 12px; font-weight: 800; text-transform: uppercase; opacity: 0.8;">Capital Tied in Stock</div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div style="font-size: 36px; font-weight: 900;">&lt; 4m</div>
-                <div style="font-size: 12px; font-weight: 800; text-transform: uppercase; opacity: 0.8;">Deployment Time</div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div style="font-size: 36px; font-weight: 900;">100%</div>
-                <div style="font-size: 12px; font-weight: 800; text-transform: uppercase; opacity: 0.8;">Stateless Security</div>
+    <!-- TOP NAVIGATION STRIP (Trust) -->
+    <div style="background: #f8fafc; border-bottom: 1px solid #e2e8f0; padding: 12px 0;">
+        <div class="container d-flex justify-content-between align-items-center">
+            <span style="font-size: 12px; font-weight: 700; color: #64748b; letter-spacing: 1px; text-transform: uppercase;">
+                Neural Engine V19 • Optimized for Community & Enterprise
+            </span>
+            <div style="display: flex; gap: 15px;">
+                <span style="font-size: 12px; font-weight: 800; color: #10b981;">● FREE FOREVER TIER INCLUDED</span>
             </div>
         </div>
     </div>
-  </section>
 
-  <!-- 3. HOW IT WORKS (Technical Dark) -->
-  <section style="padding:100px 15px; background-color:#0b1220;">
-    <div class="container text-center">
-        <span style="display:inline-block; font-size:13px; font-weight:800; color:#2dd4bf; background-color:rgba(45, 212, 191, 0.1); border:1px solid rgba(45, 212, 191, 0.3); border-radius:99px; padding:8px 16px; margin-bottom:15px;">THE NEURAL SEQUENCE</span>
-        <h2 style="font-size: clamp(2.2rem, 5vw, 2.8rem); font-weight:800; color:#f0fdfa; margin-bottom:40px;">From Sales Data to Purchasing Plan</h2>
-        
-        <div class="row g-4 text-start">
-            <div class="col-12 col-md-4">
-                <div style="background-color:#111827; border:1px solid #1f2937; border-radius:24px; padding:32px; height:100%;">
-                    <div style="font-size: 50px; font-weight: 800; color: #115e59; margin-bottom: 20px;">01</div>
-                    <h4 style="color:#f9fafb; font-weight:800;">Ingest & Cleanse</h4>
-                    <p style="color:#9ca3af; font-size: 15px;">Niyu audits 24 months of historical stock moves. Our cleaning engine automatically removes "outliers"—those random bulk B2B spikes that would otherwise ruin your forecast accuracy.</p>
+    <!-- MAIN HERO CONTENT -->
+    <header style="padding: 100px 0 80px 0; background: radial-gradient(circle at top right, #f0fdfa, #ffffff);">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Text Column -->
+                <div class="col-lg-6">
+                    <h1 style="font-size: clamp(3rem, 5vw, 4.5rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.04em; margin-bottom: 25px; color: #0f172a;">
+                        The Purchasing <span style="color: #0d9488;">Brain</span> <br> Odoo was missing.
+                    </h1>
+                    
+                    <p style="font-size: 1.25rem; color: #475569; line-height: 1.6; margin-bottom: 40px; max-width: 500px;">
+                        Stop guessing stock levels. Niyu audits your sales, predicts demand, and <b>pre-fills your Purchase Orders.</b> You just click confirm.
+                    </p>
+
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#how" style="background: #0f172a; color: #ffffff; padding: 18px 40px; border-radius: 12px; font-weight: 700; font-size: 16px; text-decoration: none; transition: 0.3s; box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15);">
+                            Download Module Free
+                        </a>
+                        <div style="padding: 18px 0; font-weight: 700; color: #64748b; font-size: 14px;">
+                            <span style="color: #10b981;">✓</span> No Credit Card Required
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-12 col-md-4">
-                <div style="background-color:#111827; border:1px solid #1f2937; border-radius:24px; padding:32px; height:100%;">
-                    <div style="font-size: 50px; font-weight: 800; color: #0d9488; margin-bottom: 20px;">02</div>
-                    <h4 style="color:#f9fafb; font-weight:800;">Neural Processing</h4>
-                    <p style="color:#9ca3af; font-size: 15px;">Our AI runs thousands of Monte Carlo simulations per SKU. It detects seasonality peaks and velocity shifts weeks before they happen, adjusting for lead-time variability.</p>
-                </div>
-            </div>
-            <div class="col-12 col-md-4">
-                <div style="background-color:#111827; border:1px solid #1f2937; border-radius:24px; padding:32px; height:100%;">
-                    <div style="font-size: 50px; font-weight: 800; color: #2dd4bf; margin-bottom: 20px;">03</div>
-                    <h4 style="color:#f9fafb; font-weight:800;">Auto-Draft POs</h4>
-                    <p style="color:#9ca3af; font-size: 15px;">Niyu translates complex math into Draft Purchase Orders in Odoo. Quantities are pre-filled, grouped by vendor, and optimized for your specific MOQs.</p>
+
+                <!-- Visual Column (The "Result" Mockup) -->
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <div style="position: relative; padding: 20px; background: #ffffff; border-radius: 30px; box-shadow: 0 50px 100px -20px rgba(0,0,0,0.08); border: 1px solid #f1f5f9;">
+                        <!-- Mockup of a Neural Draft PO -->
+                        <div style="background: #f8fafc; border-radius: 20px; padding: 25px; border: 1px solid #e2e8f0;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                                <div style="font-weight: 800; font-size: 14px; color: #0d9488; text-transform: uppercase; letter-spacing: 1px;">Neural Draft PO Generated</div>
+                                <span style="background: #0f172a; color: #fff; padding: 4px 12px; border-radius: 6px; font-size: 11px; font-weight: 700;">CONFIRMATION REQUIRED</span>
+                            </div>
+                            
+                            <!-- Item 1 -->
+                            <div style="display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid #e2e8f0;">
+                                <div>
+                                    <div style="font-weight: 700; font-size: 15px; color: #1e293b;">Product SKU-882</div>
+                                    <div style="font-size: 12px; color: #94a3b8;">Predicted Velocity: +14% Surge</div>
+                                </div>
+                                <div style="text-align: right;">
+                                    <div style="font-weight: 800; color: #0f172a;">1,402 Units</div>
+                                    <div style="font-size: 11px; color: #0d9488; font-weight: 700;">AI Optimized</div>
+                                </div>
+                            </div>
+                            <!-- Item 2 -->
+                            <div style="display: flex; justify-content: space-between; padding: 15px 0;">
+                                <div>
+                                    <div style="font-weight: 700; font-size: 15px; color: #1e293b;">Product SKU-441</div>
+                                    <div style="font-size: 12px; color: #94a3b8;">Predicted Velocity: Stable</div>
+                                </div>
+                                <div style="text-align: right;">
+                                    <div style="font-weight: 800; color: #0f172a;">450 Units</div>
+                                    <div style="font-size: 11px; color: #64748b; font-weight: 700;">Safe Buffer</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Stat -->
+                        <div style="position: absolute; -top: 20px; -right: 20px; background: #10b981; color: white; padding: 15px 25px; border-radius: 100px; font-weight: 800; font-size: 13px; box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);">
+                            -30% Inventory Costs
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div style="margin-top:60px; border-radius: 24px; overflow: hidden; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.8); border: 1px solid #1f2937;">
-            <img src="./realtime.png" alt="Forecast visualization" style="width: 100%; display: block;">
-        </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- 4. COMPARISON TABLE (Clean Light Mode) -->
-  <section style="padding: 100px 15px; background-color:#f8fafc; border-top:1px solid #e2e8f0; border-bottom:1px solid #e2e8f0;">
-    <div class="container">
-        <div class="row mb-5 text-center">
-            <div class="col-12">
-                <h2 style="font-size: 2.5rem; font-weight:800; color:#0f172a;">Static Rules vs. <span style="color:#0d9488">Niyu AI</span></h2>
-                <p style="color:#64748b; margin-top: 15px;">Why static reordering rules are failing your modern supply chain.</p>
+    <!-- TRUST STRIP -->
+    <div class="container" style="padding: 40px 0; border-top: 1px solid #f1f5f9;">
+        <div class="row text-center g-4">
+            <div class="col-md-4">
+                <div style="font-weight: 800; font-size: 14px; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px;">Step 1</div>
+                <div style="font-weight: 700; color: #0f172a;">AI Audits Sales</div>
             </div>
-        </div>
-        <div class="table-responsive" style="border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.05); overflow: hidden; border: 1px solid #e2e8f0;">
-            <table style="width: 100%; border-collapse: collapse; color: #334155; background: #ffffff;">
-                <thead>
-                    <tr style="background: #f1f5f9;">
-                        <th style="padding: 25px; text-align: left; color: #0f172a; font-weight: 800;">Requirement</th>
-                        <th style="padding: 25px; text-align: left; color: #64748b;">Standard Odoo Rules</th>
-                        <th style="padding: 25px; text-align: left; color: #0d9488;">Niyu Neural Engine</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td style="padding: 20px; border-bottom: 1px solid #f1f5f9; font-weight: 700;">Forecast Logic</td><td style="padding: 20px; border-bottom: 1px solid #f1f5f9;">Static Min/Max</td><td style="padding: 20px; border-bottom: 1px solid #f1f5f9; color: #0d9488; font-weight: 700;">AI Velocity Analysis</td></tr>
-                    <tr><td style="padding: 20px; border-bottom: 1px solid #f1f5f9; font-weight: 700;">Seasonality</td><td style="padding: 20px; border-bottom: 1px solid #f1f5f9;">Manual Updates</td><td style="padding: 20px; border-bottom: 1px solid #f1f5f9; color: #0d9488; font-weight: 700;">Auto-Detect Peaks</td></tr>
-                    <tr><td style="padding: 20px; border-bottom: 1px solid #f1f5f9; font-weight: 700;">Outlier Handling</td><td style="padding: 20px; border-bottom: 1px solid #f1f5f9;">Skewed by big orders</td><td style="padding: 20px; border-bottom: 1px solid #f1f5f9; color: #0d9488; font-weight: 700;">Intelligent Scrubbing</td></tr>
-                    <tr><td style="padding: 20px; border-bottom: 1px solid #f1f5f9; font-weight: 700;">Lead Times</td><td style="padding: 20px; border-bottom: 1px solid #f1f5f9;">Fixed Days</td><td style="padding: 20px; border-bottom: 1px solid #f1f5f9; color: #0d9488; font-weight: 700;">Variability Math</td></tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-  </section>
-
-  <!-- 5. BENEFITS (Vibrant Gradient) -->
-  <section style="padding: 100px 15px; background: linear-gradient(135deg, #f0fdfa 0%, #eef2ff 100%);">
-    <div class="container text-center">
-        <span style="display:inline-block; font-size:14px; font-weight:800; color:#0d9488; background-color:rgba(13, 148, 136, 0.1); border:1px solid rgba(13, 148, 136, 0.2); border-radius:99px; padding:8px 16px; margin-bottom:15px;">ROI METRICS</span>
-        <h2 style="font-size: 2.8rem; font-weight:800; color:#0f172a; margin-bottom: 50px;">Unlock Trapped Capital</h2>
-        <div class="row g-4 text-start">
-            <div class="col-12 col-md-4"><div style="background-color:#ffffff; border:1px solid #e2e8f0; border-radius:24px; padding:35px; height:100%; box-shadow: 0 10px 30px rgba(0,0,0,0.03);"><h4 style="color:#0f172a; font-size:1.3rem; font-weight:800; margin-bottom:15px;">🛡️ Prevent Lost Sales</h4><p style="margin:0; color:#64748b; font-size:1rem; line-height:1.6;">Niyu ensures your key SKUs stay at 99.9% availability, preventing lost revenue during demand surges.</p></div></div>
-            <div class="col-12 col-md-4"><div style="background-color:#ffffff; border:1px solid #e2e8f0; border-radius:24px; padding:35px; height:100%; box-shadow: 0 10px 30px rgba(0,0,0,0.03);"><h4 style="color:#0f172a; font-size:1.3rem; font-weight:800; margin-bottom:15px;">📉 Reduce Overstock</h4><p style="margin:0; color:#64748b; font-size:1rem; line-height:1.6;">Niyu detects "velocity decay" and tells you to stop purchasing before dead stock accumulates on your shelves.</p></div></div>
-            <div class="col-12 col-md-4"><div style="background-color:#ffffff; border:1px solid #e2e8f0; border-radius:24px; padding:35px; height:100%; box-shadow: 0 10px 30px rgba(0,0,0,0.03);"><h4 style="color:#0f172a; font-size:1.3rem; font-weight:800; margin-bottom:15px;">🚢 Lead-Time Buffer</h4><p style="margin:0; color:#64748b; font-size:1rem; line-height:1.6;">Stop paying for emergency Air Freight. Niyu plans for sea freight 6 weeks in advance so your items arrive JIT.</p></div></div>
-        </div>
-    </div>
-  </section>
-
-  <!-- 6. SECURITY & ARCHITECTURE (Dark Tech) -->
-  <section style="background-color: #0b1220; padding: 100px 15px; border-top: 1px solid #1f2937;">
-      <div class="container">
-          <div class="row g-5 align-items-center">
-              <div class="col-12 col-lg-6">
-                  <span style="display: inline-block; font-size: 14px; font-weight: 800; color: #4ade80; background-color: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.3); border-radius: 999px; padding: 8px 16px; margin-bottom: 16px;">SECURE ARCHITECTURE</span>
-                  <h2 style="font-size: 2.5rem; font-weight: 800; color: #bbf7d0; margin-bottom: 20px;">Stateless RAM Security</h2>
-                  <p style="font-size: 1.1rem; color: #9ca3af; margin-bottom: 24px;">Your sensitive sales data never lives on our servers. We use a high-security compute bridge.</p>
-                  <ul style="list-style:none; padding:0; color:#9ca3af; font-size:15px; line-height:2;">
-                      <li><span style="color:#4ade80;">✓</span> <b>Zero Storage:</b> Velocity data is purged instantly after processing.</li>
-                      <li><span style="color:#4ade80;">✓</span> <b>GPU Offloading:</b> Heavy math happens on our servers, keeping Odoo fast.</li>
-                      <li><span style="color:#4ade80;">✓</span> <b>TLS 1.3:</b> End-to-end encryption for every API handshake.</li>
-                  </ul>
-              </div>
-              <div class="col-12 col-lg-6">
-                  <div style="background: #111827; border-radius: 20px; padding: 40px; border: 1px dashed #14b8a6; font-family: monospace;">
-                      <div style="color: #14b8a6; margin-bottom: 10px;">[SECURITY_MODE: ACTIVE]</div>
-                      <div style="color: #94a3b8;">> Encrypting SKU_List... [OK]</div>
-                      <div style="color: #94a3b8;">> Running GPU Simulation... [OK]</div>
-                      <div style="color: #10b981; margin-top: 10px;">Forecast Successfully Returned to Odoo.</div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
-
-  <!-- 7. IMPLEMENTATION TERMINAL (Vibrant Dark) -->
-  <section style="background-color: #030712; padding: 100px 20px; border-top: 1px solid #1f2937;">
-    <div class="container">
-        <div class="row align-items-center g-5">
-            <div class="col-lg-6">
-                <h2 style="font-size: 2.5rem; font-weight: 900; color: #ffffff;">Rapid Deployment. <br><span style="color: #2dd4bf;">Absolute Control.</span></h2>
-                <div style="margin-top:40px;">
-                    <p style="color:#e2e8f0; font-weight:700;">1. Plugin & Authenticate</p>
-                    <p style="color:#94a3b8; font-size:14px;">Paste your secure API key to establish a TLS 1.3 encrypted bridge.</p>
-                    <p style="color:#e2e8f0; font-weight:700; margin-top:20px;">2. Map Your Warehouses</p>
-                    <p style="color:#94a3b8; font-size:14px;">Select which locations Niyu should monitor for velocity shifts.</p>
-                    <p style="color:#e2e8f0; font-weight:700; margin-top:20px;">3. Run First Audit</p>
-                    <p style="color:#94a3b8; font-size:14px;">Within minutes, Draft POs will populate your Odoo Purchase module.</p>
-                </div>
+            <div class="col-md-4">
+                <div style="font-weight: 800; font-size: 14px; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px;">Step 2</div>
+                <div style="font-weight: 700; color: #0f172a;">Neural Forecasting</div>
             </div>
-            <div class="col-lg-6">
-                <div style="background: #0b1220; border: 1px solid #1f2937; border-radius: 24px; padding: 30px; box-shadow: 0 40px 80px -20px rgba(0,0,0,0.6); font-family: monospace; font-size: 13px;">
-                    <div style="color: #10b981;">$ niyu --init --forecast-all</div>
-                    <div style="color: #94a3b8;">[SYSTEM] Connecting to Odoo Database v19.0... <span style="color: #2dd4bf;">SUCCESS</span></div>
-                    <div style="color: #94a3b8;">[NEURAL] Fetching stock_move historicals... DONE</div>
-                    <div style="color: #94a3b8;">[ENGINE] Monte Carlo Simulations running (n=5000)...</div>
-                    <div style="color: #ffffff; background: rgba(45, 212, 191, 0.1); padding: 10px; border-radius: 8px; margin: 15px 0;">PROJECTION: 1,402 Units Required for "Alpha Vendor"</div>
-                    <div style="color: #10b981;">> AUDIT COMPLETE. DRAFT POs READY.</div>
-                </div>
+            <div class="col-md-4">
+                <div style="font-weight: 800; font-size: 14px; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px;">Step 3</div>
+                <div style="font-weight: 700; color: #0f172a;">Draft PO Ready</div>
             </div>
         </div>
     </div>
-  </section>
-
-  <!-- 8. NIYU ECOSYSTEM (Clean White) -->
-  <section style="background-color: white; padding: 100px 15px; border-top: 1px solid #e0e0e0;">
-      <div class="container text-center">
-          <span style="display: inline-block; font-size: 14px; font-weight: 800; color: #047857; background-color: rgba(4, 120, 87, 0.1); border: 1px solid rgba(4, 120, 87, 0.4); border-radius: 999px; padding: 8px 16px; margin-bottom: 16px;">THE NIYU ECOSYSTEM</span>
-          <h2 style="font-size: 2.8rem; font-weight: 900; color: #1f2937; margin-bottom: 50px;">Beyond Simple Forecasting</h2>
-          <img src="./niyu.gif" alt="Niyu AI Ecosystem" style="width: 100%; max-width: 1000px; border-radius: 2rem; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.1); border: 8px solid #f9fafb; margin-bottom: 50px;">
-          <div class="row g-4 text-start">
-              <div class="col-md-4"><div style="padding: 25px; border-radius: 20px; background: #f9fafb; border: 1px solid #e2e8f0;"><h5 style="font-weight: 800;">Intelligent Automation</h5><p style="font-size: 0.95rem; color: #64748b;">Automate repetitive replenishment workflows with smart guardrails.</p></div></div>
-              <div class="col-md-4"><div style="padding: 25px; border-radius: 20px; background: #f9fafb; border: 1px solid #e2e8f0;"><h5 style="font-weight: 800;">Deeper Insights</h5><p style="font-size: 0.95rem; color: #64748b;">Predictive analytics that show you where your warehouse is going.</p></div></div>
-              <div class="col-md-4"><div style="padding: 25px; border-radius: 20px; background: #f9fafb; border: 1px solid #e2e8f0;"><h5 style="font-weight: 800;">Seamless UX</h5><p style="font-size: 0.95rem; color: #64748b;">Complex math translated into beautiful Draft POs directly in Odoo.</p></div></div>
-          </div>
-      </div>
-  </section>
-
-  <!-- 9. NEURAL DEEP DIVE (Soft Gray) -->
-  <section style="background-color: #f8fafc; padding: 100px 15px; border-top: 1px solid #e2e8f0;">
-      <div class="container">
-          <div class="row align-items-center g-5">
-              <div class="col-lg-6">
-                  <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 24px; padding: 30px; box-shadow: 0 30px 60px rgba(0,0,0,0.05);">
-                      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;"><h5 style="font-weight: 800; color: #0f172a;">SKU Velocity Analysis</h5><span style="background: #f0fdf4; color: #166534; font-size: 11px; font-weight: 800; padding: 5px 12px; border-radius: 100px;">LIVE SYNC</span></div>
-                      <div style="height: 150px; display: flex; align-items: flex-end; gap: 8px;">
-                          <div style="flex: 1; height: 30%; background: #f1f5f9;"></div>
-                          <div style="flex: 1; height: 90%; background: #2dd4bf; box-shadow: 0 0 15px rgba(45, 212, 191, 0.4);"></div>
-                          <div style="flex: 1; height: 50%; background: #f1f5f9;"></div>
-                      </div>
-                      <p style="font-size: 13px; color: #64748b; margin-top: 20px;"><b>Neural Note:</b> 14% demand surge detected for SKU-882. Auto-adjusting buffers.</p>
-                  </div>
-              </div>
-              <div class="col-lg-6">
-                  <h2 style="font-size: 2.5rem; font-weight: 900; color: #0f172a; margin-bottom: 30px;">Math that works <br> <span style="color: #0d9488;">while you sleep.</span></h2>
-                  <div style="margin-bottom: 25px;"><h5 style="font-weight: 800;">● Seasonality Awareness</h5><p style="color: #64748b;">Niyu automatically identifies holiday peaks and Black Friday surges.</p></div>
-                  <div style="margin-bottom: 25px;"><h5 style="font-weight: 800;">● Multi-Vendor Logic</h5><p style="color: #64748b;">Group products by vendor lead times. Niyu ensures your POs meet MOQs.</p></div>
-              </div>
-          </div>
-      </div>
-  </section>
-
-  <!-- 10. INDUSTRY VERTICALS (Clean White) -->
-  <section style="background-color: #ffffff; padding: 100px 15px; border-top: 1px solid #e2e8f0;">
-    <div class="container">
-        <div class="row mb-5"><div class="col-12 text-center"><h2 style="font-size: 2.5rem; font-weight: 900;">Neural logic for every supply chain.</h2></div></div>
-        <div class="row g-4 text-center">
-            <div class="col-md-4"><div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 32px; padding: 40px; height: 100%;"><div style="font-size: 40px; margin-bottom: 20px;">🛒</div><h4 style="font-weight: 800;">E-commerce</h4><p style="color: #64748b;">Perfect for viral products. Niyu detects spikes in real-time before you sell out.</p></div></div>
-            <div class="col-md-4"><div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 32px; padding: 40px; height: 100%;"><div style="font-size: 40px; margin-bottom: 20px;">📦</div><h4 style="font-weight: 800;">Wholesale</h4><p style="color: #64748b;">Manage 10,000+ SKUs. Identify Velocity Decay in slow-moving items.</p></div></div>
-            <div class="col-md-4"><div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 32px; padding: 40px; height: 100%;"><div style="font-size: 40px; margin-bottom: 20px;">🏭</div><h4 style="font-weight: 800;">Manufacturing</h4><p style="color: #64748b;">Achieve true JIT inventory levels for raw material buffers.</p></div></div>
-        </div>
-    </div>
-  </section>
-
-  <!-- 11. PRICING SECTION (Dark & Vibrant) -->
-  <section style="background-color: #030712; padding: 100px 20px; border-top:1px solid #1f2937;">
-    <div class="container">
-        <div class="text-center mb-5 pb-3">
-            <span style="display:inline-block; font-size:12px; font-weight:800; color:#2dd4bf; background-color:rgba(45, 212, 191, 0.1); border:1px solid rgba(45, 212, 191, 0.3); border-radius:99px; padding:8px 20px; margin-bottom:15px; text-transform: uppercase;">Investment Plans</span>
-            <h2 style="font-size: 3rem; font-weight: 900; color: #ffffff;">Predictive Power for <span style="color: #2dd4bf;">Every Scale.</span></h2>
-        </div>
-        <div class="row g-4 align-items-center justify-content-center">
-            <div class="col-lg-4"><div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 32px; padding: 40px; color:#fff;"><h4 style="color: #94a3b8; font-weight: 700;">Starter</h4><div style="margin-bottom: 20px;"><span style="font-size: 48px; font-weight: 900;">$0</span></div><ul style="list-style: none; padding: 0; font-size: 14px; line-height: 2.5;"><li>✓ 50 SKU Monitoring</li><li>✓ Weekly Forecast</li></ul></div></div>
-            <div class="col-lg-4"><div style="background-color: #ffffff; border-radius: 32px; padding: 50px 40px; box-shadow: 0 0 60px -15px rgba(45, 212, 191, 0.4); border: 1px solid #2dd4bf; transform: scale(1.05);"><h4 style="color: #0f172a; font-weight: 800;">Neural Pro</h4><div style="margin-bottom: 20px;"><span style="font-size: 64px; font-weight: 900; color: #0f172a;">$49</span><span style="color: #64748b;">/mo</span></div><ul style="list-style: none; padding: 0; color: #334155; font-size: 15px; font-weight: 600; line-height: 2.5;"><li>✓ 10,000 SKU Monitoring</li><li>✓ Daily Auto-Analysis</li><li>✓ Auto-Draft POs</li></ul><a href="#" style="display: block; text-align: center; background: #0f172a; color: #ffffff; padding: 15px; border-radius: 14px; text-decoration: none; font-weight: 800; margin-top: 20px;">Get Pro Now →</a></div></div>
-            <div class="col-lg-4"><div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 32px; padding: 40px; color:#fff;"><h4 style="color: #94a3b8; font-weight: 700;">Enterprise</h4><div style="margin-bottom: 20px;"><span style="font-size: 48px; font-weight: 900;">Custom</span></div><ul style="list-style: none; padding: 0; font-size: 14px; line-height: 2.5;"><li>✓ Unlimited SKUs</li><li>✓ Multi-Warehouse Clustering</li></ul></div></div>
-        </div>
-    </div>
-  </section>
-
-  <!-- 12. FAQ (Light Mode) -->
-  <section style="padding: 100px 15px; background-color: white; border-top: 1px solid #e2e8f0;">
-    <div class="container">
-      <div style="text-align: center; margin-bottom: 60px;"><h2 style="font-size: 2.5rem; font-weight: 800; color: #0d9488;">Inventory FAQ</h2></div>
-      <div style="max-width: 900px; margin: 0 auto; border-top: 1px solid #e2e8f0;">
-        <div style="padding: 25px 0; border-bottom: 1px solid #e2e8f0;"><h4 style="font-size: 1.2rem; font-weight: 800; color: #0f172a;">Does it work with customized Odoo modules?</h4><p style="color: #64748b; margin-top: 8px;">Yes. Niyu looks at standard stock move records. As long as your customizations generate stock moves, Niyu can forecast them.</p></div>
-        <div style="padding: 25px 0; border-bottom: 1px solid #e2e8f0;"><h4 style="font-size: 1.2rem; font-weight: 800; color: #0f172a;">Is my sales data safe?</h4><p style="color: #64748b; margin-top: 8px;">We use stateless processing. We calculate velocity in volatile memory and purge it immediately. We never store your transaction history.</p></div>
-        <div style="padding: 25px 0; border-bottom: 1px solid #e2e8f0;"><h4 style="font-size: 1.2rem; font-weight: 800; color: #0f172a;">Can I set manual overrides?</h4><p style="color: #64748b; margin-top: 8px;">Absolutely. You can lock specific SKUs to follow your own rules while Niyu manages the rest of your catalog.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 13. FINAL CTA (Vibrant Dark) -->
-  <section style="padding: 100px 15px; background-color:#030712; border-top: 1px solid #1f2937;">
-    <div style="max-width: 1100px; margin: 0 auto; text-align: center;">
-      <div style="background: linear-gradient(135deg, #0f172a 0%, #064e3b 100%); padding: 80px 40px; border-radius: 3rem; box-shadow: 0 30px 60px rgba(0,0,0,0.2); border: 1px solid #1f2937;">
-        <h2 style="font-size: 3rem; font-weight: 800; margin-bottom: 20px; color:#2dd4bf;">Predict the Future of Your Stock.</h2>
-        <p style="max-width: 700px; margin: 0 auto 40px; color: #94a3b8; font-size: 1.2rem;">Empower your procurement team with live forecasts that eliminate guessing games and stockouts.</p>
-        <a href="https://apps.odoo.com/apps/modules/browse?search=Niyu" target="_blank" style="display: inline-block; background-color: #ffffff; color: #030712; padding: 20px 60px; font-size: 1.15rem; font-weight: 800; text-decoration: none; border-radius: 99px;">Get Niyu AI Forecast Now →</a>
-      </div>
-      <p style="margin-top: 50px; color: #94a3b8; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 3px;">OCTOBER 2025 | RELEASE V19.0.1 | NIYU LABS</p>
-    </div>
-  </section>
-
 </section>
