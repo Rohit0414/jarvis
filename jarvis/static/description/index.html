@@ -3,109 +3,116 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
-    .niyu-app-store-hero {
+    .niyu-product-page {
         font-family: 'Plus Jakarta Sans', sans-serif;
         background-color: #ffffff;
-        padding: 100px 0 60px 0;
-        overflow: hidden;
+        color: #0f172a;
+    }
+    .text-gradient-emerald {
+        background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        background: #f0fdfa;
+        color: #0d9488;
+        padding: 8px 20px;
+        border-radius: 100px;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        border: 1px solid #ccfbf1;
+        margin-bottom: 30px;
+    }
+    .btn-download-now {
+        background: #0f172a;
+        color: #ffffff;
+        padding: 22px 50px;
+        border-radius: 100px;
+        font-weight: 800;
+        font-size: 18px;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+        box-shadow: 0 20px 40px rgba(15, 23, 42, 0.2);
+    }
+    .btn-download-now:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 30px 60px rgba(15, 23, 42, 0.3);
+        color: #fff;
+    }
+    .glass-visual-card {
+        background: #ffffff;
+        border: 1px solid #f1f5f9;
+        border-radius: 40px;
+        padding: 40px;
+        box-shadow: 0 50px 100px -20px rgba(0,0,0,0.08);
         position: relative;
     }
-    .text-emerald { color: #10b981; }
-    .text-dark { color: #0f172a; }
-    
-    /* Elegant soft glow background */
-    .hero-glow {
-        position: absolute; top: -100px; right: -100px; width: 500px; height: 500px;
-        background: radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, transparent 70%);
-        pointer-events: none; z-index: 1;
-    }
-
-    .neural-badge {
-        display: inline-flex; align-items: center; background: #f0fdf4; 
-        color: #10b981; padding: 10px 24px; border-radius: 100px; 
-        font-size: 12px; font-weight: 800; border: 1px solid #dcfce7;
-        letter-spacing: 1.5px; margin-bottom: 35px;
-    }
-
-    .main-headline {
-        font-size: clamp(3.2rem, 6vw, 5.5rem); font-weight: 800; 
-        line-height: 0.95; letter-spacing: -0.05em; color: #0f172a; margin-bottom: 30px;
-    }
-
-    .btn-download {
-        background: #0f172a; color: #ffffff; padding: 22px 55px; 
-        border-radius: 100px; font-weight: 800; font-size: 19px; 
-        text-decoration: none; display: inline-block; transition: 0.3s;
-        box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
-    }
-    .btn-download:hover { transform: translateY(-3px); color: #fff; box-shadow: 0 35px 60px -12px rgba(15, 23, 42, 0.35); }
 </style>
 
-<section class="niyu-app-store-hero">
-    <div class="hero-glow"></div>
-    <div class="container" style="position: relative; z-index: 10;">
+<section class="niyu-product-page" style="padding: 100px 0 60px 0; overflow: hidden;">
+    <div class="container">
         <div class="row align-items-center">
             
-            <!-- THE HOOK: SOLUTION OVER FEATURE -->
+            <!-- THE HOOK -->
             <div class="col-lg-6">
-                <div class="neural-badge">NEURAL CORE v19 READY</div>
+                <div class="hero-badge">
+                    ✨ FREE TO DOWNLOAD • ODOO 19 READY
+                </div>
                 
-                <h1 class="main-headline">
-                    Your next <br> Purchase Order, <br> <span class="text-emerald">already drafted.</span>
+                <h1 style="font-size: clamp(3.2rem, 6vw, 5rem); font-weight: 800; line-height: 1; letter-spacing: -0.05em; margin-bottom: 25px;">
+                    Your warehouse, <br> <span class="text-gradient-emerald">on Autopilot.</span>
                 </h1>
                 
-                <p style="font-size: 1.35rem; color: #4b5563; max-width: 500px; margin-bottom: 45px; line-height: 1.5; font-weight: 400;">
-                    Stop calculating lead times and velocity. Niyu audits your Odoo history to predict demand and <b>pre-fills your RFQs</b> before you run out of stock.
+                <p style="font-size: 1.35rem; color: #64748b; line-height: 1.5; margin-bottom: 45px; font-weight: 400;">
+                    Stop wrestling with reordering rules. Niyu predicts your next 30 days and <b>pre-fills your Purchase Orders</b>. You just click confirm.
                 </p>
 
                 <div class="d-flex align-items-center gap-4 flex-wrap">
-                    <a href="#" class="btn-download">Download Free</a>
+                    <a href="#" class="btn-download-now">Download Free Now</a>
                     <div style="font-size: 14px; color: #94a3b8; font-weight: 600; line-height: 1.4;">
-                        <span style="color: #0f172a; font-weight: 800;">Free Forever</span> <br> Up to 20 Products
+                        <span style="color: #0f172a; font-weight: 800;">Free Forever Tier</span> <br> 20 Products Included
                     </div>
                 </div>
             </div>
 
-            <!-- THE VISUAL: THE EFFORTLESS RESULT -->
+            <!-- THE VISUAL RESULT (Apple-style Simple & Advanced) -->
             <div class="col-lg-6 mt-5 mt-lg-0">
-                <div style="position: relative;">
-                    <!-- Floating Neural Analysis Card -->
-                    <div style="background: #ffffff; border-radius: 32px; border: 1px solid #f1f5f9; box-shadow: 0 50px 100px -20px rgba(0,0,0,0.1); padding: 40px;">
-                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
-                            <div style="font-weight: 800; font-size: 14px; letter-spacing: 1px; color: #94a3b8;">NIYU PREDICTION</div>
-                            <div style="color: #10b981; font-weight: 800; font-size: 12px; display: flex; align-items: center; gap: 6px;">
-                                <span style="width: 8px; height: 8px; background: #10b981; border-radius: 50%;"></span> SYNCED
-                            </div>
-                        </div>
-
-                        <!-- The "One Action" result -->
-                        <div style="background: #f8fafc; border-radius: 20px; padding: 25px; border: 1px solid #e2e8f0;">
-                            <div style="margin-bottom: 15px;">
-                                <div style="font-size: 12px; color: #64748b; font-weight: 700; text-transform: uppercase;">Draft RFQ Prepared</div>
-                                <div style="font-size: 28px; font-weight: 900; color: #0f172a;">1,402 Units</div>
-                            </div>
-                            
-                            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
-                                <div style="flex-grow: 1; height: 6px; background: #e2e8f0; border-radius: 10px; overflow: hidden;">
-                                    <div style="width: 85%; height: 100%; background: #10b981;"></div>
-                                </div>
-                                <span style="font-size: 12px; font-weight: 800; color: #10b981;">85% Stockout Risk</span>
-                            </div>
-
-                            <p style="font-size: 13px; color: #475569; margin: 0; line-height: 1.5;">
-                                Based on a 45-day lead time and viral sales velocity, Niyu has drafted this order to arrive by Feb 14th.
-                            </p>
-                        </div>
-
-                        <!-- Confirm Button Mockup -->
-                        <div style="margin-top: 25px; background: #0f172a; color: #fff; padding: 15px; border-radius: 12px; text-align: center; font-weight: 800; font-size: 14px;">
-                            Confirm Draft in Odoo
-                        </div>
+                <div class="glass-visual-card">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 35px;">
+                        <h5 style="font-weight: 800; color: #0f172a; margin: 0;">Neural Analysis</h5>
+                        <div style="background: #10b981; color: white; padding: 5px 12px; border-radius: 8px; font-size: 10px; font-weight: 900; letter-spacing: 1px;">DRAFT RFQ READY</div>
                     </div>
 
-                    <!-- Side Stat (Confidence) -->
-                    <div style="position: absolute; top: -20px; right: -20px; background: #10b981; color: white; padding: 15px 25px; border-radius: 20px; font-weight: 900; font-size: 14px; box-shadow: 0 15px 30px rgba(16, 185, 129, 0.3);">
-                        99.4% Confidence
+                    <!-- Visualizing the Problem being solved -->
+                    <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 24px; padding: 30px;">
+                        <div style="margin-bottom: 20px;">
+                            <div style="font-size: 12px; font-weight: 800; color: #94a3b8; text-transform: uppercase; margin-bottom: 10px;">Predicted Demand Shift</div>
+                            <div style="font-size: 32px; font-weight: 900; color: #0f172a;">+1,402 Units</div>
+                        </div>
+                        
+                        <!-- Neural Status Bar -->
+                        <div style="height: 8px; background: #e2e8f0; border-radius: 10px; overflow: hidden; margin-bottom: 15px;">
+                            <div style="width: 85%; height: 100%; background: #10b981;"></div>
+                        </div>
+
+                        <p style="font-size: 14px; color: #4b5563; margin: 0; line-height: 1.6;">
+                            "Viral sales trend detected for <b>Product SKU-882</b>. Suggesting restock now to avoid a stockout on Feb 12th."
+                        </p>
+                    </div>
+
+                    <!-- The Outcome: The Confirmation Button -->
+                    <div style="margin-top: 30px; background: #0f172a; color: #ffffff; padding: 20px; border-radius: 16px; text-align: center; font-weight: 800; font-size: 15px;">
+                        Confirm Automated Purchase Order
+                    </div>
+
+                    <!-- Floating Performance Stat -->
+                    <div style="position: absolute; -top: 25px; -right: 25px; background: #ffffff; border: 1px solid #f1f5f9; padding: 15px 25px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); text-align: center;">
+                        <div style="color: #10b981; font-weight: 900; font-size: 24px;">0%</div>
+                        <div style="color: #94a3b8; font-size: 10px; font-weight: 800; text-transform: uppercase;">Stockout Risk</div>
                     </div>
                 </div>
             </div>
