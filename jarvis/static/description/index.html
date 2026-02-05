@@ -1,283 +1,124 @@
 <!-- static/description/index.html -->
-<section id="niyu-doc" style="font-family: 'Inter', system-ui, -apple-system, sans-serif; background-color: #ffffff; color: #0f172a; overflow-x: hidden; position: relative;">
+<section id="niyu-doc" style="background-color: #ffffff; color: #0f172a; font-family: 'Inter', system-ui, -apple-system, sans-serif;">
 
     <!-- 1. RESOURCES -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- 2. STYLES -->
+    <!-- 2. STABLE STYLES -->
     <style>
-        /* CORE */
-        #niyu-doc { line-height: 1.6; -webkit-font-smoothing: antialiased; }
-        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        /* Base Reset */
+        #niyu-doc h1, #niyu-doc h2, #niyu-doc h3, #niyu-doc h4, #niyu-doc h5 { font-weight: 800; letter-spacing: -0.02em; }
+        #niyu-doc p { font-size: 1.1rem; color: #475569; line-height: 1.7; }
         
-        /* GRADIENDS */
-        .aurora-bg {
-            background: radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
-            background-size: 100% 100%;
-        }
-        .text-gradient-gold { background: linear-gradient(135deg, #FFF 0%, #94a3b8 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .text-gradient-brand { background: linear-gradient(135deg, #4f46e5 0%, #ec4899 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        /* Section Spacing - CRITICAL FIX */
+        .section-block { padding-top: 80px; padding-bottom: 80px; border-bottom: 1px solid #f1f5f9; }
+        .hero-section { padding-top: 100px; padding-bottom: 100px; background: #0f172a; color: white; }
 
-        /* GLASS & CARDS */
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.6); box-shadow: 0 10px 40px -10px rgba(0,0,0,0.05); border-radius: 20px;
+        /* Cards */
+        .niyu-card {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 40px;
+            height: 100%;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s;
         }
-        .glass-dark {
-            background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(24px); border: 1px solid rgba(255, 255, 255, 0.1); color: white;
-        }
-        .feature-card {
-            transition: transform 0.3s ease, box-shadow 0.3s ease; height: 100%; border: 1px solid #e2e8f0; background: white; border-radius: 24px; overflow: hidden;
-        }
-        .feature-card:hover { transform: translateY(-5px); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08); border-color: #cbd5e1; }
+        .niyu-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
 
-        /* NAV */
-        .nav-dock {
-            background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(16px); border: 1px solid rgba(255,255,255,0.1); border-radius: 100px; padding: 6px;
+        /* Gradients */
+        .text-gradient {
+            background: linear-gradient(to right, #4f46e5, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        .nav-item-dock { color: #94a3b8; padding: 8px 24px; text-decoration: none; font-size: 13px; font-weight: 600; transition: all 0.2s; border-radius: 100px; }
-        .nav-item-dock:hover { color: #fff; background: rgba(255,255,255,0.1); }
-        .nav-item-dock.active { background: #4f46e5; color: white; }
-
-        /* UTILS */
-        .display-super { font-size: clamp(3rem, 7vw, 6rem); letter-spacing: -0.04em; line-height: 0.95; font-weight: 900; }
-        .section-padding { padding: 120px 0; }
-        
-        /* Spreadsheet Pattern for "Old Way" */
-        .bg-spreadsheet {
-            background-color: #f8fafc;
-            background-image: linear-gradient(#e2e8f0 1px, transparent 1px), linear-gradient(90deg, #e2e8f0 1px, transparent 1px);
-            background-size: 20px 20px;
-        }
-        
-        /* Icon Circles */
-        .icon-circle { width: 60px; height: 60px; border-radius: 16px; display: flex; align-items: center; justify-content: center; font-size: 28px; margin-bottom: 20px; }
-
-        /* Animation */
-        @keyframes float-y { 0% { transform: translateY(0); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0); } }
-        .floating { animation: float-y 5s ease-in-out infinite; }
     </style>
 
     <!-- ==============================================
-         3. DARK HERO SECTION
+         3. HERO SECTION (Dark & Spacious)
          ============================================== -->
-    <header class="position-relative text-white overflow-hidden" style="background-color: #020617; min-height: 850px;">
-        <!-- Aurora -->
-        <div class="position-absolute top-0 start-0 w-100 h-100 aurora-bg"></div>
-        <div class="position-absolute top-0 start-0 w-100 h-100" style="background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 50px 50px; mask-image: linear-gradient(to bottom, black 40%, transparent 100%);"></div>
+    <div class="hero-section text-center position-relative overflow-hidden">
+        <!-- Background Glow -->
+        <div style="position: absolute; top: -50%; left: 50%; transform: translateX(-50%); width: 1000px; height: 1000px; background: radial-gradient(circle, rgba(79, 70, 229, 0.15) 0%, rgba(15, 23, 42, 0) 70%); pointer-events: none;"></div>
+        
+        <div class="container position-relative z-1">
+            <span class="badge bg-primary bg-opacity-25 text-primary border border-primary border-opacity-25 px-3 py-2 rounded-pill mb-4">
+                🚀 VERIFIED FOR ODOO 19.0
+            </span>
+            <h1 class="display-3 mb-4 text-white">
+                Predict the <span class="text-gradient" style="-webkit-text-fill-color: transparent;">Unpredictable.</span>
+            </h1>
+            <p class="lead text-white-50 mb-5 mx-auto" style="max-width: 800px;">
+                Stop guessing with Excel. Niyu uses Neural Networks to audit your Odoo sales history, detect spikes, and generate surgical 30-day purchasing plans.
+            </p>
 
-        <div class="container position-relative z-2 pt-5">
-            <!-- Nav -->
-            <div class="d-flex justify-content-center mb-5">
-                <nav class="nav-dock d-flex gap-1">
-                    <a href="#compare" class="nav-item-dock">Strategy</a>
-                    <a href="#features" class="nav-item-dock">Intelligence</a>
-                    <a href="#pricing" class="nav-item-dock active">Pricing</a>
-                    <a href="#faq" class="nav-item-dock">FAQ</a>
-                </nav>
-            </div>
-
-            <div class="row align-items-center mt-5 pt-4">
-                <div class="col-lg-12 text-center">
-                    <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill border border-secondary border-opacity-50 bg-white bg-opacity-10 mb-4 backdrop-blur">
-                        <span class="spinner-grow spinner-grow-sm text-success" style="width: 0.5rem; height: 0.5rem;" role="status"></span>
-                        <span class="font-mono text-white-50" style="font-size: 12px; letter-spacing: 1px;">SYSTEM ONLINE V19.0</span>
-                    </div>
-
-                    <h1 class="display-super mb-4">Supply Chain <br> <span class="text-gradient-gold">Superpowers.</span></h1>
-                    <p class="lead text-white-50 mx-auto mb-5" style="max-width: 700px; font-size: 1.25rem;">
-                        The first AI Purchasing Agent for Odoo. Niyu audits your history, predicts spikes, and auto-drafts POs.
-                    </p>
-
-                    <!-- Hero Visual -->
-                    <div class="position-relative mx-auto mt-5" style="max-width: 1000px;">
-                        
-                        <!-- Floating Card Left -->
-                        <div class="position-absolute top-50 start-0 translate-middle-y d-none d-xl-block floating" style="left: -80px !important; z-index: 3;">
-                            <div class="glass-dark p-3 rounded-4 shadow-lg text-start" style="width: 220px;">
-                                <div class="d-flex gap-3 align-items-center mb-3">
-                                    <div class="bg-danger rounded-3 p-2 d-flex"><i class="bi bi-graph-up-arrow text-white"></i></div>
-                                    <div>
-                                        <div class="text-white-50" style="font-size: 10px; font-weight: 700;">VELOCITY ALERT</div>
-                                        <div class="fw-bold text-white">+240% Sales</div>
-                                    </div>
-                                </div>
-                                <div class="progress bg-white bg-opacity-10" style="height: 4px;"><div class="progress-bar bg-danger" style="width: 85%"></div></div>
-                            </div>
-                        </div>
-
-                        <!-- Main Video Container -->
-                        <div class="rounded-4 border border-secondary border-opacity-50 shadow-lg overflow-hidden position-relative bg-dark" style="box-shadow: 0 0 120px rgba(79, 70, 229, 0.25);">
-                             <!-- Mac Dots -->
-                            <div class="bg-dark border-bottom border-secondary border-opacity-25 px-3 py-2 d-flex gap-2">
-                                <div class="rounded-circle bg-danger" style="width: 10px; height: 10px;"></div>
-                                <div class="rounded-circle bg-warning" style="width: 10px; height: 10px;"></div>
-                                <div class="rounded-circle bg-success" style="width: 10px; height: 10px;"></div>
-                            </div>
-                            <div class="position-relative" style="padding-top: 56.25%;">
-                                <video autoplay loop muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.9;">
-                                    <source src="./snowflakevideo.webm" type="video/webm">
-                                    <source src="static/description/q1.mp4" type="video/mp4">
-                                </video>
-                                <div class="position-absolute bottom-0 start-0 w-100 p-4 text-start bg-gradient-to-t from-black">
-                                    <div class="font-mono text-white-50 small">> analyzing_sku_velocity... done (4ms)</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Floating Card Right -->
-                        <div class="position-absolute top-50 end-0 translate-middle-y d-none d-xl-block floating" style="right: -80px !important; z-index: 3; animation-delay: 1s;">
-                            <div class="glass-dark p-3 rounded-4 shadow-lg text-start" style="width: 220px;">
-                                <div class="d-flex justify-content-between mb-2">
-                                    <span class="text-white-50" style="font-size: 10px; font-weight: 700;">DRAFT PO #902</span>
-                                    <span class="badge bg-success bg-opacity-20 text-success" style="font-size: 9px;">READY</span>
-                                </div>
-                                <div class="fw-bold fs-5 text-white">4,500 Units</div>
-                                <div class="text-white-50 small mt-1">Vendor: Azure Interior</div>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Video Container (Fixed Ratio) -->
+            <div class="mx-auto bg-dark rounded-4 overflow-hidden border border-secondary shadow-lg" style="max-width: 900px; padding: 10px;">
+                <div class="ratio ratio-16x9 rounded-3 bg-black">
+                    <video autoplay loop muted playsinline poster="static/description/poster.jpg">
+                        <source src="static/description/q1.mp4" type="video/mp4">
+                        <source src="./snowflakevideo.webm" type="video/webm">
+                    </video>
                 </div>
             </div>
-        </div>
-    </header>
 
-    <!-- ==============================================
-         4. STATS
-         ============================================== -->
-    <div class="border-bottom bg-white">
-        <div class="container py-4">
-            <div class="row text-center">
+            <!-- Metrics -->
+            <div class="row justify-content-center mt-5 pt-4 g-4">
                 <div class="col-md-3">
-                    <div class="fw-black fs-4 text-dark">4 Minutes</div>
-                    <div class="text-secondary small text-uppercase fw-bold ls-1">Setup Time</div>
+                    <h3 class="text-white mb-0">99.2%</h3>
+                    <small class="text-white-50 text-uppercase fw-bold">Accuracy</small>
                 </div>
-                <div class="col-md-3 border-start">
-                    <div class="fw-black fs-4 text-dark">99.2%</div>
-                    <div class="text-secondary small text-uppercase fw-bold ls-1">Accuracy</div>
+                <div class="col-md-3">
+                    <h3 class="text-white mb-0">4 Min</h3>
+                    <small class="text-white-50 text-uppercase fw-bold">Setup Time</small>
                 </div>
-                <div class="col-md-3 border-start">
-                    <div class="fw-black fs-4 text-dark">v14-v19</div>
-                    <div class="text-secondary small text-uppercase fw-bold ls-1">Supported</div>
-                </div>
-                <div class="col-md-3 border-start">
-                    <div class="fw-black fs-4 text-dark">Stateless</div>
-                    <div class="text-secondary small text-uppercase fw-bold ls-1">Security</div>
+                <div class="col-md-3">
+                    <h3 class="text-white mb-0">Automated</h3>
+                    <small class="text-white-50 text-uppercase fw-bold">Draft POs</small>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- ==============================================
-         5. COMPARISON (Improved)
+         4. THE PROBLEM (Gray Background)
          ============================================== -->
-    <section id="compare" class="section-padding bg-light">
+    <section class="section-block" style="background-color: #f8fafc;">
         <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="fw-black display-5">Stop operating in the dark.</h2>
-                <p class="lead text-secondary">Why manage million-dollar inventories with a spreadsheet?</p>
-            </div>
-            
-            <div class="row g-0 rounded-5 overflow-hidden shadow-lg border">
-                <!-- Old Way -->
-                <div class="col-lg-6 bg-spreadsheet p-5 border-end position-relative">
-                    <div class="position-absolute top-0 start-50 translate-middle-x mt-4 badge bg-secondary text-white px-3 py-2">THE OLD WAY</div>
-                    <div class="mt-5 text-center grayscale opacity-75">
-                        <div class="display-1 mb-3">📉</div>
-                        <h3 class="fw-bold text-dark">Manual Excel Hell</h3>
-                        <ul class="list-unstyled mt-4 text-start mx-auto fw-medium" style="max-width: 300px; color: #64748b;">
-                            <li class="mb-3"><i class="bi bi-x-circle-fill text-danger me-2"></i> Static formulas break easily</li>
-                            <li class="mb-3"><i class="bi bi-x-circle-fill text-danger me-2"></i> Ignores seasonality spikes</li>
-                            <li class="mb-3"><i class="bi bi-x-circle-fill text-danger me-2"></i> "Gut feeling" purchasing</li>
-                            <li class="mb-3"><i class="bi bi-x-circle-fill text-danger me-2"></i> 4-5 hours per week work</li>
-                        </ul>
-                    </div>
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <h2 class="display-5 text-dark">Why most supply chains <br> <span class="text-danger">lose money.</span></h2>
                 </div>
-
-                <!-- Niyu Way -->
-                <div class="col-lg-6 p-5 position-relative text-white overflow-hidden" style="background: #0f172a;">
-                    <div class="position-absolute top-0 start-0 w-100 h-100 opacity-25" style="background: radial-gradient(circle at top right, #4f46e5, transparent);"></div>
-                    <div class="position-absolute top-0 start-50 translate-middle-x mt-4 badge bg-primary text-white px-3 py-2 shadow-lg">WITH NIYU</div>
-                    <div class="mt-5 text-center position-relative z-1">
-                        <div class="display-1 mb-3">🚀</div>
-                        <h3 class="fw-bold text-white">Automated Intelligence</h3>
-                        <ul class="list-unstyled mt-4 text-start mx-auto fw-bold" style="max-width: 300px;">
-                            <li class="mb-3 text-success"><i class="bi bi-check-circle-fill me-2"></i> Neural forecasting</li>
-                            <li class="mb-3 text-success"><i class="bi bi-check-circle-fill me-2"></i> Detects Viral Trends</li>
-                            <li class="mb-3 text-success"><i class="bi bi-check-circle-fill me-2"></i> Data-backed Draft POs</li>
-                            <li class="mb-3 text-success"><i class="bi bi-check-circle-fill me-2"></i> 4 minutes per week work</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==============================================
-         6. FEATURES (Icons Fixed)
-         ============================================== -->
-    <section id="features" class="section-padding bg-white">
-        <div class="container">
-            <div class="row align-items-end mb-5">
-                <div class="col-lg-8">
-                    <h2 class="fw-black display-5 mb-0">Scale <span class="text-gradient-brand">Supply.</span></h2>
-                </div>
-                <div class="col-lg-4 text-lg-end">
-                    <p class="text-secondary m-0">Modular features designed for the Odoo ecosystem.</p>
+                <div class="col-lg-6">
+                    <p class="mb-0">
+                        Managing inventory on "gut feeling" or static Min/Max rules is costing you thousands. 
+                        Static rules don't see Christmas coming. They don't see a viral TikTok trend. Niyu does.
+                    </p>
                 </div>
             </div>
 
             <div class="row g-4">
-                <!-- Neural Core -->
-                <div class="col-lg-4">
-                    <div class="feature-card p-4 d-flex flex-column h-100 bg-light">
-                        <div class="mb-auto">
-                            <div class="icon-circle bg-white shadow-sm text-primary">🧠</div>
-                            <h4 class="fw-bold">Neural Core</h4>
-                            <p class="text-secondary">Our engine ingests 24 months of data, cleans outliers, and runs simulations to predict the future.</p>
-                        </div>
-                        <div class="mt-4 bg-white rounded-3 p-3 border shadow-sm">
-                            <div class="d-flex justify-content-between small mb-2">
-                                <span class="text-muted fw-bold">Confidence</span>
-                                <span class="fw-bold text-success">99.8%</span>
-                            </div>
-                            <div class="progress" style="height: 6px;"><div class="progress-bar bg-success" style="width: 99%"></div></div>
-                        </div>
+                <div class="col-md-4">
+                    <div class="niyu-card">
+                        <div class="display-4 mb-3">💸</div>
+                        <h4 class="text-dark">Revenue Leakage</h4>
+                        <p class="small">Stocking out on a best-seller isn't just a lost sale. It's a lost customer. Niyu predicts velocity shifts before you run out.</p>
                     </div>
                 </div>
-
-                <div class="col-lg-8">
-                    <div class="row g-4">
-                        <div class="col-md-6">
-                            <div class="feature-card p-4 h-100">
-                                <div class="icon-circle bg-primary bg-opacity-10 text-primary"><i class="bi bi-calendar-range"></i></div>
-                                <h5 class="fw-bold">Seasonality</h5>
-                                <p class="text-secondary small">Automatically ramps up stock before Christmas and ramps down in January.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="feature-card p-4 h-100">
-                                <div class="icon-circle bg-warning bg-opacity-10 text-warning"><i class="bi bi-lightning-charge-fill"></i></div>
-                                <h5 class="fw-bold">Spike Detection</h5>
-                                <p class="text-secondary small">If a B2B client buys your whole stock, Niyu flags it as an "anomaly".</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="feature-card p-4 h-100">
-                                <div class="icon-circle bg-danger bg-opacity-10 text-danger"><i class="bi bi-piggy-bank-fill"></i></div>
-                                <h5 class="fw-bold">Dead Stock Killer</h5>
-                                <p class="text-secondary small">Identifies capital tied up in slow-moving SKUs and suggests liquidation.</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="feature-card p-4 h-100" style="background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%); color: white; border: none;">
-                                <div class="icon-circle bg-white bg-opacity-20 text-white"><i class="bi bi-shield-lock-fill"></i></div>
-                                <h5 class="fw-bold">Stateless Security</h5>
-                                <p class="text-white-50 small">We process math in RAM and purge data instantly.</p>
-                            </div>
-                        </div>
+                <div class="col-md-4">
+                    <div class="niyu-card">
+                        <div class="display-4 mb-3">🧊</div>
+                        <h4 class="text-dark">Frozen Capital</h4>
+                        <p class="small">Dead stock is cash rotting on shelves. Niyu identifies items that haven't moved and stops you from reordering them.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="niyu-card">
+                        <div class="display-4 mb-3">✈️</div>
+                        <h4 class="text-dark">Panic Logistics</h4>
+                        <p class="small">Stop paying for emergency Air Freight. Niyu calculates lead times so you can order via Sea Freight and arrive on time.</p>
                     </div>
                 </div>
             </div>
@@ -285,73 +126,206 @@
     </section>
 
     <!-- ==============================================
-         7. TECH SPECS
+         5. THE ENGINE / HOW IT WORKS (White Background)
          ============================================== -->
-    <section class="py-5 bg-dark border-top border-secondary border-opacity-25">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-5 text-white">
-                    <h3 class="fw-bold mb-3">Built for Developers.</h3>
-                    <p class="text-white-50">Niyu installs as a standard Odoo module but offloads the heavy lifting to our cloud GPU clusters.</p>
-                    <div class="d-flex gap-4 mt-4">
-                        <div><div class="fs-3 fw-bold text-primary">GPU</div><div class="text-secondary small">Acceleration</div></div>
-                        <div><div class="fs-3 fw-bold text-primary">AES-256</div><div class="text-secondary small">Encryption</div></div>
-                        <div><div class="fs-3 fw-bold text-primary">API</div><div class="text-secondary small">Connectivity</div></div>
-                    </div>
-                </div>
-                <div class="col-lg-7">
-                    <div class="bg-black border border-secondary border-opacity-50 rounded-3 p-4 font-mono shadow-lg" style="font-size: 13px;">
-                        <div class="text-secondary mb-2"># Processing Cycle Log</div>
-                        <div class="d-flex text-success"><span class="me-3 opacity-50">10:00:01</span><span>initiating_neural_handshake()</span></div>
-                        <div class="d-flex text-white"><span class="me-3 opacity-50 text-secondary">10:00:02</span><span>exporting_sales_history [limit=24mo]... OK</span></div>
-                        <div class="d-flex text-white"><span class="me-3 opacity-50 text-secondary">10:00:03</span><span>detecting_outliers(method='IQR')... found 12 anomalies</span></div>
-                        <div class="d-flex text-warning"><span class="me-3 opacity-50 text-secondary">10:00:04</span><span>calculating_lead_time_variance...</span></div>
-                        <div class="d-flex text-primary"><span class="me-3 opacity-50 text-secondary">10:00:05</span><span>generating_draft_po(vendor='Azure')... CREATED PO00922</span></div>
-                        <div class="mt-2 text-white blink">_</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==============================================
-         8. PRICING
-         ============================================== -->
-    <section id="pricing" class="section-padding" style="background: #f8fafc;">
+    <section class="section-block bg-white">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="fw-black">Transparent Pricing.</h2>
-                <p class="text-secondary">Start with a free audit. Scale when you see results.</p>
+                <span class="text-primary fw-bold text-uppercase ls-1">The Workflow</span>
+                <h2 class="display-5 mt-2">How Niyu Works.</h2>
             </div>
 
+            <!-- Step 1 -->
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="d-flex align-items-center mb-3">
+                        <span class="display-4 fw-bold text-light text-stroke me-3" style="-webkit-text-stroke: 1px #cbd5e1; color: transparent;">01</span>
+                        <h3 class="mb-0">Ingest & Cleanse</h3>
+                    </div>
+                    <p>
+                        Niyu connects to your Odoo database and pulls 24 months of Stock Moves. 
+                        Crucially, it <strong>cleans the data</strong>. It removes "Outliers" (random huge B2B orders) 
+                        so they don't skew your average daily sales.
+                    </p>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Removes B2B Bulk Spikes</li>
+                        <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i> Normalizes "Out of Stock" days</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <img src="./autoexport.png" alt="Data Ingestion" class="img-fluid rounded-4 shadow-sm border">
+                </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-6">
+                    <div class="d-flex align-items-center mb-3">
+                        <span class="display-4 fw-bold text-light text-stroke me-3" style="-webkit-text-stroke: 1px #cbd5e1; color: transparent;">02</span>
+                        <h3 class="mb-0">Neural Processing</h3>
+                    </div>
+                    <p>
+                        The data is processed by our Neural Engine. We calculate Seasonality Indices for every SKU. 
+                        We know that sunscreen sells in July and umbrellas sell in November.
+                    </p>
+                    <div class="p-3 bg-light border rounded-3 mt-3">
+                        <strong><i class="bi bi-cpu me-2"></i> GPU Acceleration:</strong> 
+                        Math is done on our cloud GPUs, keeping your Odoo server fast.
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="./autoexport.png" alt="Neural Processing" class="img-fluid rounded-4 shadow-sm border">
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="row align-items-center">
+                <div class="col-lg-6 order-lg-2">
+                    <div class="d-flex align-items-center mb-3">
+                        <span class="display-4 fw-bold text-light text-stroke me-3" style="-webkit-text-stroke: 1px #cbd5e1; color: transparent;">03</span>
+                        <h3 class="mb-0">Auto-Draft POs</h3>
+                    </div>
+                    <p>
+                        Niyu writes the results back to Odoo as <strong>Draft Requests for Quotation (RFQs)</strong>. 
+                        It groups items by Vendor, fills in the optimal quantity, and sets the "Order Deadline" 
+                        based on lead times.
+                    </p>
+                    <a href="#pricing" class="btn btn-primary rounded-pill px-4 mt-2">See Pricing</a>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <img src="./autoexport.png" alt="Purchase Orders" class="img-fluid rounded-4 shadow-sm border">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================================
+         6. DETAILED FEATURES GRID
+         ============================================== -->
+    <section class="section-block" style="background-color: #f8fafc;">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">Enterprise Intelligence Features</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="bg-white p-4 rounded-4 border h-100">
+                        <h5 class="fw-bold text-primary mb-3"><i class="bi bi-graph-up-arrow me-2"></i> Viral Spike Logic</h5>
+                        <p class="text-secondary mb-0">Detects if an item starts selling 300% faster than usual in a 3-day window and triggers a priority restock alert.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="bg-white p-4 rounded-4 border h-100">
+                        <h5 class="fw-bold text-success mb-3"><i class="bi bi-cash-stack me-2"></i> Cash Flow Forecast</h5>
+                        <p class="text-secondary mb-0">Niyu tells your finance team exactly how much capital is needed for next month's stock purchases.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="bg-white p-4 rounded-4 border h-100">
+                        <h5 class="fw-bold text-warning mb-3"><i class="bi bi-calendar-event me-2"></i> Seasonality Aware</h5>
+                        <p class="text-secondary mb-0">Smart analysis of holidays ensures you're never empty-handed during peak Christmas or Black Friday spikes.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="bg-white p-4 rounded-4 border h-100">
+                        <h5 class="fw-bold text-info mb-3"><i class="bi bi-truck me-2"></i> Lead Time Logic</h5>
+                        <p class="text-secondary mb-0">Accounts for overseas shipping times. The system tells you to order 45 days early so stock arrives on time.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="bg-white p-4 rounded-4 border h-100">
+                        <h5 class="fw-bold text-dark mb-3"><i class="bi bi-shield-lock me-2"></i> Stateless Security</h5>
+                        <p class="text-secondary mb-0">We process data in encrypted RAM and purge it instantly. We never store your transaction history.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="bg-white p-4 rounded-4 border h-100">
+                        <h5 class="fw-bold text-danger mb-3"><i class="bi bi-cloud me-2"></i> Cloud Offload</h5>
+                        <p class="text-secondary mb-0">Complex math happens on our GPU clusters, so your Odoo server stays lighting fast.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================================
+         7. PRICING
+         ============================================== -->
+    <section id="pricing" class="section-block bg-white">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5">Simple Investment.</h2>
+                <p class="lead text-secondary">Return on investment usually achieved in the first 14 days.</p>
+            </div>
             <div class="row g-4 justify-content-center">
-                <div class="col-md-5 col-lg-4">
-                    <div class="glass-panel p-5 h-100 d-flex flex-column bg-white">
-                        <div class="fw-bold text-secondary text-uppercase ls-1 small mb-3">Community</div>
-                        <div class="display-4 fw-black mb-1">$0</div>
-                        <div class="text-secondary mb-4">Forever Free</div>
-                        <ul class="list-unstyled mb-5 text-secondary small fw-medium d-grid gap-3">
-                            <li class="d-flex gap-2"><i class="bi bi-check-lg text-dark"></i> Top 20 SKUs Analysis</li>
-                            <li class="d-flex gap-2"><i class="bi bi-check-lg text-dark"></i> Weekly Cloud Sync</li>
-                            <li class="d-flex gap-2"><i class="bi bi-check-lg text-dark"></i> Manual PO Creation</li>
-                        </ul>
-                        <button class="btn btn-outline-dark rounded-pill fw-bold w-100 py-3 mt-auto">Install Module</button>
+                <!-- Free -->
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-sm h-100" style="background: #f8fafc;">
+                        <div class="card-body p-5 text-center">
+                            <h5 class="fw-bold text-muted">COMMUNITY</h5>
+                            <div class="display-4 fw-bold my-3">$0</div>
+                            <p class="text-muted mb-4">Forever Free</p>
+                            <hr>
+                            <ul class="list-unstyled text-start mx-auto" style="max-width: 200px;">
+                                <li class="mb-3">✅ Top 20 SKUs Analysis</li>
+                                <li class="mb-3">✅ Weekly Cloud Sync</li>
+                                <li class="mb-3">✅ Email Support</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col-md-5 col-lg-4">
-                    <div class="glass-panel p-5 h-100 d-flex flex-column position-relative overflow-hidden bg-white" style="border: 2px solid #4f46e5;">
-                        <div class="position-absolute top-0 end-0 bg-primary text-white text-uppercase fw-bold px-3 py-1" style="border-bottom-left-radius: 12px; font-size: 10px;">Recommended</div>
-                        <div class="fw-bold text-primary text-uppercase ls-1 small mb-3">Growth</div>
-                        <div class="display-4 fw-black mb-1">$49</div>
-                        <div class="text-secondary mb-4">Per Month</div>
-                        <ul class="list-unstyled mb-5 text-dark small fw-bold d-grid gap-3">
-                            <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-primary"></i> 10,000 SKUs</li>
-                            <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-primary"></i> Daily Automated Sync</li>
-                            <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-primary"></i> Auto-Draft POs</li>
-                            <li class="d-flex gap-2"><i class="bi bi-check-circle-fill text-primary"></i> Spike Alerts</li>
-                        </ul>
-                        <button class="btn btn-primary rounded-pill fw-bold w-100 py-3 mt-auto shadow-lg">Start Free Trial</button>
+                <!-- Pro -->
+                <div class="col-lg-4">
+                    <div class="card border-primary border-2 shadow h-100 position-relative">
+                        <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-primary px-3 py-2">MOST POPULAR</span>
+                        <div class="card-body p-5 text-center">
+                            <h5 class="fw-bold text-primary">GROWTH</h5>
+                            <div class="display-4 fw-bold my-3 text-dark">$49<small class="fs-6 text-muted">/mo</small></div>
+                            <p class="text-muted mb-4">For serious e-commerce.</p>
+                            <hr>
+                            <ul class="list-unstyled text-start mx-auto fw-bold" style="max-width: 220px;">
+                                <li class="mb-3 text-dark"><i class="bi bi-check-circle-fill text-primary me-2"></i> 10,000 SKUs</li>
+                                <li class="mb-3 text-dark"><i class="bi bi-check-circle-fill text-primary me-2"></i> Daily Auto-Sync</li>
+                                <li class="mb-3 text-dark"><i class="bi bi-check-circle-fill text-primary me-2"></i> Auto-Draft POs</li>
+                                <li class="mb-3 text-dark"><i class="bi bi-check-circle-fill text-primary me-2"></i> Spike Alerts</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==============================================
+         8. FAQ
+         ============================================== -->
+    <section class="section-block" style="background-color: #f8fafc;">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Frequently Asked Questions</h2>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="bg-white p-4 rounded-3 border">
+                        <h5 class="fw-bold">Is my data safe?</h5>
+                        <p class="text-secondary mb-0">Yes. Niyu uses a "Stateless" architecture. We process your sales velocity in volatile RAM memory and purge it immediately after the calculation is sent back to Odoo.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="bg-white p-4 rounded-3 border">
+                        <h5 class="fw-bold">Does it support Multi-Company?</h5>
+                        <p class="text-secondary mb-0">Absolutely. You can map Niyu to separate Odoo companies or specific warehouse clusters within a single database.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="bg-white p-4 rounded-3 border">
+                        <h5 class="fw-bold">Can I keep my old rules?</h5>
+                        <p class="text-secondary mb-0">Yes. Niyu runs in parallel with Odoo's native reordering rules. Use Niyu for predictive growth and Odoo rules as your safety net.</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="bg-white p-4 rounded-3 border">
+                        <h5 class="fw-bold">Which Odoo Versions?</h5>
+                        <p class="text-secondary mb-0">Niyu is verified and optimized for Odoo 14, 15, 16, 17, 18, and 19 (Community and Enterprise editions).</p>
                     </div>
                 </div>
             </div>
@@ -361,18 +335,13 @@
     <!-- ==============================================
          9. FOOTER
          ============================================== -->
-    <footer class="py-5 bg-white border-top">
-        <div class="container text-center">
-            <div class="d-inline-block bg-light rounded-4 p-5 mb-5 border shadow-sm">
-                <h3 class="fw-black mb-3">Ready to optimize?</h3>
-                <p class="text-secondary mb-4">Join 500+ Odoo companies predicting the future.</p>
-                <div class="d-flex justify-content-center gap-3">
-                    <a href="#" class="btn btn-dark rounded-pill px-4 py-2 fw-bold shadow">Download Module</a>
-                    <a href="#" class="btn btn-outline-secondary rounded-pill px-4 py-2 fw-bold">Read Documentation</a>
-                </div>
-            </div>
-            <p class="text-muted small m-0">&copy; 2025 Niyu Labs. Engineered for Odoo Enterprise & Community.</p>
+    <div class="py-5 bg-dark text-white text-center">
+        <div class="container">
+            <h2 class="fw-bold mb-4">Ready to optimize your stock?</h2>
+            <p class="text-white-50 mb-4">Join 500+ companies predicting the future.</p>
+            <a href="https://apps.odoo.com/apps/modules/browse?search=Niyu" target="_blank" class="btn btn-primary btn-lg px-5 py-3 rounded-pill fw-bold">Download Module</a>
+            <p class="mt-5 text-white-50 small">© 2025 Niyu Labs</p>
         </div>
-    </footer>
+    </div>
 
 </section>
