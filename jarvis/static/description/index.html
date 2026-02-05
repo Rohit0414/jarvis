@@ -1,93 +1,71 @@
 <!-- static/description/index.html -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 
-<style>
-    .niyu-hero-gradient {
-        background: radial-gradient(circle at 18% 18%, rgba(45, 212, 191, 0.08) 0%, transparent 40%),
-                    radial-gradient(circle at 85% 85%, rgba(14, 165, 233, 0.08) 0%, transparent 40%),
-                    #ffffff;
-    }
-    .text-gradient-main {
-        background: linear-gradient(135deg, #0f172a 0%, #0369a1 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-    .pill-status {
-        display: inline-flex; align-items: center; gap: 8px;
-        background: #f0f9ff; color: #0369a1;
-        padding: 8px 20px; border-radius: 100px;
-        font-size: 12px; font-weight: 800; border: 1px solid #e0f2fe;
-        letter-spacing: 1px; text-transform: uppercase;
-    }
-</style>
-
-<section class="niyu-hero-gradient" style="font-family: 'Plus Jakarta Sans', sans-serif; padding: 120px 0 60px 0; overflow: hidden;">
+<section style="font-family: 'Inter', sans-serif; background: #ffffff; padding: 100px 0 60px 0; overflow: hidden;">
     <div class="container">
-        <div class="text-center mb-5">
-            <div class="pill-status mb-4">
-                <span style="width: 8px; height: 8px; background: #0ea5e9; border-radius: 50%; display: inline-block;"></span>
-                Inventory Health: Optimized
-            </div>
+        <div class="row align-items-center">
             
-            <h1 style="font-size: clamp(3rem, 6vw, 5rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.05em; color: #0f172a; margin-bottom: 25px;">
-                Your Best-Sellers, <br> <span class="text-gradient-main">Always in Stock.</span>
-            </h1>
-            
-            <p style="font-size: 1.4rem; color: #475569; max-width: 700px; margin: 0 auto 45px; line-height: 1.5; font-weight: 400;">
-                Niyu watches your sales so you don't have to. It automatically drafts your Purchase Orders weeks before you run out—so you can stop panicking and start growing.
-            </p>
+            <!-- LEFT: THE VALUE PROPOSITION -->
+            <div class="col-lg-6">
+                <div style="display: inline-flex; align-items: center; background: #f0fdf4; color: #166534; padding: 8px 16px; border-radius: 100px; font-size: 12px; font-weight: 700; margin-bottom: 25px; border: 1px solid #dcfce7;">
+                    <span style="margin-right: 8px;">✨</span> ODOO'S FIRST NEURAL FORECASTING ENGINE
+                </div>
+                
+                <h1 style="font-size: clamp(3rem, 5vw, 4.5rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.05em; color: #000; margin-bottom: 25px;">
+                    Procurement <br> <span style="background: linear-gradient(90deg, #0d9488, #0ea5e9); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">on Autopilot.</span>
+                </h1>
+                
+                <p style="font-size: 1.3rem; color: #4b5563; line-height: 1.6; margin-bottom: 40px; max-width: 540px;">
+                    Niyu audits your sales moves to predict future demand and <b>automatically creates Draft RFQs</b> weeks before you run out.
+                </p>
 
-            <div class="d-flex justify-content-center gap-3 flex-wrap">
-                <a href="#how" style="background: #0f172a; color: #ffffff; padding: 20px 50px; border-radius: 100px; font-weight: 800; font-size: 18px; text-decoration: none; box-shadow: 0 20px 40px rgba(15, 23, 42, 0.2); transition: 0.3s;">
-                    Download for Free →
-                </a>
-            </div>
-        </div>
-
-        <!-- The "1000 Songs" Visual: Showing the Result (Healthy Shelves/Growth) -->
-        <div class="row justify-content-center mt-5">
-            <div class="col-xl-10">
-                <div style="background: #ffffff; border-radius: 40px; padding: 15px; border: 1px solid #f1f5f9; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.06); position: relative;">
-                    
-                    <!-- Top Bar of a Sleek Interface -->
-                    <div style="background: #f8fafc; border-radius: 28px; padding: 40px; border: 1px solid #e2e8f0;">
-                        <div class="row align-items-center">
-                            <div class="col-md-7">
-                                <h3 style="font-weight: 800; font-size: 24px; color: #0f172a; margin-bottom: 15px;">30-Day Restock Plan</h3>
-                                <p style="color: #64748b; font-size: 15px; margin-bottom: 0;">Niyu just audited 4,200 transactions. Based on current sales velocity, we've pre-filled 4 Purchase Orders to cover your next 30 days.</p>
-                            </div>
-                            <div class="col-md-5 text-md-end mt-4 mt-md-0">
-                                <div style="display: inline-block; background: #0f172a; color: #fff; padding: 12px 25px; border-radius: 12px; font-weight: 700; font-size: 14px;">
-                                    Confirm All Drafts
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Progress/Metric Strip -->
-                        <div class="row mt-5 g-4">
-                            <div class="col-md-4">
-                                <div style="background: #fff; padding: 20px; border-radius: 20px; border: 1px solid #f1f5f9;">
-                                    <div style="font-size: 11px; font-weight: 800; color: #94a3b8; text-transform: uppercase; margin-bottom: 10px;">Stockout Risk</div>
-                                    <div style="font-size: 28px; font-weight: 900; color: #ef4444;">0%</div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div style="background: #fff; padding: 20px; border-radius: 20px; border: 1px solid #f1f5f9;">
-                                    <div style="font-size: 11px; font-weight: 800; color: #94a3b8; text-transform: uppercase; margin-bottom: 10px;">Capital Saved</div>
-                                    <div style="font-size: 28px; font-weight: 900; color: #10b981;">+$14,200</div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div style="background: #fff; padding: 20px; border-radius: 20px; border: 1px solid #f1f5f9;">
-                                    <div style="font-size: 11px; font-weight: 800; color: #94a3b8; text-transform: uppercase; margin-bottom: 10px;">PO Admin Time</div>
-                                    <div style="font-size: 28px; font-weight: 900; color: #0ea5e9;">-15h <span style="font-size: 12px; opacity: 0.5;">/wk</span></div>
-                                </div>
-                            </div>
-                        </div>
+                <div class="d-flex align-items-center gap-4">
+                    <a href="https://apps.odoo.com/apps/modules/browse?search=Niyu" style="background: #000; color: #fff; padding: 20px 45px; border-radius: 16px; font-weight: 700; text-decoration: none; font-size: 18px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                        Download Free →
+                    </a>
+                    <div style="font-size: 14px; color: #9ca3af; font-weight: 600;">
+                        Free Tier Forever <br> 20 Products Included
                     </div>
                 </div>
             </div>
+
+            <!-- RIGHT: THE "WOW" VISUAL -->
+            <div class="col-lg-6 mt-5 mt-lg-0">
+                <div style="position: relative; padding: 10px;">
+                    <!-- The Main Glass Card -->
+                    <div style="background: #ffffff; border-radius: 32px; padding: 40px; border: 1px solid #f1f5f9; box-shadow: 0 40px 80px -20px rgba(0,0,0,0.12); position: relative; z-index: 2;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                            <h5 style="font-weight: 700; margin: 0; color: #000;">AI Forecast Audit</h5>
+                            <div style="height: 10px; width: 10px; background: #10b981; border-radius: 50%; box-shadow: 0 0 10px #10b981;"></div>
+                        </div>
+                        
+                        <!-- Visual representation of a "Neural Plan" -->
+                        <div style="background: #f8fafc; border-radius: 20px; padding: 20px; border: 1px solid #e2e8f0;">
+                            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 15px;">
+                                <div style="width: 40px; height: 40px; background: #fff; border-radius: 10px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); font-size: 20px;">📦</div>
+                                <div style="flex: 1;">
+                                    <div style="height: 8px; width: 60%; background: #e2e8f0; border-radius: 4px; margin-bottom: 6px;"></div>
+                                    <div style="height: 6px; width: 40%; background: #f1f5f9; border-radius: 4px;"></div>
+                                </div>
+                                <div style="text-align: right;">
+                                    <div style="color: #0d9488; font-weight: 800; font-size: 14px;">+240 Units</div>
+                                    <div style="color: #94a3b8; font-size: 10px; font-weight: 700;">DRAFT RFQ READY</div>
+                                </div>
+                            </div>
+                            <div style="height: 2px; background: #f1f5f9; margin-bottom: 15px;"></div>
+                            <div style="color: #64748b; font-size: 12px; line-height: 1.5;">
+                                <b>Neural Insight:</b> Demand for <i>Acoustic Foam</i> is increasing by 12% week-over-week. Suggesting restock by 14th Feb to avoid stockout.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Decorative Background Elements -->
+                    <div style="position: absolute; top: -30px; right: -30px; width: 200px; height: 200px; background: #0ea5e9; opacity: 0.1; filter: blur(60px); z-index: 1;"></div>
+                    <div style="position: absolute; bottom: -30px; left: -30px; width: 200px; height: 200px; background: #10b981; opacity: 0.1; filter: blur(60px); z-index: 1;"></div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
