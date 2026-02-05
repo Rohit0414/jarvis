@@ -1,187 +1,149 @@
-<!-- static/description/index.html -->
-<section id="niyu-doc" style="font-family: 'Inter', system-ui, -apple-system, sans-serif; background-color: #f8fafc; color: #0f172a; overflow-x: hidden; position: relative;">
+<section id="niyu-doc" style="font-family: 'Inter', system-ui, -apple-system, sans-serif; background-color: #020617; color: #f8fafc; overflow-x: hidden; position: relative; line-height: 1.6;">
 
-    <!-- 1. RESOURCES -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet">
 
-    <!-- 2. CUSTOM SEXY STYLES -->
     <style>
-        /* CORE */
-        #niyu-doc { line-height: 1.6; }
-        .text-gradient {
-            background: linear-gradient(135deg, #4f46e5 0%, #db2777 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        /* SCROLLBAR */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #020617; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+
+        /* ANIMATIONS */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
         }
-        .bg-aurora {
-            position: absolute; width: 600px; height: 600px; background: radial-gradient(circle, rgba(99,102,241,0.15) 0%, rgba(255,255,255,0) 70%);
-            border-radius: 50%; pointer-events: none; z-index: 0; filter: blur(60px);
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.4); }
+            70% { box-shadow: 0 0 0 20px rgba(99, 102, 241, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(99, 102, 241, 0); }
         }
-        
-        /* CARDS */
+        @keyframes drift {
+            0% { transform: translate(0, 0) scale(1); }
+            100% { transform: translate(30px, -50px) scale(1.1); }
+        }
+
+        /* CLASSES THAT CAN'T BE INLINED (HOVERS) */
         .glass-card {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(20px);
-            border: 1px solid #ffffff;
-            box-shadow: 0 10px 40px -10px rgba(0,0,0,0.05);
-            border-radius: 24px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
         }
         .glass-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 50px -12px rgba(79, 70, 229, 0.15);
-            background: #ffffff;
+            transform: translateY(-10px) !important;
+            background: rgba(255, 255, 255, 0.08) !important;
+            border-color: rgba(99, 102, 241, 0.5) !important;
+            box-shadow: 0 20px 80px -10px rgba(99, 102, 241, 0.15) !important;
         }
-
-        /* NAVIGATION PILL */
-        .nav-pill {
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            border-radius: 100px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            padding: 8px 10px;
+        .nav-link-custom:hover {
+            color: #fff !important;
+            background: rgba(255, 255, 255, 0.1) !important;
         }
-        .nav-link-custom {
-            color: #475569; font-weight: 600; font-size: 13px; padding: 10px 20px; text-decoration: none; border-radius: 100px; transition: all 0.2s;
-        }
-        .nav-link-custom:hover { background: #f1f5f9; color: #0f172a; }
-        .nav-btn { background: #0f172a; color: #fff !important; }
-
-        /* TYPOGRAPHY */
-        h1 { font-size: clamp(3rem, 6vw, 5rem); letter-spacing: -0.04em; line-height: 1; }
-        h2 { font-size: clamp(2.5rem, 5vw, 4rem); letter-spacing: -0.04em; }
-        .lead-text { font-size: 1.25rem; color: #64748b; font-weight: 400; }
-        
-        /* UTILS */
-        .section-padding { padding: 120px 0; }
-        .icon-box { font-size: 32px; margin-bottom: 20px; }
-        .shadow-soft { box-shadow: 0 20px 60px -10px rgba(0,0,0,0.1); }
+        .floating-element { animation: float 6s ease-in-out infinite; }
+        .bg-drift { animation: drift 20s infinite alternate linear; }
     </style>
 
-    <!-- ==============================================
-         3. HERO SECTION
-         ============================================== -->
     <header class="position-relative pt-5 pb-5" style="overflow: hidden;">
-        <!-- Background Blobs -->
-        <div class="bg-aurora" style="top: -20%; left: -10%;"></div>
-        <div class="bg-aurora" style="bottom: 10%; right: -10%; background: radial-gradient(circle, rgba(236,72,153,0.1) 0%, rgba(255,255,255,0) 70%);"></div>
+        <div class="bg-drift" style="position: absolute; top: -20%; left: -10%; width: 800px; height: 800px; background: radial-gradient(circle, rgba(99,102,241,0.15) 0%, rgba(2,6,23,0) 70%); border-radius: 50%; pointer-events: none; z-index: 0; filter: blur(80px);"></div>
+        <div class="bg-drift" style="position: absolute; bottom: 10%; right: -20%; width: 900px; height: 900px; background: radial-gradient(circle, rgba(236,72,153,0.1) 0%, rgba(2,6,23,0) 70%); border-radius: 50%; pointer-events: none; z-index: 0; filter: blur(80px); animation-delay: -5s;"></div>
 
         <div class="container position-relative z-1 pt-5">
-            <div class="text-center max-w-4xl mx-auto">
-                <!-- Badge -->
-                <div class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill bg-white border shadow-sm mb-4">
-                    <span style="font-size: 14px;">&#10024;</span>
-                    <span style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #4f46e5;">Neural Engine Verified for Odoo 19.0</span>
+            <div class="text-center" style="max-width: 900px; margin: 0 auto;">
+                
+                <div class="d-inline-flex align-items-center gap-2 px-4 py-2 rounded-pill mb-4" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px);">
+                    <span style="font-size: 14px;">⚡</span>
+                    <span style="font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; color: #a5b4fc;">Odoo 19.0 Neural Engine</span>
                 </div>
 
-                <!-- Headline -->
-                <h1 class="fw-black text-dark mb-4">
-                    Predict the <br> <span class="text-gradient">Unpredictable.</span>
+                <h1 class="fw-black text-white mb-4" style="font-size: clamp(3.5rem, 6vw, 5.5rem); letter-spacing: -0.04em; line-height: 1;">
+                    Predict the <br> 
+                    <span style="background: linear-gradient(135deg, #818cf8 0%, #ec4899 50%, #f43f5e 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Unpredictable.</span>
                 </h1>
                 
-                <p class="lead-text mb-5 mx-auto" style="max-width: 800px;">
-                    Stop guessing. Niyu uses Neural Networks to audit your Odoo sales history and generate a surgical 30-day purchasing plan.
+                <p class="mb-5 mx-auto" style="font-size: 1.35rem; color: #94a3b8; font-weight: 300; max-width: 750px;">
+                    Stop guessing. Niyu uses <span style="color: #e2e8f0; border-bottom: 1px dashed #6366f1;">Neural Networks</span> to audit your Odoo sales history and generate a surgical 30-day purchasing plan in seconds.
                 </p>
 
-                <!-- Video Frame with Floating Elements -->
-                <div class="position-relative mx-auto mt-5" style="max-width: 1100px;">
-                    <!-- Floating Stat Left -->
-                    <div class="d-none d-lg-block position-absolute top-0 start-0 translate-middle glass-card p-3 shadow-sm text-start" style="z-index: 2; min-width: 180px;">
+                <div class="position-relative mx-auto mt-5" style="max-width: 1000px;">
+                    
+                    <div class="floating-element d-none d-lg-block position-absolute top-0 start-0 translate-middle p-4 text-start glass-card" 
+                         style="z-index: 2; min-width: 200px; background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; border-left: 4px solid #6366f1;">
                         <div style="font-size: 10px; text-transform: uppercase; color: #94a3b8; font-weight: 800; letter-spacing: 1px;">Accuracy</div>
-                        <div style="font-size: 32px; font-weight: 900; color: #0f172a; line-height: 1;">99.2%</div>
-                        <div style="height: 4px; width: 100%; background: #e2e8f0; margin-top: 10px; border-radius: 2px;">
-                            <div style="height: 100%; width: 99%; background: #4f46e5; border-radius: 2px;"></div>
-                        </div>
+                        <div style="font-size: 36px; font-weight: 900; color: #f8fafc; line-height: 1;">99.2%</div>
                     </div>
 
-                    <!-- Main Video -->
-                    <div class="p-2 bg-white rounded-5 shadow-soft border">
-                        <div class="rounded-5 overflow-hidden position-relative bg-dark" style="padding-top: 56.25%;"> <!-- 16:9 Aspect Ratio -->
-                            <video autoplay loop muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
-                                <source src="./snowflakevideo.webm" type="video/webm">
+                    <div style="padding: 12px; background: rgba(255,255,255,0.05); border-radius: 32px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 0 100px -20px rgba(99, 102, 241, 0.2);">
+                        <div style="border-radius: 24px; overflow: hidden; position: relative; background: #000; padding-top: 56.25%;"> 
+                            <video autoplay loop muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.9;">
                                 <source src="static/description/q1.mp4" type="video/mp4">
                             </video>
                         </div>
                     </div>
 
-                    <!-- Floating Stat Right -->
-                    <div class="d-none d-lg-block position-absolute bottom-0 end-0 translate-middle glass-card p-3 shadow-sm text-start" style="z-index: 2; min-width: 180px;">
-                        <div style="font-size: 10px; text-transform: uppercase; color: #94a3b8; font-weight: 800; letter-spacing: 1px;">SKU Capacity</div>
-                        <div style="font-size: 32px; font-weight: 900; color: #db2777; line-height: 1;">&#8734;</div>
-                        <div style="height: 4px; width: 100%; background: #e2e8f0; margin-top: 10px; border-radius: 2px;">
-                            <div style="height: 100%; width: 100%; background: #db2777; border-radius: 2px;"></div>
-                        </div>
+                    <div class="floating-element d-none d-lg-block position-absolute bottom-0 end-0 translate-middle p-4 text-start glass-card" 
+                         style="z-index: 2; min-width: 200px; background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.1); border-radius: 20px; border-right: 4px solid #ec4899; animation-delay: -3s;">
+                        <div style="font-size: 10px; text-transform: uppercase; color: #94a3b8; font-weight: 800; letter-spacing: 1px;">Velocity</div>
+                        <div style="font-size: 36px; font-weight: 900; color: #ec4899; line-height: 1;">&#8734;</div>
                     </div>
                 </div>
 
-                <!-- Pills -->
                 <div class="d-flex justify-content-center flex-wrap gap-3 mt-5">
-                    <span class="px-4 py-3 bg-white rounded-pill shadow-sm fw-bold border d-flex align-items-center gap-2">
-                        <span style="color:#4f46e5; font-size: 18px;">&#128680;</span> Spike Detection
+                    <span style="padding: 12px 24px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 100px; color: #e2e8f0; font-weight: 600; font-size: 14px; display: flex; align-items: center; gap: 8px;">
+                        <span style="color:#818cf8;">&#128680;</span> Spike Detection
                     </span>
-                    <span class="px-4 py-3 bg-white rounded-pill shadow-sm fw-bold border d-flex align-items-center gap-2">
-                        <span style="color:#db2777; font-size: 18px;">&#9881;</span> Auto-Draft POs
+                    <span style="padding: 12px 24px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 100px; color: #e2e8f0; font-weight: 600; font-size: 14px; display: flex; align-items: center; gap: 8px;">
+                        <span style="color:#f472b6;">&#9881;</span> Auto-Draft POs
                     </span>
-                    <span class="px-4 py-3 bg-white rounded-pill shadow-sm fw-bold border d-flex align-items-center gap-2">
-                        <span style="color:#0f172a; font-size: 18px;">&#128200;</span> 30-Day Forecast
+                    <span style="padding: 12px 24px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 100px; color: #e2e8f0; font-weight: 600; font-size: 14px; display: flex; align-items: center; gap: 8px;">
+                        <span style="color:#38bdf8;">&#128200;</span> 30-Day Forecast
                     </span>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- ==============================================
-         4. NAVIGATION (Floating)
-         ============================================== -->
-    <div class="position-sticky top-0 z-3 py-3 d-flex justify-content-center">
-        <nav class="nav-pill d-flex gap-1 flex-wrap justify-content-center">
-            <a href="#problem" class="nav-link-custom">Strategy</a>
-            <a href="#how" class="nav-link-custom">The Engine</a>
-            <a href="#features" class="nav-link-custom">Intelligence</a>
-            <a href="#pricing" class="nav-link-custom" style="color: #7c3aed;">Investment</a>
-            <a href="#faq" class="nav-link-custom">FAQ</a>
+    <div class="position-sticky top-0 z-3 py-4 d-flex justify-content-center">
+        <nav style="background: rgba(2, 6, 23, 0.85); backdrop-filter: blur(20px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 100px; padding: 6px; box-shadow: 0 10px 40px rgba(0,0,0,0.5);">
+            <div class="d-flex gap-1 flex-wrap justify-content-center">
+                <a href="#problem" class="nav-link-custom" style="color: #94a3b8; font-weight: 600; font-size: 13px; padding: 10px 24px; text-decoration: none; border-radius: 100px; transition: all 0.3s;">Strategy</a>
+                <a href="#how" class="nav-link-custom" style="color: #94a3b8; font-weight: 600; font-size: 13px; padding: 10px 24px; text-decoration: none; border-radius: 100px; transition: all 0.3s;">The Engine</a>
+                <a href="#features" class="nav-link-custom" style="color: #94a3b8; font-weight: 600; font-size: 13px; padding: 10px 24px; text-decoration: none; border-radius: 100px; transition: all 0.3s;">Intelligence</a>
+                <a href="#pricing" class="nav-link-custom" style="color: #a78bfa; font-weight: 600; font-size: 13px; padding: 10px 24px; text-decoration: none; border-radius: 100px; transition: all 0.3s;">Investment</a>
+            </div>
         </nav>
     </div>
 
-    <!-- ==============================================
-         5. PROBLEM (Bento Grid)
-         ============================================== -->
-    <section id="problem" class="section-padding bg-white">
+    <section id="problem" style="padding: 120px 0;">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-lg-8">
-                    <h2 class="fw-black mb-0">Where most companies <br> lose their edge.</h2>
+                    <h2 class="fw-black mb-0 text-white" style="font-size: clamp(2.5rem, 5vw, 4rem); letter-spacing: -0.04em;">Where most companies <br> <span style="color: #475569;">lose their edge.</span></h2>
                 </div>
             </div>
 
             <div class="row g-4">
-                <!-- Large Card -->
                 <div class="col-lg-7">
-                    <div class="glass-card p-5 h-100" style="background: linear-gradient(135deg, #fff1f2 0%, #fff 100%);">
-                        <div class="icon-box">&#128680;</div>
-                        <h3 class="fw-bold mb-3" style="color: #9f1239;">Revenue Leakage</h3>
-                        <p class="fs-5" style="color: #881337;">A stockout on a best-seller isn't just a lost sale; it's a customer lifetime value gift to your competitor.</p>
+                    <div class="glass-card h-100 p-5" style="background: linear-gradient(135deg, rgba(159, 18, 57, 0.15) 0%, rgba(15, 23, 42, 0.4) 100%); border: 1px solid rgba(244, 63, 94, 0.2); border-radius: 24px; backdrop-filter: blur(20px);">
+                        <div style="font-size: 32px; margin-bottom: 20px;">&#128680;</div>
+                        <h3 class="fw-bold mb-3 text-white">Revenue Leakage</h3>
+                        <p class="fs-5" style="color: #cbd5e1; font-weight: 300;">A stockout on a best-seller isn't just a lost sale; it's a customer lifetime value gift to your competitor.</p>
                     </div>
                 </div>
-                <!-- Stacked Cards -->
                 <div class="col-lg-5">
                     <div class="d-flex flex-column gap-4 h-100">
-                        <div class="glass-card p-4 flex-fill" style="background: linear-gradient(135deg, #f5f3ff 0%, #fff 100%);">
+                        <div class="glass-card p-4 flex-fill" style="background: linear-gradient(135deg, rgba(79, 70, 229, 0.1) 0%, rgba(15, 23, 42, 0.4) 100%); border: 1px solid rgba(99, 102, 241, 0.2); border-radius: 24px; backdrop-filter: blur(20px);">
                             <div class="d-flex align-items-center gap-3 mb-2">
-                                <span style="font-size: 30px;">&#128176;</span>
-                                <h4 class="fw-bold m-0" style="color: #5b21b6;">Frozen Capital</h4>
+                                <span style="font-size: 24px;">&#128176;</span>
+                                <h4 class="fw-bold m-0 text-white">Frozen Capital</h4>
                             </div>
-                            <p class="text-secondary m-0">Dead stock is money rotting on shelves. Niyu ensures every dollar is working in high-velocity SKUs.</p>
+                            <p style="color: #94a3b8; margin: 0;">Dead stock is money rotting on shelves. Niyu ensures every dollar is working in high-velocity SKUs.</p>
                         </div>
-                        <div class="glass-card p-4 flex-fill" style="background: linear-gradient(135deg, #fffbeb 0%, #fff 100%);">
+                        <div class="glass-card p-4 flex-fill" style="background: linear-gradient(135deg, rgba(217, 119, 6, 0.1) 0%, rgba(15, 23, 42, 0.4) 100%); border: 1px solid rgba(245, 158, 11, 0.2); border-radius: 24px; backdrop-filter: blur(20px);">
                             <div class="d-flex align-items-center gap-3 mb-2">
-                                <span style="font-size: 30px;">&#9992;</span>
-                                <h4 class="fw-bold m-0" style="color: #92400e;">Panic Logistics</h4>
+                                <span style="font-size: 24px;">&#9992;</span>
+                                <h4 class="fw-bold m-0 text-white">Panic Logistics</h4>
                             </div>
-                            <p class="text-secondary m-0">Stop paying for emergency Air Freight. Niyu plans for the boat so you don't have to pay for the plane.</p>
+                            <p style="color: #94a3b8; margin: 0;">Stop paying for emergency Air Freight. Niyu plans for the boat so you don't have to pay for the plane.</p>
                         </div>
                     </div>
                 </div>
@@ -189,135 +151,122 @@
         </div>
     </section>
 
-    <!-- ==============================================
-         6. THE ENGINE (Zig Zag)
-         ============================================== -->
-    <section id="how" class="section-padding">
+    <section id="how" style="padding: 120px 0;">
         <div class="container">
             <div class="text-center mb-5">
-                <span class="badge bg-white text-dark border px-3 py-2 rounded-pill mb-3">THE WORKFLOW</span>
-                <h2 class="fw-black">The Intelligence <span class="text-gradient">Engine.</span></h2>
+                <span class="px-3 py-2 rounded-pill" style="border: 1px solid rgba(255,255,255,0.1); color: #fff; font-size: 12px; font-weight: 700; background: rgba(255,255,255,0.05);">THE WORKFLOW</span>
+                <h2 class="fw-black mt-4 text-white" style="font-size: 3.5rem;">The Intelligence <span style="color: #6366f1;">Engine.</span></h2>
             </div>
 
-            <!-- Step 1 -->
             <div class="row align-items-center mb-5 pb-5">
                 <div class="col-lg-6 ps-lg-5 order-lg-2">
-                    <div style="font-size: 80px; font-weight: 900; color: #e2e8f0; line-height: 0.8; margin-bottom: 20px;">01</div>
-                    <div style="font-size: 14px; font-weight: 700; color: #4f46e5; text-transform: uppercase; letter-spacing: 2px;">Phase 01</div>
-                    <h3 class="fw-bold display-6 mb-3">Ingest & Cleanse.</h3>
-                    <p class="lead-text">Niyu audits 24 months of historical stock moves. Our cleaning engine identifies and removes <strong>"outliers"</strong>—those random B2B spikes that would otherwise ruin your forecast accuracy.</p>
-                    <div class="mt-4 p-3 bg-white rounded-4 border d-inline-block shadow-sm fw-bold text-primary">
+                    <div style="font-size: 100px; font-weight: 900; color: rgba(255,255,255,0.03); line-height: 0.8; margin-bottom: 20px; font-family: 'Inter', sans-serif;">01</div>
+                    <div style="font-size: 14px; font-weight: 700; color: #818cf8; text-transform: uppercase; letter-spacing: 2px;">Phase 01</div>
+                    <h3 class="fw-bold display-6 mb-3 text-white">Ingest & Cleanse.</h3>
+                    <p style="font-size: 1.25rem; color: #94a3b8;">Niyu audits 24 months of historical stock moves. Our cleaning engine identifies and removes <strong class="text-white">"outliers"</strong>—those random B2B spikes that would otherwise ruin your forecast accuracy.</p>
+                    <div class="mt-4 p-3 rounded-4 d-inline-block shadow-sm fw-bold" style="background: #1e1b4b; color: #818cf8; border: 1px solid #312e81;">
                         &#9989; Data Normalization
                     </div>
                 </div>
                 <div class="col-lg-6 order-lg-1">
-                    <div class="glass-card p-2">
-                        <img src="./autoexport.png" alt="Ingest" class="w-100 rounded-4 d-block">
+                    <div style="background: rgba(255,255,255,0.05); padding: 10px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">
+                        <img src="./autoexport.png" alt="Ingest" class="w-100 rounded-4 d-block" style="opacity: 0.8;">
                     </div>
                 </div>
             </div>
 
-            <!-- Step 2 -->
             <div class="row align-items-center mb-5 pb-5">
                 <div class="col-lg-6 pe-lg-5 order-lg-1">
-                    <div style="font-size: 80px; font-weight: 900; color: #fce7f3; line-height: 0.8; margin-bottom: 20px;">02</div>
-                    <div style="font-size: 14px; font-weight: 700; color: #db2777; text-transform: uppercase; letter-spacing: 2px;">Phase 02</div>
-                    <h3 class="fw-bold display-6 mb-3">Neural Processing.</h3>
-                    <p class="lead-text">Our AI runs thousands of statistical simulations per SKU. It detects <strong>seasonality spikes</strong> and velocity shifts before you even see the orders coming.</p>
-                    <div class="mt-4 p-3 bg-white rounded-4 border d-inline-block shadow-sm fw-bold" style="color: #db2777;">
+                    <div style="font-size: 100px; font-weight: 900; color: rgba(236, 72, 153, 0.05); line-height: 0.8; margin-bottom: 20px;">02</div>
+                    <div style="font-size: 14px; font-weight: 700; color: #ec4899; text-transform: uppercase; letter-spacing: 2px;">Phase 02</div>
+                    <h3 class="fw-bold display-6 mb-3 text-white">Neural Processing.</h3>
+                    <p style="font-size: 1.25rem; color: #94a3b8;">Our AI runs thousands of statistical simulations per SKU. It detects <strong class="text-white">seasonality spikes</strong> and velocity shifts before you even see the orders coming.</p>
+                    <div class="mt-4 p-3 rounded-4 d-inline-block shadow-sm fw-bold" style="background: #500724; color: #ec4899; border: 1px solid #831843;">
                         &#129504; AI Core Brain
                     </div>
                 </div>
                 <div class="col-lg-6 order-lg-2">
-                    <div class="glass-card p-2">
-                        <img src="./autoexport.png" alt="Neural" class="w-100 rounded-4 d-block">
+                    <div style="background: rgba(255,255,255,0.05); padding: 10px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">
+                        <img src="./autoexport.png" alt="Neural" class="w-100 rounded-4 d-block" style="opacity: 0.8;">
                     </div>
                 </div>
             </div>
 
-            <!-- Step 3 -->
             <div class="row align-items-center">
                 <div class="col-lg-6 ps-lg-5 order-lg-2">
-                    <div style="font-size: 80px; font-weight: 900; color: #e0f2fe; line-height: 0.8; margin-bottom: 20px;">03</div>
-                    <div style="font-size: 14px; font-weight: 700; color: #0ea5e9; text-transform: uppercase; letter-spacing: 2px;">Phase 03</div>
-                    <h3 class="fw-bold display-6 mb-3">Confirm to Purchase.</h3>
-                    <p class="lead-text">Niyu translates complex math into <strong>Draft Purchase Orders</strong> in Odoo. Quantities are pre-filled, grouped by vendor, and optimized for your specific lead times.</p>
-                    <div class="mt-4 p-3 bg-white rounded-4 border d-inline-block shadow-sm fw-bold" style="color: #0ea5e9;">
+                    <div style="font-size: 100px; font-weight: 900; color: rgba(14, 165, 233, 0.05); line-height: 0.8; margin-bottom: 20px;">03</div>
+                    <div style="font-size: 14px; font-weight: 700; color: #38bdf8; text-transform: uppercase; letter-spacing: 2px;">Phase 03</div>
+                    <h3 class="fw-bold display-6 mb-3 text-white">Confirm to Purchase.</h3>
+                    <p style="font-size: 1.25rem; color: #94a3b8;">Niyu translates complex math into <strong class="text-white">Draft Purchase Orders</strong> in Odoo. Quantities are pre-filled, grouped by vendor, and optimized for your specific lead times.</p>
+                    <div class="mt-4 p-3 rounded-4 d-inline-block shadow-sm fw-bold" style="background: #0c4a6e; color: #38bdf8; border: 1px solid #075985;">
                         &#9881; Auto-Drafting
                     </div>
                 </div>
                 <div class="col-lg-6 order-lg-1">
-                    <div class="glass-card p-2">
-                        <img src="./autoexport.png" alt="Draft PO" class="w-100 rounded-4 d-block">
+                    <div style="background: rgba(255,255,255,0.05); padding: 10px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">
+                        <img src="./autoexport.png" alt="Draft PO" class="w-100 rounded-4 d-block" style="opacity: 0.8;">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==============================================
-         7. FEATURES (Grid)
-         ============================================== -->
-    <section id="features" class="section-padding bg-white">
+    <section id="features" style="padding: 120px 0; background: #0f172a;">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="fw-black">Enterprise Intelligence.</h2>
+                <h2 class="fw-black text-white">Enterprise Intelligence.</h2>
             </div>
             <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="glass-card p-4 h-100 bg-light">
-                        <h5 class="fw-bold mb-3" style="color: #4f46e5;">&#128200; Viral Spike Logic</h5>
-                        <p class="text-secondary mb-0">Detects if an item starts selling 300% faster than usual and triggers a priority restock order.</p>
+                    <div class="glass-card p-4 h-100" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255,255,255,0.05); border-radius: 20px;">
+                        <h5 class="fw-bold mb-3" style="color: #818cf8;">&#128200; Viral Spike Logic</h5>
+                        <p class="mb-0" style="color: #94a3b8;">Detects if an item starts selling 300% faster than usual and triggers a priority restock order.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="glass-card p-4 h-100 bg-light">
-                        <h5 class="fw-bold mb-3" style="color: #db2777;">&#128176; Cash Flow Forecast</h5>
-                        <p class="text-secondary mb-0">Niyu tells you exactly how much cash you'll need for next month's stock today.</p>
+                    <div class="glass-card p-4 h-100" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255,255,255,0.05); border-radius: 20px;">
+                        <h5 class="fw-bold mb-3" style="color: #f472b6;">&#128176; Cash Flow Forecast</h5>
+                        <p class="mb-0" style="color: #94a3b8;">Niyu tells you exactly how much cash you'll need for next month's stock today.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="glass-card p-4 h-100 bg-light">
-                        <h5 class="fw-bold mb-3" style="color: #4f46e5;">&#127881; Seasonality Aware</h5>
-                        <p class="text-secondary mb-0">Smart analysis of holidays ensures you're never empty-handed during peak Christmas spikes.</p>
+                    <div class="glass-card p-4 h-100" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255,255,255,0.05); border-radius: 20px;">
+                        <h5 class="fw-bold mb-3" style="color: #818cf8;">&#127881; Seasonality Aware</h5>
+                        <p class="mb-0" style="color: #94a3b8;">Smart analysis of holidays ensures you're never empty-handed during peak Christmas spikes.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="glass-card p-4 h-100 bg-light">
-                        <h5 class="fw-bold mb-3" style="color: #db2777;">&#128666; Lead Time Logic</h5>
-                        <p class="text-secondary mb-0">Accounts for overseas shipping times. Order 45 days early so you arrive right on time.</p>
+                    <div class="glass-card p-4 h-100" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255,255,255,0.05); border-radius: 20px;">
+                        <h5 class="fw-bold mb-3" style="color: #f472b6;">&#128666; Lead Time Logic</h5>
+                        <p class="mb-0" style="color: #94a3b8;">Accounts for overseas shipping times. Order 45 days early so you arrive right on time.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="glass-card p-4 h-100 bg-light">
-                        <h5 class="fw-bold mb-3" style="color: #4f46e5;">&#128274; Stateless Security</h5>
-                        <p class="text-secondary mb-0">Stateless processing. We process data in encrypted RAM and purge it instantly. Zero storage.</p>
+                    <div class="glass-card p-4 h-100" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255,255,255,0.05); border-radius: 20px;">
+                        <h5 class="fw-bold mb-3" style="color: #818cf8;">&#128274; Stateless Security</h5>
+                        <p class="mb-0" style="color: #94a3b8;">Stateless processing. We process data in encrypted RAM and purge it instantly. Zero storage.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="glass-card p-4 h-100 bg-light">
-                        <h5 class="fw-bold mb-3" style="color: #db2777;">&#9729; Cloud Offload</h5>
-                        <p class="text-secondary mb-0">Math happens on our GPU clusters, so your Odoo server stays lighting fast.</p>
+                    <div class="glass-card p-4 h-100" style="background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(255,255,255,0.05); border-radius: 20px;">
+                        <h5 class="fw-bold mb-3" style="color: #f472b6;">&#9729; Cloud Offload</h5>
+                        <p class="mb-0" style="color: #94a3b8;">Math happens on our GPU clusters, so your Odoo server stays lighting fast.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==============================================
-         8. INVESTMENT (Pop-out Layout)
-         ============================================== -->
-    <section id="pricing" class="section-padding">
+    <section id="pricing" style="padding: 120px 0;">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="fw-black">Investment Plans.</h2>
+                <h2 class="fw-black text-white">Investment Plans.</h2>
             </div>
             <div class="row g-4 align-items-center justify-content-center">
-                <!-- Free -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="glass-card p-5 text-center bg-white h-100">
-                        <h4 class="fw-bold text-muted">Free Audit</h4>
-                        <div class="display-3 fw-black text-dark my-3">$0</div>
+                    <div class="glass-card p-5 text-center h-100" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px;">
+                        <h4 class="fw-bold text-secondary">Free Audit</h4>
+                        <div class="display-3 fw-black text-white my-3">$0</div>
                         <ul class="list-unstyled text-secondary lh-lg">
                             <li>&#10003; Top 20 SKUs Analysis</li>
                             <li>&#10003; Weekly Cloud Sync</li>
@@ -325,24 +274,22 @@
                         </ul>
                     </div>
                 </div>
-                <!-- Pro -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="glass-card p-5 text-center position-relative" style="background: #ffffff; border: 2px solid #4f46e5; transform: scale(1.05); z-index: 10;">
-                        <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-primary px-3 py-2">BEST SELLER</span>
-                        <h4 class="fw-bold text-primary mt-3">Pro Plan</h4>
-                        <div class="display-3 fw-black text-dark my-3">$49<span class="fs-6 text-muted fw-normal">/mo</span></div>
-                        <ul class="list-unstyled fw-bold text-dark lh-lg">
-                            <li><span class="text-primary">&#10003;</span> 10,000 SKUs Capacity</li>
-                            <li><span class="text-primary">&#10003;</span> Daily Automated Sync</li>
-                            <li><span class="text-primary">&#10003;</span> Draft PO Generation</li>
+                    <div class="glass-card p-5 text-center position-relative" style="background: rgba(15, 23, 42, 0.8); border: 1px solid #6366f1; transform: scale(1.05); z-index: 10; border-radius: 24px; box-shadow: 0 0 40px rgba(99, 102, 241, 0.15);">
+                        <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill px-3 py-2" style="background: #6366f1; animation: pulse-glow 2s infinite;">BEST SELLER</span>
+                        <h4 class="fw-bold mt-3" style="color: #818cf8;">Pro Plan</h4>
+                        <div class="display-3 fw-black text-white my-3">$49<span class="fs-6 text-secondary fw-normal">/mo</span></div>
+                        <ul class="list-unstyled fw-bold text-white lh-lg">
+                            <li><span style="color: #818cf8;">&#10003;</span> 10,000 SKUs Capacity</li>
+                            <li><span style="color: #818cf8;">&#10003;</span> Daily Automated Sync</li>
+                            <li><span style="color: #818cf8;">&#10003;</span> Draft PO Generation</li>
                         </ul>
                     </div>
                 </div>
-                <!-- Enterprise -->
                 <div class="col-lg-4 col-md-6">
-                    <div class="glass-card p-5 text-center bg-white h-100">
-                        <h4 class="fw-bold text-muted">Enterprise</h4>
-                        <div class="display-3 fw-black text-dark my-3">Custom</div>
+                    <div class="glass-card p-5 text-center h-100" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px;">
+                        <h4 class="fw-bold text-secondary">Enterprise</h4>
+                        <div class="display-3 fw-black text-white my-3">Custom</div>
                         <ul class="list-unstyled text-secondary lh-lg">
                             <li>&#10003; Unlimited SKUs</li>
                             <li>&#10003; Multi-Warehouse</li>
@@ -354,111 +301,96 @@
         </div>
     </section>
 
-    <!-- ==============================================
-         9. DASHBOARD / COMMAND CENTER (Dark Mode Mix)
-         ============================================== -->
-    <section class="section-padding bg-white">
+    <section style="padding: 120px 0; background: #0b0f19;">
         <div class="container">
             
-            <!-- Dashboard Metrics -->
             <div class="row align-items-center mb-5 pb-5">
                 <div class="col-lg-5">
-                    <span class="fw-bold text-uppercase text-primary ls-1">Enterprise Metrics</span>
-                    <h2 class="fw-black mt-3 mb-4">The New Standard of <span style="color: #94a3b8;">Efficiency.</span></h2>
-                    <p class="lead-text mb-5">Niyu doesn't just calculate numbers; it transforms your warehouse into a high-velocity profit engine. Experience 100% visibility into your capital's future.</p>
+                    <span class="fw-bold text-uppercase ls-1" style="color: #38bdf8;">Enterprise Metrics</span>
+                    <h2 class="fw-black mt-3 mb-4 text-white">The New Standard of <span style="color: #475569;">Efficiency.</span></h2>
+                    <p style="font-size: 1.2rem; color: #94a3b8; margin-bottom: 40px;">Niyu doesn't just calculate numbers; it transforms your warehouse into a high-velocity profit engine. Experience 100% visibility into your capital's future.</p>
                     <div class="row">
                         <div class="col-6">
-                            <div class="display-4 fw-black text-dark">+42%</div>
-                            <div class="small fw-bold text-uppercase text-muted">Stock Turnover</div>
+                            <div class="display-4 fw-black text-white">+42%</div>
+                            <div class="small fw-bold text-uppercase" style="color: #475569;">Stock Turnover</div>
                         </div>
                         <div class="col-6">
-                            <div class="display-4 fw-black text-primary">-15h</div>
-                            <div class="small fw-bold text-uppercase text-muted">Weekly Workload</div>
+                            <div class="display-4 fw-black" style="color: #38bdf8;">-15h</div>
+                            <div class="small fw-bold text-uppercase" style="color: #475569;">Weekly Workload</div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-7">
-                    <!-- Fake UI Card -->
-                    <div class="glass-card p-5">
+                    <div class="glass-card p-5" style="background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px;">
                         <div class="d-flex justify-content-between align-items-center mb-4">
-                            <h5 class="fw-bold m-0">SKU Health Audit</h5>
-                            <span class="badge bg-success rounded-pill">OPTIMIZED</span>
+                            <h5 class="fw-bold m-0 text-white">SKU Health Audit</h5>
+                            <span class="badge rounded-pill" style="background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid #10b981;">OPTIMIZED</span>
                         </div>
                         <div class="mb-4">
-                            <div class="d-flex justify-content-between mb-1"><small class="fw-bold text-muted">High Velocity</small> <small class="fw-bold">88%</small></div>
-                            <div class="progress" style="height: 8px;"><div class="progress-bar bg-primary" style="width: 88%"></div></div>
+                            <div class="d-flex justify-content-between mb-1"><small class="fw-bold text-secondary">High Velocity</small> <small class="fw-bold text-white">88%</small></div>
+                            <div class="progress" style="height: 6px; background: #1e293b;"><div class="progress-bar" style="width: 88%; background: #6366f1;"></div></div>
                         </div>
                         <div>
-                            <div class="d-flex justify-content-between mb-1"><small class="fw-bold text-muted">Overstock</small> <small class="fw-bold">2%</small></div>
-                            <div class="progress" style="height: 8px;"><div class="progress-bar bg-danger" style="width: 2%"></div></div>
+                            <div class="d-flex justify-content-between mb-1"><small class="fw-bold text-secondary">Overstock</small> <small class="fw-bold text-white">2%</small></div>
+                            <div class="progress" style="height: 6px; background: #1e293b;"><div class="progress-bar bg-danger" style="width: 2%"></div></div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Sleek Setup -->
             <div class="text-center mb-5 pt-5">
-                <h2 class="fw-black">Sleek Setup.</h2>
-                <p class="text-secondary">Connect Niyu to Odoo in exactly 4 minutes.</p>
+                <h2 class="fw-black text-white">Sleek Setup.</h2>
+                <p style="color: #64748b;">Connect Niyu to Odoo in exactly 4 minutes.</p>
             </div>
             <div class="row g-4 text-center mb-5">
                 <div class="col-md-4">
-                    <div class="glass-card p-4">
-                        <div class="icon-box">&#128230;</div>
-                        <h5 class="fw-bold">Install</h5>
-                        <p class="text-secondary small m-0">Add module via Odoo Apps.</p>
+                    <div class="glass-card p-4" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 16px;">
+                        <div class="icon-box" style="color: #fff;">&#128230;</div>
+                        <h5 class="fw-bold text-white">Install</h5>
+                        <p class="small m-0 text-secondary">Add module via Odoo Apps.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="glass-card p-4">
-                        <div class="icon-box">&#128273;</div>
-                        <h5 class="fw-bold">Authenticate</h5>
-                        <p class="text-secondary small m-0">Paste your secure API key.</p>
+                    <div class="glass-card p-4" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 16px;">
+                        <div class="icon-box" style="color: #fff;">&#128273;</div>
+                        <h5 class="fw-bold text-white">Authenticate</h5>
+                        <p class="small m-0 text-secondary">Paste your secure API key.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="glass-card p-4">
-                        <div class="icon-box">&#128243;</div>
-                        <h5 class="fw-bold">Forecast</h5>
-                        <p class="text-secondary small m-0">Run your first cloud audit.</p>
+                    <div class="glass-card p-4" style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 16px;">
+                        <div class="icon-box" style="color: #fff;">&#128243;</div>
+                        <h5 class="fw-bold text-white">Forecast</h5>
+                        <p class="small m-0 text-secondary">Run your first cloud audit.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Command Center (Dark Mode) -->
             <div class="row g-5 align-items-center pt-5">
                 <div class="col-lg-6">
-                    <h3 class="fw-black mb-4">Master your Stock Flow.</h3>
+                    <h3 class="fw-black mb-4 text-white">Master your Stock Flow.</h3>
                     <div class="d-flex gap-3 mb-4">
-                        <div class="fs-3">&#128274;</div>
+                        <div class="fs-3" style="color: #818cf8;">&#128274;</div>
                         <div>
-                            <h5 class="fw-bold">Stateless RAM Security</h5>
-                            <p class="text-secondary small m-0">We never store your transaction history. Data exists in RAM for milliseconds and is purged instantly.</p>
+                            <h5 class="fw-bold text-white">Stateless RAM Security</h5>
+                            <p class="small m-0" style="color: #94a3b8;">We never store your transaction history. Data exists in RAM for milliseconds and is purged instantly.</p>
                         </div>
                     </div>
                     <div class="d-flex gap-3 mb-4">
-                        <div class="fs-3">&#128640;</div>
+                        <div class="fs-3" style="color: #f472b6;">&#128640;</div>
                         <div>
-                            <h5 class="fw-bold">GPU-Offload Engine</h5>
-                            <p class="text-secondary small m-0">Complex math happens on our ultra-fast GPU clusters. Your Odoo server stays lighting fast.</p>
-                        </div>
-                    </div>
-                    <div class="d-flex gap-3">
-                        <div class="fs-3">&#127919;</div>
-                        <div>
-                            <h5 class="fw-bold">Surgical Lead Times</h5>
-                            <p class="text-secondary small m-0">Automated lead-time calculation ensures you order from China, Europe, or local vendors at the perfect moment.</p>
+                            <h5 class="fw-bold text-white">GPU-Offload Engine</h5>
+                            <p class="small m-0" style="color: #94a3b8;">Complex math happens on our ultra-fast GPU clusters. Your Odoo server stays lighting fast.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <!-- Terminal UI -->
-                    <div class="bg-dark text-white p-4 rounded-4 shadow-lg font-monospace fs-6">
-                        <div class="text-success mb-2">> [CORE] Initializing Neural Sequence... Success.</div>
-                        <div class="text-info mb-2">> [DATA] Scrubbing 42,000 SKUs for Seasonality...</div>
-                        <div class="text-white-50">> [SYNC] Pushing Draft POs to Odoo Purchase Module...</div>
-                        <hr class="border-secondary my-3">
-                        <div class="d-flex justify-content-between text-secondary" style="font-size: 11px;">
+                    <div style="background: #0f172a; border: 1px solid #334155; padding: 25px; border-radius: 16px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); font-family: 'Courier New', monospace; font-size: 14px;">
+                        <div style="color: #4ade80; margin-bottom: 8px;">> [CORE] Initializing Neural Sequence... Success.</div>
+                        <div style="color: #38bdf8; margin-bottom: 8px;">> [DATA] Scrubbing 42,000 SKUs for Seasonality...</div>
+                        <div style="color: #94a3b8; margin-bottom: 8px;">> [SYNC] Pushing Draft POs to Odoo Purchase Module...</div>
+                        <hr style="border-color: #334155; margin: 15px 0;">
+                        <div class="d-flex justify-content-between" style="font-size: 11px; color: #64748b;">
                             <span>ENCRYPTION: AES-256-GCM</span>
                             <span>CORE: V19.0.1</span>
                         </div>
@@ -468,61 +400,54 @@
         </div>
     </section>
 
-    <!-- ==============================================
-         10. FAQ
-         ============================================== -->
-    <section id="faq" class="section-padding">
+    <section id="faq" style="padding: 120px 0;">
         <div class="container">
             <div class="text-center mb-5">
-                <h2 class="fw-black">FAQ</h2>
+                <h2 class="fw-black text-white">FAQ</h2>
             </div>
             <div class="row g-4">
                 <div class="col-md-6">
-                    <div class="glass-card p-4 h-100 bg-white">
-                        <h6 class="fw-bold fs-5">Is my data safe?</h6>
-                        <p class="text-secondary m-0 mt-2">Yes. Niyu uses a stateless RAM-processing architecture. We process sales velocity in volatile memory and purge it immediately. No transaction data is ever stored.</p>
+                    <div class="glass-card p-4 h-100" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 16px;">
+                        <h6 class="fw-bold fs-5 text-white">Is my data safe?</h6>
+                        <p class="m-0 mt-2" style="color: #94a3b8;">Yes. Niyu uses a stateless RAM-processing architecture. We process sales velocity in volatile memory and purge it immediately.</p>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="glass-card p-4 h-100 bg-white">
-                        <h6 class="fw-bold fs-5">Multi-Company Support?</h6>
-                        <p class="text-secondary m-0 mt-2">Absolutely. You can map Niyu to separate Odoo companies or specific warehouse clusters within a single database.</p>
+                    <div class="glass-card p-4 h-100" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 16px;">
+                        <h6 class="fw-bold fs-5 text-white">Multi-Company Support?</h6>
+                        <p class="m-0 mt-2" style="color: #94a3b8;">Absolutely. You can map Niyu to separate Odoo companies or specific warehouse clusters within a single database.</p>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="glass-card p-4 h-100 bg-white">
-                        <h6 class="fw-bold fs-5">Keep my old rules?</h6>
-                        <p class="text-secondary m-0 mt-2">Yes. Niyu runs in parallel with Odoo's native reordering rules. Use Niyu for predictive growth and Odoo rules as your ultimate safety net.</p>
+                    <div class="glass-card p-4 h-100" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 16px;">
+                        <h6 class="fw-bold fs-5 text-white">Keep my old rules?</h6>
+                        <p class="m-0 mt-2" style="color: #94a3b8;">Yes. Niyu runs in parallel with Odoo's native reordering rules. Use Niyu for predictive growth and Odoo rules as your ultimate safety net.</p>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="glass-card p-4 h-100 bg-white">
-                        <h6 class="fw-bold fs-5">Which Odoo Versions?</h6>
-                        <p class="text-secondary m-0 mt-2">Niyu is verified and optimized for Odoo 14, 15, 16, 17, 18, and 19 (Community and Enterprise editions).</p>
+                    <div class="glass-card p-4 h-100" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 16px;">
+                        <h6 class="fw-bold fs-5 text-white">Which Odoo Versions?</h6>
+                        <p class="m-0 mt-2" style="color: #94a3b8;">Niyu is verified and optimized for Odoo 14, 15, 16, 17, 18, and 19 (Community and Enterprise editions).</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==============================================
-         11. FOOTER (Floating Island)
-         ============================================== -->
-    <footer class="section-padding pb-5">
+    <footer style="padding: 100px 0;">
         <div class="container">
-            <div class="position-relative overflow-hidden bg-dark text-white rounded-5 p-5 text-center shadow-lg">
-                <!-- Decorative Glows -->
-                <div class="position-absolute top-0 start-0 translate-middle rounded-circle bg-primary opacity-25" style="width: 400px; height: 400px; filter: blur(80px);"></div>
-                <div class="position-absolute bottom-0 end-0 translate-middle rounded-circle bg-danger opacity-25" style="width: 400px; height: 400px; filter: blur(80px);"></div>
+            <div class="position-relative overflow-hidden text-center shadow-lg" style="background: #000; border-radius: 40px; padding: 80px; border: 1px solid rgba(255,255,255,0.1);">
+                <div class="position-absolute top-0 start-0 translate-middle rounded-circle bg-primary opacity-25" style="width: 400px; height: 400px; filter: blur(100px);"></div>
+                <div class="position-absolute bottom-0 end-0 translate-middle rounded-circle bg-danger opacity-25" style="width: 400px; height: 400px; filter: blur(100px);"></div>
                 
                 <div class="position-relative z-1">
-                    <h2 class="display-3 fw-black mb-4">The Future <br> of Purchasing.</h2>
-                    <p class="lead text-white-50 mb-5 mx-auto" style="max-width: 600px;">Audit your top 20 items today for free. Experience the power of AI-driven stock management.</p>
-                    <a href="https://apps.odoo.com/apps/modules/browse?search=Niyu" target="_blank" class="btn btn-light btn-lg rounded-pill px-5 py-3 fw-bold shadow">Get Module Now</a>
+                    <h2 class="display-3 fw-black mb-4 text-white">The Future <br> of Purchasing.</h2>
+                    <p class="lead mb-5 mx-auto" style="max-width: 600px; color: #94a3b8;">Audit your top 20 items today for free. Experience the power of AI-driven stock management.</p>
+                    <a href="https://apps.odoo.com/apps/modules/browse?search=Niyu" target="_blank" class="btn btn-light btn-lg rounded-pill px-5 py-3 fw-bold shadow" style="transition: transform 0.2s;">Get Module Now</a>
                 </div>
             </div>
             <div class="text-center mt-5">
-                <p class="text-secondary fw-bold small text-uppercase ls-1">October 2025 | V19.0.1 | Niyu Labs</p>
+                <p class="fw-bold small text-uppercase ls-1" style="color: #475569;">October 2025 | V19.0.1 | Niyu Labs</p>
             </div>
         </div>
     </footer>
