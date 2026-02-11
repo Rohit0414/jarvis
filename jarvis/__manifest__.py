@@ -16,7 +16,7 @@
     'price': 299,
     'currency': 'USD',
     'depends': ['base', 'web'],   # add 'website' too if you use Website pages
-    'images': ['static/description/banner.gif'],
+    'images': ['static/description/banner.mp4'],
     'data': [
         'views/assets.xml',                     # optional; see note below
         'views/res_config_settings_views.xml',
