@@ -23,19 +23,21 @@
         </div>
     </div>
 
-     <div class="video-showcase-container" style="padding: 0 0 60px 0; background-color: #fcfcfc;">
-      <div style="max-width: 1300px; margin: 0 auto; padding: 0 20px;">
-        <!-- Wrapper now applies the transition and base shadow, will-change property is crucial -->
-       <a href="https://www.youtube.com/watch?v=YKqwJiYOuNg" target="_blank" rel="noopener">
-            <img src="./bann.gif" class="img-fluid rounded" alt="Watch demo video">
-            </a>
-            <p class="mt-2">
-            <a href="https://www.youtube.com/watch?v=YKqwJiYOuNg" target="_blank" rel="noopener">
-                ▶ Watch Demo on YouTube
-            </a>
-            </p>
-      </div>
-    </div>
+     <!-- VIDEO (Layout preserved: padding 0 0 120px 0) -->
+    <section class="video" style="padding: 0 0 120px 0; background-color: #ffffff;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <!-- Accent Border Changed to Primary Color with Stronger Shadow -->
+        <div style="border-radius: 1.75rem; padding: 4px; background-color:  rgba(79, 70, 229, 0.9) !important; box-shadow: 0 60px 150px -30px rgba(0,0,0,0.4) !important; position: relative !important;">
+            <video autoplay loop muted playsinline controls preload="auto" style="width: 100%; display: block; border-radius: 1.75rem; background-color: #000;">
+            <source src="./snowflakevideo.webm" type="video/webm">
+            <!-- Fallback:
+            <source src="static/description/q1.mp4" type="video/mp4">
+            -->
+            Your browser does not support the video tag.
+            </video>
+        </div>
+        </div>
+    </section>
   </div>
 
     <!-- The Visual Proof (Clean Conclusion Card) -->
