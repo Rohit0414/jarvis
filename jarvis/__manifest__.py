@@ -16,6 +16,8 @@
     'price': 299,
     'currency': 'USD',
     'depends': ['base', 'web'],   # add 'website' too if you use Website pages
+    'images': ['static/description/banner.gif'],
+    'live_test_url': 'https://www.youtube.com/watch?v=QmzxcpQqO3M',
     'data': [
         'views/assets.xml',                     # optional; see note below
         'views/res_config_settings_views.xml',

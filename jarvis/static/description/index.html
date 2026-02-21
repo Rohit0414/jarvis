@@ -1,2627 +1,414 @@
-<!-- Bootstrap CSS CDN included for Flexbox functionality -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- ================================================================================= -->
+<!-- NIYU AI SMART STOCK - MASTER DESCRIPTION -->
+<!-- ================================================================================= -->
 
-<div class="container-fluid p-0" style="font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f8fafc; color: #334155; line-height: 1.7;">
+<div style="background-color: #ffffff; font-family: 'Inter', 'Plus Jakarta Sans', sans-serif; color: #0f172a; overflow-x: hidden;">
 
-  <!-- ========== HERO ========== -->
-  <div class="d-flex flex-column justify-content-center align-items-center text-center p-5 mb-5" style="background-color:  #818cf8; color: white; border-bottom-left-radius: 3rem; border-bottom-right-radius: 3rem; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);">
-    <div class="mb-3">
-      <span style="background: rgba(255,255,255,0.2); padding: 0.5rem 1.5rem; border-radius: 50px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; font-size: 0.85rem; backdrop-filter: blur(10px);">
-        &#128640; Niyu Labs
-      </span>
-    </div>
-    <h1 class="display-4 fw-bold mb-3" style="text-shadow: 0 2px 4px rgba(0,0,0,0.2);">Inventory Forecast</h1>
-    <p class="lead" style="max-width: 700px; color: #e0e7ff; font-weight: 400;">AI-powered demand forecasting and smart reordering for Odoo. One of the flagship solutions by Niyu Labs for inventory planning.</p>
-  </div>
-
-  <div class="container" style="">
-
-    <!-- ========== QUICK START ========== -->
-    <section class="mb-5">
-  <div class="card border-0 shadow-lg" style="border-radius: 1.5rem; overflow: hidden; background: #ffffff;">
-    
-    <!-- Header with Gradient Line -->
-    <div class="card-header bg-white border-bottom-0 p-4 pb-2 position-relative">
-      <div style="position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, #6366f1 0%, #a855f7 100%);"></div>
-      <div class="d-flex align-items-center mb-2">
-        <div class="d-flex justify-content-center align-items-center shadow-sm me-3" 
-             style="width: 52px; height: 52px; background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%); color: #4338ca; border-radius: 14px; font-size: 1.5rem;">
-          &#127937;
-        </div>
-        <div>
-          <h2 class="h3 fw-bold text-dark m-0" style="letter-spacing: -0.02em;">Quick start</h2>
-          <p class="text-muted small m-0">Launch your AI forecasting in 4 simple steps</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="card-body p-4 pt-3">
-      <div class="row g-4">
+    <!-- 1. HERO SECTION -->
+    <div style="padding: 100px 20px 60px 20px; text-align: center;">
         
-        <!-- STEP 1 -->
-        <div class="col-md-6">
-          <div class="d-flex h-100 p-4 position-relative" 
-               style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease;"
-               onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 30px -5px rgba(99, 102, 241, 0.15)'; this.style.borderColor='#6366f1';"
-               onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)'; this.style.borderColor='#e2e8f0';">
-            <!-- Step Number Badge -->
-            <div class="position-absolute top-0 start-0 translate-middle badge rounded-pill shadow-sm" 
-                 style="background: #6366f1; font-size: 0.9rem; padding: 0.5em 0.8em; margin-left: 2rem; margin-top: 1rem; border: 2px solid #fff;">
-              Step 1
-            </div>
+        <h1 style="font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 900; line-height: 1; letter-spacing: -0.05em; color: #0f172a; margin: 0 0 25px 0;">
+           Niyu AI <br> 
+            <span style="color: #10b981; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Smart Stock</span>
+        </h1>
+        
+        <p style="font-size: clamp(1.2rem, 3vw, 1.5rem); color: #64748b; max-width: 800px; margin: 0 auto 50px; line-height: 1.5; font-weight: 400;">
+            Stop wrestling with spreadsheets. Niyu audits your sales moves to predict future demand and <b>pre-fills your Draft RFQs</b> so you never see an 'Out of Stock' button again.
+        </p>
+    
+       <!-- Buttons / Status Badge -->
+ <!-- Buttons / Sexy Status Pill -->
+<div style="display: flex; justify-content: center; align-items: center; margin-bottom: 70px;">
+    
+    <div style="background-color: #0f172a; padding: 10px 24px; border-radius: 100px; display: inline-flex; align-items: center; box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.25); border: 1px solid #1e293b;">
+        
+        <!-- Icon -->
+        <div style="color: #10b981; font-size: 18px; margin-right: 12px; display: flex; align-items: center;">
+            &#9889; <!-- Lightning Bolt Icon -->
+        </div>
+
+        <!-- Text -->
+        <div style="display: flex; align-items: center; gap: 10px; margin-right: 12px; font-family: sans-serif;">
+            <span style="color: #ffffff; font-weight: 700; font-size: 15px; letter-spacing: -0.5px;">
+                Free Forever Tier
+            </span>
             
-            <div class="me-3 mt-3 d-flex flex-column align-items-center" style="min-width: 40px;">
-               <span style="font-size: 2rem; color: #818cf8;">&#9881;</span> <!-- Gear Icon -->
-            </div>
-            <div class="mt-2">
-              <h5 class="fw-bold" style="color: #1e293b; margin-bottom: 0.5rem;">Configuration</h5>
-              <p class="mb-0 text-muted" style="font-size: 0.95rem;">
-                Install the module and go to <strong>Inventory &rarr; Configuration &rarr; Settings</strong>. In <strong>Niyu AI Configuration</strong>, enter your <strong>Niyu License Key</strong> (from niyulabs.com) and click <strong>Save</strong>.
-              </p>
-            </div>
-          </div>
+            <!-- Vertical Divider -->
+            <span style="width: 1px; height: 16px; margin-left: 12px; background-color: #334155;"></span>
+             
         </div>
-
-        <!-- STEP 2 -->
-        <div class="col-md-6">
-          <div class="d-flex h-100 p-4 position-relative" 
-               style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease;"
-               onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 30px -5px rgba(99, 102, 241, 0.15)'; this.style.borderColor='#6366f1';"
-               onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)'; this.style.borderColor='#e2e8f0';">
-             <!-- Step Number Badge -->
-             <div class="position-absolute top-0 start-0 translate-middle badge rounded-pill shadow-sm" 
-                  style="background: #6366f1; font-size: 0.9rem; padding: 0.5em 0.8em; margin-left: 2rem; margin-top: 1rem; border: 2px solid #fff;">
-               Step 2
-             </div>
-
-            <div class="me-3 mt-3 d-flex flex-column align-items-center" style="min-width: 40px;">
-               <span style="font-size: 2rem; color: #3b82f6;">&#128259;</span> <!-- Refresh/Sync Icon -->
-            </div>
-            <div class="mt-2">
-              <h5 class="fw-bold" style="color: #1e293b; margin-bottom: 0.5rem;">Initial Sync</h5>
-              <p class="mb-0 text-muted" style="font-size: 0.95rem;">
-                Click <strong>Run Initial Sync</strong>. Wait for the success message; results appear in about 1 minute.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- STEP 3 -->
-        <div class="col-md-6">
-          <div class="d-flex h-100 p-4 position-relative" 
-               style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease;"
-               onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 30px -5px rgba(99, 102, 241, 0.15)'; this.style.borderColor='#6366f1';"
-               onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)'; this.style.borderColor='#e2e8f0';">
-             <!-- Step Number Badge -->
-             <div class="position-absolute top-0 start-0 translate-middle badge rounded-pill shadow-sm" 
-                  style="background: #6366f1; font-size: 0.9rem; padding: 0.5em 0.8em; margin-left: 2rem; margin-top: 1rem; border: 2px solid #fff;">
-               Step 3
-             </div>
-
-            <div class="me-3 mt-3 d-flex flex-column align-items-center" style="min-width: 40px;">
-               <span style="font-size: 2rem; color: #8b5cf6;">&#128202;</span> <!-- Chart/Dashboard Icon -->
-            </div>
-            <div class="mt-2">
-              <h5 class="fw-bold" style="color: #1e293b; margin-bottom: 0.5rem;">Command Center</h5>
-              <p class="mb-0 text-muted" style="font-size: 0.95rem;">
-                Open <strong>Inventory &rarr; Niyu AI</strong> to see the Command Center (KPIs and Replenishment Board).
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- STEP 4 -->
-        <div class="col-md-6">
-          <div class="d-flex h-100 p-4 position-relative" 
-               style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease;"
-               onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 30px -5px rgba(99, 102, 241, 0.15)'; this.style.borderColor='#6366f1';"
-               onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)'; this.style.borderColor='#e2e8f0';">
-             <!-- Step Number Badge -->
-             <div class="position-absolute top-0 start-0 translate-middle badge rounded-pill shadow-sm" 
-                  style="background: #10b981; font-size: 0.9rem; padding: 0.5em 0.8em; margin-left: 2rem; margin-top: 1rem; border: 2px solid #fff;">
-               Step 4
-             </div>
-
-            <div class="me-3 mt-3 d-flex flex-column align-items-center" style="min-width: 40px;">
-               <span style="font-size: 2rem; color: #10b981;">&#128722;</span> <!-- Cart Icon -->
-            </div>
-            <div class="mt-2">
-              <h5 class="fw-bold" style="color: #1e293b; margin-bottom: 0.5rem;">Create POs</h5>
-              <p class="mb-0 text-muted" style="font-size: 0.95rem;">
-                Click <strong>Inventory List</strong> to see the full Smart Stock list. Use the cart icon or <strong>Create Purchase Order</strong> to generate POs from the forecast.
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-   <section class="mb-5">
-  
-  <!-- Header -->
-  <div class="d-flex align-items-center mb-4">
-    <div class="d-flex align-items-center justify-content-center shadow-sm me-3" 
-         style="width: 48px; height: 48px; background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); color: #166534; border-radius: 14px; font-size: 1.25rem; border: 1px solid #bbf7d0;">
-      &#128221;
-    </div>
-    <div>
-      <h2 class="h3 fw-bold m-0" style="color: #1e293b;">Prerequisites</h2>
-      <p class="text-muted small m-0">Ensure these 6 items are ready before you start.</p>
-    </div>
-  </div>
-
-  <!-- Grid of Cards -->
-  <div class="row g-3">
-    
-    <!-- Item 1: Odoo Apps -->
-    <div class="col-md-6">
-      <div class="d-flex align-items-start p-3 h-100 bg-white" 
-           style="border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: all 0.2s ease;"
-           onmouseover="this.style.transform='translateY(-3px)'; this.style.borderColor='#6366f1'; this.style.boxShadow='0 10px 20px -5px rgba(99, 102, 241, 0.1)';"
-           onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#e2e8f0'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.02)';">
-        
-        <div class="flex-shrink-0 me-3">
-          <div class="d-flex align-items-center justify-content-center" 
-               style="width: 32px; height: 32px; background: #e0e7ff; color: #4338ca; border-radius: 50%; font-weight: bold; font-size: 0.9rem;">
-            1
-          </div>
-        </div>
-        <div>
-          <h6 class="fw-bold text-dark mb-1">Odoo Apps Installed</h6>
-          <p class="mb-0 text-muted" style="font-size: 0.9rem; line-height: 1.5;">
-            Stock (Inventory), Sales, and Purchase must be installed. The module depends on their data structures.
-          </p>
-        </div>
-        <div class="ms-auto ps-2 text-success" style="font-size: 1.2rem;">&#10004;</div>
-      </div>
-    </div>
-
-    <!-- Item 2: Sales History -->
-    <div class="col-md-6">
-      <div class="d-flex align-items-start p-3 h-100 bg-white" 
-           style="border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: all 0.2s ease;"
-           onmouseover="this.style.transform='translateY(-3px)'; this.style.borderColor='#6366f1'; this.style.boxShadow='0 10px 20px -5px rgba(99, 102, 241, 0.1)';"
-           onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#e2e8f0'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.02)';">
-        
-        <div class="flex-shrink-0 me-3">
-          <div class="d-flex align-items-center justify-content-center" 
-               style="width: 32px; height: 32px; background: #e0e7ff; color: #4338ca; border-radius: 50%; font-weight: bold; font-size: 0.9rem;">
-            2
-          </div>
-        </div>
-        <div>
-          <h6 class="fw-bold text-dark mb-1">Sales History</h6>
-          <p class="mb-0 text-muted" style="font-size: 0.9rem; line-height: 1.5;">
-            Confirmed Sales Orders (state Sale or Done) within the last 2 years. Drafts/Quotations are ignored.
-          </p>
-        </div>
-        <div class="ms-auto ps-2 text-success" style="font-size: 1.2rem;">&#10004;</div>
-      </div>
-    </div>
-
-    <!-- Item 3: Products -->
-    <div class="col-md-6">
-      <div class="d-flex align-items-start p-3 h-100 bg-white" 
-           style="border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: all 0.2s ease;"
-           onmouseover="this.style.transform='translateY(-3px)'; this.style.borderColor='#6366f1'; this.style.boxShadow='0 10px 20px -5px rgba(99, 102, 241, 0.1)';"
-           onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#e2e8f0'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.02)';">
-        
-        <div class="flex-shrink-0 me-3">
-          <div class="d-flex align-items-center justify-content-center" 
-               style="width: 32px; height: 32px; background: #e0e7ff; color: #4338ca; border-radius: 50%; font-weight: bold; font-size: 0.9rem;">
-            3
-          </div>
-        </div>
-        <div>
-          <h6 class="fw-bold text-dark mb-1">Product Configuration</h6>
-          <p class="mb-0 text-muted" style="font-size: 0.9rem; line-height: 1.5;">
-            Products must be <strong>Storable</strong> or <strong>Consumable</strong>. Service products are excluded from forecasting.
-          </p>
-        </div>
-        <div class="ms-auto ps-2 text-success" style="font-size: 1.2rem;">&#10004;</div>
-      </div>
-    </div>
-
-    <!-- Item 4: Vendors -->
-    <div class="col-md-6">
-      <div class="d-flex align-items-start p-3 h-100 bg-white" 
-           style="border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: all 0.2s ease;"
-           onmouseover="this.style.transform='translateY(-3px)'; this.style.borderColor='#6366f1'; this.style.boxShadow='0 10px 20px -5px rgba(99, 102, 241, 0.1)';"
-           onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#e2e8f0'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.02)';">
-        
-        <div class="flex-shrink-0 me-3">
-          <div class="d-flex align-items-center justify-content-center" 
-               style="width: 32px; height: 32px; background: #e0e7ff; color: #4338ca; border-radius: 50%; font-weight: bold; font-size: 0.9rem;">
-            4
-          </div>
-        </div>
-        <div>
-          <h6 class="fw-bold text-dark mb-1">Vendors for POs</h6>
-          <p class="mb-0 text-muted" style="font-size: 0.9rem; line-height: 1.5;">
-            Products must have at least one supplier in the Purchase tab. The first supplier is used for suggested buy.
-          </p>
-        </div>
-        <div class="ms-auto ps-2 text-success" style="font-size: 1.2rem;">&#10004;</div>
-      </div>
-    </div>
-
-    <!-- Item 5: License Key -->
-    <div class="col-md-6">
-      <div class="d-flex align-items-start p-3 h-100 bg-white" 
-           style="border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: all 0.2s ease;"
-           onmouseover="this.style.transform='translateY(-3px)'; this.style.borderColor='#6366f1'; this.style.boxShadow='0 10px 20px -5px rgba(99, 102, 241, 0.1)';"
-           onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#e2e8f0'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.02)';">
-        
-        <div class="flex-shrink-0 me-3">
-          <div class="d-flex align-items-center justify-content-center" 
-               style="width: 32px; height: 32px; background: #e0e7ff; color: #4338ca; border-radius: 50%; font-weight: bold; font-size: 0.9rem;">
-            5
-          </div>
-        </div>
-        <div>
-          <h6 class="fw-bold text-dark mb-1">Niyu License Key</h6>
-          <p class="mb-0 text-muted" style="font-size: 0.9rem; line-height: 1.5;">
-            Active key from niyulabs.com entered in Inventory &rarr; Configuration &rarr; Settings.
-          </p>
-        </div>
-        <div class="ms-auto ps-2 text-success" style="font-size: 1.2rem;">&#10004;</div>
-      </div>
-    </div>
-
-    <!-- Item 6: Network -->
-    <div class="col-md-6">
-      <div class="d-flex align-items-start p-3 h-100 bg-white" 
-           style="border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: all 0.2s ease;"
-           onmouseover="this.style.transform='translateY(-3px)'; this.style.borderColor='#6366f1'; this.style.boxShadow='0 10px 20px -5px rgba(99, 102, 241, 0.1)';"
-           onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='#e2e8f0'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.02)';">
-        
-        <div class="flex-shrink-0 me-3">
-          <div class="d-flex align-items-center justify-content-center" 
-               style="width: 32px; height: 32px; background: #e0e7ff; color: #4338ca; border-radius: 50%; font-weight: bold; font-size: 0.9rem;">
-            6
-          </div>
-        </div>
-        <div>
-          <h6 class="fw-bold text-dark mb-1">Network Access</h6>
-          <p class="mb-0 text-muted" style="font-size: 0.9rem; line-height: 1.5;">
-            Odoo server must be able to reach <strong>api.niyulabs.com</strong> over HTTPS (port 443).
-          </p>
-        </div>
-        <div class="ms-auto ps-2 text-success" style="font-size: 1.2rem;">&#10004;</div>
-      </div>
-    </div>
-
-  </div>
-</section>
-    <!-- ========== OVERVIEW ========== -->
-    <section class="mb-5 position-relative" style="padding: 4rem 2rem; background: radial-gradient(circle at 50% 50%, rgba(99, 102, 241, 0.05) 0%, transparent 70%); border-radius: 2rem;">
-  
-  <!-- Header -->
-  <div class="text-center mb-5">
-    <div class="d-inline-flex align-items-center justify-content-center mb-3 shadow-sm" style="width: 64px; height: 64px; background: white; border-radius: 50%; font-size: 2rem;">
-      &#128202;
-    </div>
-    <h2 class="h2 fw-bold mb-3" style="background: linear-gradient(90deg, #1e293b 0%, #475569 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -0.02em;">
-      Overview
-    </h2>
-    <p class="mx-auto fs-5" style="max-width: 800px; color: #64748b; line-height: 1.8;">
-      Inventory Forecast connects your Odoo sales history to Niyu’s cloud AI to predict demand per product for the next 30 days. It computes suggested order quantities, days of coverage, capital needed to restock, and revenue at risk.
-    </p>
-  </div>
-
-  <div class="row g-4">
-    
-    <!-- Card 1: AI Demand -->
-    <div class="col-lg-4 col-md-6">
-      <div class="h-70 p-4 position-relative overflow-hidden bg-white" 
-           style="border-radius: 24px; border: 1px solid rgba(99, 102, 241, 0.2); box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.15); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);"
-           onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px -10px rgba(99, 102, 241, 0.25)';"
-           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px -10px rgba(99, 102, 241, 0.15)';">
-        
-        <!-- Decorative bg blob
-        <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%); border-radius: 50%; opacity: 0.5;"></div> -->
-
-        <div class="d-flex flex-column align-items-start position-relative">
-          <div class="d-flex align-items-center justify-content-center mb-4 shadow-sm" 
-               style="width: 56px; height: 56px; background: linear-gradient(135deg, #4f46e5 0%, #4338ca 100%); border-radius: 16px; color: white; font-size: 1.75rem;">
-            &#128200;
-          </div>
-          <h4 class="fw-bold mb-2" style="color: #1e293b;">30-day AI demand</h4>
-          <p class="text-muted mb-0">
-            Per-product forecast from your last 2 years of confirmed sales, processed by Niyu cloud.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 2: Suggested Buy -->
-    <div class="col-lg-4 col-md-6">
-      <div class="h-70 p-4 position-relative overflow-hidden bg-white" 
-           style="border-radius: 24px; border: 1px solid rgba(16, 185, 129, 0.2); box-shadow: 0 10px 30px -10px rgba(16, 185, 129, 0.15); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);"
-           onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px -10px rgba(16, 185, 129, 0.25)';"
-           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px -10px rgba(16, 185, 129, 0.15)';">
-        
-        <!-- Decorative bg blob
-        <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%); border-radius: 50%; opacity: 0.5;"></div> -->
-
-        <div class="d-flex flex-column align-items-start position-relative">
-          <div class="d-flex align-items-center justify-content-center mb-4 shadow-sm" 
-               style="width: 56px; height: 56px; background: linear-gradient(135deg, #059669 0%, #047857 100%); border-radius: 16px; color: white; font-size: 1.75rem;">
-            &#128722;
-          </div>
-          <h4 class="fw-bold mb-2" style="color: #1e293b;">Suggested buy & capital</h4>
-          <p class="text-muted mb-0">
-            Quantity to order and cost (standard price &times; suggested buy) to cover the next 30 days.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Card 3: One-click POs -->
-    <div class="col-lg-4 col-md-6">
-      <div class="h-70 p-4 position-relative overflow-hidden bg-white" 
-           style="border-radius: 24px; border: 1px solid rgba(245, 158, 11, 0.2); box-shadow: 0 10px 30px -10px rgba(245, 158, 11, 0.15); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);"
-           onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px -10px rgba(245, 158, 11, 0.25)';"
-           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px -10px rgba(245, 158, 11, 0.15)';">
-        
-        <!-- Decorative bg blob
-        <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%); border-radius: 50%; opacity: 0.5;"></div> -->
-
-        <div class="d-flex flex-column align-items-start position-relative">
-          <div class="d-flex align-items-center justify-content-center mb-4 shadow-sm" 
-               style="width: 56px; height: 56px; background: linear-gradient(135deg, #d97706 0%, #b45309 100%); border-radius: 16px; color: white; font-size: 1.75rem;">
-            &#9889;
-          </div>
-          <h4 class="fw-bold mb-2" style="color: #1e293b;">One-click POs</h4>
-          <p class="text-muted mb-0">
-            Generate purchase orders by vendor from the forecast list or from a single product form.
-          </p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-   <section class="mb-5 p-5">
-  <div class="row align-items-stretch">
-    
-    <!-- Left Column: Visual Hook -->
-    <div class="col-lg-5 mb-4 mb-lg-0">
-      <div class="h-70 p-5 text-white d-flex flex-column justify-content-center align-items-center text-center position-relative overflow-hidden" 
-           style="background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%); border-radius: 24px; box-shadow: 0 20px 40px -10px rgba(79, 70, 229, 0.5);">
-        
-        <!-- Decorative background circles
-        <div style="position: absolute; top: -50px; left: -50px; width: 200px; height: 200px; background: rgba(255,255,255,0.1); border-radius: 50%; filter: blur(40px);"></div>
-        <div style="position: absolute; bottom: -50px; right: -50px; width: 200px; height: 200px; background: rgba(99, 102, 241, 0.4); border-radius: 50%; filter: blur(40px);"></div> -->
-
-        <div class="position-relative z-1">
-          <div class="mb-4" style="font-size: 5rem; text-shadow: 0 4px 10px rgba(0,0,0,0.2); animation: float 3s ease-in-out infinite;">
-            &#128142;
-          </div>
-          <h3 class="fw-bold display-6 mb-3">Why use it?</h3>
-          <p class="fs-5" style="color: #1b1c1f; max-width: 300px; margin: 0 auto;">
-            Unlock the hidden power of your data and stop guessing.
-          </p>
-          <div class="mt-4 pt-4 border-top border-white border-opacity-25">
-             <span style="font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; opacity: 0.8;">Niyu Labs Forecast</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Right Column: Interactive List -->
-    <div class="col-lg-7 ps-lg-5 d-flex flex-column justify-content-center">
-      <h2 class="h3 fw-bold text-dark mb-4 ms-2">Core Benefits</h2>
-      
-      <div class="d-flex flex-column gap-3">
-        
-        <!-- Item 1: Stockouts -->
-        <div class="d-flex align-items-center p-3 rounded-4 bg-white transition-all" 
-             style="border: 1px solid transparent; transition: all 0.2s ease;"
-             onmouseover="this.style.background='#fff'; this.style.boxShadow='0 10px 20px -5px rgba(0,0,0,0.05)'; this.style.transform='translateX(5px)'; this.style.borderColor='#fecaca';"
-             onmouseout="this.style.background='transparent'; this.style.boxShadow='none'; this.style.transform='translateX(0)'; this.style.borderColor='transparent';">
-          <div class="flex-shrink-0 d-flex align-items-center justify-content-center me-3" 
-               style="width: 52px; height: 52px; background: #fef2f2; color: #dc2626; border-radius: 14px; font-size: 1.5rem;">
-            &#128200;
-          </div>
-          <div>
-            <h6 class="fw-bold text-dark mb-1">Reduce stockouts</h6>
-            <p class="text-muted small mb-0">AI predicts demand so you reorder before running out; focus on Critical items first.</p>
-          </div>
-        </div>
-
-        <!-- Item 2: Capital -->
-        <div class="d-flex align-items-center p-3 rounded-4 bg-white transition-all" 
-             style="border: 1px solid transparent; transition: all 0.2s ease;"
-             onmouseover="this.style.background='#fff'; this.style.boxShadow='0 10px 20px -5px rgba(0,0,0,0.05)'; this.style.transform='translateX(5px)'; this.style.borderColor='#bbf7d0';"
-             onmouseout="this.style.background='transparent'; this.style.boxShadow='none'; this.style.transform='translateX(0)'; this.style.borderColor='transparent';">
-          <div class="flex-shrink-0 d-flex align-items-center justify-content-center me-3" 
-               style="width: 52px; height: 52px; background: #f0fdf4; color: #166534; border-radius: 14px; font-size: 1.5rem;">
-            &#128176;
-          </div>
-          <div>
-            <h6 class="fw-bold text-dark mb-1">Optimize capital</h6>
-            <p class="text-muted small mb-0">See per-product cost to restock; order exactly what you need instead of overbuying.</p>
-          </div>
-        </div>
-
-        <!-- Item 3: Time -->
-        <div class="d-flex align-items-center p-3 rounded-4 bg-white transition-all" 
-             style="border: 1px solid transparent; transition: all 0.2s ease;"
-             onmouseover="this.style.background='#fff'; this.style.boxShadow='0 10px 20px -5px rgba(0,0,0,0.05)'; this.style.transform='translateX(5px)'; this.style.borderColor='#bfdbfe';"
-             onmouseout="this.style.background='transparent'; this.style.boxShadow='none'; this.style.transform='translateX(0)'; this.style.borderColor='transparent';">
-          <div class="flex-shrink-0 d-flex align-items-center justify-content-center me-3" 
-               style="width: 52px; height: 52px; background: #eff6ff; color: #2563eb; border-radius: 14px; font-size: 1.5rem;">
-            &#9201;
-          </div>
-          <div>
-            <h6 class="fw-bold text-dark mb-1">Save time</h6>
-            <p class="text-muted small mb-0">One dashboard and one list instead of manual spreadsheets; one-click grouped POs.</p>
-          </div>
-        </div>
-
-        <!-- Item 4: Revenue Risk -->
-        <div class="d-flex align-items-center p-3 rounded-4 bg-white transition-all" 
-             style="border: 1px solid transparent; transition: all 0.2s ease;"
-             onmouseover="this.style.background='#fff'; this.style.boxShadow='0 10px 20px -5px rgba(0,0,0,0.05)'; this.style.transform='translateX(5px)'; this.style.borderColor='#fde68a';"
-             onmouseout="this.style.background='transparent'; this.style.boxShadow='none'; this.style.transform='translateX(0)'; this.style.borderColor='transparent';">
-          <div class="flex-shrink-0 d-flex align-items-center justify-content-center me-3" 
-               style="width: 52px; height: 52px; background: #fffbeb; color: #d97706; border-radius: 14px; font-size: 1.5rem;">
-            &#9888;
-          </div>
-          <div>
-            <h6 class="fw-bold text-dark mb-1">Revenue at Risk visibility</h6>
-            <p class="text-muted small mb-0">Know precisely how much potential revenue is lost when products are out of stock.</p>
-          </div>
-        </div>
-
-        <!-- Item 5: Data Driven -->
-        <div class="d-flex align-items-center p-3 rounded-4 bg-white transition-all" 
-             style="border: 1px solid transparent; transition: all 0.2s ease;"
-             onmouseover="this.style.background='#fff'; this.style.boxShadow='0 10px 20px -5px rgba(0,0,0,0.05)'; this.style.transform='translateX(5px)'; this.style.borderColor='#ddd6fe';"
-             onmouseout="this.style.background='transparent'; this.style.boxShadow='none'; this.style.transform='translateX(0)'; this.style.borderColor='transparent';">
-          <div class="flex-shrink-0 d-flex align-items-center justify-content-center me-3" 
-               style="width: 52px; height: 52px; background: #f5f3ff; color: #7c3aed; border-radius: 14px; font-size: 1.5rem;">
-            &#128202;
-          </div>
-          <div>
-            <h6 class="fw-bold text-dark mb-1">Data-driven reordering</h6>
-            <p class="text-muted small mb-0">Suggested buy is based on 2 years of granular sales history and current stock.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-    <!-- ========== FEATURES ========== -->
-   <section class="mb-5">
-  
-  <!-- Section Header -->
-  <div class="mb-5 text-center" style="padding: 20px;">
-    <span class="d-inline-block py-1 px-3 rounded-pill bg-light text-primary fw-bold small text-uppercase mb-3" style="letter-spacing: 1px;">Capabilities</span>
-    <h2 class="h2 fw-bold text-dark"><span class="me-2">&#10024;</span> Everything you need</h2>
-    <p class="text-muted mx-auto" style="max-width: 600px;">Comprehensive tools to predict demand, visualize risk, and automate replenishment.</p>
-  </div>
-
-  <div class="row g-4">
-
-    <!-- Column 1 -->
-    <div class="col-lg-6">
-      <div class="d-flex flex-column gap-4">
-        
-        <!-- Feature 1: AI Demand -->
-        <div class="d-flex align-items-start p-4 bg-white position-relative" 
-             style="border-radius: 20px; border: 1px solid #f1f5f9; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease;"
-             onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.05)'; this.style.borderColor='#c7d2fe';"
-             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)'; this.style.borderColor='#f1f5f9';">
-          <div class="flex-shrink-0 d-flex align-items-center justify-content-center me-3 shadow-sm" 
-               style="width: 56px; height: 56px; background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); color: white; border-radius: 16px; font-size: 1.75rem;">
-            &#129302;
-          </div>
-          <div>
-            <h5 class="fw-bold text-dark mb-1">AI 30-day demand</h5>
-            <p class="text-muted small mb-0 lh-base">Per-product forecast for the next 30 days from your last 2 years of confirmed sales, processed by Niyu cloud.</p>
-          </div>
-        </div>
-
-        <!-- Feature 2: Command Center -->
-        <div class="d-flex align-items-start p-4 bg-white position-relative" 
-             style="border-radius: 20px; border: 1px solid #f1f5f9; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease;"
-             onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.05)'; this.style.borderColor='#bfdbfe';"
-             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)'; this.style.borderColor='#f1f5f9';">
-          <div class="flex-shrink-0 d-flex align-items-center justify-content-center me-3 shadow-sm" 
-               style="width: 56px; height: 56px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; border-radius: 16px; font-size: 1.75rem;">
-            &#128187;
-          </div>
-          <div>
-            <h5 class="fw-bold text-dark mb-1">Command Center</h5>
-            <p class="text-muted small mb-0 lh-base">Dashboard under Inventory &rarr; Niyu AI with Revenue at Risk, Critical Items, Restock Capital, and Sync status.</p>
-          </div>
-        </div>
-
-        <!-- Feature 3: Replenishment Board -->
-        <div class="d-flex align-items-start p-4 bg-white position-relative" 
-             style="border-radius: 20px; border: 1px solid #f1f5f9; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease;"
-             onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.05)'; this.style.borderColor='#a5f3fc';"
-             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)'; this.style.borderColor='#f1f5f9';">
-          <div class="flex-shrink-0 d-flex align-items-center justify-content-center me-3 shadow-sm" 
-               style="width: 56px; height: 56px; background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%); color: white; border-radius: 16px; font-size: 1.75rem;">
-            &#128203;
-          </div>
-          <div>
-            <h5 class="fw-bold text-dark mb-1">Replenishment Board</h5>
-            <p class="text-muted small mb-0 lh-base">Top 50 items needing reorder with 30-day trend sparkline, stockout date, lead time, and suggested buy.</p>
-          </div>
-        </div>
-
-        <!-- Feature 4: Smart Stock List -->
-        <div class="d-flex align-items-start p-4 bg-white position-relative" 
-             style="border-radius: 20px; border: 1px solid #f1f5f9; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease;"
-             onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.05)'; this.style.borderColor='#e2e8f0';"
-             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)'; this.style.borderColor='#f1f5f9';">
-          <div class="flex-shrink-0 d-flex align-items-center justify-content-center me-3 shadow-sm" 
-               style="width: 56px; height: 56px; background: linear-gradient(135deg, #64748b 0%, #475569 100%); color: white; border-radius: 16px; font-size: 1.75rem;">
-            &#128450;
-          </div>
-          <div>
-            <h5 class="fw-bold text-dark mb-1">Smart Stock list</h5>
-            <p class="text-muted small mb-0 lh-base">Full forecast list with Status badges (Critical / Overstock), AI Demand, Capital Needed, and Create PO actions.</p>
-          </div>
-        </div>
-
-        <!-- Feature 5: Filters -->
-        <div class="d-flex align-items-start p-4 bg-white position-relative" 
-             style="border-radius: 20px; border: 1px solid #f1f5f9; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease;"
-             onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.05)'; this.style.borderColor='#ddd6fe';"
-             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)'; this.style.borderColor='#f1f5f9';">
-          <div class="flex-shrink-0 d-flex align-items-center justify-content-center me-3 shadow-sm" 
-               style="width: 56px; height: 56px; background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); color: white; border-radius: 16px; font-size: 1.75rem;">
-            &#129514;
-          </div>
-          <div>
-            <h5 class="fw-bold text-dark mb-1">Smart Filters</h5>
-            <p class="text-muted small mb-0 lh-base">Quickly focus on what matters: Critical Risk, Need Purchase, or Healthy items. Group by Product available.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-    <!-- Column 2 -->
-    <div class="col-lg-6">
-      <div class="d-flex flex-column gap-4">
-        
-        <!-- Feature 6: One-click POs -->
-        <div class="d-flex align-items-start p-4 bg-white position-relative" 
-             style="border-radius: 20px; border: 1px solid #f1f5f9; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease;"
-             onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.05)'; this.style.borderColor='#fde68a';"
-             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)'; this.style.borderColor='#f1f5f9';">
-          <div class="flex-shrink-0 d-flex align-items-center justify-content-center me-3 shadow-sm" 
-               style="width: 56px; height: 56px; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; border-radius: 16px; font-size: 1.75rem;">
-            &#9889;
-          </div>
-          <div>
-            <h5 class="fw-bold text-dark mb-1">One-click purchase orders</h5>
-            <p class="text-muted small mb-0 lh-base">Generate POs by vendor from the list or product form. POs are grouped by vendor with origin "Niyu Smart Stock".</p>
-          </div>
-        </div>
-
-        <!-- Feature 7: AI Graph -->
-        <div class="d-flex align-items-start p-4 bg-white position-relative" 
-             style="border-radius: 20px; border: 1px solid #f1f5f9; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease;"
-             onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.05)'; this.style.borderColor='#fbcfe8';"
-             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)'; this.style.borderColor='#f1f5f9';">
-          <div class="flex-shrink-0 d-flex align-items-center justify-content-center me-3 shadow-sm" 
-               style="width: 56px; height: 56px; background: linear-gradient(135deg, #ec4899 0%, #db2777 100%); color: white; border-radius: 16px; font-size: 1.75rem;">
-            &#128200;
-          </div>
-          <div>
-            <h5 class="fw-bold text-dark mb-1">AI Prediction Graph</h5>
-            <p class="text-muted small mb-0 lh-base">Interactive chart in the forecast form tab visualization the time series data from Niyu cloud.</p>
-          </div>
-        </div>
-
-        <!-- Feature 8: Daily Sync -->
-        <div class="d-flex align-items-start p-4 bg-white position-relative" 
-             style="border-radius: 20px; border: 1px solid #f1f5f9; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease;"
-             onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.05)'; this.style.borderColor='#bbf7d0';"
-             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)'; this.style.borderColor='#f1f5f9';">
-          <div class="flex-shrink-0 d-flex align-items-center justify-content-center me-3 shadow-sm" 
-               style="width: 56px; height: 56px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; border-radius: 16px; font-size: 1.75rem;">
-            &#128197;
-          </div>
-          <div>
-            <h5 class="fw-bold text-dark mb-1">Daily automatic sync</h5>
-            <p class="text-muted small mb-0 lh-base">Optional scheduled action (e.g. 02:00) runs a new forecast every day so your data is always fresh.</p>
-          </div>
-        </div>
-
-        <!-- Feature 9: Background Processing -->
-        <div class="d-flex align-items-start p-4 bg-white position-relative" 
-             style="border-radius: 20px; border: 1px solid #f1f5f9; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease;"
-             onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.05)'; this.style.borderColor='#bae6fd';"
-             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)'; this.style.borderColor='#f1f5f9';">
-          <div class="flex-shrink-0 d-flex align-items-center justify-content-center me-3 shadow-sm" 
-               style="width: 56px; height: 56px; background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; border-radius: 16px; font-size: 1.75rem;">
-            &#9729;
-          </div>
-          <div>
-            <h5 class="fw-bold text-dark mb-1">Background processing</h5>
-            <p class="text-muted small mb-0 lh-base">Forecast runs in the cloud; intelligent polling checks for results so your Odoo server isn't bogged down.</p>
-          </div>
-        </div>
-
-        <!-- Feature 10: Sync Guard -->
-        <div class="d-flex align-items-start p-4 bg-white position-relative" 
-             style="border-radius: 20px; border: 1px solid #f1f5f9; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease;"
-             onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.05)'; this.style.borderColor='#fecaca';"
-             onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)'; this.style.borderColor='#f1f5f9';">
-          <div class="flex-shrink-0 d-flex align-items-center justify-content-center me-3 shadow-sm" 
-               style="width: 56px; height: 56px; background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); color: white; border-radius: 16px; font-size: 1.75rem;">
-            &#128274;
-          </div>
-          <div>
-            <h5 class="fw-bold text-dark mb-1">Concurrent-sync guard</h5>
-            <p class="text-muted small mb-0 lh-base">Prevents conflicts by allowing only one forecast job at a time; automatically clears stale jobs (> 15 min).</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-    <!-- ========== USE CASES ========== -->
-   <section class="mb-5">
-  
-  <!-- Header -->
-  <div class="text-center mb-5">
-    <div class="d-inline-flex align-items-center justify-content-center mb-2 shadow-sm" 
-         style="width: 56px; height: 56px; background: #e0e7ff; color: #4338ca; border-radius: 50%; font-size: 1.75rem;">
-      &#128188;
-    </div>
-    <h2 class="h2 fw-bold mt-3 text-dark">Who is this for?</h2>
-    <p class="text-muted mx-auto" style="max-width: 600px;">
-      Whether you are a retailer or a distributor, Inventory Forecast adapts to your business model.
-    </p>
-  </div>
-
-  <div class="row g-4 justify-content-center">
-
-    <!-- Use Case 1: Retail -->
-    <div class="col-lg-4 col-md-6">
-      <div class="h-100 position-relative bg-white overflow-hidden" 
-           style="border-radius: 20px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); border: 1px solid #f1f5f9; transition: all 0.3s ease;"
-           onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.1)';"
-           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)';">
-        
-        <!-- Gradient Top Bar -->
-        <div style="height: 6px; background: linear-gradient(90deg, #ec4899 0%, #8b5cf6 100%);"></div>
-        
-        <div class="p-4">
-          <div class="d-flex align-items-center mb-3">
-            <div class="d-flex align-items-center justify-content-center me-3" 
-                 style="width: 48px; height: 48px; background: #fdf2f8; color: #db2777; border-radius: 12px; font-size: 1.5rem;">
-              &#127978;
-            </div>
-            <h5 class="fw-bold mb-0 text-dark">Retail or E-commerce</h5>
-          </div>
-          <p class="text-muted small mb-0 lh-lg">
-            You sell a high volume of SKUs and need to know exactly what to reorder and how much, effectively eliminating manual spreadsheet analysis.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Use Case 2: Wholesale -->
-    <div class="col-lg-4 col-md-6">
-      <div class="h-100 position-relative bg-white overflow-hidden" 
-           style="border-radius: 20px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); border: 1px solid #f1f5f9; transition: all 0.3s ease;"
-           onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.1)';"
-           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)';">
-        
-        <!-- Gradient Top Bar -->
-        <div style="height: 6px; background: linear-gradient(90deg, #3b82f6 0%, #06b6d4 100%);"></div>
-        
-        <div class="p-4">
-          <div class="d-flex align-items-center mb-3">
-            <div class="d-flex align-items-center justify-content-center me-3" 
-                 style="width: 48px; height: 48px; background: #eff6ff; color: #2563eb; border-radius: 12px; font-size: 1.5rem;">
-              &#128230;
-            </div>
-            <h5 class="fw-bold mb-0 text-dark">Wholesale &amp; Distro</h5>
-          </div>
-          <p class="text-muted small mb-0 lh-lg">
-            You manage complex vendor relationships. The module automatically groups POs by vendor and selects the primary supplier per product.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Use Case 3: Seasonal -->
-    <div class="col-lg-4 col-md-6">
-      <div class="h-100 position-relative bg-white overflow-hidden" 
-           style="border-radius: 20px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); border: 1px solid #f1f5f9; transition: all 0.3s ease;"
-           onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.1)';"
-           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)';">
-        
-        <!-- Gradient Top Bar -->
-        <div style="height: 6px; background: linear-gradient(90deg, #f59e0b 0%, #ef4444 100%);"></div>
-        
-        <div class="p-4">
-          <div class="d-flex align-items-center mb-3">
-            <div class="d-flex align-items-center justify-content-center me-3" 
-                 style="width: 48px; height: 48px; background: #fffbeb; color: #d97706; border-radius: 12px; font-size: 1.5rem;">
-              &#128200;
-            </div>
-            <h5 class="fw-bold mb-0 text-dark">Variable Demand</h5>
-          </div>
-          <p class="text-muted small mb-0 lh-lg">
-            For seasonal or trending products, the AI analyzes 2 full years of history to accurately capture trends and seasonality for the next 30 days.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Use Case 4: Existing Odoo Users -->
-    <div class="col-lg-6 col-md-6">
-      <div class="h-100 position-relative bg-white overflow-hidden" 
-           style="border-radius: 20px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); border: 1px solid #f1f5f9; transition: all 0.3s ease;"
-           onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.1)';"
-           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)';">
-        
-        <!-- Gradient Top Bar -->
-        <div style="height: 6px; background: linear-gradient(90deg, #8b5cf6 0%, #6366f1 100%);"></div>
-        
-        <div class="p-4">
-          <div class="d-flex align-items-center mb-3">
-            <div class="d-flex align-items-center justify-content-center me-3" 
-                 style="width: 48px; height: 48px; background: #f5f3ff; color: #7c3aed; border-radius: 12px; font-size: 1.5rem;">
-              &#128279;
-            </div>
-            <h5 class="fw-bold mb-0 text-dark">Native Odoo Integration</h5>
-          </div>
-          <p class="text-muted small mb-0 lh-lg">
-            Perfect if you already use Stock, Sales, and Purchase. Products have vendors and confirmed Sales Orders, making forecasts immediately actionable without data migration.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Use Case 5: Routine Replenishment -->
-    <div class="col-lg-6 col-md-6">
-      <div class="h-100 position-relative bg-white overflow-hidden" 
-           style="border-radius: 20px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); border: 1px solid #f1f5f9; transition: all 0.3s ease;"
-           onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.1)';"
-           onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)';">
-        
-        <!-- Gradient Top Bar -->
-        <div style="height: 6px; background: linear-gradient(90deg, #10b981 0%, #3b82f6 100%);"></div>
-        
-        <div class="p-4">
-          <div class="d-flex align-items-center mb-3">
-            <div class="d-flex align-items-center justify-content-center me-3" 
-                 style="width: 48px; height: 48px; background: #ecfdf5; color: #059669; border-radius: 12px; font-size: 1.5rem;">
-              &#128197;
-            </div>
-            <h5 class="fw-bold mb-0 text-dark">Daily Replenishment</h5>
-          </div>
-          <p class="text-muted small mb-0 lh-lg">
-            Ideal for daily or weekly purchasing routines. Run the forecast (via cron or manually), check the Command Center KPIs, and create POs in minutes.
-          </p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-   <!-- ========== HOW IT WORKS (Process Pipeline) ========== -->
-<section class="mb-5">
-  <div class="position-relative p-5" style="background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%); border-radius: 24px; border: 1px solid #e0e7ff; overflow: hidden;">
-    
-    <!-- Background Decor -->
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(#6366f1 0.5px, transparent 0.5px); background-size: 20px 20px; opacity: 0.05; pointer-events: none;"></div>
-
-    <div class="text-center position-relative z-1 mb-5">
-      <span class="badge bg-white text-primary shadow-sm border px-3 py-2 rounded-pill text-uppercase mb-3" style="letter-spacing: 1px;">The Engine</span>
-      <h2 class="h2 fw-bold text-dark">How it works</h2>
-      <p class="text-muted mx-auto" style="max-width: 600px;">From your database to the cloud and back. A seamless, secure, and automated loop.</p>
-    </div>
-
-    <!-- Process Steps -->
-    <div class="row g-4 position-relative z-1">
-      
-      <!-- Step 1: Collect -->
-      <div class="col-lg-3 col-md-6">
-        <div class="h-100 p-4 bg-white text-center position-relative" 
-             style="border-radius: 20px; box-shadow: 0 10px 30px -5px rgba(0,0,0,0.05); border-bottom: 4px solid #3b82f6; transition: transform 0.3s ease;"
-             onmouseover="this.style.transform='translateY(-5px)'" 
-             onmouseout="this.style.transform='translateY(0)'">
-          <div class="d-inline-flex align-items-center justify-content-center mb-3 shadow-sm" 
-               style="width: 60px; height: 60px; background: #eff6ff; color: #3b82f6; border-radius: 50%; font-size: 1.5rem;">
-            &#128269;
-          </div>
-          <h5 class="fw-bold text-dark">1. Collect</h5>
-          <p class="small text-muted mb-0">Odoo aggregates daily sales from confirmed Orders (last 2 years). Data is compressed (gzip) for speed.</p>
-        </div>
-      </div>
-
-      <!-- Step 2: Process -->
-      <div class="col-lg-3 col-md-6">
-        <div class="h-100 p-4 bg-white text-center position-relative" 
-             style="border-radius: 20px; box-shadow: 0 10px 30px -5px rgba(0,0,0,0.05); border-bottom: 4px solid #8b5cf6; transition: transform 0.3s ease;"
-             onmouseover="this.style.transform='translateY(-5px)'" 
-             onmouseout="this.style.transform='translateY(0)'">
-          <div class="d-inline-flex align-items-center justify-content-center mb-3 shadow-sm" 
-               style="width: 60px; height: 60px; background: #f5f3ff; color: #8b5cf6; border-radius: 50%; font-size: 1.5rem;">
-            &#9729;
-          </div>
-          <h5 class="fw-bold text-dark">2. AI Cloud</h5>
-          <p class="small text-muted mb-0">Secure HTTPS push to <strong>api.niyulabs.com</strong>. The AI crunching happens remotely, returning a Job ID.</p>
-        </div>
-      </div>
-
-      <!-- Step 3: Poll -->
-      <div class="col-lg-3 col-md-6">
-        <div class="h-100 p-4 bg-white text-center position-relative" 
-             style="border-radius: 20px; box-shadow: 0 10px 30px -5px rgba(0,0,0,0.05); border-bottom: 4px solid #f59e0b; transition: transform 0.3s ease;"
-             onmouseover="this.style.transform='translateY(-5px)'" 
-             onmouseout="this.style.transform='translateY(0)'">
-          <div class="d-inline-flex align-items-center justify-content-center mb-3 shadow-sm" 
-               style="width: 60px; height: 60px; background: #fffbeb; color: #f59e0b; border-radius: 50%; font-size: 1.5rem;">
-            &#9203;
-          </div>
-          <h5 class="fw-bold text-dark">3. Poll</h5>
-          <p class="small text-muted mb-0">A smart cron checks status every minute. It sleeps when idle and wakes only when a job is active.</p>
-        </div>
-      </div>
-
-      <!-- Step 4: Sync -->
-      <div class="col-lg-3 col-md-6">
-        <div class="h-100 p-4 bg-white text-center position-relative" 
-             style="border-radius: 20px; box-shadow: 0 10px 30px -5px rgba(0,0,0,0.05); border-bottom: 4px solid #10b981; transition: transform 0.3s ease;"
-             onmouseover="this.style.transform='translateY(-5px)'" 
-             onmouseout="this.style.transform='translateY(0)'">
-          <div class="d-inline-flex align-items-center justify-content-center mb-3 shadow-sm" 
-               style="width: 60px; height: 60px; background: #ecfdf5; color: #10b981; border-radius: 50%; font-size: 1.5rem;">
-            &#128229;
-          </div>
-          <h5 class="fw-bold text-dark">4. Result</h5>
-          <p class="small text-muted mb-0">Forecasts, charts, and suggested buys are written to Odoo. Statuses (Critical, Healthy) are updated.</p>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Tech Specs Footer -->
-    <div class="mt-5 pt-4 border-top d-flex justify-content-center flex-wrap gap-3 position-relative z-1">
-      <span class="d-inline-flex align-items-center bg-white px-3 py-2 rounded-pill border shadow-sm small text-secondary">
-        <span class="me-2 text-primary">&#128193;</span> Data: sale_order_line + sale_order
-      </span>
-      <span class="d-inline-flex align-items-center bg-white px-3 py-2 rounded-pill border shadow-sm small text-secondary">
-        <span class="me-2 text-primary">&#128274;</span> Security: Single Job Lock
-      </span>
-      <span class="d-inline-flex align-items-center bg-white px-3 py-2 rounded-pill border shadow-sm small text-secondary">
-        <span class="me-2 text-primary">&#9200;</span> Daily Cron: ~02:00
-      </span>
-    </div>
-
-  </div>
-</section>
-
-<!-- ========== WHAT GETS SYNCED (Data Terminal) ========== -->
-<section class="mb-5" style="padding: 40px;">
-  <h2 class="h4 fw-bold text-dark mb-4 d-flex align-items-center">
-    <span class="me-2" style="color: #6366f1;">&#128242;</span> Data Payload
-  </h2>
-  
-  <div class="row g-4">
-    
-    <!-- Outbound (Request) -->
-    <div class="col-lg-6">
-      <div class="h-100 overflow-hidden d-flex flex-column" style="background: #1e293b; border-radius: 16px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); border: 1px solid #334155;">
-        <!-- Terminal Header -->
-        <div class="d-flex align-items-center justify-content-between px-3 py-2" style="background: #0f172a; border-bottom: 1px solid #334155;">
-          <div class="d-flex gap-2">
-            <div style="width: 10px; height: 10px; border-radius: 50%; background: #ef4444;"></div>
-            <div style="width: 10px; height: 10px; border-radius: 50%; background: #f59e0b;"></div>
-            <div style="width: 10px; height: 10px; border-radius: 50%; background: #22c55e;"></div>
-          </div>
-          <span class="text-secondary small fw-bold text-uppercase">Outbound Request</span>
-          <span style="opacity: 0;">...</span>
-        </div>
-        
-        <!-- Terminal Body -->
-        <div class="p-4 flex-grow-1 font-monospace" style="color: #cbd5e1; font-size: 0.9rem;">
-          <div class="mb-3">
-            <span style="color: #a78bfa;">POST</span> <span style="color: #fff;">api.niyulabs.com/forecast</span>
-          </div>
-          <div class="mb-3 p-3 rounded" style="background: #0f172a; border-left: 3px solid #a78bfa;">
-            <div class="mb-1" style="color: #94a3b8;">// Headers</div>
-            <div class="mb-2">
-              X-License-Key: <span style="color: #fca5a5;">*****</span><br>
-              Content-Encoding: <span style="color: #86efac;">gzip</span>
-            </div>
-            <div class="mb-1" style="color: #94a3b8;">// Body (JSON)</div>
-            <div>
-              [<br>
-              &nbsp;&nbsp;{ <span style="color: #93c5fd;">"product_id"</span>: 12, <span style="color: #93c5fd;">"date"</span>: "2023-10-01", <span style="color: #93c5fd;">"qty"</span>: 5.0 },<br>
-              &nbsp;&nbsp;...<br>
-              ]
-            </div>
-          </div>
-          <p class="small text-secondary m-0">
-            <span class="me-2">&#8593;</span> Sending aggregated sales history (prod, date, qty).
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Inbound (Response) -->
-    <div class="col-lg-6">
-      <div class="h-100 overflow-hidden d-flex flex-column" style="background: #1e293b; border-radius: 16px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); border: 1px solid #334155;">
-        <!-- Terminal Header -->
-        <div class="d-flex align-items-center justify-content-between px-3 py-2" style="background: #0f172a; border-bottom: 1px solid #334155;">
-          <div class="d-flex gap-2">
-            <div style="width: 10px; height: 10px; border-radius: 50%; background: #ef4444;"></div>
-            <div style="width: 10px; height: 10px; border-radius: 50%; background: #f59e0b;"></div>
-            <div style="width: 10px; height: 10px; border-radius: 50%; background: #22c55e;"></div>
-          </div>
-          <span class="text-secondary small fw-bold text-uppercase">Inbound Result</span>
-          <span style="opacity: 0;">...</span>
-        </div>
-        
-        <!-- Terminal Body -->
-        <div class="p-4 flex-grow-1 font-monospace" style="color: #cbd5e1; font-size: 0.9rem;">
-          <div class="mb-3">
-            <span style="color: #22c55e;">GET</span> <span style="color: #fff;">api.niyulabs.com/result/{job_id}</span>
-          </div>
-          <div class="mb-3 p-3 rounded" style="background: #0f172a; border-left: 3px solid #22c55e;">
-            <div class="mb-1" style="color: #94a3b8;">// Response (Status: Done)</div>
-            <div>
-              {<br>
-              &nbsp;&nbsp;<span style="color: #93c5fd;">"status"</span>: <span style="color: #86efac;">"done"</span>,<br>
-              &nbsp;&nbsp;<span style="color: #93c5fd;">"data"</span>: [<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;{ <span style="color: #93c5fd;">"product_id"</span>: 12, <span style="color: #93c5fd;">"forecast_qty"</span>: 42, <span style="color: #93c5fd;">"chart_data"</span>: "{...}" }<br>
-              &nbsp;&nbsp;]<br>
-              }
-            </div>
-          </div>
-          <p class="small text-secondary m-0">
-            <span class="me-2">&#8595;</span> Receiving prediction, charts, and status.
-          </p>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-    <div class="container" style="">
-
-        <!-- ============================================ -->
-        <!-- ========== KEY CONCEPTS SECTION ============ -->
-        <!-- ============================================ -->
-        <section class="mb-5">
-            
-            <!-- Section Header -->
-            <div class="mb-5 text-center">
-                <div class="d-inline-flex align-items-center justify-content-center mb-3 shadow-sm" 
-                     style="width: 60px; height: 60px; background: white; border-radius: 50%; font-size: 1.75rem;">
-                  &#128218;
-                </div>
-                <h2 class="h2 fw-bold text-dark">Key concepts</h2>
-                <p class="text-muted mx-auto" style="max-width: 600px;">
-                    The fundamental metrics that drive your forecasting engine.
-                </p>
-            </div>
-
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-                
-                <!-- Card 1: AI Demand -->
-                <div class="col">
-                    <div class="h-100 p-4 bg-white position-relative d-flex flex-column" 
-                         style="border-radius: 20px; border: 1px solid #f1f5f9; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease;"
-                         onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 25px -5px rgba(79, 70, 229, 0.1)'; this.style.borderColor='#c7d2fe';"
-                         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)'; this.style.borderColor='#f1f5f9';">
-                         
-                        <div class="mb-3 d-flex align-items-center">
-                            <div class="d-flex align-items-center justify-content-center me-3 shadow-sm" 
-                                 style="width: 48px; height: 48px; background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); color: white; border-radius: 14px; font-size: 1.25rem;">
-                                &#129302;
-                            </div>
-                            <strong class="text-dark">AI Demand (30d)</strong>
-                        </div>
-                        <p class="text-muted small mb-0 flex-grow-1">
-                            The predicted quantity needed for the next 30 days. Derived from Niyu cloud based on your last 2 years of sales history.
-                        </p>
-                        <div class="mt-3 pt-3 border-top border-light text-end">
-                            <span class="badge bg-light text-primary border">Field: forecast_30d</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 2: Suggested Buy -->
-                <div class="col">
-                    <div class="h-100 p-4 bg-white position-relative d-flex flex-column" 
-                         style="border-radius: 20px; border: 1px solid #f1f5f9; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease;"
-                         onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 25px -5px rgba(16, 185, 129, 0.1)'; this.style.borderColor='#a7f3d0';"
-                         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)'; this.style.borderColor='#f1f5f9';">
-                         
-                        <div class="mb-3 d-flex align-items-center">
-                            <div class="d-flex align-items-center justify-content-center me-3 shadow-sm" 
-                                 style="width: 48px; height: 48px; background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; border-radius: 14px; font-size: 1.25rem;">
-                                &#128722;
-                            </div>
-                            <strong class="text-dark">Suggested buy</strong>
-                        </div>
-                        <p class="text-muted small mb-0 flex-grow-1">
-                            Quantity you should order: <code>max(0, AI Demand − stock)</code>. It is zero when you have enough stock to cover the forecast.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Card 3: Days Coverage -->
-                <div class="col">
-                    <div class="h-100 p-4 bg-white position-relative d-flex flex-column" 
-                         style="border-radius: 20px; border: 1px solid #f1f5f9; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease;"
-                         onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 25px -5px rgba(59, 130, 246, 0.1)'; this.style.borderColor='#bfdbfe';"
-                         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)'; this.style.borderColor='#f1f5f9';">
-                         
-                        <div class="mb-3 d-flex align-items-center">
-                            <div class="d-flex align-items-center justify-content-center me-3 shadow-sm" 
-                                 style="width: 48px; height: 48px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); color: white; border-radius: 14px; font-size: 1.25rem;">
-                                &#128197;
-                            </div>
-                            <strong class="text-dark">Days of coverage</strong>
-                        </div>
-                        <p class="text-muted small mb-0 flex-grow-1">
-                            How many days current stock will last at the forecasted daily demand rate. Used to calculate status.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Card 4: Coverage Status -->
-                <div class="col">
-                    <div class="h-100 p-4 bg-white position-relative d-flex flex-column" 
-                         style="border-radius: 20px; border: 1px solid #f1f5f9; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease;"
-                         onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 25px -5px rgba(139, 92, 246, 0.1)'; this.style.borderColor='#ddd6fe';"
-                         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)'; this.style.borderColor='#f1f5f9';">
-                         
-                        <div class="mb-3 d-flex align-items-center">
-                            <div class="d-flex align-items-center justify-content-center me-3 shadow-sm" 
-                                 style="width: 48px; height: 48px; background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); color: white; border-radius: 14px; font-size: 1.25rem;">
-                                &#128737;
-                            </div>
-                            <strong class="text-dark">Coverage status</strong>
-                        </div>
-                        <p class="text-muted small mb-0 flex-grow-1">
-                            Stockout (Out), Critical (&lt; 7 days), Healthy (7–60 days), or Overstock (&gt; 60 days). Drives row colors.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Card 5: Revenue at Risk -->
-                <div class="col">
-                    <div class="h-100 p-4 bg-white position-relative d-flex flex-column" 
-                         style="border-radius: 20px; border: 1px solid #f1f5f9; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease;"
-                         onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 25px -5px rgba(239, 68, 68, 0.1)'; this.style.borderColor='#fca5a5';"
-                         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)'; this.style.borderColor='#f1f5f9';">
-                         
-                        <div class="mb-3 d-flex align-items-center">
-                            <div class="d-flex align-items-center justify-content-center me-3 shadow-sm" 
-                                 style="width: 48px; height: 48px; background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%); color: white; border-radius: 14px; font-size: 1.25rem;">
-                                &#9888;
-                            </div>
-                            <strong class="text-dark">Revenue at Risk</strong>
-                        </div>
-                        <p class="text-muted small mb-0 flex-grow-1">
-                            Sum of <code>forecast_30d × price</code> for products with zero stock. The potential money lost if you don’t restock.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Card 6: Restock Capital -->
-                <div class="col">
-                    <div class="h-100 p-4 bg-white position-relative d-flex flex-column" 
-                         style="border-radius: 20px; border: 1px solid #f1f5f9; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease;"
-                         onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 25px -5px rgba(245, 158, 11, 0.1)'; this.style.borderColor='#fde68a';"
-                         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)'; this.style.borderColor='#f1f5f9';">
-                         
-                        <div class="mb-3 d-flex align-items-center">
-                            <div class="d-flex align-items-center justify-content-center me-3 shadow-sm" 
-                                 style="width: 48px; height: 48px; background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: white; border-radius: 14px; font-size: 1.25rem;">
-                                &#128176;
-                            </div>
-                            <strong class="text-dark">Capital Needed</strong>
-                        </div>
-                        <p class="text-muted small mb-0 flex-grow-1">
-                            Cash needed to fulfill suggested buys: <code>suggested_buy × cost</code>. Helps you budget your next PO run.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- ============================================ -->
-        <!-- ========== WORKFLOW SECTION ================ -->
-        <!-- ============================================ -->
-        <section class="mb-5">
-            
-            <!-- Section Header -->
-            <div class="mb-5 text-center">
-                <div class="d-inline-flex align-items-center justify-content-center mb-3 shadow-sm" 
-                     style="width: 60px; height: 60px; background: white; border-radius: 50%; font-size: 1.75rem;">
-                  &#128099;
-                </div>
-                <h2 class="h2 fw-bold text-dark">Workflow</h2>
-                <p class="text-muted mx-auto" style="max-width: 600px;">
-                    From trigger to purchase order, here is the lifecycle of a forecast.
-                </p>
-            </div>
-
-            <!-- Workflow Container -->
-            <div class="d-flex flex-column gap-3 mx-auto" style="">
-                
-                <!-- Step 1 -->
-                <div class="d-flex align-items-center p-4 bg-white position-relative" 
-                     style="border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: all 0.2s ease;"
-                     onmouseover="this.style.transform='scale(1.01)'; this.style.borderColor='#6366f1'; this.style.boxShadow='0 10px 20px -5px rgba(99, 102, 241, 0.1)';"
-                     onmouseout="this.style.transform='scale(1)'; this.style.borderColor='#e2e8f0'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.02)';">
-                    
-                    <div class="flex-shrink-0 me-4">
-                        <div class="d-flex align-items-center justify-content-center shadow-sm" 
-                             style="width: 44px; height: 44px; background: #e0e7ff; color: #4338ca; border-radius: 50%; font-weight: bold; font-size: 1.1rem; border: 2px solid white;">
-                            1
-                        </div>
-                    </div>
-                    <div>
-                        <h6 class="fw-bold text-dark mb-1">Trigger</h6>
-                        <p class="mb-0 text-muted small">
-                            You click <strong>Run Initial Sync</strong> in Settings, or the scheduled cron runs automatically (e.g. at 02:00).
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Step 2 -->
-                <div class="d-flex align-items-center p-4 bg-white position-relative" 
-                     style="border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: all 0.2s ease;"
-                     onmouseover="this.style.transform='scale(1.01)'; this.style.borderColor='#6366f1'; this.style.boxShadow='0 10px 20px -5px rgba(99, 102, 241, 0.1)';"
-                     onmouseout="this.style.transform='scale(1)'; this.style.borderColor='#e2e8f0'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.02)';">
-                    
-                    <div class="flex-shrink-0 me-4">
-                        <div class="d-flex align-items-center justify-content-center shadow-sm" 
-                             style="width: 44px; height: 44px; background: #e0e7ff; color: #4338ca; border-radius: 50%; font-weight: bold; font-size: 1.1rem; border: 2px solid white;">
-                            2
-                        </div>
-                    </div>
-                    <div>
-                        <h6 class="fw-bold text-dark mb-1">Data collection</h6>
-                        <p class="mb-0 text-muted small">
-                            Odoo reads confirmed Sales Orders (last 2 years) and aggregates daily sales per product (storable/consumable only).
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="d-flex align-items-center p-4 bg-white position-relative" 
-                     style="border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: all 0.2s ease;"
-                     onmouseover="this.style.transform='scale(1.01)'; this.style.borderColor='#6366f1'; this.style.boxShadow='0 10px 20px -5px rgba(99, 102, 241, 0.1)';"
-                     onmouseout="this.style.transform='scale(1)'; this.style.borderColor='#e2e8f0'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.02)';">
-                    
-                    <div class="flex-shrink-0 me-4">
-                        <div class="d-flex align-items-center justify-content-center shadow-sm" 
-                             style="width: 44px; height: 44px; background: #e0e7ff; color: #4338ca; border-radius: 50%; font-weight: bold; font-size: 1.1rem; border: 2px solid white;">
-                            3
-                        </div>
-                    </div>
-                    <div>
-                        <h6 class="fw-bold text-dark mb-1">Send to cloud</h6>
-                        <p class="mb-0 text-muted small">
-                            Payload (product_id, date, qty) is compressed (gzip) and POSTed to <code>api.niyulabs.com</code> with your license key.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Step 4 -->
-                <div class="d-flex align-items-center p-4 bg-white position-relative" 
-                     style="border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: all 0.2s ease;"
-                     onmouseover="this.style.transform='scale(1.01)'; this.style.borderColor='#6366f1'; this.style.boxShadow='0 10px 20px -5px rgba(99, 102, 241, 0.1)';"
-                     onmouseout="this.style.transform='scale(1)'; this.style.borderColor='#e2e8f0'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.02)';">
-                    
-                    <div class="flex-shrink-0 me-4">
-                        <div class="d-flex align-items-center justify-content-center shadow-sm" 
-                             style="width: 44px; height: 44px; background: #e0e7ff; color: #4338ca; border-radius: 50%; font-weight: bold; font-size: 1.1rem; border: 2px solid white;">
-                            4
-                        </div>
-                    </div>
-                    <div>
-                        <h6 class="fw-bold text-dark mb-1">Polling</h6>
-                        <p class="mb-0 text-muted small">
-                            Background action runs every minute. It checks the job status in the cloud until it returns "done" (typically ~1 minute).
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Step 5 -->
-                <div class="d-flex align-items-center p-4 bg-white position-relative" 
-                     style="border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: all 0.2s ease;"
-                     onmouseover="this.style.transform='scale(1.01)'; this.style.borderColor='#6366f1'; this.style.boxShadow='0 10px 20px -5px rgba(99, 102, 241, 0.1)';"
-                     onmouseout="this.style.transform='scale(1)'; this.style.borderColor='#e2e8f0'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.02)';">
-                    
-                    <div class="flex-shrink-0 me-4">
-                        <div class="d-flex align-items-center justify-content-center shadow-sm" 
-                             style="width: 44px; height: 44px; background: #e0e7ff; color: #4338ca; border-radius: 50%; font-weight: bold; font-size: 1.1rem; border: 2px solid white;">
-                            5
-                        </div>
-                    </div>
-                    <div>
-                        <h6 class="fw-bold text-dark mb-1">Results in Odoo</h6>
-                        <p class="mb-0 text-muted small">
-                            <code>forecast_30d</code> and charts are written to the database. Last sync timestamp is updated.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Step 6 -->
-                <div class="d-flex align-items-center p-4 bg-white position-relative" 
-                     style="border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: all 0.2s ease;"
-                     onmouseover="this.style.transform='scale(1.01)'; this.style.borderColor='#6366f1'; this.style.boxShadow='0 10px 20px -5px rgba(99, 102, 241, 0.1)';"
-                     onmouseout="this.style.transform='scale(1)'; this.style.borderColor='#e2e8f0'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.02)';">
-                    
-                    <div class="flex-shrink-0 me-4">
-                        <div class="d-flex align-items-center justify-content-center shadow-sm" 
-                             style="width: 44px; height: 44px; background: #e0e7ff; color: #4338ca; border-radius: 50%; font-weight: bold; font-size: 1.1rem; border: 2px solid white;">
-                            6
-                        </div>
-                    </div>
-                    <div>
-                        <h6 class="fw-bold text-dark mb-1">You see data</h6>
-                        <p class="mb-0 text-muted small">
-                            Command Center and Smart Stock list show updated KPIs, suggested buy, and status.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Step 7 (Success) -->
-                <div class="d-flex align-items-center p-4 bg-white position-relative" 
-                     style="border-radius: 16px; border: 1px solid #bbf7d0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.2s ease;"
-                     onmouseover="this.style.transform='scale(1.01)'; this.style.borderColor='#22c55e'; this.style.boxShadow='0 10px 20px -5px rgba(34, 197, 94, 0.1)';"
-                     onmouseout="this.style.transform='scale(1)'; this.style.borderColor='#bbf7d0'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)';">
-                    
-                    <div class="flex-shrink-0 me-4">
-                        <div class="d-flex align-items-center justify-content-center shadow-sm" 
-                             style="width: 44px; height: 44px; background: #dcfce7; color: #15803d; border-radius: 50%; font-weight: bold; font-size: 1.1rem; border: 2px solid white;">
-                            &#10004;
-                        </div>
-                    </div>
-                    <div>
-                        <h6 class="fw-bold text-dark mb-1">Create POs</h6>
-                        <p class="mb-0 text-muted small">
-                            Select items in the list and click "Create Purchase Orders". POs are automatically grouped by vendor.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-        </section>
+             <span style="color: #10b981; font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">
+                20 Products
+            </span>
 
     </div>
 </div>
-
-   <!-- ========== COMMAND CENTER ========== -->
-<section class="mb-5">
-  
-  <!-- Main Container Card -->
-  <div class="position-relative bg-white overflow-hidden" 
-       style="border-radius: 24px; border: 1px solid #e2e8f0; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.01);">
+</div>
     
-    <!-- Top Gradient Accent -->
-    <div style="height: 6px; background: linear-gradient(90deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);"></div>
-
-    <div class="p-5">
-      
-      <!-- Section Header -->
-      <div class="row align-items-center mb-5">
-        <div class="col-lg-8">
-          <div class="d-flex align-items-center mb-3">
-            <div class="d-flex align-items-center justify-content-center me-3 shadow-sm" 
-                 style="width: 56px; height: 56px; background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); color: white; border-radius: 16px; font-size: 1.75rem;">
-              &#128187;
+        <!-- Hero Video -->
+        <section style="padding: 0 0 80px 0;">
+            <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+                <div style="border-radius: 1.75rem; padding: 4px; background-color: rgba(79, 70, 229, 0.9); box-shadow: 0 60px 150px -30px rgba(79, 70, 229, 0.25);">
+                    <video autoplay loop muted playsinline controls preload="auto" style="width: 100%; display: block; border-radius: 1.75rem; background-color: #000;">
+                        <source src="./Inventory Smart Stock.webm" type="video/webm">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
             </div>
-            <div>
-              <h2 class="h2 fw-bold text-dark mb-0">Command Center</h2>
-              <span class="badge bg-light text-primary border mt-2">Inventory &rarr; Niyu AI</span>
+        </section>
+
+        <!-- Social Proof Card -->
+        <div style="max-width: 1000px; margin: 0 auto; border: 1px solid #f1f5f9; border-radius: 40px; padding: 15px; box-shadow: 0 50px 100px -20px rgba(0,0,0,0.06);">
+            <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 30px; padding: 50px; text-align: left;">
+                <div class="row align-items-center" style="display: flex; flex-wrap: wrap; align-items: center;">
+                    <div class="col-lg-7" style="flex: 1; min-width: 300px; margin-bottom: 20px;">
+                        <div style="font-size: 11px; font-weight: 900; color: #10b981; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px;">Automated Decision</div>
+                        <h3 style="font-weight: 800; font-size: 32px; color: #0f172a; margin-bottom: 15px;">30-Day Restock Plan Ready</h3>
+                        <p style="color: #64748b; font-size: 16px; line-height: 1.6; margin: 0;">
+                            Niyu has audited your sales velocity. Based on lead times, we have pre-filled <b>4 Draft Purchase Orders</b> to prevent stockouts.
+                        </p>
+                    </div>
+                    <div class="col-lg-5" style="flex: 1; min-width: 250px; text-align: center;">
+                        <div style="display: inline-block; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 20px; padding: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+                            <div style="font-size: 36px; font-weight: 900; color: #0ea572; line-height: 1;">1%</div>
+                            <div style="font-size: 10px; font-weight: 800; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px;">Stockout Risk</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <p class="text-muted fs-5" style="max-width: 700px; line-height: 1.6;">
-            Your daily cockpit. A unified dashboard combining real-time KPIs, sync status, and a prioritized replenishment board.
-          </p>
         </div>
-      </div>
-
-      <!-- KPI Cards Row -->
-      <div class="row g-4 mb-5">
-        
-        <!-- KPI 1: Revenue at Risk -->
-        <div class="col-lg-4">
-          <div class="h-100 p-4 bg-white position-relative" 
-               style="border-radius: 16px; border: 1px solid #f1f5f9; border-top: 4px solid #ef4444; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease;"
-               onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 30px -5px rgba(239, 68, 68, 0.15)';"
-               onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)';">
-            
-            <div class="d-flex justify-content-between align-items-start mb-3">
-              <h6 class="fw-bold text-dark text-uppercase small" style="letter-spacing: 0.5px;">Revenue at Risk</h6>
-              <span style="font-size: 1.25rem; color: #ef4444;">&#128201;</span>
-            </div>
-            <div class="mb-3">
-              <span class="display-6 fw-bold text-dark">$0.00</span> <!-- Placeholder Value -->
-            </div>
-            <p class="small text-muted mb-0 lh-sm">
-              Sum of <code>forecast × price</code> for out-of-stock items. Potential loss if not restocked immediately.
-            </p>
-          </div>
-        </div>
-
-        <!-- KPI 2: Critical Items -->
-        <div class="col-lg-4">
-          <div class="h-100 p-4 bg-white position-relative" 
-               style="border-radius: 16px; border: 1px solid #f1f5f9; border-top: 4px solid #f59e0b; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease;"
-               onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 30px -5px rgba(245, 158, 11, 0.15)';"
-               onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)';">
-            
-            <div class="d-flex justify-content-between align-items-start mb-3">
-              <h6 class="fw-bold text-dark text-uppercase small" style="letter-spacing: 0.5px;">Critical Items</h6>
-              <span style="font-size: 1.25rem; color: #f59e0b;">&#9888;</span>
-            </div>
-            <div class="mb-3">
-              <span class="display-6 fw-bold text-dark">0</span> <!-- Placeholder Value -->
-            </div>
-            <p class="small text-muted mb-0 lh-sm">
-              Number of products with <code>coverage_status</code> as <strong>Critical</strong> (&lt; 7 days) or <strong>Stockout</strong>.
-            </p>
-          </div>
-        </div>
-
-        <!-- KPI 3: Restock Capital -->
-        <div class="col-lg-4">
-          <div class="h-100 p-4 bg-white position-relative" 
-               style="border-radius: 16px; border: 1px solid #f1f5f9; border-top: 4px solid #10b981; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); transition: all 0.3s ease;"
-               onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 30px -5px rgba(16, 185, 129, 0.15)';"
-               onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 6px -1px rgba(0,0,0,0.02)';">
-            
-            <div class="d-flex justify-content-between align-items-start mb-3">
-              <h6 class="fw-bold text-dark text-uppercase small" style="letter-spacing: 0.5px;">Restock Capital</h6>
-              <span style="font-size: 1.25rem; color: #10b981;">&#128176;</span>
-            </div>
-            <div class="mb-3">
-              <span class="display-6 fw-bold text-dark">$0.00</span> <!-- Placeholder Value -->
-            </div>
-            <p class="small text-muted mb-0 lh-sm">
-              Total budget needed: Sum of <code>suggested_buy × cost</code> for all items needing purchase.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Feature Split: Header Logic & Replenishment Board -->
-      <div class="row g-5 mb-5">
-        
-        <!-- Left: Header Details -->
-        <div class="col-lg-5">
-          <div class="p-4 h-100" style="background: #f8fafc; border-radius: 16px; border: 1px dashed #cbd5e1;">
-            <h5 class="fw-bold text-dark mb-3 d-flex align-items-center">
-              <span class="me-2 text-primary">&#128269;</span> Dashboard Controls
-            </h5>
-            <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
-              <li class="d-flex">
-                <span class="fw-bold text-dark me-2" style="min-width: 100px;">Last Sync:</span>
-                <span class="text-muted small">Badge showing timestamp of the last cloud run. Data source: <code>niyu.last_sync_time</code>.</span>
-              </li>
-              <li class="d-flex">
-                <span class="fw-bold text-dark me-2" style="min-width: 100px;">Status:</span>
-                <span class="text-muted small">
-                  <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill">Active</span> or 
-                  <span class="badge bg-warning-subtle text-warning border border-warning-subtle rounded-pill">Syncing...</span>
-                </span>
-              </li>
-              <li class="d-flex">
-                <span class="fw-bold text-dark me-2" style="min-width: 100px;">Actions:</span>
-                <span class="text-muted small"><strong>Inventory List</strong> button jumps to the full Smart Stock view.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Right: Replenishment Board Details -->
-        <div class="col-lg-7">
-          <h5 class="fw-bold text-dark mb-3">Replenishment Board</h5>
-          <p class="text-muted mb-3">
-            A prioritized table of the top 50 items needing attention. It automatically sorts by <strong>Days Coverage (Ascending)</strong> then <strong>Suggested Buy (Descending)</strong>.
-          </p>
-          
-          <div class="d-flex flex-wrap gap-2 mb-3">
-             <span class="px-3 py-1 rounded-pill bg-white border shadow-sm small fw-bold text-secondary">
-               &#128200; 30-Day Trend (Sparkline)
-             </span>
-             <span class="px-3 py-1 rounded-pill bg-white border shadow-sm small fw-bold text-secondary">
-               &#128337; Stockout Date
-             </span>
-             <span class="px-3 py-1 rounded-pill bg-white border shadow-sm small fw-bold text-secondary">
-               &#128666; Lead Time
-             </span>
-             <span class="px-3 py-1 rounded-pill bg-white border shadow-sm small fw-bold text-secondary">
-               &#128722; Suggested Qty
-             </span>
-          </div>
-
-          <div class="d-flex align-items-center bg-white border p-3 rounded-3 shadow-sm">
-             <div class="me-3 text-primary fs-4">&#129514;</div>
-             <div class="small text-muted lh-sm">
-                <strong>Quick Filters:</strong> Toggle between <strong>All</strong> items or <strong>Critical Only</strong> (items with &lt; 7 days coverage) directly on the board.
-             </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Screenshot / Window Mockup -->
-      <div class="mt-4 mx-auto" style="max-width: 900px;">
-        <div class="bg-dark rounded-top-4 p-2 d-flex align-items-center" 
-             style="background: #1e293b; border-bottom: 1px solid #334155; border-top-left-radius: 12px; border-top-right-radius: 12px;">
-           <div class="d-flex gap-2 ms-2">
-             <div style="width: 12px; height: 12px; background: #ef4444; border-radius: 50%;"></div>
-             <div style="width: 12px; height: 12px; background: #f59e0b; border-radius: 50%;"></div>
-             <div style="width: 12px; height: 12px; background: #22c55e; border-radius: 50%;"></div>
-           </div>
-           <div class="mx-auto text-secondary small font-monospace opacity-50">Odoo Enterprise - Niyu AI</div>
-        </div>
-        
-        <div class="bg-light position-relative overflow-hidden border-start border-end border-bottom" 
-             style="height: 400px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-color: #cbd5e1 !important;">
-             
-             <!-- Placeholder for Image -->
-             <img src="screenshot_command_center.png" 
-                  alt="Command Center Dashboard Screenshot" 
-                  class="img-fluid w-100 h-100 object-fit-cover"
-                  style="opacity: 0.9;" 
-                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-             
-             <!-- Fallback if no image -->
-             <div class="d-none w-100 h-100 flex-column align-items-center justify-content-center bg-light text-muted">
-                <span class="fs-1 mb-3 opacity-25">&#128444;</span>
-                <span class="small fw-bold text-uppercase opacity-50">Screenshot Placeholder</span>
-                <span class="small opacity-50">screenshot_command_center.png</span>
-             </div>
-        </div>
-      </div>
-
     </div>
-  </div>
-</section>
 
-    <!-- ========== SMART STOCK LIST ========== -->
-<section class="mb-5">
-  
-  <!-- Main Wrapper -->
-  <div class="position-relative bg-white overflow-hidden" 
-       style="border-radius: 24px; border: 1px solid #e2e8f0; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.01);">
+    <!-- 2. THE CHALLENGE SECTION -->
+    <div style="padding: 80px 20px; background-color: #ffffff;">
+        <div style="max-width: 1100px; margin: 0 auto;">
+            
+            <div style="margin-bottom: 60px;">
+                <span style="color: #940d0d; font-weight: 800; font-size: 13px; letter-spacing: 2px; text-transform: uppercase;">The Challenge</span>
+                <h2 style="font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; color: #0f172a; margin-top: 15px; letter-spacing: -0.04em; line-height: 1.1;">
+                    Where your warehouse <br> <span style="color: #94a3b8;">loses its edge.</span>
+                </h2>
+            </div>
     
-    <!-- Top Gradient Accent (Blue/Slate for "List/Data" theme) -->
-    <div style="height: 6px; background: linear-gradient(90deg, #3b82f6 0%, #64748b 100%);"></div>
-
-    <div class="p-5">
-
-      <!-- Section Header -->
-      <div class="row align-items-end mb-5">
-        <div class="col-lg-8">
-          <div class="d-flex align-items-center mb-3">
-            <div class="d-flex align-items-center justify-content-center me-3 shadow-sm" 
-                 style="width: 56px; height: 56px; background: linear-gradient(135deg, #1e293b 0%, #334155 100%); color: white; border-radius: 16px; font-size: 1.75rem;">
-              &#128220;
-            </div>
-            <div>
-              <h2 class="h2 fw-bold text-dark mb-0">Smart Stock List</h2>
-              <span class="badge bg-light text-primary border mt-2">Model: niyu.forecast.result</span>
-            </div>
-          </div>
-          <p class="text-muted fs-5 mb-0" style="max-width: 700px; line-height: 1.6;">
-            The actionable heart of the system. A calculated list view prioritizing what needs to be bought right now.
-          </p>
-        </div>
-        
-        <!-- Quick Access Tip -->
-        <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
-          <div class="d-inline-flex align-items-center px-3 py-2 rounded-pill bg-primary-subtle text-primary border border-primary-subtle small fw-bold">
-            <span class="me-2">&#128640;</span> Default Filter: "Need Purchase" (>0)
-          </div>
-        </div>
-      </div>
-
-      <div class="row g-5">
-        
-        <!-- Left Column: Data Structure (The Table Replacement) -->
-        <div class="col-lg-7">
-          <div class="card border-0 shadow-sm h-100" style="background: #f8fafc; border-radius: 16px;">
-            <div class="card-header bg-white border-bottom p-4" style="border-top-left-radius: 16px; border-top-right-radius: 16px;">
-              <h5 class="fw-bold text-dark mb-0">&#128194; Columns &amp; Logic</h5>
-            </div>
-            <div class="card-body p-0">
-              
-              <!-- List Item 1 -->
-              <div class="d-flex align-items-start p-3 border-bottom bg-white transition-hover">
-                <div class="me-3 mt-1 text-secondary">&#128230;</div>
-                <div class="flex-grow-1">
-                  <div class="d-flex justify-content-between">
-                    <strong class="text-dark">Product</strong>
-                    <code class="small text-muted bg-light px-1 rounded">product_id</code>
-                  </div>
-                  <p class="small text-muted mb-0">Required. Unique per record.</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                <!-- Card 1 -->
+                <div style="flex: 1; min-width: 300px; padding: 40px; background-color: #fcfcfd; border: 1px solid #f1f5f9; border-radius: 32px;">
+                    <div style="font-size: 32px; margin-bottom: 25px;">&#128230;</div>
+                    <h4 style="font-weight: 800; color: #0f172a; font-size: 20px; margin-bottom: 15px;">Revenue Leakage</h4>
+                    <p style="color: #64748b; font-size: 15px; line-height: 1.6; margin: 0;">
+                        A stockout on a best-seller isn't just a lost sale—it’s a customer gift to your competitor. Manual guessing means you're always one surge away from an empty shelf.
+                    </p>
                 </div>
-              </div>
-
-              <!-- List Item 2 -->
-              <div class="d-flex align-items-start p-3 border-bottom bg-white transition-hover">
-                <div class="me-3 mt-1 text-secondary">&#128737;</div>
-                <div class="flex-grow-1">
-                  <div class="d-flex justify-content-between">
-                    <strong class="text-dark">Status Badge</strong>
-                    <code class="small text-muted bg-light px-1 rounded">coverage_status</code>
-                  </div>
-                  <p class="small text-muted mb-0">
-                    <span class="badge bg-danger-subtle text-danger border border-danger-subtle me-1">Critical</span>
-                    <span class="badge bg-success-subtle text-success border border-success-subtle me-1">Healthy</span>
-                    <span class="badge bg-warning-subtle text-warning border border-warning-subtle">Overstock</span>
-                  </p>
+                <!-- Card 2 -->
+                <div style="flex: 1; min-width: 300px; padding: 40px; background-color: #fcfcfd; border: 1px solid #f1f5f9; border-radius: 32px;">
+                    <div style="font-size: 32px; margin-bottom: 25px;">&#129482;</div>
+                    <h4 style="font-weight: 800; color: #0f172a; font-size: 20px; margin-bottom: 15px;">Frozen Capital</h4>
+                    <p style="color: #64748b; font-size: 15px; line-height: 1.6; margin: 0;">
+                        Dead stock is money rotting on shelves. Without neural velocity analysis, companies over-order slow-movers, trapping cash.
+                    </p>
                 </div>
-              </div>
-
-              <!-- List Item 3 -->
-              <div class="d-flex align-items-start p-3 border-bottom bg-white transition-hover">
-                <div class="me-3 mt-1 text-secondary">&#129302;</div>
-                <div class="flex-grow-1">
-                  <div class="d-flex justify-content-between">
-                    <strong class="text-dark">AI Demand (30d)</strong>
-                    <code class="small text-muted bg-light px-1 rounded">forecast_30d</code>
-                  </div>
-                  <p class="small text-muted mb-0">Predicted sales for next 30 days.</p>
+                <!-- Card 3 -->
+                <div style="flex: 1; min-width: 300px; padding: 40px; background-color: #fcfcfd; border: 1px solid #f1f5f9; border-radius: 32px;">
+                    <div style="font-size: 32px; margin-bottom: 25px;">&#8987;</div>
+                    <h4 style="font-weight: 800; color: #0f172a; font-size: 20px; margin-bottom: 15px;">The Admin Wall</h4>
+                    <p style="color: #64748b; font-size: 15px; line-height: 1.6; margin: 0;">
+                        Managing 1,000+ reordering rules manually is impossible. Purchasing teams spend 80% of their time in Excel.
+                    </p>
                 </div>
-              </div>
-
-              <!-- List Item 4 -->
-              <div class="d-flex align-items-start p-3 border-bottom bg-white transition-hover" style="background: #f0fdf4;">
-                <div class="me-3 mt-1 text-success">&#128722;</div>
-                <div class="flex-grow-1">
-                  <div class="d-flex justify-content-between">
-                    <strong class="text-success">Suggested Buy</strong>
-                    <span class="badge bg-success text-white">Computed</span>
-                  </div>
-                  <p class="small text-muted mb-0">Max(0, Forecast - Stock). <strong>Sum displayed in footer.</strong></p>
-                </div>
-              </div>
-
-              <!-- List Item 5 -->
-              <div class="d-flex align-items-start p-3 border-bottom bg-white transition-hover">
-                <div class="me-3 mt-1 text-secondary">&#128176;</div>
-                <div class="flex-grow-1">
-                  <div class="d-flex justify-content-between">
-                    <strong class="text-dark">Capital Needed</strong>
-                    <code class="small text-muted bg-light px-1 rounded">cost_to_restock</code>
-                  </div>
-                  <p class="small text-muted mb-0">Cost to fulfill suggestion. (Optional visibility).</p>
-                </div>
-              </div>
-
-              <!-- List Item 6 -->
-              <div class="d-flex align-items-start p-3 bg-white transition-hover" style="border-bottom-left-radius: 16px; border-bottom-right-radius: 16px;">
-                <div class="me-3 mt-1 text-primary">&#9889;</div>
-                <div class="flex-grow-1">
-                  <div class="d-flex justify-content-between">
-                    <strong class="text-primary">Action</strong>
-                    <span class="badge bg-primary text-white">Button</span>
-                  </div>
-                  <p class="small text-muted mb-0">Cart icon. Visible only when suggested buy > 0.</p>
-                </div>
-              </div>
-
             </div>
-          </div>
-        </div>
-
-        <!-- Right Column: Visual Legend & Screenshot -->
-        <div class="col-lg-5 d-flex flex-column">
-          
-          <!-- Visual Legend Card -->
-          <div class="mb-4 p-4 bg-white border rounded-4 shadow-sm">
-            <h6 class="fw-bold text-dark mb-3">Visual Status Legend</h6>
-            
-            <div class="d-flex align-items-center mb-2 p-2 rounded" style="background: #fef2f2; border-left: 4px solid #ef4444;">
-              <span class="badge bg-danger rounded-pill me-2">Danger</span>
-              <small class="text-danger fw-bold">Critical / Out</small>
-              <small class="text-muted ms-auto">High Priority</small>
-            </div>
-
-            <div class="d-flex align-items-center mb-2 p-2 rounded" style="background: #fffbeb; border-left: 4px solid #f59e0b;">
-              <span class="badge bg-warning text-dark rounded-pill me-2">Warning</span>
-              <small class="text-dark fw-bold" style="color: #b45309 !important;">Overstock</small>
-              <small class="text-muted ms-auto">> 60 Days</small>
-            </div>
-
-            <div class="d-flex align-items-center p-2 rounded" style="background: #eff6ff; border-left: 4px solid #3b82f6;">
-              <span class="badge bg-primary rounded-pill me-2">Info</span>
-              <small class="text-primary fw-bold">Need Purchase</small>
-              <small class="text-muted ms-auto">Normal Buy</small>
-            </div>
-          </div>
-
-          <!-- Screenshot Mockup -->
-          <div class="mt-auto">
-            <div class="bg-dark rounded-top-4 p-2 d-flex align-items-center" 
-                 style="background: #1e293b; border-bottom: 1px solid #334155; border-top-left-radius: 12px; border-top-right-radius: 12px;">
-               <div class="d-flex gap-2 ms-2">
-                 <div style="width: 10px; height: 10px; background: #64748b; border-radius: 50%;"></div>
-                 <div style="width: 10px; height: 10px; background: #64748b; border-radius: 50%;"></div>
-               </div>
-               <div class="mx-auto text-secondary small font-monospace opacity-50">Smart Stock List</div>
-            </div>
-            
-            <div class="bg-light position-relative overflow-hidden border-start border-end border-bottom" 
-                 style="height: 250px; border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; border-color: #cbd5e1 !important;">
-                 
-                 <img src="screenshot_smart_stock_list.png" 
-                      alt="Smart Stock List Screenshot" 
-                      class="img-fluid w-100 h-100 object-fit-cover"
-                      style="opacity: 0.9;"
-                      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-                 
-                 <!-- Fallback -->
-                 <div class="d-none w-100 h-100 flex-column align-items-center justify-content-center bg-light text-muted">
-                    <span class="fs-1 mb-2 opacity-25">&#128450;</span>
-                    <span class="small opacity-50">screenshot_smart_stock_list.png</span>
-                 </div>
-            </div>
-            <div class="text-center mt-2">
-              <small class="text-muted fst-italic">Supports Group By: Product, Vendor, Category</small>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-  <!-- ========== FORECAST FORM VIEW ========== -->
-<section class="mb-5">
-  
-  <!-- Main Wrapper -->
-  <div class="position-relative bg-white overflow-hidden" 
-       style="border-radius: 24px; border: 1px solid #e2e8f0; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.01);">
     
-    <!-- Top Gradient Accent (Pink/Purple for AI/Analytics theme) -->
-    <div style="height: 6px; background: linear-gradient(90deg, #ec4899 0%, #8b5cf6 100%);"></div>
-
-    <div class="p-5">
-
-      <!-- Section Header -->
-      <div class="row align-items-center mb-5">
-        <div class="col-lg-8">
-          <div class="d-flex align-items-center mb-3">
-            <div class="d-flex align-items-center justify-content-center me-3 shadow-sm" 
-                 style="width: 56px; height: 56px; background: linear-gradient(135deg, #db2777 0%, #be185d 100%); color: white; border-radius: 16px; font-size: 1.75rem;">
-              &#128201;
+            <!-- Quote Strip -->
+            <div style="margin-top: 60px; padding: 30px; background: linear-gradient(90deg, #f0fdf4 0%, #ffffff 100%); border-radius: 20px; border-left: 4px solid #10b981;">
+                <p style="margin: 0; color: #166534; font-weight: 600; font-size: 16px;">
+                    "We don't need more reordering rules. We need a system that knows what to buy before we do."
+                </p>
             </div>
-            <div>
-              <h2 class="h2 fw-bold text-dark mb-0">Forecast Form View</h2>
-              <span class="badge bg-light text-primary border mt-2">Inventory &rarr; Product &rarr; Forecast</span>
-            </div>
-          </div>
-          <p class="text-muted fs-5 mb-0" style="max-width: 700px; line-height: 1.6;">
-            The detailed breakdown. Review individual product predictions, status, and historical trends before ordering.
-          </p>
         </div>
-      </div>
-
-      <div class="row g-5 align-items-center">
-        
-        <!-- Left Column: UI Breakdown -->
-        <div class="col-lg-6">
-          <div class="d-flex flex-column gap-4">
-            
-            <!-- Feature 1: The Header Action -->
-            <div class="p-3 bg-white border rounded-4 shadow-sm position-relative overflow-hidden" 
-                 style="transition: transform 0.3s ease;"
-                 onmouseover="this.style.transform='translateX(5px)'; this.style.borderColor='#ec4899';" 
-                 onmouseout="this.style.transform='translateX(0)'; this.style.borderColor='#dee2e6';">
-              <div class="d-flex align-items-start">
-                <div class="me-3 mt-1 text-primary fs-4">&#128722;</div>
-                <div>
-                  <h6 class="fw-bold text-dark">Dynamic Action Header</h6>
-                  <p class="small text-muted mb-2">
-                    Primary button <strong>Create Purchase Order</strong> appears strictly when logic dictates:
-                  </p>
-                  <div class="d-inline-block px-3 py-1 bg-light border rounded small font-monospace text-secondary">
-                    if suggested_buy > 0
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Feature 2: The Data Sheet -->
-            <div class="p-3 bg-white border rounded-4 shadow-sm position-relative overflow-hidden" 
-                 style="transition: transform 0.3s ease;"
-                 onmouseover="this.style.transform='translateX(5px)'; this.style.borderColor='#8b5cf6';" 
-                 onmouseout="this.style.transform='translateX(0)'; this.style.borderColor='#dee2e6';">
-              <div class="d-flex align-items-start">
-                <div class="me-3 mt-1 text-primary fs-4">&#128196;</div>
-                <div>
-                  <h6 class="fw-bold text-dark">Smart Data Sheet</h6>
-                  <p class="small text-muted mb-2">Organized into two logical groups for quick decision making:</p>
-                  <ul class="mb-0 small text-secondary ps-3">
-                    <li><strong>Supply:</strong> Current Stock, AI Demand, Suggested Buy (Bold).</li>
-                    <li><strong>Health:</strong> Status Badge, Days Coverage, Last Updated.</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <!-- Feature 3: The AI Graph -->
-            <div class="p-3 bg-white border rounded-4 shadow-sm position-relative overflow-hidden" 
-                 style="transition: transform 0.3s ease;"
-                 onmouseover="this.style.transform='translateX(5px)'; this.style.borderColor='#10b981';" 
-                 onmouseout="this.style.transform='translateX(0)'; this.style.borderColor='#dee2e6';">
-              <div class="d-flex align-items-start">
-                <div class="me-3 mt-1 text-primary fs-4">&#128200;</div>
-                <div>
-                  <h6 class="fw-bold text-dark">AI Prediction Graph</h6>
-                  <p class="small text-muted mb-2">
-                    Found in the notebook tab. A custom widget renders the JSON payload from the cloud.
-                  </p>
-                  <div class="d-flex gap-2">
-                    <code class="small bg-primary-subtle text-primary px-2 py-1 rounded">widget="niyu_chart"</code>
-                    <code class="small bg-light border px-2 py-1 rounded">field: chart_data</code>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- Right Column: Visual Mockup -->
-        <div class="col-lg-6">
-          <!-- Browser Window Frame -->
-          <div class="mx-auto shadow-lg" style="max-width: 500px; border-radius: 12px; overflow: hidden;">
-            
-            <!-- Window Bar -->
-            <div class="bg-dark p-2 d-flex align-items-center justify-content-between" 
-                 style="background: #1e293b; border-bottom: 1px solid #334155;">
-               <div class="d-flex gap-2 ms-2">
-                 <div style="width: 10px; height: 10px; background: #ef4444; border-radius: 50%;"></div>
-                 <div style="width: 10px; height: 10px; background: #f59e0b; border-radius: 50%;"></div>
-                 <div style="width: 10px; height: 10px; background: #22c55e; border-radius: 50%;"></div>
-               </div>
-               <div class="text-secondary small font-monospace opacity-50 pe-3">AI Forecast Details</div>
-            </div>
-            
-            <!-- Image Container -->
-            <div class="bg-light position-relative" style="min-height: 350px;">
-                 <img src="screenshot_forecast_form.png" 
-                      alt="Forecast Form Screenshot" 
-                      class="img-fluid w-100 h-100 object-fit-cover"
-                      style="opacity: 0.95;"
-                      onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-                 
-                 <!-- Fallback Placeholder -->
-                 <div class="d-none w-100 position-absolute top-0 bottom-0 d-flex flex-column align-items-center justify-content-center bg-light text-muted p-5 text-center">
-                    <span class="fs-1 mb-3 text-secondary">&#128202;</span>
-                    <span class="fw-bold text-dark mb-2">Visual Placeholder</span>
-                    <span class="small">screenshot_forecast_form.png</span>
-                    <p class="small mt-3 text-muted">Shows the "AI Prediction Graph" tab active.</p>
-                 </div>
-            </div>
-            
-            <!-- Bottom Bar -->
-            <div class="bg-white p-3 border-top d-flex align-items-center justify-content-between">
-                <span class="small fw-bold text-primary">Status: Healthy</span>
-                <button class="btn btn-sm btn-primary disabled opacity-75" style="font-size: 0.75rem;">Create Purchase Order</button>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
     </div>
-  </div>
-</section>
 
-   <!-- ========== CREATING PURCHASE ORDERS ========== -->
-<section class="mb-5">
-  
-  <!-- Main Wrapper -->
-  <div class="position-relative bg-white overflow-hidden" 
-       style="border-radius: 24px; border: 1px solid #e2e8f0; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.01);">
-    
-    <!-- Top Gradient Accent (Emerald Green) -->
-    <div style="height: 6px; background: linear-gradient(90deg, #10b981 0%, #059669 100%);"></div>
 
-    <div class="p-5">
-      
-      <!-- Section Header -->
-      <div class="text-center mb-5">
-        <div class="d-inline-flex align-items-center justify-content-center mb-3 shadow-sm" 
-             style="width: 64px; height: 64px; background: #ecfdf5; color: #059669; border-radius: 50%; border: 1px solid #d1fae5; font-size: 2rem;">
-          &#128722;
-        </div>
-        <h2 class="h2 fw-bold text-dark">Creating purchase orders</h2>
-        <p class="mx-auto text-muted" style="max-width: 700px; font-size: 1.1rem; line-height: 1.6;">
-          Turn predictions into action. The system automatically converts valid forecasts into grouped POs with a single click.
-        </p>
-      </div>
+   <!-- NIYU AI - THE CINEMATIC FULL-WIDTH FLOW -->
+<div style="font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif; background-color: #020617; color: #ffffff; margin: 0; padding: 0; overflow-x: hidden;">
 
-      <!-- Logic Visualizer (The Flow) -->
-      <div class="d-flex flex-wrap justify-content-center align-items-center gap-3 mb-5 p-4 rounded-4" style="background: #f8fafc; border: 1px dashed #cbd5e1;">
+    <!-- ============================================== -->
+    <!-- STEP 01: THE AWAKENING (RED) -->
+    <!-- ============================================== -->
+    <div style="padding: 120px 0; position: relative; background: radial-gradient(circle at 50% 0%, rgba(239, 68, 68, 0.15) 0%, transparent 70%);">
         
-        <!-- Step 1 -->
-        <div class="px-4 py-2 bg-white border rounded-pill shadow-sm d-flex align-items-center">
-          <span class="badge bg-warning text-dark me-2 rounded-pill">Input</span> 
-          <span class="font-monospace small text-secondary">suggested_buy > 0</span>
-        </div>
-        
-        <!-- Arrow -->
-        <div class="d-none d-md-block text-secondary opacity-50 fs-4">&#8594;</div>
-        
-        <!-- Step 2 -->
-        <div class="px-4 py-2 bg-white border rounded-pill shadow-sm d-flex align-items-center">
-          <span class="badge bg-primary me-2 rounded-pill">Check</span> 
-          <span class="font-monospace small text-secondary">Has Vendor?</span>
-        </div>
-        
-        <!-- Arrow -->
-        <div class="d-none d-md-block text-secondary opacity-50 fs-4">&#8594;</div>
-        
-        <!-- Step 3 -->
-        <div class="px-4 py-2 bg-white border rounded-pill shadow-sm d-flex align-items-center border-success" style="box-shadow: 0 4px 6px -1px rgba(16, 185, 129, 0.1);">
-          <span class="badge bg-success me-2 rounded-pill">&#10024; Result</span> 
-          <span class="small fw-bold text-success">PO Grouped by Vendor</span>
-        </div>
-
-      </div>
-
-      <!-- Methods Grid -->
-      <div class="row g-4">
-        
-        <!-- Method 1: From List -->
-        <div class="col-md-6">
-          <div class="h-100 p-4 bg-white position-relative" 
-               style="border-radius: 20px; border: 1px solid #e2e8f0; transition: all 0.3s ease;"
-               onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.1)'; this.style.borderColor='#10b981';"
-               onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='#e2e8f0';">
-            
-            <div class="d-flex align-items-center mb-3">
-              <div class="d-flex align-items-center justify-content-center me-3 rounded-circle bg-light text-dark" style="width: 48px; height: 48px;">
-                <span class="fs-4">&#128450;</span>
-              </div>
-              <h5 class="fw-bold text-dark mb-0">From Smart Stock List</h5>
+        <div style="max-width: 1100px; margin: 0 auto; text-align: center; padding: 0 20px;">
+            <div style="display: inline-block; padding: 8px 16px; border-radius: 100px; background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.2); color: #f87171; font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 30px;">
+            Configuration Phase
             </div>
             
-            <p class="text-muted small mb-3">
-              Best for bulk processing multiple items at once.
+            <h2 style="font-size: clamp(3rem, 8vw, 6rem); color: aliceblue; font-weight: 800; line-height: 0.9; letter-spacing: -4px; margin-bottom: 30px;">
+            Is your warehouse <br>
+            <span style="background: linear-gradient(135deg, #ffffff 30%, #f87171 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">bleeding cash?</span>
+            </h2>
+            
+            <p style="font-size: 20px; color: #94a3b8; max-width: 700px; margin: 0 auto 80px auto; line-height: 1.6; font-weight: 300;">
+            Stop playing guessing games with your capital. It takes <b style="color: #fff;">just 30 seconds</b> to plug the leak. Paste your Key and let the Neural Brain audit your history for optimal performance.
             </p>
-            
-            <div class="bg-light p-3 rounded-3 small text-secondary">
-              <ul class="list-unstyled mb-0">
-                <li class="mb-2 d-flex"><strong class="text-dark me-2">Single:</strong> Click the cart icon on any row.</li>
-                <li class="d-flex"><strong class="text-dark me-2">Bulk:</strong> Select rows &rarr; Action &rarr; <span class="text-decoration-underline">Create Purchase Orders</span>.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- Method 2: From Form -->
-        <div class="col-md-6">
-          <div class="h-100 p-4 bg-white position-relative" 
-               style="border-radius: 20px; border: 1px solid #e2e8f0; transition: all 0.3s ease;"
-               onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 20px 25px -5px rgba(0, 0, 0, 0.1)'; this.style.borderColor='#10b981';"
-               onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'; this.style.borderColor='#e2e8f0';">
-            
-            <div class="d-flex align-items-center mb-3">
-              <div class="d-flex align-items-center justify-content-center me-3 rounded-circle bg-light text-dark" style="width: 48px; height: 48px;">
-                <span class="fs-4">&#128196;</span>
-              </div>
-              <h5 class="fw-bold text-dark mb-0">From Forecast Form</h5>
-            </div>
-            
-            <p class="text-muted small mb-3">
-              Best for reviewing detailed trends before buying.
+            <p style="font-size: 16px; color: #64748b; line-height: 1.5;">
+            Navigate to settings in your inventory, scroll down to locate the Niyu configuration key, add the API Key, run the initial sync, and then head to the inventory module to see Niyu seamlessly integrated near products at the top.
             </p>
-            
-            <div class="bg-light p-3 rounded-3 small text-secondary">
-              <ul class="list-unstyled mb-0">
-                <li class="mb-2 d-flex"><strong class="text-dark me-2">Button:</strong> Located in the form header.</li>
-                <li class="d-flex"><strong class="text-dark me-2">Action:</strong> Immediately creates the PO and redirects you to the new order.</li>
-              </ul>
-            </div>
-          </div>
         </div>
 
-      </div>
-
-    </div>
-  </div>
-</section>
-  <!-- ========== HOW TO USE ========== -->
-<section class="mb-5">
-  
-  <!-- Main Wrapper -->
-  <div class="position-relative bg-white overflow-hidden" 
-       style="border-radius: 24px; border: 1px solid #e2e8f0; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.01);">
-    
-    <!-- Top Gradient Accent (Amber/Yellow for "Knowledge/Lightbulb" theme) -->
-    <div style="height: 6px; background: linear-gradient(90deg, #f59e0b 0%, #d97706 100%);"></div>
-
-    <div class="p-5">
-
-      <!-- Section Header -->
-      <div class="text-center mb-5">
-        <div class="d-inline-flex align-items-center justify-content-center mb-3 shadow-sm" 
-             style="width: 64px; height: 64px; background: #fffbeb; color: #d97706; border-radius: 50%; border: 1px solid #fde68a; font-size: 2rem;">
-          &#128161;
-        </div>
-        <h2 class="h2 fw-bold text-dark">Mastering the module</h2>
-        <p class="mx-auto text-muted" style="max-width: 600px; font-size: 1.1rem; line-height: 1.6;">
-          From initial setup to daily routine. Follow these guides to get the most out of your AI forecast.
-        </p>
-      </div>
-
-      <!-- The Grid -->
-      <div class="row g-4">
-
-        <!-- Card 1: Setup (Full Width Highlight) -->
-        <div class="col-12">
-          <div class="p-4 bg-white border rounded-4 shadow-sm position-relative overflow-hidden" 
-               style="border-left: 5px solid #6366f1 !important; transition: transform 0.2s;"
-               onmouseover="this.style.transform='translateY(-3px)'" 
-               onmouseout="this.style.transform='translateY(0)'">
-            
-            <div class="d-flex align-items-start">
-              <div class="me-4 d-none d-md-block">
-                <div class="d-flex align-items-center justify-content-center rounded-3 bg-light text-primary" style="width: 60px; height: 60px; font-size: 1.5rem;">
-                  &#9881;
+        <!-- FULL SIZE IMAGE -->
+        <div style="max-width: 1400px; margin: 0 auto; padding: 0 20px;">
+            <div style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 32px; padding: 12px; box-shadow: 0 50px 100px -20px rgba(0,0,0,0.7);">
+                <div style="background: #0f172a; padding: 15px 25px; border-radius: 20px 20px 0 0; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #ff5f57;"></div>
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #febc2e;"></div>
+                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #28c840;"></div>
                 </div>
-              </div>
-              <div class="flex-grow-1">
-                <h5 class="fw-bold text-dark mb-3">1. First-time setup</h5>
-                <div class="row g-3">
-                  <div class="col-md-4 d-flex">
-                    <span class="badge bg-primary rounded-pill me-2 align-self-start mt-1">1</span>
-                    <span class="small text-muted">Go to <strong>Configuration &rarr; Settings</strong>. Scroll to <strong>Niyu AI</strong>.</span>
-                  </div>
-                  <div class="col-md-4 d-flex">
-                    <span class="badge bg-primary rounded-pill me-2 align-self-start mt-1">2</span>
-                    <span class="small text-muted">Enter <strong>License Key</strong> (niyulabs.com) & click Save.</span>
-                  </div>
-                  <div class="col-md-4 d-flex">
-                    <span class="badge bg-primary rounded-pill me-2 align-self-start mt-1">3</span>
-                    <span class="small text-muted">Click <strong>Run Initial Sync</strong>. Wait ~1 min for results.</span>
-                  </div>
-                </div>
-              </div>
+                <img src="./set.png" alt="Full Size Config" style="width: 100%; height: auto; display: block; border-radius: 0 0 20px 20px;">
             </div>
-          </div>
         </div>
-
-        <!-- Card 2: Daily Workflow -->
-        <div class="col-lg-6">
-          <div class="h-100 p-4 bg-white border rounded-4 shadow-sm position-relative" 
-               style="border-left: 5px solid #10b981 !important; transition: transform 0.2s;"
-               onmouseover="this.style.transform='translateY(-3px)'" 
-               onmouseout="this.style.transform='translateY(0)'">
-            <h5 class="fw-bold text-dark mb-3 d-flex align-items-center">
-              <span class="text-success me-2">&#128197;</span> Daily workflow
-            </h5>
-            <ul class="list-unstyled mb-0 d-flex flex-column gap-3">
-              <li class="d-flex align-items-start">
-                <div style="min-width: 24px; color: #10b981;">&#10004;</div>
-                <span class="small text-muted">Check <strong>Command Center</strong> KPIs (Risk, Critical Items).</span>
-              </li>
-              <li class="d-flex align-items-start">
-                <div style="min-width: 24px; color: #10b981;">&#10004;</div>
-                <span class="small text-muted">Check <strong>Replenishment Board</strong>. Toggle "Critical Only".</span>
-              </li>
-              <li class="d-flex align-items-start">
-                <div style="min-width: 24px; color: #10b981;">&#10004;</div>
-                <span class="small text-muted">Open <strong>Inventory List</strong>. Select rows &rarr; Action &rarr; Create POs.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Card 3: Viewing Forecast -->
-        <div class="col-lg-6">
-          <div class="h-100 p-4 bg-white border rounded-4 shadow-sm position-relative" 
-               style="border-left: 5px solid #8b5cf6 !important; transition: transform 0.2s;"
-               onmouseover="this.style.transform='translateY(-3px)'" 
-               onmouseout="this.style.transform='translateY(0)'">
-            <h5 class="fw-bold text-dark mb-3 d-flex align-items-center">
-              <span class="text-primary me-2" style="color: #8b5cf6 !important;">&#128269;</span> Deep dive
-            </h5>
-            <ul class="list-unstyled mb-0 d-flex flex-column gap-3">
-              <li class="d-flex align-items-start">
-                <div style="min-width: 24px; color: #8b5cf6;">&#8226;</div>
-                <span class="small text-muted">Click <strong>Review</strong> on any product row to see the form.</span>
-              </li>
-              <li class="d-flex align-items-start">
-                <div style="min-width: 24px; color: #8b5cf6;">&#8226;</div>
-                <span class="small text-muted">Analyze <strong>AI Prediction Graph</strong> tab for trends.</span>
-              </li>
-              <li class="d-flex align-items-start">
-                <div style="min-width: 24px; color: #8b5cf6;">&#8226;</div>
-                <span class="small text-muted">Use <strong>Create Purchase Order</strong> button in the header for single-item POs.</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Card 4: Manual Run -->
-        <div class="col-md-6">
-          <div class="h-100 p-4 bg-light border rounded-4 position-relative">
-            <h6 class="fw-bold text-dark mb-2">&#9654; Force a new forecast</h6>
-            <p class="small text-muted mb-0">
-              Go to <strong>Settings &rarr; Niyu AI</strong> and click <strong>Run Initial Sync</strong>. Use this if you don't want to wait for the daily nightly cron.
-            </p>
-          </div>
-        </div>
-
-        <!-- Card 5: Filters -->
-        <div class="col-md-6">
-          <div class="h-100 p-4 bg-light border rounded-4 position-relative">
-            <h6 class="fw-bold text-dark mb-2">&#129514; Mastering Filters</h6>
-            <p class="small text-muted mb-0">
-              Use <strong class="text-danger">Critical Risk</strong> for stockouts, <strong class="text-primary">Need Purchase</strong> (default) for reorders, or <strong class="text-success">Healthy</strong> to audit stock.
-            </p>
-          </div>
-        </div>
-
-      </div>
-
     </div>
-  </div>
-</section>
 
-  <!-- ========== CONFIGURATION ========== -->
-<section class="mb-5">
-  
-  <!-- Main Wrapper -->
-  <div class="position-relative bg-white overflow-hidden" 
-     style="border-radius: 24px; border: 1px solid #e2e8f0; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.01);">
+
+    <!-- ============================================== -->
+    <!-- STEP 02: THE REVELATION (WHITE) -->
+    <!-- ============================================== -->
+    <div style="background-color: #ffffff; padding: 140px 0; color: #0f172a;  position: relative; z-index: 2;">
+        
+        <div style="max-width: 1100px; margin: 0 auto; text-align: center; padding: 0 20px;">
+            <div style="font-size: 100px; font-weight: 900; color: #f1f5f9; line-height: 1; margin-bottom: -40px;">02</div>
+            <div style="display: inline-block; padding: 6px 14px; border-radius: 100px; background: #f0f9ff; border: 1px solid #e0f2fe; color: #0ea5e9; font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 25px;">
+            Visual Clarity
+            </div>
+            
+            <h2 style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; line-height: 1; letter-spacing: -3px; margin-bottom: 30px;">
+            The Stock-Out <br><span style="color: #0ea5e9;">Nightmare Ends.</span>
+            </h2>
+            
+            <p style="font-size: 20px; color: #475569; max-width: 750px; margin: 0 auto 80px auto; line-height: 1.7; font-weight: 500;">
+            Niyu seamlessly integrates the Neural Command Center into your Inventory, empowering you to anticipate stock issues before they arise. Click <b style="color: #10b981;">"Review"</b> to unveil the analytics. Access the Niyu AI in your inventory to explore products at risk of stockout in 3, 5, or more days, complete with predicted quantities to ensure you're always prepared.
+            </p>
+        </div>
+
+        <!-- FULL SIZE IMAGE -->
+        <div style="max-width: 1400px; margin: 0 auto; padding: 0 20px;">
+            <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 32px; padding: 15px; box-shadow: 0 60px 100px -20px rgba(14, 165, 233, 0.2);">
+                <img src="./in.png" alt="Full Size UI" style="width: 100%; height: auto; display: block; border-radius: 20px;">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- STEP 03: THE EXECUTION (SLATE) -->
+    <!-- ============================================== -->
+    <div style="background-color: #f8fafc; padding: 140px 0; color: #0f172a;">
+        
+        <div style="max-width: 1100px; margin: 0 auto; text-align: center; padding: 0 20px;">
+            <div style="font-size: 100px; font-weight: 900; color: #edf2f7; line-height: 1; margin-bottom: -40px;">03</div>
+            <div style="display: inline-block; padding: 6px 14px; border-radius: 100px; background: #fff1f2; border: 1px solid #ffe4e6; color: #e11d48; font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 25px;">
+            Rapid Execution
+            </div>
+            
+            <h2 style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; line-height: 1; letter-spacing: -3px; margin-bottom: 30px;">
+            Manual RFQs <br><span style="text-decoration: line-through; color: #94a3b8; opacity: 0.5;">No Need.</span>
+            </h2>
+            
+            <p style="font-size: 20px; color: #475569; max-width: 750px; margin: 0 auto 80px auto; line-height: 1.7;">
+            With a single click on the <b>Cart Icon</b>, you unleash the power of advanced analytics, transforming an hour's worth of calculations into mere seconds. Effortlessly scan health tags like <span style="background:#dcfce7; color:#166534; font-size:12px; font-weight:800; padding:4px 10px; border-radius:6px; margin: 0 4px;">HEALTHY</span> ,<span style="background:#fef9c3; color:#854d0e; font-size:12px; font-weight:800; padding:4px 10px; border-radius:6px; margin: 0 4px;">OVERSTOCK</span>or<span style="background:#fef9c3; color:#851c0e; font-size:12px; font-weight:800; padding:4px 10px; border-radius:6px; margin: 0 4px;">STOCKOUT</span>. Navigate the inventory list at the command center to instantly identify products that are thriving, overstocked, or at risk of stockout.
+            </p>
+        </div>
+
+        <!-- FULL SIZE IMAGE -->
+        <div style="max-width: 1400px; margin: 0 auto; padding: 0 20px; position: relative;">
+            <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 32px; padding: 15px; box-shadow: 0 40px 80px rgba(0,0,0,0.08);">
+                <img src="./inventory.png" alt="Full Size Inventory" style="width: 100%; height: auto; display: block; border-radius: 20px;">
+            </div>
+            
+            <!-- Sexy Action Trigger Overlay -->
+            <div style="position: absolute; bottom: 40px; right: 60px; width: 100px; height: 100px; background: #ef4444; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 40px; box-shadow: 0 20px 40px rgba(239, 68, 68, 0.4); border: 8px solid #ffffff;">
+                🛒
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ============================================== -->
+    <!-- STEP 04: THE FREEDOM (GREEN) -->
+    <!-- ============================================== -->
+    <div style="background-color: #022c22; padding: 160px 0; text-align: center; position: relative; overflow: hidden;">
+        
+       
+
+        <div style="max-width: 1100px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 2;">
+            <div style="display: inline-block; padding: 8px 20px; border-radius: 100px; background: rgba(45, 212, 191, 0.1); border: 1px solid rgba(45, 212, 191, 0.2); color: #2dd4bf; font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 35px;">
+                Procurement Nirvana
+            </div>
+            
+            <h2 style="font-size: clamp(3rem, 8vw, 6rem); font-weight: 800; line-height: 0.9; letter-spacing: -4px; color: #ffffff; margin-bottom: 40px;">
+                Your Mondays <br>
+                <span style="color: #2dd4bf;">just got free.</span>
+            </h2>
+            <p style="font-size: 24px; color: #a7f3d0; max-width: 650px; margin: 0 auto 100px auto; line-height: 1.6; font-weight: 300; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);">
+                <strong style="font-weight: 600; text-transform: uppercase;">Review your AI-generated Draft RFQ's</strong>, grouped by vendor. Each product in your inventory list has its own <span style="color: #10b981; font-weight: 700;">cart icon</span>. Click that icon, and it will automatically generate the RFQ for you, allowing you to focus on <span style="font-style: italic;">growing your business</span>.
+            </p>
+
+           
+            <!-- FULL SIZE FINAL IMAGE -->
+            <div style="position: relative; display: block; max-width: 1200px; margin: 0 auto;">
+                <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 40px; padding: 15px; box-shadow: 0 80px 150px -30px rgba(0,0,0,0.8);">
+                    <img src="./rfq.png" alt="Full Size RFQ" style="width: 100%; height: auto; display: block; border-radius: 25px;">
+                </div>
+                
+                <!-- Success Tag Overlay -->
+                <div style="position: absolute; top: -30px; right: -20px; background: #10b981; color: white; padding: 25px 45px; border-radius: 20px; font-weight: 900; font-size: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); border: 2px solid rgba(255,255,255,0.2); transform: rotate(4deg);">
+                   &#9989; RFQ GENERATED
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
    
-   <!-- Top Gradient Accent (Slate/Graphite for "Settings" theme) -->
-   <div style="height: 6px; background: linear-gradient(90deg, #334155 0%, #64748b 100%);"></div>
 
-   <div class="p-5">
+ <!-- 5. PRICING SECTION (FOR PAID MODULE) -->
+<div style="background-color: #f8fafc; padding: 80px 20px; text-align: center; border-top: 1px solid #e2e8f0;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+        
+        <div style="margin-bottom: 60px;">
+            <span style="display: inline-block; padding: 8px 20px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 100px; color: #0d9488; font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px;">Activation Plans</span>
+            <h2 style="font-size: 42px; font-weight: 800; color: #0f172a; letter-spacing: -1px; margin: 0 0 15px 0; line-height: 1.2;">Predict your future. <br><span style="color: #94a3b8;">Choose your scale.</span></h2>
+        </div>
 
-    <!-- Section Header -->
-    <div class="text-center mb-5">
-      <div class="d-inline-flex align-items-center justify-content-center mb-3 shadow-sm" 
-         style="width: 64px; height: 64px; background: linear-gradient(135deg, #1e293b 0%, #475569 100%); color: white; border-radius: 50%; border: 1px solid #475569; font-size: 2rem;">
-       &#128295;
-      </div>
-      <h2 class="h2 fw-bold text-dark mb-2">System Configuration</h2>
-      <span class="badge bg-light text-secondary border mb-3">One-time Setup</span>
-      <p class="text-muted" style="max-width: 700px; line-height: 1.6; margin-left: auto; margin-right: auto;">
-       Connect your Odoo instance to the Niyu Cloud Engine.
-      </p>
-    </div>
-
-    <!-- Full Width Image -->
-    <div class="mb-5 mx-auto" style="max-width: 100%;">
-      <div class="position-relative rounded-4 overflow-hidden shadow-lg" style="border: 1px solid #e2e8f0;">
-       
-       <!-- Window Bar -->
-       <div class="bg-dark p-2 d-flex align-items-center" 
-          style="background: #1e293b; border-bottom: 1px solid #334155;">
-         <div class="d-flex gap-2 ms-2">
-          <div style="width: 10px; height: 10px; background: #64748b; border-radius: 50%;"></div>
-          <div style="width: 10px; height: 10px; background: #64748b; border-radius: 50%;"></div>
-          <div style="width: 10px; height: 10px; background: #64748b; border-radius: 50%;"></div>
-         </div>
-         <div class="mx-auto text-secondary small font-monospace opacity-50 pe-4">Odoo Settings - Niyu AI Configuration</div>
-       </div>
-       
-       <!-- Image Container - Full Width -->
-       <div class="bg-light position-relative" style="min-height: 500px; width: 100%;">
-          <img src="screenshot_settings.png" 
-              alt="Settings Screenshot" 
-              class="img-fluid w-100 h-100 object-fit-cover"
-              style="opacity: 0.95; display: block;"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-          
-          <!-- Fallback Placeholder -->
-          <div class="d-none w-100 h-100 position-absolute top-0 start-0 d-flex flex-column align-items-center justify-content-center bg-light text-muted p-5 text-center">
-            <span class="fs-1 mb-3 text-secondary opacity-25">&#9881;</span>
-            <span class="fw-bold text-dark mb-2">Settings Configuration Snapshot</span>
-            <span class="small opacity-75">screenshot_settings.png</span>
-          </div>
-       </div>
-      </div>
-    </div>
-
-    <!-- Instructions Below Image - Centered -->
-    <div class="mx-auto" style="max-width: 800px;">
-      <div class="row g-4 justify-content-center">
-       
-       <!-- Key Block -->
-       <div class="col-md-6">
-        <div class="h-100 p-4 bg-white border rounded-4 shadow-sm position-relative overflow-hidden transition-hover"
-            style="transition: all 0.3s ease; border-left: 4px solid #64748b !important;"
-            onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 30px -5px rgba(0,0,0,0.1)'"
-            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.02)'">
-          <div class="d-flex align-items-start">
-           <div class="me-3 mt-1 text-secondary fs-4">&#128273;</div>
-           <div>
-            <h6 class="fw-bold text-dark mb-2">License Key</h6>
-            <p class="small text-muted mb-3">
-              Enter the active key from <strong>niyulabs.com</strong> in the Niyu AI Configuration section.
-            </p>
-            <div class="d-flex gap-2 align-items-center">
-              <span class="badge bg-secondary-subtle text-secondary border border-secondary-subtle">Required</span>
-              <code class="small text-muted bg-light px-2 py-1 rounded">niyu.license_key</code>
+        <div style="text-align: center; font-size: 0;">
+            
+            <!-- FREE (Highlighted as "Also Available") -->
+            <div style="display: inline-block; vertical-align: top; width: 31%; min-width: 300px; margin: 10px; font-size: 16px; background-color: #ffffff; border: 1px solid #cbd5e1; border-radius: 32px; padding: 40px; text-align: left; box-sizing: border-box; position: relative;">
+                <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background-color: #64748b; color: #ffffff; font-size: 11px; font-weight: 900; padding: 6px 16px; border-radius: 100px; letter-spacing: 1px; text-transform: uppercase;">Also Available</div>
+                
+                <h4 style="font-weight: 800; color: #0f172a; font-size: 20px; margin: 0 0 10px 0;">Free Forever</h4>
+                <div style="margin-bottom: 20px;">
+                    <span style="font-size: 48px; font-weight: 900; color: #0f172a;">$0</span>
+                    <span style="color: #94a3b8; font-size: 16px; font-weight: 600;">/mo</span>
+                </div>
+                <p style="color: #64748b; font-size: 14px; line-height: 1.5; margin: 0 0 30px 0; height: 45px;">You can use it free also. Perfect for testing.</p>
+                <div style="height: 1px; background-color: #f1f5f9; margin-bottom: 30px;"></div>
+                <ul style="list-style: none; padding: 0; margin: 0 0 40px 0;">
+                    <li style="margin-bottom: 15px; color: #475569; font-size: 14px; font-weight: 600;"><span style="color: #10b981; margin-right: 8px;">&#10004;</span> Up to 20 Products</li>
+                    <li style="margin-bottom: 15px; color: #475569; font-size: 14px; font-weight: 600;"><span style="color: #10b981; margin-right: 8px;">&#10004;</span> Weekly Sync</li>
+                    <li style="margin-bottom: 15px; color: #475569; font-size: 14px; font-weight: 600;"><span style="color: #10b981; margin-right: 8px;">&#10004;</span> Best model use for all</li>
+                    <li style="margin-bottom: 15px; color: #475569; font-size: 14px; font-weight: 600;"><span style="color: #10b981; margin-right: 8px;">&#10004;</span> Automated Drafts</li>
+                </ul>
+                <a href="https://apps.odoo.com/apps/modules/browse?search=Niyu+Labs" target="_blank" style="display: block; text-align: center; padding: 16px; border-radius: 12px; background-color: #f1f5f9; color: #0f172a; font-weight: 800; text-decoration: none; font-size: 14px;">Get Free Version</a>
             </div>
-           </div>
-          </div>
-        </div>
-       </div>
 
-       <!-- Sync Block -->
-       <div class="col-md-6">
-        <div class="h-100 p-4 bg-white border rounded-4 shadow-sm position-relative overflow-hidden transition-hover"
-            style="transition: all 0.3s ease; border-left: 4px solid #10b981 !important;"
-            onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 15px 30px -5px rgba(16, 185, 129, 0.1)'"
-            onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.02)'">
-          <div class="d-flex align-items-start">
-           <div class="me-3 mt-1 text-success fs-4">&#128259;</div>
-           <div>
-            <h6 class="fw-bold text-dark mb-2">Run Initial Sync</h6>
-            <p class="small text-muted mb-3">
-              Click the <strong>Run Initial Sync</strong> button to trigger your first prediction run.
-            </p>
-            <div class="d-flex gap-2 align-items-center">
-              <span class="badge bg-success-subtle text-success border border-success-subtle">Action</span>
-              <span class="small text-muted fst-italic">Results in ~1 min</span>
+            <!-- PRO -->
+            <div style="display: inline-block; vertical-align: top; width: 33%; min-width: 320px; margin: 0 10px; font-size: 16px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 32px; padding: 50px 40px; text-align: left; box-sizing: border-box; opacity: 0.9;">
+                <h4 style="font-weight: 800; color: #0f172a; font-size: 22px; margin: 0 0 10px 0;">Professional</h4>
+                <div style="margin-bottom: 20px;">
+                    <span style="font-size: 56px; font-weight: 900; color: #0f172a;">$49</span>
+                    <span style="color: #94a3b8; font-size: 18px; font-weight: 600;">/mo</span>
+                </div>
+                <p style="color: #64748b; font-size: 14px; line-height: 1.5; margin: 0 0 30px 0; height: 45px;">For scaling businesses with high turnover.</p>
+                <div style="height: 1px; background-color: #f1f5f9; margin-bottom: 30px;"></div>
+                <ul style="list-style: none; padding: 0; margin: 0 0 40px 0;">
+                    <li style="margin-bottom: 18px; color: #1e293b; font-size: 15px; font-weight: 700;"><span style="color: #10b981; margin-right: 8px;">&#10004;</span> 20,000 SKUs</li>
+                    <li style="margin-bottom: 18px; color: #1e293b; font-size: 15px; font-weight: 700;"><span style="color: #10b981; margin-right: 8px;">&#10004;</span> Daily Sync</li>
+                    <li style="margin-bottom: 18px; color: #1e293b; font-size: 15px; font-weight: 700;"><span style="color: #10b981; margin-right: 8px;">&#10004;</span> Automated Draft RFQs</li>
+                    <li style="margin-bottom: 18px; color: #1e293b; font-size: 15px; font-weight: 700;"><span style="color: #10b981; margin-right: 8px;">&#10004;</span> Advanced Analytics</li>
+                    <li style="margin-bottom: 18px; color: #1e293b; font-size: 15px; font-weight: 700;"><span style="color: #10b981; margin-right: 8px;">&#10004;</span> Priority Email Support</li>
+                </ul>
+                <a href="https://niyulabs.com" target="_blank" style="display: block; text-align: center; padding: 18px; border-radius: 12px; background-color: #f1f5f9; color: #0f172a; font-weight: 800; text-decoration: none; font-size: 16px;">Upgrade to Pro &#8594;</a>
             </div>
-           </div>
-          </div>
+
+            <!-- ENTERPRISE / ONE TIME (Highlighted as Active Purchase) -->
+            <div style="display: inline-block; vertical-align: top; width: 31%; min-width: 300px; margin: 10px; font-size: 16px; background-color: #ffffff; border: 2px solid #10b981; border-radius: 32px; padding: 40px; text-align: left; box-sizing: border-box; position: relative; box-shadow: 0 30px 60px -12px rgba(16, 185, 129, 0.15);">
+                <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background-color: #10b981; color: #ffffff; font-size: 11px; font-weight: 900; padding: 6px 16px; border-radius: 100px; letter-spacing: 1px; text-transform: uppercase;">Best Value</div>
+                <h4 style="font-weight: 800; color: #0f172a; font-size: 20px; margin: 0 0 10px 0;">Lifetime License</h4>
+                <div style="margin-bottom: 20px;">
+                    <span style="font-size: 42px; font-weight: 900; color: #0f172a;">One-Time</span>
+                </div>
+                <p style="color: #64748b; font-size: 14px; line-height: 1.5; margin: 0 0 30px 0; height: 45px;">For global multi-warehouse logistics clusters.</p>
+                <div style="height: 1px; background-color: #f1f5f9; margin-bottom: 30px;"></div>
+                <ul style="list-style: none; padding: 0; margin: 0 0 40px 0;">
+                    <li style="margin-bottom: 15px; color: #475569; font-size: 14px; font-weight: 600;"><span style="color: #0ea5e9; margin-right: 8px;">&#10004;</span> Unlimited SKUs</li>
+                    <li style="margin-bottom: 15px; color: #475569; font-size: 14px; font-weight: 600;"><span style="color: #0ea5e9; margin-right: 8px;">&#10004;</span> Full Source Code</li>
+                    <li style="margin-bottom: 15px; color: #475569; font-size: 14px; font-weight: 600;"><span style="color: #0ea5e9; margin-right: 8px;">&#10004;</span> Lifetime Updates</li>
+                    <li style="margin-bottom: 15px; color: #475569; font-size: 14px; font-weight: 600;"><span style="color: #0ea5e9; margin-right: 8px;">&#10004;</span> Multi-Company Ready</li>
+                </ul>
+                <a href="#" style="display: block; text-align: center; padding: 16px; border-radius: 12px; background-color: #0f172a; color: #ffffff; font-weight: 800; text-decoration: none; font-size: 14px;">Purchase Now</a>
+            </div>
         </div>
-       </div>
-
-      </div>
-
-      <!-- Navigation Path -->
-      <div class="mt-4 p-3 bg-light border rounded-3 text-center">
-       <h6 class="fw-bold text-dark text-uppercase small mb-2" style="letter-spacing: 0.5px;">Path to Settings</h6>
-       <div class="d-flex flex-wrap justify-content-center gap-2 align-items-center">
-         <span class="text-dark fw-bold small">Inventory</span>
-         <span class="text-muted">→</span>
-         <span class="text-dark fw-bold small">Configuration</span>
-         <span class="text-muted">→</span>
-         <span class="text-dark fw-bold small">Settings</span>
-         <span class="text-muted">→</span>
-         <span class="badge bg-primary text-white small">Niyu AI Configuration</span>
-       </div>
-      </div>
     </div>
+</div>
 
-   </div>
-  </div>
-</section>
 
-    <!-- ========== TROUBLESHOOTING & FAQ ========== -->
-    <section class="mb-5">
-      
-      <!-- Section Header -->
-      <div class="text-center mb-5">
-      <div class="d-inline-flex align-items-center justify-content-center mb-3 shadow-sm" 
-         style="width: 64px; height: 64px; background: #fef3c7; color: #d97706; border-radius: 50%; border: 1px solid #fde68a; font-size: 2rem;">
-        &#129657;
-      </div>
-      <h2 class="h2 fw-bold text-dark">Troubleshooting &amp; FAQ</h2>
-      <p class="mx-auto text-muted" style="max-width: 600px; font-size: 1.05rem;">
-        Get unstuck fast. Browse common issues and solutions below.
-      </p>
-      </div>
-
-      <!-- Quick Search / Filter Suggestion -->
-      <div class="d-flex justify-content-center mb-5">
-      <div class="d-inline-flex align-items-center bg-light border rounded-pill px-4 py-2 shadow-sm">
-        <span class="text-secondary me-2">&#128269;</span>
-        <small class="text-muted fw-bold">Tip: Use your browser's Find (Ctrl+F) to search keywords.</small>
-      </div>
-      </div>
-
-      <!-- Accordion / Collapsible FAQ -->
-      <div class="mx-auto" style="max-width: 900px;">
-      
-      <!-- FAQ Item 1 -->
-      <div class="mb-3">
-        <div class="p-4 bg-white border rounded-4 shadow-sm cursor-pointer transition-all" 
-           style="border-left: 5px solid #ef4444 !important; transition: all 0.3s ease; cursor: pointer;"
-           onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none'; this.style.background = this.nextElementSibling.style.display === 'block' ? '#fef2f2' : '#ffffff'; this.style.borderLeftColor = this.nextElementSibling.style.display === 'block' ? '#dc2626' : '#ef4444';"
-           onmouseover="this.style.transform='translateX(5px)'; this.style.boxShadow='0 10px 20px -5px rgba(239, 68, 68, 0.1)';"
-           onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.02)';">
-        
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="d-flex align-items-center">
-          <div class="d-flex align-items-center justify-content-center me-3 rounded-circle text-danger" 
-             style="width: 40px; height: 40px; background: #fee2e2; font-size: 1.25rem;">
-            &#128511;
-          </div>
-          <div>
-            <h5 class="fw-bold text-dark mb-0">"No sales history found"</h5>
-            <small class="text-muted">What do I do?</small>
-          </div>
-          </div>
-          <span class="text-secondary opacity-50 fw-bold" style="font-size: 1.25rem;">&#9660;</span>
-        </div>
-        </div>
-        
-        <div class="p-4 bg-light border-start border-end border-bottom rounded-bottom-4 shadow-sm" style="display: none; border-left: 5px solid #ef4444 !important;">
-        <div class="d-flex gap-3">
-          <div style="color: #10b981; font-size: 1.5rem;">✓</div>
-          <div>
-          <p class="small text-dark mb-2">
-            <strong>Cause:</strong> The system needs confirmed Sales Orders (state "Sale" or "Done") with order dates in the last 2 years for Storable or Consumable products. Quotations, drafts, and canceled orders are excluded.
-          </p>
-          <p class="small text-dark mb-2">
-            <strong>How to fix:</strong>
-          </p>
-          <ul class="small text-muted list-unstyled mb-2">
-            <li class="mb-1 d-flex"><span class="me-2">1.</span> Go to <strong>Sales &rarr; Orders</strong> and confirm you have orders marked as "Sale" or "Done".</li>
-            <li class="mb-1 d-flex"><span class="me-2">2.</span> Check <strong>Inventory &rarr; Products</strong>. Ensure products in those orders have type <strong>Storable</strong> or <strong>Consumable</strong> (not Service).</li>
-            <li class="mb-1 d-flex"><span class="me-2">3.</span> Verify order dates span 2+ years for better AI accuracy.</li>
-            <li class="d-flex"><span class="me-2">4.</span> Run <strong>Initial Sync</strong> again in Inventory &rarr; Configuration &rarr; Settings.</li>
-          </ul>
-          <div class="p-2 bg-white border-start-4 border-primary rounded small text-secondary" style="border-left: 3px solid #3b82f6 !important;">
-            <span class="text-primary fw-bold">💡 Pro tip:</span> At least 10–20 order lines per product over 6 months provides solid AI training data.
-          </div>
-          </div>
-        </div>
-        </div>
-      </div>
-
-      <!-- FAQ Item 2 -->
-      <div class="mb-3">
-        <div class="p-4 bg-white border rounded-4 shadow-sm cursor-pointer transition-all" 
-           style="border-left: 5px solid #6366f1 !important; transition: all 0.3s ease; cursor: pointer;"
-           onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none'; this.style.background = this.nextElementSibling.style.display === 'block' ? '#f5f3ff' : '#ffffff'; this.style.borderLeftColor = this.nextElementSibling.style.display === 'block' ? '#7c3aed' : '#6366f1';"
-           onmouseover="this.style.transform='translateX(5px)'; this.style.boxShadow='0 10px 20px -5px rgba(99, 102, 241, 0.1)';"
-           onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.02)';">
-        
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="d-flex align-items-center">
-          <div class="d-flex align-items-center justify-content-center me-3 rounded-circle text-primary" 
-             style="width: 40px; height: 40px; background: #ede9fe; font-size: 1.25rem;">
-            &#128273;
-          </div>
-          <div>
-            <h5 class="fw-bold text-dark mb-0">"Please enter your Niyu API Key…"</h5>
-            <small class="text-muted">License key not found</small>
-          </div>
-          </div>
-          <span class="text-secondary opacity-50 fw-bold" style="font-size: 1.25rem;">&#9660;</span>
-        </div>
-        </div>
-        
-        <div class="p-4 bg-light border-start border-end border-bottom rounded-bottom-4 shadow-sm" style="display: none; border-left: 5px solid #6366f1 !important;">
-        <div class="d-flex gap-3">
-          <div style="color: #10b981; font-size: 1.5rem;">✓</div>
-          <div>
-          <p class="small text-dark mb-2">
-            <strong>Cause:</strong> Your Niyu License Key is missing or invalid. Without it, the system can't connect to the forecasting engine.
-          </p>
-          <p class="small text-dark mb-2">
-            <strong>How to fix:</strong>
-          </p>
-          <div class="bg-white border rounded-3 p-3 mb-2 font-monospace text-secondary small">
-            <strong class="d-block text-dark mb-2">Step-by-step:</strong>
-            Inventory → Configuration → Settings<br>
-            ↓<br>
-            Scroll to <span class="text-primary fw-bold">"Niyu AI Configuration"</span><br>
-            ↓<br>
-            Paste key in <span class="text-primary fw-bold">"License Key"</span> field<br>
-            ↓<br>
-            Click <span class="badge bg-success">Save</span><br>
-            ↓<br>
-            Click <span class="badge bg-primary">Run Initial Sync</span>
-          </div>
-          <div class="p-2 bg-white border-start-4 border-primary rounded small text-secondary" style="border-left: 3px solid #3b82f6 !important;">
-            <span class="text-primary fw-bold">🔑 Key from:</span> Sign up or log in at <strong>niyulabs.com</strong>. Your key is on the dashboard.
-          </div>
-          </div>
-        </div>
-        </div>
-      </div>
-
-      <!-- FAQ Item 3 -->
-      <div class="mb-3">
-        <div class="p-4 bg-white border rounded-4 shadow-sm cursor-pointer transition-all" 
-           style="border-left: 5px solid #f59e0b !important; transition: all 0.3s ease; cursor: pointer;"
-           onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none'; this.style.background = this.nextElementSibling.style.display === 'block' ? '#fffbeb' : '#ffffff'; this.style.borderLeftColor = this.nextElementSibling.style.display === 'block' ? '#d97706' : '#f59e0b';"
-           onmouseover="this.style.transform='translateX(5px)'; this.style.boxShadow='0 10px 20px -5px rgba(245, 158, 11, 0.1)';"
-           onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.02)';">
-        
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="d-flex align-items-center">
-          <div class="d-flex align-items-center justify-content-center me-3 rounded-circle text-warning" 
-             style="width: 40px; height: 40px; background: #fef3c7; font-size: 1.25rem;">
-            &#9203;
-          </div>
-          <div>
-            <h5 class="fw-bold text-dark mb-0">"A forecast is already running"</h5>
-            <small class="text-muted">Sync stuck or waiting</small>
-          </div>
-          </div>
-          <span class="text-secondary opacity-50 fw-bold" style="font-size: 1.25rem;">&#9660;</span>
-        </div>
-        </div>
-        
-        <div class="p-4 bg-light border-start border-end border-bottom rounded-bottom-4 shadow-sm" style="display: none; border-left: 5px solid #f59e0b !important;">
-        <div class="d-flex gap-3">
-          <div style="color: #10b981; font-size: 1.5rem;">✓</div>
-          <div>
-          <p class="small text-dark mb-2">
-            <strong>Cause:</strong> Only one forecast job can run at a time (concurrency guard). The system is either actively processing or a previous job is stale.
-          </p>
-          <p class="small text-dark mb-2">
-            <strong>Solutions (in order):</strong>
-          </p>
-          <ul class="small text-muted list-unstyled mb-2">
-            <li class="mb-2 d-flex">
-            <span class="badge bg-warning text-dark me-2" style="min-width: 30px;">1</span>
-            <span><strong>Wait 1–2 minutes.</strong> Check the Command Center badge; if it changes from "Syncing…" to "Active", the job completed successfully.</span>
-            </li>
-            <li class="mb-2 d-flex">
-            <span class="badge bg-warning text-dark me-2" style="min-width: 30px;">2</span>
-            <span><strong>Refresh the page.</strong> The UI may not have updated yet.</span>
-            </li>
-            <li class="mb-2 d-flex">
-            <span class="badge bg-warning text-dark me-2" style="min-width: 30px;">3</span>
-            <span><strong>Check logs.</strong> Go to Settings &rarr; Technical &rarr; Logs to see if there's an error message.</span>
-            </li>
-            <li class="d-flex">
-            <span class="badge bg-warning text-dark me-2" style="min-width: 30px;">4</span>
-            <span><strong>Stale job?</strong> If "Syncing…" lasts &gt; 15 minutes, the system auto-clears it on the next scheduler run or manual sync.</span>
-            </li>
-          </ul>
-          <div class="p-2 bg-white border-start-4 border-primary rounded small text-secondary" style="border-left: 3px solid #3b82f6 !important;">
-            <span class="text-primary fw-bold">⏱️ Typical time:</span> Most forecasts complete in 30–60 seconds. If stuck longer, network issues or Niyu cloud delays may be involved.
-          </div>
-          </div>
-        </div>
-        </div>
-      </div>
-
-      <!-- FAQ Item 4 -->
-      <div class="mb-3">
-        <div class="p-4 bg-white border rounded-4 shadow-sm cursor-pointer transition-all" 
-           style="border-left: 5px solid #10b981 !important; transition: all 0.3s ease; cursor: pointer;"
-           onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none'; this.style.background = this.nextElementSibling.style.display === 'block' ? '#ecfdf5' : '#ffffff'; this.style.borderLeftColor = this.nextElementSibling.style.display === 'block' ? '#059669' : '#10b981';"
-           onmouseover="this.style.transform='translateX(5px)'; this.style.boxShadow='0 10px 20px -5px rgba(16, 185, 129, 0.1)';"
-           onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.02)';">
-        
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="d-flex align-items-center">
-          <div class="d-flex align-items-center justify-content-center me-3 rounded-circle text-success" 
-             style="width: 40px; height: 40px; background: #d1fae5; font-size: 1.25rem;">
-            &#128722;
-          </div>
-          <div>
-            <h5 class="fw-bold text-dark mb-0">No "Create PO" button or cart icon</h5>
-            <small class="text-muted">Cannot create purchase orders</small>
-          </div>
-          </div>
-          <span class="text-secondary opacity-50 fw-bold" style="font-size: 1.25rem;">&#9660;</span>
-        </div>
-        </div>
-        
-        <div class="p-4 bg-light border-start border-end border-bottom rounded-bottom-4 shadow-sm" style="display: none; border-left: 5px solid #10b981 !important;">
-        <div class="d-flex gap-3">
-          <div style="color: #10b981; font-size: 1.5rem;">✓</div>
-          <div>
-          <p class="small text-dark mb-2">
-            <strong>Cause:</strong> The "Create PO" button only appears when <strong>both</strong> conditions are met:
-          </p>
-          <div class="bg-white border rounded-3 p-3 mb-3 small">
-            <div class="mb-2"><span class="badge bg-danger text-white me-2">1</span> <strong>Suggested buy > 0</strong> (product needs restocking)</div>
-            <div><span class="badge bg-danger text-white me-2">2</span> <strong>Product has ≥1 vendor</strong> (Supplier configured)</div>
-          </div>
-          <p class="small text-dark mb-2">
-            <strong>How to fix:</strong>
-          </p>
-          <ul class="small text-muted list-unstyled mb-2">
-            <li class="mb-1 d-flex"><span class="me-2">→</span> Open the product form (Inventory &rarr; Products).</li>
-            <li class="mb-1 d-flex"><span class="me-2">→</span> Go to the <strong>Purchase</strong> tab.</li>
-            <li class="mb-1 d-flex"><span class="me-2">→</span> Add at least one <strong>Supplier</strong> (vendor). This is the "Product Supplier" relationship.</li>
-            <li class="d-flex"><span class="me-2">→</span> Click <strong>Save</strong>. Then run a new forecast sync if needed.</li>
-          </ul>
-          <div class="p-2 bg-white border-start-4 border-success rounded small text-secondary" style="border-left: 3px solid #10b981 !important;">
-            <span class="text-success fw-bold">📋 Note:</span> The first vendor in the list will be used as the default supplier for the suggested buy calculation.
-          </div>
-          </div>
-        </div>
-        </div>
-      </div>
-
-      <!-- FAQ Item 5 (Bonus) -->
-      <div class="mb-3">
-        <div class="p-4 bg-white border rounded-4 shadow-sm cursor-pointer transition-all" 
-           style="border-left: 5px solid #3b82f6 !important; transition: all 0.3s ease; cursor: pointer;"
-           onclick="this.nextElementSibling.style.display = this.nextElementSibling.style.display === 'none' ? 'block' : 'none'; this.style.background = this.nextElementSibling.style.display === 'block' ? '#eff6ff' : '#ffffff'; this.style.borderLeftColor = this.nextElementSibling.style.display === 'block' ? '#2563eb' : '#3b82f6';"
-           onmouseover="this.style.transform='translateX(5px)'; this.style.boxShadow='0 10px 20px -5px rgba(59, 130, 246, 0.1)';"
-           onmouseout="this.style.transform='translateX(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.02)';">
-        
-        <div class="d-flex align-items-center justify-content-between">
-          <div class="d-flex align-items-center">
-          <div class="d-flex align-items-center justify-content-center me-3 rounded-circle text-primary" 
-             style="width: 40px; height: 40px; background: #dbeafe; font-size: 1.25rem;">
-            &#128505;
-          </div>
-          <div>
-            <h5 class="fw-bold text-dark mb-0">How often does the forecast refresh?</h5>
-            <small class="text-muted">When is my data updated?</small>
-          </div>
-          </div>
-          <span class="text-secondary opacity-50 fw-bold" style="font-size: 1.25rem;">&#9660;</span>
-        </div>
-        </div>
-        
-        <div class="p-4 bg-light border-start border-end border-bottom rounded-bottom-4 shadow-sm" style="display: none; border-left: 5px solid #3b82f6 !important;">
-        <div class="d-flex gap-3">
-          <div style="color: #10b981; font-size: 1.5rem;">✓</div>
-          <div>
-          <p class="small text-dark mb-2">
-            <strong>Answer:</strong> By default, a scheduled cron job runs daily at <strong>02:00 UTC</strong> (configurable). You can also trigger a manual sync anytime.
-          </p>
-          <div class="bg-white border rounded-3 p-3 mb-3 small">
-            <div class="mb-2"><span class="fw-bold text-primary">⏰ Daily Cron:</span> Runs automatically at 02:00 UTC. Data refreshes overnight.</div>
-            <div><span class="fw-bold text-primary">🔄 Manual Sync:</span> Go to Inventory → Configuration → Settings → "Run Initial Sync" button anytime.</div>
-          </div>
-          <p class="small text-muted">
-            <strong>Processing time:</strong> Most forecasts complete in 30–60 seconds. Check the <strong>Last Sync</strong> timestamp in the Command Center dashboard.
-          </p>
-          </div>
-        </div>
-        </div>
-      </div>
-
-      </div>
-
-      <!-- Bottom CTA / Support Link -->
-      <div class="mt-5 p-4 bg-gradient rounded-4 text-center" style="background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); border: 1px solid rgba(255,255,255,0.2);">
-      <h6 class="fw-bold text-white mb-2">Still stuck?</h6>
-      <p class="text-white small mb-3">Our support team is here to help.</p>
-      <a href="https://niyulabs.com/support" target="_blank" rel="noopener" 
-         class="btn btn-sm btn-light fw-bold">
-        Contact Support →
-      </a>
-      </div>
-
-    </section>
-
-   
-  <!-- ========== FOOTER ========== -->
-  <div style="margin-top: 3rem; padding: 3rem 2rem; background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%); border-top: 2px solid #e0e7ff; position: relative; overflow: hidden;">
+    <!-- 6. FOOTER / FAQ -->
+    <div style="background-color: #ffffff; padding: 100px 20px;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            
+            <div style="text-align: center; margin-bottom: 80px;">
+                <span style="display: inline-block; padding: 8px 20px; background-color: #f0fdf4; border: 1px solid #dcfce7; border-radius: 100px; color: #166534; font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px;">Technical FAQ</span>
+                <h2 style="font-size: 42px; font-weight: 800; color: #0f172a; letter-spacing: -1.5px; margin: 0;">Everything you <span style="color: #94a3b8;">need to know.</span></h2>
+            </div>
     
-    <!-- Decorative Background Elements -->
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: radial-gradient(#6366f1 0.5px, transparent 0.5px); background-size: 20px 20px; opacity: 0.03; pointer-events: none;"></div>
+            <div style="font-size: 0; text-align: center; margin-bottom: 100px;">
+                <!-- FAQ Item 1 -->
+                <div style="display: inline-block; vertical-align: top; width: 45%; min-width: 320px; margin: 2%; font-size: 16px; text-align: left; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 24px; padding: 40px; box-sizing: border-box;">
+                    <h5 style="font-weight: 800; color: #0f172a; margin-bottom: 15px; display: flex; align-items: center; gap: 12px;">
+                        <span style="color: #10b981; font-size: 20px;">&#10038;</span> Is my sales data safe?
+                    </h5>
+                    <p style="color: #64748b; font-size: 15px; line-height: 1.6; margin: 0;">
+                        Yes. Niyu uses a <b>Stateless RAM Architecture</b>. Your sales velocity is processed in volatile memory and purged instantly. No transaction history is ever stored.
+                    </p>
+                </div>
+                <!-- FAQ Item 2 -->
+                <div style="display: inline-block; vertical-align: top; width: 45%; min-width: 320px; margin: 2%; font-size: 16px; text-align: left; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 24px; padding: 40px; box-sizing: border-box;">
+                    <h5 style="font-weight: 800; color: #0f172a; margin-bottom: 15px; display: flex; align-items: center; gap: 12px;">
+                        <span style="color: #10b981; font-size: 20px;">&#10038;</span> Does it slow down Odoo?
+                    </h5>
+                    <p style="color: #64748b; font-size: 15px; line-height: 1.6; margin: 0;">
+                        No. The complex math happens on our <b>GPU Clusters</b>. Your Odoo server only receives the final predicted Value.
+                    </p>
+                </div>
+            </div>
     
-    <div class="container position-relative z-1">
-      
-      <!-- Main Footer Content -->
-      <div class="row align-items-center mb-4 pb-4 border-bottom border-primary border-opacity-10">
-        
-        <!-- Left: Branding -->
-        <div class="col-lg-5 mb-4 mb-lg-0">
-          <div class="d-flex align-items-center mb-3">
-            <div class="d-flex align-items-center justify-content-center me-3 shadow-sm" 
-                 style="width: 52px; height: 52px; background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); color: white; border-radius: 14px; font-size: 1.5rem; border: 2px solid white;">
-              &#128640;
-            </div>
-            <div>
-              <h5 class="fw-bold text-dark mb-0" style="letter-spacing: -0.5px;">Inventory Forecast</h5>
-              <small class="text-muted">Powered by Niyu Labs</small>
-            </div>
-          </div>
-          <p class="text-muted small mb-0" style="max-width: 350px; line-height: 1.6;">
-            AI-powered demand forecasting and smart reordering for Odoo. Make data-driven inventory decisions with confidence.
-          </p>
-        </div>
-
-        <!-- Center: Quick Links -->
-        <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
-          <h6 class="fw-bold text-dark text-uppercase small mb-3" style="letter-spacing: 0.5px;">Quick Links</h6>
-          <ul class="list-unstyled d-flex flex-column gap-2">
-            <li><a href="#" class="text-primary text-decoration-none small fw-500 hover-underline">Documentation</a></li>
-            <li><a href="#" class="text-primary text-decoration-none small fw-500 hover-underline">Support</a></li>
-            <li><a href="#" class="text-primary text-decoration-none small fw-500 hover-underline">License</a></li>
-          </ul>
-        </div>
-
-        <!-- Right: Social/CTA -->
-        <div class="col-lg-4 col-md-6">
-          <h6 class="fw-bold text-dark text-uppercase small mb-3" style="letter-spacing: 0.5px;">Connect</h6>
-          <div class="d-flex gap-2 mb-3">
-            <a href="https://niyulabs.com" target="_blank" rel="noopener" 
-               class="d-inline-flex align-items-center justify-content-center rounded-2 shadow-sm transition" 
-               style="width: 40px; height: 40px; background: white; border: 1px solid #e2e8f0; color: #6366f1; text-decoration: none; transition: all 0.2s ease;"
-               onmouseover="this.style.background='#6366f1'; this.style.color='white'; this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 20px -5px rgba(99, 102, 241, 0.2)';"
-               onmouseout="this.style.background='white'; this.style.color='#6366f1'; this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.02)';"
-               title="Visit Niyu Labs">
-              &#128729;
-            </a>
-            <a href="https://github.com" target="_blank" rel="noopener" 
-               class="d-inline-flex align-items-center justify-content-center rounded-2 shadow-sm transition" 
-               style="width: 40px; height: 40px; background: white; border: 1px solid #e2e8f0; color: #1e293b; text-decoration: none; transition: all 0.2s ease;"
-               onmouseover="this.style.background='#1e293b'; this.style.color='white'; this.style.transform='translateY(-3px)'; this.style.boxShadow='0 10px 20px -5px rgba(30, 41, 59, 0.2)';"
-               onmouseout="this.style.background='white'; this.style.color='#1e293b'; this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 4px rgba(0,0,0,0.02)';"
-               title="GitHub">
-              &#128187;
-            </a>
-          </div>
-          <p class="text-muted small mb-0">
-            <strong class="text-dark">Ready to optimize?</strong><br>
-            <a href="https://niyulabs.com" class="text-primary text-decoration-none fw-bold small">Get started →</a>
-          </p>
-        </div>
-
-      </div>
-
-      <!-- Bottom: Stats & Copyright -->
-      <div class="row align-items-center text-center text-lg-start">
-        
-        <!-- Left: Stats -->
-        <div class="col-lg-6 mb-3 mb-lg-0">
-          <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-4">
-            <div>
-              <div class="fw-bold text-primary" style="font-size: 1.25rem;">30</div>
-              <small class="text-muted">Day Forecast</small>
-            </div>
-            <div style="width: 1px; background: #cbd5e1; opacity: 0.5;"></div>
-            <div>
-              <div class="fw-bold text-primary" style="font-size: 1.25rem;">API</div>
-              <small class="text-muted">Cloud Powered</small>
-            </div>
-            <div style="width: 1px; background: #cbd5e1; opacity: 0.5;"></div>
-            <div>
-              <div class="fw-bold text-primary" style="font-size: 1.25rem;">100%</div>
-              <small class="text-muted">Odoo Native</small>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right: Copyright -->
-        <div class="col-lg-6 text-lg-end">
-          <p class="small text-muted mb-0">
-            © <span id="year">2024</span> <strong>Niyu Labs</strong>. All rights reserved. | 
-            <a href="#" class="text-muted text-decoration-none me-2">Privacy</a>
-            <a href="#" class="text-muted text-decoration-none">Terms</a>
-          </p>
-        </div>
-
-      </div>
-
+          <!-- Final CTA -->
+        <!-- Final CTA -->
+<div style="background-color: #030712; border-radius: 48px; padding: 100px 40px; text-align: center; overflow: hidden; box-shadow: 0 50px 100px -20px rgba(0,0,0,0.5);">
+    <h2 style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; color: #ffffff; letter-spacing: -2px; margin-bottom: 30px; line-height: 1;">
+        The future of stock <br> is <span style="color: #10b981;">Neural.</span>
+    </h2>
+    
+    <div style="margin-bottom: 80px;">
+        <a href="https://apps.odoo.com/apps/modules/browse?search=Niyu+Labs" target="_blank" style="display: inline-block; background-color: #ffffff; color: #030712; padding: 22px 60px; border-radius: 100px; font-weight: 800; font-size: 18px; text-decoration: none; transition: 0.3s; box-shadow: 0 0 40px rgba(255,255,255,0.15);">
+            Install Free Module &#8594;
+        </a>
     </div>
 
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+        <!-- Footer Section (Table used for perfect alignment) -->
+        <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 40px;">
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <!-- Left Side: Logo -->
+                    <td align="left" style="vertical-align: middle;">
+                        <div style="font-weight: 900; color: #ffffff; font-size: 20px; letter-spacing: -1px;">
+                            NIYU <span style="color: #10b981;">LABS</span>
+                        </div>
+                    </td>
+                    
+                    <!-- Right Side: Contact Info -->
+                    <td align="right" style="vertical-align: middle;">
+                        <div style="color: #94a3b8; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">
+                            Queries & Support
+                        </div>
+                        <a href="mailto:info@niyulabs.com" style="color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 700;">
+                            info@niyulabs.com
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    
+        </div>
+    </div>
 
-  </div>
 </div>
