@@ -1,414 +1,701 @@
-<!-- ================================================================================= -->
-<!-- NIYU AI SMART STOCK - MASTER DESCRIPTION -->
-<!-- ================================================================================= -->
+<!-- static/description/index.html -->
+<!-- Bootstrap (for grid/flex utilities). You may remove this if your Odoo theme already includes it. -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<style>
+  /* Animation for the glowing text effect in the hero section */
+  @keyframes background-pan {
+    0% {
+      background-position: 0% center;
+    }
 
-<div style="background-color: #ffffff; font-family: 'Inter', 'Plus Jakarta Sans', sans-serif; color: #0f172a; overflow-x: hidden;">
+    100% {
+      background-position: -200% center;
+    }
+  }
 
-    <!-- 1. HERO SECTION -->
-    <div style="padding: 100px 20px 60px 20px; text-align: center;">
-        
-        <h1 style="font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 900; line-height: 1; letter-spacing: -0.05em; color: #0f172a; margin: 0 0 25px 0;">
-           Niyu AI <br> 
-            <span style="color: #10b981; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Smart Stock</span>
-        </h1>
-        
-        <p style="font-size: clamp(1.2rem, 3vw, 1.5rem); color: #64748b; max-width: 800px; margin: 0 auto 50px; line-height: 1.5; font-weight: 400;">
-            Stop wrestling with spreadsheets. Niyu audits your sales moves to predict future demand and <b>pre-fills your Draft RFQs</b> so you never see an 'Out of Stock' button again.
+  /* Keyframe animation for subtle pulsing effect on CTA button */
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.02);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  /* Core transition for all premium elements */
+  .transition-all-smooth {
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
+  }
+
+  /* NEW: Premium Card Style for Sections (Looker, PowerBI, Tableau) */
+  .premium-card {
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.3, 1);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    /* Base Shadow - subtle */
+    box-shadow: 0 10px 30px -5px rgba(0,0,0,.08);
+  }
+
+  /* Themed Hover Glows */
+  .hover-glow-blue:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 50px 150px -25px rgba(0,0,0,0.3), 0 0 40px 10px rgba(64, 160, 255, 0.6); /* Blue Glow */
+  }
+
+  .hover-glow-green:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 50px 150px -25px rgba(0,0,0,0.3), 0 0 40px 10px rgba(120, 220, 200, 0.6); /* Green Glow */
+  }
+
+  .hover-glow-yellow:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 50px 150px -25px rgba(0,0,0,0.3), 0 0 40px 10px rgba(255, 223, 0, 0.6); /* Yellow Glow */
+  }
+
+
+  /* NEW: Style for feature boxes */
+  .feature-box {
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.3, 1);
+    border: 1px solid #e5e8ed !important;
+    position: relative;
+    overflow: hidden;
+    background-color: #fcfcfc !important; /* Lighter background to make it pop */
+  }
+
+  /* Subtle styled corner on hover */
+  .feature-box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px; /* Larger corner */
+    height: 40px;
+    background: #40a0ff;
+    clip-path: polygon(100% 0, 0% 0, 100% 100%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .feature-box:hover::after {
+    opacity: 0.9;
+  }
+
+  .feature-box:hover {
+    transform: translateY(-10px); /* Aggressive lift */
+    box-shadow: 0 25px 50px -15px rgba(64, 160, 255, 0.45); /* Stronger shadow */
+    border-color: rgba(64, 160, 255, 0.8) !important;
+  }
+
+  /* Subtle 3D tilt for the main video showcase on hover */
+  .video-showcase-container {
+    perspective: 1500px;
+  }
+
+  .video-showcase-wrapper {
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+    transform: rotateX(0deg) scale(1);
+    will-change: transform, box-shadow;
+  }
+
+  .video-showcase-container:hover .video-showcase-wrapper {
+    transform: rotateX(6deg) scale(1.03); /* More aggressive tilt and scale */
+    box-shadow: 0 100px 250px -50px rgba(0,0,0,0.6) !important; /* Super deep shadow */
+  }
+
+  /* CTA Button pop up on hover - made more dramatic */
+  .cta-button {
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.4s ease !important;
+  }
+
+  .cta-button:hover {
+    transform: translateY(-12px) scale(1.05) !important; /* More lift */
+    box-shadow: 0 20px 50px -15px rgba(64, 160, 255, 0.8), 0 10px 20px -10px rgba(64, 160, 255, 0.6), 0 0 80px 20px rgba(64, 160, 255, 0.55) !important;
+  }
+
+  /* NEW: Parallax/Fixed Background for key sections */
+  .parallax-bg {
+    background-attachment: fixed;
+  }
+
+  /* NEW: Glassmorphism Divider */
+  .glass-divider {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.3); /* Lighter glass */
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+</style>
+
+<section class="parallax-bg" style="
+  background-color:#ffffff; color:#374151;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.7; margin:0; padding:0;
+  /* More intense background gradient for the whole page */
+  background-image:
+    radial-gradient(ellipse at 80% 15%, rgba(64, 160, 255, 0.2), transparent 40%),
+    radial-gradient(ellipse at 20% 40%, rgba(120, 220, 200, 0.15), transparent 50%),
+    radial-gradient(ellipse at 95% 90%, rgba(255, 223, 0, 0.1), transparent 60%);
+">
+
+  <!-- =======================
+  NEW HERO SECTION - Refined Color Palette, Enhanced Depth
+  ======================== -->
+  <div style="padding: 180px 20px 40px 20px; text-align: center; overflow: hidden; position: relative; background-color: #fcfcfc;">
+    <!-- Enhanced subtle geometric pattern background -->
+    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: url('https://www.transparenttextures.com/patterns/white-prism.png'); opacity: 0.2; z-index: 1;"></div>
+    
+    <!-- Subtle color overlay at the top -->
+    <div style="position: absolute; top: 0; left: 0; right: 0; height: 100px; background: linear-gradient(to bottom, rgba(64, 160, 255, 0.1), transparent); z-index: 1;"></div>
+
+    <div class="d-flex flex-column justify-content-center align-items-center" style="max-width: 1100px; margin: 0 auto; position: relative; z-index: 2;">
+      <div class="transition-all-smooth" style="display: inline-block; padding: 12px 28px; border-radius: 999px; font-size: 15px; font-weight: 700; letter-spacing: 1px; color: #ffffff; background-color: #40a0ff; border: 2px solid #78ceed; margin-bottom: 30px; box-shadow: 0 8px 20px -5px rgba(64, 160, 255, 0.6);">
+        <i class="fa fa-bolt" style="margin-right: 8px;"></i> ODOO &#8594; BIGQUERY &#8594; YOUR BI PLATFORM
+      </div>
+      <h1 style="
+          font-size: clamp(4rem, 9vw, 7rem); /* Larger text */
+          font-weight: 900;
+          letter-spacing: -0.06em;
+          line-height: 1;
+          margin: 0 0 30px 0;
+          color: #333333;
+          text-shadow: 0 15px 50px rgba(0,0,0,0.2); /* Deeper shadow */
+          background: linear-gradient(90deg, #40a0ff, #78ceed, #a0f0d0, #40a0ff);
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-size: 200% auto;
+          animation: background-pan 5s linear infinite;
+        ">
+        Your BI, Supercharged.
+      </h1>
+      <p style="font-size: clamp(1.4rem, 3vw, 1.7rem); color: #444444; margin: 0 auto 60px auto; max-width: 800px; font-weight: 500; text-shadow: 0 1px 1px rgba(255,255,255,0.8);">
+        One click to sync Odoo data directly to Google BigQuery. Instantly connect to Power BI, Looker Studio, and Tableau to build **enterprise-grade dashboards** that empower your team and drive critical business decisions.
+      </p>
+
+      <!-- BI Logos - Enhanced filter for more contrast -->
+      <div class="d-flex justify-content-center align-items-center" style="gap: 60px; margin-bottom: 60px; filter: grayscale(0.2) contrast(1.1) drop-shadow(0 6px 12px rgba(0,0,0,0.15));">
+        <img src="./copy.png" alt="Power BI Logo" style="height: 40px; opacity: 0.9;">
+        <img src="./2.png" alt="Looker Studio Logo" style="height: 80px; opacity: 0.9;">
+        <img src="./hd.png" alt="Tableau Logo" style="height: 65px; opacity: 0.9;">
+      </div>
+
+    </div>
+    <!-- Hero Video Showcase with 3D Hover Effect -->
+    <div class="video-showcase-container" style="padding: 0 0 60px 0; background-color: #fcfcfc;">
+      <div style="max-width: 1300px; margin: 0 auto; padding: 0 20px;">
+        <!-- Wrapper now applies the transition and base shadow, will-change property is crucial -->
+        <div class="video-showcase-wrapper" style="border-radius: 2rem; padding: 5px; background-color:  rgba(64, 160, 255, 0.8) !important; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.4) !important; position: relative !important; border: 1px solid rgba(255,255,255,0.4);">
+          <video autoplay loop muted playsinline preload="auto" style="width: 100%; display: block; border-radius: 2rem; background-color: #eee;">
+            <source src="./bigqueryvideo.webm" type="video/webm">
+            <!-- Fallback: Add your MP4 video here -->
+            <source src="static/description/q1.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =======================
+      NEW: PERFORMANCE BADGE / STATS LINE
+    ======================== -->
+    <div style="text-align: center; margin-top: 50px; margin-bottom: 50px; position: relative; z-index: 5;">
+        <div style="
+            display: inline-flex; 
+            align-items: center; 
+            background: rgba(255, 255, 255, 0.95); 
+            backdrop-filter: blur(12px); 
+            padding: 12px 30px; 
+            border-radius: 50px; 
+            border: 1px solid rgba(64, 160, 255, 0.3); 
+            box-shadow: 0 15px 35px rgba(64, 160, 255, 0.15);
+            transition: transform 0.3s ease;
+        " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            
+            <!-- Pulsing Dot -->
+            <span style="display: flex; height: 12px; width: 12px; position: relative; margin-right: 15px;">
+              <span style="animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite; position: absolute; display: inline-flex; height: 100%; width: 100%; border-radius: 50%; background-color: #40a0ff; opacity: 0.75;"></span>
+              <span style="position: relative; display: inline-flex; border-radius: 50%; height: 12px; width: 12px; background-color: #40a0ff;"></span>
+            </span>
+
+            <!-- The Text -->
+            <span style="font-weight: 800; color: #374151; font-size: 17px; letter-spacing: 0.3px;">
+                Performance Verified: 
+                <span style="
+                    background: -webkit-linear-gradient(45deg, #40a0ff, #2563eb); 
+                    -webkit-background-clip: text; 
+                    -webkit-text-fill-color: transparent;
+                    margin-left: 5px;
+                ">
+                    Successfully Processed <span style="color: red;">10M+</span> Records
+                </span>
+            </span>
+            
+        </div>
+    </div>
+    <!-- END PERFORMANCE BADGE -->
+
+ 
+<!-- =======================
+  AMAZING FLEXBOX LAYOUT - FIXED GAPS & PREMIUM STYLE
+  ======================== -->
+<section style="padding: 100px 20px; background-color: #f9fafb; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; border-top: 1px solid #eef0f2;">
+    <div style="max-width: 1250px; margin: 0 auto;">
+
+      <!-- Header Section -->
+      <div style="text-align: center; margin-bottom: 80px;">
+        <h2 style="font-size: clamp(3rem, 5vw, 4.5rem); font-weight: 900; color: #1a1a1a; margin-bottom: 24px; letter-spacing: -2px; line-height: 1.1;">
+          Activate Your Analytics Stack
+        </h2>
+        <p style="font-size: 1.35rem; color: #555555; max-width: 800px; margin: 0 auto; line-height: 1.6; font-weight: 400;">
+          Your BigQuery data is the fuel. These are the engines. Connect your clean Odoo data to the platform of your choice.
         </p>
-    
-       <!-- Buttons / Status Badge -->
- <!-- Buttons / Sexy Status Pill -->
-<div style="display: flex; justify-content: center; align-items: center; margin-bottom: 70px;">
-    
-    <div style="background-color: #0f172a; padding: 10px 24px; border-radius: 100px; display: inline-flex; align-items: center; box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.25); border: 1px solid #1e293b;">
-        
-        <!-- Icon -->
-        <div style="color: #10b981; font-size: 18px; margin-right: 12px; display: flex; align-items: center;">
-            &#9889; <!-- Lightning Bolt Icon -->
-        </div>
+      </div>
 
-        <!-- Text -->
-        <div style="display: flex; align-items: center; gap: 10px; margin-right: 12px; font-family: sans-serif;">
-            <span style="color: #ffffff; font-weight: 700; font-size: 15px; letter-spacing: -0.5px;">
-                Free Forever Tier
-            </span>
-            
-            <!-- Vertical Divider -->
-            <span style="width: 1px; height: 16px; margin-left: 12px; background-color: #334155;"></span>
-             
-        </div>
-             <span style="color: #10b981; font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px;">
-                20 Products
-            </span>
+      <!-- Flex Container -->
+      <!-- Added margin negative to offset card margins for perfect alignment -->
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; margin: -15px;">
 
-    </div>
-</div>
-</div>
-    
-        <!-- Hero Video -->
-        <section style="padding: 0 0 80px 0;">
-            <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-                <div style="border-radius: 1.75rem; padding: 4px; background-color: rgba(79, 70, 229, 0.9); box-shadow: 0 60px 150px -30px rgba(79, 70, 229, 0.25);">
-                    <video autoplay loop muted playsinline controls preload="auto" style="width: 100%; display: block; border-radius: 1.75rem; background-color: #000;">
-                        <source src="./Inventory Smart Stock.webm" type="video/webm">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
+        <!-- CARD 1: POWER BI -->
+        <!-- Added margin: 15px to force gap even if 'gap' property fails in Odoo -->
+        <div style="flex: 1 1 320px; max-width: 380px; margin: 15px; background: #ffffff; border: 1px solid rgba(0,0,0,0.06); border-radius: 24px; overflow: hidden; box-shadow: 0 20px 50px -10px rgba(0,0,0,0.1); transition: transform 0.3s ease; position: relative;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+          <!-- Top Media Area -->
+          <div style="background-color: #f0f7ff; padding: 40px; display: flex; align-items: center; justify-content: center; height: 240px; border-bottom: 1px solid #eef6ff;">
+             <video autoplay loop muted playsinline preload="auto" style="max-width: 100%; max-height: 100%; box-shadow: 0 15px 35px rgba(64, 160, 255, 0.2); border-radius: 12px; transform: scale(1.05);">
+                <source src="./powerbiconnection.webm" type="video/webm">
+              </video>
+          </div>
+          
+          <!-- Content Area -->
+          <div style="padding: 35px;">
+            <!-- Badge & Logo Row -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
+               <span style="background: rgba(64, 160, 255, 0.1); color: #0078d4; padding: 8px 16px; border-radius: 100px; font-weight: 800; font-size: 22px; letter-spacing: 1px; text-transform: uppercase;">POWER BI</span>
+               <img src="./copy.png" alt="Power BI Logo" style="height: 40px; width: auto; opacity: 1;">
             </div>
-        </section>
 
-        <!-- Social Proof Card -->
-        <div style="max-width: 1000px; margin: 0 auto; border: 1px solid #f1f5f9; border-radius: 40px; padding: 15px; box-shadow: 0 50px 100px -20px rgba(0,0,0,0.06);">
-            <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 30px; padding: 50px; text-align: left;">
-                <div class="row align-items-center" style="display: flex; flex-wrap: wrap; align-items: center;">
-                    <div class="col-lg-7" style="flex: 1; min-width: 300px; margin-bottom: 20px;">
-                        <div style="font-size: 11px; font-weight: 900; color: #10b981; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px;">Automated Decision</div>
-                        <h3 style="font-weight: 800; font-size: 32px; color: #0f172a; margin-bottom: 15px;">30-Day Restock Plan Ready</h3>
-                        <p style="color: #64748b; font-size: 16px; line-height: 1.6; margin: 0;">
-                            Niyu has audited your sales velocity. Based on lead times, we have pre-filled <b>4 Draft Purchase Orders</b> to prevent stockouts.
-                        </p>
-                    </div>
-                    <div class="col-lg-5" style="flex: 1; min-width: 250px; text-align: center;">
-                        <div style="display: inline-block; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 20px; padding: 25px; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
-                            <div style="font-size: 36px; font-weight: 900; color: #0ea572; line-height: 1;">1%</div>
-                            <div style="font-size: 10px; font-weight: 800; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; margin-top: 5px;">Stockout Risk</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 2. THE CHALLENGE SECTION -->
-    <div style="padding: 80px 20px; background-color: #ffffff;">
-        <div style="max-width: 1100px; margin: 0 auto;">
-            
-            <div style="margin-bottom: 60px;">
-                <span style="color: #940d0d; font-weight: 800; font-size: 13px; letter-spacing: 2px; text-transform: uppercase;">The Challenge</span>
-                <h2 style="font-size: clamp(2.5rem, 5vw, 3.5rem); font-weight: 800; color: #0f172a; margin-top: 15px; letter-spacing: -0.04em; line-height: 1.1;">
-                    Where your warehouse <br> <span style="color: #94a3b8;">loses its edge.</span>
-                </h2>
-            </div>
-    
-            <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-                <!-- Card 1 -->
-                <div style="flex: 1; min-width: 300px; padding: 40px; background-color: #fcfcfd; border: 1px solid #f1f5f9; border-radius: 32px;">
-                    <div style="font-size: 32px; margin-bottom: 25px;">&#128230;</div>
-                    <h4 style="font-weight: 800; color: #0f172a; font-size: 20px; margin-bottom: 15px;">Revenue Leakage</h4>
-                    <p style="color: #64748b; font-size: 15px; line-height: 1.6; margin: 0;">
-                        A stockout on a best-seller isn't just a lost sale—it’s a customer gift to your competitor. Manual guessing means you're always one surge away from an empty shelf.
-                    </p>
-                </div>
-                <!-- Card 2 -->
-                <div style="flex: 1; min-width: 300px; padding: 40px; background-color: #fcfcfd; border: 1px solid #f1f5f9; border-radius: 32px;">
-                    <div style="font-size: 32px; margin-bottom: 25px;">&#129482;</div>
-                    <h4 style="font-weight: 800; color: #0f172a; font-size: 20px; margin-bottom: 15px;">Frozen Capital</h4>
-                    <p style="color: #64748b; font-size: 15px; line-height: 1.6; margin: 0;">
-                        Dead stock is money rotting on shelves. Without neural velocity analysis, companies over-order slow-movers, trapping cash.
-                    </p>
-                </div>
-                <!-- Card 3 -->
-                <div style="flex: 1; min-width: 300px; padding: 40px; background-color: #fcfcfd; border: 1px solid #f1f5f9; border-radius: 32px;">
-                    <div style="font-size: 32px; margin-bottom: 25px;">&#8987;</div>
-                    <h4 style="font-weight: 800; color: #0f172a; font-size: 20px; margin-bottom: 15px;">The Admin Wall</h4>
-                    <p style="color: #64748b; font-size: 15px; line-height: 1.6; margin: 0;">
-                        Managing 1,000+ reordering rules manually is impossible. Purchasing teams spend 80% of their time in Excel.
-                    </p>
-                </div>
-            </div>
-    
-            <!-- Quote Strip -->
-            <div style="margin-top: 60px; padding: 30px; background: linear-gradient(90deg, #f0fdf4 0%, #ffffff 100%); border-radius: 20px; border-left: 4px solid #10b981;">
-                <p style="margin: 0; color: #166534; font-weight: 600; font-size: 16px;">
-                    "We don't need more reordering rules. We need a system that knows what to buy before we do."
-                </p>
-            </div>
-        </div>
-    </div>
-
-
-   <!-- NIYU AI - THE CINEMATIC FULL-WIDTH FLOW -->
-<div style="font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif; background-color: #020617; color: #ffffff; margin: 0; padding: 0; overflow-x: hidden;">
-
-    <!-- ============================================== -->
-    <!-- STEP 01: THE AWAKENING (RED) -->
-    <!-- ============================================== -->
-    <div style="padding: 120px 0; position: relative; background: radial-gradient(circle at 50% 0%, rgba(239, 68, 68, 0.15) 0%, transparent 70%);">
-        
-        <div style="max-width: 1100px; margin: 0 auto; text-align: center; padding: 0 20px;">
-            <div style="display: inline-block; padding: 8px 16px; border-radius: 100px; background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.2); color: #f87171; font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 30px;">
-            Configuration Phase
-            </div>
-            
-            <h2 style="font-size: clamp(3rem, 8vw, 6rem); color: aliceblue; font-weight: 800; line-height: 0.9; letter-spacing: -4px; margin-bottom: 30px;">
-            Is your warehouse <br>
-            <span style="background: linear-gradient(135deg, #ffffff 30%, #f87171 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">bleeding cash?</span>
-            </h2>
-            
-            <p style="font-size: 20px; color: #94a3b8; max-width: 700px; margin: 0 auto 80px auto; line-height: 1.6; font-weight: 300;">
-            Stop playing guessing games with your capital. It takes <b style="color: #fff;">just 30 seconds</b> to plug the leak. Paste your Key and let the Neural Brain audit your history for optimal performance.
-            </p>
-            <p style="font-size: 16px; color: #64748b; line-height: 1.5;">
-            Navigate to settings in your inventory, scroll down to locate the Niyu configuration key, add the API Key, run the initial sync, and then head to the inventory module to see Niyu seamlessly integrated near products at the top.
-            </p>
-        </div>
-
-        <!-- FULL SIZE IMAGE -->
-        <div style="max-width: 1400px; margin: 0 auto; padding: 0 20px;">
-            <div style="background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 32px; padding: 12px; box-shadow: 0 50px 100px -20px rgba(0,0,0,0.7);">
-                <div style="background: #0f172a; padding: 15px 25px; border-radius: 20px 20px 0 0; display: flex; align-items: center; gap: 8px; border-bottom: 1px solid rgba(255,255,255,0.05);">
-                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #ff5f57;"></div>
-                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #febc2e;"></div>
-                    <div style="width: 12px; height: 12px; border-radius: 50%; background: #28c840;"></div>
-                </div>
-                <img src="./set.png" alt="Full Size Config" style="width: 100%; height: auto; display: block; border-radius: 0 0 20px 20px;">
-            </div>
-        </div>
-    </div>
-
-
-    <!-- ============================================== -->
-    <!-- STEP 02: THE REVELATION (WHITE) -->
-    <!-- ============================================== -->
-    <div style="background-color: #ffffff; padding: 140px 0; color: #0f172a;  position: relative; z-index: 2;">
-        
-        <div style="max-width: 1100px; margin: 0 auto; text-align: center; padding: 0 20px;">
-            <div style="font-size: 100px; font-weight: 900; color: #f1f5f9; line-height: 1; margin-bottom: -40px;">02</div>
-            <div style="display: inline-block; padding: 6px 14px; border-radius: 100px; background: #f0f9ff; border: 1px solid #e0f2fe; color: #0ea5e9; font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 25px;">
-            Visual Clarity
-            </div>
-            
-            <h2 style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; line-height: 1; letter-spacing: -3px; margin-bottom: 30px;">
-            The Stock-Out <br><span style="color: #0ea5e9;">Nightmare Ends.</span>
-            </h2>
-            
-            <p style="font-size: 20px; color: #475569; max-width: 750px; margin: 0 auto 80px auto; line-height: 1.7; font-weight: 500;">
-            Niyu seamlessly integrates the Neural Command Center into your Inventory, empowering you to anticipate stock issues before they arise. Click <b style="color: #10b981;">"Review"</b> to unveil the analytics. Access the Niyu AI in your inventory to explore products at risk of stockout in 3, 5, or more days, complete with predicted quantities to ensure you're always prepared.
-            </p>
-        </div>
-
-        <!-- FULL SIZE IMAGE -->
-        <div style="max-width: 1400px; margin: 0 auto; padding: 0 20px;">
-            <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 32px; padding: 15px; box-shadow: 0 60px 100px -20px rgba(14, 165, 233, 0.2);">
-                <img src="./in.png" alt="Full Size UI" style="width: 100%; height: auto; display: block; border-radius: 20px;">
-            </div>
-        </div>
-    </div>
-
-
-    <!-- ============================================== -->
-    <!-- STEP 03: THE EXECUTION (SLATE) -->
-    <!-- ============================================== -->
-    <div style="background-color: #f8fafc; padding: 140px 0; color: #0f172a;">
-        
-        <div style="max-width: 1100px; margin: 0 auto; text-align: center; padding: 0 20px;">
-            <div style="font-size: 100px; font-weight: 900; color: #edf2f7; line-height: 1; margin-bottom: -40px;">03</div>
-            <div style="display: inline-block; padding: 6px 14px; border-radius: 100px; background: #fff1f2; border: 1px solid #ffe4e6; color: #e11d48; font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 25px;">
-            Rapid Execution
-            </div>
-            
-            <h2 style="font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 800; line-height: 1; letter-spacing: -3px; margin-bottom: 30px;">
-            Manual RFQs <br><span style="text-decoration: line-through; color: #94a3b8; opacity: 0.5;">No Need.</span>
-            </h2>
-            
-            <p style="font-size: 20px; color: #475569; max-width: 750px; margin: 0 auto 80px auto; line-height: 1.7;">
-            With a single click on the <b>Cart Icon</b>, you unleash the power of advanced analytics, transforming an hour's worth of calculations into mere seconds. Effortlessly scan health tags like <span style="background:#dcfce7; color:#166534; font-size:12px; font-weight:800; padding:4px 10px; border-radius:6px; margin: 0 4px;">HEALTHY</span> ,<span style="background:#fef9c3; color:#854d0e; font-size:12px; font-weight:800; padding:4px 10px; border-radius:6px; margin: 0 4px;">OVERSTOCK</span>or<span style="background:#fef9c3; color:#851c0e; font-size:12px; font-weight:800; padding:4px 10px; border-radius:6px; margin: 0 4px;">STOCKOUT</span>. Navigate the inventory list at the command center to instantly identify products that are thriving, overstocked, or at risk of stockout.
-            </p>
-        </div>
-
-        <!-- FULL SIZE IMAGE -->
-        <div style="max-width: 1400px; margin: 0 auto; padding: 0 20px; position: relative;">
-            <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 32px; padding: 15px; box-shadow: 0 40px 80px rgba(0,0,0,0.08);">
-                <img src="./inventory.png" alt="Full Size Inventory" style="width: 100%; height: auto; display: block; border-radius: 20px;">
-            </div>
-            
-            <!-- Sexy Action Trigger Overlay -->
-            <div style="position: absolute; bottom: 40px; right: 60px; width: 100px; height: 100px; background: #ef4444; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 40px; box-shadow: 0 20px 40px rgba(239, 68, 68, 0.4); border: 8px solid #ffffff;">
-                🛒
-            </div>
-        </div>
-    </div>
-
-
-    <!-- ============================================== -->
-    <!-- STEP 04: THE FREEDOM (GREEN) -->
-    <!-- ============================================== -->
-    <div style="background-color: #022c22; padding: 160px 0; text-align: center; position: relative; overflow: hidden;">
-        
-       
-
-        <div style="max-width: 1100px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 2;">
-            <div style="display: inline-block; padding: 8px 20px; border-radius: 100px; background: rgba(45, 212, 191, 0.1); border: 1px solid rgba(45, 212, 191, 0.2); color: #2dd4bf; font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 35px;">
-                Procurement Nirvana
-            </div>
-            
-            <h2 style="font-size: clamp(3rem, 8vw, 6rem); font-weight: 800; line-height: 0.9; letter-spacing: -4px; color: #ffffff; margin-bottom: 40px;">
-                Your Mondays <br>
-                <span style="color: #2dd4bf;">just got free.</span>
-            </h2>
-            <p style="font-size: 24px; color: #a7f3d0; max-width: 650px; margin: 0 auto 100px auto; line-height: 1.6; font-weight: 300; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);">
-                <strong style="font-weight: 600; text-transform: uppercase;">Review your AI-generated Draft RFQ's</strong>, grouped by vendor. Each product in your inventory list has its own <span style="color: #10b981; font-weight: 700;">cart icon</span>. Click that icon, and it will automatically generate the RFQ for you, allowing you to focus on <span style="font-style: italic;">growing your business</span>.
+            <h3 style="margin: 0 0 16px 0; font-size: 2rem; font-weight: 800; color: #222; letter-spacing: -0.5px; line-height: 1.2;">Production-Ready Models</h3>
+            <p style="color: #666; font-size: 1.1rem; line-height: 1.7; margin-bottom: 30px;">
+              The definitive path for building scalable, high-performance BI on an Odoo + BigQuery stack.
             </p>
 
-           
-            <!-- FULL SIZE FINAL IMAGE -->
-            <div style="position: relative; display: block; max-width: 1200px; margin: 0 auto;">
-                <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 40px; padding: 15px; box-shadow: 0 80px 150px -30px rgba(0,0,0,0.8);">
-                    <img src="./rfq.png" alt="Full Size RFQ" style="width: 100%; height: auto; display: block; border-radius: 25px;">
-                </div>
+            <!-- Bottom Highlight Box -->
+            <div style="background: #fafbfc; border: 1px solid #eef0f2; padding: 25px; border-radius: 16px; border-left: 5px solid #40a0ff;">
+              <h5 style="color: #0078d4; font-weight: 800; font-size: 0.95rem; margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 0.5px;">Optimized for Scale</h5>
+              <p style="font-size: 0.95rem; color: #555; margin: 0 0 16px 0; line-height: 1.5;">Leverage Incremental Refresh and DAX Measures.</p>
+              <a href="#" style="color: #0078d4; font-weight: 800; text-decoration: none; font-size: 0.95rem; border-bottom: 2px solid rgba(64, 160, 255, 0.3);">Read Guide &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2: LOOKER STUDIO -->
+        <div style="flex: 1 1 320px; max-width: 380px; margin: 15px; background: #ffffff; border: 1px solid rgba(0,0,0,0.06); border-radius: 24px; overflow: hidden; box-shadow: 0 20px 50px -10px rgba(0,0,0,0.1); transition: transform 0.3s ease; position: relative;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+          <!-- Top Media Area -->
+          <div style="background-color: #f0fdf9; padding: 40px; display: flex; align-items: center; justify-content: center; height: 240px; border-bottom: 1px solid #ecfbf7;">
+             <img src="./lookerconnection.png" alt="Looker Studio" style="max-width: 100%; max-height: 100%; box-shadow: 0 15px 35px rgba(32, 201, 151, 0.2); border-radius: 12px; transform: scale(1.05);">
+          </div>
+          
+          <!-- Content Area -->
+          <div style="padding: 35px;">
+            <!-- Badge & Logo Row -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
+               <span style="background: rgba(32, 201, 151, 0.1); color: #0ca678; padding: 8px 16px; border-radius: 100px; font-weight: 800; font-size: 22px; letter-spacing: 1px; text-transform: uppercase;">LOOKER STUDIO</span>
+               <img src="./2.png" alt="Looker Studio Logo" style="height: 50px; width: auto; opacity: 1;">
+            </div>
+
+            <h3 style="margin: 0 0 16px 0; font-size: 2rem; font-weight: 800; color: #222; letter-spacing: -0.5px; line-height: 1.2;">High Velocity Insights</h3>
+            <p style="color: #666; font-size: 1.1rem; line-height: 1.7; margin-bottom: 30px;">
+              Create beautiful, shareable dashboards that are fast, intuitive, and accessible to your entire team.
+            </p>
+
+            <!-- Bottom Highlight Box -->
+            <div style="background: #fafbfc; border: 1px solid #eef0f2; padding: 25px; border-radius: 16px; border-left: 5px solid #20c997;">
+              <h5 style="color: #0ca678; font-weight: 800; font-size: 0.95rem; margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 0.5px;">Optimized for Speed</h5>
+              <p style="font-size: 0.95rem; color: #555; margin: 0 0 16px 0; line-height: 1.5;">Utilize Data Extracts for instant load times.</p>
+              <a href="#" style="color: #0ca678; font-weight: 800; text-decoration: none; font-size: 0.95rem; border-bottom: 2px solid rgba(32, 201, 151, 0.3);">Read Guide &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3: TABLEAU -->
+        <div style="flex: 1 1 320px; max-width: 380px; margin: 15px; background: #ffffff; border: 1px solid rgba(0,0,0,0.06); border-radius: 24px; overflow: hidden; box-shadow: 0 20px 50px -10px rgba(0,0,0,0.1); transition: transform 0.3s ease; position: relative;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+          <!-- Top Media Area -->
+          <div style="background-color: #fffdec; padding: 40px; display: flex; align-items: center; justify-content: center; height: 240px; border-bottom: 1px solid #fef9e0;">
+             <img src="./tableauconnection.png" alt="Tableau" style="max-width: 100%; max-height: 100%; box-shadow: 0 15px 35px rgba(230, 180, 0, 0.2); border-radius: 12px; transform: scale(1.05);">
+          </div>
+          
+          <!-- Content Area -->
+          <div style="padding: 35px;">
+            <!-- Badge & Logo Row -->
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px;">
+               <span style="background: rgba(255, 215, 0, 0.15); color: #b08d00; padding: 8px 16px; border-radius: 100px; font-weight: 800; font-size: 22px; letter-spacing: 1px; text-transform: uppercase;">TABLEAU</span>
+               <img src="./hd.png" alt="Tableau Logo" style="height: 50px; width: auto; opacity: 1;">
+            </div>
+
+            <h3 style="margin: 0 0 16px 0; font-size: 2rem; font-weight: 800; color: #222; letter-spacing: -0.5px; line-height: 1.2;">Deep Dive Analytics</h3>
+            <p style="color: #666; font-size: 1.1rem; line-height: 1.7; margin-bottom: 30px;">
+              Connect a powerful analytics engine to your BigQuery data for unparalleled exploration.
+            </p>
+
+            <!-- Bottom Highlight Box -->
+            <div style="background: #fafbfc; border: 1px solid #eef0f2; padding: 25px; border-radius: 16px; border-left: 5px solid #ffd700;">
+              <h5 style="color: #b08d00; font-weight: 800; font-size: 0.95rem; margin: 0 0 8px 0; text-transform: uppercase; letter-spacing: 0.5px;">Optimized for Exploration</h5>
+              <p style="font-size: 0.95rem; color: #555; margin: 0 0 16px 0; line-height: 1.5;">Leverage complex joins and Live Connections.</p>
+              <a href="#" style="color: #b08d00; font-weight: 800; text-decoration: none; font-size: 0.95rem; border-bottom: 2px solid rgba(255, 215, 0, 0.4);">Read Guide &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</section>
+
+
+  <!-- KEY FEATURES SECTION -->
+  <section style="padding: 100px 0; background-color: #ffffff; border-top: 1px solid #e5e8ed; overflow: hidden;">
+    <div class="container" style="max-width: 1200px; padding: 0 20px;">
+      
+      <!-- HEADER -->
+      <div class="row justify-content-center">
+        <div class="col-12 text-center" style="margin-bottom: 80px;">
+          <span style="display:inline-block; font-size: 13px; font-weight: 800; color: #40a0ff; background-color: rgba(64, 160, 255, 0.1); border: 1px solid rgba(64, 160, 255, 0.3); border-radius: 50px; padding: 8px 16px; margin-bottom: 20px; letter-spacing: 0.5px;">POWERFUL FEATURES</span>
+          <h2 style="font-size: 42px; font-weight: 900; margin: 0 0 16px 0; color: #333333; letter-spacing: -1px;">Unmatched Control Over Your Data</h2>
+          <p style="font-size: 18px; color: #555555; max-width: 700px; margin: 0 auto; line-height: 1.6;">
+            Go beyond simple data dumps. Build an efficient, automated pipeline tailored precisely to your business needs.
+          </p>
+        </div>
+      </div>
+
+      <!-- FEATURE 1: PRECISE FILTERING (Image Right) -->
+      <div class="row align-items-center" style="margin-bottom: 100px;">
+        <!-- Text Column -->
+        <div class="col-lg-5 order-2 order-lg-1">
+          <div style="padding-right: 20px;">
+            <div style="font-size: 3rem; margin-bottom: 20px;">&#128279;</div>
+            <h3 style="font-size: 28px; font-weight: 800; color: #333; margin-bottom: 15px;">Precise Record Filtering</h3>
+            <p style="font-size: 17px; color: #666; line-height: 1.7; margin-bottom: 0;">
+              Gain granular control by using standard Odoo domain filters. Sync only <strong>active customers</strong>, completed orders, or specific product lines. Keep your BigQuery dataset lean, relevant, and optimized for analysis.
+            </p>
+          </div>
+        </div>
+        <!-- Image Column -->
+        <div class="col-lg-7 order-1 order-lg-2 mb-4 mb-lg-0">
+          <div style="box-shadow: 0 20px 60px -10px rgba(0,0,0,0.12); border-radius: 16px; border: 1px solid #e5e8ed; overflow: hidden;">
+            <img src="./do.png" alt="Odoo Domain Filtering Screenshot" style="width: 100%; display: block;">
+            <div style="background: #f9fafb; padding: 10px; text-align: center; border-top: 1px solid #e5e8ed;">
+                <small style="color: #888; font-weight: 600;">Fig 1: Domain-based Record Filtering</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FEATURE 2: COLUMN SELECTION (Image Left) -->
+      <div class="row align-items-center" style="margin-bottom: 100px;">
+        <!-- Image Column -->
+        <div class="col-lg-7 mb-4 mb-lg-0">
+          <div style="box-shadow: 0 20px 60px -10px rgba(0,0,0,0.12); border-radius: 16px; border: 1px solid #e5e8ed; overflow: hidden;">
+            <img src="./co.png" alt="Column Selection Screenshot" style="width: 100%; display: block;">
+            <div style="background: #f9fafb; padding: 10px; text-align: center; border-top: 1px solid #e5e8ed;">
+                <small style="color: #888; font-weight: 600;">Fig 2: Targeted Field Mapping</small>
+            </div>
+          </div>
+        </div>
+        <!-- Text Column -->
+        <div class="col-lg-5">
+          <div style="padding-left: 20px;">
+            <div style="font-size: 3rem; margin-bottom: 20px;">&#128200;</div>
+            <h3 style="font-size: 28px; font-weight: 800; color: #333; margin-bottom: 15px;">Targeted Column Selection</h3>
+            <p style="font-size: 17px; color: #666; line-height: 1.7; margin-bottom: 0;">
+              Why export everything? Choose exactly which fields to send to BigQuery. This accelerates export times, simplifies your data models, and reduces cloud storage costs while ensuring <strong>data privacy by design</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FEATURE 3: INCREMENTAL EXPORT (Image Right) -->
+      <div class="row align-items-center" style="margin-bottom: 80px;">
+        <!-- Text Column -->
+        <div class="col-lg-5 order-2 order-lg-1">
+          <div style="padding-right: 20px;">
+            <div style="font-size: 3rem; margin-bottom: 20px;">&#9203;</div>
+            <h3 style="font-size: 28px; font-weight: 800; color: #333; margin-bottom: 15px;">Incremental & Automated</h3>
+            <p style="font-size: 17px; color: #666; line-height: 1.7; margin-bottom: 0;">
+              Set it and forget it! Sync only <strong>new or changed records</strong> since the last run. This intelligent incremental loading keeps your BI dashboards updated in near real-time without costly full-table reloads.
+            </p>
+          </div>
+        </div>
+        <!-- Image Column -->
+        <div class="col-lg-7 order-1 order-lg-2 mb-4 mb-lg-0">
+          <div style="box-shadow: 0 20px 60px -10px rgba(0,0,0,0.12); border-radius: 16px; border: 1px solid #e5e8ed; overflow: hidden;">
+            <img src="./in.png" alt="Incremental Export Log Screenshot" style="width: 100%; display: block;">
+            <div style="background: #f9fafb; padding: 10px; text-align: center; border-top: 1px solid #e5e8ed;">
+                <small style="color: #888; font-weight: 600;">Fig 3: Incremental Sync Logs</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FULL WIDTH BOTTOM IMAGE -->
+      <div class="row mt-5">
+        <div class="col-12">
+          <div style="position: relative; border-radius: 24px; overflow: hidden; box-shadow: 0 50px 100px -20px rgba(64, 160, 255, 0.25); border: 1px solid #e5e8ed;">
+             <img src="./fullbig.png" alt="Full Configuration Overview" style="width: 100%; display: block;">
+          </div>
+        </div>
+      </div>
+
+    </div>
+</section>
+
+
+
+  <!-- SCHEMA HANDLING SECTION (Maximized Image and Restructured Content) -->
+<section class="parallax-bg" style="padding: 120px 0; background-color:#f7f9fc; border-top:1px solid #e5e8ed;">
+    <div class="container" style="padding:0 15px;">
+      
+      <!-- TOP ROW: HEADER AND MAXIMIZED IMAGE -->
+      <div class="row align-items-center g-5">
+        
+        <!-- Text Column (Now col-lg-4 - very tight text) -->
+        <div class="col-12 col-lg-4">
+          <span style="display:inline-block; font-size:14px; font-weight:800; color:#78dcc0; background-color:#78dcc026; border:1px solid #78dcc066; border-radius:999px; padding:8px 16px; margin-bottom:10px;">SMART DATA MAPPING</span>
+          <h2 style="font-size: clamp(2.4rem, 5vw, 3.2rem); font-weight:900; margin:0 0 20px 0; color:#40a0ff; text-shadow: 0 0 10px rgba(64, 160, 255, 0.1);">Intelligent Schema Handling for BigQuery</h2>
+          <p style="font-size:1.25rem; color:#555555; margin-bottom:0; font-weight: 500;">Our connector intelligently translates complex Odoo field types into clean, BigQuery-compatible columns, saving you countless hours of manual data wrangling and ensuring **data integrity** from source to insight.</p>
+        </div>
+        
+        <!-- Image Column (Now col-lg-8 - maximized image space) -->
+        <div class="col-12 col-lg-8">
+          <img src="./schema.png" alt="Schema handling example" style="width: 100%; border-radius: 20px; display: block; box-shadow: 0 50px 120px -30px rgba(0,0,0,0.4), 0 0 0 2px #d0d0d0; transition: all 0.5s ease;"
+               onmouseover="this.style.transform='scale(1.02)'; this.style.boxShadow='0 60px 140px -30px rgba(0,0,0,0.6)'; this.style.borderColor='#40a0ff';" 
+               onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 50px 120px -30px rgba(0,0,0,0.4), 0 0 0 2px #d0d0d0'; this.style.borderColor='#d0d0d0';">
+        </div>
+      </div>
+
+      <!-- BOTTOM ROW: DETAILED FEATURES AS FLOATING CARDS -->
+      <div class="row g-4" style="margin-top: 80px;">
+        <div class="col-12">
+            <h3 style="text-align: center; font-size: 24px; font-weight: 800; color: #333333; margin-bottom: 30px; border-bottom: 2px solid #e5e8ed; padding-bottom: 15px; display: inline-block; width: 100%;">Field Type Translation Details</h3>
+        </div>
+        
+        <!-- Feature 1: Many2one -->
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="feature-box" style="border-radius:20px; padding:25px; height:100%; border:1px solid rgba(64, 160, 255, 0.5); box-shadow: 0 10px 20px -10px rgba(64, 160, 255, 0.2);">
+                <div style="font-size:1.5rem; color:#40a0ff; margin-bottom:10px; font-weight:900;">Many2one Fields</div>
+                <p style="margin:0; color:#555555; font-size:15px;">Automatically exports both the related record's `ID` (e.g., `partner_id`) and its human-readable `Name` (e.g., `partner_name`) for easy joining and reporting.</p>
+            </div>
+        </div>
+        
+        <!-- Feature 2: Selection Fields -->
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="feature-box" style="border-radius:20px; padding:25px; height:100%; border:1px solid rgba(120, 220, 200, 0.5); box-shadow: 0 10px 20px -10px rgba(120, 220, 200, 0.2);">
+                <div style="font-size:1.5rem; color:#78dcc0; margin-bottom:10px; font-weight:900;">Selection Fields</div>
+                <p style="margin:0; color:#555555; font-size:15px;">Converts internal Odoo keys (e.g., `'draft'`) to their user-friendly labels (e.g., `'Draft'`), making your BigQuery data instantly understandable for business users.</p>
+            </div>
+        </div>
+        
+        <!-- Feature 3: Date & Datetime -->
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="feature-box" style="border-radius:20px; padding:25px; height:100%; border:1px solid rgba(255, 223, 0, 0.5); box-shadow: 0 10px 20px -10px rgba(255, 223, 0, 0.2);">
+                <div style="font-size:1.5rem; color:#ffd700; margin-bottom:10px; font-weight:900;">Date & Datetime</div>
+                <p style="margin:0; color:#555555; font-size:15px;">Ensures all date and datetime fields are correctly formatted to ISO 8601 standards, enabling seamless time-series analysis and filtering in your BI tools.</p>
+            </div>
+        </div>
+
+        <!-- Feature 4: Numeric & Boolean -->
+        <div class="col-12 col-md-6 col-lg-3">
+            <div class="feature-box" style="border-radius:20px; padding:25px; height:100%; border:1px solid rgba(64, 160, 255, 0.5); box-shadow: 0 10px 20px -10px rgba(64, 160, 255, 0.2);">
+                <div style="font-size:1.5rem; color:#40a0ff; margin-bottom:10px; font-weight:900;">Numeric & Boolean</div>
+                <p style="margin:0; color:#555555; font-size:15px;">Automatically maps Odoo numeric types to BigQuery `INTEGER`/`FLOAT` and boolean fields to `BOOL`, preserving data accuracy and integrity.</p>
+            </div>
+        </div>
+        
+      </div>
+
+    </div>
+</section>
+
+  <!-- SECURITY SECTION - Darker, more serious feel -->
+  <section class="parallax-bg" style="
+      background-color: #212529; /* Dark background */
+      padding: 140px 0;
+      overflow: hidden;
+      position: relative;
+      border-top: 1px solid #e5e8ed;
+      /* Enhanced background visual - glowing blue security feel */
+      background-image:
+          radial-gradient(circle at 10% 90%, rgba(64, 160, 255, 0.15), transparent 30%),
+          radial-gradient(circle at 90% 10%, rgba(64, 160, 255, 0.15), transparent 30%);
+  ">
+    <div class="container" style="padding: 0 15px;">
+      <div class="row mb-5">
+        <div class="col-12 text-center">
+          <span style="
+                      display: inline-block;
+                      font-size: 14px;
+                      font-weight: 800;
+                      color: #ffffff;
+                      background-color: #40a0ff;
+                      border: 2px solid #78ceed;
+                      border-radius: 999px;
+                      padding: 10px 20px;
+                      margin-bottom: 20px;
+                      box-shadow: 0 8px 20px rgba(64, 160, 255, 0.5);
+                  ">ENTERPRISE-GRADE SECURITY & CONTROL</span>
+          <h2 style="
+                      font-size: clamp(3.5rem, 6vw, 4.5rem); 
+                      font-weight: 900;
+                      margin: 0 0 20px 0;
+                      color: #ffffff; /* White text on dark BG */
+                      text-shadow: 0 0 20px rgba(64, 160, 255, 0.4);
+                  ">Your Data, Your Control. Absolutely Secure.</h2>
+          <p style="font-size: 1.25rem; color: #cccccc; max-width: 900px; margin: 0 auto; line-height: 1.6;">
+            Security is the foundational pillar of our connector. Your sensitive Odoo data flows **directly and securely** from your Odoo instance to *your own* Google Cloud project using a dedicated Service Account. This means no middlemen, no third-party servers, and complete ownership and auditability of your data's journey.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12">
+          <img src="./security.png" alt="Security configuration in Odoo" style="width: 100%; border-radius: 20px; display: block; box-shadow: 0 50px 120px -30px rgba(0,0,0,0.6), 0 0 0 2px rgba(64, 160, 255, 0.3);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+ 
+  <!-- SETUP & CONFIGURATION -->
+  <section style="padding:100px 0; background-color:#f7f9fc; border-top:1px solid #e5e8ed;">
+    <div class="container" style="padding:0 15px;">
+      <div class="row">
+        <div class="col-12 text-center">
+          <span style="display:inline-block; font-size:14px; font-weight:800; color:#ffd700; background-color:#ffd70026; border:1px solid #ffd70066; border-radius:999px; padding:8px 16px; margin-bottom:10px;">SEAMLESS DEPLOYMENT</span>
+          <h2 style="font-size:42px; font-weight:900; margin:0 0 14px 0; color:#333333;">Installation & Effortless Configuration</h2>
+          <p style="font-size:18px; color:#555555; max-width:860px; margin:0 auto 40px;">From initial installation to your first successful data sync, get up and running in just a few straightforward steps, designed for both technical and business users.</p>
+        </div>
+      </div>
+      <div class="row g-4">
+        <div class="col-12 col-lg-7">
+          <div style="background-color:#ffffff; border:1px solid #e5e8ed; border-radius:20px; padding:35px; height:100%; box-shadow: 0 20px 50px -15px rgba(0,0,0,0.15);">
+            <h5 style="margin:0 0 20px; color:#333333; font-size:24px; font-weight:900; border-bottom: 3px solid #40a0ff; display: inline-block; padding-bottom: 5px;">Quick Start Guide:</h5>
+            <ol style="margin:0; padding-left:22px; color:#333333; font-size:18px;">
+              <li style="margin-bottom:15px;"><strong>Acquire the Module:</strong> Purchase and download the "Odoo to BigQuery Connector" from the Odoo App Store.</li>
+              <li style="margin-bottom:15px;"><strong>Install in Odoo:</strong> Add the module to your custom addons directory and install it via Odoo's Apps menu (or deploy via Odoo.sh/your hosting provider).</li>
+              <li style="margin-bottom:15px;"><strong>Google Cloud Setup:</strong> In your Google Cloud Platform project, create a dedicated <strong>Service Account</strong> and grant it "BigQuery Data Editor" and "BigQuery Job User" roles for necessary permissions.</li>
+              <li style="margin-bottom:15px;"><strong>Secure Key Upload:</strong> Navigate to <em>Settings → BigQuery Connector</em> in Odoo and securely upload the JSON key file generated for your Google Cloud Service Account.</li>
+              <li style="margin-bottom:0px;"><strong>Configure Your First Export:</strong> Create a new export profile, select your desired Odoo model (e.g., `Sales Order`), choose the specific columns you need, set up any required filters, and **initiate your first automated data sync!**</li>
+            </ol>
+          </div>
+        </div>
+        <div class="col-12 col-lg-5">
+          <div style="background-color:#fefefe; border:1px solid #e5e8ed; border-radius:20px; padding:35px; height:100%; box-shadow: 0 20px 50px -15px rgba(0,0,0,0.15);">
+            <h5 style="margin:0 0 20px; color:#333333; font-size:24px; font-weight:900; border-bottom: 3px solid #78dcc0; display: inline-block; padding-bottom: 5px;">Compatibility & Core Requirements</h5>
+            <ul style="margin:0; padding-left:18px; color:#555555; font-size:18px;">
+              <li style="margin-bottom:12px;"><strong>Odoo Version:</strong> Compatible with Odoo 14, 15, 16, and newer versions.</li>
+              <li style="margin-bottom:12px;"><strong>Google Cloud:</strong> An active Google Cloud Platform Account with BigQuery API enabled.</li>
+              <li style="margin-bottom:12px;"><strong>Connectivity:</strong> Reliable internet access from your Odoo server for API calls to Google Cloud.</li>
+              <li style="margin-bottom:12px;"><strong>Deployment:</strong> Fully functional with both On-premise Odoo installations and Odoo Cloud hosting environments.</li>
+              <li style="margin-bottom:0px;"><strong>Security Best Practice:</strong> We recommend using a dedicated Service Account with least-privilege permissions.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="parallax-bg" style="padding: 120px 20px; background-color: #ffffff; border-top: 1px solid #e5e8ed;">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 80px;">
+        <span style="display: inline-block; background-color: rgba(64, 160, 255, 0.15); color: #40a0ff; padding: 8px 16px; border-radius: 99px; font-weight: 600; margin-bottom: 24px; border: 1px solid rgba(64, 160, 255, 0.4);">FAQ</span>
+        <h2 style="font-size: clamp(2.8rem, 5vw, 3.8rem); line-height: 1.2; font-weight: 700; letter-spacing: -0.03em; margin: 0; color: #40a0ff;">Frequently Asked Questions</h2>
+        <p style="font-size: 1.2rem; color: #777777; margin-top: 20px;">Find quick answers to common questions about our Odoo to BigQuery Connector.</p>
+      </div>
+      <div style="border-top: 2px solid #e5e8ed;">
+        <div style="padding: 35px 0; border-bottom: 1px solid #d0d0d0; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#f7f9fc';" onmouseout="this.style.backgroundColor='transparent';">
+          <h4 style="font-size: 1.35rem; font-weight: 700; margin: 0 0 12px 0; color: #333333;">What do I need to use this module?</h4>
+          <p style="color: #555555; margin: 0; font-size: 1.1rem;">You will need an active Odoo instance (v14 or later), a Google Cloud account with BigQuery enabled, and a Service Account from that project with "BigQuery Data Editor" and "BigQuery Job User" permissions. This ensures secure and authenticated access to your BigQuery datasets.</p>
+        </div>
+        <div style="padding: 35px 0; border-bottom: 1px solid #d0d0d0; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#f7f9fc';" onmouseout="this.style.backgroundColor='transparent';">
+          <h4 style="font-size: 1.35rem; font-weight: 700; margin: 0 0 12px 0; color: #333333;">How is my data kept secure during transfer?</h4>
+          <p style="color: #555555; margin: 0; font-size: 1.1rem;">Data security is paramount. The connector establishes a direct, encrypted connection (via HTTPS) between your Odoo server and Google's BigQuery API. Your data is never routed through or stored on any third-party servers. Access is controlled entirely by the Google Cloud Service Account key that you securely provide and manage within your Odoo instance.</p>
+        </div>
+        <div style="padding: 35px 0; border-bottom: 1px solid #d0d0d0; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#f7f9fc';" onmouseout="this.style.backgroundColor='transparent';">
+          <h4 style="font-size: 1.35rem; font-weight: 700; margin: 0 0 12px 0; color: #333333;">Does it work with my custom Odoo modules and fields?</h4>
+          <p style="color: #555555; margin: 0; font-size: 1.1rem;">Absolutely. The connector is designed to dynamically read your entire Odoo database schema. This includes any custom modules you have installed, custom fields you have added to standard models, and completely new custom models. You can easily select these custom fields and models for export just like standard Odoo fields.</p>
+        </div>
+        <div style="padding: 35px 0; border-bottom: 1px solid #d0d0d0; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#f7f9fc';" onmouseout="this.style.backgroundColor='transparent';">
+          <h4 style="font-size: 1.35rem; font-weight: 700; margin: 0 0 12px 0; color: #333333;">What are the costs involved in using this solution?</h4>
+          <p style="color: #555555; margin: 0; font-size: 1.1rem;">You purchase the "Odoo to BigQuery Connector" module license one-time from the Odoo App Store. There are no additional recurring subscription fees from us. The only ongoing operational costs are for your usage of Google BigQuery (for data storage, streaming inserts, and querying), which is billed directly by Google Cloud based on your consumption.</p>
+        </div>
+        <div style="padding: 35px 0; border-bottom: 1px solid #d0d0d0; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#f7f9fc';" onmouseout="this.style.backgroundColor='transparent';">
+          <h4 style="font-size: 1.35rem; font-weight: 700; margin: 0 0 12px 0; color: #333333;">Can I schedule automatic exports and incremental updates?</h4>
+          <p style="color: #555555; margin: 0; font-size: 1.1rem;">Yes, absolutely. The module fully leverages Odoo's powerful built-in automation server (Scheduled Actions). You can configure any data export profile to run on a schedule you define – whether that's hourly, daily, weekly, or monthly – enabling fully automated, incremental data synchronization to BigQuery without any manual intervention.</p>
+        </div>
+        <div style="padding: 35px 0; border-bottom: 1px solid #d0d0d0; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#f7f9fc';" onmouseout="this.style.backgroundColor='transparent';">
+          <h4 style="font-size: 1.35rem; font-weight: 700; margin: 0 0 12px 0; color: #333333;">Where can I find documentation or get support if I need help?</h4>
+          <p style="color: #555555; margin: 0; font-size: 1.1rem;">Detailed documentation, including step-by-step setup guides and best practices, is available on this product page and on our official website at <em>https://niyulabs.com</em>. For technical support, bug reports, or any questions, please do not hesitate to contact our dedicated support team directly at <em>info@niyulabs.com</em>. We're here to help!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA - Darker, more premium background and enhanced button -->
+  <section style="padding: 140px 20px; background-color: #212529;">
+    <div style="max-width: 1100px; margin: 0 auto; text-align: center; ">
+      <div style="background-color:rgba(255, 255, 255, 0.08); padding: 120px 50px; border-radius: 2.5rem; border: 1px solid rgba(255, 255, 255, 0.1); box-shadow: 0 60px 120px -30px rgba(0,0,0,0.8);">
+        <span style="display: inline-block; background-color: rgba(120, 220, 200, 0.3); color: #78dcc8; padding: 10px 25px; border-radius: 99px; font-weight: 700; margin-bottom: 25px; border: 1px solid rgba(120, 220, 200, 0.6);">READY TO UNLOCK YOUR DATA'S FULL POTENTIAL?</span>
+        <h2 style="font-size: clamp(3rem, 6vw, 5rem); line-height: 1.1; font-weight: 900; letter-spacing: -0.03em; margin-bottom: 25px; color:#ffffff; text-shadow: 0 0 20px rgba(255,255,255,0.3);">Transforming Odoo Data Integration Starts Here.</h2>
+        <p style="max-width: 800px; margin: 0 auto 60px; color: #e0e0e0; font-size: 1.3rem;">Stop struggling with manual data exports and start leveraging your Odoo data strategically. Empower your business analysts, build powerful, real-time dashboards, and accelerate data-driven business growth with our seamless, secure, and highly efficient data pipeline solution.</p>
+        <!-- =======================
+         NEW: AMAZING CONTACT CAPSULE
+         ======================== -->
+      <div style="text-align: center; margin-top: 70px;">
+        <a href="mailto:info@niyulabs.com" style="text-decoration: none; display: inline-block;">
+            <div style="
+                background-color: #f0f4f8;
+                border: 1px solid rgba(64, 160, 255, 0.2);
+                padding: 12px 30px;
+                border-radius: 50px;
+                box-shadow: 0 10px 30px -5px rgba(64, 160, 255, 0.15);
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+                position: relative;
+                overflow: hidden;
+            " onmouseover="this.style.transform='translateY(-5px) scale(1.02)'; this.style.boxShadow='0 20px 40px -5px rgba(64, 160, 255, 0.25)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 10px 30px -5px rgba(64, 160, 255, 0.15)';">
                 
-                <!-- Success Tag Overlay -->
-                <div style="position: absolute; top: -30px; right: -20px; background: #10b981; color: white; padding: 25px 45px; border-radius: 20px; font-weight: 900; font-size: 24px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); border: 2px solid rgba(255,255,255,0.2); transform: rotate(4deg);">
-                   &#9989; RFQ GENERATED
-                </div>
-            </div>
-        </div>
-    </div>
-
-</div>
-   
-
- <!-- 5. PRICING SECTION (FOR PAID MODULE) -->
-<div style="background-color: #f8fafc; padding: 80px 20px; text-align: center; border-top: 1px solid #e2e8f0;">
-    <div style="max-width: 1200px; margin: 0 auto;">
-        
-        <div style="margin-bottom: 60px;">
-            <span style="display: inline-block; padding: 8px 20px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 100px; color: #0d9488; font-size: 12px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px;">Activation Plans</span>
-            <h2 style="font-size: 42px; font-weight: 800; color: #0f172a; letter-spacing: -1px; margin: 0 0 15px 0; line-height: 1.2;">Predict your future. <br><span style="color: #94a3b8;">Choose your scale.</span></h2>
-        </div>
-
-        <div style="text-align: center; font-size: 0;">
-            
-            <!-- FREE (Highlighted as "Also Available") -->
-            <div style="display: inline-block; vertical-align: top; width: 31%; min-width: 300px; margin: 10px; font-size: 16px; background-color: #ffffff; border: 1px solid #cbd5e1; border-radius: 32px; padding: 40px; text-align: left; box-sizing: border-box; position: relative;">
-                <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background-color: #64748b; color: #ffffff; font-size: 11px; font-weight: 900; padding: 6px 16px; border-radius: 100px; letter-spacing: 1px; text-transform: uppercase;">Also Available</div>
+                <!-- Pulsing Status Dot -->
+                <span style="display: flex; height: 12px; width: 12px; position: relative; align-items: center; justify-content: center;">
+                    <span style="animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite; position: absolute; display: inline-flex; height: 100%; width: 100%; border-radius: 50%; background-color: #10b981; opacity: 0.75;"></span>
+                    <span style="position: relative; display: inline-flex; border-radius: 50%; height: 8px; width: 8px; background-color: #10b981;"></span>
+                </span>
                 
-                <h4 style="font-weight: 800; color: #0f172a; font-size: 20px; margin: 0 0 10px 0;">Free Forever</h4>
-                <div style="margin-bottom: 20px;">
-                    <span style="font-size: 48px; font-weight: 900; color: #0f172a;">$0</span>
-                    <span style="color: #94a3b8; font-size: 16px; font-weight: 600;">/mo</span>
-                </div>
-                <p style="color: #64748b; font-size: 14px; line-height: 1.5; margin: 0 0 30px 0; height: 45px;">You can use it free also. Perfect for testing.</p>
-                <div style="height: 1px; background-color: #f1f5f9; margin-bottom: 30px;"></div>
-                <ul style="list-style: none; padding: 0; margin: 0 0 40px 0;">
-                    <li style="margin-bottom: 15px; color: #475569; font-size: 14px; font-weight: 600;"><span style="color: #10b981; margin-right: 8px;">&#10004;</span> Up to 20 Products</li>
-                    <li style="margin-bottom: 15px; color: #475569; font-size: 14px; font-weight: 600;"><span style="color: #10b981; margin-right: 8px;">&#10004;</span> Weekly Sync</li>
-                    <li style="margin-bottom: 15px; color: #475569; font-size: 14px; font-weight: 600;"><span style="color: #10b981; margin-right: 8px;">&#10004;</span> Best model use for all</li>
-                    <li style="margin-bottom: 15px; color: #475569; font-size: 14px; font-weight: 600;"><span style="color: #10b981; margin-right: 8px;">&#10004;</span> Automated Drafts</li>
-                </ul>
-                <a href="https://apps.odoo.com/apps/modules/browse?search=Niyu+Labs" target="_blank" style="display: block; text-align: center; padding: 16px; border-radius: 12px; background-color: #f1f5f9; color: #0f172a; font-weight: 800; text-decoration: none; font-size: 14px;">Get Free Version</a>
+                <!-- Text -->
+                <span style="color: #4b5563; font-weight: 600; font-size: 15px; letter-spacing: 0.3px;">
+                    Have questions or need a demo? 
+                    <span style="
+                        background: -webkit-linear-gradient(45deg, #2563eb, #00d2ff);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        font-weight: 800;
+                        margin-left: 5px;
+                    ">
+                        info@niyulabs.com &rarr;
+                    </span>
+                </span>
             </div>
-
-            <!-- PRO -->
-            <div style="display: inline-block; vertical-align: top; width: 33%; min-width: 320px; margin: 0 10px; font-size: 16px; background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 32px; padding: 50px 40px; text-align: left; box-sizing: border-box; opacity: 0.9;">
-                <h4 style="font-weight: 800; color: #0f172a; font-size: 22px; margin: 0 0 10px 0;">Professional</h4>
-                <div style="margin-bottom: 20px;">
-                    <span style="font-size: 56px; font-weight: 900; color: #0f172a;">$49</span>
-                    <span style="color: #94a3b8; font-size: 18px; font-weight: 600;">/mo</span>
-                </div>
-                <p style="color: #64748b; font-size: 14px; line-height: 1.5; margin: 0 0 30px 0; height: 45px;">For scaling businesses with high turnover.</p>
-                <div style="height: 1px; background-color: #f1f5f9; margin-bottom: 30px;"></div>
-                <ul style="list-style: none; padding: 0; margin: 0 0 40px 0;">
-                    <li style="margin-bottom: 18px; color: #1e293b; font-size: 15px; font-weight: 700;"><span style="color: #10b981; margin-right: 8px;">&#10004;</span> 20,000 SKUs</li>
-                    <li style="margin-bottom: 18px; color: #1e293b; font-size: 15px; font-weight: 700;"><span style="color: #10b981; margin-right: 8px;">&#10004;</span> Daily Sync</li>
-                    <li style="margin-bottom: 18px; color: #1e293b; font-size: 15px; font-weight: 700;"><span style="color: #10b981; margin-right: 8px;">&#10004;</span> Automated Draft RFQs</li>
-                    <li style="margin-bottom: 18px; color: #1e293b; font-size: 15px; font-weight: 700;"><span style="color: #10b981; margin-right: 8px;">&#10004;</span> Advanced Analytics</li>
-                    <li style="margin-bottom: 18px; color: #1e293b; font-size: 15px; font-weight: 700;"><span style="color: #10b981; margin-right: 8px;">&#10004;</span> Priority Email Support</li>
-                </ul>
-                <a href="https://niyulabs.com" target="_blank" style="display: block; text-align: center; padding: 18px; border-radius: 12px; background-color: #f1f5f9; color: #0f172a; font-weight: 800; text-decoration: none; font-size: 16px;">Upgrade to Pro &#8594;</a>
-            </div>
-
-            <!-- ENTERPRISE / ONE TIME (Highlighted as Active Purchase) -->
-            <div style="display: inline-block; vertical-align: top; width: 31%; min-width: 300px; margin: 10px; font-size: 16px; background-color: #ffffff; border: 2px solid #10b981; border-radius: 32px; padding: 40px; text-align: left; box-sizing: border-box; position: relative; box-shadow: 0 30px 60px -12px rgba(16, 185, 129, 0.15);">
-                <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background-color: #10b981; color: #ffffff; font-size: 11px; font-weight: 900; padding: 6px 16px; border-radius: 100px; letter-spacing: 1px; text-transform: uppercase;">Best Value</div>
-                <h4 style="font-weight: 800; color: #0f172a; font-size: 20px; margin: 0 0 10px 0;">Lifetime License</h4>
-                <div style="margin-bottom: 20px;">
-                    <span style="font-size: 42px; font-weight: 900; color: #0f172a;">One-Time</span>
-                </div>
-                <p style="color: #64748b; font-size: 14px; line-height: 1.5; margin: 0 0 30px 0; height: 45px;">For global multi-warehouse logistics clusters.</p>
-                <div style="height: 1px; background-color: #f1f5f9; margin-bottom: 30px;"></div>
-                <ul style="list-style: none; padding: 0; margin: 0 0 40px 0;">
-                    <li style="margin-bottom: 15px; color: #475569; font-size: 14px; font-weight: 600;"><span style="color: #0ea5e9; margin-right: 8px;">&#10004;</span> Unlimited SKUs</li>
-                    <li style="margin-bottom: 15px; color: #475569; font-size: 14px; font-weight: 600;"><span style="color: #0ea5e9; margin-right: 8px;">&#10004;</span> Full Source Code</li>
-                    <li style="margin-bottom: 15px; color: #475569; font-size: 14px; font-weight: 600;"><span style="color: #0ea5e9; margin-right: 8px;">&#10004;</span> Lifetime Updates</li>
-                    <li style="margin-bottom: 15px; color: #475569; font-size: 14px; font-weight: 600;"><span style="color: #0ea5e9; margin-right: 8px;">&#10004;</span> Multi-Company Ready</li>
-                </ul>
-                <a href="#" style="display: block; text-align: center; padding: 16px; border-radius: 12px; background-color: #0f172a; color: #ffffff; font-weight: 800; text-decoration: none; font-size: 14px;">Purchase Now</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-    <!-- 6. FOOTER / FAQ -->
-    <div style="background-color: #ffffff; padding: 100px 20px;">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            
-            <div style="text-align: center; margin-bottom: 80px;">
-                <span style="display: inline-block; padding: 8px 20px; background-color: #f0fdf4; border: 1px solid #dcfce7; border-radius: 100px; color: #166534; font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px;">Technical FAQ</span>
-                <h2 style="font-size: 42px; font-weight: 800; color: #0f172a; letter-spacing: -1.5px; margin: 0;">Everything you <span style="color: #94a3b8;">need to know.</span></h2>
-            </div>
-    
-            <div style="font-size: 0; text-align: center; margin-bottom: 100px;">
-                <!-- FAQ Item 1 -->
-                <div style="display: inline-block; vertical-align: top; width: 45%; min-width: 320px; margin: 2%; font-size: 16px; text-align: left; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 24px; padding: 40px; box-sizing: border-box;">
-                    <h5 style="font-weight: 800; color: #0f172a; margin-bottom: 15px; display: flex; align-items: center; gap: 12px;">
-                        <span style="color: #10b981; font-size: 20px;">&#10038;</span> Is my sales data safe?
-                    </h5>
-                    <p style="color: #64748b; font-size: 15px; line-height: 1.6; margin: 0;">
-                        Yes. Niyu uses a <b>Stateless RAM Architecture</b>. Your sales velocity is processed in volatile memory and purged instantly. No transaction history is ever stored.
-                    </p>
-                </div>
-                <!-- FAQ Item 2 -->
-                <div style="display: inline-block; vertical-align: top; width: 45%; min-width: 320px; margin: 2%; font-size: 16px; text-align: left; background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 24px; padding: 40px; box-sizing: border-box;">
-                    <h5 style="font-weight: 800; color: #0f172a; margin-bottom: 15px; display: flex; align-items: center; gap: 12px;">
-                        <span style="color: #10b981; font-size: 20px;">&#10038;</span> Does it slow down Odoo?
-                    </h5>
-                    <p style="color: #64748b; font-size: 15px; line-height: 1.6; margin: 0;">
-                        No. The complex math happens on our <b>GPU Clusters</b>. Your Odoo server only receives the final predicted Value.
-                    </p>
-                </div>
-            </div>
-    
-          <!-- Final CTA -->
-        <!-- Final CTA -->
-<div style="background-color: #030712; border-radius: 48px; padding: 100px 40px; text-align: center; overflow: hidden; box-shadow: 0 50px 100px -20px rgba(0,0,0,0.5);">
-    <h2 style="font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 800; color: #ffffff; letter-spacing: -2px; margin-bottom: 30px; line-height: 1;">
-        The future of stock <br> is <span style="color: #10b981;">Neural.</span>
-    </h2>
-    
-    <div style="margin-bottom: 80px;">
-        <a href="https://apps.odoo.com/apps/modules/browse?search=Niyu+Labs" target="_blank" style="display: inline-block; background-color: #ffffff; color: #030712; padding: 22px 60px; border-radius: 100px; font-weight: 800; font-size: 18px; text-decoration: none; transition: 0.3s; box-shadow: 0 0 40px rgba(255,255,255,0.15);">
-            Install Free Module &#8594;
         </a>
+      </div>
+      <!-- END CONTACT CAPSULE -->
+      </div>
     </div>
+  </section>
 
-        <!-- Footer Section (Table used for perfect alignment) -->
-        <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 40px;">
-            <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                <tr>
-                    <!-- Left Side: Logo -->
-                    <td align="left" style="vertical-align: middle;">
-                        <div style="font-weight: 900; color: #ffffff; font-size: 20px; letter-spacing: -1px;">
-                            NIYU <span style="color: #10b981;">LABS</span>
-                        </div>
-                    </td>
-                    
-                    <!-- Right Side: Contact Info -->
-                    <td align="right" style="vertical-align: middle;">
-                        <div style="color: #94a3b8; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px;">
-                            Queries & Support
-                        </div>
-                        <a href="mailto:info@niyulabs.com" style="color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 700;">
-                            info@niyulabs.com
-                        </a>
-                    </td>
-                </tr>
-            </table>
-        </div>
-    </div>
-    
-        </div>
-    </div>
-
-</div>
+</section>
