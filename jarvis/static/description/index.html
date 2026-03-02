@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Niyulabs | BigQuery Connector Standard</title>
-    <!-- Bootstrap 5.3 CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #1f2937; background-color: #ffffff; line-height: 1.5;">
@@ -14,7 +12,6 @@
     <!-- HERO SECTION -->
     <section class="container" style="padding: 120px 20px;">
         <div class="row align-items-center g-5">
-            <!-- Left: Content -->
             <div class="col-lg-7">
                 <div style="display: inline-block; background: rgba(135, 90, 123, 0.1); color: #875A7B; padding: 6px 16px; border-radius: 100px; margin-bottom: 24px; font-size: 0.8rem; font-weight: 800; text-transform: uppercase; letter-spacing: 2px;">
                     Standard Edition
@@ -27,73 +24,70 @@
                     Unlock your Odoo data for <strong>Power BI, Tableau, and Looker Studio</strong>. Push full tables to Google BigQuery with a single click—no technical expertise required.
                 </p>
                 <div class="d-flex align-items-center gap-4">
-                    <a href="#" class="btn shadow-lg" style="background-color: #875A7B; color: white; padding: 18px 40px; border-radius: 14px; font-weight: 800; font-size: 1.1rem; border: none; transition: 0.3s;">Buy on Odoo Store</a>
-                    <div style="font-size: 0.9rem; color: #6b7280; line-height: 1.4;">
-                        <i class="fa fa-check-circle text-success"></i> Lifetime License<br>
-                        <i class="fa fa-check-circle text-success"></i> Niyulabs Certified
-                    </div>
+                    <a href="#" class="btn shadow-lg" style="background-color: #875A7B; color: white; padding: 18px 40px; border-radius: 14px; font-weight: 800; font-size: 1.1rem; border: none;">Buy on Odoo Store</a>
                 </div>
             </div>
-            <!-- Right: All-in-One Image -->
             <div class="col-lg-5 text-center">
                 <img src="./allinone.png" class="img-fluid" alt="Niyulabs Architecture" style="transform: scale(1.15); filter: drop-shadow(0 40px 80px rgba(0,0,0,0.15));">
             </div>
         </div>
     </section>
 
-    <!-- INTEGRATION LOGOS -->
-    <div class="container text-center" style="padding-bottom: 100px; opacity: 0.7;">
+    <!-- FIXED LOGOS SECTION -->
+    <div class="container text-center" style="padding-bottom: 100px; opacity: 0.8;">
         <p style="font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 3px; color: #9ca3af; margin-bottom: 40px;">Native Ecosystem Support</p>
         <div class="d-flex justify-content-center align-items-center gap-5 flex-wrap">
             <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/New_Power_BI_Logo.svg" height="40" alt="Power BI">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Tableau_Logo.png" height="35" alt="Tableau">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Looker_Studio_logo.svg" height="40" alt="Looker Studio">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg" height="30" alt="BigQuery">
+            <img src="https://raw.githubusercontent.com/Strive-School/documentation/main/docs/assets/tableau-logo.png" height="35" alt="Tableau">
+            <div class="d-flex align-items-center gap-2">
+                <img src="https://www.gstatic.com/images/branding/product/2x/looker_studio_64dp.png" height="40" alt="Looker Studio">
+                <span style="font-weight: 700; color: #5f6368; font-size: 1.2rem;">Looker Studio</span>
+            </div>
+            <img src="https://www.gstatic.com/images/branding/product/2x/bigquery_64dp.png" height="40" alt="BigQuery">
         </div>
     </div>
 
-    <!-- MAIN WALKTHROUGH SECTIONS -->
+    <!-- MAIN FEATURES -->
     <section style="background-color: #f8fafc; padding: 100px 0;">
+        <div class="container text-center mb-5">
+            <h2 style="font-size: 3rem; font-weight: 900; letter-spacing: -2px;">Inside the Connector</h2>
+        </div>
         <div class="container">
-            
             <!-- 1. EXPORT VIEW -->
-            <div class="row align-items-center py-5" style="margin-bottom: 100px;">
+            <div class="row align-items-center py-5" style="margin-bottom: 80px;">
                 <div class="col-md-5">
-                    <div style="width: 45px; height: 45px; background: #875A7B; color: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: 800; margin-bottom: 25px;">01</div>
-                    <h2 style="font-size: 3rem; font-weight: 900; letter-spacing: -2.5px; margin-bottom: 20px;">Manual Full Export</h2>
-                    <p style="font-size: 1.2rem; color: #4b5563; line-height: 1.7;">The core of our Standard edition. Select any Odoo model (Sales, Inventory, Accounting) and trigger a full table push. Our wizard simplifies the complex transfer into a single action.</p>
+                    <h2 style="font-size: 2.5rem; font-weight: 900; letter-spacing: -2px; margin-bottom: 20px;">Manual Full Export</h2>
+                    <p style="font-size: 1.2rem; color: #4b5563;">Select any Odoo model and trigger a full table push. Our wizard simplifies the complex transfer into a single button click.</p>
                 </div>
                 <div class="col-md-7">
-                    <div style="background: white; padding: 12px; border-radius: 24px; box-shadow: 0 30px 60px rgba(0,0,0,0.08); border: 1px solid #e2e8f0;">
-                        <img src="./export_view.png" class="img-fluid rounded-4" alt="Export Interface">
+                    <div style="background: white; padding: 10px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); border: 1px solid #eee;">
+                        <img src="./export.png" class="img-fluid rounded-4" alt="Export Interface">
                     </div>
                 </div>
             </div>
 
             <!-- 2. SETTINGS VIEW -->
-            <div class="row align-items-center py-5 flex-md-row-reverse" style="margin-bottom: 100px;">
+            <div class="row align-items-center py-5 flex-md-row-reverse" style="margin-bottom: 80px;">
                 <div class="col-md-5">
-                    <div style="width: 45px; height: 45px; background: #4285F4; color: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: 800; margin-bottom: 25px;">02</div>
-                    <h2 style="font-size: 3rem; font-weight: 900; letter-spacing: -2.5px; margin-bottom: 20px;">Plug-and-Play Setup</h2>
-                    <p style="font-size: 1.2rem; color: #4b5563; line-height: 1.7;">No coding required. Simply upload your Google Service Account JSON key into Odoo. Our connector validates your credentials instantly, establishing a secure tunnel to your BigQuery project.</p>
+                    <h2 style="font-size: 2.5rem; font-weight: 900; letter-spacing: -2px; margin-bottom: 20px;">JSON Authentication</h2>
+                    <p style="font-size: 1.2rem; color: #4b5563;">Simply upload your Google Service Account key. Our connector validates the project details and establishes a secure link to your BigQuery project.</p>
                 </div>
                 <div class="col-md-7">
-                    <div style="background: white; padding: 12px; border-radius: 24px; box-shadow: 0 30px 60px rgba(0,0,0,0.08); border: 1px solid #e2e8f0;">
-                        <img src="./settings_view.png" class="img-fluid rounded-4" alt="Settings Interface">
+                    <div style="background: white; padding: 10px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); border: 1px solid #eee;">
+                        <img src="./setting.png" class="img-fluid rounded-4" alt="Settings Interface">
                     </div>
                 </div>
             </div>
 
             <!-- 3. SCHEMA VIEW -->
-            <div class="row align-items-center py-5" style="margin-bottom: 100px;">
+            <div class="row align-items-center py-5" style="margin-bottom: 80px;">
                 <div class="col-md-5">
-                    <div style="width: 45px; height: 45px; background: #f4b400; color: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: 800; margin-bottom: 25px;">03</div>
-                    <h2 style="font-size: 3rem; font-weight: 900; letter-spacing: -2.5px; margin-bottom: 20px;">Automated Schema</h2>
-                    <p style="font-size: 1.2rem; color: #4b5563; line-height: 1.7;">We bridge the gap between Odoo and SQL. Our engine automatically translates Odoo Many2one, Date, and Float fields into clean BigQuery Data Types (STRING, TIMESTAMP, FLOAT).</p>
+                    <h2 style="font-size: 2.5rem; font-weight: 900; letter-spacing: -2px; margin-bottom: 20px;">Data Type Schema</h2>
+                    <p style="font-size: 1.2rem; color: #4b5563;">Odoo data types are automatically mapped to BigQuery types (STRING, FLOAT, TIMESTAMP), ensuring your BI dashboards never crash due to data mismatches.</p>
                 </div>
                 <div class="col-md-7">
-                    <div style="background: white; padding: 12px; border-radius: 24px; box-shadow: 0 30px 60px rgba(0,0,0,0.08); border: 1px solid #e2e8f0;">
-                        <img src="./schema_view.png" class="img-fluid rounded-4" alt="Schema Mapping">
+                    <div style="background: white; padding: 10px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); border: 1px solid #eee;">
+                        <img src="./schema.png" class="img-fluid rounded-4" alt="Schema Mapping">
                     </div>
                 </div>
             </div>
@@ -101,61 +95,24 @@
             <!-- 4. RECORDS VIEW -->
             <div class="row align-items-center py-5 flex-md-row-reverse">
                 <div class="col-md-5">
-                    <div style="width: 45px; height: 45px; background: #0f9d58; color: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: 800; margin-bottom: 25px;">04</div>
-                    <h2 style="font-size: 3rem; font-weight: 900; letter-spacing: -2.5px; margin-bottom: 20px;">Verified Records</h2>
-                    <p style="font-size: 1.2rem; color: #4b5563; line-height: 1.7;">See your data live. Your Odoo records are perfectly serialized into BigQuery rows. Connect your BI dashboard to these tables and start generating insights instantly.</p>
+                    <h2 style="font-size: 2.5rem; font-weight: 900; letter-spacing: -2px; margin-bottom: 20px;">BigQuery Records</h2>
+                    <p style="font-size: 1.2rem; color: #4b5563;">Your records are pushed and ready for immediate use. Your BI tools see these rows live, letting you build reports on fresh data.</p>
                 </div>
                 <div class="col-md-7">
-                    <div style="background: white; padding: 12px; border-radius: 24px; box-shadow: 0 30px 60px rgba(0,0,0,0.08); border: 1px solid #e2e8f0;">
-                        <img src="./records_view.png" class="img-fluid rounded-4" alt="Records in BigQuery">
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- TRANSPARENCY / COMPARISON BOX -->
-    <section class="container" style="padding: 120px 20px;">
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 32px; padding: 60px; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.05);">
-                    <div class="row align-items-center">
-                        <div class="col-md-7">
-                            <h3 style="font-size: 2.5rem; font-weight: 900; letter-spacing: -2px; margin-bottom: 20px;">Is Standard right for you?</h3>
-                            <p style="color: #64748b; font-size: 1.15rem; line-height: 1.6;">The Niyulabs Standard Connector is a powerful, high-speed <strong>Full Table Export</strong> engine. It is designed for snapshot reporting and essential BI stacks.</p>
-                            <hr style="margin: 30px 0; border-color: #f1f5f9;">
-                            <a href="#" style="color: #875A7B; font-weight: 800; text-decoration: none; font-size: 1.1rem;">Explore BigQuery Connector PRO &rarr;</a>
-                        </div>
-                        <div class="col-md-5 mt-4 mt-md-0">
-                            <div style="background: #fff8f1; border: 2px dashed #fb923c; border-radius: 20px; padding: 30px;">
-                                <h6 style="color: #9a3412; font-weight: 800; text-transform: uppercase; font-size: 0.75rem; margin-bottom: 15px;">Standard Limitations:</h6>
-                                <ul style="list-style: none; padding: 0; color: #9a3412; font-weight: 600; font-size: 0.95rem; line-height: 2;">
-                                    <li><i class="fa fa-times-circle me-2 opacity-50"></i> No Incremental/Delta Export</li>
-                                    <li><i class="fa fa-times-circle me-2 opacity-50"></i> No Domain/Record Filtering</li>
-                                    <li><i class="fa fa-times-circle me-2 opacity-50"></i> No Specific Column Selection</li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div style="background: white; padding: 10px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); border: 1px solid #eee;">
+                        <img src="./records.png" class="img-fluid rounded-4" alt="Records in BigQuery">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER CTA -->
-    <footer style="background: #0f172a; padding: 120px 0; text-align: center;">
-        <div class="container">
-            <h2 style="font-size: 3.5rem; font-weight: 900; color: white; letter-spacing: -3px; margin-bottom: 24px;">Unlock Your Dashboard's Power</h2>
-            <p style="color: #94a3b8; font-size: 1.25rem; max-width: 600px; margin: 0 auto 50px auto; line-height: 1.6;">Join thousands of data-driven teams using Niyulabs connectors to scale their BI stack.</p>
-            <a href="#" class="btn" style="background: white; color: #0f172a; padding: 20px 50px; border-radius: 16px; font-weight: 900; font-size: 1.2rem; border: none; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">Get it on Odoo App Store</a>
-            <div style="margin-top: 80px; color: #475569; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase;">
-                &copy; 2024 Niyulabs. Performance Data Engineering.
-            </div>
-        </div>
+    <!-- FOOTER -->
+    <footer style="background: #0f172a; padding: 100px 0; text-align: center;">
+        <h2 style="font-size: 3rem; font-weight: 900; color: white; letter-spacing: -2px; margin-bottom: 24px;">Ready to Scale Your Insights?</h2>
+        <a href="#" class="btn" style="background: white; color: #0f172a; padding: 18px 45px; border-radius: 12px; font-weight: 800; font-size: 1.1rem; border: none;">Get it on Odoo App Store</a>
     </footer>
 
-    <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
