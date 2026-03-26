@@ -1,186 +1,370 @@
-<section class="oe_container" style="font-family: Inter, Arial, sans-serif; color:#142033; background:#ffffff;">
-    <div class="oe_row oe_spaced">
-        <div class="text-center">
-            <img src="banner.png" alt="Niyu Labs MCP Server" class="img img-fluid" style="max-width:100%; border-radius:24px; box-shadow:0 18px 48px rgba(15,23,42,0.12);"/>
-        </div>
-    </div>
-</section>
+<!-- ================================================================================= -->
+<!-- NIYU LABS MCP SERVER FOR ODOO - MASTER DESCRIPTION                               -->
+<!-- Replace CHATGPT_VIDEO_ID and CLAUDE_VIDEO_ID below with your actual YouTube IDs. -->
+<!-- ================================================================================= -->
 
-<section class="oe_container" style="padding:28px 0 8px 0;">
-    <div class="oe_row text-center">
-        <div style="display:inline-block; padding:8px 16px; border-radius:999px; background:#eef4ff; color:#2457ff; font-size:13px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; margin-bottom:16px;">Odoo + MCP + LLMs</div>
-        <h1 style="font-size:44px; line-height:1.15; font-weight:900; color:#101828; margin:0 0 12px 0;">Connect Odoo to ChatGPT, Claude, and other MCP clients</h1>
-        <p style="font-size:21px; font-weight:700; color:#4f46e5; margin:0 0 12px 0;">One endpoint. Role-based access. Real business actions.</p>
-        <p style="font-size:18px; max-width:1000px; margin:0 auto; color:#475467; line-height:1.8;">
-            Niyu Labs MCP Server turns Odoo into a practical MCP endpoint so AI tools can search, read, and act on ERP data with controlled access.
-            Users do not need to understand technical model names. Admins configure bundles, assign roles, copy the endpoint, and connect.
+<div style="background-color:#ffffff;font-family:'Inter','Plus Jakarta Sans',Arial,sans-serif;color:#0f172a;overflow-x:hidden;">
+
+    <!-- 1. HERO SECTION -->
+    <div style="padding:100px 20px 60px 20px;text-align:center;background:radial-gradient(circle at top, rgba(59,130,246,0.12) 0%, rgba(255,255,255,1) 60%);">
+
+        <div style="display:inline-flex;align-items:center;gap:12px;padding:10px 22px;background:#0f172a;border:1px solid #1e293b;border-radius:100px;box-shadow:0 10px 30px rgba(15,23,42,0.18);margin-bottom:30px;">
+            <span style="color:#60a5fa;font-size:18px;line-height:1;">&#10022;</span>
+            <span style="color:#ffffff;font-size:14px;font-weight:800;letter-spacing:0.5px;text-transform:uppercase;">Role-Based MCP for Odoo</span>
+            <span style="width:1px;height:16px;background:#334155;"></span>
+            <span style="color:#93c5fd;font-size:13px;font-weight:700;">ChatGPT + Claude + Any MCP Client</span>
+        </div>
+
+        <h1 style="font-size:clamp(3rem,7vw,5.5rem);font-weight:900;line-height:1;letter-spacing:-0.05em;color:#0f172a;margin:0 0 25px 0;">
+            Niyu Labs <br>
+            <span style="background:linear-gradient(135deg,#2563eb 0%, #7c3aed 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">MCP Server</span>
+        </h1>
+
+        <p style="font-size:clamp(1.15rem,3vw,1.5rem);color:#64748b;max-width:900px;margin:0 auto 46px;line-height:1.6;font-weight:400;">
+            Connect Odoo to ChatGPT, Claude, Cursor, Codex, VS Code, and other MCP tools with a clean remote endpoint, visible bearer token, role-based permissions, audit logs, and app-based access bundles that users can understand.
         </p>
-    </div>
-</section>
 
-<section class="oe_container" style="padding:20px 0 6px 0;">
-    <div class="oe_row" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:18px;">
-        <div style="border:1px solid #d0d5dd; background:#fff; border-radius:22px; padding:22px; box-shadow:0 10px 30px rgba(16,24,40,0.06);">
-            <div style="font-size:15px; font-weight:800; color:#2457ff; margin-bottom:10px; text-transform:uppercase;">Simple connection</div>
-            <div style="font-size:22px; font-weight:900; color:#111827; margin-bottom:8px;">Only add your MCP endpoint</div>
-            <p style="font-size:16px; line-height:1.75; color:#475467; margin:0;">Open settings, copy the endpoint, paste it into ChatGPT, Claude, or any MCP client, then connect.</p>
+        <div style="display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:14px;margin-bottom:70px;">
+            <div style="background:#ffffff;border:1px solid #dbeafe;border-radius:100px;padding:12px 20px;box-shadow:0 8px 25px rgba(37,99,235,0.08);font-weight:800;color:#1d4ed8;font-size:14px;">&#10004; Copy endpoint</div>
+            <div style="background:#ffffff;border:1px solid #ede9fe;border-radius:100px;padding:12px 20px;box-shadow:0 8px 25px rgba(124,58,237,0.08);font-weight:800;color:#6d28d9;font-size:14px;">&#10004; Copy token</div>
+            <div style="background:#ffffff;border:1px solid #dcfce7;border-radius:100px;padding:12px 20px;box-shadow:0 8px 25px rgba(16,185,129,0.08);font-weight:800;color:#15803d;font-size:14px;">&#10004; Role-based access</div>
+            <div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:100px;padding:12px 20px;box-shadow:0 8px 25px rgba(15,23,42,0.06);font-weight:800;color:#334155;font-size:14px;">&#10004; App bundles, not technical model guessing</div>
         </div>
-        <div style="border:1px solid #d0d5dd; background:#fff; border-radius:22px; padding:22px; box-shadow:0 10px 30px rgba(16,24,40,0.06);">
-            <div style="font-size:15px; font-weight:800; color:#2457ff; margin-bottom:10px; text-transform:uppercase;">Role-based security</div>
-            <div style="font-size:22px; font-weight:900; color:#111827; margin-bottom:8px;">Give access by bundle</div>
-            <p style="font-size:16px; line-height:1.75; color:#475467; margin:0;">Assign access bundles to users. No confusing manual model picking during normal setup.</p>
-        </div>
-        <div style="border:1px solid #d0d5dd; background:#fff; border-radius:22px; padding:22px; box-shadow:0 10px 30px rgba(16,24,40,0.06);">
-            <div style="font-size:15px; font-weight:800; color:#2457ff; margin-bottom:10px; text-transform:uppercase;">Business-ready mapping</div>
-            <div style="font-size:22px; font-weight:900; color:#111827; margin-bottom:8px;">Pick Sales, CRM, Inventory, Purchase</div>
-            <p style="font-size:16px; line-height:1.75; color:#475467; margin:0;">The bundle auto-matches relevant Odoo models. Add or remove app groups without forcing customers to know table names.</p>
-        </div>
-    </div>
-</section>
 
-<section class="oe_container" style="padding:34px 0 0 0;">
-    <div class="oe_row" style="background:linear-gradient(135deg,#0f172a 0%, #111827 48%, #1d4ed8 100%); border-radius:28px; padding:34px; color:#fff; box-shadow:0 18px 48px rgba(15,23,42,0.18);">
-        <div style="display:flex; flex-wrap:wrap; gap:28px; align-items:center;">
-            <div style="flex:1 1 460px; min-width:300px;">
-                <h2 style="font-size:34px; line-height:1.2; font-weight:900; color:#fff; margin:0 0 14px 0;">What users can do after connecting</h2>
-                <ul style="font-size:18px; line-height:1.95; color:#dbeafe; padding-left:22px; margin:0;">
-                    <li>Ask for invoices, orders, leads, stock, contacts, and project data in plain language</li>
-                    <li>Create and update records through governed MCP tools</li>
-                    <li>Use the same Odoo endpoint across ChatGPT, Claude, Codex, Cursor, and more</li>
-                    <li>Keep visibility with logs and role-based control</li>
-                </ul>
+        <div style="max-width:1200px;margin:0 auto;">
+            <div style="border-radius:34px;padding:14px;background:linear-gradient(135deg, rgba(37,99,235,0.95), rgba(124,58,237,0.92));box-shadow:0 60px 160px -40px rgba(37,99,235,0.28);">
+                <img src="./banner.png" alt="Niyu Labs MCP Server Banner" style="width:100%;display:block;border-radius:26px;background:#f8fafc;">
             </div>
-            <div style="flex:1 1 320px; min-width:280px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.14); border-radius:22px; padding:22px;">
-                <div style="font-size:14px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; color:#93c5fd; margin-bottom:12px;">Example prompts</div>
-                <div style="font-size:17px; line-height:1.8; color:#ffffff;">
-                    “Show overdue customer invoices”<br/>
-                    “Create an RFQ for this vendor”<br/>
-                    “List today’s open opportunities”<br/>
-                    “Find products low in stock”<br/>
-                    “Update this customer phone number”
+        </div>
+    </div>
+
+    <!-- 2. PROBLEM / VALUE SECTION -->
+    <div style="padding:80px 20px;background:#ffffff;">
+        <div style="max-width:1120px;margin:0 auto;">
+            <div style="margin-bottom:55px;">
+                <span style="color:#7c2d12;font-weight:800;font-size:13px;letter-spacing:2px;text-transform:uppercase;">Why this matters</span>
+                <h2 style="font-size:clamp(2.5rem,5vw,3.6rem);font-weight:800;color:#0f172a;margin-top:14px;letter-spacing:-0.04em;line-height:1.08;">
+                    Most Odoo AI demos stop at chat. <br><span style="color:#94a3b8;">Real work needs governed actions.</span>
+                </h2>
+            </div>
+
+            <div style="display:flex;flex-wrap:wrap;gap:20px;">
+                <div style="flex:1;min-width:290px;padding:38px;background:#fcfcfd;border:1px solid #f1f5f9;border-radius:32px;">
+                    <div style="font-size:32px;margin-bottom:24px;">&#129302;</div>
+                    <h4 style="font-weight:800;color:#0f172a;font-size:20px;margin-bottom:15px;">AI does not know Odoo semantics</h4>
+                    <p style="color:#64748b;font-size:15px;line-height:1.7;margin:0;">
+                        Customers, vendors, invoices, bills, RFQs, transfers, pickings, and custom flows often live in technical models that normal users never know by name.
+                    </p>
+                </div>
+
+                <div style="flex:1;min-width:290px;padding:38px;background:#fcfcfd;border:1px solid #f1f5f9;border-radius:32px;">
+                    <div style="font-size:32px;margin-bottom:24px;">&#128274;</div>
+                    <h4 style="font-weight:800;color:#0f172a;font-size:20px;margin-bottom:15px;">Blind access is risky</h4>
+                    <p style="color:#64748b;font-size:15px;line-height:1.7;margin:0;">
+                        If AI can touch everything, one wrong tool call can expose data or create bad records. MCP needs role-based control, not open-ended access.
+                    </p>
+                </div>
+
+                <div style="flex:1;min-width:290px;padding:38px;background:#fcfcfd;border:1px solid #f1f5f9;border-radius:32px;">
+                    <div style="font-size:32px;margin-bottom:24px;">&#9881;</div>
+                    <h4 style="font-weight:800;color:#0f172a;font-size:20px;margin-bottom:15px;">Users should select apps, not model names</h4>
+                    <p style="color:#64748b;font-size:15px;line-height:1.7;margin:0;">
+                        Business users understand Sales, CRM, Inventory, Purchase, and Accounting. They should not be forced to guess technical model names one by one.
+                    </p>
+                </div>
+            </div>
+
+            <div style="margin-top:60px;padding:28px 30px;background:linear-gradient(90deg,#eff6ff 0%,#ffffff 100%);border-radius:22px;border-left:4px solid #2563eb;">
+                <p style="margin:0;color:#1e3a8a;font-weight:600;font-size:16px;line-height:1.6;">
+                    “Paste your MCP endpoint into the client, copy the token when needed, select access by app bundles, and start asking Odoo real questions.”
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. VIDEO SECTION -->
+    <div style="font-family:'Plus Jakarta Sans','Inter',Arial,sans-serif;background:#020617;color:#ffffff;margin:0;padding:120px 20px;overflow-x:hidden;">
+        <div style="max-width:1180px;margin:0 auto;text-align:center;">
+            <div style="display:inline-block;padding:8px 16px;border-radius:100px;background:rgba(96,165,250,0.08);border:1px solid rgba(96,165,250,0.2);color:#93c5fd;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:25px;">Live connection demos</div>
+            <h2 style="font-size:clamp(2.8rem,7vw,5.2rem);font-weight:800;line-height:0.95;letter-spacing:-3px;margin:0 0 25px 0;color:#ffffff;">
+                See it connect to <br><span style="background:linear-gradient(135deg,#ffffff 20%,#60a5fa 60%,#a78bfa 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">ChatGPT and Claude</span>
+            </h2>
+            <p style="font-size:20px;color:#94a3b8;max-width:760px;margin:0 auto 70px auto;line-height:1.7;font-weight:300;">
+                Show users the real setup. One video for ChatGPT. One video for Claude. Replace the two placeholder YouTube IDs in this file and publish.
+            </p>
+
+            <div style="display:flex;flex-wrap:wrap;gap:26px;justify-content:center;text-align:left;">
+                <div style="flex:1;min-width:320px;max-width:560px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:28px;padding:18px;box-shadow:0 40px 100px -35px rgba(0,0,0,0.7);">
+                    <div style="padding:6px 4px 18px 4px;">
+                        <div style="font-size:12px;font-weight:900;color:#60a5fa;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;">Demo 01</div>
+                        <h3 style="font-size:28px;font-weight:800;color:#ffffff;margin:0 0 10px 0;">Connect with ChatGPT</h3>
+                        <p style="font-size:15px;line-height:1.7;color:#cbd5e1;margin:0;">Show the endpoint, token copy flow, and one real Odoo question so buyers instantly understand that the server is working.</p>
+                    </div>
+                    <div style="border-radius:22px;overflow:hidden;background:#000;box-shadow:0 18px 40px rgba(0,0,0,0.35);">
+                        <iframe src="https://www.youtube.com/embed/CHATGPT_VIDEO_ID" title="Connect Niyu MCP Server to ChatGPT" width="100%" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+                <div style="flex:1;min-width:320px;max-width:560px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:28px;padding:18px;box-shadow:0 40px 100px -35px rgba(0,0,0,0.7);">
+                    <div style="padding:6px 4px 18px 4px;">
+                        <div style="font-size:12px;font-weight:900;color:#a78bfa;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;">Demo 02</div>
+                        <h3 style="font-size:28px;font-weight:800;color:#ffffff;margin:0 0 10px 0;">Connect with Claude</h3>
+                        <p style="font-size:15px;line-height:1.7;color:#cbd5e1;margin:0;">Show the same endpoint flow in Claude Desktop or Claude-compatible MCP setup and ask one useful business question.</p>
+                    </div>
+                    <div style="border-radius:22px;overflow:hidden;background:#000;box-shadow:0 18px 40px rgba(0,0,0,0.35);">
+                        <iframe src="https://www.youtube.com/embed/CLAUDE_VIDEO_ID" title="Connect Niyu MCP Server to Claude" width="100%" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</section>
 
-<section class="oe_container" style="padding:36px 0 0 0;">
-    <div class="oe_row text-center">
-        <h2 style="font-size:34px; font-weight:900; color:#111827; margin-bottom:10px;">Watch the connection flow</h2>
-        <p style="font-size:18px; color:#475467; max-width:980px; margin:0 auto 24px auto; line-height:1.8;">
-            Add your real demo videos below. Replace only the two YouTube embed URLs in this file.
-            One video can show ChatGPT connection. The other can show Claude connection.
-        </p>
-    </div>
-    <div class="oe_row" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(360px,1fr)); gap:22px; align-items:start;">
-        <div style="background:#fff; border:1px solid #d0d5dd; border-radius:24px; padding:18px; box-shadow:0 10px 30px rgba(16,24,40,0.08);">
-            <div style="font-size:22px; font-weight:900; color:#111827; margin-bottom:6px;">Video 1: Connect with ChatGPT</div>
-            <div style="font-size:15px; color:#667085; margin-bottom:14px;">Replace <code>CHATGPT_VIDEO_ID</code> with your YouTube video id.</div>
-            <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:16px; background:#0f172a;">
-                <iframe src="https://www.youtube.com/embed/CHATGPT_VIDEO_ID" title="ChatGPT MCP Connection Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"></iframe>
-            </div>
-        </div>
-        <div style="background:#fff; border:1px solid #d0d5dd; border-radius:24px; padding:18px; box-shadow:0 10px 30px rgba(16,24,40,0.08);">
-            <div style="font-size:22px; font-weight:900; color:#111827; margin-bottom:6px;">Video 2: Connect with Claude</div>
-            <div style="font-size:15px; color:#667085; margin-bottom:14px;">Replace <code>CLAUDE_VIDEO_ID</code> with your YouTube video id.</div>
-            <div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border-radius:16px; background:#0f172a;">
-                <iframe src="https://www.youtube.com/embed/CLAUDE_VIDEO_ID" title="Claude MCP Connection Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"></iframe>
-            </div>
-        </div>
-    </div>
-</section>
+    <!-- 4. STEP BY STEP FLOW -->
+    <div style="background:#ffffff;padding:130px 0 120px 0;color:#0f172a;position:relative;z-index:2;">
 
-<section class="oe_container" style="padding:36px 0 0 0;">
-    <div class="oe_row text-center">
-        <h2 style="font-size:34px; font-weight:900; color:#111827; margin-bottom:10px;">How to use</h2>
-        <p style="font-size:18px; color:#475467; margin:0 auto 26px auto; max-width:980px; line-height:1.8;">
-            The setup is made for business users. You do not need to search and add every model manually.
-        </p>
-    </div>
-    <div class="oe_row" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px;">
-        <div style="background:#f8fafc; border:1px solid #e4e7ec; border-radius:22px; padding:22px;">
-            <div style="width:42px; height:42px; line-height:42px; text-align:center; border-radius:999px; background:#2457ff; color:#fff; font-size:20px; font-weight:900; margin-bottom:14px;">1</div>
-            <h4 style="font-size:21px; font-weight:900; color:#111827; margin:0 0 8px 0;">Open Settings</h4>
-            <p style="font-size:16px; line-height:1.75; color:#475467; margin:0;">Enable the MCP server, choose role-based setup, and review the generated endpoint.</p>
-        </div>
-        <div style="background:#f8fafc; border:1px solid #e4e7ec; border-radius:22px; padding:22px;">
-            <div style="width:42px; height:42px; line-height:42px; text-align:center; border-radius:999px; background:#2457ff; color:#fff; font-size:20px; font-weight:900; margin-bottom:14px;">2</div>
-            <h4 style="font-size:21px; font-weight:900; color:#111827; margin:0 0 8px 0;">Create Bundles</h4>
-            <p style="font-size:16px; line-height:1.75; color:#475467; margin:0;">Pick app groups like Sales, CRM, Inventory, Purchase, Website, or Project. Matching models are selected for you.</p>
-        </div>
-        <div style="background:#f8fafc; border:1px solid #e4e7ec; border-radius:22px; padding:22px;">
-            <div style="width:42px; height:42px; line-height:42px; text-align:center; border-radius:999px; background:#2457ff; color:#fff; font-size:20px; font-weight:900; margin-bottom:14px;">3</div>
-            <h4 style="font-size:21px; font-weight:900; color:#111827; margin:0 0 8px 0;">Assign Users</h4>
-            <p style="font-size:16px; line-height:1.75; color:#475467; margin:0;">Assign the bundle to the users who should access that business area.</p>
-        </div>
-        <div style="background:#f8fafc; border:1px solid #e4e7ec; border-radius:22px; padding:22px;">
-            <div style="width:42px; height:42px; line-height:42px; text-align:center; border-radius:999px; background:#2457ff; color:#fff; font-size:20px; font-weight:900; margin-bottom:14px;">4</div>
-            <h4 style="font-size:21px; font-weight:900; color:#111827; margin:0 0 8px 0;">Copy and Connect</h4>
-            <p style="font-size:16px; line-height:1.75; color:#475467; margin:0;">Copy the endpoint or token from settings and paste it into ChatGPT, Claude, or your MCP client.</p>
-        </div>
-    </div>
-</section>
-
-<section class="oe_container" style="padding:36px 0 0 0;">
-    <div class="oe_row text-center">
-        <h2 style="font-size:34px; font-weight:900; color:#111827; margin-bottom:10px;">See the product inside Odoo</h2>
-        <p style="font-size:18px; color:#475467; max-width:980px; margin:0 auto 26px auto; line-height:1.8;">Real screens from the module so buyers can quickly understand how setup and governance work.</p>
-    </div>
-    <div class="oe_row" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:20px;">
-        <div style="background:#fff; border:1px solid #d0d5dd; border-radius:22px; padding:16px; box-shadow:0 10px 30px rgba(16,24,40,0.06);">
-            <div style="font-size:20px; font-weight:900; color:#111827; margin-bottom:12px;">MCP settings</div>
-            <img src="02b_settings_mcp.png" alt="MCP settings" class="img img-fluid" style="width:100%; border-radius:14px;"/>
-        </div>
-        <div style="background:#fff; border:1px solid #d0d5dd; border-radius:22px; padding:16px; box-shadow:0 10px 30px rgba(16,24,40,0.06);">
-            <div style="font-size:20px; font-weight:900; color:#111827; margin-bottom:12px;">Access bundles</div>
-            <img src="08_access_bundles.png" alt="Access bundles" class="img img-fluid" style="width:100%; border-radius:14px;"/>
-        </div>
-        <div style="background:#fff; border:1px solid #d0d5dd; border-radius:22px; padding:16px; box-shadow:0 10px 30px rgba(16,24,40,0.06);">
-            <div style="font-size:20px; font-weight:900; color:#111827; margin-bottom:12px;">Enabled models</div>
-            <img src="03_enabled_models.png" alt="Enabled models" class="img img-fluid" style="width:100%; border-radius:14px;"/>
-        </div>
-        <div style="background:#fff; border:1px solid #d0d5dd; border-radius:22px; padding:16px; box-shadow:0 10px 30px rgba(16,24,40,0.06);">
-            <div style="font-size:20px; font-weight:900; color:#111827; margin-bottom:12px;">Audit logs</div>
-            <img src="05_audit_logs.png" alt="Audit logs" class="img img-fluid" style="width:100%; border-radius:14px;"/>
-        </div>
-    </div>
-</section>
-
-<section class="oe_container" style="padding:36px 0 0 0;">
-    <div class="oe_row" style="background:#f8fafc; border:1px solid #e4e7ec; border-radius:28px; padding:30px;">
-        <div class="text-center">
-            <h2 style="font-size:34px; font-weight:900; color:#111827; margin-bottom:14px;">Why this is easier for customers</h2>
-            <p style="font-size:18px; color:#475467; max-width:980px; margin:0 auto 22px auto; line-height:1.8;">
-                Traditional technical MCP setups force admins to understand model names and build access one table at a time.
-                Niyu Labs focuses on business-first setup. Pick the business area. Auto-match the models. Assign the role. Connect.
+        <!-- STEP 1 -->
+        <div style="max-width:1120px;margin:0 auto 110px auto;padding:0 20px;text-align:center;">
+            <div style="font-size:92px;font-weight:900;color:#eff6ff;line-height:1;margin-bottom:-36px;">01</div>
+            <div style="display:inline-block;padding:6px 14px;border-radius:100px;background:#eff6ff;border:1px solid #dbeafe;color:#2563eb;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:25px;">Enable native MCP</div>
+            <h2 style="font-size:clamp(2.5rem,6vw,4.5rem);font-weight:800;line-height:1;letter-spacing:-3px;margin-bottom:28px;">
+                Turn on the endpoint. <br><span style="color:#2563eb;">Copy. Connect. Go.</span>
+            </h2>
+            <p style="font-size:20px;color:#475569;max-width:780px;margin:0 auto 70px auto;line-height:1.7;font-weight:500;">
+                Open Settings, enable the native MCP server, choose the execution user, and copy the remote endpoint. If authentication is enabled, generate the token and copy it directly from the screen.
             </p>
-        </div>
-        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px;">
-            <div style="background:#fff; border:1px solid #d0d5dd; border-radius:20px; padding:20px;">
-                <h4 style="font-size:20px; font-weight:900; color:#111827; margin:0 0 8px 0;">No manual model hunting</h4>
-                <p style="font-size:16px; line-height:1.75; color:#475467; margin:0;">Customers choose business apps instead of guessing technical Odoo model names.</p>
-            </div>
-            <div style="background:#fff; border:1px solid #d0d5dd; border-radius:20px; padding:20px;">
-                <h4 style="font-size:20px; font-weight:900; color:#111827; margin:0 0 8px 0;">Clear role-based access</h4>
-                <p style="font-size:16px; line-height:1.75; color:#475467; margin:0;">Access is given by bundles and user assignment, which is easier to explain and control.</p>
-            </div>
-            <div style="background:#fff; border:1px solid #d0d5dd; border-radius:20px; padding:20px;">
-                <h4 style="font-size:20px; font-weight:900; color:#111827; margin:0 0 8px 0;">Fast connection for demos</h4>
-                <p style="font-size:16px; line-height:1.75; color:#475467; margin:0;">Copy button for token and endpoint makes first connection much faster.</p>
-            </div>
-            <div style="background:#fff; border:1px solid #d0d5dd; border-radius:20px; padding:20px;">
-                <h4 style="font-size:20px; font-weight:900; color:#111827; margin:0 0 8px 0;">Works across clients</h4>
-                <p style="font-size:16px; line-height:1.75; color:#475467; margin:0;">Use the same governed Odoo logic for ChatGPT, Claude, and other MCP tools.</p>
+            <div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:32px;padding:15px;box-shadow:0 60px 100px -20px rgba(37,99,235,0.18);">
+                <img src="./02b_settings_mcp.png" alt="MCP Native Settings" style="width:100%;height:auto;display:block;border-radius:22px;">
             </div>
         </div>
-    </div>
-</section>
 
-<section class="oe_container" style="padding:36px 0 0 0;">
-    <div class="oe_row text-center" style="background:linear-gradient(135deg,#101828 0%, #1f3fbf 100%); border-radius:28px; padding:38px; color:#fff; box-shadow:0 18px 48px rgba(15,23,42,0.18);">
-        <h2 style="font-size:36px; font-weight:900; color:#fff; margin:0 0 12px 0;">Built for serious Odoo AI workflows</h2>
-        <p style="font-size:19px; color:#dbeafe; max-width:980px; margin:0 auto; line-height:1.8;">
-            Niyu Labs MCP Server is made for teams that want a clean connection story, real business access control, and a product buyers can actually understand.
-        </p>
+        <!-- STEP 2 -->
+        <div style="background:#f8fafc;padding:130px 0;color:#0f172a;">
+            <div style="max-width:1120px;margin:0 auto;padding:0 20px;text-align:center;">
+                <div style="font-size:92px;font-weight:900;color:#edf2f7;line-height:1;margin-bottom:-36px;">02</div>
+                <div style="display:inline-block;padding:6px 14px;border-radius:100px;background:#fff7ed;border:1px solid #fed7aa;color:#ea580c;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:25px;">Business friendly access</div>
+                <h2 style="font-size:clamp(2.5rem,6vw,4.5rem);font-weight:800;line-height:1;letter-spacing:-3px;margin-bottom:30px;">
+                    Select apps, not <br><span style="color:#ea580c;">technical model names.</span>
+                </h2>
+                <p style="font-size:20px;color:#475569;max-width:800px;margin:0 auto 75px auto;line-height:1.7;">
+                    Create access bundles using app selections like Sales, CRM, Inventory, Purchase, Accounting, Website, or Project. Matching models are filled automatically. Remove an app, and the matched models are removed too.
+                </p>
+                <div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:32px;padding:15px;box-shadow:0 40px 80px rgba(0,0,0,0.08);margin-bottom:26px;">
+                    <img src="./08_access_bundles.png" alt="Access Bundles by App" style="width:100%;height:auto;display:block;border-radius:22px;">
+                </div>
+                <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:12px;">
+                    <span style="background:#eff6ff;color:#1d4ed8;font-size:13px;font-weight:800;padding:10px 16px;border-radius:100px;">Sales</span>
+                    <span style="background:#f0fdf4;color:#166534;font-size:13px;font-weight:800;padding:10px 16px;border-radius:100px;">Inventory</span>
+                    <span style="background:#faf5ff;color:#6b21a8;font-size:13px;font-weight:800;padding:10px 16px;border-radius:100px;">CRM</span>
+                    <span style="background:#fff7ed;color:#c2410c;font-size:13px;font-weight:800;padding:10px 16px;border-radius:100px;">Purchase</span>
+                    <span style="background:#fef2f2;color:#b91c1c;font-size:13px;font-weight:800;padding:10px 16px;border-radius:100px;">Accounting</span>
+                    <span style="background:#f8fafc;color:#334155;font-size:13px;font-weight:800;padding:10px 16px;border-radius:100px;">Website</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- STEP 3 -->
+        <div style="background:#ffffff;padding:130px 0;color:#0f172a;">
+            <div style="max-width:1120px;margin:0 auto;padding:0 20px;text-align:center;">
+                <div style="font-size:92px;font-weight:900;color:#f1f5f9;line-height:1;margin-bottom:-36px;">03</div>
+                <div style="display:inline-block;padding:6px 14px;border-radius:100px;background:#f0fdf4;border:1px solid #dcfce7;color:#16a34a;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:25px;">Controlled execution</div>
+                <h2 style="font-size:clamp(2.5rem,6vw,4.5rem);font-weight:800;line-height:1;letter-spacing:-3px;margin-bottom:30px;">
+                    Assign roles. <br><span style="color:#16a34a;">Track every action.</span>
+                </h2>
+                <p style="font-size:20px;color:#475569;max-width:760px;margin:0 auto 75px auto;line-height:1.7;">
+                    Give the right users the right access bundles. Use audit logs to see what was called, by whom, and when. This keeps MCP practical for real teams, not just demos.
+                </p>
+                <div style="display:flex;flex-wrap:wrap;gap:22px;justify-content:center;align-items:stretch;">
+                    <div style="flex:1;min-width:320px;max-width:540px;background:#ffffff;border:1px solid #e2e8f0;border-radius:28px;padding:14px;box-shadow:0 30px 70px rgba(0,0,0,0.07);">
+                        <img src="./05_audit_logs.png" alt="Audit Logs" style="width:100%;display:block;border-radius:18px;">
+                    </div>
+                    <div style="flex:1;min-width:320px;max-width:540px;background:#ffffff;border:1px solid #e2e8f0;border-radius:28px;padding:14px;box-shadow:0 30px 70px rgba(0,0,0,0.07);">
+                        <img src="./06_audit_graph.png" alt="Audit Graph" style="width:100%;display:block;border-radius:18px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STEP 4 -->
+        <div style="background:#03111f;padding:150px 0;text-align:center;position:relative;overflow:hidden;">
+            <div style="max-width:1120px;margin:0 auto;padding:0 20px;position:relative;z-index:2;">
+                <div style="display:inline-block;padding:8px 20px;border-radius:100px;background:rgba(125,211,252,0.1);border:1px solid rgba(125,211,252,0.22);color:#7dd3fc;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:35px;">Ready for real questions</div>
+                <h2 style="font-size:clamp(3rem,8vw,5.8rem);font-weight:800;line-height:0.92;letter-spacing:-4px;color:#ffffff;margin-bottom:36px;">
+                    Ask business questions. <br>
+                    <span style="color:#7dd3fc;">Get governed answers.</span>
+                </h2>
+                <p style="font-size:24px;color:#cbd5e1;max-width:760px;margin:0 auto 90px auto;line-height:1.6;font-weight:300;">
+                    Once connected, users can ask about sales, customers, invoices, opportunities, inventory, or custom business flows using plain language while your Odoo permissions and MCP rules stay in control.
+                </p>
+
+                <div style="display:block;max-width:1200px;margin:0 auto;">
+                    <div style="background:rgba(255,255,255,0.05);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.1);border-radius:40px;padding:15px;box-shadow:0 80px 150px -30px rgba(0,0,0,0.8);">
+                        <img src="./03_enabled_models.png" alt="Enabled Models" style="width:100%;height:auto;display:block;border-radius:24px;">
+                    </div>
+                    <div style="margin-top:20px;display:flex;flex-wrap:wrap;gap:12px;justify-content:center;">
+                        <span style="background:#ffffff;color:#0f172a;padding:10px 16px;border-radius:100px;font-weight:800;font-size:13px;">"Show overdue invoices"</span>
+                        <span style="background:#ffffff;color:#0f172a;padding:10px 16px;border-radius:100px;font-weight:800;font-size:13px;">"Which opportunities changed stage this week?"</span>
+                        <span style="background:#ffffff;color:#0f172a;padding:10px 16px;border-radius:100px;font-weight:800;font-size:13px;">"Create a draft RFQ"</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</section>
+
+    <!-- 5. FEATURE GRID -->
+    <div style="background:#f8fafc;padding:90px 20px 80px 20px;border-top:1px solid #e2e8f0;">
+        <div style="max-width:1180px;margin:0 auto;">
+            <div style="text-align:center;margin-bottom:55px;">
+                <span style="display:inline-block;padding:8px 20px;background:#ffffff;border:1px solid #e2e8f0;border-radius:100px;color:#0d9488;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;">What buyers get</span>
+                <h2 style="font-size:42px;font-weight:800;color:#0f172a;letter-spacing:-1px;margin:0 0 14px 0;line-height:1.2;">Built for real Odoo teams. <br><span style="color:#94a3b8;">Not just AI screenshots.</span></h2>
+            </div>
+
+            <div style="display:flex;flex-wrap:wrap;gap:18px;justify-content:center;">
+                <div style="flex:1;min-width:250px;background:#ffffff;border:1px solid #e2e8f0;border-radius:24px;padding:28px;box-sizing:border-box;">
+                    <h4 style="font-weight:800;font-size:20px;margin:0 0 10px 0;color:#0f172a;">Remote MCP endpoint</h4>
+                    <p style="margin:0;color:#64748b;font-size:15px;line-height:1.7;">Users only need the endpoint in their MCP client. The settings screen keeps setup simple and visible.</p>
+                </div>
+                <div style="flex:1;min-width:250px;background:#ffffff;border:1px solid #e2e8f0;border-radius:24px;padding:28px;box-sizing:border-box;">
+                    <h4 style="font-weight:800;font-size:20px;margin:0 0 10px 0;color:#0f172a;">Visible token + copy button</h4>
+                    <p style="margin:0;color:#64748b;font-size:15px;line-height:1.7;">Generate the token, see it clearly, and copy it instantly. No more hidden values or awkward manual copy flow.</p>
+                </div>
+                <div style="flex:1;min-width:250px;background:#ffffff;border:1px solid #e2e8f0;border-radius:24px;padding:28px;box-sizing:border-box;">
+                    <h4 style="font-weight:800;font-size:20px;margin:0 0 10px 0;color:#0f172a;">Role-based access</h4>
+                    <p style="margin:0;color:#64748b;font-size:15px;line-height:1.7;">The configuration flow is focused on role-based access so admins can grant MCP capability cleanly through users and bundles.</p>
+                </div>
+                <div style="flex:1;min-width:250px;background:#ffffff;border:1px solid #e2e8f0;border-radius:24px;padding:28px;box-sizing:border-box;">
+                    <h4 style="font-weight:800;font-size:20px;margin:0 0 10px 0;color:#0f172a;">App-based bundles</h4>
+                    <p style="margin:0;color:#64748b;font-size:15px;line-height:1.7;">Admins choose business apps like Sales or Inventory and the matching models are collected automatically behind the scenes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 6. SCREENSHOT GALLERY -->
+    <div style="background:#ffffff;padding:100px 20px;">
+        <div style="max-width:1180px;margin:0 auto;">
+            <div style="text-align:center;margin-bottom:60px;">
+                <span style="display:inline-block;padding:8px 20px;background:#eff6ff;border:1px solid #dbeafe;border-radius:100px;color:#1d4ed8;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;">Product screenshots</span>
+                <h2 style="font-size:42px;font-weight:800;color:#0f172a;letter-spacing:-1.5px;margin:0;">What users will see inside Odoo</h2>
+            </div>
+
+            <div style="display:flex;flex-wrap:wrap;gap:20px;justify-content:center;">
+                <div style="flex:1;min-width:320px;max-width:560px;background:#fff;border:1px solid #e2e8f0;border-radius:26px;padding:14px;box-shadow:0 20px 50px rgba(0,0,0,0.05);">
+                    <img src="./01_login.png" alt="Token and access login" style="width:100%;display:block;border-radius:18px;margin-bottom:14px;">
+                    <div style="padding:0 8px 8px 8px;">
+                        <h4 style="margin:0 0 8px 0;font-size:20px;font-weight:800;color:#0f172a;">Authentication and access</h4>
+                        <p style="margin:0;color:#64748b;font-size:15px;line-height:1.7;">Secure the MCP entry point with the right user and the right governed access path.</p>
+                    </div>
+                </div>
+
+                <div style="flex:1;min-width:320px;max-width:560px;background:#fff;border:1px solid #e2e8f0;border-radius:26px;padding:14px;box-shadow:0 20px 50px rgba(0,0,0,0.05);">
+                    <img src="./04_add_model.png" alt="Add model manually when needed" style="width:100%;display:block;border-radius:18px;margin-bottom:14px;">
+                    <div style="padding:0 8px 8px 8px;">
+                        <h4 style="margin:0 0 8px 0;font-size:20px;font-weight:800;color:#0f172a;">Manual override when needed</h4>
+                        <p style="margin:0;color:#64748b;font-size:15px;line-height:1.7;">Bundle logic handles normal access by app, while advanced admins can still include or exclude specific models for special cases.</p>
+                    </div>
+                </div>
+
+                <div style="flex:1;min-width:320px;max-width:560px;background:#fff;border:1px solid #e2e8f0;border-radius:26px;padding:14px;box-shadow:0 20px 50px rgba(0,0,0,0.05);">
+                    <img src="./06_audit_pivot.png" alt="Audit pivot report" style="width:100%;display:block;border-radius:18px;margin-bottom:14px;">
+                    <div style="padding:0 8px 8px 8px;">
+                        <h4 style="margin:0 0 8px 0;font-size:20px;font-weight:800;color:#0f172a;">Audit analysis</h4>
+                        <p style="margin:0;color:#64748b;font-size:15px;line-height:1.7;">Review usage patterns, check what tools are called most, and keep visibility over MCP activity.</p>
+                    </div>
+                </div>
+
+                <div style="flex:1;min-width:320px;max-width:560px;background:#fff;border:1px solid #e2e8f0;border-radius:26px;padding:14px;box-shadow:0 20px 50px rgba(0,0,0,0.05);">
+                    <img src="./07_health.png" alt="Server health" style="width:100%;display:block;border-radius:18px;margin-bottom:14px;">
+                    <div style="padding:0 8px 8px 8px;">
+                        <h4 style="margin:0 0 8px 0;font-size:20px;font-weight:800;color:#0f172a;">Health and readiness</h4>
+                        <p style="margin:0;color:#64748b;font-size:15px;line-height:1.7;">Give admins a clear view of endpoint readiness and keep support easier during setup and rollout.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 7. FAQ -->
+    <div style="background:#ffffff;padding:100px 20px;">
+        <div style="max-width:1180px;margin:0 auto;">
+            <div style="text-align:center;margin-bottom:70px;">
+                <span style="display:inline-block;padding:8px 20px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:100px;color:#334155;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;">Technical FAQ</span>
+                <h2 style="font-size:42px;font-weight:800;color:#0f172a;letter-spacing:-1.5px;margin:0;">Everything you need to know</h2>
+            </div>
+
+            <div style="font-size:0;text-align:center;margin-bottom:100px;">
+                <div style="display:inline-block;vertical-align:top;width:45%;min-width:320px;margin:2%;font-size:16px;text-align:left;background:#f8fafc;border:1px solid #e2e8f0;border-radius:24px;padding:38px;box-sizing:border-box;">
+                    <h5 style="font-weight:800;color:#0f172a;margin-bottom:15px;display:flex;align-items:center;gap:12px;">
+                        <span style="color:#2563eb;font-size:20px;">&#10038;</span> Does this work only with ChatGPT?
+                    </h5>
+                    <p style="color:#64748b;font-size:15px;line-height:1.7;margin:0;">
+                        No. It is built for MCP clients in general, including ChatGPT, Claude, Cursor, Codex, VS Code, and other tools that can connect to an MCP server.
+                    </p>
+                </div>
+
+                <div style="display:inline-block;vertical-align:top;width:45%;min-width:320px;margin:2%;font-size:16px;text-align:left;background:#f8fafc;border:1px solid #e2e8f0;border-radius:24px;padding:38px;box-sizing:border-box;">
+                    <h5 style="font-weight:800;color:#0f172a;margin-bottom:15px;display:flex;align-items:center;gap:12px;">
+                        <span style="color:#2563eb;font-size:20px;">&#10038;</span> Do users need to know Odoo model names?
+                    </h5>
+                    <p style="color:#64748b;font-size:15px;line-height:1.7;margin:0;">
+                        No. Access bundles are designed around apps like Sales, CRM, Inventory, Purchase, and Accounting so setup stays business-friendly.
+                    </p>
+                </div>
+
+                <div style="display:inline-block;vertical-align:top;width:45%;min-width:320px;margin:2%;font-size:16px;text-align:left;background:#f8fafc;border:1px solid #e2e8f0;border-radius:24px;padding:38px;box-sizing:border-box;">
+                    <h5 style="font-weight:800;color:#0f172a;margin-bottom:15px;display:flex;align-items:center;gap:12px;">
+                        <span style="color:#2563eb;font-size:20px;">&#10038;</span> Can admins still fine-tune access?
+                    </h5>
+                    <p style="color:#64748b;font-size:15px;line-height:1.7;margin:0;">
+                        Yes. App-based bundles handle the main setup, and admins can still manually include or exclude specific models when special cases need tighter control.
+                    </p>
+                </div>
+
+                <div style="display:inline-block;vertical-align:top;width:45%;min-width:320px;margin:2%;font-size:16px;text-align:left;background:#f8fafc;border:1px solid #e2e8f0;border-radius:24px;padding:38px;box-sizing:border-box;">
+                    <h5 style="font-weight:800;color:#0f172a;margin-bottom:15px;display:flex;align-items:center;gap:12px;">
+                        <span style="color:#2563eb;font-size:20px;">&#10038;</span> Is there audit visibility?
+                    </h5>
+                    <p style="color:#64748b;font-size:15px;line-height:1.7;margin:0;">
+                        Yes. The module includes audit logs and reporting views so admins can review usage and keep operational visibility over the MCP layer.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FINAL CTA -->
+            <div style="background:#030712;border-radius:48px;padding:100px 40px;text-align:center;overflow:hidden;box-shadow:0 50px 100px -20px rgba(0,0,0,0.5);">
+                <h2 style="font-size:clamp(2.5rem,5vw,4rem);font-weight:800;color:#ffffff;letter-spacing:-2px;margin-bottom:28px;line-height:1;">
+                    Odoo becomes usable <br> for <span style="color:#60a5fa;">real MCP workflows.</span>
+                </h2>
+
+                <p style="max-width:760px;margin:0 auto 40px auto;color:#cbd5e1;font-size:18px;line-height:1.7;">
+                    Remote endpoint. Visible token. Role-based permissions. App bundles. Audit trail. This is the practical connection layer between Odoo and modern AI tools.
+                </p>
+
+                <div style="margin-bottom:70px;">
+                    <a href="https://apps.odoo.com/apps/modules/browse?search=Niyu+Labs" target="_blank" style="display:inline-block;background:#ffffff;color:#030712;padding:22px 60px;border-radius:100px;font-weight:800;font-size:18px;text-decoration:none;box-shadow:0 0 40px rgba(255,255,255,0.12);">
+                        Install the Module &#8594;
+                    </a>
+                </div>
+
+                <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:40px;">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td align="left" style="vertical-align:middle;">
+                                <div style="font-weight:900;color:#ffffff;font-size:20px;letter-spacing:-1px;">
+                                    NIYU <span style="color:#60a5fa;">LABS</span>
+                                </div>
+                            </td>
+                            <td align="right" style="vertical-align:middle;">
+                                <div style="color:#94a3b8;font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px;">
+                                    Queries &amp; Support
+                                </div>
+                                <a href="mailto:info@niyulabs.com" style="color:#ffffff;text-decoration:none;font-size:16px;font-weight:700;">
+                                    info@niyulabs.com
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
