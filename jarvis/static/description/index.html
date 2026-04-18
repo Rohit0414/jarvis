@@ -6,29 +6,32 @@
 
     <!-- Safe, minimal style block for hover effects. Everything critical is inline. -->
     <style>
-        .niyu-hover-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
-        .niyu-hover-lift:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important; }
-        .niyu-safe-tag { display: inline-flex; align-items: center; padding: 6px 16px; border-radius: 50px; font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
+        .niyu-hover-lift { transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1); }
+        .niyu-hover-lift:hover { transform: translateY(-8px); box-shadow: 0 30px 60px -12px rgba(0,0,0,0.15) !important; }
+        .niyu-safe-tag { display: inline-flex; align-items: center; padding: 6px 16px; border-radius: 50px; font-size: 13px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
     </style>
 
     <!-- 1. CINEMATIC HERO (Odoo Safe Solid Background) -->
-    <div style="padding: 120px 20px 80px 20px; text-align: center; background-color: #020617; border-bottom: 5px solid #7c3aed;">
+    <div style="padding: 140px 20px 100px 20px; text-align: center; background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, #020617 60%); border-bottom: 2px solid rgba(124, 58, 237, 0.3); position: relative;">
         
-        <div class="container" style="max-width: 1100px;">
+        <!-- Subtle background glow effect -->
+        <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 80%; height: 400px; background: radial-gradient(circle, rgba(124,58,237,0.15) 0%, transparent 70%); pointer-events: none;"></div>
+
+        <div class="container" style="max-width: 1100px; position: relative; z-index: 2;">
             <!-- Badge -->
-            <div class="d-inline-flex align-items-center" style="gap: 12px; padding: 10px 24px; background-color: #1e293b; border: 1px solid #334155; border-radius: 100px; margin-bottom: 30px;">
-                <span style="color: #a78bfa; font-size: 18px;">&#10022;</span>
-                <span style="width: 1px; height: 16px; background-color: #475569; margin: 0 5px;"></span>
-                <span style="color: #e2e8f0; font-size: 13px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; margin: 0 5px;">Intelligent Automation</span>
+            <div class="d-inline-flex align-items-center niyu-hover-lift" style="gap: 12px; padding: 10px 26px; background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(167, 139, 250, 0.2); border-radius: 100px; margin-bottom: 35px; box-shadow: 0 8px 20px rgba(0,0,0,0.2);">
+                <span style="color: #c084fc; font-size: 18px; text-shadow: 0 0 10px rgba(192,132,252,0.5);">&#10022;</span>
+                <span style="width: 1px; height: 16px; background-color: rgba(255,255,255,0.1); margin: 0 5px;"></span>
+                <span style="color: #f8fafc; font-size: 13px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase; margin: 0 5px;">Intelligent Automation</span>
             </div>
 
-            <h1 class="display-3 fw-bolder" style="color: #ffffff; margin: 0 0 25px 0; letter-spacing: -2px; line-height: 1.1;">
+            <h1 class="display-3 fw-bolder" style="color: #ffffff; margin: 0 0 25px 0; letter-spacing: -2.5px; line-height: 1.1;">
                 Niyu AI <br>
-                <span style="color: #a78bfa;">Inventory Replenishment Planning</span>
+                <span style="background: linear-gradient(135deg, #a78bfa 0%, #d8b4fe 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 10px 30px rgba(124,58,237,0.2);">Inventory Replenishment Planning</span>
             </h1>
 
             <p style="font-size: 28px; color: #cbd5e1; max-width: 800px; margin: 0 auto 30px auto; font-weight: 600; letter-spacing: -1px;">
-                Stop guessing what to buy. <span style="color: #a78bfa;">See what to do next.</span>
+                Stop guessing what to buy. <span style="color: #c084fc;">See what to do next.</span>
             </p>
 
             <p style="font-size: 19px; color: #94a3b8; max-width: 850px; margin: 0 auto 60px auto; font-weight: 300; line-height: 1.8;">
@@ -36,23 +39,23 @@
             </p>
 
             <!-- Browser Frame Mockup -->
-            <div style="max-width: 1000px; margin: 0 auto; position: relative; z-index: 5;">
-                <div style="margin-bottom: 10px;">
-                    <span class="niyu-safe-tag" style="background-color: #1e293b; color: #a78bfa; border: 1px solid #334155;">
+            <div style="max-width: 1000px; margin: 0 auto; position: relative; z-index: 5; perspective: 1000px;">
+                <div style="margin-bottom: 15px;">
+                    <span class="niyu-safe-tag" style="background: linear-gradient(135deg, #1e293b, #0f172a); color: #c084fc; border: 1px solid rgba(167,139,250,0.3); box-shadow: 0 10px 20px rgba(0,0,0,0.3);">
                         &#128187; Planning Overview Screen
                     </span>
                 </div>
                 
                 <!-- Safe Odoo Browser Wrapper (Fixed Image Breaking) -->
-                <div class="shadow-lg" style="background-color: #0f172a; border-radius: 15px; overflow: hidden; border: 1px solid #334155; width: 100%; max-width: 100%;">
+                <div class="shadow-lg niyu-hover-lift" style="background-color: #0f172a; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); width: 100%; max-width: 100%; box-shadow: 0 30px 60px -15px rgba(124, 58, 237, 0.3) !important;">
                     <!-- Browser Header -->
-                    <div style="background-color: #1e293b; padding: 12px 20px; display: flex; align-items: center; border-bottom: 1px solid #334155;">
+                    <div style="background: linear-gradient(to bottom, #1e293b, #0f172a); padding: 14px 20px; display: flex; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
                         <div style="display: flex; gap: 8px;">
-                            <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #ff5f57;"></div>
-                            <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #febc2e;"></div>
-                            <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #28c840;"></div>
+                            <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #ff5f57; box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);"></div>
+                            <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #febc2e; box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);"></div>
+                            <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #28c840; box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);"></div>
                         </div>
-                        <div style="margin: 0 auto; background-color: #0f172a; padding: 6px 30px; border-radius: 100px; font-size: 12px; color: #64748b; font-weight: 500;">odoo.niyulabs.com/replenishment</div>
+                        <div style="margin: 0 auto; background: rgba(0,0,0,0.2); padding: 6px 30px; border-radius: 100px; font-size: 12px; color: #64748b; font-weight: 600; letter-spacing: 0.5px; box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);">odoo.niyulabs.com/replenishment</div>
                     </div>
                     <!-- Image with responsive constraints -->
                     <img src="./settings.png" alt="Planning Overview Screen" class="img-fluid" style="width: 100%; max-width: 100%; height: auto; display: block; background-color: #ffffff;">
@@ -62,35 +65,35 @@
     </div>
 
     <!-- 2. THE PROBLEM -->
-    <div class="py-5" style="background-color: #ffffff;">
+    <div class="py-5" style="background-color: #ffffff; background-image: radial-gradient(#f1f5f9 1px, transparent 1px); background-size: 30px 30px;">
         <div class="container my-5" style="max-width: 1100px;">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6">
-                    <span class="niyu-safe-tag" style="background-color: #f3e8ff; color: #7c3aed;">The Reality</span>
-                    <h2 class="display-5 fw-bolder" style="color: #020617; margin: 30px 0; letter-spacing: -2px; line-height: 1.15;">
+                    <span class="niyu-safe-tag" style="background: linear-gradient(135deg, #f3e8ff, #e9d5ff); color: #6d28d9; border: 1px solid #d8b4fe;">The Reality</span>
+                    <h2 class="display-5 fw-bolder" style="color: #020617; margin: 30px 0; letter-spacing: -2.5px; line-height: 1.15;">
                         Your inventory team already has data. <br>
-                        <span style="color: #64748b;">The problem is turning it into action.</span>
+                        <span style="color: #64748b; font-weight: 700;">The problem is turning it into action.</span>
                     </h2>
                 </div>
                 <div class="col-lg-6">
-                    <div class="niyu-hover-lift" style="background-color: #f8fafc; padding: 40px; border-radius: 20px; border: 1px solid #e2e8f0;">
+                    <div class="niyu-hover-lift" style="background: #ffffff; padding: 45px; border-radius: 24px; border: 1px solid #e2e8f0; box-shadow: 0 20px 40px -10px rgba(0,0,0,0.05);">
                         <p style="font-size: 22px; font-weight: 800; color: #0f172a; margin-bottom: 30px;">Most teams do some mix of this:</p>
                         <ul style="list-style: none; padding: 0; margin: 0; font-size: 16px; color: #475569; line-height: 2.2;">
-                            <li class="d-flex align-items-start mb-3"><span style="color: #ef4444; font-weight: 900; margin-right: 15px; font-size: 18px;">&#10060;</span> <span>They export sales.</span></li>
-                            <li class="d-flex align-items-start mb-3"><span style="color: #ef4444; font-weight: 900; margin-right: 15px; font-size: 18px;">&#10060;</span> <span>They check stock manually.</span></li>
-                            <li class="d-flex align-items-start mb-3"><span style="color: #ef4444; font-weight: 900; margin-right: 15px; font-size: 18px;">&#10060;</span> <span>They try to guess the next purchase.</span></li>
-                            <li class="d-flex align-items-start mb-3"><span style="color: #ef4444; font-weight: 900; margin-right: 15px; font-size: 18px;">&#10060;</span> <span>They notice one warehouse is short while another is sitting on stock.</span></li>
-                            <li class="d-flex align-items-start mb-0"><span style="color: #ef4444; font-weight: 900; margin-right: 15px; font-size: 18px;">&#10060;</span> <span>They buy too early, buy too late, or buy the wrong amount.</span></li>
+                            <li class="d-flex align-items-start mb-3"><span style="color: #ef4444; font-weight: 900; margin-right: 15px; font-size: 18px; text-shadow: 0 2px 5px rgba(239,68,68,0.3);">&#10060;</span> <span>They export sales.</span></li>
+                            <li class="d-flex align-items-start mb-3"><span style="color: #ef4444; font-weight: 900; margin-right: 15px; font-size: 18px; text-shadow: 0 2px 5px rgba(239,68,68,0.3);">&#10060;</span> <span>They check stock manually.</span></li>
+                            <li class="d-flex align-items-start mb-3"><span style="color: #ef4444; font-weight: 900; margin-right: 15px; font-size: 18px; text-shadow: 0 2px 5px rgba(239,68,68,0.3);">&#10060;</span> <span>They try to guess the next purchase.</span></li>
+                            <li class="d-flex align-items-start mb-3"><span style="color: #ef4444; font-weight: 900; margin-right: 15px; font-size: 18px; text-shadow: 0 2px 5px rgba(239,68,68,0.3);">&#10060;</span> <span>They notice one warehouse is short while another is sitting on stock.</span></li>
+                            <li class="d-flex align-items-start mb-0"><span style="color: #ef4444; font-weight: 900; margin-right: 15px; font-size: 18px; text-shadow: 0 2px 5px rgba(239,68,68,0.3);">&#10060;</span> <span>They buy too early, buy too late, or buy the wrong amount.</span></li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <div class="mt-5 p-4 p-md-5 shadow-sm" style="background-color: #f8fafc; border-radius: 20px; border-left: 8px solid #7c3aed; border-top: 1px solid #e2e8f0; border-right: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+            <div class="mt-5 p-4 p-md-5 shadow-sm niyu-hover-lift" style="background: linear-gradient(to right, #ffffff, #f8fafc); border-radius: 24px; border-left: 8px solid #7c3aed; border-top: 1px solid #e2e8f0; border-right: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; box-shadow: 0 15px 35px rgba(124,58,237,0.05) !important;">
                 <p style="font-size: 22px; color: #475569; line-height: 1.6; margin: 0;">
                     By the time someone understands what is happening, <span style="color: #020617; font-weight: 800;">the day is already gone.</span>
                     <br><br>
-                    <span style="font-size: 32px; font-weight: 900; color: #7c3aed; letter-spacing: -1px;">Niyu AI Inventory Replenishment Planning changes that.</span>
+                    <span style="font-size: 32px; font-weight: 900; background: linear-gradient(135deg, #7c3aed, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -1px;">Niyu AI Inventory Replenishment Planning changes that.</span>
                 </p>
             </div>
         </div>
@@ -98,21 +101,21 @@
 
     <!-- 3. ACTION ENGINE SECTION -->
     <div class="container py-5">
-        <div style="padding: 80px 30px; background-color: #0f172a; border-radius: 40px; text-align: center;">
+        <div style="padding: 100px 30px; background: linear-gradient(145deg, #0f172a 0%, #020617 100%); border-radius: 40px; text-align: center; box-shadow: inset 0 1px 1px rgba(255,255,255,0.1), 0 25px 50px -12px rgba(0,0,0,0.25);">
             <div style="max-width: 900px; margin: 0 auto;">
-                <p style="font-size: 22px; color: #94a3b8; line-height: 1.8; margin-bottom: 60px;">
+                <p style="font-size: 24px; color: #94a3b8; line-height: 1.8; margin-bottom: 60px; font-weight: 300;">
                     It does not just show a forecast and leave you there. It looks at your demand pattern, your current stock, your warehouse situation, and your planning setup. Then it tells you what the practical next step is:
                 </p>
 
-                <div class="d-flex flex-wrap justify-content-center align-items-center" style="gap: 15px; margin-bottom: 60px;">
-                    <span class="niyu-hover-lift" style="background-color: #ecfdf5; color: #10b981; border: 1px solid #10b981; padding: 12px 30px; border-radius: 100px; font-weight: 900; text-transform: uppercase; font-size: 14px;">buy now</span>
-                    <span class="niyu-hover-lift" style="background-color: #eff6ff; color: #3b82f6; border: 1px solid #3b82f6; padding: 12px 30px; border-radius: 100px; font-weight: 900; text-transform: uppercase; font-size: 14px;">transfer now</span>
-                    <span class="niyu-hover-lift" style="background-color: #7c3aed; color: #ffffff; padding: 15px 40px; border-radius: 100px; font-weight: 900; text-transform: uppercase; font-size: 16px;">split it</span>
-                    <span class="niyu-hover-lift" style="background-color: #fffbeb; color: #f59e0b; border: 1px solid #f59e0b; padding: 12px 30px; border-radius: 100px; font-weight: 900; text-transform: uppercase; font-size: 14px;">fix setup first</span>
-                    <span class="niyu-hover-lift" style="background-color: #f8fafc; color: #64748b; border: 1px solid #cbd5e1; padding: 12px 30px; border-radius: 100px; font-weight: 900; text-transform: uppercase; font-size: 14px;">or just watch</span>
+                <div class="d-flex flex-wrap justify-content-center align-items-center" style="gap: 18px; margin-bottom: 70px;">
+                    <span class="niyu-hover-lift" style="background: linear-gradient(135deg, #ecfdf5, #d1fae5); color: #047857; border: 1px solid #10b981; padding: 14px 32px; border-radius: 100px; font-weight: 900; text-transform: uppercase; font-size: 14px; box-shadow: 0 10px 20px rgba(16,185,129,0.15);">buy now</span>
+                    <span class="niyu-hover-lift" style="background: linear-gradient(135deg, #eff6ff, #dbeafe); color: #1d4ed8; border: 1px solid #3b82f6; padding: 14px 32px; border-radius: 100px; font-weight: 900; text-transform: uppercase; font-size: 14px; box-shadow: 0 10px 20px rgba(59,130,246,0.15);">transfer now</span>
+                    <span class="niyu-hover-lift" style="background: linear-gradient(135deg, #7c3aed, #9333ea); color: #ffffff; border: 1px solid #a855f7; padding: 16px 45px; border-radius: 100px; font-weight: 900; text-transform: uppercase; font-size: 16px; box-shadow: 0 15px 30px rgba(124,58,237,0.3);">split it</span>
+                    <span class="niyu-hover-lift" style="background: linear-gradient(135deg, #fffbeb, #fef3c7); color: #b45309; border: 1px solid #f59e0b; padding: 14px 32px; border-radius: 100px; font-weight: 900; text-transform: uppercase; font-size: 14px; box-shadow: 0 10px 20px rgba(245,158,11,0.15);">fix setup first</span>
+                    <span class="niyu-hover-lift" style="background: linear-gradient(135deg, #f8fafc, #f1f5f9); color: #475569; border: 1px solid #cbd5e1; padding: 14px 32px; border-radius: 100px; font-weight: 900; text-transform: uppercase; font-size: 14px; box-shadow: 0 10px 20px rgba(0,0,0,0.05);">or just watch</span>
                 </div>
 
-                <p class="display-6 fw-bolder" style="color: #ffffff; letter-spacing: -1px; margin: 0;">That is the difference.</p>
+                <p class="display-6 fw-bolder" style="color: #ffffff; letter-spacing: -1.5px; margin: 0; text-shadow: 0 4px 20px rgba(255,255,255,0.1);">That is the difference.</p>
             </div>
         </div>
     </div>
@@ -122,7 +125,7 @@
         <div class="container my-5" style="max-width: 1100px;">
             <div class="text-center" style="margin-bottom: 80px;">
                 <!-- Massive and Colorful Text Block using a safe solid color -->
-                <h2 style="font-size: 64px; font-weight: 900; color: #7c3aed; letter-spacing: -2px; margin-bottom: 30px; line-height: 1.1;">
+                <h2 style="font-size: 64px; font-weight: 900; background: linear-gradient(to right, #7c3aed, #db2777); -webkit-background-clip: text; -webkit-text-fill-color: transparent; letter-spacing: -2px; margin-bottom: 30px; line-height: 1.1;">
                     What this module really is
                 </h2>
                 <p style="font-size: 22px; color: #64748b; max-width: 800px; margin: 0 auto; font-weight: 500;">
@@ -132,21 +135,21 @@
 
             <div class="row justify-content-center g-4" style="margin-bottom: 80px;">
                 <div class="col-lg-4 col-md-6">
-                    <div class="niyu-hover-lift h-100" style="background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 40px 30px; border-radius: 20px; text-align: center;">
-                        <div style="font-size: 40px; margin-bottom: 20px;">&#10071;</div>
-                        <p style="font-weight: 900; font-size: 18px; color: #0f172a; margin: 0;">What needs attention now?</p>
+                    <div class="niyu-hover-lift h-100" style="background: #ffffff; border: 1px solid #e2e8f0; padding: 50px 30px; border-radius: 24px; text-align: center; box-shadow: 0 10px 40px -10px rgba(0,0,0,0.04);">
+                        <div style="font-size: 45px; margin-bottom: 25px; filter: drop-shadow(0 10px 10px rgba(0,0,0,0.1));">&#10071;</div>
+                        <p style="font-weight: 900; font-size: 19px; color: #0f172a; margin: 0;">What needs attention now?</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="niyu-hover-lift h-100" style="background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 40px 30px; border-radius: 20px; text-align: center;">
-                        <div style="font-size: 40px; margin-bottom: 20px;">&#128184;</div>
-                        <p style="font-weight: 900; font-size: 18px; color: #0f172a; margin: 0;">What should we buy?</p>
+                    <div class="niyu-hover-lift h-100" style="background: #ffffff; border: 1px solid #e2e8f0; padding: 50px 30px; border-radius: 24px; text-align: center; box-shadow: 0 10px 40px -10px rgba(0,0,0,0.04);">
+                        <div style="font-size: 45px; margin-bottom: 25px; filter: drop-shadow(0 10px 10px rgba(0,0,0,0.1));">&#128184;</div>
+                        <p style="font-weight: 900; font-size: 19px; color: #0f172a; margin: 0;">What should we buy?</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
-                    <div class="niyu-hover-lift h-100" style="background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 40px 30px; border-radius: 20px; text-align: center;">
-                        <div style="font-size: 40px; margin-bottom: 20px;">&#128256;</div>
-                        <p style="font-weight: 900; font-size: 18px; color: #0f172a; margin: 0;">What can we move internally?</p>
+                    <div class="niyu-hover-lift h-100" style="background: #ffffff; border: 1px solid #e2e8f0; padding: 50px 30px; border-radius: 24px; text-align: center; box-shadow: 0 10px 40px -10px rgba(0,0,0,0.04);">
+                        <div style="font-size: 45px; margin-bottom: 25px; filter: drop-shadow(0 10px 10px rgba(0,0,0,0.1));">&#128256;</div>
+                        <p style="font-weight: 900; font-size: 19px; color: #0f172a; margin: 0;">What can we move internally?</p>
                     </div>
                 </div>
             </div>
@@ -154,29 +157,29 @@
             <!-- View 1 -->
             <div class="row g-5 align-items-center">
                 <div class="col-12">
-                    <div class="shadow-sm niyu-hover-lift" style="background-color: #ffffff; border-radius: 15px; border: 1px solid #e2e8f0; overflow: hidden; max-width: 100%;">
-                        <div style="background-color: #f8fafc; padding: 12px 20px; display: flex; align-items: center; border-bottom: 1px solid #e2e8f0;">
+                    <div class="shadow-lg niyu-hover-lift" style="background-color: #ffffff; border-radius: 20px; border: 1px solid #e2e8f0; overflow: hidden; max-width: 100%; box-shadow: 0 30px 60px -15px rgba(0,0,0,0.1) !important;">
+                        <div style="background: linear-gradient(to bottom, #f8fafc, #f1f5f9); padding: 14px 20px; display: flex; align-items: center; border-bottom: 1px solid #e2e8f0;">
                             <div style="display: flex; gap: 8px;">
-                                <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #ff5f57;"></div>
-                                <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #febc2e;"></div>
-                                <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #28c840;"></div>
+                                <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #ff5f57; box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);"></div>
+                                <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #febc2e; box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);"></div>
+                                <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #28c840; box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);"></div>
                             </div>
-                            <div style="margin-left: 15px; font-size: 12px; color: #64748b; font-weight: 600;">Odoo / Planning Overview</div>
+                            <div style="margin-left: 15px; font-size: 12px; color: #64748b; font-weight: 700; letter-spacing: 0.5px;">Odoo / Planning Overview</div>
                         </div>
                         <img src="./access_bundle.png" alt="Niyu Planning Overview" class="img-fluid" style="width: 100%; max-width: 100%; height: auto; display: block;">
                     </div>
                 </div>
-                <div class="col-12 text-center mt-4">
-                    <span class="niyu-safe-tag mb-3" style="background-color: #f1f5f9; color: #0f172a; border: 1px solid #cbd5e1;">View 1: Niyu Planning Overview</span>
-                    <p style="font-size: 20px; font-weight: 700; color: #7c3aed; margin-bottom: 20px;">One screen to understand the current situation, the next actions, and where pressure is building.</p>
-                    <p style="font-size: 18px; color: #475569; max-width: 900px; margin: 0 auto 30px auto; line-height: 1.8;">
+                <div class="col-12 text-center mt-5">
+                    <span class="niyu-safe-tag mb-4" style="background: #ffffff; color: #475569; border: 1px solid #cbd5e1; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">View 1: Niyu Planning Overview</span>
+                    <p style="font-size: 24px; font-weight: 800; background: linear-gradient(135deg, #7c3aed, #db2777); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 20px; letter-spacing: -0.5px;">One screen to understand the current situation, the next actions, and where pressure is building.</p>
+                    <p style="font-size: 18px; color: #475569; max-width: 900px; margin: 0 auto 40px auto; line-height: 1.8;">
                         The overview is built for fast reading. A manager should be able to open it and understand the day in seconds. Not a dashboard full of noise. Not a spreadsheet in disguise. Just a clear planning view.
                     </p>
-                    <div class="d-flex flex-wrap justify-content-center" style="gap: 10px;">
-                        <span style="background-color: #ffffff; border: 1px solid #e2e8f0; padding: 10px 20px; border-radius: 10px; font-weight: 800; font-size: 13px; color: #0f172a;">&#9989; urgent action lines</span>
-                        <span style="background-color: #ffffff; border: 1px solid #e2e8f0; padding: 10px 20px; border-radius: 10px; font-weight: 800; font-size: 13px; color: #0f172a;">&#9989; buy budget needed</span>
-                        <span style="background-color: #ffffff; border: 1px solid #e2e8f0; padding: 10px 20px; border-radius: 10px; font-weight: 800; font-size: 13px; color: #0f172a;">&#9989; setup blockers</span>
-                        <span style="background-color: #ffffff; border: 1px solid #e2e8f0; padding: 10px 20px; border-radius: 10px; font-weight: 800; font-size: 13px; color: #0f172a;">&#9989; inventory health</span>
+                    <div class="d-flex flex-wrap justify-content-center" style="gap: 12px;">
+                        <span class="niyu-hover-lift" style="background: #ffffff; border: 1px solid #e2e8f0; padding: 12px 24px; border-radius: 12px; font-weight: 800; font-size: 13px; color: #0f172a; box-shadow: 0 4px 10px rgba(0,0,0,0.03);"><span style="color: #10b981; margin-right: 5px;">&#9989;</span> urgent action lines</span>
+                        <span class="niyu-hover-lift" style="background: #ffffff; border: 1px solid #e2e8f0; padding: 12px 24px; border-radius: 12px; font-weight: 800; font-size: 13px; color: #0f172a; box-shadow: 0 4px 10px rgba(0,0,0,0.03);"><span style="color: #10b981; margin-right: 5px;">&#9989;</span> buy budget needed</span>
+                        <span class="niyu-hover-lift" style="background: #ffffff; border: 1px solid #e2e8f0; padding: 12px 24px; border-radius: 12px; font-weight: 800; font-size: 13px; color: #0f172a; box-shadow: 0 4px 10px rgba(0,0,0,0.03);"><span style="color: #10b981; margin-right: 5px;">&#9989;</span> setup blockers</span>
+                        <span class="niyu-hover-lift" style="background: #ffffff; border: 1px solid #e2e8f0; padding: 12px 24px; border-radius: 12px; font-weight: 800; font-size: 13px; color: #0f172a; box-shadow: 0 4px 10px rgba(0,0,0,0.03);"><span style="color: #10b981; margin-right: 5px;">&#9989;</span> inventory health</span>
                     </div>
                 </div>
             </div>
@@ -184,7 +187,7 @@
     </div>
 
     <!-- 5. TELLS YOU WHAT TO DO -->
-    <div class="py-5" style="background-color: #f8fafc; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+    <div class="py-5" style="background: linear-gradient(to bottom, #f8fafc, #ffffff); border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
         <div class="container my-5" style="max-width: 1100px;">
             <div class="text-center" style="margin-bottom: 80px;">
                 <h2 class="display-5 fw-bolder" style="color: #020617; letter-spacing: -2px;">It tells you what to do, not just what happened</h2>
@@ -196,19 +199,19 @@
             <!-- View 2 -->
             <div class="row g-5 align-items-center">
                 <div class="col-lg-5">
-                    <span class="niyu-safe-tag mb-3" style="background-color: #ecfdf5; color: #10b981; border: 1px solid #a7f3d0;">View 2: Action Lines</span>
-                    <h3 class="fw-bolder" style="font-size: 28px; color: #0f172a; margin-bottom: 15px; letter-spacing: -1px;">A working queue for planners, not just a forecast table.</h3>
+                    <span class="niyu-safe-tag mb-4" style="background: linear-gradient(135deg, #ecfdf5, #d1fae5); color: #047857; border: 1px solid #a7f3d0; box-shadow: 0 5px 15px rgba(16,185,129,0.1);">View 2: Action Lines</span>
+                    <h3 class="fw-bolder" style="font-size: 32px; color: #0f172a; margin-bottom: 20px; letter-spacing: -1px; line-height: 1.2;">A working queue for planners, not just a forecast table.</h3>
                     <p style="font-size: 18px; color: #475569; line-height: 1.8;">
                         This module goes further. It creates Action Lines that turn demand and stock data into practical decisions. Each line tells you the next path: buy, transfer, split, watch, ignore for now, or fix setup first.
                     </p>
                 </div>
                 <div class="col-lg-7">
-                    <div class="shadow-sm niyu-hover-lift" style="background-color: #ffffff; border-radius: 15px; border: 1px solid #e2e8f0; overflow: hidden; max-width: 100%;">
-                        <div style="background-color: #f8fafc; padding: 10px 15px; border-bottom: 1px solid #e2e8f0;">
+                    <div class="shadow-lg niyu-hover-lift" style="background-color: #ffffff; border-radius: 20px; border: 1px solid #e2e8f0; overflow: hidden; max-width: 100%; box-shadow: 0 25px 50px -12px rgba(0,0,0,0.1) !important;">
+                        <div style="background: linear-gradient(to bottom, #f8fafc, #f1f5f9); padding: 12px 18px; border-bottom: 1px solid #e2e8f0;">
                             <div style="display: flex; gap: 8px;">
-                                <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #ff5f57;"></div>
-                                <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #febc2e;"></div>
-                                <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #28c840;"></div>
+                                <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #ff5f57; box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);"></div>
+                                <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #febc2e; box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);"></div>
+                                <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #28c840; box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);"></div>
                             </div>
                         </div>
                         <img src="./audit_analysis.png" alt="Action Lines" class="img-fluid" style="width: 100%; max-width: 100%; height: auto; display: block;">
@@ -216,11 +219,11 @@
                 </div>
             </div>
             
-            <div class="shadow-sm mt-5" style="padding: 40px; background-color: #ffffff; border-radius: 20px; border: 1px solid #e2e8f0; border-left: 6px solid #10b981;">
+            <div class="shadow-sm mt-5 niyu-hover-lift" style="padding: 45px; background: #ffffff; border-radius: 24px; border: 1px solid #e2e8f0; border-left: 8px solid #10b981; box-shadow: 0 15px 35px rgba(16,185,129,0.05) !important;">
                 <p style="font-size: 18px; color: #475569; line-height: 1.8; margin: 0;">
                     Action Lines are where the product becomes useful. They are flexible enough for real warehouse work. A line can tell you: how much to buy, which vendor to buy from, whether another warehouse can cover part of the need, whether a transfer should happen instead of a purchase, or whether the best answer is split: transfer some, buy some.
                     <br><br>
-                    <strong style="color: #0f172a;">&#10038; This is especially useful in multi-warehouse operations where the right answer is often not “buy everything.”</strong>
+                    <strong style="color: #0f172a; font-size: 19px;"><span style="color:#10b981; margin-right:5px;">&#10038;</span> This is especially useful in multi-warehouse operations where the right answer is often not “buy everything.”</strong>
                 </p>
             </div>
         </div>
@@ -228,30 +231,30 @@
 
     <!-- 6. MULTI-WAREHOUSE -->
     <div class="container py-5 mt-4">
-        <div style="padding: 80px 30px; background-color: #0f172a; border-radius: 40px; color: #ffffff; text-align: center;">
+        <div style="padding: 100px 30px; background: linear-gradient(135deg, #020617 0%, #1e1b4b 100%); border-radius: 40px; color: #ffffff; text-align: center; box-shadow: inset 0 1px 1px rgba(255,255,255,0.1), 0 30px 60px -15px rgba(124,58,237,0.2);">
             <div style="max-width: 1000px; margin: 0 auto;">
-                <h2 class="display-5 fw-bolder" style="margin-bottom: 30px; line-height: 1.2; letter-spacing: -2px;">Multi-warehouse planning without the usual mess</h2>
-                <p style="font-size: 20px; color: #cbd5e1; line-height: 1.8; margin-bottom: 60px; max-width: 850px; margin-left: auto; margin-right: auto;">
+                <h2 class="display-5 fw-bolder" style="margin-bottom: 30px; line-height: 1.2; letter-spacing: -2.5px;">Multi-warehouse planning <br><span style="background: linear-gradient(135deg, #93c5fd, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">without the usual mess</span></h2>
+                <p style="font-size: 21px; color: #cbd5e1; line-height: 1.8; margin-bottom: 60px; max-width: 850px; margin-left: auto; margin-right: auto; font-weight: 300;">
                     In many businesses, stock in the wrong place is the problem. One warehouse is short. Another one has extra. The team does not notice in time, so they buy again. <br><br>
-                    <span style="color: #60a5fa; font-weight: 800; font-size: 22px;">This module checks that. It suggests internal transfers when stock already exists elsewhere.</span>
+                    <span style="color: #60a5fa; font-weight: 800; font-size: 24px; text-shadow: 0 4px 15px rgba(96,165,250,0.2);">This module checks that. It suggests internal transfers when stock already exists elsewhere.</span>
                 </p>
 
                 <!-- View 3 -->
-                <div class="shadow-lg niyu-hover-lift mx-auto" style="background-color: #1e293b; border-radius: 15px; overflow: hidden; border: 1px solid #334155; max-width: 800px; margin-bottom: 40px;">
-                    <div style="background-color: #0f172a; padding: 10px 15px; border-bottom: 1px solid #334155;">
+                <div class="shadow-lg niyu-hover-lift mx-auto" style="background-color: #1e293b; border-radius: 20px; overflow: hidden; border: 1px solid rgba(255,255,255,0.15); max-width: 850px; margin-bottom: 50px; box-shadow: 0 30px 60px -15px rgba(0,0,0,0.5) !important;">
+                    <div style="background: linear-gradient(to bottom, #1e293b, #0f172a); padding: 12px 18px; border-bottom: 1px solid rgba(255,255,255,0.05);">
                         <div style="display: flex; gap: 8px;">
-                            <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #ff5f57;"></div>
-                            <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #febc2e;"></div>
-                            <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #28c840;"></div>
+                            <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #ff5f57; box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);"></div>
+                            <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #febc2e; box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);"></div>
+                            <div style="width: 12px; height: 12px; border-radius: 50%; background-color: #28c840; box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);"></div>
                         </div>
                     </div>
                     <img src="./ChatGPT_Response.png" alt="Transfer Recommendation" class="img-fluid" style="width: 100%; max-width: 100%; height: auto; display: block; background-color: #ffffff;">
                 </div>
                 
-                <span class="niyu-safe-tag mb-3" style="background-color: #1e3a8a; color: #93c5fd; border: 1px solid #1e40af;">View 3: Transfer or Split Recommendation</span>
-                <h3 class="fw-bolder" style="font-size: 24px; color: #ffffff; margin-bottom: 15px;">Move stock when it makes sense. Buy only what is still needed.</h3>
+                <span class="niyu-safe-tag mb-4" style="background: rgba(30, 58, 138, 0.5); backdrop-filter: blur(5px); color: #93c5fd; border: 1px solid rgba(147,197,253,0.3); box-shadow: 0 4px 15px rgba(0,0,0,0.2);">View 3: Transfer or Split Recommendation</span>
+                <h3 class="fw-bolder" style="font-size: 26px; color: #ffffff; margin-bottom: 15px;">Move stock when it makes sense. Buy only what is still needed.</h3>
 
-                <p style="font-size: 18px; color: #94a3b8; line-height: 1.8; max-width: 800px; margin: 30px auto 0 auto;">
+                <p style="font-size: 19px; color: #94a3b8; line-height: 1.8; max-width: 800px; margin: 30px auto 0 auto; font-weight: 300;">
                     And when one source is not enough, it can handle split planning: move what you can from internal stock, buy the remaining quantity. That gives a more realistic plan and usually leads to better stock use.
                 </p>
             </div>
@@ -259,11 +262,11 @@
     </div>
 
     <!-- 7. RULES & EXCLUSIONS -->
-    <div class="py-5" style="background-color: #ffffff;">
+    <div class="py-5" style="background-color: #ffffff; background-image: linear-gradient(rgba(241, 245, 249, 0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(241, 245, 249, 0.5) 1px, transparent 1px); background-size: 40px 40px;">
         <div class="container my-5" style="max-width: 1100px;">
             <div class="text-center" style="margin-bottom: 80px;">
-                <h2 class="display-5 fw-bolder" style="color: #020617; letter-spacing: -2px;">Planning rules and exclusions are what make it practical</h2>
-                <p style="font-size: 20px; color: #64748b; margin-top: 20px; max-width: 800px; margin-left: auto; margin-right: auto;">
+                <h2 class="display-5 fw-bolder" style="color: #020617; letter-spacing: -2.5px;">Planning rules and exclusions <br>are what make it practical</h2>
+                <p style="font-size: 21px; color: #64748b; margin-top: 20px; max-width: 800px; margin-left: auto; margin-right: auto;">
                     Real companies have exceptions. Some products should behave differently. Some warehouses need different coverage. Some items should be left out completely.
                 </p>
             </div>
@@ -271,77 +274,80 @@
             <!-- View 4 & 5 -->
             <div class="row g-5" style="margin-bottom: 80px;">
                 <div class="col-md-6">
-                    <div class="niyu-hover-lift h-100" style="background-color: #ffffff; padding: 30px; border-radius: 20px; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
-                        <div style="border-radius: 10px; overflow: hidden; border: 1px solid #e2e8f0; margin-bottom: 20px; max-width: 100%;">
-                            <div style="background-color: #f8fafc; padding: 8px 12px; border-bottom: 1px solid #e2e8f0; display: flex; gap: 6px;">
-                                <div style="width: 8px; height: 8px; border-radius: 50%; background-color: #ff5f57;"></div>
-                                <div style="width: 8px; height: 8px; border-radius: 50%; background-color: #febc2e;"></div>
-                                <div style="width: 8px; height: 8px; border-radius: 50%; background-color: #28c840;"></div>
+                    <div class="niyu-hover-lift h-100" style="background: #ffffff; padding: 40px; border-radius: 24px; border: 1px solid #e2e8f0; box-shadow: 0 20px 50px -10px rgba(0,0,0,0.06);">
+                        <div style="border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; margin-bottom: 25px; max-width: 100%; box-shadow: 0 10px 20px rgba(0,0,0,0.03);">
+                            <div style="background: linear-gradient(to bottom, #f8fafc, #f1f5f9); padding: 10px 15px; border-bottom: 1px solid #e2e8f0; display: flex; gap: 6px;">
+                                <div style="width: 10px; height: 10px; border-radius: 50%; background-color: #ff5f57; box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);"></div>
+                                <div style="width: 10px; height: 10px; border-radius: 50%; background-color: #febc2e; box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);"></div>
+                                <div style="width: 10px; height: 10px; border-radius: 50%; background-color: #28c840; box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);"></div>
                             </div>
                             <img src="./claude.png" alt="Planning Rules" class="img-fluid" style="width: 100%; max-width: 100%; height: auto; display: block;">
                         </div>
-                        <span class="niyu-safe-tag mb-2" style="background-color: #f3e8ff; color: #7c3aed;">View 4: Planning Rules</span>
-                        <p style="font-weight: 700; font-size: 18px; color: #0f172a; margin: 0;">Set how planning should behave in your business.</p>
+                        <span class="niyu-safe-tag mb-3" style="background: linear-gradient(135deg, #f3e8ff, #e9d5ff); color: #7c3aed; border: 1px solid #d8b4fe;">View 4: Planning Rules</span>
+                        <p style="font-weight: 800; font-size: 19px; color: #0f172a; margin: 0; line-height: 1.4;">Set how planning should behave in your business.</p>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="niyu-hover-lift h-100" style="background-color: #ffffff; padding: 30px; border-radius: 20px; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
-                        <div style="border-radius: 10px; overflow: hidden; border: 1px solid #e2e8f0; margin-bottom: 20px; max-width: 100%;">
-                            <div style="background-color: #f8fafc; padding: 8px 12px; border-bottom: 1px solid #e2e8f0; display: flex; gap: 6px;">
-                                <div style="width: 8px; height: 8px; border-radius: 50%; background-color: #ff5f57;"></div>
-                                <div style="width: 8px; height: 8px; border-radius: 50%; background-color: #febc2e;"></div>
-                                <div style="width: 8px; height: 8px; border-radius: 50%; background-color: #28c840;"></div>
+                    <div class="niyu-hover-lift h-100" style="background: #ffffff; padding: 40px; border-radius: 24px; border: 1px solid #e2e8f0; box-shadow: 0 20px 50px -10px rgba(0,0,0,0.06);">
+                        <div style="border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; margin-bottom: 25px; max-width: 100%; box-shadow: 0 10px 20px rgba(0,0,0,0.03);">
+                            <div style="background: linear-gradient(to bottom, #f8fafc, #f1f5f9); padding: 10px 15px; border-bottom: 1px solid #e2e8f0; display: flex; gap: 6px;">
+                                <div style="width: 10px; height: 10px; border-radius: 50%; background-color: #ff5f57; box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);"></div>
+                                <div style="width: 10px; height: 10px; border-radius: 50%; background-color: #febc2e; box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);"></div>
+                                <div style="width: 10px; height: 10px; border-radius: 50%; background-color: #28c840; box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);"></div>
                             </div>
                             <img src="./embedded.png" alt="Exclusions" class="img-fluid" style="width: 100%; max-width: 100%; height: auto; display: block;">
                         </div>
-                        <span class="niyu-safe-tag mb-2" style="background-color: #fef2f2; color: #ef4444;">View 5: Exclusions</span>
-                        <p style="font-weight: 700; font-size: 18px; color: #0f172a; margin: 0;">Leave out what should not be part of automated planning.</p>
+                        <span class="niyu-safe-tag mb-3" style="background: linear-gradient(135deg, #fef2f2, #fee2e2); color: #ef4444; border: 1px solid #fca5a5;">View 5: Exclusions</span>
+                        <p style="font-weight: 800; font-size: 19px; color: #0f172a; margin: 0; line-height: 1.4;">Leave out what should not be part of automated planning.</p>
                     </div>
                 </div>
             </div>
 
-            <div style="padding: 40px; background-color: #f8fafc; border: 1px solid #e2e8f0; color: #475569; border-radius: 20px; text-align: center;">
-                <p style="font-size: 18px; line-height: 1.8; margin: 0;">
+            <div class="niyu-hover-lift" style="padding: 50px; background: linear-gradient(to right, #f8fafc, #ffffff); border: 1px solid #e2e8f0; color: #475569; border-radius: 24px; text-align: center; box-shadow: 0 15px 35px rgba(0,0,0,0.03);">
+                <p style="font-size: 20px; line-height: 1.8; margin: 0;">
                     These are not there to look advanced. They are there so the plan matches how your business actually runs. With them, you can shape the output without making the system hard to use. <br><br>
-                    <span style="color: #0f172a; font-size: 20px; font-weight: 800;">That balance is important: strong enough for serious planning, simple enough to use daily.</span>
+                    <span style="color: #0f172a; font-size: 22px; font-weight: 900; background: linear-gradient(135deg, #0f172a, #334155); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">That balance is important: strong enough for serious planning, simple enough to use daily.</span>
                 </p>
             </div>
         </div>
     </div>
 
     <!-- 8. COMPARISON (MASSIVE QUOTE TEXT) -->
-    <div class="py-5" style="background-color: #f8fafc; border-top: 1px solid #e2e8f0;">
+    <div class="py-5" style="background: #f8fafc; border-top: 1px solid #e2e8f0;">
         <div class="container text-center my-5" style="max-width: 1000px;">
             
             <!-- HUGE QUOTE AS REQUESTED -->
             <div style="margin-bottom: 80px;">
-                <h2 style="font-size: 52px; font-weight: 900; color: #020617; letter-spacing: -2px; line-height: 1.2;">
+                <h2 style="font-size: 60px; font-weight: 900; color: #020617; letter-spacing: -3px; line-height: 1.15;">
                     Not "more analytics." <br>
                     Not "more dashboards." <br>
-                    <span style="color: #7c3aed;">But a better daily workflow.</span>
+                    <span style="background: linear-gradient(135deg, #7c3aed, #ec4899); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">But a better daily workflow.</span>
                 </h2>
             </div>
             
-            <div class="shadow-lg niyu-hover-lift" style="background-color: #e2e8f0; padding: 4px; border-radius: 30px; overflow: hidden;">
-                <div class="row g-0">
-                    <div class="col-md-6" style="background-color: #ffffff; padding: 50px 30px; text-align: left;">
-                        <span class="niyu-safe-tag mb-4" style="background-color: #fef2f2; color: #ef4444;">Current Way</span>
-                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 18px; color: #64748b; line-height: 2;">
-                            <li class="mb-3"><span style="margin-right: 10px;">&#10060;</span> look at sales</li>
-                            <li class="mb-3"><span style="margin-right: 10px;">&#10060;</span> look at stock</li>
-                            <li class="mb-3"><span style="margin-right: 10px;">&#10060;</span> compare warehouses</li>
-                            <li class="mb-3"><span style="margin-right: 10px;">&#10060;</span> buy too much or too late</li>
-                            <li><span style="margin-right: 10px;">&#10060;</span> repeat tomorrow</li>
+            <div class="shadow-lg niyu-hover-lift" style="background: linear-gradient(135deg, #e2e8f0, #cbd5e1); padding: 5px; border-radius: 34px; overflow: hidden; box-shadow: 0 30px 60px -15px rgba(0,0,0,0.1) !important;">
+                <div class="row g-0" style="border-radius: 30px; overflow: hidden;">
+                    <div class="col-md-6" style="background-color: #ffffff; padding: 60px 40px; text-align: left;">
+                        <span class="niyu-safe-tag mb-5" style="background: #fef2f2; color: #ef4444; border: 1px solid #fecaca;">Current Way</span>
+                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 19px; color: #64748b; line-height: 2.2;">
+                            <li class="mb-3"><span style="margin-right: 12px; filter: drop-shadow(0 2px 4px rgba(239,68,68,0.2));">&#10060;</span> look at sales</li>
+                            <li class="mb-3"><span style="margin-right: 12px; filter: drop-shadow(0 2px 4px rgba(239,68,68,0.2));">&#10060;</span> look at stock</li>
+                            <li class="mb-3"><span style="margin-right: 12px; filter: drop-shadow(0 2px 4px rgba(239,68,68,0.2));">&#10060;</span> compare warehouses</li>
+                            <li class="mb-3"><span style="margin-right: 12px; filter: drop-shadow(0 2px 4px rgba(239,68,68,0.2));">&#10060;</span> buy too much or too late</li>
+                            <li><span style="margin-right: 12px; filter: drop-shadow(0 2px 4px rgba(239,68,68,0.2));">&#10060;</span> repeat tomorrow</li>
                         </ul>
                     </div>
-                    <div class="col-md-6" style="background-color: #7c3aed; padding: 50px 30px; text-align: left; color: #ffffff;">
-                        <span class="niyu-safe-tag mb-4" style="background-color: #6d28d9; color: #ffffff; border: 1px solid #5b21b6;">Niyu AI Workflow</span>
-                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 18px; color: #ffffff; font-weight: 700; line-height: 2;">
-                            <li class="mb-3"><span style="margin-right: 10px;">&#9989;</span> open overview</li>
-                            <li class="mb-3"><span style="margin-right: 10px;">&#9989;</span> see what needs attention</li>
-                            <li class="mb-3"><span style="margin-right: 10px;">&#9989;</span> open action lines</li>
-                            <li class="mb-3"><span style="margin-right: 10px;">&#9989;</span> buy, transfer, or split</li>
-                            <li><span style="margin-right: 10px;">&#9989;</span> move forward</li>
+                    <div class="col-md-6" style="background: linear-gradient(135deg, #7c3aed 0%, #5b21b6 100%); padding: 60px 40px; text-align: left; color: #ffffff; position: relative;">
+                        <!-- Subtle inner glow -->
+                        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at top right, rgba(255,255,255,0.15), transparent); pointer-events: none;"></div>
+                        
+                        <span class="niyu-safe-tag mb-5" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(5px); color: #ffffff; border: 1px solid rgba(255,255,255,0.2); box-shadow: 0 4px 15px rgba(0,0,0,0.1);">Niyu AI Workflow</span>
+                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 19px; color: #ffffff; font-weight: 800; line-height: 2.2; position: relative; z-index: 2;">
+                            <li class="mb-3"><span style="margin-right: 12px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">&#9989;</span> open overview</li>
+                            <li class="mb-3"><span style="margin-right: 12px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">&#9989;</span> see what needs attention</li>
+                            <li class="mb-3"><span style="margin-right: 12px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">&#9989;</span> open action lines</li>
+                            <li class="mb-3"><span style="margin-right: 12px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">&#9989;</span> buy, transfer, or split</li>
+                            <li><span style="margin-right: 12px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));">&#9989;</span> move forward</li>
                         </ul>
                     </div>
                 </div>
@@ -352,34 +358,39 @@
     <!-- 9. PRICING -->
     <div class="py-5" style="background-color: #ffffff;">
         <div class="container text-center my-5" style="max-width: 1100px;">
-            <span class="niyu-safe-tag mb-5" style="background-color:#fff7ed; border:1px solid #fed7aa; color:#ea580c; padding: 8px 24px;">Pricing</span>
+            <span class="niyu-safe-tag mb-5" style="background: linear-gradient(135deg, #fff7ed, #ffedd5); border: 1px solid #fed7aa; color: #ea580c; padding: 10px 30px; font-size: 14px; box-shadow: 0 5px 15px rgba(234,88,12,0.1);">Pricing</span>
             
             <div class="row justify-content-center g-5 align-items-center">
                 <div class="col-lg-5 col-md-8">
-                    <div class="niyu-hover-lift h-100" style="background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 30px; padding: 50px 40px; text-align: left; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
-                        <h4 style="font-weight: 900; font-size: 24px; color: #64748b; margin-bottom: 15px;">Free Lifetime</h4>
-                        <div style="font-size: 54px; font-weight: 900; color: #0f172a; margin-bottom: 30px; line-height: 1;">$0</div>
-                        <ul style="list-style: none; padding: 0; margin: 0 0 20px 0; font-size: 16px; color: #475569; line-height: 2.5; font-weight: 500;">
-                            <li><span style="margin-right: 10px; font-size: 18px;">&#128281;</span> up to 20 SKUs</li>
-                            <li><span style="margin-right: 10px; font-size: 18px;">&#128281;</span> 1 automatic forecast per day</li>
-                            <li><span style="margin-right: 10px; font-size: 18px;">&#128281;</span> 1 manual forecast per day</li>
-                            <li><span style="margin-right: 10px; font-size: 18px;">&#128281;</span> maximum forecast horizon of 30 days</li>
-                            <li><span style="margin-right: 10px; font-size: 18px;">&#128281;</span> standard support</li>
+                    <div class="niyu-hover-lift h-100" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 36px; padding: 60px 45px; text-align: left; box-shadow: 0 20px 50px -10px rgba(0,0,0,0.05);">
+                        <h4 style="font-weight: 900; font-size: 26px; color: #64748b; margin-bottom: 20px;">Free Lifetime</h4>
+                        <div style="font-size: 64px; font-weight: 900; color: #0f172a; margin-bottom: 35px; line-height: 1; letter-spacing: -2px;">$0</div>
+                        <ul style="list-style: none; padding: 0; margin: 0 0 20px 0; font-size: 17px; color: #475569; line-height: 2.5; font-weight: 500;">
+                            <li><span style="margin-right: 12px; font-size: 20px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">&#128281;</span> up to 20 SKUs</li>
+                            <li><span style="margin-right: 12px; font-size: 20px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">&#128281;</span> 1 automatic forecast per day</li>
+                            <li><span style="margin-right: 12px; font-size: 20px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">&#128281;</span> 1 manual forecast per day</li>
+                            <li><span style="margin-right: 12px; font-size: 20px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">&#128281;</span> maximum forecast horizon of 30 days</li>
+                            <li><span style="margin-right: 12px; font-size: 20px; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));">&#128281;</span> standard support</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="col-lg-5 col-md-8">
-                    <div class="niyu-hover-lift h-100 position-relative" style="background-color: #0f172a; border-radius: 30px; padding: 50px 40px; text-align: left; color: #ffffff; box-shadow: 0 20px 50px rgba(124, 58, 237, 0.3);">
-                        <div style="position: absolute; top: -15px; right: 30px; background-color: #7c3aed; color: #fff; padding: 6px 16px; border-radius: 50px; font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;">Best Value</div>
-                        <h4 style="font-weight: 900; font-size: 24px; color: #a78bfa; margin-bottom: 15px;">Pro Plan</h4>
-                        <div style="font-size: 54px; font-weight: 900; color: #ffffff; margin-bottom: 30px; line-height: 1;">$119 <span style="font-size: 16px; font-weight: 600; opacity: 0.6; display: inline-block;">USD / month</span></div>
-                        <ul style="list-style: none; padding: 0; margin: 0 0 20px 0; font-size: 16px; color: #cbd5e1; line-height: 2.5; font-weight: 500;">
-                            <li><span style="color: #10b981; font-weight: 900; margin-right: 10px; font-size: 18px;">&#10003;</span> up to 20,000 SKUs</li>
-                            <li><span style="color: #10b981; font-weight: 900; margin-right: 10px; font-size: 18px;">&#10003;</span> 1 automatic forecast per day</li>
-                            <li><span style="color: #10b981; font-weight: 900; margin-right: 10px; font-size: 18px;">&#10003;</span> 3 manual forecasts per day</li>
-                            <li><span style="color: #10b981; font-weight: 900; margin-right: 10px; font-size: 18px;">&#10003;</span> maximum forecast horizon of 120 days</li>
-                            <li><span style="color: #10b981; font-weight: 900; margin-right: 10px; font-size: 18px;">&#10003;</span> priority support</li>
+                    <div class="niyu-hover-lift h-100 position-relative" style="background: linear-gradient(145deg, #0f172a 0%, #020617 100%); border-radius: 36px; padding: 60px 45px; text-align: left; color: #ffffff; box-shadow: 0 30px 60px -15px rgba(124, 58, 237, 0.4) !important; border: 1px solid #334155; border-top: 1px solid rgba(167,139,250,0.3);">
+                        
+                        <!-- Subtle background glow -->
+                        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: radial-gradient(circle at top right, rgba(124,58,237,0.2), transparent); border-radius: 36px; pointer-events: none;"></div>
+
+                        <div style="position: absolute; top: -18px; right: 40px; background: linear-gradient(135deg, #7c3aed, #ec4899); color: #fff; padding: 8px 20px; border-radius: 50px; font-size: 12px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; box-shadow: 0 10px 20px rgba(124,58,237,0.3);">Best Value</div>
+                        
+                        <h4 style="font-weight: 900; font-size: 26px; color: #a78bfa; margin-bottom: 20px; position: relative; z-index: 2;">Pro Plan</h4>
+                        <div style="font-size: 64px; font-weight: 900; color: #ffffff; margin-bottom: 35px; line-height: 1; letter-spacing: -2px; position: relative; z-index: 2;">$119 <span style="font-size: 18px; font-weight: 600; opacity: 0.6; display: inline-block; letter-spacing: 0;">USD / month</span></div>
+                        <ul style="list-style: none; padding: 0; margin: 0 0 20px 0; font-size: 17px; color: #cbd5e1; line-height: 2.5; font-weight: 500; position: relative; z-index: 2;">
+                            <li><span style="color: #10b981; font-weight: 900; margin-right: 12px; font-size: 20px; text-shadow: 0 0 10px rgba(16,185,129,0.4);">&#10003;</span> up to 20,000 SKUs</li>
+                            <li><span style="color: #10b981; font-weight: 900; margin-right: 12px; font-size: 20px; text-shadow: 0 0 10px rgba(16,185,129,0.4);">&#10003;</span> 1 automatic forecast per day</li>
+                            <li><span style="color: #10b981; font-weight: 900; margin-right: 12px; font-size: 20px; text-shadow: 0 0 10px rgba(16,185,129,0.4);">&#10003;</span> 3 manual forecasts per day</li>
+                            <li><span style="color: #10b981; font-weight: 900; margin-right: 12px; font-size: 20px; text-shadow: 0 0 10px rgba(16,185,129,0.4);">&#10003;</span> maximum forecast horizon of 120 days</li>
+                            <li><span style="color: #10b981; font-weight: 900; margin-right: 12px; font-size: 20px; text-shadow: 0 0 10px rgba(16,185,129,0.4);">&#10003;</span> priority support</li>
                         </ul>
                     </div>
                 </div>
@@ -388,67 +399,67 @@
     </div>
 
     <!-- 10. PRODUCT MANUAL (Redesigned & Responsive) -->
-    <div class="py-5" style="background-color: #f8fafc; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+    <div class="py-5" style="background: linear-gradient(to bottom, #f8fafc, #ffffff); border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
         <div class="container my-5" style="max-width: 1100px;">
             <div class="text-center mb-5">
-                <h2 class="display-5 fw-bolder" style="color: #020617; letter-spacing: -2px;">Product Documentation</h2>
-                <p style="font-size: 18px; color: #64748b;">A quick guide to getting started with Niyu AI Planning.</p>
+                <h2 class="display-5 fw-bolder" style="color: #020617; letter-spacing: -2.5px;">Product Documentation</h2>
+                <p style="font-size: 20px; color: #64748b;">A quick guide to getting started with Niyu AI Planning.</p>
             </div>
             
             <div class="row g-5">
                 <!-- Getting Started Column -->
                 <div class="col-lg-6">
-                    <h3 style="font-size: 20px; font-weight: 800; color: #0f172a; margin-bottom: 25px; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px;">1. Getting Started</h3>
+                    <h3 style="font-size: 22px; font-weight: 900; color: #0f172a; margin-bottom: 30px; border-bottom: 2px solid #e2e8f0; padding-bottom: 15px;">1. Getting Started</h3>
                     
-                    <div class="d-flex mb-4 p-4 shadow-sm" style="background-color: #ffffff; border-radius: 15px; border: 1px solid #e2e8f0;">
-                        <div style="flex-shrink: 0; width: 45px; height: 45px; background-color: #f3e8ff; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-right: 15px;">
+                    <div class="d-flex mb-4 p-4 shadow-sm niyu-hover-lift" style="background: #ffffff; border-radius: 20px; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px rgba(0,0,0,0.03) !important;">
+                        <div style="flex-shrink: 0; width: 55px; height: 55px; background: linear-gradient(135deg, #f3e8ff, #e9d5ff); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-right: 20px; border: 1px solid #d8b4fe; box-shadow: 0 5px 15px rgba(124,58,237,0.1);">
                             &#128230;
                         </div>
                         <div>
-                            <h4 style="font-weight: 800; font-size: 18px; color: #0f172a; margin-bottom: 8px;">Installation</h4>
-                            <p style="font-size: 15px; color: #475569; margin: 0; line-height: 1.6;">Install the module like any normal Odoo module. It works with: Odoo Enterprise, Odoo Community, Odoo.sh, On-premise.</p>
+                            <h4 style="font-weight: 900; font-size: 19px; color: #0f172a; margin-bottom: 8px;">Installation</h4>
+                            <p style="font-size: 16px; color: #475569; margin: 0; line-height: 1.6;">Install the module like any normal Odoo module. It works with: Odoo Enterprise, Odoo Community, Odoo.sh, On-premise.</p>
                         </div>
                     </div>
 
-                    <div class="d-flex p-4 shadow-sm" style="background-color: #ffffff; border-radius: 15px; border: 1px solid #e2e8f0;">
-                        <div style="flex-shrink: 0; width: 45px; height: 45px; background-color: #f3e8ff; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-right: 15px;">
+                    <div class="d-flex p-4 shadow-sm niyu-hover-lift" style="background: #ffffff; border-radius: 20px; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px rgba(0,0,0,0.03) !important;">
+                        <div style="flex-shrink: 0; width: 55px; height: 55px; background: linear-gradient(135deg, #f3e8ff, #e9d5ff); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 24px; margin-right: 20px; border: 1px solid #d8b4fe; box-shadow: 0 5px 15px rgba(124,58,237,0.1);">
                             &#9881;
                         </div>
                         <div>
-                            <h4 style="font-weight: 800; font-size: 18px; color: #0f172a; margin-bottom: 8px;">Setup & API Sync</h4>
-                            <p style="font-size: 15px; color: #475569; margin: 0; line-height: 1.6;">Go to the module settings and enter your API key. This key connects your Odoo instance to our forecasting server. Then run the initial sync.</p>
+                            <h4 style="font-weight: 900; font-size: 19px; color: #0f172a; margin-bottom: 8px;">Setup & API Sync</h4>
+                            <p style="font-size: 16px; color: #475569; margin: 0; line-height: 1.6;">Go to the module settings and enter your API key. This key connects your Odoo instance to our forecasting server. Then run the initial sync.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Navigation Guide Column -->
                 <div class="col-lg-6">
-                    <h3 style="font-size: 20px; font-weight: 800; color: #0f172a; margin-bottom: 25px; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px;">2. Menu Navigation Guide</h3>
+                    <h3 style="font-size: 22px; font-weight: 900; color: #0f172a; margin-bottom: 30px; border-bottom: 2px solid #e2e8f0; padding-bottom: 15px;">2. Menu Navigation Guide</h3>
                     
-                    <div class="shadow-sm" style="background-color: #ffffff; border-radius: 15px; border: 1px solid #e2e8f0; padding: 25px;">
+                    <div class="shadow-sm niyu-hover-lift" style="background: #ffffff; border-radius: 20px; border: 1px solid #e2e8f0; padding: 35px; box-shadow: 0 15px 35px rgba(0,0,0,0.04) !important;">
                         
                         <div class="mb-4 pb-4" style="border-bottom: 1px solid #f1f5f9;">
                             <div class="d-flex align-items-center mb-2">
-                                <span style="display:inline-block; width:10px; height:10px; background-color:#7c3aed; border-radius:50%; margin-right:10px;"></span>
-                                <h4 style="font-weight: 800; font-size: 18px; color: #0f172a; margin: 0;">Planning Overview</h4>
+                                <span style="display:inline-block; width:12px; height:12px; background: linear-gradient(135deg, #7c3aed, #c084fc); border-radius:50%; margin-right:12px; box-shadow: 0 2px 5px rgba(124,58,237,0.3);"></span>
+                                <h4 style="font-weight: 900; font-size: 19px; color: #0f172a; margin: 0;">Planning Overview</h4>
                             </div>
-                            <p style="font-size: 15px; color: #64748b; margin: 0 0 0 20px; line-height: 1.6;">The manager view. Open this first to understand what needs action now and where pressure is building.</p>
+                            <p style="font-size: 16px; color: #64748b; margin: 0 0 0 24px; line-height: 1.6;">The manager view. Open this first to understand what needs action now and where pressure is building.</p>
                         </div>
 
                         <div class="mb-4 pb-4" style="border-bottom: 1px solid #f1f5f9;">
                             <div class="d-flex align-items-center mb-2">
-                                <span style="display:inline-block; width:10px; height:10px; background-color:#10b981; border-radius:50%; margin-right:10px;"></span>
-                                <h4 style="font-weight: 800; font-size: 18px; color: #0f172a; margin: 0;">Action Lines</h4>
+                                <span style="display:inline-block; width:12px; height:12px; background: linear-gradient(135deg, #10b981, #34d399); border-radius:50%; margin-right:12px; box-shadow: 0 2px 5px rgba(16,185,129,0.3);"></span>
+                                <h4 style="font-weight: 900; font-size: 19px; color: #0f172a; margin: 0;">Action Lines</h4>
                             </div>
-                            <p style="font-size: 15px; color: #64748b; margin: 0 0 0 20px; line-height: 1.6;">The planner view. Each line shows the next practical step: buy, transfer, or split.</p>
+                            <p style="font-size: 16px; color: #64748b; margin: 0 0 0 24px; line-height: 1.6;">The planner view. Each line shows the next practical step: buy, transfer, or split.</p>
                         </div>
 
                         <div>
                             <div class="d-flex align-items-center mb-2">
-                                <span style="display:inline-block; width:10px; height:10px; background-color:#f59e0b; border-radius:50%; margin-right:10px;"></span>
-                                <h4 style="font-weight: 800; font-size: 18px; color: #0f172a; margin: 0;">Rules & Exclusions</h4>
+                                <span style="display:inline-block; width:12px; height:12px; background: linear-gradient(135deg, #f59e0b, #fbbf24); border-radius:50%; margin-right:12px; box-shadow: 0 2px 5px rgba(245,158,11,0.3);"></span>
+                                <h4 style="font-weight: 900; font-size: 19px; color: #0f172a; margin: 0;">Rules & Exclusions</h4>
                             </div>
-                            <p style="font-size: 15px; color: #64748b; margin: 0 0 0 20px; line-height: 1.6;">Control how planning behaves. Shape the logic for your business instead of letting every item behave the same way.</p>
+                            <p style="font-size: 16px; color: #64748b; margin: 0 0 0 24px; line-height: 1.6;">Control how planning behaves. Shape the logic for your business instead of letting every item behave the same way.</p>
                         </div>
 
                     </div>
@@ -461,20 +472,20 @@
     <div class="py-5" style="background-color: #ffffff;">
         <div class="container my-5" style="max-width: 1000px;">
             <div class="d-flex justify-content-center">
-                <span class="niyu-safe-tag mb-5" style="background-color:#f8fafc; border:1px solid #e2e8f0; color:#334155;">Technical FAQ</span>
+                <span class="niyu-safe-tag mb-5" style="background: #f8fafc; border: 1px solid #e2e8f0; color: #334155; box-shadow: 0 4px 10px rgba(0,0,0,0.03);">Technical FAQ</span>
             </div>
             
             <div class="row g-4">
                 <div class="col-md-6">
-                    <div class="niyu-hover-lift h-100" style="background-color: #f8fafc; padding: 35px; border-radius: 20px; border: 1px solid #e2e8f0;">
-                        <p style="font-weight: 900; font-size: 17px; margin-bottom: 12px; color: #0f172a;"><span style="color: #7c3aed; margin-right: 10px;">&#10038;</span> Does it work on Enterprise and Community?</p>
-                        <p style="font-size: 15px; color: #64748b; margin: 0; line-height: 1.8;">Yes. It also works on Odoo.sh and on-premise.</p>
+                    <div class="niyu-hover-lift h-100" style="background: #ffffff; padding: 40px; border-radius: 24px; border: 1px solid #e2e8f0; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+                        <p style="font-weight: 900; font-size: 19px; margin-bottom: 15px; color: #0f172a;"><span style="color: #7c3aed; margin-right: 12px; text-shadow: 0 2px 5px rgba(124,58,237,0.2);">&#10038;</span> Does it work on Enterprise and Community?</p>
+                        <p style="font-size: 16px; color: #64748b; margin: 0; line-height: 1.8;">Yes. It also works on Odoo.sh and on-premise.</p>
                     </div>
                 </div>
                 <div class="col-md-6">
-                    <div class="niyu-hover-lift h-100" style="background-color: #f8fafc; padding: 35px; border-radius: 20px; border: 1px solid #e2e8f0;">
-                        <p style="font-weight: 900; font-size: 17px; margin-bottom: 12px; color: #0f172a;"><span style="color: #7c3aed; margin-right: 10px;">&#10038;</span> Do you store my data?</p>
-                        <p style="font-size: 15px; color: #64748b; margin: 0; line-height: 1.8;">No. We do not keep your business data as a stored dataset. It is used temporarily for processing, then cleared.</p>
+                    <div class="niyu-hover-lift h-100" style="background: #ffffff; padding: 40px; border-radius: 24px; border: 1px solid #e2e8f0; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+                        <p style="font-weight: 900; font-size: 19px; margin-bottom: 15px; color: #0f172a;"><span style="color: #7c3aed; margin-right: 12px; text-shadow: 0 2px 5px rgba(124,58,237,0.2);">&#10038;</span> Do you store my data?</p>
+                        <p style="font-size: 16px; color: #64748b; margin: 0; line-height: 1.8;">No. We do not keep your business data as a stored dataset. It is used temporarily for processing, then cleared.</p>
                     </div>
                 </div>
             </div>
@@ -482,20 +493,25 @@
     </div>
 
     <!-- 12. FINAL CTA -->
-    <div style="padding: 120px 20px 60px 20px; background-color: #020617; text-align: center; border-top: 5px solid #7c3aed;">
-        <h2 class="display-4 fw-bolder" style="color: #ffffff; margin-bottom: 25px; line-height: 1.15; letter-spacing: -2px;">
-            Plan inventory with a <br> <span style="color: #a78bfa;">clearer next step.</span>
+    <div style="padding: 140px 20px 80px 20px; background: radial-gradient(circle at 50% 100%, #1e1b4b 0%, #020617 60%); text-align: center; border-top: 2px solid rgba(124, 58, 237, 0.3); position: relative;">
+        
+        <div style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 80%; height: 300px; background: radial-gradient(circle, rgba(124,58,237,0.15) 0%, transparent 70%); pointer-events: none;"></div>
+
+        <h2 class="display-4 fw-bolder" style="color: #ffffff; margin-bottom: 30px; line-height: 1.15; letter-spacing: -2.5px; position: relative; z-index: 2;">
+            Plan inventory with a <br> <span style="background: linear-gradient(135deg, #a78bfa, #db2777); -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-shadow: 0 10px 30px rgba(124,58,237,0.2);">clearer next step.</span>
         </h2>
-        <p style="font-size: 22px; color: #94a3b8; margin-bottom: 50px; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+        <p style="font-size: 22px; color: #94a3b8; margin-bottom: 60px; max-width: 800px; margin-left: auto; margin-right: auto; line-height: 1.6; font-weight: 300; position: relative; z-index: 2;">
             Niyu AI Planning helps your team move from “what is happening?” to “what should we do now?”
         </p>
         
-        <a href="mailto:info@niyulabs.com" style="display: inline-block; background-color: #ffffff; color: #020617; padding: 20px 60px; border-radius: 100px; font-weight: 900; font-size: 22px; text-decoration: none; letter-spacing: -1px; margin-bottom: 60px;">info@niyulabs.com</a>
+        <div style="position: relative; z-index: 2; margin-bottom: 80px;">
+            <a href="mailto:info@niyulabs.com" class="niyu-hover-lift" style="display: inline-block; background: #ffffff; color: #020617; padding: 22px 70px; border-radius: 100px; font-weight: 900; font-size: 22px; text-decoration: none; letter-spacing: -0.5px; box-shadow: 0 20px 40px rgba(124,58,237,0.3) !important;">info@niyulabs.com</a>
+        </div>
         
-        <div class="container" style="max-width: 1100px;">
-            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center" style="border-top: 1px solid #1e293b; padding-top: 40px;">
-                <p style="font-weight: 900; font-size: 28px; color: #ffffff; margin: 0 0 15px 0; letter-spacing: 2px;">NIYU <span style="color: #a78bfa;">LABS</span></p>
-                <p style="font-weight: 600; font-size: 16px; color: #94a3b8; margin: 0; background-color: #0f172a; padding: 8px 20px; border-radius: 50px; border: 1px solid #1e293b;">info@niyulabs.com</p>
+        <div class="container" style="max-width: 1100px; position: relative; z-index: 2;">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center" style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 50px;">
+                <p style="font-weight: 900; font-size: 28px; color: #ffffff; margin: 0 0 20px 0; letter-spacing: 2.5px;">NIYU <span style="color: #a78bfa; text-shadow: 0 0 10px rgba(167,139,250,0.5);">LABS</span></p>
+                <p style="font-weight: 700; font-size: 16px; color: #cbd5e1; margin: 0; background: rgba(255,255,255,0.05); backdrop-filter: blur(5px); padding: 10px 24px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 5px 15px rgba(0,0,0,0.2);">info@niyulabs.com</p>
             </div>
         </div>
     </div>
