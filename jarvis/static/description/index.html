@@ -328,14 +328,10 @@
     </div>
 
    <!-- 8. COMPARISON (REDESIGNED: CURRENT VS NIYU) -->
-    <div style="padding: 140px 20px; background-color: #f1f5f9; border-top: 1px solid #e2e8f0; position: relative; overflow: hidden;">
-        
-        <!-- Subtle background decorative lines -->
-        <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 100%; height: 100%; pointer-events: none; opacity: 0.03; background-image: linear-gradient(#0f172a 1px, transparent 1px), linear-gradient(90deg, #0f172a 1px, transparent 1px); background-size: 40px 40px;"></div>
-
-        <div class="container text-center position-relative" style="max-width: 1100px; z-index: 2;">
+    <div style="padding: 120px 20px; background-color: #f1f5f9; border-top: 1px solid #e2e8f0;">
+        <div class="container text-center" style="max-width: 1100px;">
             
-            <div style="margin-bottom: 100px;">
+            <div style="margin-bottom: 80px;">
                 <h2 style="font-size: 64px; font-weight: 900; color: #020617; letter-spacing: -2px; line-height: 1.15;">
                     Not “more analytics.” <br>
                     Not “more dashboards.” <br>
@@ -343,98 +339,42 @@
                 </h2>
             </div>
             
-            <div class="row g-5 align-items-stretch justify-content-center position-relative">
-                
+            <div class="row g-5 align-items-stretch justify-content-center">
                 <!-- Current Way -->
                 <div class="col-lg-5 col-md-6">
-                    <div class="h-100 niyu-hover-lift" style="background-color: #ffffff; padding: 60px 40px; border-radius: 30px; border: 1px solid #e2e8f0; border-top: 8px solid #ef4444; text-align: left; box-shadow: 0 20px 40px rgba(239, 68, 68, 0.04); position: relative; overflow: hidden;">
-                        
-                        <div class="d-flex justify-content-between align-items-center mb-5">
-                            <span class="niyu-safe-tag" style="background-color: #fef2f2; color: #ef4444; border: 1px solid #fca5a5; font-size: 15px; padding: 10px 24px; box-shadow: 0 4px 10px rgba(239,68,68,0.1);">The Old Way</span>
-                        </div>
-
-                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 18px; color: #64748b; font-weight: 600;">
-                            <!-- Workflow Step -->
-                            <li class="mb-3 d-flex align-items-center" style="background-color: #f8fafc; border: 1px solid #f1f5f9; padding: 16px 24px; border-radius: 16px;">
-                                <div style="min-width: 36px; height: 36px; background-color: #fee2e2; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 18px; font-size: 14px;" aria-hidden="true">&#10060;</div> 
-                                Export sales to Excel
-                            </li>
-                            <!-- Workflow Step -->
-                            <li class="mb-3 d-flex align-items-center" style="background-color: #f8fafc; border: 1px solid #f1f5f9; padding: 16px 24px; border-radius: 16px;">
-                                <div style="min-width: 36px; height: 36px; background-color: #fee2e2; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 18px; font-size: 14px;" aria-hidden="true">&#10060;</div> 
-                                Check stock manually
-                            </li>
-                            <!-- Workflow Step -->
-                            <li class="mb-3 d-flex align-items-center" style="background-color: #f8fafc; border: 1px solid #f1f5f9; padding: 16px 24px; border-radius: 16px;">
-                                <div style="min-width: 36px; height: 36px; background-color: #fee2e2; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 18px; font-size: 14px;" aria-hidden="true">&#10060;</div> 
-                                Compare warehouses
-                            </li>
-                            <!-- Workflow Step -->
-                            <li class="mb-3 d-flex align-items-center" style="background-color: #f8fafc; border: 1px solid #f1f5f9; padding: 16px 24px; border-radius: 16px;">
-                                <div style="min-width: 36px; height: 36px; background-color: #fee2e2; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 18px; font-size: 14px;" aria-hidden="true">&#10060;</div> 
-                                Guess the next purchase
-                            </li>
-                            <!-- Workflow Step -->
-                            <li class="d-flex align-items-center" style="background-color: #fef2f2; border: 1px solid #fecaca; padding: 16px 24px; border-radius: 16px; color: #ef4444;">
-                                <div style="min-width: 36px; height: 36px; background-color: #ef4444; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 18px; font-size: 14px; color: #ffffff;" aria-hidden="true">&#10060;</div> 
-                                Repeat the mess tomorrow
-                            </li>
+                    <div class="h-100 niyu-hover-lift" style="background: linear-gradient(180deg, #ffffff 0%, #fef2f2 100%); padding: 60px 40px; border-radius: 30px; border: 1px solid #fecaca; text-align: left; box-shadow: 0 20px 40px rgba(239, 68, 68, 0.06);">
+                        <span class="niyu-safe-tag mb-5" style="background-color: #fef2f2; color: #ef4444; border: 1px solid #fca5a5; font-size: 16px; padding: 12px 24px;">The Old Way</span>
+                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 20px; color: #64748b; line-height: 2.5; font-weight: 500; opacity: 0.9;">
+                            <li class="mb-3 d-flex align-items-center"><span style="margin-right: 15px; font-size: 20px; color: #ef4444;" aria-hidden="true">&#10060;</span> Export sales to Excel</li>
+                            <li class="mb-3 d-flex align-items-center"><span style="margin-right: 15px; font-size: 20px; color: #ef4444;" aria-hidden="true">&#10060;</span> Check stock manually</li>
+                            <li class="mb-3 d-flex align-items-center"><span style="margin-right: 15px; font-size: 20px; color: #ef4444;" aria-hidden="true">&#10060;</span> Compare warehouses</li>
+                            <li class="mb-3 d-flex align-items-center"><span style="margin-right: 15px; font-size: 20px; color: #ef4444;" aria-hidden="true">&#10060;</span> Guess the next purchase</li>
+                            <li class="d-flex align-items-center"><span style="margin-right: 15px; font-size: 20px; color: #ef4444;" aria-hidden="true">&#10060;</span> Repeat the mess tomorrow</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- VS Badge (Visible on larger screens, totally revamped) -->
-                <div class="col-lg-2 d-none d-lg-flex align-items-center justify-content-center" style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 10;">
-                    <div style="width: 90px; height: 90px; background: linear-gradient(135deg, #ef4444 0%, #7c3aed 100%); color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 26px; font-weight: 900; box-shadow: 0 0 0 10px #f1f5f9, 0 15px 30px rgba(0,0,0,0.15); letter-spacing: -1px;">
-                        VS
+                <!-- VS Badge (Visible on larger screens) -->
+                <div class="col-lg-2 d-none d-lg-flex align-items-center justify-content-center">
+                    <div style="width: 80px; height: 80px; background-color: #ffffff; color: #0f172a; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; font-weight: 900; box-shadow: 0 15px 35px rgba(0,0,0,0.08); border: 1px solid #e2e8f0; position: relative; z-index: 5;">
+                        <span style="background: linear-gradient(135deg, #64748b, #0f172a); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">VS</span>
                     </div>
                 </div>
 
                 <!-- Niyu Workflow -->
                 <div class="col-lg-5 col-md-6">
-                    <div class="h-100 niyu-hover-lift" style="background-color: #020617; padding: 60px 40px; border-radius: 30px; border: 1px solid #334155; border-top: 8px solid #a855f7; text-align: left; color: #ffffff; box-shadow: 0 30px 60px rgba(124, 58, 237, 0.25); position: relative; overflow: hidden;">
-                        
-                        <!-- AI Ambient Glow -->
-                        <div style="position: absolute; top: -50px; right: -50px; width: 250px; height: 250px; background: radial-gradient(circle, rgba(124,58,237,0.4) 0%, rgba(2,6,23,0) 70%); border-radius: 50%; pointer-events: none; z-index: 0;"></div>
-
-                        <div class="d-flex justify-content-between align-items-center mb-5 position-relative" style="z-index: 1;">
-                            <span class="niyu-safe-tag" style="background-color: #7c3aed; color: #ffffff; border: 1px solid #9333ea; font-size: 15px; padding: 10px 24px; box-shadow: 0 4px 15px rgba(124,58,237,0.4);">Niyu AI Workflow</span>
-                        </div>
-
-                        <!-- Timeline Connecting Line -->
-                        <div style="position: absolute; left: 63px; top: 180px; bottom: 100px; width: 2px; background: linear-gradient(to bottom, rgba(16,185,129,0.5), rgba(16,185,129,0.1)); z-index: 0;"></div>
-
-                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 18px; color: #e2e8f0; font-weight: 700; position: relative; z-index: 1;">
-                            <!-- Workflow Step -->
-                            <li class="mb-3 d-flex align-items-center" style="background-color: rgba(15, 23, 42, 0.8); border: 1px solid #1e293b; padding: 16px 24px; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); backdrop-filter: blur(10px);">
-                                <div style="min-width: 36px; height: 36px; background-color: rgba(16, 185, 129, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 18px; font-size: 16px; color: #10b981; border: 1px solid rgba(16,185,129,0.3);" aria-hidden="true">&#10004;</div> 
-                                Open Overview
-                            </li>
-                            <!-- Workflow Step -->
-                            <li class="mb-3 d-flex align-items-center" style="background-color: rgba(15, 23, 42, 0.8); border: 1px solid #1e293b; padding: 16px 24px; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); backdrop-filter: blur(10px);">
-                                <div style="min-width: 36px; height: 36px; background-color: rgba(16, 185, 129, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 18px; font-size: 16px; color: #10b981; border: 1px solid rgba(16,185,129,0.3);" aria-hidden="true">&#10004;</div> 
-                                See what needs attention
-                            </li>
-                            <!-- Workflow Step -->
-                            <li class="mb-3 d-flex align-items-center" style="background-color: rgba(15, 23, 42, 0.8); border: 1px solid #1e293b; padding: 16px 24px; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); backdrop-filter: blur(10px);">
-                                <div style="min-width: 36px; height: 36px; background-color: rgba(16, 185, 129, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 18px; font-size: 16px; color: #10b981; border: 1px solid rgba(16,185,129,0.3);" aria-hidden="true">&#10004;</div> 
-                                Open Action Lines
-                            </li>
-                            <!-- Workflow Step -->
-                            <li class="mb-3 d-flex align-items-center" style="background-color: rgba(15, 23, 42, 0.8); border: 1px solid #1e293b; padding: 16px 24px; border-radius: 16px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); backdrop-filter: blur(10px);">
-                                <div style="min-width: 36px; height: 36px; background-color: rgba(16, 185, 129, 0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 18px; font-size: 16px; color: #10b981; border: 1px solid rgba(16,185,129,0.3);" aria-hidden="true">&#10004;</div> 
-                                Buy, transfer, or split
-                            </li>
-                            <!-- Workflow Step (Highlight) -->
-                            <li class="d-flex align-items-center" style="background-color: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.4); padding: 16px 24px; border-radius: 16px; color: #34d399; box-shadow: 0 4px 15px rgba(16,185,129,0.1);">
-                                <div style="min-width: 36px; height: 36px; background-color: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 18px; font-size: 16px; color: #ffffff; box-shadow: 0 0 10px rgba(16,185,129,0.5);" aria-hidden="true">&#10004;</div> 
-                                Move forward with your day
-                            </li>
+                    <div class="h-100 niyu-hover-lift" style="background: radial-gradient(130% 130% at 50% 100%, #1e1b4b 0%, #020617 100%); padding: 60px 40px; border-radius: 30px; border: 1px solid #4c1d95; text-align: left; color: #ffffff; box-shadow: 0 25px 60px rgba(124, 58, 237, 0.25);">
+                        <span class="niyu-safe-tag mb-5" style="background: linear-gradient(135deg, #7c3aed, #9333ea); color: #ffffff; border: 1px solid #a855f7; font-size: 16px; padding: 12px 24px; box-shadow: 0 8px 20px rgba(124,58,237,0.3);">Niyu AI Workflow</span>
+                        <ul style="list-style: none; padding: 0; margin: 0; font-size: 20px; color: #f8fafc; font-weight: 700; line-height: 2.5;">
+                            <li class="mb-3 d-flex align-items-center"><span style="color: #34d399; margin-right: 15px; font-size: 22px; text-shadow: 0 0 15px rgba(52,211,153,0.6);" aria-hidden="true">&#10004;</span> Open Overview</li>
+                            <li class="mb-3 d-flex align-items-center"><span style="color: #34d399; margin-right: 15px; font-size: 22px; text-shadow: 0 0 15px rgba(52,211,153,0.6);" aria-hidden="true">&#10004;</span> See what needs attention</li>
+                            <li class="mb-3 d-flex align-items-center"><span style="color: #34d399; margin-right: 15px; font-size: 22px; text-shadow: 0 0 15px rgba(52,211,153,0.6);" aria-hidden="true">&#10004;</span> Open Action Lines</li>
+                            <li class="mb-3 d-flex align-items-center"><span style="color: #34d399; margin-right: 15px; font-size: 22px; text-shadow: 0 0 15px rgba(52,211,153,0.6);" aria-hidden="true">&#10004;</span> Buy, transfer, or split</li>
+                            <li class="d-flex align-items-center" style="color: #e9d5ff;"><span style="color: #34d399; margin-right: 15px; font-size: 22px; text-shadow: 0 0 15px rgba(52,211,153,0.6);" aria-hidden="true">&#10004;</span> Move forward with your day</li>
                         </ul>
                     </div>
                 </div>
             </div>
-            
         </div>
     </div>
 
