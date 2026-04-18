@@ -327,101 +327,153 @@
         </div>
     </div>
 
-   <!-- 8. COMPARISON (BULLETPROOF ODOO FLEX LAYOUT & STUNNING UI) -->
-    <div style="padding: 120px 20px; background-color: #020617; border-top: 1px solid #1e293b; border-bottom: 1px solid #1e293b; overflow: hidden; position: relative;">
-        
-        <!-- Ambient Background Glow -->
-        <div style="position: absolute; top: 0; right: 0; width: 600px; height: 600px; background: radial-gradient(circle, rgba(124, 58, 237, 0.1) 0%, rgba(2, 6, 23, 0) 70%); border-radius: 50%; pointer-events: none;"></div>
-
-        <div style="max-width: 1100px; margin: 0 auto; text-align: center; position: relative; z-index: 2;">
+   <!-- 8. COMPARISON (STUNNING VERTICAL TIMELINE UI) -->
+    <div style="padding: 140px 20px; background-color: #f8fafc; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+        <div style="max-width: 1200px; margin: 0 auto;">
             
-            <div style="margin-bottom: 80px;">
-                <h2 style="font-size: 56px; font-weight: 900; color: #ffffff; letter-spacing: -2px; line-height: 1.15;">
+            <div style="text-align: center; margin-bottom: 100px;">
+                <h2 style="font-size: 64px; font-weight: 900; color: #0f172a; letter-spacing: -2px; line-height: 1.15;">
                     Not “more analytics.” <br>
                     Not “more dashboards.” <br>
-                    <span style="background: linear-gradient(to right, #34d399, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent; color: #10b981;">But a better daily workflow.</span>
+                    <span style="background: linear-gradient(135deg, #7c3aed, #a855f7); -webkit-background-clip: text; -webkit-text-fill-color: transparent; color: #7c3aed;">But a better daily workflow.</span>
                 </h2>
             </div>
             
-            <!-- BULLETPROOF INLINE FLEX CONTAINER (Bypasses Odoo's broken grid) -->
-            <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; align-items: stretch; text-align: left;">
+            <!-- BULLETPROOF FLEX CONTAINER (Bypasses Odoo's grid issues completely) -->
+            <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; align-items: stretch;">
                 
-                <!-- LEFT BOX: The Old Way -->
-                <div class="niyu-hover-lift" style="flex: 1 1 450px; background-color: #0f172a; padding: 60px 50px; border-radius: 30px; border: 1px solid #334155; position: relative; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);">
+                <!-- LEFT PANEL: The Old Way (Messy, disconnected pipeline) -->
+                <div style="flex: 1 1 450px; background-color: #ffffff; padding: 60px 50px; border-radius: 30px; border: 1px solid #e2e8f0; box-shadow: 0 20px 40px rgba(0,0,0,0.02);">
                     
-                    <div style="margin-bottom: 40px;">
-                        <span class="niyu-safe-tag" style="background-color: #1e293b; color: #94a3b8; border: 1px dashed #475569; font-size: 14px; padding: 10px 24px; letter-spacing: 2px;">The Old Way</span>
+                    <div style="margin-bottom: 50px; text-align: center;">
+                        <span style="display: inline-block; background-color: #fef2f2; color: #ef4444; border: 1px solid #fca5a5; font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; padding: 10px 24px; border-radius: 50px;">The Old Way</span>
                     </div>
 
-                    <ul style="list-style: none; padding: 0; margin: 0; position: relative;">
-                        <!-- Vertical dashed line to represent broken workflow -->
-                        <div style="position: absolute; left: 24px; top: 30px; bottom: 30px; width: 2px; border-left: 2px dashed #334155; z-index: 0;"></div>
+                    <!-- Timeline Wrapper -->
+                    <div style="position: relative; padding-left: 45px;">
+                        
+                        <!-- Dashed Red Spine -->
+                        <div style="position: absolute; left: 15px; top: 20px; bottom: 40px; width: 2px; border-left: 2px dashed #fecaca; z-index: 0;"></div>
 
-                        <li class="mb-4 d-flex align-items-center position-relative" style="z-index: 1;">
-                            <div style="min-width: 48px; height: 48px; background-color: #1e293b; border: 1px solid #334155; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 16px; color: #f59e0b;" aria-hidden="true">&#9888;</div>
-                            <span style="font-size: 20px; color: #94a3b8; font-weight: 500;">Export sales to Excel</span>
-                        </li>
-                        <li class="mb-4 d-flex align-items-center position-relative" style="z-index: 1;">
-                            <div style="min-width: 48px; height: 48px; background-color: #1e293b; border: 1px solid #334155; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 16px; color: #f59e0b;" aria-hidden="true">&#9888;</div>
-                            <span style="font-size: 20px; color: #94a3b8; font-weight: 500;">Check stock manually</span>
-                        </li>
-                        <li class="mb-4 d-flex align-items-center position-relative" style="z-index: 1;">
-                            <div style="min-width: 48px; height: 48px; background-color: #1e293b; border: 1px solid #334155; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 16px; color: #f59e0b;" aria-hidden="true">&#9888;</div>
-                            <span style="font-size: 20px; color: #94a3b8; font-weight: 500;">Compare warehouses</span>
-                        </li>
-                        <li class="mb-4 d-flex align-items-center position-relative" style="z-index: 1;">
-                            <div style="min-width: 48px; height: 48px; background-color: #1e293b; border: 1px solid #334155; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 16px; color: #f59e0b;" aria-hidden="true">&#9888;</div>
-                            <span style="font-size: 20px; color: #94a3b8; font-weight: 500;">Guess the next purchase</span>
-                        </li>
-                        <li class="d-flex align-items-center position-relative" style="z-index: 1; margin-top: 40px; background-color: #1e293b; padding: 20px; border-radius: 16px; border: 1px solid #334155;">
-                            <div style="min-width: 48px; height: 48px; background-color: #334155; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 20px; color: #94a3b8;" aria-hidden="true">&#10251;</div>
-                            <span style="font-size: 20px; color: #cbd5e1; font-weight: 700;">Repeat the mess tomorrow</span>
-                        </li>
-                    </ul>
+                        <!-- Step 1 -->
+                        <div style="position: relative; margin-bottom: 25px; z-index: 1;">
+                            <div style="position: absolute; left: -45px; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; background-color: #fee2e2; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 2px solid #ffffff;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                            </div>
+                            <div style="background-color: #f8fafc; border: 1px solid #f1f5f9; padding: 18px 24px; border-radius: 16px; font-size: 18px; color: #64748b; font-weight: 600;">
+                                Export sales to Excel
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div style="position: relative; margin-bottom: 25px; z-index: 1;">
+                            <div style="position: absolute; left: -45px; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; background-color: #fee2e2; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 2px solid #ffffff;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                            </div>
+                            <div style="background-color: #f8fafc; border: 1px solid #f1f5f9; padding: 18px 24px; border-radius: 16px; font-size: 18px; color: #64748b; font-weight: 600;">
+                                Check stock manually
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div style="position: relative; margin-bottom: 25px; z-index: 1;">
+                            <div style="position: absolute; left: -45px; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; background-color: #fee2e2; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 2px solid #ffffff;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                            </div>
+                            <div style="background-color: #f8fafc; border: 1px solid #f1f5f9; padding: 18px 24px; border-radius: 16px; font-size: 18px; color: #64748b; font-weight: 600;">
+                                Compare warehouses
+                            </div>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div style="position: relative; margin-bottom: 25px; z-index: 1;">
+                            <div style="position: absolute; left: -45px; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; background-color: #fee2e2; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 2px solid #ffffff;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                            </div>
+                            <div style="background-color: #f8fafc; border: 1px solid #f1f5f9; padding: 18px 24px; border-radius: 16px; font-size: 18px; color: #64748b; font-weight: 600;">
+                                Guess the next purchase
+                            </div>
+                        </div>
+
+                        <!-- Step 5 (Final Negative) -->
+                        <div style="position: relative; z-index: 1;">
+                            <div style="position: absolute; left: -45px; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; background-color: #ef4444; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 2px solid #ffffff; box-shadow: 0 4px 10px rgba(239, 68, 68, 0.3);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                            </div>
+                            <div style="background-color: #fef2f2; border: 1px solid #fca5a5; padding: 18px 24px; border-radius: 16px; font-size: 18px; color: #b91c1c; font-weight: 800;">
+                                Repeat the mess tomorrow
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- RIGHT BOX: Niyu Workflow -->
-                <div class="niyu-hover-lift" style="flex: 1 1 450px; background: linear-gradient(135deg, #2e1065 0%, #4c1d95 100%); padding: 60px 50px; border-radius: 30px; border: 1px solid #6d28d9; position: relative; box-shadow: 0 30px 60px rgba(76, 29, 149, 0.4), inset 0 2px 0 rgba(255,255,255,0.1);">
+
+                <!-- RIGHT PANEL: Niyu AI Workflow (Sleek, connected pipeline) -->
+                <div class="niyu-hover-lift" style="flex: 1 1 450px; background-color: #ffffff; padding: 60px 50px; border-radius: 30px; border: 1px solid #d8b4fe; box-shadow: 0 25px 50px rgba(124, 58, 237, 0.08);">
                     
-                    <div style="margin-bottom: 40px;">
-                        <span class="niyu-safe-tag" style="background-color: #ffffff; color: #4c1d95; border: none; font-size: 14px; padding: 10px 24px; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">Niyu AI Workflow</span>
+                    <div style="margin-bottom: 50px; text-align: center;">
+                        <span style="display: inline-block; background: linear-gradient(135deg, #7c3aed, #9333ea); color: #ffffff; border: none; font-size: 14px; font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; padding: 10px 24px; border-radius: 50px; box-shadow: 0 4px 15px rgba(124, 58, 237, 0.3);">Niyu AI Workflow</span>
                     </div>
 
-                    <ul style="list-style: none; padding: 0; margin: 0; position: relative;">
-                        <!-- Glowing solid line to represent connected workflow -->
-                        <div style="position: absolute; left: 28px; top: 30px; bottom: 30px; width: 4px; background: linear-gradient(to bottom, #10b981, rgba(16,185,129,0)); z-index: 0; border-radius: 4px;"></div>
+                    <!-- Timeline Wrapper -->
+                    <div style="position: relative; padding-left: 45px;">
+                        
+                        <!-- Solid Glowing Green Spine -->
+                        <div style="position: absolute; left: 15px; top: 20px; bottom: 40px; width: 3px; background: linear-gradient(to bottom, #10b981, #34d399); z-index: 0; border-radius: 5px;"></div>
 
-                        <!-- Floating Glass Cards -->
-                        <li class="mb-4 d-flex align-items-center position-relative" style="z-index: 1; background-color: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 16px 24px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                            <div style="min-width: 36px; height: 36px; background-color: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 16px; color: #ffffff; box-shadow: 0 0 15px rgba(16, 185, 129, 0.6);" aria-hidden="true">&#10004;</div>
-                            <span style="font-size: 20px; color: #ffffff; font-weight: 700;">Open Overview</span>
-                        </li>
-                        
-                        <li class="mb-4 d-flex align-items-center position-relative" style="z-index: 1; background-color: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 16px 24px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                            <div style="min-width: 36px; height: 36px; background-color: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 16px; color: #ffffff; box-shadow: 0 0 15px rgba(16, 185, 129, 0.6);" aria-hidden="true">&#10004;</div>
-                            <span style="font-size: 20px; color: #ffffff; font-weight: 700;">See what needs attention</span>
-                        </li>
-                        
-                        <li class="mb-4 d-flex align-items-center position-relative" style="z-index: 1; background-color: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 16px 24px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                            <div style="min-width: 36px; height: 36px; background-color: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 16px; color: #ffffff; box-shadow: 0 0 15px rgba(16, 185, 129, 0.6);" aria-hidden="true">&#10004;</div>
-                            <span style="font-size: 20px; color: #ffffff; font-weight: 700;">Open Action Lines</span>
-                        </li>
-                        
-                        <li class="mb-4 d-flex align-items-center position-relative" style="z-index: 1; background-color: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 16px 24px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                            <div style="min-width: 36px; height: 36px; background-color: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 16px; color: #ffffff; box-shadow: 0 0 15px rgba(16, 185, 129, 0.6);" aria-hidden="true">&#10004;</div>
-                            <span style="font-size: 20px; color: #ffffff; font-weight: 700;">Buy, transfer, or split</span>
-                        </li>
-                        
-                        <!-- Highlighted Final Step -->
-                        <li class="d-flex align-items-center position-relative" style="z-index: 1; margin-top: 40px; background-color: #ffffff; padding: 20px 24px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
-                            <div style="min-width: 48px; height: 48px; background: linear-gradient(135deg, #10b981, #059669); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 20px; color: #ffffff; box-shadow: 0 10px 20px rgba(16, 185, 129, 0.4);" aria-hidden="true">&#10004;</div>
-                            <span style="font-size: 22px; color: #020617; font-weight: 900; letter-spacing: -0.5px;">Move forward with your day</span>
-                        </li>
-                    </ul>
+                        <!-- Step 1 -->
+                        <div style="position: relative; margin-bottom: 25px; z-index: 1;">
+                            <div style="position: absolute; left: -45px; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; background-color: #d1fae5; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 2px solid #ffffff;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </div>
+                            <div style="background-color: #ffffff; border: 1px solid #e2e8f0; box-shadow: 0 4px 10px rgba(0,0,0,0.02); padding: 18px 24px; border-radius: 16px; font-size: 18px; color: #0f172a; font-weight: 700;">
+                                Open Overview
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div style="position: relative; margin-bottom: 25px; z-index: 1;">
+                            <div style="position: absolute; left: -45px; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; background-color: #d1fae5; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 2px solid #ffffff;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </div>
+                            <div style="background-color: #ffffff; border: 1px solid #e2e8f0; box-shadow: 0 4px 10px rgba(0,0,0,0.02); padding: 18px 24px; border-radius: 16px; font-size: 18px; color: #0f172a; font-weight: 700;">
+                                See what needs attention
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div style="position: relative; margin-bottom: 25px; z-index: 1;">
+                            <div style="position: absolute; left: -45px; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; background-color: #d1fae5; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 2px solid #ffffff;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </div>
+                            <div style="background-color: #ffffff; border: 1px solid #e2e8f0; box-shadow: 0 4px 10px rgba(0,0,0,0.02); padding: 18px 24px; border-radius: 16px; font-size: 18px; color: #0f172a; font-weight: 700;">
+                                Open Action Lines
+                            </div>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div style="position: relative; margin-bottom: 25px; z-index: 1;">
+                            <div style="position: absolute; left: -45px; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; background-color: #d1fae5; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 2px solid #ffffff;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </div>
+                            <div style="background-color: #ffffff; border: 1px solid #e2e8f0; box-shadow: 0 4px 10px rgba(0,0,0,0.02); padding: 18px 24px; border-radius: 16px; font-size: 18px; color: #0f172a; font-weight: 700;">
+                                Buy, transfer, or split
+                            </div>
+                        </div>
+
+                        <!-- Step 5 (Final Positive Highlight) -->
+                        <div style="position: relative; z-index: 1;">
+                            <div style="position: absolute; left: -45px; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; background-color: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; border: 2px solid #ffffff; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            </div>
+                            <div style="background: linear-gradient(135deg, #ecfdf5, #d1fae5); border: 1px solid #6ee7b7; padding: 18px 24px; border-radius: 16px; font-size: 18px; color: #047857; font-weight: 900; box-shadow: 0 10px 20px rgba(16, 185, 129, 0.1);">
+                                Move forward with your day
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
             </div>
-            
+
         </div>
     </div>
 
