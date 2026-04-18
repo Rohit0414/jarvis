@@ -327,108 +327,99 @@
         </div>
     </div>
 
-   <!-- 8. COMPARISON (COMPLETELY NEW LAYOUT & COLORS) -->
-    <div style="padding: 140px 20px; background-color: #020617; border-top: 1px solid #1e293b; border-bottom: 1px solid #1e293b; overflow: hidden; position: relative;">
+   <!-- 8. COMPARISON (BULLETPROOF ODOO FLEX LAYOUT & STUNNING UI) -->
+    <div style="padding: 120px 20px; background-color: #020617; border-top: 1px solid #1e293b; border-bottom: 1px solid #1e293b; overflow: hidden; position: relative;">
         
         <!-- Ambient Background Glow -->
-        <div style="position: absolute; top: -100px; right: -200px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(124, 58, 237, 0.15) 0%, rgba(2, 6, 23, 0) 70%); border-radius: 50%; pointer-events: none;"></div>
+        <div style="position: absolute; top: 0; right: 0; width: 600px; height: 600px; background: radial-gradient(circle, rgba(124, 58, 237, 0.1) 0%, rgba(2, 6, 23, 0) 70%); border-radius: 50%; pointer-events: none;"></div>
 
-        <div class="container text-center position-relative" style="max-width: 1200px; z-index: 2;">
+        <div style="max-width: 1100px; margin: 0 auto; text-align: center; position: relative; z-index: 2;">
             
-            <div style="margin-bottom: 90px;">
-                <h2 style="font-size: 64px; font-weight: 900; color: #ffffff; letter-spacing: -2px; line-height: 1.15;">
+            <div style="margin-bottom: 80px;">
+                <h2 style="font-size: 56px; font-weight: 900; color: #ffffff; letter-spacing: -2px; line-height: 1.15;">
                     Not “more analytics.” <br>
                     Not “more dashboards.” <br>
                     <span style="background: linear-gradient(to right, #34d399, #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent; color: #10b981;">But a better daily workflow.</span>
                 </h2>
             </div>
             
-            <!-- Unified Split-Screen Interface -->
-            <div class="shadow-lg niyu-hover-lift" style="border-radius: 40px; border: 1px solid #334155; overflow: hidden; position: relative;">
-                <div class="row g-0">
+            <!-- BULLETPROOF INLINE FLEX CONTAINER (Bypasses Odoo's broken grid) -->
+            <div style="display: flex; flex-wrap: wrap; gap: 40px; justify-content: center; align-items: stretch; text-align: left;">
+                
+                <!-- LEFT BOX: The Old Way -->
+                <div class="niyu-hover-lift" style="flex: 1 1 450px; background-color: #0f172a; padding: 60px 50px; border-radius: 30px; border: 1px solid #334155; position: relative; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);">
                     
-                    <!-- LEFT SIDE: The Old Way -->
-                    <div class="col-lg-6" style="background-color: #0f172a; padding: 80px 60px; text-align: left; position: relative;">
-                        <div style="margin-bottom: 50px;">
-                            <span class="niyu-safe-tag" style="background-color: #1e293b; color: #94a3b8; border: 1px dashed #475569; font-size: 14px; padding: 10px 24px; letter-spacing: 2px;">The Old Way</span>
-                        </div>
-
-                        <!-- Fragmented, disconnected list -->
-                        <ul style="list-style: none; padding: 0; margin: 0; position: relative;">
-                            <!-- Vertical dashed line to represent broken workflow -->
-                            <div style="position: absolute; left: 24px; top: 30px; bottom: 30px; width: 2px; border-left: 2px dashed #334155; z-index: 0;"></div>
-
-                            <li class="mb-4 d-flex align-items-center position-relative" style="z-index: 1;">
-                                <div style="min-width: 48px; height: 48px; background-color: #1e293b; border: 1px solid #334155; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 16px; color: #f59e0b;" aria-hidden="true">&#9888;</div>
-                                <span style="font-size: 20px; color: #94a3b8; font-weight: 500;">Export sales to Excel</span>
-                            </li>
-                            <li class="mb-4 d-flex align-items-center position-relative" style="z-index: 1;">
-                                <div style="min-width: 48px; height: 48px; background-color: #1e293b; border: 1px solid #334155; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 16px; color: #f59e0b;" aria-hidden="true">&#9888;</div>
-                                <span style="font-size: 20px; color: #94a3b8; font-weight: 500;">Check stock manually</span>
-                            </li>
-                            <li class="mb-4 d-flex align-items-center position-relative" style="z-index: 1;">
-                                <div style="min-width: 48px; height: 48px; background-color: #1e293b; border: 1px solid #334155; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 16px; color: #f59e0b;" aria-hidden="true">&#9888;</div>
-                                <span style="font-size: 20px; color: #94a3b8; font-weight: 500;">Compare warehouses</span>
-                            </li>
-                            <li class="mb-4 d-flex align-items-center position-relative" style="z-index: 1;">
-                                <div style="min-width: 48px; height: 48px; background-color: #1e293b; border: 1px solid #334155; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 16px; color: #f59e0b;" aria-hidden="true">&#9888;</div>
-                                <span style="font-size: 20px; color: #94a3b8; font-weight: 500;">Guess the next purchase</span>
-                            </li>
-                            <li class="d-flex align-items-center position-relative" style="z-index: 1; margin-top: 40px; background-color: #1e293b; padding: 20px; border-radius: 16px; border: 1px solid #334155;">
-                                <div style="min-width: 48px; height: 48px; background-color: #334155; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 20px; color: #94a3b8;" aria-hidden="true">&#10251;</div>
-                                <span style="font-size: 20px; color: #cbd5e1; font-weight: 700;">Repeat the mess tomorrow</span>
-                            </li>
-                        </ul>
+                    <div style="margin-bottom: 40px;">
+                        <span class="niyu-safe-tag" style="background-color: #1e293b; color: #94a3b8; border: 1px dashed #475569; font-size: 14px; padding: 10px 24px; letter-spacing: 2px;">The Old Way</span>
                     </div>
 
-                    <!-- CENTRAL OVERLAY BADGE -->
-                    <div class="d-none d-lg-flex align-items-center justify-content-center" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10;">
-                        <div style="width: 70px; height: 70px; background-color: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 28px; box-shadow: 0 0 0 12px #020617, 0 15px 35px rgba(16, 185, 129, 0.4); border: 2px solid #34d399; color: #ffffff;">
-                            &#10140;
-                        </div>
-                    </div>
+                    <ul style="list-style: none; padding: 0; margin: 0; position: relative;">
+                        <!-- Vertical dashed line to represent broken workflow -->
+                        <div style="position: absolute; left: 24px; top: 30px; bottom: 30px; width: 2px; border-left: 2px dashed #334155; z-index: 0;"></div>
 
-                    <!-- RIGHT SIDE: Niyu Workflow -->
-                    <div class="col-lg-6" style="background: linear-gradient(135deg, #2e1065 0%, #4c1d95 100%); padding: 80px 60px; text-align: left; position: relative; border-left: 1px solid #5b21b6;">
-                        <div style="margin-bottom: 50px;">
-                            <span class="niyu-safe-tag" style="background-color: #ffffff; color: #4c1d95; border: none; font-size: 14px; padding: 10px 24px; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">Niyu AI Workflow</span>
-                        </div>
-
-                        <!-- Streamlined, elevated list -->
-                        <ul style="list-style: none; padding: 0; margin: 0; position: relative;">
-                            <!-- Glowing solid line to represent connected workflow -->
-                            <div style="position: absolute; left: 28px; top: 30px; bottom: 30px; width: 4px; background: linear-gradient(to bottom, #10b981, rgba(16,185,129,0)); z-index: 0; border-radius: 4px;"></div>
-
-                            <!-- Floating Glass Cards -->
-                            <li class="mb-4 d-flex align-items-center position-relative" style="z-index: 1; background-color: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 16px 24px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                                <div style="min-width: 36px; height: 36px; background-color: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 16px; color: #ffffff; box-shadow: 0 0 15px rgba(16, 185, 129, 0.6);" aria-hidden="true">&#10004;</div>
-                                <span style="font-size: 20px; color: #ffffff; font-weight: 700;">Open Overview</span>
-                            </li>
-                            
-                            <li class="mb-4 d-flex align-items-center position-relative" style="z-index: 1; background-color: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 16px 24px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                                <div style="min-width: 36px; height: 36px; background-color: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 16px; color: #ffffff; box-shadow: 0 0 15px rgba(16, 185, 129, 0.6);" aria-hidden="true">&#10004;</div>
-                                <span style="font-size: 20px; color: #ffffff; font-weight: 700;">See what needs attention</span>
-                            </li>
-                            
-                            <li class="mb-4 d-flex align-items-center position-relative" style="z-index: 1; background-color: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 16px 24px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                                <div style="min-width: 36px; height: 36px; background-color: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 16px; color: #ffffff; box-shadow: 0 0 15px rgba(16, 185, 129, 0.6);" aria-hidden="true">&#10004;</div>
-                                <span style="font-size: 20px; color: #ffffff; font-weight: 700;">Open Action Lines</span>
-                            </li>
-                            
-                            <li class="mb-4 d-flex align-items-center position-relative" style="z-index: 1; background-color: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 16px 24px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-                                <div style="min-width: 36px; height: 36px; background-color: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 16px; color: #ffffff; box-shadow: 0 0 15px rgba(16, 185, 129, 0.6);" aria-hidden="true">&#10004;</div>
-                                <span style="font-size: 20px; color: #ffffff; font-weight: 700;">Buy, transfer, or split</span>
-                            </li>
-                            
-                            <!-- Highlighted Final Step -->
-                            <li class="d-flex align-items-center position-relative" style="z-index: 1; margin-top: 40px; background-color: #ffffff; padding: 20px 24px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
-                                <div style="min-width: 48px; height: 48px; background: linear-gradient(135deg, #10b981, #059669); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 20px; color: #ffffff; box-shadow: 0 10px 20px rgba(16, 185, 129, 0.4);" aria-hidden="true">&#10004;</div>
-                                <span style="font-size: 22px; color: #020617; font-weight: 900; letter-spacing: -0.5px;">Move forward with your day</span>
-                            </li>
-                        </ul>
-                    </div>
-
+                        <li class="mb-4 d-flex align-items-center position-relative" style="z-index: 1;">
+                            <div style="min-width: 48px; height: 48px; background-color: #1e293b; border: 1px solid #334155; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 16px; color: #f59e0b;" aria-hidden="true">&#9888;</div>
+                            <span style="font-size: 20px; color: #94a3b8; font-weight: 500;">Export sales to Excel</span>
+                        </li>
+                        <li class="mb-4 d-flex align-items-center position-relative" style="z-index: 1;">
+                            <div style="min-width: 48px; height: 48px; background-color: #1e293b; border: 1px solid #334155; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 16px; color: #f59e0b;" aria-hidden="true">&#9888;</div>
+                            <span style="font-size: 20px; color: #94a3b8; font-weight: 500;">Check stock manually</span>
+                        </li>
+                        <li class="mb-4 d-flex align-items-center position-relative" style="z-index: 1;">
+                            <div style="min-width: 48px; height: 48px; background-color: #1e293b; border: 1px solid #334155; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 16px; color: #f59e0b;" aria-hidden="true">&#9888;</div>
+                            <span style="font-size: 20px; color: #94a3b8; font-weight: 500;">Compare warehouses</span>
+                        </li>
+                        <li class="mb-4 d-flex align-items-center position-relative" style="z-index: 1;">
+                            <div style="min-width: 48px; height: 48px; background-color: #1e293b; border: 1px solid #334155; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 16px; color: #f59e0b;" aria-hidden="true">&#9888;</div>
+                            <span style="font-size: 20px; color: #94a3b8; font-weight: 500;">Guess the next purchase</span>
+                        </li>
+                        <li class="d-flex align-items-center position-relative" style="z-index: 1; margin-top: 40px; background-color: #1e293b; padding: 20px; border-radius: 16px; border: 1px solid #334155;">
+                            <div style="min-width: 48px; height: 48px; background-color: #334155; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 20px; color: #94a3b8;" aria-hidden="true">&#10251;</div>
+                            <span style="font-size: 20px; color: #cbd5e1; font-weight: 700;">Repeat the mess tomorrow</span>
+                        </li>
+                    </ul>
                 </div>
+
+                <!-- RIGHT BOX: Niyu Workflow -->
+                <div class="niyu-hover-lift" style="flex: 1 1 450px; background: linear-gradient(135deg, #2e1065 0%, #4c1d95 100%); padding: 60px 50px; border-radius: 30px; border: 1px solid #6d28d9; position: relative; box-shadow: 0 30px 60px rgba(76, 29, 149, 0.4), inset 0 2px 0 rgba(255,255,255,0.1);">
+                    
+                    <div style="margin-bottom: 40px;">
+                        <span class="niyu-safe-tag" style="background-color: #ffffff; color: #4c1d95; border: none; font-size: 14px; padding: 10px 24px; box-shadow: 0 10px 25px rgba(0,0,0,0.2);">Niyu AI Workflow</span>
+                    </div>
+
+                    <ul style="list-style: none; padding: 0; margin: 0; position: relative;">
+                        <!-- Glowing solid line to represent connected workflow -->
+                        <div style="position: absolute; left: 28px; top: 30px; bottom: 30px; width: 4px; background: linear-gradient(to bottom, #10b981, rgba(16,185,129,0)); z-index: 0; border-radius: 4px;"></div>
+
+                        <!-- Floating Glass Cards -->
+                        <li class="mb-4 d-flex align-items-center position-relative" style="z-index: 1; background-color: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 16px 24px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                            <div style="min-width: 36px; height: 36px; background-color: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 16px; color: #ffffff; box-shadow: 0 0 15px rgba(16, 185, 129, 0.6);" aria-hidden="true">&#10004;</div>
+                            <span style="font-size: 20px; color: #ffffff; font-weight: 700;">Open Overview</span>
+                        </li>
+                        
+                        <li class="mb-4 d-flex align-items-center position-relative" style="z-index: 1; background-color: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 16px 24px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                            <div style="min-width: 36px; height: 36px; background-color: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 16px; color: #ffffff; box-shadow: 0 0 15px rgba(16, 185, 129, 0.6);" aria-hidden="true">&#10004;</div>
+                            <span style="font-size: 20px; color: #ffffff; font-weight: 700;">See what needs attention</span>
+                        </li>
+                        
+                        <li class="mb-4 d-flex align-items-center position-relative" style="z-index: 1; background-color: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 16px 24px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                            <div style="min-width: 36px; height: 36px; background-color: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 16px; color: #ffffff; box-shadow: 0 0 15px rgba(16, 185, 129, 0.6);" aria-hidden="true">&#10004;</div>
+                            <span style="font-size: 20px; color: #ffffff; font-weight: 700;">Open Action Lines</span>
+                        </li>
+                        
+                        <li class="mb-4 d-flex align-items-center position-relative" style="z-index: 1; background-color: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); padding: 16px 24px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.2); box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                            <div style="min-width: 36px; height: 36px; background-color: #10b981; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 16px; color: #ffffff; box-shadow: 0 0 15px rgba(16, 185, 129, 0.6);" aria-hidden="true">&#10004;</div>
+                            <span style="font-size: 20px; color: #ffffff; font-weight: 700;">Buy, transfer, or split</span>
+                        </li>
+                        
+                        <!-- Highlighted Final Step -->
+                        <li class="d-flex align-items-center position-relative" style="z-index: 1; margin-top: 40px; background-color: #ffffff; padding: 20px 24px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
+                            <div style="min-width: 48px; height: 48px; background: linear-gradient(135deg, #10b981, #059669); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 20px; font-size: 20px; color: #ffffff; box-shadow: 0 10px 20px rgba(16, 185, 129, 0.4);" aria-hidden="true">&#10004;</div>
+                            <span style="font-size: 22px; color: #020617; font-weight: 900; letter-spacing: -0.5px;">Move forward with your day</span>
+                        </li>
+                    </ul>
+                </div>
+
             </div>
             
         </div>
