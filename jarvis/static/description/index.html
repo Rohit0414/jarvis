@@ -2,73 +2,8 @@
 <!-- Bootstrap (for grid/flex utilities). Remove if already included elsewhere. -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 
-<!-- NIYU AI ANALYST PREMIUM UPDATE STYLES - Odoo App Store safe, light theme only -->
-<style>
-  .niyu-premium-wrap * { box-sizing: border-box; }
-  .niyu-glass-card {
-    background: rgba(255,255,255,.86);
-    border: 1px solid rgba(226,232,240,.95);
-    box-shadow: 0 24px 70px rgba(15,23,42,.10);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-  }
-  .niyu-section-eyebrow {
-    display:inline-flex; align-items:center; gap:8px; font-size:13px; font-weight:900;
-    letter-spacing:.08em; text-transform:uppercase; border-radius:999px; padding:8px 14px;
-    background:#eef2ff; color:#4f46e5; border:1px solid #c7d2fe;
-  }
-  .niyu-soft-gradient {
-    background:
-      radial-gradient(900px 480px at 10% 0%, rgba(79,70,229,.14), transparent 58%),
-      radial-gradient(820px 520px at 90% 10%, rgba(20,184,166,.14), transparent 55%),
-      linear-gradient(180deg,#ffffff,#f8fafc);
-  }
-  .niyu-chip {
-    display:inline-flex; align-items:center; gap:8px; padding:9px 13px; border-radius:999px;
-    background:#ffffff; border:1px solid #e2e8f0; color:#334155; font-size:14px; font-weight:750;
-    box-shadow:0 10px 26px rgba(15,23,42,.06); margin:5px;
-  }
-  .niyu-chip strong { color:#0f172a; }
-  .niyu-feature-card {
-    height:100%; background:#fff; border:1px solid #e2e8f0; border-radius:24px; padding:28px;
-    box-shadow:0 18px 50px rgba(15,23,42,.08); transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
-  }
-  .niyu-feature-card:hover { transform:translateY(-6px); box-shadow:0 28px 70px rgba(15,23,42,.13); border-color:#c7d2fe; }
-  .niyu-icon {
-    width:48px; height:48px; border-radius:16px; display:flex; align-items:center; justify-content:center;
-    font-size:24px; margin-bottom:16px; background:#eef2ff; color:#4f46e5; box-shadow: inset 0 0 0 1px #c7d2fe;
-  }
-  .niyu-table-demo {
-    width:100%; border-collapse:separate; border-spacing:0; overflow:hidden; border-radius:18px;
-    border:1px solid #e2e8f0; background:#fff; box-shadow:0 20px 55px rgba(15,23,42,.08);
-  }
-  .niyu-table-demo th { background:#f8fafc; color:#334155; font-size:13px; padding:14px; border-bottom:1px solid #e2e8f0; white-space:nowrap; }
-  .niyu-table-demo td { padding:14px; border-bottom:1px solid #eef2f7; color:#0f172a; font-size:14px; white-space:nowrap; }
-  .niyu-link-pill {
-    display:inline-flex; align-items:center; gap:8px; padding:7px 11px; border-radius:999px;
-    background:#ecfdf5; border:1px solid #a7f3d0; color:#047857; font-weight:850; text-decoration:none;
-  }
-  .niyu-verify-pill { display:inline-flex; padding:7px 12px; border-radius:999px; color:#0369a1; background:#f0f9ff; border:1px solid #bae6fd; font-weight:800; }
-  .niyu-composer-demo {
-    border:1px solid #e2e8f0; border-radius:28px; background:#fff; box-shadow:0 28px 80px rgba(15,23,42,.12); padding:18px;
-  }
-  .niyu-composer-box {
-    min-height:82px; border:1px solid #e5e7eb; border-radius:22px; background:#fbfdff; padding:18px; color:#64748b; font-size:17px;
-  }
-  .niyu-small-muted { color:#64748b; font-size:14px; }
-  .niyu-stats-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px; }
-  .niyu-stat { border:1px solid #e2e8f0; background:#fff; border-radius:20px; padding:18px; box-shadow:0 12px 34px rgba(15,23,42,.06); }
-  .niyu-stat b { display:block; color:#0f172a; font-size:22px; line-height:1.1; }
-  .niyu-stat span { color:#64748b; font-size:13px; font-weight:700; }
-  @media (max-width: 768px) {
-    .niyu-stats-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
-    .niyu-table-demo { display:block; overflow-x:auto; }
-  }
-</style>
-
-
 <!-- MAIN CONTAINER: White Background (Amazing/Sexy Theme) -->
-<section class="niyu-premium-wrap" style="
+<section style="
   background-color:#ffffff; color:#1f2937; /* White BG, Dark Text */
   font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;
   line-height:1.7; margin:0; padding:0;
@@ -81,7 +16,7 @@
 
    <!-- Top Info Bar: Dark Text -->
    <div style="position: absolute; top: 20px; left: 20px; font-size: 1rem; color: #6b7280; z-index: 10;">
-    Last updated: May 11, 2026 | Version: 19.0.10.2
+    Last updated: May 11, 2026 | Version: 19.0.10.2.0
   </div>
 
   <!-- HERO (Layout preserved: padding 180px 20px 100px 20px) -->
@@ -89,18 +24,18 @@
     <div style="max-width: 1000px; margin: 0 auto;">
       <!-- Heading: Primary color text, ultra-bold, with a subtle glow -->
       <h1 class="o_app_page_title" style="font-size: clamp(4rem, 9vw, 5rem); line-height: 1; font-weight: 900; letter-spacing: -0.06em; margin: 0 0 30px 0; color: #4f46e5; text-shadow: 0 10px 30px rgba(79,70,229,0.4);"> 
-        <span style="font-size: clamp(4rem, 9vw, 8rem); color: #1f2937;">Odoo AI Analyst </span><br>for Odoo 19
+        <span style="font-size: clamp(4rem, 9vw, 8rem); color: #1f2937;">Odoo AI Analyst </span><br>Chatbot:
       </h1>
       <!-- Emphasized Icons with Colors and Bolder Font -->
       <p style="font-size: clamp(1.6rem, 3.8vw, 2.1rem); font-weight: 800; color: #1f2937; margin: 0 auto 24px;">
-    <span style="color: #4f46e5; font-size: 1.1em;">&#129504;</span> Ask &bull; <span style="color: #0ea5e9; font-size: 1.1em;">&#128202;</span> Table Answers &bull; <span style="color: #10b981; font-size: 1.1em;">&#128279;</span> Native Drill-Down &bull; <span style="color: #f97316; font-size: 1.1em;">&#128206;</span> File Upload
+    <span style="color: #f97316; font-size: 1.1em;">&#128172;</span> Ask &bull; <span style="color: #0ea5e9; font-size: 1.1em;">&#128279;</span> Verify &bull; <span style="color: #10b981; font-size: 1.1em;">&#128196;</span> Upload &bull; <span style="color: #9333ea; font-size: 1.1em;">&#128274;</span> Govern
       </p>
       <p style="font-size: clamp(1.2rem, 2.8vw, 1.5rem); color: #4b5563; max-width: 800px; margin: 0 auto 60px;">
-        Ask Odoo questions in plain language, upload files, verify results in native Odoo pages, and get table-first answers with SQL transparency, governed access, and multi-provider AI support.
+        Ask questions in any language, get table-first answers, verify each result inside native Odoo records, upload business files, and control exactly which models the AI can use.
       </p>
       <!-- CTA Button: Solid Primary Color, Dramatic Shadow, Lifted on Hover -->
       <a href="https://apps.odoo.com/apps/modules/browse?search=Niyu" target="_blank" style="display: inline-block; background-color: #4f46e5; color: #ffffff; padding: 20px 40px; font-size: 1.25rem; font-weight: 900; text-decoration: none; border-radius: 99px; transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; box-shadow: 0 15px 40px -8px rgba(79, 70, 229, 0.6), 0 0 60px 12px rgba(79, 70, 229, 0.4); border: none;" onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 25px 60px -10px rgba(79, 70, 229, 0.8), 0 0 80px 15px rgba(79, 70, 229, 0.6)'; this.style.backgroundColor='#4338ca';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 15px 40px -8px rgba(79, 70, 229, 0.6), 0 0 60px 12px rgba(79, 70, 229, 0.4)'; this.style.backgroundColor='#4f46e5';">
-        Get the Odoo AI Analyst <span style="margin-left: 10px;">&#8594;</span>
+        Install Niyu AI Analyst Now <span style="margin-left: 10px;">&#8594;</span>
       </a>
     </div>
   </header>
@@ -146,50 +81,12 @@
       text-align: center;
       line-height: 1.6;
     ">
-      <strong style="color: #4f46e5;">&#128640; MAY 2026 PREMIUM UPDATE:</strong> <span style="color: #9333ea;">Claude-style Workspace</span>, <span style="color: #0ea5e9;">Table-First Answers</span>, <span style="color: #10b981;">Native Odoo Drill-Down</span>, <span style="color: #f97316;">File Upload + Reading</span>, Multi-Provider AI, Governed Models, Query Logs, Verification Notes and Odoo 19 compatibility.
+      <strong style="color: #4f46e5;">&#128640; MAY 2026 PREMIUM UPDATE:</strong> <span style="color:#0ea5e9;">Claude-style workspace</span>, <span style="color:#10b981;">table-first verified answers</span>, <span style="color:#9333ea;">native Odoo drill-down</span>, <span style="color:#f97316;">file upload + reading</span>, <span style="color:#ec4899;">OpenAI / Gemini / Claude / custom providers</span>, query logs, exposed models, semantic dictionary, and Odoo 19 compatibility.
     </p>
   </div>
 </section>
 <!-- =================================================================== -->
 <!-- END: NEW UPDATE HIGHLIGHT BANNER -->
-<!-- =================================================================== -->
-
-  
-
-<!-- =================================================================== -->
-<!-- START: PREMIUM FEATURE STRIP - ADDED FOR 19.0.10.x -->
-<!-- =================================================================== -->
-<section class="niyu-soft-gradient" style="padding: 90px 20px; border-top:1px solid #e5e7eb; border-bottom:1px solid #e5e7eb;">
-  <div style="max-width: 1220px; margin: 0 auto;">
-    <div style="text-align:center; max-width: 950px; margin: 0 auto 42px;">
-      <span class="niyu-section-eyebrow">NEW ANALYST ENGINE</span>
-      <h2 style="font-size: clamp(2.4rem, 5vw, 4rem); line-height:1.04; font-weight: 950; letter-spacing:-0.04em; color:#0f172a; margin:18px 0 18px;">
-        Not a chatbot. A governed Odoo analysis workspace.
-      </h2>
-      <p style="font-size:1.2rem; color:#475569; margin:0 auto; max-width:860px;">
-        Niyu AI Analyst now feels like a modern analyst console: attach files, ask in natural language, receive clean tables, open the exact Odoo records behind the numbers, and verify every answer with SQL and audit logs.
-      </p>
-    </div>
-
-    <div style="text-align:center; margin-bottom:38px;">
-      <span class="niyu-chip"><strong>&#128206; Upload files</strong> CSV, Excel, PDF, DOCX, TXT, JSON</span>
-      <span class="niyu-chip"><strong>&#128202; Table-first</strong> no repeated summaries</span>
-      <span class="niyu-chip"><strong>&#128279; Native drill-down</strong> open source records</span>
-      <span class="niyu-chip"><strong>&#128737; Governed</strong> exposed models only</span>
-      <span class="niyu-chip"><strong>&#129504; Multi-provider</strong> OpenAI, Gemini, Claude, compatible APIs</span>
-      <span class="niyu-chip"><strong>&#128274; Guardrails</strong> read-only SQL checks</span>
-    </div>
-
-    <div class="niyu-stats-grid">
-      <div class="niyu-stat"><b>Odoo 19</b><span>built for modern list views, security groups, and client actions</span></div>
-      <div class="niyu-stat"><b>Table-first</b><span>answers are shown as structured rows before narrative text</span></div>
-      <div class="niyu-stat"><b>Click to verify</b><span>open native Odoo forms and source lists from results</span></div>
-      <div class="niyu-stat"><b>BYO key</b><span>choose OpenAI, Gemini, Claude, or compatible endpoints</span></div>
-    </div>
-  </div>
-</section>
-<!-- =================================================================== -->
-<!-- END: PREMIUM FEATURE STRIP -->
 <!-- =================================================================== -->
 
   <!-- NEW SECTION 1: HOW IT WORKS (Layout preserved: padding 70px 0) -->
@@ -201,7 +98,7 @@
         <span style="display:inline-block; font-size:14px; font-weight:800; color:#4f46e5; background-color:#e0e7ff; border:1px solid #c7d2fe; border-radius:999px; padding:8px 16px; margin-bottom:16px; box-shadow: 0 0 20px rgba(79,70,229,0.4);">ARCHITECTURE</span>
         <h2 style="font-size:36px; font-weight:900; margin:0 0 16px 0; color:#1f2937;">How Niyu AI Works <span style="color: #4f46e5;">(Under the Hood)</span></h2>
         <p style="font-size:17px; color:#4b5563; max-width:860px; margin:0 auto 28px;">
-            Natural language and uploaded files go through a governed reasoning flow. For Odoo questions, the module builds schema context, generates read-only SQL, verifies the result, and shows a table you can drill into using native Odoo pages.
+            Natural language in, safe SQL out&#8212;executed <em>inside</em> your Odoo DB. Your business data never leaves your environment.
         </p>
       </div>
     </div>
@@ -212,22 +109,22 @@
         <!-- Card: White Background, Stronger Soft Shadow, Hover Effect -->
         <div class="d-flex flex-column" style="background-color:#ffffff; border:1px solid #c7d2fe; border-radius:18px; padding:30px; height:100%; box-shadow: 0 10px 25px rgba(0,0,0,0.12); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 18px 40px rgba(79,70,229,0.25)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';">
           <div style="font-size:32px; margin-bottom:10px; color:#4f46e5;">&#128220;</div>
-          <h4 style="margin:0 0 10px; color:#1f2937; font-size:1.25rem; font-weight:800;">1) Understand Your Odoo Context</h4>
-          <p style="margin:0; color:#4b5563; font-size:15px;">The engine reads governed models, fields, relations, labels, selection values and semantic terms so it understands both standard Odoo apps and your custom modules.</p>
+          <h4 style="margin:0 0 10px; color:#1f2937; font-size:1.25rem; font-weight:800;">1) Understand Your Schema</h4>
+          <p style="margin:0; color:#4b5563; font-size:15px;">We read your table/field names and types (including custom modules) to build a context map. No row-level data is ever sent out.</p>
         </div>
       </div>
       <div class="col-12 col-md-4">
         <div class="d-flex flex-column" style="background-color:#ffffff; border:1px solid #c7d2fe; border-radius:18px; padding:30px; height:100%; box-shadow: 0 10px 25px rgba(0,0,0,0.12); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 18px 40px rgba(79,70,229,0.25)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';">
           <div style="font-size:32px; margin-bottom:10px; color:#4f46e5;">&#129521;</div>
-          <h4 style="margin:0 0 10px; color:#1f2937; font-size:1.25rem; font-weight:800;">2) Reason with the Right AI Provider</h4>
-          <p style="margin:0; color:#4b5563; font-size:15px;">Use OpenAI, Gemini, Claude or any OpenAI-compatible API. Strong reasoning models handle SQL planning, correction, summaries and file-based questions.</p>
+          <h4 style="margin:0 0 10px; color:#1f2937; font-size:1.25rem; font-weight:800;">2) Translate Your Language to SQL</h4>
+          <p style="margin:0; color:#4b5563; font-size:15px;">Your question + schema **+ your custom keyword map** are used to generate precise SQL, turning your business jargon into a query Odoo understands.</p>
         </div>
       </div>
       <div class="col-12 col-md-4">
         <div class="d-flex flex-column" style="background-color:#ffffff; border:1px solid #c7d2fe; border-radius:18px; padding:30px; height:100%; box-shadow: 0 10px 25px rgba(0,0,0,0.12); transition: transform 0.3s ease;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 18px 40px rgba(79,70,229,0.25)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';">
           <div style="font-size:32px; margin-bottom:10px; color:#4f46e5;">&#128274;</div>
-          <h4 style="margin:0 0 10px; color:#1f2937; font-size:1.25rem; font-weight:800;">3) Verify, Table, Drill Down</h4>
-          <p style="margin:0; color:#4b5563; font-size:15px;">Only safe read-only queries are executed. Results are shown as professional tables with verification notes, clickable native Odoo records, source lists, charts and exports.</p>
+          <h4 style="margin:0 0 10px; color:#1f2937; font-size:1.25rem; font-weight:800;">3) Execute & Visualize Securely</h4>
+          <p style="margin:0; color:#4b5563; font-size:15px;">The generated SQL runs entirely within Odoo, and the results are rendered locally, respecting all of your existing access rules & record ACLs.</p>
         </div>
       </div>
     </div>
@@ -267,9 +164,9 @@
           <div>
             <h5 style="margin:0 0 8px; color:#1f2937; font-size:1.25rem; font-weight:800;">Privacy & Controls</h5>
             <ul style="margin:0; padding-left:20px; color:#4b5563; font-size:16px;">
-              <li>For live Odoo analytics, the AI uses governed schema context, semantic terms, and your question to generate read-only SQL.</li>
-              <li>If a user attaches a file, the extracted file text is used only for that question so the AI can summarize or analyze it.</li>
-              <li>Execution respects exposed-model governance, Odoo access rights, record rules, SQL guardrails and query logs.</li>
+              <li>For live Odoo questions, the AI uses your question and governed schema context to generate SQL.</li>
+              <li>SQL executes inside Odoo; only the selected provider receives the context needed for answer generation and file analysis.</li>
+              <li>Execution respects Odoo user permissions, model governance, and read-only SQL guardrails.</li>
             </ul>
           </div>
         </div>
@@ -316,9 +213,9 @@
                     margin: 0 0 16px 0;
                     color: #1f2937; /* Dark Heading */
                     text-shadow: 0 2px 5px rgba(0,0,0,0.05);
-                ">Claude-Style Workspace. <span style="color: #ec4899;">Built for Serious Odoo Analysis.</span></h2>
+                ">Beauty, Meet Brains. <span style="color: #ec4899;">The All-New Interface.</span></h2>
                 <p style="font-size: 1.2rem; color: #4b5563; max-width: 860px; margin: 0 auto;">
-                    The main screen is now a professional light workspace: a clean conversation rail, large centered composer, always-visible input, table-first answers, verified metadata, export actions, and source-list navigation that feels native to Odoo.
+                    We didn't just make it look better; we made it smarter and more transparent. Experience our sleekest design yet, and for the first time ever, see the exact SQL query generated for every question you ask. No more black box. Validate the logic, learn how it works, and trust the results.
                 </p>
             </div>
         </div>
@@ -345,15 +242,15 @@
                 <!-- Card: White Background, Stronger Soft Shadow, Hover Effect -->
                 <div style="background-color:#ffffff; border:1px solid #e5e7eb; border-radius:18px; padding:30px; height:100%; transition: transform 0.3s ease; box-shadow: 0 10px 25px rgba(0,0,0,0.12);" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 18px 40px rgba(236, 72, 153, 0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';">
                     <div style="font-size: 2.5rem; color: #ec4899; margin-bottom: 15px;">&#10024;</div>
-                    <h4 style="color:#1f2937; font-size:1.45rem; font-weight:800; margin-bottom:12px;">A Professional Analyst Console</h4>
-                    <p style="color:#4b5563; font-size:1.1rem;">Clean, sober and premium. The interface is designed for finance, sales, inventory and operations teams who need answers they can verify, not a toy chatbot screen.</p>
+                    <h4 style="color:#1f2937; font-size:1.45rem; font-weight:800; margin-bottom:12px;">A Stunning New Look</h4>
+                    <p style="color:#4b5563; font-size:1.1rem;">Clean, modern, and fast. The interface has been completely redesigned to feel like a native, premium part of your Odoo experience. Data is presented with clarity, making insights jump off the screen.</p>
                 </div>
             </div>
             <div class="col-12 col-md-6">
                  <div style="background-color:#ffffff; border:1px solid #e5e7eb; border-radius:18px; padding:30px; height:100%; transition: transform 0.3s ease; box-shadow: 0 10px 25px rgba(0,0,0,0.12);" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 18px 40px rgba(236, 72, 153, 0.3)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';">
                     <div style="font-size: 2.5rem; color: #ec4899; margin-bottom: 15px;">&#128065;</div>
-                    <h4 style="color:#1f2937; font-size:1.45rem; font-weight:800; margin-bottom:12px;">SQL Transparency + Verification</h4>
-                    <p style="color:#4b5563; font-size:1.1rem;">Every database answer can show SQL, verification notes, used models, row limits and provider metadata. Admins can also review the query logs later.</p>
+                    <h4 style="color:#1f2937; font-size:1.45rem; font-weight:800; margin-bottom:12px;">Total SQL Transparency</h4>
+                    <p style="color:#4b5563; font-size:1.1rem;">Trust is earned, not given. Every answer now includes an expandable <strong>Show SQL</strong> option. See the raw PostgreSQL query we generated and executed in your database. It's the ultimate proof of accuracy and security.</p>
                 </div>
             </div>
         </div>
@@ -363,145 +260,70 @@
 <!-- END: NEW SECTION - UI OVERHAUL & SQL TRANSPARENCY -->
 <!-- =================================================================== -->
 
-
-
-
 <!-- =================================================================== -->
-<!-- START: TABLE-FIRST ANSWERS + NATIVE DRILL DOWN - ADDED FOR 19.0.10.x -->
+<!-- START: NATIVE VERIFICATION & CLICKABLE ODOO RECORDS -->
 <!-- =================================================================== -->
-<section style="background:#ffffff; padding:120px 0; border-top:1px solid #e5e7eb; overflow:hidden; background-image:radial-gradient(circle at 90% 10%, rgba(16,185,129,.16), transparent 42%);">
+<section style="
+    background-color:#ffffff;
+    padding:120px 0;
+    overflow:hidden;
+    position:relative;
+    border-top:1px solid #e5e7eb;
+    background-image:
+      radial-gradient(circle at 12% 0%, rgba(14,165,233,0.20), transparent 42%),
+      radial-gradient(circle at 100% 70%, rgba(16,185,129,0.16), transparent 42%);
+">
   <div class="container" style="padding:0 15px;">
-    <div class="row align-items-center g-5">
-      <div class="col-12 col-lg-5">
-        <span class="niyu-section-eyebrow" style="background:#ecfdf5; color:#047857; border-color:#a7f3d0;">TABLE-FIRST ANSWERS</span>
-        <h2 style="font-size:clamp(2.4rem,5vw,3.6rem); font-weight:950; letter-spacing:-.04em; line-height:1.05; color:#0f172a; margin:18px 0;">
-          Answers that look like business reports, not chat noise.
-        </h2>
-        <p style="font-size:1.15rem; color:#475569; margin-bottom:22px;">
-          When the result is data, Niyu AI shows the table first. It does not repeat every row again in the summary. It adds compact insight notes only when there is something useful beyond the table.
-        </p>
-        <div class="niyu-chip"><strong>&#9989; No duplicate summaries</strong> cleaner output</div>
-        <div class="niyu-chip"><strong>&#128290; Numeric alignment</strong> easy comparison</div>
-        <div class="niyu-chip"><strong>&#128269; Verification notes</strong> trust the answer</div>
+    <div class="row mb-5">
+      <div class="col-12 text-center">
+        <span style="display:inline-block;font-size:14px;font-weight:900;color:#0ea5e9;background-color:#e0f2fe;border:1px solid #bae6fd;border-radius:999px;padding:8px 16px;margin-bottom:16px;box-shadow:0 0 25px rgba(14,165,233,0.35);">VERIFY, DON'T JUST TRUST</span>
+        <h2 style="font-size:clamp(2.5rem,5vw,3.6rem);font-weight:900;margin:0 0 16px 0;color:#1f2937;letter-spacing:-0.03em;">Answers You Can <span style="color:#0ea5e9;">Open, Check, and Prove.</span></h2>
+        <p style="font-size:1.2rem;color:#4b5563;max-width:920px;margin:0 auto;">Niyu AI does not stop at a text answer. When the result contains customers, invoices, orders, products, users, countries, warehouses, or other Odoo records, the table shows native clickable record chips. Click <strong>Verify</strong> or the record chip to open the original Odoo page and confirm the result yourself.</p>
       </div>
+    </div>
+
+    <div class="row g-4 align-items-center">
       <div class="col-12 col-lg-7">
-        <table class="niyu-table-demo">
-          <thead>
-            <tr><th>#</th><th>Customer</th><th>Currency</th><th>Open Invoices</th><th>Amount Due</th><th>Verify</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>1</td><td><span class="niyu-link-pill">&#8599; Gemini Furniture</span></td><td>$</td><td>8</td><td style="text-align:right; font-weight:900;">339,243</td><td><span class="niyu-verify-pill">Verify</span></td></tr>
-            <tr><td>2</td><td><span class="niyu-link-pill">&#8599; Acme Corporation</span></td><td>$</td><td>3</td><td style="text-align:right; font-weight:900;">98,375</td><td><span class="niyu-verify-pill">Verify</span></td></tr>
-            <tr><td>3</td><td><span class="niyu-link-pill">&#8599; Azure Interior</span></td><td>$</td><td>1</td><td style="text-align:right; font-weight:900;">31,750</td><td><span class="niyu-verify-pill">Verify</span></td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- =================================================================== -->
-<!-- END: TABLE-FIRST ANSWERS + NATIVE DRILL DOWN -->
-<!-- =================================================================== -->
-
-<!-- =================================================================== -->
-<!-- START: CLICKABLE NATIVE ODOO RECORDS - ADDED FOR 19.0.10.x -->
-<!-- =================================================================== -->
-<section style="background:#f8fafc; padding:120px 0; border-top:1px solid #e5e7eb; overflow:hidden; background-image:radial-gradient(circle at 0% 0%, rgba(79,70,229,.16), transparent 42%);">
-  <div class="container" style="padding:0 15px;">
-    <div class="row mb-5">
-      <div class="col-12 text-center">
-        <span class="niyu-section-eyebrow">NATIVE ODOO DRILL-DOWN</span>
-        <h2 style="font-size:clamp(2.4rem,5vw,3.6rem); font-weight:950; letter-spacing:-.04em; color:#0f172a; margin:18px 0;">
-          Click a result. Open the real Odoo page behind it.
-        </h2>
-        <p style="font-size:1.15rem; color:#475569; max-width:900px; margin:0 auto;">
-          Result cells are not plain text anymore. Customers, invoices, orders, products, users, warehouses, locations and countries can become native Odoo links. Open a record, use Odoo breadcrumbs, then return to the source list for verification.
-        </p>
-      </div>
-    </div>
-    <div class="row g-4">
-      <div class="col-12 col-md-4"><div class="niyu-feature-card"><div class="niyu-icon">&#128279;</div><h4 style="font-weight:900; color:#0f172a;">Smart linked cells</h4><p style="color:#475569; margin:0;">Many2one IDs are converted into readable names and unique native-link pills, so users see <strong>Acme Corporation</strong>, not <code>partner_id = 42</code>.</p></div></div>
-      <div class="col-12 col-md-4"><div class="niyu-feature-card"><div class="niyu-icon">&#128269;</div><h4 style="font-weight:900; color:#0f172a;">Verify buttons</h4><p style="color:#475569; margin:0;">Each row can open the underlying Odoo record or related source list. This turns AI answers into auditable business evidence.</p></div></div>
-      <div class="col-12 col-md-4"><div class="niyu-feature-card"><div class="niyu-icon">&#128506;</div><h4 style="font-weight:900; color:#0f172a;">Native source lists</h4><p style="color:#475569; margin:0;">For unpaid invoices, sales orders, purchases, contacts and stock moves, Niyu AI opens the correct native Odoo action instead of a generic technical list.</p></div></div>
-    </div>
-  </div>
-</section>
-<!-- =================================================================== -->
-<!-- END: CLICKABLE NATIVE ODOO RECORDS -->
-<!-- =================================================================== -->
-
-<!-- =================================================================== -->
-<!-- START: FILE UPLOAD + THINKING - ADDED FOR 19.0.10.x -->
-<!-- =================================================================== -->
-<section style="background:#ffffff; padding:120px 0; border-top:1px solid #e5e7eb; overflow:hidden; background-image:radial-gradient(circle at 100% 0%, rgba(249,115,22,.16), transparent 42%);">
-  <div class="container" style="padding:0 15px;">
-    <div class="row align-items-center g-5">
-      <div class="col-12 col-lg-6">
-        <span class="niyu-section-eyebrow" style="background:#fff7ed; color:#c2410c; border-color:#fed7aa;">FILE-AWARE ANALYSIS</span>
-        <h2 style="font-size:clamp(2.4rem,5vw,3.6rem); font-weight:950; letter-spacing:-.04em; line-height:1.05; color:#0f172a; margin:18px 0;">
-          Upload a file where you ask the question.
-        </h2>
-        <p style="font-size:1.15rem; color:#475569; margin-bottom:22px;">
-          Attach a spreadsheet, PDF, document, text file or JSON file directly from the question box. Niyu AI reads the file, thinks through the content, then gives a clean answer or table.
-        </p>
-        <div class="row g-3">
-          <div class="col-6"><div class="niyu-chip" style="width:100%; justify-content:center;"><strong>CSV / Excel</strong></div></div>
-          <div class="col-6"><div class="niyu-chip" style="width:100%; justify-content:center;"><strong>PDF / DOCX</strong></div></div>
-          <div class="col-6"><div class="niyu-chip" style="width:100%; justify-content:center;"><strong>TXT / LOG / SQL</strong></div></div>
-          <div class="col-6"><div class="niyu-chip" style="width:100%; justify-content:center;"><strong>JSON / XML / HTML</strong></div></div>
+        <div style="border-radius:24px;padding:4px;background:linear-gradient(135deg,#0ea5e9,#10b981);box-shadow:0 50px 120px -28px rgba(14,165,233,0.45);">
+          <img src="./verified-table.png" alt="Niyu AI verified table answer with clickable native Odoo record links and Verify buttons" style="width:100%;display:block;border-radius:21px;border:1px solid #ffffff;">
         </div>
       </div>
-      <div class="col-12 col-lg-6">
-        <div class="niyu-composer-demo">
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
-            <strong style="color:#0f172a; font-size:18px;">Ask Niyu AI</strong>
-            <span class="niyu-verify-pill">Reading files + thinking</span>
+      <div class="col-12 col-lg-5">
+        <div style="display:grid;gap:16px;">
+          <div style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:18px;padding:24px;box-shadow:0 12px 30px rgba(15,23,42,0.08);">
+            <div style="font-size:2rem;color:#10b981;margin-bottom:8px;">&#128279;</div>
+            <h4 style="margin:0 0 8px;color:#1f2937;font-weight:900;font-size:1.3rem;">Clickable Odoo Record Chips</h4>
+            <p style="margin:0;color:#4b5563;font-size:1.02rem;">Customer, invoice, order, product, salesperson, country, warehouse, location and other many2one fields can be opened directly from the answer table.</p>
           </div>
-          <div style="display:flex; gap:8px; flex-wrap:wrap; margin-bottom:12px;">
-            <span class="niyu-chip" style="margin:0; background:#fff7ed; border-color:#fed7aa;">&#128206; overdue_invoices.xlsx</span>
-            <span class="niyu-chip" style="margin:0; background:#f0f9ff; border-color:#bae6fd;">&#128206; contract_terms.pdf</span>
+          <div style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:18px;padding:24px;box-shadow:0 12px 30px rgba(15,23,42,0.08);">
+            <div style="font-size:2rem;color:#0ea5e9;margin-bottom:8px;">&#9989;</div>
+            <h4 style="margin:0 0 8px;color:#1f2937;font-weight:900;font-size:1.3rem;">Row-Level Verify Buttons</h4>
+            <p style="margin:0;color:#4b5563;font-size:1.02rem;">Each linked row can include a <strong>Verify</strong> action so users can jump from AI result to the exact Odoo form behind that number.</p>
           </div>
-          <div class="niyu-composer-box">Summarize this file and show the important rows in a table...</div>
-          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:12px;">
-            <div class="niyu-small-muted">Attach files &bull; Table answer &bull; Verified SQL when Odoo data is used</div>
-            <div style="width:42px; height:42px; border-radius:50%; background:#0ea5e9; color:white; display:flex; align-items:center; justify-content:center; font-weight:900;">&#8593;</div>
+          <div style="background:#f8fafc;border:1px solid #e5e7eb;border-radius:18px;padding:24px;box-shadow:0 12px 30px rgba(15,23,42,0.08);">
+            <div style="font-size:2rem;color:#9333ea;margin-bottom:8px;">&#128203;</div>
+            <h4 style="margin:0 0 8px;color:#1f2937;font-weight:900;font-size:1.3rem;">Native Source List Drill-Down</h4>
+            <p style="margin:0;color:#4b5563;font-size:1.02rem;">Open the real Odoo source list, such as Sales Orders, Customer Invoices, Products, Transfers, Contacts, Tasks, or CRM Pipeline, with the right context.</p>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- =================================================================== -->
-<!-- END: FILE UPLOAD + THINKING -->
-<!-- =================================================================== -->
 
-<!-- =================================================================== -->
-<!-- START: MULTI-PROVIDER AI + GOVERNANCE - ADDED FOR 19.0.10.x -->
-<!-- =================================================================== -->
-<section style="background:#f8fafc; padding:120px 0; border-top:1px solid #e5e7eb; overflow:hidden; background-image:radial-gradient(circle at 50% 0%, rgba(147,51,234,.16), transparent 42%);">
-  <div class="container" style="padding:0 15px;">
-    <div class="row mb-5">
-      <div class="col-12 text-center">
-        <span class="niyu-section-eyebrow" style="background:#faf5ff; color:#7e22ce; border-color:#e9d5ff;">PROVIDER-AGNOSTIC + GOVERNED</span>
-        <h2 style="font-size:clamp(2.4rem,5vw,3.6rem); font-weight:950; letter-spacing:-.04em; color:#0f172a; margin:18px 0;">
-          Bring your own AI key. Control what the AI can see.
-        </h2>
-        <p style="font-size:1.15rem; color:#475569; max-width:900px; margin:0 auto;">
-          Use the model/provider your company trusts, then restrict the AI to approved Odoo models. The result is powerful analytics without turning your ERP into an uncontrolled data gateway.
-        </p>
+    <div class="row g-4" style="margin-top:28px;">
+      <div class="col-12 col-md-6">
+        <img src="./native-source-list.png" alt="Niyu AI opens native Odoo source list for verification" style="width:100%;border-radius:20px;border:1px solid #dbeafe;display:block;box-shadow:0 35px 90px -30px rgba(14,165,233,0.45);">
+      </div>
+      <div class="col-12 col-md-6">
+        <img src="./native-record-open.png" alt="Niyu AI opens the original Odoo record form for verification" style="width:100%;border-radius:20px;border:1px solid #d1fae5;display:block;box-shadow:0 35px 90px -30px rgba(16,185,129,0.45);">
       </div>
     </div>
-    <div class="row g-4">
-      <div class="col-12 col-lg-3"><div class="niyu-feature-card"><div class="niyu-icon">&#129504;</div><h4 style="font-weight:900; color:#0f172a;">OpenAI / GPT reasoning</h4><p style="color:#475569; margin:0;">Use strong reasoning models for SQL planning, correction and analysis when accuracy matters.</p></div></div>
-      <div class="col-12 col-lg-3"><div class="niyu-feature-card"><div class="niyu-icon">&#10024;</div><h4 style="font-weight:900; color:#0f172a;">Gemini + Claude</h4><p style="color:#475569; margin:0;">Configure Gemini or Claude keys from settings and choose different models for SQL, correction and answer generation.</p></div></div>
-      <div class="col-12 col-lg-3"><div class="niyu-feature-card"><div class="niyu-icon">&#128279;</div><h4 style="font-weight:900; color:#0f172a;">Compatible APIs</h4><p style="color:#475569; margin:0;">Connect OpenAI-compatible gateways, private endpoints, OpenRouter-style routers or internally hosted model APIs.</p></div></div>
-      <div class="col-12 col-lg-3"><div class="niyu-feature-card"><div class="niyu-icon">&#128737;</div><h4 style="font-weight:900; color:#0f172a;">Exposed models</h4><p style="color:#475569; margin:0;">Admins decide which Odoo models are available to the analyst engine. Query logs keep the activity auditable.</p></div></div>
-    </div>
   </div>
 </section>
 <!-- =================================================================== -->
-<!-- END: MULTI-PROVIDER AI + GOVERNANCE -->
+<!-- END: NATIVE VERIFICATION & CLICKABLE ODOO RECORDS -->
 <!-- =================================================================== -->
+
+
 
   <!-- =================================================================== -->
 <!-- START: NEW SECTION - DYNAMIC CHARTING & VISUALIZATION (Layout preserved: padding 120px 0) -->
@@ -539,7 +361,7 @@
                     text-shadow: 0 2px 5px rgba(0,0,0,0.05);
                 ">Click. See. <span style="color: #2dd4bf;">Understand.</span></h2>
                 <p style="font-size: 1.2rem; color: #4b5563; max-width: 860px; margin: 0 auto;">
-                    Every table answer can become a visual explanation. Click <strong>Show Charts</strong> and Niyu AI chooses a useful chart type for comparisons, trends or proportions while keeping the verified table as the source of truth.
+                    Every answer is now a potential dashboard. With a single click on <strong>Show Charts</strong>, Niyu AI intelligently analyzes your results and automatically generates the most effective visualizations—be it a bar chart for comparisons, a line chart for trends, or a pie chart for proportions. Stop interpreting tables and start seeing the story in your data.
                 </p>
             </div>
         </div>
@@ -605,6 +427,61 @@
 <!-- END: NEW SECTION - DYNAMIC CHARTING & VISUALIZATION -->
 <!-- =================================================================== -->
 
+<!-- =================================================================== -->
+<!-- START: FILE UPLOAD & DOCUMENT THINKING -->
+<!-- =================================================================== -->
+<section style="
+    background-color:#f9fafb;
+    padding:120px 0;
+    overflow:hidden;
+    position:relative;
+    border-top:1px solid #e5e7eb;
+    background-image:
+      radial-gradient(circle at 0% 20%, rgba(249,115,22,0.18), transparent 42%),
+      radial-gradient(circle at 100% 0%, rgba(79,70,229,0.16), transparent 42%);
+">
+  <div class="container" style="padding:0 15px;">
+    <div class="row mb-5">
+      <div class="col-12 text-center">
+        <span style="display:inline-block;font-size:14px;font-weight:900;color:#f97316;background-color:#ffedd5;border:1px solid #fed7aa;border-radius:999px;padding:8px 16px;margin-bottom:16px;box-shadow:0 0 25px rgba(249,115,22,0.35);">UPLOAD. READ. ANALYZE.</span>
+        <h2 style="font-size:clamp(2.5rem,5vw,3.6rem);font-weight:900;margin:0 0 16px;color:#1f2937;letter-spacing:-0.03em;">Ask Odoo Questions. <span style="color:#f97316;">Or Upload a File.</span></h2>
+        <p style="font-size:1.2rem;color:#4b5563;max-width:920px;margin:0 auto;">The question box now supports file upload. Attach a CSV, Excel, PDF, DOCX, TXT, JSON, XML, HTML, LOG, or SQL file and ask Niyu AI to summarize, compare, clean, extract, or analyze it. For mixed questions, the AI can use uploaded file context together with live Odoo data.</p>
+      </div>
+    </div>
+
+    <div class="row g-4 align-items-center">
+      <div class="col-12 col-lg-5">
+        <div style="background:#ffffff;border:1px solid #e5e7eb;border-radius:24px;padding:34px;box-shadow:0 25px 70px -25px rgba(15,23,42,0.25);">
+          <h4 style="margin:0 0 18px;color:#1f2937;font-size:1.55rem;font-weight:900;">What users can do</h4>
+          <ul style="margin:0;padding-left:20px;color:#4b5563;font-size:1.05rem;line-height:1.8;">
+            <li><strong>Summarize documents</strong> such as PDFs, DOCX files, contracts, notes, and reports.</li>
+            <li><strong>Analyze spreadsheets</strong> and CSV files without leaving Odoo.</li>
+            <li><strong>Compare uploaded lists</strong> with live Odoo sales, invoices, customers, or products.</li>
+            <li><strong>Return table-first answers</strong> instead of long text dumps.</li>
+            <li><strong>Use thinking states</strong> so users see when files are being read and analyzed.</li>
+          </ul>
+          <div style="margin-top:22px;display:flex;flex-wrap:wrap;gap:8px;">
+            <span style="background:#eef2ff;color:#4f46e5;border:1px solid #c7d2fe;border-radius:999px;padding:6px 12px;font-weight:800;font-size:13px;">CSV</span>
+            <span style="background:#ecfdf5;color:#059669;border:1px solid #a7f3d0;border-radius:999px;padding:6px 12px;font-weight:800;font-size:13px;">Excel</span>
+            <span style="background:#fff7ed;color:#ea580c;border:1px solid #fed7aa;border-radius:999px;padding:6px 12px;font-weight:800;font-size:13px;">PDF</span>
+            <span style="background:#eff6ff;color:#2563eb;border:1px solid #bfdbfe;border-radius:999px;padding:6px 12px;font-weight:800;font-size:13px;">DOCX</span>
+            <span style="background:#f8fafc;color:#475569;border:1px solid #cbd5e1;border-radius:999px;padding:6px 12px;font-weight:800;font-size:13px;">TXT / JSON / XML / SQL</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-7">
+        <div style="border-radius:24px;padding:4px;background:linear-gradient(135deg,#f97316,#4f46e5);box-shadow:0 50px 120px -28px rgba(249,115,22,0.42);">
+          <img src="./file-upload-composer.png" alt="Niyu AI question box with file upload and thinking state" style="width:100%;display:block;border-radius:21px;border:1px solid #ffffff;">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- =================================================================== -->
+<!-- END: FILE UPLOAD & DOCUMENT THINKING -->
+<!-- =================================================================== -->
+
+
 
     <!-- CUSTOM KEYWORD MAPPING (Layout preserved: padding 100px 0) -->
 <section style="padding: 100px 0; background-color:#ffffff; border-top:1px solid #e5e7eb; border-bottom:1px solid #e5e7eb;">
@@ -614,8 +491,8 @@
           <div class="col-12 text-center">
               <!-- Badge: Orange/Gold (more defined shadow/glow) -->
               <span style="display:inline-block; font-size:14px; font-weight:800; color:#f59e0b; background-color:#fffbeb; border:1px solid #fcd34d; border-radius:999px; padding:8px 16px; margin-bottom:16px; box-shadow: 0 0 25px rgba(245, 158, 11, 0.5);">POWERFUL CUSTOMIZATION</span>
-              <h2 style="font-size: clamp(2.2rem, 5vw, 2.8rem); font-weight:900; margin:0 0 16px 0; color:#1f2937;">Your Business Vocabulary. <span style="color: #f59e0b;">Mapped to Odoo Models.</span></h2>
-              <p style="font-size:1.2rem; color:#4b5563; max-width:860px; margin:0 auto;">Your team should not need to know every Odoo technical model. The Semantic Dictionary maps business words like customer, shipment, vendor bill, invoice, transfer, RFQ, sales rep or custom industry terms to the right Odoo models and fields.</p>
+              <h2 style="font-size: clamp(2.2rem, 5vw, 2.8rem); font-weight:900; margin:0 0 16px 0; color:#1f2937;">Your Business, Your Terms. <span style="color: #f59e0b;">Make the AI Adapt.</span></h2>
+              <p style="font-size:1.2rem; color:#4b5563; max-width:860px; margin:0 auto;">Why should your team learn Odoo's technical jargon? It's time the AI learned yours. Whether you call a `stock.picking` a "dispatch" or a `helpdesk.ticket` a "case," the Custom Keyword Map acts as your personal translator. It seamlessly syncs Niyu AI with your company's unique vocabulary, making every query intuitive and instantly understood.</p>
           </div>
       </div>
 
@@ -664,7 +541,7 @@
       <div class="row">
         <div class="col-12">
             <!-- Image Shadow Adjusted for Light Theme - More Dramatic -->
-            <img src="./custom.png" alt="Semantic Dictionaryping Configuration in Odoo Settings" style="width: 100%; border-radius: 20px; display: block; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.2), 0 0 0 1px #d1d5db;">
+            <img src="./custom.png" alt="Custom Keyword Mapping Configuration in Odoo Settings" style="width: 100%; border-radius: 20px; display: block; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.2), 0 0 0 1px #d1d5db;">
         </div>
       </div>
   </div>
@@ -863,9 +740,9 @@
                     margin: 0 0 16px 0;
                     color: #1f2937; /* Dark Heading */
                     text-shadow: 0 2px 5px rgba(0,0,0,0.05);
-                ">Governed Access, <span style="color: #9333ea;">Total Control.</span></h2>
+                ">Granular Permissions, <span style="color: #9333ea;">Total Control.</span></h2>
                 <p style="font-size: 1.2rem; color: #4b5563; max-width: 860px; margin: 0 auto;">
-                    Niyu AI respects your Odoo users, record rules and admin-defined exposed models. Give users access to the analyst app, then control which business objects the AI may query.
+                    Niyu AI respects your Odoo hierarchy. Easily grant access to team members while ensuring all queries adhere to existing data security rules.
                 </p>
             </div>
         </div>
@@ -882,14 +759,14 @@
                             <div style="font-size: 2.5rem; color: #4f46e5; margin-bottom: 15px;">&#128273;</div>
                             <h4 style="color: #1f2937; font-size: 1.45rem; font-weight: 800; margin-bottom: 12px;">Simple, Secure Access via the "User" Role</h4>
                             <p style="color: #4b5563; font-size: 1.1rem; margin-bottom: 24px;">
-                                There are clean roles for users and managers. Users can ask questions based on their Odoo access. Managers can configure exposed models, semantic terms, provider settings and inspect query logs. Every answer remains governed by Odoo permissions and SQL guardrails.
+                                There are two practical access levels: <strong>AI Analyst User</strong> for asking questions and <strong>AI Analyst Manager</strong> for governance. Users can analyze only the data they already have permission to read. Managers can configure exposed models, semantic dictionary entries, provider settings, and query logs.
                             </p>
                             <h5 style="color: #1f2937; font-weight: 800; font-size: 1.25rem; margin-bottom: 12px;">How to Grant Access (Admin):</h5>
                             <ol style="padding-left: 20px; color: #4b5563; font-size: 1.05rem; margin: 0;">
                                 <li style="margin-bottom: 8px;">Navigate to <strong>Settings > Users & Companies > Users</strong>.</li>
                                 <li style="margin-bottom: 8px;">Select the desired user to open their profile.</li>
                                 <li style="margin-bottom: 8px;">Scroll down to the <strong>Niyu Labs AI</strong> section.</li>
-                                <li style="margin-bottom: 8px;">From the <strong>Niyu Labs AI</strong> section, assign <strong>AI Analyst User</strong> or <strong>AI Analyst Manager</strong>.</li>
+                                <li style="margin-bottom: 8px;">Select <strong>AI Analyst User</strong> for normal users or <strong>AI Analyst Manager</strong> for admins who manage governance and logs.</li>
                                 <li>Click <strong>Save</strong>.</li>
                             </ol>
                         </div>
@@ -906,6 +783,93 @@
         </div>
     </div>
 </section>
+
+
+    
+
+<!-- =================================================================== -->
+<!-- START: GOVERNANCE CENTER - EXPOSED MODELS, SEMANTIC DICTIONARY, QUERY LOGS -->
+<!-- =================================================================== -->
+<section style="
+    background-color:#ffffff;
+    border-top:1px solid #e5e7eb;
+    padding:120px 0;
+    overflow:hidden;
+    position:relative;
+    background-image:
+      radial-gradient(circle at 50% 0%, rgba(147,51,234,0.20), transparent 42%),
+      radial-gradient(circle at 0% 100%, rgba(45,212,191,0.12), transparent 42%);
+">
+  <div class="container" style="padding:0 15px;">
+    <div class="row mb-5">
+      <div class="col-12 text-center">
+        <span style="display:inline-block;font-size:14px;font-weight:900;color:#9333ea;background-color:#f3e8ff;border:1px solid #d8b4fe;border-radius:999px;padding:8px 16px;margin-bottom:16px;box-shadow:0 0 25px rgba(147,51,234,0.35);">ADMIN GOVERNED AI</span>
+        <h2 style="font-size:clamp(2.5rem,5vw,3.6rem);font-weight:900;margin:0 0 16px;color:#1f2937;letter-spacing:-0.03em;">Control What AI Can See. <span style="color:#9333ea;">Audit Everything It Does.</span></h2>
+        <p style="font-size:1.2rem;color:#4b5563;max-width:940px;margin:0 auto;">A serious Odoo AI module needs serious controls. Niyu AI includes a governance workspace for exposed models, semantic dictionary, provider settings, and query logs. Admins decide what can be analyzed, what business terms mean, and how every question was answered.</p>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-12 col-lg-4">
+        <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:22px;padding:28px;height:100%;box-shadow:0 18px 45px rgba(15,23,42,0.10);">
+          <div style="font-size:2.4rem;color:#9333ea;margin-bottom:10px;">&#128274;</div>
+          <h4 style="margin:0 0 10px;color:#1f2937;font-weight:900;font-size:1.4rem;">Exposed Models</h4>
+          <p style="margin:0 0 18px;color:#4b5563;font-size:1.03rem;">Enable or disable which Odoo models the AI can use. Add models for custom apps, limit sensitive areas, and keep analysis inside approved business boundaries.</p>
+          <ul style="margin:0;padding-left:20px;color:#4b5563;line-height:1.7;">
+            <li>Enable / disable model exposure</li>
+            <li>Add custom models</li>
+            <li>Use admin-controlled descriptions</li>
+            <li>Respect user access rules</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4">
+        <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:22px;padding:28px;height:100%;box-shadow:0 18px 45px rgba(15,23,42,0.10);">
+          <div style="font-size:2.4rem;color:#f59e0b;margin-bottom:10px;">&#128214;</div>
+          <h4 style="margin:0 0 10px;color:#1f2937;font-weight:900;font-size:1.4rem;">Semantic Dictionary</h4>
+          <p style="margin:0 0 18px;color:#4b5563;font-size:1.03rem;">Teach the AI your company language. Map words like "dispatch", "case", "claim", "region", "premium customer", or "warehouse transfer" to the right Odoo models and fields.</p>
+          <ul style="margin:0;padding-left:20px;color:#4b5563;line-height:1.7;">
+            <li>Business term to model mapping</li>
+            <li>Synonyms and aliases</li>
+            <li>Custom model vocabulary</li>
+            <li>Better accuracy for non-technical users</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-12 col-lg-4">
+        <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:22px;padding:28px;height:100%;box-shadow:0 18px 45px rgba(15,23,42,0.10);">
+          <div style="font-size:2.4rem;color:#0ea5e9;margin-bottom:10px;">&#128221;</div>
+          <h4 style="margin:0 0 10px;color:#1f2937;font-weight:900;font-size:1.4rem;">Query Logs</h4>
+          <p style="margin:0 0 18px;color:#4b5563;font-size:1.03rem;">Review every question, generated SQL, model used, status, token usage, row count, error, and result preview. Useful for audits, debugging, and improving the semantic dictionary.</p>
+          <ul style="margin:0;padding-left:20px;color:#4b5563;line-height:1.7;">
+            <li>Question and SQL history</li>
+            <li>Provider and model tracking</li>
+            <li>Token usage visibility</li>
+            <li>Error and guardrail records</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-4" style="margin-top:34px;">
+      <div class="col-12 col-lg-6">
+        <img src="./exposed-models.png" alt="Niyu AI exposed models screen with enable and disable controls" style="width:100%;border-radius:20px;border:1px solid #ddd6fe;display:block;box-shadow:0 40px 100px -28px rgba(147,51,234,0.40);">
+      </div>
+      <div class="col-12 col-lg-6">
+        <img src="./semantic-dictionary.png" alt="Niyu AI semantic dictionary screen for business terms and model mapping" style="width:100%;border-radius:20px;border:1px solid #fde68a;display:block;box-shadow:0 40px 100px -28px rgba(245,158,11,0.40);">
+      </div>
+      <div class="col-12 col-lg-6">
+        <img src="./query-logs.png" alt="Niyu AI query logs showing questions SQL status token usage and errors" style="width:100%;border-radius:20px;border:1px solid #bae6fd;display:block;box-shadow:0 40px 100px -28px rgba(14,165,233,0.40);">
+      </div>
+      <div class="col-12 col-lg-6">
+        <img src="./ai-provider-settings.png" alt="Niyu AI provider settings for OpenAI Gemini Claude and compatible APIs" style="width:100%;border-radius:20px;border:1px solid #a7f3d0;display:block;box-shadow:0 40px 100px -28px rgba(16,185,129,0.40);">
+      </div>
+    </div>
+  </div>
+</section>
+<!-- =================================================================== -->
+<!-- END: GOVERNANCE CENTER -->
+<!-- =================================================================== -->
 
 
     <!-- RELEASE HISTORY (SEXY/AMAZING CARD) (Layout preserved: padding 100px 0) -->
@@ -961,7 +925,7 @@
             transition: transform 0.4s ease-out;
           " onmouseover="this.style.transform='translateY(-15px) scale(1.02)'; this.style.boxShadow='0 40px 90px -20px rgba(0,0,0,0.25), 0 0 80px rgba(79,70,229,0.5)';" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 30px 80px -20px rgba(0,0,0,0.15), 0 0 60px rgba(79,70,229,0.3)';">
             <p style="color:#4b5563; font-size:1.2rem; font-weight: 500; margin-bottom:30px; border-bottom:2px dashed #d1d5db; padding-bottom:25px;">
-              &#128640; This premium update turns Niyu AI Analyst into a serious Odoo analysis workspace: file upload, table-first answers, native record drill-down, governed model exposure, multi-provider AI and cleaner insight notes without duplicated table summaries.
+              &#128640; This monumental update brings a dazzling new UI, unprecedented data transparency, powerful export capabilities, and a significant leap in AI intelligence. Prepare for an Odoo experience like never before!
             </p>
             <!-- Feature List: Dark Text, Extra Large and Bright Icons -->
             <ul style="
@@ -969,24 +933,27 @@
               padding:0;
               margin:0;
             ">
-              
               <li style="margin-bottom:24px;color:#1f2937;font-size:1.15rem;display:flex;align-items:flex-start;">
-                <span style="font-size:2.4rem; color:#f97316; margin-right:15px; line-height:1;">&#128206;</span>
-                <div><strong style="color:#f97316; display:block; margin-bottom:4px; font-size:1.25rem;">File Upload + File Reading:</strong><span style="color:#4b5563; font-size:1.05rem;">Attach CSV, Excel, PDF, DOCX, TXT, JSON, XML, HTML, LOG or SQL files directly from the question box and ask the AI to summarize, inspect or convert them into table answers.</span></div>
+                <span style="font-size:2.4rem;color:#0ea5e9;margin-right:15px;line-height:1;">&#128279;</span>
+                <div>
+                  <strong style="color:#0ea5e9;display:block;margin-bottom:4px;font-size:1.25rem;">Verified Native Odoo Drill-Down:</strong>
+                  <span style="color:#4b5563;font-size:1.05rem;">Open records directly from AI tables, use Verify buttons, and jump to native Odoo source lists to validate every number.</span>
+                </div>
               </li>
               <li style="margin-bottom:24px;color:#1f2937;font-size:1.15rem;display:flex;align-items:flex-start;">
-                <span style="font-size:2.4rem; color:#10b981; margin-right:15px; line-height:1;">&#128279;</span>
-                <div><strong style="color:#10b981; display:block; margin-bottom:4px; font-size:1.25rem;">Native Odoo Drill-Down:</strong><span style="color:#4b5563; font-size:1.05rem;">Clickable result cells open real Odoo records and source lists, so users can verify the exact customer, invoice, sale order, product or warehouse behind an answer.</span></div>
+                <span style="font-size:2.4rem;color:#f97316;margin-right:15px;line-height:1;">&#128196;</span>
+                <div>
+                  <strong style="color:#f97316;display:block;margin-bottom:4px;font-size:1.25rem;">File Upload + Document Thinking:</strong>
+                  <span style="color:#4b5563;font-size:1.05rem;">Attach CSV, Excel, PDF, DOCX, TXT, JSON, XML, HTML, LOG, or SQL files from the question box and ask Niyu AI to read or analyze them.</span>
+                </div>
               </li>
               <li style="margin-bottom:24px;color:#1f2937;font-size:1.15rem;display:flex;align-items:flex-start;">
-                <span style="font-size:2.4rem; color:#0ea5e9; margin-right:15px; line-height:1;">&#128202;</span>
-                <div><strong style="color:#0ea5e9; display:block; margin-bottom:4px; font-size:1.25rem;">Table-First Answers:</strong><span style="color:#4b5563; font-size:1.05rem;">Business results are shown as clean tables first. Insight notes only add useful interpretation and no longer repeat the same rows again.</span></div>
+                <span style="font-size:2.4rem;color:#9333ea;margin-right:15px;line-height:1;">&#128274;</span>
+                <div>
+                  <strong style="color:#9333ea;display:block;margin-bottom:4px;font-size:1.25rem;">Governance Center:</strong>
+                  <span style="color:#4b5563;font-size:1.05rem;">Manage exposed models, semantic dictionary, provider settings, and query logs from one admin-friendly workspace.</span>
+                </div>
               </li>
-              <li style="margin-bottom:24px;color:#1f2937;font-size:1.15rem;display:flex;align-items:flex-start;">
-                <span style="font-size:2.4rem; color:#9333ea; margin-right:15px; line-height:1;">&#129504;</span>
-                <div><strong style="color:#9333ea; display:block; margin-bottom:4px; font-size:1.25rem;">Multi-Provider AI Engine:</strong><span style="color:#4b5563; font-size:1.05rem;">Use OpenAI, Gemini, Claude, or OpenAI-compatible API endpoints with separate model settings for SQL reasoning, correction and answer generation.</span></div>
-              </li>
-
               <li style="
                 margin-bottom:24px;
                 color:#1f2937;
@@ -1135,6 +1102,32 @@
     </div>
   </div>
 
+
+      <!-- Latest premium governance and verification screenshots -->
+      <div class="row" style="margin-top:28px;">
+        <div class="col-12 col-md-4" style="margin-bottom:20px;">
+          <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:16px;padding:28px;height:100%;box-shadow:0 8px 20px rgba(0,0,0,0.12);">
+            <div style="font-size:32px;color:#0ea5e9;margin-bottom:10px;">&#9989;</div>
+            <h3 style="color:#1f2937;font-size:1.25rem;font-weight:800;margin:0 0 8px 0;">Verify Answers in Odoo</h3>
+            <p style="color:#4b5563;margin:0;font-size:15px;">Click a record chip or Verify button to open the exact Odoo record behind the AI answer.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4" style="margin-bottom:20px;">
+          <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:16px;padding:28px;height:100%;box-shadow:0 8px 20px rgba(0,0,0,0.12);">
+            <div style="font-size:32px;color:#9333ea;margin-bottom:10px;">&#128274;</div>
+            <h3 style="color:#1f2937;font-size:1.25rem;font-weight:800;margin:0 0 8px 0;">Expose Only Approved Models</h3>
+            <p style="color:#4b5563;margin:0;font-size:15px;">Admins can enable, disable, and add Odoo models so the AI only works inside approved boundaries.</p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4" style="margin-bottom:20px;">
+          <div style="background:#f9fafb;border:1px solid #e5e7eb;border-radius:16px;padding:28px;height:100%;box-shadow:0 8px 20px rgba(0,0,0,0.12);">
+            <div style="font-size:32px;color:#f59e0b;margin-bottom:10px;">&#128214;</div>
+            <h3 style="color:#1f2937;font-size:1.25rem;font-weight:800;margin:0 0 8px 0;">Semantic Dictionary</h3>
+            <p style="color:#4b5563;margin:0;font-size:15px;">Map your business words to real Odoo models and fields so users can ask naturally.</p>
+          </div>
+        </div>
+      </div>
+
   <!-- TOKEN METER (Layout preserved: padding 70px 15px) -->
   <div class="container" style="padding:70px 15px;">
     <div class="row">
@@ -1269,118 +1262,74 @@
    <div class="row">
        <div class="col-12" style="margin-bottom: 20px;">
             <!-- Main UI Screenshot (Layout preserved: col-12, margin-bottom: 20px, padding: 15px) -->
-            <img src="./newui.png" alt="Semantic Dictionaryping Configuration in Odoo Settings" style="width: 100%; padding: 20px; border-radius: 20px; display: block; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.3), 0 0 0 1px #d1d5db;">
+            <img src="./newui.png" alt="Custom Keyword Mapping Configuration in Odoo Settings" style="width: 100%; padding: 20px; border-radius: 20px; display: block; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.3), 0 0 0 1px #d1d5db;">
         </div>
       </div>
-
   <!-- NEW SECTION 2: SETUP & CONFIGURATION (Layout preserved: padding 70px 0) -->
-<section style="padding:70px 0; background-color:#ffffff; border-top:1px solid #e5e7eb; border-bottom:1px solid #e5e7eb;">
-  <div class="container" style="padding:0 15px;">
-    <div class="row">
-      <div class="col-12 text-center">
-        <span style="display:inline-block; font-size:14px; font-weight:800; color:#10b981; background-color:#d1fae5; border:1px solid #a7f3d0; border-radius:999px; padding:8px 16px; margin-bottom:16px; box-shadow:0 0 20px rgba(34,197,94,0.4);">
-          SETUP IN MINUTES
-        </span>
-
-        <h2 style="font-size:36px; font-weight:900; margin:0 0 16px 0; color:#1f2937;">
-          Installation & Configuration
-        </h2>
-
-        <p style="font-size:17px; color:#4b5563; max-width:860px; margin:0 auto 28px;">
-          Install the module, choose your AI provider, add your API key, and start asking questions from live Odoo data or uploaded files.
-        </p>
-      </div>
-    </div>
-
-    <!-- Content Row -->
-    <div class="row g-3">
-      <div class="col-12 col-lg-7">
-        <div style="background-color:#f9fafb; border:1px solid #e5e7eb; border-radius:20px; padding:35px; height:100%; box-shadow:0 10px 25px rgba(0,0,0,0.12);">
-          <ol style="margin:0; padding-left:22px; color:#1f2937; font-size:1.15rem; font-weight:600;">
-            <li style="margin-bottom:15px;">
-              <strong>Get the module</strong> from the Odoo App Store.
-            </li>
-
-            <li style="margin-bottom:15px;">
-              <strong>Install</strong> it by adding the module folder to your <em>custom addons directory</em> or deploying it through <em>Odoo.sh</em>.
-            </li>
-
-            <li style="margin-bottom:15px;">
-              <strong>Choose your AI provider</strong> in <em>Settings &#8594; Niyu AI Analyst</em>.
-            </li>
-
-            <li style="margin-bottom:15px;">
-              <strong>Add the matching API key</strong> for your selected provider:
-              <div style="margin-top:10px; display:flex; flex-wrap:wrap; gap:8px;">
-                <span style="display:inline-block; background-color:#eef2ff; color:#4f46e5; border:1px solid #c7d2fe; border-radius:999px; padding:5px 11px; font-size:13px; font-weight:800;">OpenAI</span>
-                <span style="display:inline-block; background-color:#ecfeff; color:#0891b2; border:1px solid #a5f3fc; border-radius:999px; padding:5px 11px; font-size:13px; font-weight:800;">Gemini</span>
-                <span style="display:inline-block; background-color:#f5f3ff; color:#7c3aed; border:1px solid #ddd6fe; border-radius:999px; padding:5px 11px; font-size:13px; font-weight:800;">Anthropic Claude</span>
-                <span style="display:inline-block; background-color:#f0fdf4; color:#16a34a; border:1px solid #bbf7d0; border-radius:999px; padding:5px 11px; font-size:13px; font-weight:800;">OpenAI-compatible API</span>
-              </div>
-            </li>
-
-            <li style="margin-bottom:15px;">
-              <strong>Configure governed access</strong> by selecting which Odoo models the AI can use.
-            </li>
-
-            <li style="margin-bottom:15px;">
-              <strong>Ask your first question</strong>, for example: &#8220;Show unpaid customer invoices grouped by customer&#8221;.
-            </li>
-
-            <li>
-              <strong>Optional:</strong> upload a CSV, Excel, PDF, DOCX, TXT, JSON, XML, HTML, LOG, or SQL file from the question box and ask the AI to read or analyze it.
-            </li>
-          </ol>
-
-          <div class="d-flex align-items-center" style="margin-top:24px; font-size:16px; color:#4b5563;">
-            <span style="font-size:24px; margin-right:10px;">&#10003;</span>
-            Works with multi-company and respects the logged-in user’s Odoo access rights.
-          </div>
+  <section style="padding:70px 0; background-color:#ffffff; border-top:1px solid #e5e7eb; border-bottom:1px solid #e5e7eb;">
+    <div class="container" style="padding:0 15px;">
+      <div class="row">
+        <div class="col-12 text-center">
+          <span style="display:inline-block; font-size:14px; font-weight:800; color:#10b981; background-color:#d1fae5; border:1px solid #a7f3d0; border-radius:999px; padding:8px 16px; margin-bottom:16px; box-shadow:0 0 20px rgba(34,197,94,0.4);">SETUP IN MINUTES</span>
+          <h2 style="font-size:36px; font-weight:900; margin:0 0 16px 0; color:#1f2937;">Installation & Configuration</h2>
+          <p style="font-size:17px; color:#4b5563; max-width:900px; margin:0 auto 28px;">Install the module, choose your AI provider, add the matching API key, expose only the Odoo models you approve, and start asking verified table-first questions.</p>
         </div>
       </div>
 
-      <div class="col-12 col-lg-5">
-        <div style="background-color:#ffffff; border:1px solid #e5e7eb; border-radius:20px; padding:35px; height:100%; box-shadow:0 10px 25px rgba(0,0,0,0.12);">
-          <h5 style="margin:0 0 12px; color:#1f2937; font-size:1.25rem; font-weight:800;">
-            Compatibility & Requirements
-          </h5>
-
-          <ul style="margin:0; padding-left:20px; color:#4b5563; font-size:16px;">
-            <li>Odoo 19.0</li>
-            <li>PostgreSQL standard Odoo database</li>
-            <li>Internet access for the selected AI provider API</li>
-            <li>Provider API key: OpenAI, Gemini, Anthropic Claude, or OpenAI-compatible endpoint</li>
-            <li>Custom models and custom fields supported through governed model exposure</li>
-            <li>On-premise, Odoo.sh, and cloud-hosted deployments supported</li>
-          </ul>
-
-          <div style="height:1px; background-color:#e5e7eb; margin:18px 0;"></div>
-
-          <h5 style="margin:0 0 12px; color:#1f2937; font-size:1.25rem; font-weight:800;">
-            Deployment Notes
-          </h5>
-
-          <ul style="margin:0; padding-left:20px; color:#4b5563; font-size:16px;">
-            <li>Bring-your-own API key model</li>
-            <li>Separate provider settings for SQL reasoning, correction, and answer generation</li>
-            <li>SQL is checked before execution and blocked if unsafe</li>
-            <li>Query logs can be enabled for audit and troubleshooting</li>
-            <li>Uploaded file content is read only when the user attaches a file and asks a file-based question</li>
-          </ul>
-
-          <div style="margin-top:22px; padding:16px; border-radius:14px; background-color:#f8fafc; border:1px solid #e5e7eb;">
-            <div style="font-size:13px; font-weight:900; color:#4f46e5; margin-bottom:6px; text-transform:uppercase; letter-spacing:.04em;">
-              Data Handling
+      <div class="row g-3">
+        <div class="col-12 col-lg-7">
+          <div style="background-color:#f9fafb; border:1px solid #e5e7eb; border-radius:20px; padding:35px; height:100%; box-shadow:0 10px 25px rgba(0,0,0,0.12);">
+            <ol style="margin:0; padding-left:22px; color:#1f2937; font-size:1.15rem; font-weight:600;">
+              <li style="margin-bottom:15px;"><strong>Get the module</strong> from the Odoo App Store.</li>
+              <li style="margin-bottom:15px;"><strong>Install</strong> it in your <em>custom addons directory</em> or deploy it through <em>Odoo.sh</em>.</li>
+              <li style="margin-bottom:15px;"><strong>Choose your AI provider</strong> in <em>Settings &#8594; Niyu AI Analyst</em>: OpenAI, Gemini, Anthropic Claude, or an OpenAI-compatible endpoint.</li>
+              <li style="margin-bottom:15px;"><strong>Add the matching API key</strong> for the selected provider and set your SQL reasoning, correction, and answer models.</li>
+              <li style="margin-bottom:15px;"><strong>Configure Exposed Models</strong>: enable, disable, or add the Odoo models the AI is allowed to analyze.</li>
+              <li style="margin-bottom:15px;"><strong>Set up the Semantic Dictionary</strong> so business terms like dispatch, case, claim, region, or premium customer map to the right Odoo data.</li>
+              <li style="margin-bottom:15px;"><strong>Enable Query Logs</strong> when you want question history, generated SQL, provider/model usage, row counts, token usage, and errors for audit or troubleshooting.</li>
+              <li><strong>Ask your first question</strong>, then verify answers using native Odoo record links, source-list drill-down, and SQL transparency.</li>
+            </ol>
+            <div class="d-flex align-items-center" style="margin-top:24px; font-size:16px; color:#4b5563;">
+              <span style="font-size:24px; margin-right:10px;">&#10003;</span> Works with multi-company and respects each logged-in user's Odoo access rights.
             </div>
-            <p style="margin:0; color:#4b5563; font-size:15px; line-height:1.6;">
-              For Odoo questions, the AI receives the question and governed schema context to generate SQL. The SQL runs inside Odoo. For uploaded files, extracted readable file content is sent to the selected provider so the AI can answer from the file.
-            </p>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-5">
+          <div style="background-color:#ffffff; border:1px solid #e5e7eb; border-radius:20px; padding:35px; height:100%; box-shadow:0 10px 25px rgba(0,0,0,0.12);">
+            <h5 style="margin:0 0 12px; color:#1f2937; font-size:1.25rem; font-weight:800;">Compatibility & Requirements</h5>
+            <ul style="margin:0; padding-left:20px; color:#4b5563; font-size:16px;">
+              <li>Odoo 19.0</li>
+              <li>PostgreSQL standard Odoo database</li>
+              <li>Internet access for selected AI provider API calls</li>
+              <li>API key for OpenAI, Gemini, Anthropic Claude, or an OpenAI-compatible provider</li>
+              <li>Custom models and custom fields supported through governed exposure</li>
+              <li>On-premise, Odoo.sh, and cloud-hosted deployments supported</li>
+            </ul>
+            <div style="height:1px; background-color:#e5e7eb; margin:18px 0;"></div>
+            <h5 style="margin:0 0 12px; color:#1f2937; font-size:1.25rem; font-weight:800;">Deployment Notes</h5>
+            <ul style="margin:0; padding-left:20px; color:#4b5563; font-size:16px;">
+              <li>Bring-your-own API key model</li>
+              <li>Admin-governed exposed models</li>
+              <li>Read-only SQL guardrails</li>
+              <li>Query logs for audits and debugging</li>
+              <li>File upload analysis for CSV, Excel, PDF, DOCX, TXT, JSON, XML, HTML, LOG, and SQL files</li>
+            </ul>
+            <div style="margin-top:22px; padding:16px; border-radius:14px; background-color:#f8fafc; border:1px solid #e5e7eb;">
+              <div style="font-size:13px; font-weight:900; color:#4f46e5; margin-bottom:6px; text-transform:uppercase; letter-spacing:.04em;">Provider Options</div>
+              <div style="display:flex; flex-wrap:wrap; gap:8px;">
+                <span style="background-color:#eef2ff;color:#4f46e5;border:1px solid #c7d2fe;border-radius:999px;padding:6px 12px;font-weight:800;font-size:13px;">OpenAI</span>
+                <span style="background-color:#ecfeff;color:#0891b2;border:1px solid #a5f3fc;border-radius:999px;padding:6px 12px;font-weight:800;font-size:13px;">Gemini</span>
+                <span style="background-color:#f5f3ff;color:#7c3aed;border:1px solid #ddd6fe;border-radius:999px;padding:6px 12px;font-weight:800;font-size:13px;">Anthropic Claude</span>
+                <span style="background-color:#f0fdf4;color:#16a34a;border:1px solid #bbf7d0;border-radius:999px;padding:6px 12px;font-weight:800;font-size:13px;">OpenAI-compatible</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+
 
 
 <!-- =================================================================== -->
@@ -1533,12 +1482,12 @@
         <!-- FAQ Item (Layout preserved: padding 32px 0, border-bottom: 1px solid #d1d5db) -->
         <div style="padding: 32px 0; border-bottom: 1px solid #d1d5db;">
           <h4 style="font-size: 1.45rem; font-weight: 700; margin: 0 0 12px 0; color: #1f2937;">What Odoo versions are supported?</h4>
-          <p style="color: #4b5563; margin: 0; font-size: 1.1rem;">This app store build is made for Odoo 19. The technical folder name is <code>niyu_odoo_ai</code> and the module follows Odoo 19 list views, security group privileges and client-action behavior.</p>
+          <p style="color: #4b5563; margin: 0; font-size: 1.1rem;">Odoo 14 and later. Check the module listing for the most up-to-date compatibility information.</p>
         </div>
         
         <div style="padding: 32px 0; border-bottom: 1px solid #d1d5db;">
           <h4 style="font-size: 1.45rem; font-weight: 700; margin: 0 0 12px 0; color: #1f2937;">How is my Odoo data kept secure?</h4>
-          <p style="color: #4b5563; margin: 0; font-size: 1.1rem;">For live Odoo questions, the module uses governed schema metadata and your question to generate safe read-only SQL. SQL runs in your Odoo database and the table result is shown inside Odoo. If you attach a file, the extracted file text is used for that question so the selected AI provider can summarize or analyze it.</p>
+          <p style="color: #4b5563; margin: 0; font-size: 1.1rem;">Your business data never leaves your Odoo environment. We only send non-sensitive schema metadata (table/field names and types) and your natural-language question to the AI using your selected AI provider API key to generate SQL. That SQL is executed inside your Odoo database, and results are shown only to you in Odoo.</p>
         </div>
 
         <div style="padding: 32px 0; border-bottom: 1px solid #d1d5db;">
@@ -1548,12 +1497,12 @@
 
         <div style="padding: 32px 0; border-bottom: 1px solid #d1d5db;">
           <h4 style="font-size: 1.45rem; font-weight: 700; margin: 0 0 12px 0; color: #1f2937;">What types of questions can Niyu AI answer?</h4>
-          <p style="color: #4b5563; margin: 0; font-size: 1.1rem;">Anything that can be answered from governed Odoo data: Sales, Invoices, AR, Inventory, Purchase, CRM, Projects, HR and custom apps. It handles filters, sorting, group-by, aggregations, dates and related models. It can also read uploaded CSV, Excel, PDF, DOCX, TXT, JSON, XML, HTML, LOG and SQL files for file-based questions.</p>
+          <p style="color: #4b5563; margin: 0; font-size: 1.1rem;">Anything that can be answered from data already in your Odoo DB: Sales, Invoices, AR, Inventory, Purchase, CRM/Leads, Projects, HR and any custom apps. It handles filters (date/status/owner), sorting, group-by, and aggregations (sum/count/avg/min/max).<br><strong>Tip:</strong> ask one clear question per prompt for best results. For heavy analytics or blending external sources, consider our BigQuery Connector.</p>
         </div>
 
         <div style="padding: 32px 0; border-bottom: 1px solid #d1d5db;">
           <h4 style="font-size: 1.45rem; font-weight: 700; margin: 0 0 12px 0; color: #1f2937;">Can I use it with custom modules and custom fields?</h4>
-        <p style="color: #4b5563; margin: 0; font-size: 1.1rem;">Yes. It reads governed custom models and custom fields. Admins can also use the Semantic Dictionary so business terms like &#8220;shipment&#8221;, &#8220;case&#8221;, &#8220;property&#8221; or &#8220;hotel&#8221; point to the right Odoo models and fields.</p>
+        <p style="color: #4b5563; margin: 0; font-size: 1.1rem;">Yes. It reads your schema (including custom models/fields). You can also extend a keyword map (via settings or config) so the AI maps business terms (e.g., &#8220;hotel&#8221;) to the right models/fields (e.g., property.hotel).</p>
         </div>
 
         <div style="padding: 32px 0; border-bottom: 1px solid #d1d5db;">
@@ -1605,9 +1554,6 @@
       </div>
     </div>
 </section>
-
-
-
 
   <!-- FINAL CTA (Layout preserved: padding 120px 20px) -->
   <section style="padding: 120px 20px; background-color: #ffffff;"> <!-- White Background -->
