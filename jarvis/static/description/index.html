@@ -1274,58 +1274,113 @@
       </div>
 
   <!-- NEW SECTION 2: SETUP & CONFIGURATION (Layout preserved: padding 70px 0) -->
-  <section style="padding:70px 0; background-color:#ffffff; border-top:1px solid #e5e7eb; border-bottom:1px solid #e5e7eb;">
-    <div class="container" style="padding:0 15px;">
-      <div class="row">
-        <div class="col-12 text-center">
-          <!-- Badge: Green -->
-          <span style="display:inline-block; font-size:14px; font-weight:800; color:#10b981; background-color:#d1fae5; border:1px solid #a7f3d0; border-radius:999px; padding:8px 16px; margin-bottom:16px; box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);">SETUP IN MINUTES</span>
-          <h2 style="font-size:36px; font-weight:900; margin:0 0 16px 0; color:#1f2937;">Installation & Configuration</h2>
-          <p style="font-size:17px; color:#4b5563; max-width:860px; margin:0 auto 28px;">From install to first answer in a few clicks&#8212;no complex infra changes required.</p>
-        </div>
+<section style="padding:70px 0; background-color:#ffffff; border-top:1px solid #e5e7eb; border-bottom:1px solid #e5e7eb;">
+  <div class="container" style="padding:0 15px;">
+    <div class="row">
+      <div class="col-12 text-center">
+        <span style="display:inline-block; font-size:14px; font-weight:800; color:#10b981; background-color:#d1fae5; border:1px solid #a7f3d0; border-radius:999px; padding:8px 16px; margin-bottom:16px; box-shadow:0 0 20px rgba(34,197,94,0.4);">
+          SETUP IN MINUTES
+        </span>
+
+        <h2 style="font-size:36px; font-weight:900; margin:0 0 16px 0; color:#1f2937;">
+          Installation & Configuration
+        </h2>
+
+        <p style="font-size:17px; color:#4b5563; max-width:860px; margin:0 auto 28px;">
+          Install the module, choose your AI provider, add your API key, and start asking questions from live Odoo data or uploaded files.
+        </p>
       </div>
-
-      <!-- Content Row (Layout preserved: row g-3) -->
-      <div class="row g-3">
-        <div class="col-12 col-lg-7">
-          <!-- Card: Light Background, Stronger Soft Shadow -->
-          <div style="background-color:#f9fafb; border:1px solid #e5e7eb; border-radius:20px; padding:35px; height:100%; box-shadow: 0 10px 25px rgba(0,0,0,0.12);">
-            <ol style="margin:0; padding-left:22px; color:#1f2937; font-size: 1.15rem; font-weight: 600;">
-              <li style="margin-bottom:15px;"><strong>Get the module</strong> from the Odoo App Store.</li>
-              <li style="margin-bottom:15px;"><strong>Install</strong>by adding in <em>custom addons directory</em> or<em>through Odoo SH</em>.</li>
-              <li style="margin-bottom:15px;"><strong>Enter your Open AI API key</strong> in <em>Settings &#8594; Niyu AI Analyst</em>.</li>
-              <li style="margin-bottom:15px;"><strong>Ask your first question</strong> &#40;e.g., &#8221;Top customers by revenue this quarter&#8221;&#41;.</li>
-            </ol>
-            <div class="d-flex align-items-center" style="margin-top:20px; font-size:16px; color:#4b5563;">
-              <span style="font-size:24px; margin-right:10px;">*</span> Works with multi-company.
-            </div>
-          </div>
-        </div>
-
-        <div class="col-12 col-lg-5">
-          <!-- Card: White Background, Stronger Soft Shadow -->
-          <div style="background-color:#ffffff; border:1px solid #e5e7eb; border-radius:20px; padding:35px; box-shadow: 0 10px 25px rgba(0,0,0,0.12);">
-            <h5 style="margin:0 0 12px; color:#1f2937; font-size:1.25rem; font-weight:800;">Compatibility & Requirements</h5>
-            <ul style="margin:0; padding-left:20px; color:#4b5563; font-size:16px;">
-              <li>Odoo 14 or later</li>
-              <li>PostgreSQL (standard Odoo DB)</li>
-              <li>Internet access for LLM API calls</li>
-              <li>Custom models/fields supported</li>
-              <li>On-prem & any cloud hosting</li>
-            </ul>
-            <div style="height:1px; background-color:#e5e7eb; margin:15px 0;"></div>
-            <h5 style="margin:0 0 12px; color:#1f2937; font-size:1.25rem; font-weight:800;">Deployment Notes</h5>
-            <ul style="margin:0; padding-left:20px; color:#4b5563; font-size:16px;">
-              <li>Bring-your-own API key model</li>
-              <li>No persistent storage of results</li>
-              <li>Schema-only sharing with LLM</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
     </div>
-  </section>
+
+    <!-- Content Row -->
+    <div class="row g-3">
+      <div class="col-12 col-lg-7">
+        <div style="background-color:#f9fafb; border:1px solid #e5e7eb; border-radius:20px; padding:35px; height:100%; box-shadow:0 10px 25px rgba(0,0,0,0.12);">
+          <ol style="margin:0; padding-left:22px; color:#1f2937; font-size:1.15rem; font-weight:600;">
+            <li style="margin-bottom:15px;">
+              <strong>Get the module</strong> from the Odoo App Store.
+            </li>
+
+            <li style="margin-bottom:15px;">
+              <strong>Install</strong> it by adding the module folder to your <em>custom addons directory</em> or deploying it through <em>Odoo.sh</em>.
+            </li>
+
+            <li style="margin-bottom:15px;">
+              <strong>Choose your AI provider</strong> in <em>Settings &#8594; Niyu AI Analyst</em>.
+            </li>
+
+            <li style="margin-bottom:15px;">
+              <strong>Add the matching API key</strong> for your selected provider:
+              <div style="margin-top:10px; display:flex; flex-wrap:wrap; gap:8px;">
+                <span style="display:inline-block; background-color:#eef2ff; color:#4f46e5; border:1px solid #c7d2fe; border-radius:999px; padding:5px 11px; font-size:13px; font-weight:800;">OpenAI</span>
+                <span style="display:inline-block; background-color:#ecfeff; color:#0891b2; border:1px solid #a5f3fc; border-radius:999px; padding:5px 11px; font-size:13px; font-weight:800;">Gemini</span>
+                <span style="display:inline-block; background-color:#f5f3ff; color:#7c3aed; border:1px solid #ddd6fe; border-radius:999px; padding:5px 11px; font-size:13px; font-weight:800;">Anthropic Claude</span>
+                <span style="display:inline-block; background-color:#f0fdf4; color:#16a34a; border:1px solid #bbf7d0; border-radius:999px; padding:5px 11px; font-size:13px; font-weight:800;">OpenAI-compatible API</span>
+              </div>
+            </li>
+
+            <li style="margin-bottom:15px;">
+              <strong>Configure governed access</strong> by selecting which Odoo models the AI can use.
+            </li>
+
+            <li style="margin-bottom:15px;">
+              <strong>Ask your first question</strong>, for example: &#8220;Show unpaid customer invoices grouped by customer&#8221;.
+            </li>
+
+            <li>
+              <strong>Optional:</strong> upload a CSV, Excel, PDF, DOCX, TXT, JSON, XML, HTML, LOG, or SQL file from the question box and ask the AI to read or analyze it.
+            </li>
+          </ol>
+
+          <div class="d-flex align-items-center" style="margin-top:24px; font-size:16px; color:#4b5563;">
+            <span style="font-size:24px; margin-right:10px;">&#10003;</span>
+            Works with multi-company and respects the logged-in user’s Odoo access rights.
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-5">
+        <div style="background-color:#ffffff; border:1px solid #e5e7eb; border-radius:20px; padding:35px; height:100%; box-shadow:0 10px 25px rgba(0,0,0,0.12);">
+          <h5 style="margin:0 0 12px; color:#1f2937; font-size:1.25rem; font-weight:800;">
+            Compatibility & Requirements
+          </h5>
+
+          <ul style="margin:0; padding-left:20px; color:#4b5563; font-size:16px;">
+            <li>Odoo 19.0</li>
+            <li>PostgreSQL standard Odoo database</li>
+            <li>Internet access for the selected AI provider API</li>
+            <li>Provider API key: OpenAI, Gemini, Anthropic Claude, or OpenAI-compatible endpoint</li>
+            <li>Custom models and custom fields supported through governed model exposure</li>
+            <li>On-premise, Odoo.sh, and cloud-hosted deployments supported</li>
+          </ul>
+
+          <div style="height:1px; background-color:#e5e7eb; margin:18px 0;"></div>
+
+          <h5 style="margin:0 0 12px; color:#1f2937; font-size:1.25rem; font-weight:800;">
+            Deployment Notes
+          </h5>
+
+          <ul style="margin:0; padding-left:20px; color:#4b5563; font-size:16px;">
+            <li>Bring-your-own API key model</li>
+            <li>Separate provider settings for SQL reasoning, correction, and answer generation</li>
+            <li>SQL is checked before execution and blocked if unsafe</li>
+            <li>Query logs can be enabled for audit and troubleshooting</li>
+            <li>Uploaded file content is read only when the user attaches a file and asks a file-based question</li>
+          </ul>
+
+          <div style="margin-top:22px; padding:16px; border-radius:14px; background-color:#f8fafc; border:1px solid #e5e7eb;">
+            <div style="font-size:13px; font-weight:900; color:#4f46e5; margin-bottom:6px; text-transform:uppercase; letter-spacing:.04em;">
+              Data Handling
+            </div>
+            <p style="margin:0; color:#4b5563; font-size:15px; line-height:1.6;">
+              For Odoo questions, the AI receives the question and governed schema context to generate SQL. The SQL runs inside Odoo. For uploaded files, extracted readable file content is sent to the selected provider so the AI can answer from the file.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <!-- =================================================================== -->
@@ -1553,20 +1608,6 @@
 
 
 
-<!-- ODOO 19 COMPATIBILITY NOTE - ADDED FOR CURRENT BUILD -->
-<section style="padding:70px 20px; background:#f8fafc; border-top:1px solid #e5e7eb;">
-  <div style="max-width:1100px; margin:0 auto;" class="niyu-glass-card">
-    <div style="padding:34px; border-radius:24px;">
-      <div style="display:flex; gap:18px; align-items:flex-start; flex-wrap:wrap;">
-        <div style="width:54px; height:54px; border-radius:18px; background:#eef2ff; color:#4f46e5; display:flex; align-items:center; justify-content:center; font-size:28px;">&#9881;</div>
-        <div style="flex:1; min-width:260px;">
-          <h3 style="margin:0 0 8px; font-size:1.6rem; color:#0f172a; font-weight:950;">Built for Odoo 19</h3>
-          <p style="margin:0; color:#475569; font-size:1.08rem;">This release uses the Odoo 19-ready technical folder name <code>niyu_odoo_ai</code>, modern list views, group privilege compatibility, full-width client action layout, and native action navigation for record verification.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
   <!-- FINAL CTA (Layout preserved: padding 120px 20px) -->
   <section style="padding: 120px 20px; background-color: #ffffff;"> <!-- White Background -->
