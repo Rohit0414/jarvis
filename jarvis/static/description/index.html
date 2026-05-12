@@ -1,386 +1,688 @@
 <!-- ================================================================================= -->
-<!-- NIYU LABS ADVANCED BIGQUERY CONNECTOR FOR ODOO - ODOO APP STORE DESCRIPTION        -->
-<!-- Odoo App Store safe version: inline CSS only, no style block, no flex dependency.  -->
+<!-- NIYU LABS ADVANCED BIGQUERY CONNECTOR FOR ODOO - APP STORE DESCRIPTION             -->
+<!-- Inline CSS only. Odoo App Store safe. No external CSS. No flex layouts.             -->
 <!-- ================================================================================= -->
 
-<div style="width:100%;max-width:100%;overflow:hidden;box-sizing:border-box;background-color:#ffffff;color:#0f172a;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;line-height:1.65;">
+<div style="width:100%;max-width:100%;overflow-x:hidden;background-color:#ffffff;font-family:Inter,Arial,sans-serif;color:#0f172a;box-sizing:border-box;">
 
-  <!-- HERO -->
-  <div style="padding:72px 18px 58px 18px;text-align:center;background-color:#f8fbff;border-bottom:1px solid #e2e8f0;box-sizing:border-box;">
-    <div style="max-width:1060px;margin:0 auto;box-sizing:border-box;">
-      <div style="display:inline-block;padding:11px 22px;background-color:#020617;border:1px solid #1e293b;border-radius:999px;box-shadow:0 18px 45px rgba(148,163,184,.42);margin-bottom:28px;color:#93c5fd;font-size:12px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;">
-        Odoo → BigQuery → Power BI / Looker / Tableau / AI
-      </div>
+    <!-- HERO -->
+    <div style="width:100%;box-sizing:border-box;padding:76px 18px 64px 18px;background-color:#f8fbff;overflow:hidden;">
+        <div style="max-width:1080px;width:100%;margin:0 auto;text-align:center;box-sizing:border-box;">
+            <div style="display:inline-block;border:1px solid #bfdbfe;background-color:#ffffff;border-radius:999px;padding:10px 20px;color:#1d4ed8;font-size:12px;font-weight:950;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:24px;box-shadow:0 12px 36px rgba(37,99,235,0.12);">&#128202; Advanced BigQuery Connector for Odoo</div>
+            <h1 style="font-size:54px;line-height:1.02;letter-spacing:-0.055em;color:#0f172a;font-weight:950;margin:0 auto 22px auto;max-width:980px;">Stop reporting on live Odoo. Move serious analytics to BigQuery.</h1>
+            <p style="font-size:19px;line-height:1.72;color:#475569;margin:0 auto 34px auto;max-width:880px;font-weight:600;">Export selected Odoo data to Google BigQuery with column control, domain filters, incremental sync, scheduling, batching, logs and recovery controls. Keep Odoo fast while BI, AI and analytics teams work on warehouse data.</p>
 
-      <h1 style="font-size:56px;font-weight:950;line-height:1.04;letter-spacing:-2.8px;color:#0f172a;margin:0 0 22px 0;">
-        Stop reporting on live Odoo.<br>
-        <span style="color:#2563eb;">Move analytics to BigQuery.</span>
-      </h1>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;table-layout:fixed;border-collapse:separate;border-spacing:10px;margin:0 auto 34px auto;box-sizing:border-box;">
+                <tr>
+                    <td style="width:25%;vertical-align:top;background-color:#ffffff;border:1px solid #dbeafe;border-radius:18px;padding:16px;box-sizing:border-box;color:#1d4ed8;font-weight:900;font-size:13px;line-height:1.45;">&#10003; Column selection</td>
+                    <td style="width:25%;vertical-align:top;background-color:#ffffff;border:1px solid #dcfce7;border-radius:18px;padding:16px;box-sizing:border-box;color:#166534;font-weight:900;font-size:13px;line-height:1.45;">&#10003; Domain filtering</td>
+                    <td style="width:25%;vertical-align:top;background-color:#ffffff;border:1px solid #ede9fe;border-radius:18px;padding:16px;box-sizing:border-box;color:#6d28d9;font-weight:900;font-size:13px;line-height:1.45;">&#10003; Incremental sync</td>
+                    <td style="width:25%;vertical-align:top;background-color:#ffffff;border:1px solid #fed7aa;border-radius:18px;padding:16px;box-sizing:border-box;color:#c2410c;font-weight:900;font-size:13px;line-height:1.45;">&#10003; Logs and recovery</td>
+                </tr>
+            </table>
 
-      <p style="font-size:20px;color:#475569;max-width:860px;margin:0 auto 34px auto;line-height:1.7;font-weight:500;">
-        Advanced BigQuery Connector exports selected Odoo tables, fields and filtered records into Google BigQuery, then keeps them updated with scheduled incremental sync, logs and recovery controls.
-      </p>
-
-      <div style="margin:0 auto 42px auto;max-width:930px;">
-        <span style="display:inline-block;margin:5px;padding:10px 15px;border-radius:999px;background-color:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe;font-size:13px;font-weight:900;">Column selection</span>
-        <span style="display:inline-block;margin:5px;padding:10px 15px;border-radius:999px;background-color:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;font-size:13px;font-weight:900;">Domain filtering</span>
-        <span style="display:inline-block;margin:5px;padding:10px 15px;border-radius:999px;background-color:#ecfeff;color:#0e7490;border:1px solid #a5f3fc;font-size:13px;font-weight:900;">Incremental sync</span>
-        <span style="display:inline-block;margin:5px;padding:10px 15px;border-radius:999px;background-color:#fff7ed;color:#c2410c;border:1px solid #fed7aa;font-size:13px;font-weight:900;">Logs + recovery</span>
-        <span style="display:inline-block;margin:5px;padding:10px 15px;border-radius:999px;background-color:#faf5ff;color:#6d28d9;border:1px solid #ddd6fe;font-size:13px;font-weight:900;">BI-ready warehouse</span>
-      </div>
-
-      <div style="max-width:980px;margin:0 auto;border-radius:34px;padding:7px;background-color:#2563eb;box-shadow:0 55px 120px -34px rgba(37,99,235,.6);border:1px solid #ffffff;box-sizing:border-box;">
-        <div style="background-color:#020617;border-radius:28px;overflow:hidden;box-sizing:border-box;">
-          <video autoplay loop muted playsinline preload="auto" style="width:100%;max-width:100%;height:auto;display:block;border-radius:28px;background-color:#020617;box-sizing:border-box;">
-            <source src="/apps/modules/19.0/odoo-bigquery/static/description/bigqueryvideo.webm" type="video/webm">
-          </video>
+            <div style="background-color:#020617;border:1px solid #334155;border-radius:28px;padding:12px;box-sizing:border-box;box-shadow:0 28px 70px rgba(15,23,42,0.12);overflow:hidden;">
+        <video autoplay loop muted playsinline preload="auto" style="display:block;width:100%;max-width:100%;height:auto;border-radius:20px;background-color:#020617;">
+            <source src="./bigqueryvideo.webm" type="video/webm">
+        </video>
+        <div style="padding:14px 10px 4px 10px;color:#cbd5e1;font-size:14px;line-height:1.65;font-weight:700;">A practical Odoo to BigQuery pipeline for reporting, BI and analytics.</div>
+    </div>
         </div>
-      </div>
     </div>
-  </div>
 
-  <!-- PROBLEM / VALUE -->
-  <div style="padding:72px 18px;background-color:#ffffff;box-sizing:border-box;">
-    <div style="max-width:1060px;margin:0 auto;box-sizing:border-box;">
-      <div style="text-align:center;margin-bottom:42px;">
-        <span style="display:inline-block;padding:8px 18px;border-radius:999px;background-color:#eff6ff;border:1px solid #bfdbfe;color:#1d4ed8;font-size:12px;font-weight:950;letter-spacing:2px;text-transform:uppercase;">Why customers need this</span>
-        <h2 style="font-size:42px;font-weight:950;color:#0f172a;margin:20px 0 12px 0;letter-spacing:-1.8px;line-height:1.1;">Odoo is for operations. BigQuery is for analytics.</h2>
-        <p style="font-size:17px;color:#64748b;max-width:820px;margin:0 auto;line-height:1.75;">Running heavy dashboards and external reporting directly on Odoo makes production slower and harder to scale. This connector creates a proper analytics layer outside Odoo.</p>
-      </div>
-
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;table-layout:fixed;box-sizing:border-box;">
-        <tr>
-          <td width="33.33%" style="padding:8px;vertical-align:top;box-sizing:border-box;">
-            <div style="height:100%;background-color:#ffffff;border:1px solid #e2e8f0;border-radius:28px;padding:28px;box-shadow:0 18px 48px rgba(226,232,240,.9);box-sizing:border-box;">
-              <div style="width:52px;height:52px;border-radius:17px;background-color:#eff6ff;color:#2563eb;text-align:center;line-height:52px;font-size:26px;margin-bottom:18px;">⚡</div>
-              <h3 style="font-size:20px;font-weight:950;margin:0 0 10px 0;color:#0f172a;">No heavy reporting on live Odoo</h3>
-              <p style="margin:0;color:#64748b;font-size:15px;line-height:1.75;">Move analytical load away from the Odoo transactional database and let BigQuery handle large reporting workloads.</p>
-            </div>
-          </td>
-          <td width="33.33%" style="padding:8px;vertical-align:top;box-sizing:border-box;">
-            <div style="height:100%;background-color:#ffffff;border:1px solid #e2e8f0;border-radius:28px;padding:28px;box-shadow:0 18px 48px rgba(226,232,240,.9);box-sizing:border-box;">
-              <div style="width:52px;height:52px;border-radius:17px;background-color:#ecfeff;color:#0891b2;text-align:center;line-height:52px;font-size:26px;margin-bottom:18px;">📊</div>
-              <h3 style="font-size:20px;font-weight:950;margin:0 0 10px 0;color:#0f172a;">BI tools get clean warehouse data</h3>
-              <p style="margin:0;color:#64748b;font-size:15px;line-height:1.75;">Power BI, Looker Studio, Tableau and AI/ML tools connect to BigQuery instead of touching Odoo directly.</p>
-            </div>
-          </td>
-          <td width="33.33%" style="padding:8px;vertical-align:top;box-sizing:border-box;">
-            <div style="height:100%;background-color:#ffffff;border:1px solid #e2e8f0;border-radius:28px;padding:28px;box-shadow:0 18px 48px rgba(226,232,240,.9);box-sizing:border-box;">
-              <div style="width:52px;height:52px;border-radius:17px;background-color:#f0fdf4;color:#16a34a;text-align:center;line-height:52px;font-size:26px;margin-bottom:18px;">🔁</div>
-              <h3 style="font-size:20px;font-weight:950;margin:0 0 10px 0;color:#0f172a;">Fresh data without manual exports</h3>
-              <p style="margin:0;color:#64748b;font-size:15px;line-height:1.75;">Schedule incremental exports per query and keep BigQuery updated automatically.</p>
-            </div>
-          </td>
-        </tr>
-      </table>
-
-      <div style="margin-top:34px;background-color:#0f172a;border-radius:28px;padding:28px 32px;border:1px solid #1e293b;box-shadow:0 32px 82px rgba(15,23,42,.24);box-sizing:border-box;">
-        <p style="margin:0;color:#dbeafe;font-weight:850;font-size:17px;line-height:1.7;text-align:center;">Create a proper reporting warehouse from Odoo without building custom ETL scripts for every table, field and dashboard.</p>
-      </div>
+    <!-- WHY -->
+    <div style="width:100%;box-sizing:border-box;padding:78px 18px;background-color:#ffffff;overflow:hidden;">
+        <div style="max-width:1080px;width:100%;margin:0 auto;box-sizing:border-box;">
+            <div style="text-align:center;margin:0 auto 44px auto;max-width:900px;">
+        <div style="display:inline-block;border:1px solid #dbe5f0;border-radius:999px;padding:8px 18px;background-color:#ffffff;color:#2563eb;font-size:12px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px;">Why customers need this</div>
+        <h2 style="font-size:40px;line-height:1.08;font-weight:950;color:#0f172a;margin:0;letter-spacing:-0.045em;">Odoo is for operations. BigQuery is for analytics.</h2>
+        <p style="margin:18px auto 0 auto;color:#64748b;font-size:17px;line-height:1.75;max-width:760px;">Heavy reports, dashboards, forecasting and AI analysis should not fight with the live ERP database.</p>
     </div>
-  </div>
-
-  <!-- ARCHITECTURE -->
-  <div style="padding:78px 18px;background-color:#020617;color:#ffffff;box-sizing:border-box;">
-    <div style="max-width:1060px;margin:0 auto;text-align:center;box-sizing:border-box;">
-      <span style="display:inline-block;padding:8px 18px;border-radius:999px;background-color:#0f172a;border:1px solid #334155;color:#38bdf8;font-size:12px;font-weight:950;letter-spacing:2px;text-transform:uppercase;margin-bottom:22px;">Architecture that sells</span>
-      <h2 style="font-size:44px;font-weight:950;line-height:1.08;letter-spacing:-2px;margin:0 0 16px 0;color:#ffffff;">One controlled pipeline from Odoo to every analytics tool.</h2>
-      <p style="font-size:18px;color:#cbd5e1;max-width:830px;margin:0 auto 42px auto;line-height:1.75;">The module exports Odoo data into BigQuery, then your reporting and AI stack reads from the warehouse.</p>
-
-      <div style="background-color:#0b1220;border:1px solid #334155;border-radius:34px;padding:15px;box-shadow:0 70px 140px -40px #000000;margin-bottom:28px;box-sizing:border-box;">
-        <img src="/apps/modules/19.0/odoo-bigquery/static/description/all.png" alt="Odoo to BigQuery analytics architecture" style="width:100%;max-width:100%;height:auto;display:block;border-radius:24px;background-color:#000000;box-sizing:border-box;">
-      </div>
-
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;table-layout:fixed;box-sizing:border-box;text-align:left;">
-        <tr>
-          <td width="25%" style="padding:7px;vertical-align:top;box-sizing:border-box;"><div style="background-color:#0f172a;border:1px solid #334155;border-radius:22px;padding:22px;box-sizing:border-box;height:100%;"><h3 style="font-size:18px;font-weight:950;margin:0 0 8px 0;color:#ffffff;">1. Select data</h3><p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.7;">Choose Odoo table, columns and domain filters.</p></div></td>
-          <td width="25%" style="padding:7px;vertical-align:top;box-sizing:border-box;"><div style="background-color:#0f172a;border:1px solid #334155;border-radius:22px;padding:22px;box-sizing:border-box;height:100%;"><h3 style="font-size:18px;font-weight:950;margin:0 0 8px 0;color:#ffffff;">2. Export safely</h3><p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.7;">Run manual or scheduled incremental exports.</p></div></td>
-          <td width="25%" style="padding:7px;vertical-align:top;box-sizing:border-box;"><div style="background-color:#0f172a;border:1px solid #334155;border-radius:22px;padding:22px;box-sizing:border-box;height:100%;"><h3 style="font-size:18px;font-weight:950;margin:0 0 8px 0;color:#ffffff;">3. Store in BigQuery</h3><p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.7;">Data lands in structured BigQuery tables.</p></div></td>
-          <td width="25%" style="padding:7px;vertical-align:top;box-sizing:border-box;"><div style="background-color:#0f172a;border:1px solid #334155;border-radius:22px;padding:22px;box-sizing:border-box;height:100%;"><h3 style="font-size:18px;font-weight:950;margin:0 0 8px 0;color:#ffffff;">4. Build reports</h3><p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.7;">Connect BI dashboards and AI workflows.</p></div></td>
-        </tr>
-      </table>
-    </div>
-  </div>
-
-  <!-- CONFIGURE -->
-  <div style="padding:78px 18px;background-color:#ffffff;box-sizing:border-box;">
-    <div style="max-width:1060px;margin:0 auto;box-sizing:border-box;">
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;table-layout:fixed;box-sizing:border-box;">
-        <tr>
-          <td width="42%" style="padding:8px 24px 8px 0;vertical-align:middle;box-sizing:border-box;">
-            <span style="display:inline-block;padding:8px 16px;border-radius:999px;background-color:#eff6ff;border:1px solid #bfdbfe;color:#2563eb;font-size:12px;font-weight:950;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px;">Step 01: Configure</span>
-            <h2 style="font-size:40px;font-weight:950;color:#0f172a;margin:0 0 16px 0;letter-spacing:-1.6px;line-height:1.08;">Connect Odoo to your Google Cloud project.</h2>
-            <p style="font-size:16px;color:#64748b;line-height:1.75;margin:0 0 20px 0;">Admins add the BigQuery Project ID, Dataset ID and service-account JSON credentials from one Odoo configuration screen.</p>
-            <span style="display:inline-block;margin:4px;padding:9px 13px;border-radius:999px;background-color:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe;font-size:12px;font-weight:900;">Project ID</span>
-            <span style="display:inline-block;margin:4px;padding:9px 13px;border-radius:999px;background-color:#ecfeff;color:#0e7490;border:1px solid #a5f3fc;font-size:12px;font-weight:900;">Dataset ID</span>
-            <span style="display:inline-block;margin:4px;padding:9px 13px;border-radius:999px;background-color:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;font-size:12px;font-weight:900;">Service account JSON</span>
-          </td>
-          <td width="58%" style="padding:8px 0 8px 8px;vertical-align:middle;box-sizing:border-box;">
-            <div style="background-color:#ffffff;border:1px solid #e2e8f0;border-radius:30px;padding:14px;box-shadow:0 42px 90px rgba(191,219,254,.65);box-sizing:border-box;">
-              <img src="/apps/modules/19.0/odoo-bigquery/static/description/se.png" alt="BigQuery connector settings in Odoo" style="width:100%;max-width:100%;height:auto;display:block;border-radius:20px;box-sizing:border-box;">
-            </div>
-          </td>
-        </tr>
-      </table>
-    </div>
-  </div>
-
-  <!-- EXPORT BUILDER -->
-  <div style="padding:78px 18px;background-color:#f8fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0;box-sizing:border-box;">
-    <div style="max-width:1060px;margin:0 auto;text-align:center;box-sizing:border-box;">
-      <span style="display:inline-block;padding:8px 16px;border-radius:999px;background-color:#fff7ed;border:1px solid #fed7aa;color:#ea580c;font-size:12px;font-weight:950;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px;">Step 02: Build exports</span>
-      <h2 style="font-size:42px;font-weight:950;color:#0f172a;margin:0 0 14px 0;letter-spacing:-1.8px;line-height:1.08;">Choose exactly what reaches BigQuery.</h2>
-      <p style="font-size:17px;color:#64748b;max-width:820px;margin:0 auto 38px auto;line-height:1.75;">Create export definitions from real Odoo tables. Select columns, apply Odoo domain filters and schedule incremental sync per export.</p>
-
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;table-layout:fixed;box-sizing:border-box;text-align:left;">
-        <tr>
-          <td width="33.33%" style="padding:8px;vertical-align:top;box-sizing:border-box;">
-            <div style="background-color:#ffffff;border:1px solid #e2e8f0;border-radius:28px;padding:14px;box-shadow:0 24px 60px rgba(203,213,225,.7);height:100%;box-sizing:border-box;">
-              <img src="/apps/modules/19.0/odoo-bigquery/static/description/co.png" alt="Column selection for BigQuery export" style="width:100%;max-width:100%;height:auto;display:block;border-radius:19px;margin-bottom:16px;box-sizing:border-box;">
-              <h3 style="font-size:20px;font-weight:950;margin:0 8px 8px 8px;color:#0f172a;">Column selection</h3>
-              <p style="margin:0 8px 10px 8px;color:#64748b;font-size:14px;line-height:1.7;">Export only the fields needed for reporting instead of pushing every Odoo column.</p>
-            </div>
-          </td>
-          <td width="33.33%" style="padding:8px;vertical-align:top;box-sizing:border-box;">
-            <div style="background-color:#ffffff;border:1px solid #e2e8f0;border-radius:28px;padding:14px;box-shadow:0 24px 60px rgba(203,213,225,.7);height:100%;box-sizing:border-box;">
-              <img src="/apps/modules/19.0/odoo-bigquery/static/description/in.png" alt="Odoo domain filter for BigQuery export" style="width:100%;max-width:100%;height:auto;display:block;border-radius:19px;margin-bottom:16px;box-sizing:border-box;">
-              <h3 style="font-size:20px;font-weight:950;margin:0 8px 8px 8px;color:#0f172a;">Domain filters</h3>
-              <p style="margin:0 8px 10px 8px;color:#64748b;font-size:14px;line-height:1.7;">Send only required records, such as active products, posted invoices or company-specific data.</p>
-            </div>
-          </td>
-          <td width="33.33%" style="padding:8px;vertical-align:top;box-sizing:border-box;">
-            <div style="background-color:#ffffff;border:1px solid #e2e8f0;border-radius:28px;padding:14px;box-shadow:0 24px 60px rgba(203,213,225,.7);height:100%;box-sizing:border-box;">
-              <img src="/apps/modules/19.0/odoo-bigquery/static/description/incre_export.png" alt="Incremental export schedule settings" style="width:100%;max-width:100%;height:auto;display:block;border-radius:19px;margin-bottom:16px;box-sizing:border-box;">
-              <h3 style="font-size:20px;font-weight:950;margin:0 8px 8px 8px;color:#0f172a;">Incremental schedule</h3>
-              <p style="margin:0 8px 10px 8px;color:#64748b;font-size:14px;line-height:1.7;">Enable automatic sync and set the interval per query without custom cron code.</p>
-            </div>
-          </td>
-        </tr>
-      </table>
-    </div>
-  </div>
-
-  <!-- MONITORING -->
-  <div style="padding:78px 18px;background-color:#ffffff;box-sizing:border-box;">
-    <div style="max-width:1060px;margin:0 auto;box-sizing:border-box;">
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;table-layout:fixed;box-sizing:border-box;">
-        <tr>
-          <td width="56%" style="padding:8px 22px 8px 0;vertical-align:middle;box-sizing:border-box;">
-            <div style="background-color:#ffffff;border:1px solid #e2e8f0;border-radius:30px;padding:14px;box-shadow:0 42px 90px rgba(203,213,225,.75);box-sizing:border-box;">
-              <img src="/apps/modules/19.0/odoo-bigquery/static/description/query.png" alt="BigQuery export query logs and run history" style="width:100%;max-width:100%;height:auto;display:block;border-radius:20px;box-sizing:border-box;">
-            </div>
-          </td>
-          <td width="44%" style="padding:8px 0 8px 8px;vertical-align:middle;box-sizing:border-box;">
-            <span style="display:inline-block;padding:8px 16px;border-radius:999px;background-color:#f0fdf4;border:1px solid #bbf7d0;color:#16a34a;font-size:12px;font-weight:950;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px;">Step 03: Run + monitor</span>
-            <h2 style="font-size:40px;font-weight:950;color:#0f172a;margin:0 0 16px 0;letter-spacing:-1.6px;line-height:1.08;">Logs, status and recovery are part of the product.</h2>
-            <p style="font-size:16px;color:#64748b;line-height:1.75;margin:0 0 20px 0;">Admins can run exports, inspect logs, clear errors and reset stuck states when an interrupted run leaves a query locked.</p>
-            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;table-layout:fixed;box-sizing:border-box;">
-              <tr>
-                <td width="50%" style="padding:5px;box-sizing:border-box;"><div style="background-color:#f8fafc;border:1px solid #e2e8f0;border-radius:16px;padding:14px;box-sizing:border-box;"><b style="color:#0f172a;">Run</b><br><span style="color:#64748b;font-size:13px;">Manual export on demand.</span></div></td>
-                <td width="50%" style="padding:5px;box-sizing:border-box;"><div style="background-color:#f8fafc;border:1px solid #e2e8f0;border-radius:16px;padding:14px;box-sizing:border-box;"><b style="color:#0f172a;">Hard refresh</b><br><span style="color:#64748b;font-size:13px;">Reset cursor and rerun.</span></div></td>
-              </tr>
-              <tr>
-                <td width="50%" style="padding:5px;box-sizing:border-box;"><div style="background-color:#f8fafc;border:1px solid #e2e8f0;border-radius:16px;padding:14px;box-sizing:border-box;"><b style="color:#0f172a;">Clear error</b><br><span style="color:#64748b;font-size:13px;">Recover after failed runs.</span></div></td>
-                <td width="50%" style="padding:5px;box-sizing:border-box;"><div style="background-color:#f8fafc;border:1px solid #e2e8f0;border-radius:16px;padding:14px;box-sizing:border-box;"><b style="color:#0f172a;">Reset stuck state</b><br><span style="color:#64748b;font-size:13px;">Unlock interrupted exports.</span></div></td>
-              </tr>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;table-layout:fixed;border-collapse:separate;border-spacing:12px;box-sizing:border-box;">
+                <tr><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#9889;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Keep Odoo fast</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Move analytical workloads away from the transactional database so sales, inventory, accounting and operations screens stay responsive.</p>
+        </div>
+    </td><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#128202;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Give BI clean data</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">BigQuery becomes the source for Power BI, Looker Studio, Tableau, SQL users and data teams.</p>
+        </div>
+    </td><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#128260;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Update without starting over</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Incremental sync, cursor tracking and scheduled runs help keep the warehouse fresh without manual exports.</p>
+        </div>
+    </td></tr>
             </table>
-          </td>
-        </tr>
-      </table>
+        </div>
     </div>
-  </div>
 
-  <!-- UNDER THE HOOD -->
-  <div style="padding:82px 18px;background-color:#0a0f1c;color:#ffffff;box-sizing:border-box;">
-    <div style="max-width:1060px;margin:0 auto;text-align:center;box-sizing:border-box;">
-      <span style="display:inline-block;padding:8px 16px;border-radius:999px;background-color:#111827;border:1px solid #334155;color:#67e8f9;font-size:12px;font-weight:950;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;">Under the hood</span>
-      <h2 style="font-size:42px;font-weight:950;color:#ffffff;margin:0 0 18px 0;letter-spacing:-1.8px;line-height:1.08;">Built for large Odoo tables, not demo records.</h2>
-      <p style="font-size:17px;color:#cbd5e1;max-width:880px;margin:0 auto 36px auto;line-height:1.75;">The connector handles batch processing, stable schema mapping, staging tables, BigQuery MERGE logic, cron continuation and protected runtime state.</p>
-
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;table-layout:fixed;box-sizing:border-box;text-align:left;">
-        <tr>
-          <td width="25%" style="padding:7px;vertical-align:top;box-sizing:border-box;"><div style="height:100%;background-color:#111827;border:1px solid #334155;border-radius:24px;padding:24px;box-sizing:border-box;"><div style="font-size:28px;margin-bottom:12px;">📦</div><h3 style="font-size:18px;color:#ffffff;font-weight:950;margin:0 0 8px 0;">Batch export engine</h3><p style="font-size:14px;color:#cbd5e1;line-height:1.7;margin:0;">Large datasets are fetched and loaded in chunks instead of one fragile operation.</p></div></td>
-          <td width="25%" style="padding:7px;vertical-align:top;box-sizing:border-box;"><div style="height:100%;background-color:#111827;border:1px solid #334155;border-radius:24px;padding:24px;box-sizing:border-box;"><div style="font-size:28px;margin-bottom:12px;">🔗</div><h3 style="font-size:18px;color:#ffffff;font-weight:950;margin:0 0 8px 0;">Staging + MERGE</h3><p style="font-size:14px;color:#cbd5e1;line-height:1.7;margin:0;">Data lands in a temporary BigQuery table, then updates/inserts into the final table.</p></div></td>
-          <td width="25%" style="padding:7px;vertical-align:top;box-sizing:border-box;"><div style="height:100%;background-color:#111827;border:1px solid #334155;border-radius:24px;padding:24px;box-sizing:border-box;"><div style="font-size:28px;margin-bottom:12px;">🛠</div><h3 style="font-size:18px;color:#ffffff;font-weight:950;margin:0 0 8px 0;">Stable schema mapping</h3><p style="font-size:14px;color:#cbd5e1;line-height:1.7;margin:0;">Odoo/PostgreSQL types are mapped to BigQuery types with unusual values handled safely.</p></div></td>
-          <td width="25%" style="padding:7px;vertical-align:top;box-sizing:border-box;"><div style="height:100%;background-color:#111827;border:1px solid #334155;border-radius:24px;padding:24px;box-sizing:border-box;"><div style="font-size:28px;margin-bottom:12px;">🔒</div><h3 style="font-size:18px;color:#ffffff;font-weight:950;margin:0 0 8px 0;">Advisory locks</h3><p style="font-size:14px;color:#cbd5e1;line-height:1.7;margin:0;">Duplicate or crashed runs are visible and recoverable instead of hidden.</p></div></td>
-        </tr>
-      </table>
+    <!-- FLOW -->
+    <div style="width:100%;box-sizing:border-box;padding:78px 18px;background-color:#f8fafc;overflow:hidden;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0;">
+        <div style="max-width:1080px;width:100%;margin:0 auto;box-sizing:border-box;">
+            <div style="text-align:center;margin:0 auto 44px auto;max-width:900px;">
+        <div style="display:inline-block;border:1px solid #dbe5f0;border-radius:999px;padding:8px 18px;background-color:#ffffff;color:#0d9488;font-size:12px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px;">Simple workflow</div>
+        <h2 style="font-size:40px;line-height:1.08;font-weight:950;color:#0f172a;margin:0;letter-spacing:-0.045em;">One controlled pipeline from Odoo to every analytics tool.</h2>
+        <p style="margin:18px auto 0 auto;color:#64748b;font-size:17px;line-height:1.75;max-width:760px;">Pick the data, export safely, store it in BigQuery, then connect BI and AI tools.</p>
     </div>
-  </div>
-
-  <!-- BIGQUERY RESULTS -->
-  <div style="padding:78px 18px;background-color:#ffffff;box-sizing:border-box;">
-    <div style="max-width:1060px;margin:0 auto;text-align:center;box-sizing:border-box;">
-      <span style="display:inline-block;padding:8px 16px;border-radius:999px;background-color:#eff6ff;border:1px solid #bfdbfe;color:#1d4ed8;font-size:12px;font-weight:950;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px;">Step 04: Use the warehouse</span>
-      <h2 style="font-size:42px;font-weight:950;color:#0f172a;margin:0 0 14px 0;letter-spacing:-1.8px;line-height:1.08;">Your Odoo data becomes queryable inside BigQuery.</h2>
-      <p style="font-size:17px;color:#64748b;max-width:820px;margin:0 auto 38px auto;line-height:1.75;">Once exported, BigQuery holds clean tables that reporting teams can query, join and model outside Odoo.</p>
-
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;table-layout:fixed;box-sizing:border-box;text-align:left;">
-        <tr>
-          <td width="50%" style="padding:8px;vertical-align:top;box-sizing:border-box;">
-            <div style="background-color:#ffffff;border:1px solid #e2e8f0;border-radius:28px;padding:14px;box-shadow:0 24px 60px rgba(203,213,225,.7);box-sizing:border-box;">
-              <img src="/apps/modules/19.0/odoo-bigquery/static/description/schema.png" alt="BigQuery schema generated from Odoo export" style="width:100%;max-width:100%;height:auto;display:block;border-radius:19px;margin-bottom:16px;box-sizing:border-box;">
-              <h3 style="font-size:20px;font-weight:950;margin:0 8px 8px 8px;color:#0f172a;">Generated BigQuery schema</h3>
-              <p style="margin:0 8px 10px 8px;color:#64748b;font-size:14px;line-height:1.7;">Fields are mapped into BigQuery-compatible table schemas.</p>
-            </div>
-          </td>
-          <td width="50%" style="padding:8px;vertical-align:top;box-sizing:border-box;">
-            <div style="background-color:#ffffff;border:1px solid #e2e8f0;border-radius:28px;padding:14px;box-shadow:0 24px 60px rgba(203,213,225,.7);box-sizing:border-box;">
-              <img src="/apps/modules/19.0/odoo-bigquery/static/description/fullbig.png" alt="Odoo data exported to BigQuery table" style="width:100%;max-width:100%;height:auto;display:block;border-radius:19px;margin-bottom:16px;box-sizing:border-box;">
-              <h3 style="font-size:20px;font-weight:950;margin:0 8px 8px 8px;color:#0f172a;">Data available in BigQuery</h3>
-              <p style="margin:0 8px 10px 8px;color:#64748b;font-size:14px;line-height:1.7;">Exported Odoo records are ready for SQL, dashboards and downstream analytics.</p>
-            </div>
-          </td>
-        </tr>
-      </table>
-    </div>
-  </div>
-
-  <!-- BI TOOLS -->
-  <div style="padding:78px 18px;background-color:#f8fafc;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0;box-sizing:border-box;">
-    <div style="max-width:1060px;margin:0 auto;text-align:center;box-sizing:border-box;">
-      <span style="display:inline-block;padding:8px 16px;border-radius:999px;background-color:#ecfeff;border:1px solid #a5f3fc;color:#0e7490;font-size:12px;font-weight:950;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px;">BI connections</span>
-      <h2 style="font-size:42px;font-weight:950;color:#0f172a;margin:0 0 14px 0;letter-spacing:-1.8px;line-height:1.08;">Use the tools your team already knows.</h2>
-      <p style="font-size:17px;color:#64748b;max-width:830px;margin:0 auto 38px auto;line-height:1.75;">BigQuery is the middle layer. After export, analysts connect Power BI, Looker Studio, Tableau and other BI tools directly to the warehouse.</p>
-
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;table-layout:fixed;box-sizing:border-box;text-align:left;">
-        <tr>
-          <td width="33.33%" style="padding:8px;vertical-align:top;box-sizing:border-box;">
-            <div style="height:100%;background-color:#ffffff;border:1px solid #e2e8f0;border-radius:28px;padding:14px;box-shadow:0 24px 60px rgba(203,213,225,.7);box-sizing:border-box;">
-              <video autoplay loop muted playsinline preload="auto" style="width:100%;max-width:100%;height:auto;display:block;border-radius:20px;background-color:#ffffff;margin-bottom:16px;box-sizing:border-box;"><source src="/apps/modules/19.0/odoo-bigquery/static/description/powerbiconnection.webm" type="video/webm"></video>
-              <h3 style="font-size:20px;font-weight:950;margin:0 8px 8px 8px;color:#0f172a;">Power BI</h3>
-              <p style="margin:0 8px 10px 8px;color:#64748b;font-size:14px;line-height:1.7;">Create Power BI dashboards from BigQuery instead of Odoo SQL.</p>
-            </div>
-          </td>
-          <td width="33.33%" style="padding:8px;vertical-align:top;box-sizing:border-box;">
-            <div style="height:100%;background-color:#ffffff;border:1px solid #e2e8f0;border-radius:28px;padding:14px;box-shadow:0 24px 60px rgba(203,213,225,.7);box-sizing:border-box;">
-              <img src="/apps/modules/19.0/odoo-bigquery/static/description/lookerconnection.png" alt="Looker Studio BigQuery connection" style="width:100%;max-width:100%;height:auto;display:block;border-radius:20px;margin-bottom:16px;box-sizing:border-box;">
-              <h3 style="font-size:20px;font-weight:950;margin:0 8px 8px 8px;color:#0f172a;">Looker Studio</h3>
-              <p style="margin:0 8px 10px 8px;color:#64748b;font-size:14px;line-height:1.7;">Build Google-native reports on top of your exported Odoo data.</p>
-            </div>
-          </td>
-          <td width="33.33%" style="padding:8px;vertical-align:top;box-sizing:border-box;">
-            <div style="height:100%;background-color:#ffffff;border:1px solid #e2e8f0;border-radius:28px;padding:14px;box-shadow:0 24px 60px rgba(203,213,225,.7);box-sizing:border-box;">
-              <img src="/apps/modules/19.0/odoo-bigquery/static/description/tableauconnection.png" alt="Tableau BigQuery connection" style="width:100%;max-width:100%;height:auto;display:block;border-radius:20px;margin-bottom:16px;box-sizing:border-box;">
-              <h3 style="font-size:20px;font-weight:950;margin:0 8px 8px 8px;color:#0f172a;">Tableau</h3>
-              <p style="margin:0 8px 10px 8px;color:#64748b;font-size:14px;line-height:1.7;">Use Tableau with BigQuery as the reporting source.</p>
-            </div>
-          </td>
-        </tr>
-      </table>
-    </div>
-  </div>
-
-  <!-- SECURITY -->
-  <div style="padding:78px 18px;background-color:#ffffff;box-sizing:border-box;">
-    <div style="max-width:1060px;margin:0 auto;box-sizing:border-box;">
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;table-layout:fixed;box-sizing:border-box;">
-        <tr>
-          <td width="43%" style="padding:8px 24px 8px 0;vertical-align:middle;box-sizing:border-box;">
-            <span style="display:inline-block;padding:8px 16px;border-radius:999px;background-color:#faf5ff;border:1px solid #ddd6fe;color:#6d28d9;font-size:12px;font-weight:950;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px;">Access control</span>
-            <h2 style="font-size:40px;font-weight:950;color:#0f172a;margin:0 0 16px 0;letter-spacing:-1.6px;line-height:1.08;">Keep export management in the right hands.</h2>
-            <p style="font-size:16px;color:#64748b;line-height:1.75;margin:0 0 20px 0;">The module includes user and manager security groups so admins can control who configures exports, runs jobs and reviews data movement.</p>
-            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;table-layout:fixed;box-sizing:border-box;">
-              <tr>
-                <td width="50%" style="padding:5px;box-sizing:border-box;"><div style="background-color:#f8fafc;border:1px solid #e2e8f0;border-radius:18px;padding:16px;box-sizing:border-box;"><b style="color:#0f172a;">Manager</b><br><span style="color:#64748b;font-size:13px;">Configure and operate exports.</span></div></td>
-                <td width="50%" style="padding:5px;box-sizing:border-box;"><div style="background-color:#f8fafc;border:1px solid #e2e8f0;border-radius:18px;padding:16px;box-sizing:border-box;"><b style="color:#0f172a;">User</b><br><span style="color:#64748b;font-size:13px;">View connector records and logs.</span></div></td>
-              </tr>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;table-layout:fixed;border-collapse:separate;border-spacing:12px;box-sizing:border-box;">
+                <tr>
+                    <td style="width:25%;vertical-align:top;padding:8px;box-sizing:border-box;"><div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:24px;box-sizing:border-box;"><div style="color:#2563eb;font-size:34px;font-weight:950;margin-bottom:12px;">01</div><h3 style="margin:0 0 8px 0;font-size:18px;font-weight:900;color:#0f172a;">Select data</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.65;">Choose Odoo table, columns and optional domain filter.</p></div></td>
+                    <td style="width:25%;vertical-align:top;padding:8px;box-sizing:border-box;"><div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:24px;box-sizing:border-box;"><div style="color:#2563eb;font-size:34px;font-weight:950;margin-bottom:12px;">02</div><h3 style="margin:0 0 8px 0;font-size:18px;font-weight:900;color:#0f172a;">Export safely</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.65;">Run manually or schedule incremental export.</p></div></td>
+                    <td style="width:25%;vertical-align:top;padding:8px;box-sizing:border-box;"><div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:24px;box-sizing:border-box;"><div style="color:#2563eb;font-size:34px;font-weight:950;margin-bottom:12px;">03</div><h3 style="margin:0 0 8px 0;font-size:18px;font-weight:900;color:#0f172a;">Store in BigQuery</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.65;">Use staging tables, schema mapping and MERGE.</p></div></td>
+                    <td style="width:25%;vertical-align:top;padding:8px;box-sizing:border-box;"><div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:24px;box-sizing:border-box;"><div style="color:#2563eb;font-size:34px;font-weight:950;margin-bottom:12px;">04</div><h3 style="margin:0 0 8px 0;font-size:18px;font-weight:900;color:#0f172a;">Build reports</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.65;">Connect Power BI, Looker, Tableau, SQL and AI tools.</p></div></td>
+                </tr>
             </table>
-          </td>
-          <td width="57%" style="padding:8px 0 8px 8px;vertical-align:middle;box-sizing:border-box;">
-            <div style="background-color:#ffffff;border:1px solid #e2e8f0;border-radius:30px;padding:14px;box-shadow:0 42px 90px rgba(221,214,254,.65);box-sizing:border-box;">
-              <img src="/apps/modules/19.0/odoo-bigquery/static/description/security.png" alt="BigQuery Connector access control and security settings" style="width:100%;max-width:100%;height:auto;display:block;border-radius:20px;box-sizing:border-box;">
+        </div>
+    </div>
+
+    <!-- SETUP -->
+    <div style="width:100%;box-sizing:border-box;padding:82px 18px;background-color:#ffffff;overflow:hidden;">
+        <div style="max-width:1080px;width:100%;margin:0 auto;box-sizing:border-box;">
+            <div style="text-align:center;margin:0 auto 44px auto;max-width:900px;">
+        <div style="display:inline-block;border:1px solid #dbe5f0;border-radius:999px;padding:8px 18px;background-color:#ffffff;color:#2563eb;font-size:12px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px;">Setup</div>
+        <h2 style="font-size:40px;line-height:1.08;font-weight:950;color:#0f172a;margin:0;letter-spacing:-0.045em;">Connect Odoo to your Google Cloud project.</h2>
+        <p style="margin:18px auto 0 auto;color:#64748b;font-size:17px;line-height:1.75;max-width:760px;">Add Project ID, Dataset ID and the service account JSON. The module then knows where BigQuery exports should go.</p>
+    </div>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;table-layout:fixed;border-collapse:separate;border-spacing:16px;box-sizing:border-box;">
+                <tr>
+                    <td style="width:50%;vertical-align:middle;padding:0;box-sizing:border-box;"><div style="background-color:#ffffff;border:1px solid #dbe5f0;border-radius:28px;padding:12px;box-sizing:border-box;box-shadow:0 28px 70px rgba(15,23,42,0.12);overflow:hidden;">
+        <img src="./dataset.png" alt="BigQuery Connector settings in Odoo" style="display:block;width:100%;max-width:100%;height:auto;border-radius:20px;border:0;">
+        <div style="padding:14px 10px 4px 10px;color:#475569;font-size:14px;line-height:1.65;font-weight:700;">Configure project, dataset and credentials inside Odoo settings.</div>
+    </div></td>
+                    <td style="width:50%;vertical-align:middle;padding:0;box-sizing:border-box;">
+                        <div style="background-color:#f8fafc;border:1px solid #dbe5f0;border-radius:28px;padding:30px;box-sizing:border-box;">
+                            <h3 style="font-size:27px;line-height:1.15;font-weight:950;color:#0f172a;margin:0 0 18px 0;letter-spacing:-0.03em;">The setup stays understandable for non-technical admins.</h3>
+                            <p style="margin:0 0 16px 0;color:#64748b;font-size:15px;line-height:1.75;">Customers do not need to write a custom connector. They configure the Google Cloud project once, then create export definitions inside Odoo.</p>
+                            <div style="font-size:14px;line-height:1.9;color:#334155;font-weight:800;">
+                                &#10003; Google Cloud Project ID<br>
+                                &#10003; BigQuery Dataset ID<br>
+                                &#10003; Service account JSON<br>
+                                &#10003; Odoo settings based configuration<br>
+                                &#10003; App menu for export queries and logs
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- EXPORT BUILDER -->
+    <div style="width:100%;box-sizing:border-box;padding:82px 18px;background-color:#f8fafc;overflow:hidden;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0;">
+        <div style="max-width:1080px;width:100%;margin:0 auto;box-sizing:border-box;">
+            <div style="text-align:center;margin:0 auto 44px auto;max-width:900px;">
+        <div style="display:inline-block;border:1px solid #dbe5f0;border-radius:999px;padding:8px 18px;background-color:#ffffff;color:#7c3aed;font-size:12px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px;">Export builder</div>
+        <h2 style="font-size:40px;line-height:1.08;font-weight:950;color:#0f172a;margin:0;letter-spacing:-0.045em;">Create one export per business question.</h2>
+        <p style="margin:18px auto 0 auto;color:#64748b;font-size:17px;line-height:1.75;max-width:760px;">Each query can select the source table, the fields, the filter and the sync behavior.</p>
+    </div>
+            <div style="background-color:#ffffff;border:1px solid #dbe5f0;border-radius:28px;padding:12px;box-sizing:border-box;box-shadow:0 28px 70px rgba(15,23,42,0.12);overflow:hidden;">
+        <img src="./query.png" alt="BigQuery query builder in Odoo" style="display:block;width:100%;max-width:100%;height:auto;border-radius:20px;border:0;">
+        <div style="padding:14px 10px 4px 10px;color:#475569;font-size:14px;line-height:1.65;font-weight:700;">Create an export query with table selection, selected columns, domain filter, sync settings and runtime state.</div>
+    </div>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;table-layout:fixed;border-collapse:separate;border-spacing:12px;margin-top:18px;box-sizing:border-box;">
+                <tr><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#9986;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Column-level control</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">The selected column list defines what reaches BigQuery, keeping tables clean and cheaper to maintain.</p>
+        </div>
+    </td><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#128269;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Odoo domain filters</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Use familiar Odoo domain syntax to export only the records that matter for a reporting table.</p>
+        </div>
+    </td><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#9201;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Incremental auto export</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Turn on incremental sync and set the interval per export definition.</p>
+        </div>
+    </td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- FEATURE SCREENSHOTS -->
+    <div style="width:100%;box-sizing:border-box;padding:82px 18px;background-color:#ffffff;overflow:hidden;">
+        <div style="max-width:1080px;width:100%;margin:0 auto;box-sizing:border-box;">
+            <div style="text-align:center;margin:0 auto 44px auto;max-width:900px;">
+        <div style="display:inline-block;border:1px solid #dbe5f0;border-radius:999px;padding:8px 18px;background-color:#ffffff;color:#ea580c;font-size:12px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px;">Controls customers can see</div>
+        <h2 style="font-size:40px;line-height:1.08;font-weight:950;color:#0f172a;margin:0;letter-spacing:-0.045em;">This is not a hidden technical script. It is an Odoo product.</h2>
+        <p style="margin:18px auto 0 auto;color:#64748b;font-size:17px;line-height:1.75;max-width:760px;">Customers can configure exports, see status, inspect logs and recover from common problems inside the Odoo UI.</p>
+    </div>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;table-layout:fixed;border-collapse:separate;border-spacing:16px;box-sizing:border-box;">
+                <tr>
+                    <td style="width:50%;vertical-align:top;box-sizing:border-box;"><div style="background-color:#ffffff;border:1px solid #dbe5f0;border-radius:28px;padding:12px;box-sizing:border-box;box-shadow:0 28px 70px rgba(15,23,42,0.12);overflow:hidden;">
+        <img src="./selection.png" alt="Column selection screenshot" style="display:block;width:100%;max-width:100%;height:auto;border-radius:20px;border:0;">
+        <div style="padding:14px 10px 4px 10px;color:#475569;font-size:14px;line-height:1.65;font-weight:700;">Choose selected fields instead of exporting everything.</div>
+    </div></td>
+                    <td style="width:50%;vertical-align:top;box-sizing:border-box;"><div style="background-color:#ffffff;border:1px solid #dbe5f0;border-radius:28px;padding:12px;box-sizing:border-box;box-shadow:0 28px 70px rgba(15,23,42,0.12);overflow:hidden;">
+        <img src="./Ad_filtering.png" alt="Domain filtering screenshot" style="display:block;width:100%;max-width:100%;height:auto;border-radius:20px;border:0;">
+        <div style="padding:14px 10px 4px 10px;color:#475569;font-size:14px;line-height:1.65;font-weight:700;">Filter records before export using Odoo domain logic.</div>
+    </div></td>
+                </tr>
+                <tr>
+                    <td style="width:50%;vertical-align:top;box-sizing:border-box;"><div style="background-color:#ffffff;border:1px solid #dbe5f0;border-radius:28px;padding:12px;box-sizing:border-box;box-shadow:0 28px 70px rgba(15,23,42,0.12);overflow:hidden;">
+        <img src="./incre_export.png" alt="Incremental export screenshot" style="display:block;width:100%;max-width:100%;height:auto;border-radius:20px;border:0;">
+        <div style="padding:14px 10px 4px 10px;color:#475569;font-size:14px;line-height:1.65;font-weight:700;">Enable incremental auto export and interval based scheduling.</div>
+    </div></td>
+                    <td style="width:50%;vertical-align:top;box-sizing:border-box;"><div style="background-color:#ffffff;border:1px solid #dbe5f0;border-radius:28px;padding:12px;box-sizing:border-box;box-shadow:0 28px 70px rgba(15,23,42,0.12);overflow:hidden;">
+        <img src="./all.png" alt="BigQuery connector query list" style="display:block;width:100%;max-width:100%;height:auto;border-radius:20px;border:0;">
+        <div style="padding:14px 10px 4px 10px;color:#475569;font-size:14px;line-height:1.65;font-weight:700;">View all export queries, statuses, run controls and sync information.</div>
+    </div></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- RUNTIME -->
+    <div style="width:100%;box-sizing:border-box;padding:82px 18px;background-color:#0f172a;color:#ffffff;overflow:hidden;">
+        <div style="max-width:1080px;width:100%;margin:0 auto;box-sizing:border-box;">
+            <div style="text-align:center;margin:0 auto 44px auto;max-width:900px;">
+                <div style="display:inline-block;border:1px solid #334155;border-radius:999px;padding:8px 18px;background-color:#111827;color:#93c5fd;font-size:12px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px;">Runtime control</div>
+                <h2 style="font-size:40px;line-height:1.08;font-weight:950;color:#ffffff;margin:0;letter-spacing:-0.045em;">Admins can see what is running, done or broken.</h2>
+                <p style="margin:18px auto 0 auto;color:#cbd5e1;font-size:17px;line-height:1.75;max-width:760px;">The module exposes operational state so exports do not become a black box.</p>
             </div>
-          </td>
-        </tr>
-      </table>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;table-layout:fixed;border-collapse:separate;border-spacing:12px;box-sizing:border-box;">
+                <tr>
+                    <td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;"><div style="height:100%;background-color:#111827;border:1px solid #334155;border-radius:24px;padding:26px;box-sizing:border-box;"><div style="color:#93c5fd;font-size:24px;margin-bottom:16px;">&#9658;</div><h3 style="margin:0 0 10px 0;font-size:19px;font-weight:900;color:#ffffff;">Run and schedule</h3><p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.7;">Run manually, enable incremental auto export and let cron continue the export when more batches remain.</p></div></td>
+                    <td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;"><div style="height:100%;background-color:#111827;border:1px solid #334155;border-radius:24px;padding:26px;box-sizing:border-box;"><div style="color:#93c5fd;font-size:24px;margin-bottom:16px;">&#128221;</div><h3 style="margin:0 0 10px 0;font-size:19px;font-weight:900;color:#ffffff;">Logs and alerts</h3><p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.7;">Track event type, severity, message, details, rows exported, run token and user.</p></div></td>
+                    <td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;"><div style="height:100%;background-color:#111827;border:1px solid #334155;border-radius:24px;padding:26px;box-sizing:border-box;"><div style="color:#93c5fd;font-size:24px;margin-bottom:16px;">&#128275;</div><h3 style="margin:0 0 10px 0;font-size:19px;font-weight:900;color:#ffffff;">Recovery buttons</h3><p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.7;">Clear errors and reset stuck state only when those actions are actually needed.</p></div></td>
+                </tr>
+            </table>
+            <div style="height:18px;line-height:18px;">&nbsp;</div>
+            <div style="background-color:#0f172a;border:1px solid #334155;border-radius:28px;padding:12px;box-sizing:border-box;box-shadow:0 28px 70px rgba(15,23,42,0.12);overflow:hidden;">
+        <img src="./fullbig.png" alt="BigQuery exported data table screenshot" style="display:block;width:100%;max-width:100%;height:auto;border-radius:20px;border:0;">
+        <div style="padding:14px 10px 4px 10px;color:#cbd5e1;font-size:14px;line-height:1.65;font-weight:700;">Odoo data available inside BigQuery after export.</div>
     </div>
-  </div>
-
-  <!-- COMPLETE CAPABILITY LIST -->
-  <div style="padding:78px 18px;background-color:#f8fafc;border-top:1px solid #e2e8f0;box-sizing:border-box;">
-    <div style="max-width:1060px;margin:0 auto;text-align:center;box-sizing:border-box;">
-      <span style="display:inline-block;padding:8px 18px;background-color:#ffffff;border:1px solid #e2e8f0;border-radius:999px;color:#334155;font-size:12px;font-weight:950;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px;">Complete capability list</span>
-      <h2 style="font-size:40px;font-weight:950;color:#0f172a;margin:0 0 36px 0;letter-spacing:-1.6px;line-height:1.1;">Everything customers should see before buying.</h2>
-
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;table-layout:fixed;box-sizing:border-box;text-align:left;">
-        <tr>
-          <td width="25%" style="padding:7px;box-sizing:border-box;vertical-align:top;"><div style="background-color:#ffffff;border:1px solid #e2e8f0;border-radius:22px;padding:22px;box-sizing:border-box;height:100%;"><div style="font-size:25px;margin-bottom:10px;">🗄</div><h3 style="font-size:16px;font-weight:950;color:#0f172a;margin:0 0 8px 0;">Any Odoo table</h3><p style="font-size:13px;color:#64748b;line-height:1.65;margin:0;">Pick source tables and create separate export definitions.</p></div></td>
-          <td width="25%" style="padding:7px;box-sizing:border-box;vertical-align:top;"><div style="background-color:#ffffff;border:1px solid #e2e8f0;border-radius:22px;padding:22px;box-sizing:border-box;height:100%;"><div style="font-size:25px;margin-bottom:10px;">✂</div><h3 style="font-size:16px;font-weight:950;color:#0f172a;margin:0 0 8px 0;">Column selection</h3><p style="font-size:13px;color:#64748b;line-height:1.65;margin:0;">Choose exactly which fields should reach BigQuery.</p></div></td>
-          <td width="25%" style="padding:7px;box-sizing:border-box;vertical-align:top;"><div style="background-color:#ffffff;border:1px solid #e2e8f0;border-radius:22px;padding:22px;box-sizing:border-box;height:100%;"><div style="font-size:25px;margin-bottom:10px;">🔍</div><h3 style="font-size:16px;font-weight:950;color:#0f172a;margin:0 0 8px 0;">Domain filtering</h3><p style="font-size:13px;color:#64748b;line-height:1.65;margin:0;">Export records matching Odoo business conditions.</p></div></td>
-          <td width="25%" style="padding:7px;box-sizing:border-box;vertical-align:top;"><div style="background-color:#ffffff;border:1px solid #e2e8f0;border-radius:22px;padding:22px;box-sizing:border-box;height:100%;"><div style="font-size:25px;margin-bottom:10px;">⏱</div><h3 style="font-size:16px;font-weight:950;color:#0f172a;margin:0 0 8px 0;">Scheduled sync</h3><p style="font-size:13px;color:#64748b;line-height:1.65;margin:0;">Set incremental export intervals per query.</p></div></td>
-        </tr>
-        <tr>
-          <td width="25%" style="padding:7px;box-sizing:border-box;vertical-align:top;"><div style="background-color:#ffffff;border:1px solid #e2e8f0;border-radius:22px;padding:22px;box-sizing:border-box;height:100%;"><div style="font-size:25px;margin-bottom:10px;">🔁</div><h3 style="font-size:16px;font-weight:950;color:#0f172a;margin:0 0 8px 0;">Incremental cursor</h3><p style="font-size:13px;color:#64748b;line-height:1.65;margin:0;">Tracks last sync timestamp and synced ID.</p></div></td>
-          <td width="25%" style="padding:7px;box-sizing:border-box;vertical-align:top;"><div style="background-color:#ffffff;border:1px solid #e2e8f0;border-radius:22px;padding:22px;box-sizing:border-box;height:100%;"><div style="font-size:25px;margin-bottom:10px;">📦</div><h3 style="font-size:16px;font-weight:950;color:#0f172a;margin:0 0 8px 0;">Batch processing</h3><p style="font-size:13px;color:#64748b;line-height:1.65;margin:0;">Handles large exports in repeatable chunks.</p></div></td>
-          <td width="25%" style="padding:7px;box-sizing:border-box;vertical-align:top;"><div style="background-color:#ffffff;border:1px solid #e2e8f0;border-radius:22px;padding:22px;box-sizing:border-box;height:100%;"><div style="font-size:25px;margin-bottom:10px;">📝</div><h3 style="font-size:16px;font-weight:950;color:#0f172a;margin:0 0 8px 0;">Query logs</h3><p style="font-size:13px;color:#64748b;line-height:1.65;margin:0;">See run events, rows, messages and errors.</p></div></td>
-          <td width="25%" style="padding:7px;box-sizing:border-box;vertical-align:top;"><div style="background-color:#ffffff;border:1px solid #e2e8f0;border-radius:22px;padding:22px;box-sizing:border-box;height:100%;"><div style="font-size:25px;margin-bottom:10px;">📄</div><h3 style="font-size:16px;font-weight:950;color:#0f172a;margin:0 0 8px 0;">Change logs</h3><p style="font-size:13px;color:#64748b;line-height:1.65;margin:0;">Audit table, column, domain and interval changes.</p></div></td>
-        </tr>
-        <tr>
-          <td width="25%" style="padding:7px;box-sizing:border-box;vertical-align:top;"><div style="background-color:#ffffff;border:1px solid #e2e8f0;border-radius:22px;padding:22px;box-sizing:border-box;height:100%;"><div style="font-size:25px;margin-bottom:10px;">🛑</div><h3 style="font-size:16px;font-weight:950;color:#0f172a;margin:0 0 8px 0;">Stuck recovery</h3><p style="font-size:13px;color:#64748b;line-height:1.65;margin:0;">Detect and reset interrupted export states.</p></div></td>
-          <td width="25%" style="padding:7px;box-sizing:border-box;vertical-align:top;"><div style="background-color:#ffffff;border:1px solid #e2e8f0;border-radius:22px;padding:22px;box-sizing:border-box;height:100%;"><div style="font-size:25px;margin-bottom:10px;">🛡</div><h3 style="font-size:16px;font-weight:950;color:#0f172a;margin:0 0 8px 0;">User/manager access</h3><p style="font-size:13px;color:#64748b;line-height:1.65;margin:0;">Separate operation access by security group.</p></div></td>
-          <td width="25%" style="padding:7px;box-sizing:border-box;vertical-align:top;"><div style="background-color:#ffffff;border:1px solid #e2e8f0;border-radius:22px;padding:22px;box-sizing:border-box;height:100%;"><div style="font-size:25px;margin-bottom:10px;">🚀</div><h3 style="font-size:16px;font-weight:950;color:#0f172a;margin:0 0 8px 0;">Hard refresh</h3><p style="font-size:13px;color:#64748b;line-height:1.65;margin:0;">Reset runtime cursor and run again from start.</p></div></td>
-          <td width="25%" style="padding:7px;box-sizing:border-box;vertical-align:top;"><div style="background-color:#ffffff;border:1px solid #e2e8f0;border-radius:22px;padding:22px;box-sizing:border-box;height:100%;"><div style="font-size:25px;margin-bottom:10px;">🤖</div><h3 style="font-size:16px;font-weight:950;color:#0f172a;margin:0 0 8px 0;">AI/ML-ready data</h3><p style="font-size:13px;color:#64748b;line-height:1.65;margin:0;">Use BigQuery as the clean layer for AI reporting.</p></div></td>
-        </tr>
-      </table>
+        </div>
     </div>
-  </div>
 
-  <!-- PRACTICAL USE CASES -->
-  <div style="padding:78px 18px;background-color:#ffffff;box-sizing:border-box;">
-    <div style="max-width:1060px;margin:0 auto;text-align:center;box-sizing:border-box;">
-      <span style="display:inline-block;padding:8px 18px;background-color:#f0fdf4;border:1px solid #bbf7d0;border-radius:999px;color:#15803d;font-size:12px;font-weight:950;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px;">Practical use cases</span>
-      <h2 style="font-size:40px;font-weight:950;color:#0f172a;margin:0 0 14px 0;letter-spacing:-1.6px;line-height:1.1;">What customers can build after installing it.</h2>
-      <p style="font-size:17px;color:#64748b;max-width:820px;margin:0 auto 36px auto;line-height:1.75;">The connector is valuable because it moves Odoo data where serious reporting tools can use it.</p>
-
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;table-layout:fixed;box-sizing:border-box;text-align:left;">
-        <tr>
-          <td width="25%" style="padding:7px;box-sizing:border-box;vertical-align:top;"><div style="height:100%;background-color:#ffffff;border:1px solid #e2e8f0;border-radius:22px;padding:24px;box-shadow:0 18px 44px rgba(226,232,240,.8);box-sizing:border-box;"><h3 style="font-size:18px;font-weight:950;color:#0f172a;margin:0 0 10px 0;">Sales dashboards</h3><p style="font-size:14px;color:#64748b;line-height:1.7;margin:0;">Orders, invoices, sales teams, products, customers and margins in one reporting layer.</p></div></td>
-          <td width="25%" style="padding:7px;box-sizing:border-box;vertical-align:top;"><div style="height:100%;background-color:#ffffff;border:1px solid #e2e8f0;border-radius:22px;padding:24px;box-shadow:0 18px 44px rgba(226,232,240,.8);box-sizing:border-box;"><h3 style="font-size:18px;font-weight:950;color:#0f172a;margin:0 0 10px 0;">Inventory reports</h3><p style="font-size:14px;color:#64748b;line-height:1.7;margin:0;">Stock, warehouses, moves, demand patterns and replenishment data for planners.</p></div></td>
-          <td width="25%" style="padding:7px;box-sizing:border-box;vertical-align:top;"><div style="height:100%;background-color:#ffffff;border:1px solid #e2e8f0;border-radius:22px;padding:24px;box-shadow:0 18px 44px rgba(226,232,240,.8);box-sizing:border-box;"><h3 style="font-size:18px;font-weight:950;color:#0f172a;margin:0 0 10px 0;">Finance analysis</h3><p style="font-size:14px;color:#64748b;line-height:1.7;margin:0;">Invoices, payments, journals and accounting records for external reporting.</p></div></td>
-          <td width="25%" style="padding:7px;box-sizing:border-box;vertical-align:top;"><div style="height:100%;background-color:#ffffff;border:1px solid #e2e8f0;border-radius:22px;padding:24px;box-shadow:0 18px 44px rgba(226,232,240,.8);box-sizing:border-box;"><h3 style="font-size:18px;font-weight:950;color:#0f172a;margin:0 0 10px 0;">Custom module reporting</h3><p style="font-size:14px;color:#64748b;line-height:1.7;margin:0;">Export custom Odoo tables so internal modules can become part of the company data warehouse.</p></div></td>
-        </tr>
-      </table>
+    <!-- UNDER THE HOOD -->
+    <div style="width:100%;box-sizing:border-box;padding:82px 18px;background-color:#ffffff;overflow:hidden;">
+        <div style="max-width:1080px;width:100%;margin:0 auto;box-sizing:border-box;">
+            <div style="text-align:center;margin:0 auto 44px auto;max-width:900px;">
+        <div style="display:inline-block;border:1px solid #dbe5f0;border-radius:999px;padding:8px 18px;background-color:#ffffff;color:#0f766e;font-size:12px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px;">Under the hood</div>
+        <h2 style="font-size:40px;line-height:1.08;font-weight:950;color:#0f172a;margin:0;letter-spacing:-0.045em;">Built for large Odoo tables, not demo records.</h2>
+        <p style="margin:18px auto 0 auto;color:#64748b;font-size:17px;line-height:1.75;max-width:760px;">The connector uses batching, schema handling, staging tables, MERGE logic, locks, cursors and recovery state.</p>
     </div>
-  </div>
-
-  <!-- FAQ -->
-  <div style="padding:78px 18px;background-color:#ffffff;box-sizing:border-box;">
-    <div style="max-width:1060px;margin:0 auto;text-align:center;box-sizing:border-box;">
-      <span style="display:inline-block;padding:8px 18px;background-color:#ffffff;border:1px solid #e2e8f0;border-radius:999px;color:#334155;font-size:12px;font-weight:950;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px;">FAQ</span>
-      <h2 style="font-size:40px;font-weight:950;color:#0f172a;margin:0 0 36px 0;letter-spacing:-1.6px;line-height:1.1;">Questions buyers ask before purchase.</h2>
-
-      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;table-layout:fixed;box-sizing:border-box;text-align:left;">
-        <tr>
-          <td width="33.33%" style="padding:7px;vertical-align:top;box-sizing:border-box;"><div style="height:100%;background-color:#f8fafc;border:1px solid #e2e8f0;border-radius:22px;padding:24px;box-sizing:border-box;"><h3 style="font-size:17px;font-weight:950;color:#0f172a;margin:0 0 10px 0;">Does this replace Power BI, Looker or Tableau?</h3><p style="font-size:14px;color:#64748b;line-height:1.7;margin:0;">No. It feeds BigQuery with Odoo data so those tools can report from a proper analytics warehouse.</p></div></td>
-          <td width="33.33%" style="padding:7px;vertical-align:top;box-sizing:border-box;"><div style="height:100%;background-color:#f8fafc;border:1px solid #e2e8f0;border-radius:22px;padding:24px;box-sizing:border-box;"><h3 style="font-size:17px;font-weight:950;color:#0f172a;margin:0 0 10px 0;">Can I export only specific records?</h3><p style="font-size:14px;color:#64748b;line-height:1.7;margin:0;">Yes. Use Odoo domain filters to restrict records such as posted invoices, confirmed sales orders or company-specific data.</p></div></td>
-          <td width="33.33%" style="padding:7px;vertical-align:top;box-sizing:border-box;"><div style="height:100%;background-color:#f8fafc;border:1px solid #e2e8f0;border-radius:22px;padding:24px;box-sizing:border-box;"><h3 style="font-size:17px;font-weight:950;color:#0f172a;margin:0 0 10px 0;">Can I choose only required fields?</h3><p style="font-size:14px;color:#64748b;line-height:1.7;margin:0;">Yes. The query form lets you select columns instead of exporting every field by default.</p></div></td>
-        </tr>
-        <tr>
-          <td width="33.33%" style="padding:7px;vertical-align:top;box-sizing:border-box;"><div style="height:100%;background-color:#f8fafc;border:1px solid #e2e8f0;border-radius:22px;padding:24px;box-sizing:border-box;"><h3 style="font-size:17px;font-weight:950;color:#0f172a;margin:0 0 10px 0;">Does it support incremental sync?</h3><p style="font-size:14px;color:#64748b;line-height:1.7;margin:0;">Yes. Enable incremental auto export per query and set the sync interval. The connector manages the related Odoo cron records.</p></div></td>
-          <td width="33.33%" style="padding:7px;vertical-align:top;box-sizing:border-box;"><div style="height:100%;background-color:#f8fafc;border:1px solid #e2e8f0;border-radius:22px;padding:24px;box-sizing:border-box;"><h3 style="font-size:17px;font-weight:950;color:#0f172a;margin:0 0 10px 0;">What happens if an export fails?</h3><p style="font-size:14px;color:#64748b;line-height:1.7;margin:0;">Admins can inspect the error, clear it, review logs and reset stuck export state when a previous run was interrupted.</p></div></td>
-          <td width="33.33%" style="padding:7px;vertical-align:top;box-sizing:border-box;"><div style="height:100%;background-color:#f8fafc;border:1px solid #e2e8f0;border-radius:22px;padding:24px;box-sizing:border-box;"><h3 style="font-size:17px;font-weight:950;color:#0f172a;margin:0 0 10px 0;">What do I need before setup?</h3><p style="font-size:14px;color:#64748b;line-height:1.7;margin:0;">You need a Google Cloud project, a BigQuery dataset and a service account JSON with the required BigQuery permissions.</p></div></td>
-        </tr>
-      </table>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;table-layout:fixed;border-collapse:separate;border-spacing:12px;box-sizing:border-box;">
+                <tr><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#128230;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">50,000 row batches</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">The export engine processes data in chunks to reduce long request risk and continue work through cron.</p>
+        </div>
+    </td><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#128260;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Cursor based export</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">The module tracks last sync timestamp and last synced ID for incremental continuation.</p>
+        </div>
+    </td><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#128274;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Lock protection</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Export locks and stuck-state detection reduce duplicate or crashed run confusion.</p>
+        </div>
+    </td></tr>
+                <tr><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#128279;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Temporary staging</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Each batch loads to a temporary BigQuery staging table before the final table update.</p>
+        </div>
+    </td><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#8644;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">MERGE into target</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">BigQuery MERGE updates matched records and inserts missing records using the record key.</p>
+        </div>
+    </td><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#128736;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Type conversion</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Values are transformed for BigQuery types such as string, integer, float, boolean, timestamp and date.</p>
+        </div>
+    </td></tr>
+            </table>
+            <div style="height:18px;line-height:18px;">&nbsp;</div>
+            <div style="background-color:#ffffff;border:1px solid #dbe5f0;border-radius:28px;padding:12px;box-sizing:border-box;box-shadow:0 28px 70px rgba(15,23,42,0.12);overflow:hidden;">
+        <img src="./schema.png" alt="BigQuery schema screenshot" style="display:block;width:100%;max-width:100%;height:auto;border-radius:20px;border:0;">
+        <div style="padding:14px 10px 4px 10px;color:#475569;font-size:14px;line-height:1.65;font-weight:700;">Generated BigQuery schema from selected Odoo columns.</div>
     </div>
-  </div>
-
-  <!-- FINAL CTA -->
-  <div style="padding:78px 18px 90px 18px;background-color:#ffffff;box-sizing:border-box;">
-    <div style="max-width:1060px;margin:0 auto;background-color:#0a0f1c;border:1px solid #1e293b;border-radius:44px;padding:68px 38px;text-align:center;box-shadow:0 60px 120px -30px rgba(15,23,42,.45);box-sizing:border-box;">
-      <h2 style="font-size:44px;font-weight:950;color:#ffffff;letter-spacing:-2px;margin:0 0 20px 0;line-height:1.05;">Turn Odoo into a reporting warehouse source.</h2>
-      <p style="max-width:820px;margin:0 auto 34px auto;color:#cbd5e1;font-size:17px;line-height:1.75;">Clean exports. Column selection. Domain filters. Incremental sync. Batch processing. BigQuery MERGE. Logs. Recovery. BI connections. A practical data layer for companies that have outgrown basic Odoo reporting.</p>
-      <a href="https://apps.odoo.com/apps/modules/19.0/odoo-bigquery" target="_blank" style="display:inline-block;background-color:#ffffff;color:#0a0f1c;padding:18px 42px;border-radius:999px;font-weight:950;font-size:16px;text-decoration:none;border:1px solid #ffffff;">View Product Page →</a>
-
-      <div style="border-top:1px solid #334155;margin-top:50px;padding-top:28px;text-align:left;">
-        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;border-collapse:collapse;table-layout:fixed;box-sizing:border-box;">
-          <tr>
-            <td width="50%" style="vertical-align:top;color:#ffffff;font-weight:950;font-size:18px;box-sizing:border-box;">NIYU <span style="color:#93c5fd;">LABS</span><br><span style="color:#94a3b8;font-size:12px;font-weight:800;">Odoo connectors for analytics, AI and automation</span></td>
-            <td width="50%" align="right" style="vertical-align:top;box-sizing:border-box;"><div style="color:#94a3b8;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px;">Support</div><a href="mailto:info@niyulabs.com" style="color:#ffffff;text-decoration:none;font-size:16px;font-weight:900;">info@niyulabs.com</a></td>
-          </tr>
-        </table>
-      </div>
+        </div>
     </div>
-  </div>
 
+    <!-- BI TOOLS -->
+    <div style="width:100%;box-sizing:border-box;padding:82px 18px;background-color:#f8fafc;overflow:hidden;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0;">
+        <div style="max-width:1080px;width:100%;margin:0 auto;box-sizing:border-box;">
+            <div style="text-align:center;margin:0 auto 44px auto;max-width:900px;">
+        <div style="display:inline-block;border:1px solid #dbe5f0;border-radius:999px;padding:8px 18px;background-color:#ffffff;color:#2563eb;font-size:12px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px;">BI connections</div>
+        <h2 style="font-size:40px;line-height:1.08;font-weight:950;color:#0f172a;margin:0;letter-spacing:-0.045em;">Use the dashboards your team already knows.</h2>
+        <p style="margin:18px auto 0 auto;color:#64748b;font-size:17px;line-height:1.75;max-width:760px;">The connector does not replace reporting tools. It gives those tools a better data source.</p>
+    </div>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;table-layout:fixed;border-collapse:separate;border-spacing:16px;box-sizing:border-box;">
+                <tr>
+                    <td style="width:33.333%;vertical-align:top;box-sizing:border-box;"><div style="background-color:#ffffff;border:1px solid #dbe5f0;border-radius:28px;padding:12px;box-sizing:border-box;box-shadow:0 28px 70px rgba(15,23,42,0.12);overflow:hidden;">
+        <video autoplay loop muted playsinline preload="auto" style="display:block;width:100%;max-width:100%;height:auto;border-radius:20px;background-color:#020617;">
+            <source src="./powerbiconnection.webm" type="video/webm">
+        </video>
+        <div style="padding:14px 10px 4px 10px;color:#475569;font-size:14px;line-height:1.65;font-weight:700;">Power BI can read exported Odoo data from BigQuery.</div>
+    </div></td>
+                    <td style="width:33.333%;vertical-align:top;box-sizing:border-box;"><div style="background-color:#ffffff;border:1px solid #dbe5f0;border-radius:28px;padding:12px;box-sizing:border-box;box-shadow:0 28px 70px rgba(15,23,42,0.12);overflow:hidden;">
+        <img src="./lookerconnection.png" alt="Looker Studio BigQuery connection" style="display:block;width:100%;max-width:100%;height:auto;border-radius:20px;border:0;">
+        <div style="padding:14px 10px 4px 10px;color:#475569;font-size:14px;line-height:1.65;font-weight:700;">Looker Studio can connect to the BigQuery dataset.</div>
+    </div></td>
+                    <td style="width:33.333%;vertical-align:top;box-sizing:border-box;"><div style="background-color:#ffffff;border:1px solid #dbe5f0;border-radius:28px;padding:12px;box-sizing:border-box;box-shadow:0 28px 70px rgba(15,23,42,0.12);overflow:hidden;">
+        <img src="./tableauconnection.png" alt="Tableau BigQuery connection" style="display:block;width:100%;max-width:100%;height:auto;border-radius:20px;border:0;">
+        <div style="padding:14px 10px 4px 10px;color:#475569;font-size:14px;line-height:1.65;font-weight:700;">Tableau can use BigQuery as the reporting source.</div>
+    </div></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- SECURITY -->
+    <div style="width:100%;box-sizing:border-box;padding:82px 18px;background-color:#ffffff;overflow:hidden;">
+        <div style="max-width:1080px;width:100%;margin:0 auto;box-sizing:border-box;">
+            <div style="text-align:center;margin:0 auto 44px auto;max-width:900px;">
+        <div style="display:inline-block;border:1px solid #dbe5f0;border-radius:999px;padding:8px 18px;background-color:#ffffff;color:#dc2626;font-size:12px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px;">Access control</div>
+        <h2 style="font-size:40px;line-height:1.08;font-weight:950;color:#0f172a;margin:0;letter-spacing:-0.045em;">Keep export management in the right hands.</h2>
+        <p style="margin:18px auto 0 auto;color:#64748b;font-size:17px;line-height:1.75;max-width:760px;">Give administrators and managers control over configuration while keeping regular users away from dangerous setup actions.</p>
+    </div>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;table-layout:fixed;border-collapse:separate;border-spacing:16px;box-sizing:border-box;">
+                <tr>
+                    <td style="width:50%;vertical-align:middle;box-sizing:border-box;"><div style="background-color:#ffffff;border:1px solid #dbe5f0;border-radius:28px;padding:12px;box-sizing:border-box;box-shadow:0 28px 70px rgba(15,23,42,0.12);overflow:hidden;">
+        <img src="./security.png" alt="BigQuery connector access and security screenshot" style="display:block;width:100%;max-width:100%;height:auto;border-radius:20px;border:0;">
+        <div style="padding:14px 10px 4px 10px;color:#475569;font-size:14px;line-height:1.65;font-weight:700;">Security groups protect connector settings and export actions.</div>
+    </div></td>
+                    <td style="width:50%;vertical-align:middle;box-sizing:border-box;">
+                        <div style="background-color:#f8fafc;border:1px solid #dbe5f0;border-radius:28px;padding:30px;box-sizing:border-box;">
+                            <h3 style="font-size:27px;line-height:1.15;font-weight:950;color:#0f172a;margin:0 0 18px 0;letter-spacing:-0.03em;">Not every Odoo user should control exports.</h3>
+                            <p style="margin:0 0 16px 0;color:#64748b;font-size:15px;line-height:1.75;">The module includes security definitions so connector administration can be separated from normal user access.</p>
+                            <div style="font-size:14px;line-height:1.9;color:#334155;font-weight:800;">
+                                &#10003; Connector user group<br>
+                                &#10003; Connector manager group<br>
+                                &#10003; Controlled menu access<br>
+                                &#10003; Managed export query permissions<br>
+                                &#10003; Safer operational workflow
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- COMPLETE CAPABILITY LIST -->
+    <div style="width:100%;box-sizing:border-box;padding:82px 18px;background-color:#f8fafc;overflow:hidden;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0;">
+        <div style="max-width:1080px;width:100%;margin:0 auto;box-sizing:border-box;">
+            <div style="text-align:center;margin:0 auto 44px auto;max-width:900px;">
+        <div style="display:inline-block;border:1px solid #dbe5f0;border-radius:999px;padding:8px 18px;background-color:#ffffff;color:#0f172a;font-size:12px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px;">Complete capability list</div>
+        <h2 style="font-size:40px;line-height:1.08;font-weight:950;color:#0f172a;margin:0;letter-spacing:-0.045em;">Everything customers should see before buying.</h2>
+        <p style="margin:18px auto 0 auto;color:#64748b;font-size:17px;line-height:1.75;max-width:760px;">This section is intentionally detailed so buyers understand the real depth of the module.</p>
+    </div>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;table-layout:fixed;border-collapse:separate;border-spacing:12px;box-sizing:border-box;">
+                <tr><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#128450;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Any Odoo table</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Create separate export definitions from Odoo source tables and send them to BigQuery as analytics-ready tables.</p>
+        </div>
+    </td><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#9986;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Column selection</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Choose only the fields the report needs. Keep BigQuery cleaner and avoid sending unnecessary columns.</p>
+        </div>
+    </td><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#128269;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Odoo domain filtering</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Export only matching records using Odoo domain filters such as posted invoices, confirmed sales, active products or company-specific data.</p>
+        </div>
+    </td></tr>
+<tr><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#128260;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Incremental sync</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Use last sync timestamp and last synced ID so repeated exports focus on new and changed rows instead of rebuilding everything manually.</p>
+        </div>
+    </td><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#9201;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Scheduled export</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Enable auto export per query and set the interval in minutes. The module manages the related cron execution.</p>
+        </div>
+    </td><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#128230;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Batch processing</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Large tables are processed in batches instead of one fragile all-at-once transfer.</p>
+        </div>
+    </td></tr>
+<tr><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#128279;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Staging tables</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Data lands in a temporary BigQuery staging table before updating the final destination table.</p>
+        </div>
+    </td><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#8644;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">BigQuery MERGE</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Existing rows are updated and new rows are inserted using BigQuery MERGE logic.</p>
+        </div>
+    </td><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#128736;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Stable schema mapping</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Odoo and PostgreSQL types are mapped to BigQuery types, including safer handling for JSON, arrays and unusual values.</p>
+        </div>
+    </td></tr>
+<tr><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#10133;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Schema extension</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">When selected columns change, missing BigQuery fields can be added to the target table schema.</p>
+        </div>
+    </td><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#9658;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Run Query button</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Run an export manually when an admin wants immediate data movement.</p>
+        </div>
+    </td><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#8635;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Hard Refresh</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Reset sync state and rerun the export path when the admin wants to rebuild from an earlier cursor state.</p>
+        </div>
+    </td></tr>
+<tr><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#10006;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Clear Error</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Clear visible error state after the cause has been fixed so the query can be reviewed cleanly.</p>
+        </div>
+    </td><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#128275;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Reset Stuck State</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Recover a query when a previous export was interrupted and left the lock state active.</p>
+        </div>
+    </td><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#128681;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Status badges</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">See whether a query is idle, running, queued, done, warning or failed from the Odoo list and form views.</p>
+        </div>
+    </td></tr>
+<tr><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#128221;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Query logs</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Track start, batch, cron, success, warning, error, stuck and manual events with messages and row counts.</p>
+        </div>
+    </td><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#128220;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Change logs</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Record important query configuration changes such as table, columns, domain filter and incremental settings.</p>
+        </div>
+    </td><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#128200;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Rows exported</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">See row counts, last run time, last batch time, run token and current staging state.</p>
+        </div>
+    </td></tr>
+<tr><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#128737;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Manager controls</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Managers can configure and run exports while normal users can be limited to safer access.</p>
+        </div>
+    </td><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#128202;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">BI ready</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Feed BigQuery into Power BI, Looker Studio, Tableau, SQL workflows, AI analysis and data science pipelines.</p>
+        </div>
+    </td><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#128295;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Custom module data</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Export data from custom Odoo models as long as the selected table and columns are available to the connector.</p>
+        </div>
+    </td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- USE CASES -->
+    <div style="width:100%;box-sizing:border-box;padding:82px 18px;background-color:#ffffff;overflow:hidden;">
+        <div style="max-width:1080px;width:100%;margin:0 auto;box-sizing:border-box;">
+            <div style="text-align:center;margin:0 auto 44px auto;max-width:900px;">
+        <div style="display:inline-block;border:1px solid #dbe5f0;border-radius:999px;padding:8px 18px;background-color:#ffffff;color:#16a34a;font-size:12px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px;">Practical use cases</div>
+        <h2 style="font-size:40px;line-height:1.08;font-weight:950;color:#0f172a;margin:0;letter-spacing:-0.045em;">What customers can build after installing it.</h2>
+        <p style="margin:18px auto 0 auto;color:#64748b;font-size:17px;line-height:1.75;max-width:760px;">The value is not only export. The value is making Odoo data usable outside Odoo.</p>
+    </div>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;table-layout:fixed;border-collapse:separate;border-spacing:12px;box-sizing:border-box;">
+                <tr><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#128176;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Sales dashboards</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Move orders, order lines, invoices, customers and sales team data to BigQuery for proper revenue reporting.</p>
+        </div>
+    </td><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#128230;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Inventory reporting</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Analyze product movement, quantities, warehouses, categories and operational history outside the transactional database.</p>
+        </div>
+    </td><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#128179;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Finance analysis</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Create cleaner reporting datasets for invoices, payments, journals and receivables without slowing down Odoo screens.</p>
+        </div>
+    </td></tr>
+<tr><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#128722;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Purchase visibility</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Report on RFQs, purchase orders, vendors and incoming supply patterns from BigQuery.</p>
+        </div>
+    </td><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#128295;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Custom app reporting</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Build datasets from custom Odoo modules and custom fields instead of waiting for a prebuilt dashboard module.</p>
+        </div>
+    </td><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#129302;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">AI and ML data layer</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Use BigQuery as the clean warehouse layer for forecasting, anomaly detection, AI assistants and advanced analysis.</p>
+        </div>
+    </td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- SCREENSHOT GALLERY -->
+    <div style="width:100%;box-sizing:border-box;padding:82px 18px;background-color:#f8fafc;overflow:hidden;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0;">
+        <div style="max-width:1080px;width:100%;margin:0 auto;box-sizing:border-box;">
+            <div style="text-align:center;margin:0 auto 44px auto;max-width:900px;">
+        <div style="display:inline-block;border:1px solid #dbe5f0;border-radius:999px;padding:8px 18px;background-color:#ffffff;color:#7c3aed;font-size:12px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px;">Product screenshots</div>
+        <h2 style="font-size:40px;line-height:1.08;font-weight:950;color:#0f172a;margin:0;letter-spacing:-0.045em;">Show buyers the real screens.</h2>
+        <p style="margin:18px auto 0 auto;color:#64748b;font-size:17px;line-height:1.75;max-width:760px;">Screenshots make the module feel real, complete and safe to buy.</p>
+    </div>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;table-layout:fixed;border-collapse:separate;border-spacing:16px;box-sizing:border-box;">
+                <tr>
+                    <td style="width:50%;vertical-align:top;box-sizing:border-box;"><div style="background-color:#ffffff;border:1px solid #dbe5f0;border-radius:28px;padding:12px;box-sizing:border-box;box-shadow:0 28px 70px rgba(15,23,42,0.12);overflow:hidden;">
+        <img src="./image.png" alt="BigQuery connector overview visual" style="display:block;width:100%;max-width:100%;height:auto;border-radius:20px;border:0;">
+        <div style="padding:14px 10px 4px 10px;color:#475569;font-size:14px;line-height:1.65;font-weight:700;">Odoo data moves into BigQuery for external analytics.</div>
+    </div></td>
+                    <td style="width:50%;vertical-align:top;box-sizing:border-box;"><div style="background-color:#ffffff;border:1px solid #dbe5f0;border-radius:28px;padding:12px;box-sizing:border-box;box-shadow:0 28px 70px rgba(15,23,42,0.12);overflow:hidden;">
+        <img src="./2025-04-30_11-32.png" alt="Settings screenshot" style="display:block;width:100%;max-width:100%;height:auto;border-radius:20px;border:0;">
+        <div style="padding:14px 10px 4px 10px;color:#475569;font-size:14px;line-height:1.65;font-weight:700;">Configuration for BigQuery project, dataset and credentials.</div>
+    </div></td>
+                </tr>
+                <tr>
+                    <td style="width:50%;vertical-align:top;box-sizing:border-box;"><div style="background-color:#ffffff;border:1px solid #dbe5f0;border-radius:28px;padding:12px;box-sizing:border-box;box-shadow:0 28px 70px rgba(15,23,42,0.12);overflow:hidden;">
+        <img src="./sel.png" alt="Selection screenshot" style="display:block;width:100%;max-width:100%;height:auto;border-radius:20px;border:0;">
+        <div style="padding:14px 10px 4px 10px;color:#475569;font-size:14px;line-height:1.65;font-weight:700;">Select the model and fields that should be exported.</div>
+    </div></td>
+                    <td style="width:50%;vertical-align:top;box-sizing:border-box;"><div style="background-color:#ffffff;border:1px solid #dbe5f0;border-radius:28px;padding:12px;box-sizing:border-box;box-shadow:0 28px 70px rgba(15,23,42,0.12);overflow:hidden;">
+        <img src="./hd.png" alt="High level BigQuery connector screenshot" style="display:block;width:100%;max-width:100%;height:auto;border-radius:20px;border:0;">
+        <div style="padding:14px 10px 4px 10px;color:#475569;font-size:14px;line-height:1.65;font-weight:700;">A simple interface backed by a serious export engine.</div>
+    </div></td>
+                </tr>
+                <tr>
+                    <td style="width:50%;vertical-align:top;box-sizing:border-box;"><div style="background-color:#ffffff;border:1px solid #dbe5f0;border-radius:28px;padding:12px;box-sizing:border-box;box-shadow:0 28px 70px rgba(15,23,42,0.12);overflow:hidden;">
+        <video autoplay loop muted playsinline preload="auto" style="display:block;width:100%;max-width:100%;height:auto;border-radius:20px;background-color:#020617;">
+            <source src="./preview.webm" type="video/webm">
+        </video>
+        <div style="padding:14px 10px 4px 10px;color:#475569;font-size:14px;line-height:1.65;font-weight:700;">Short product preview for App Store visitors.</div>
+    </div></td>
+                    <td style="width:50%;vertical-align:top;box-sizing:border-box;"><div style="background-color:#ffffff;border:1px solid #dbe5f0;border-radius:28px;padding:12px;box-sizing:border-box;box-shadow:0 28px 70px rgba(15,23,42,0.12);overflow:hidden;">
+        <video autoplay loop muted playsinline preload="auto" style="display:block;width:100%;max-width:100%;height:auto;border-radius:20px;background-color:#020617;">
+            <source src="./sqlvideo.webm" type="video/webm">
+        </video>
+        <div style="padding:14px 10px 4px 10px;color:#475569;font-size:14px;line-height:1.65;font-weight:700;">Query exported Odoo data with SQL in BigQuery.</div>
+    </div></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- MICRO DEMOS -->
+    <div style="width:100%;box-sizing:border-box;padding:82px 18px;background-color:#ffffff;overflow:hidden;">
+        <div style="max-width:1080px;width:100%;margin:0 auto;box-sizing:border-box;">
+            <div style="text-align:center;margin:0 auto 44px auto;max-width:900px;">
+        <div style="display:inline-block;border:1px solid #dbe5f0;border-radius:999px;padding:8px 18px;background-color:#ffffff;color:#2563eb;font-size:12px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px;">Small product demos</div>
+        <h2 style="font-size:40px;line-height:1.08;font-weight:950;color:#0f172a;margin:0;letter-spacing:-0.045em;">Quick proof points for buyers who scroll fast.</h2>
+        <p style="margin:18px auto 0 auto;color:#64748b;font-size:17px;line-height:1.75;max-width:760px;">Short visual blocks help customers understand setup, export and reporting without reading every detail.</p>
+    </div>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;table-layout:fixed;border-collapse:separate;border-spacing:16px;box-sizing:border-box;">
+                <tr>
+                    <td style="width:33.333%;vertical-align:top;box-sizing:border-box;"><div style="background-color:#ffffff;border:1px solid #dbe5f0;border-radius:28px;padding:12px;box-sizing:border-box;box-shadow:0 28px 70px rgba(15,23,42,0.12);overflow:hidden;">
+        <video autoplay loop muted playsinline preload="auto" style="display:block;width:100%;max-width:100%;height:auto;border-radius:20px;background-color:#020617;">
+            <source src="./q1.webm" type="video/webm">
+        </video>
+        <div style="padding:14px 10px 4px 10px;color:#475569;font-size:14px;line-height:1.65;font-weight:700;">Create or review export setup.</div>
+    </div></td>
+                    <td style="width:33.333%;vertical-align:top;box-sizing:border-box;"><div style="background-color:#ffffff;border:1px solid #dbe5f0;border-radius:28px;padding:12px;box-sizing:border-box;box-shadow:0 28px 70px rgba(15,23,42,0.12);overflow:hidden;">
+        <video autoplay loop muted playsinline preload="auto" style="display:block;width:100%;max-width:100%;height:auto;border-radius:20px;background-color:#020617;">
+            <source src="./q2.webm" type="video/webm">
+        </video>
+        <div style="padding:14px 10px 4px 10px;color:#475569;font-size:14px;line-height:1.65;font-weight:700;">Select the right data.</div>
+    </div></td>
+                    <td style="width:33.333%;vertical-align:top;box-sizing:border-box;"><div style="background-color:#ffffff;border:1px solid #dbe5f0;border-radius:28px;padding:12px;box-sizing:border-box;box-shadow:0 28px 70px rgba(15,23,42,0.12);overflow:hidden;">
+        <video autoplay loop muted playsinline preload="auto" style="display:block;width:100%;max-width:100%;height:auto;border-radius:20px;background-color:#020617;">
+            <source src="./q3.webm" type="video/webm">
+        </video>
+        <div style="padding:14px 10px 4px 10px;color:#475569;font-size:14px;line-height:1.65;font-weight:700;">Run export workflow.</div>
+    </div></td>
+                </tr>
+                <tr>
+                    <td style="width:33.333%;vertical-align:top;box-sizing:border-box;"><div style="background-color:#ffffff;border:1px solid #dbe5f0;border-radius:28px;padding:12px;box-sizing:border-box;box-shadow:0 28px 70px rgba(15,23,42,0.12);overflow:hidden;">
+        <video autoplay loop muted playsinline preload="auto" style="display:block;width:100%;max-width:100%;height:auto;border-radius:20px;background-color:#020617;">
+            <source src="./q4.webm" type="video/webm">
+        </video>
+        <div style="padding:14px 10px 4px 10px;color:#475569;font-size:14px;line-height:1.65;font-weight:700;">Review exported output.</div>
+    </div></td>
+                    <td style="width:33.333%;vertical-align:top;box-sizing:border-box;"><div style="background-color:#ffffff;border:1px solid #dbe5f0;border-radius:28px;padding:12px;box-sizing:border-box;box-shadow:0 28px 70px rgba(15,23,42,0.12);overflow:hidden;">
+        <video autoplay loop muted playsinline preload="auto" style="display:block;width:100%;max-width:100%;height:auto;border-radius:20px;background-color:#020617;">
+            <source src="./q5.webm" type="video/webm">
+        </video>
+        <div style="padding:14px 10px 4px 10px;color:#475569;font-size:14px;line-height:1.65;font-weight:700;">Use reporting output.</div>
+    </div></td>
+                    <td style="width:33.333%;vertical-align:top;box-sizing:border-box;"><div style="background-color:#ffffff;border:1px solid #dbe5f0;border-radius:28px;padding:12px;box-sizing:border-box;box-shadow:0 28px 70px rgba(15,23,42,0.12);overflow:hidden;">
+        <img src="./Big-Query01.gif" alt="BigQuery animation" style="display:block;width:100%;max-width:100%;height:auto;border-radius:20px;border:0;">
+        <div style="padding:14px 10px 4px 10px;color:#475569;font-size:14px;line-height:1.65;font-weight:700;">Visual overview of BigQuery analytics flow.</div>
+    </div></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- FAQ -->
+    <div style="width:100%;box-sizing:border-box;padding:82px 18px;background-color:#f8fafc;overflow:hidden;border-top:1px solid #e2e8f0;">
+        <div style="max-width:1080px;width:100%;margin:0 auto;box-sizing:border-box;">
+            <div style="text-align:center;margin:0 auto 44px auto;max-width:900px;">
+        <div style="display:inline-block;border:1px solid #dbe5f0;border-radius:999px;padding:8px 18px;background-color:#ffffff;color:#0f172a;font-size:12px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px;">FAQ</div>
+        <h2 style="font-size:40px;line-height:1.08;font-weight:950;color:#0f172a;margin:0;letter-spacing:-0.045em;">Questions buyers ask before purchase.</h2>
+        <p style="margin:18px auto 0 auto;color:#64748b;font-size:17px;line-height:1.75;max-width:760px;">Short answers for the most important buying doubts.</p>
+    </div>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;table-layout:fixed;border-collapse:separate;border-spacing:12px;box-sizing:border-box;">
+                <tr><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#10067;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Does this replace Power BI, Looker or Tableau?</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">No. It feeds BigQuery with Odoo data so those tools can read from a proper analytics warehouse.</p>
+        </div>
+    </td><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#10067;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Can I export only specific records?</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Yes. Use Odoo domain filters to restrict records before they reach BigQuery.</p>
+        </div>
+    </td><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#10067;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Can I choose only required fields?</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Yes. Select exact columns per query instead of exporting every field by default.</p>
+        </div>
+    </td></tr>
+<tr><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#10067;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">Does it support incremental sync?</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Yes. Enable incremental auto export per query and set the sync interval.</p>
+        </div>
+    </td><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#10067;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">What happens if an export fails?</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">Admins can inspect error messages, logs, rows exported, lock state and recovery buttons.</p>
+        </div>
+    </td><td style="width:33.333%;vertical-align:top;padding:8px;box-sizing:border-box;">
+        <div style="height:100%;background-color:#ffffff;border:1px solid #dbe5f0;border-radius:24px;padding:26px;box-sizing:border-box;box-shadow:0 18px 45px rgba(15,23,42,0.06);">
+            <div style="font-size:24px;line-height:1;margin-bottom:16px;color:#2563eb;">&#10067;</div>
+            <h3 style="margin:0 0 10px 0;font-size:19px;line-height:1.25;font-weight:900;color:#0f172a;letter-spacing:-0.02em;">What do I need before setup?</h3>
+            <p style="margin:0;font-size:14px;line-height:1.7;color:#64748b;">A Google Cloud project, BigQuery dataset and service account JSON with the required BigQuery permissions.</p>
+        </div>
+    </td></tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div style="width:100%;box-sizing:border-box;padding:82px 18px 92px 18px;background-color:#ffffff;overflow:hidden;">
+        <div style="max-width:1080px;width:100%;margin:0 auto;box-sizing:border-box;">
+            <div style="border:1px solid #0f172a;border-radius:34px;background-color:#0f172a;padding:54px 34px;text-align:center;box-sizing:border-box;box-shadow:0 34px 90px rgba(15,23,42,0.22);">
+                <h2 style="font-size:42px;line-height:1.08;font-weight:950;color:#ffffff;margin:0 auto 18px auto;letter-spacing:-0.045em;max-width:820px;">Turn Odoo into a serious warehouse source for reporting, BI and AI.</h2>
+                <p style="font-size:17px;line-height:1.75;color:#cbd5e1;margin:0 auto 32px auto;max-width:820px;">Clean exports. Column selection. Domain filters. Incremental sync. Batch processing. BigQuery MERGE. Logs. Recovery. BI connections. A practical data layer for companies that have outgrown basic Odoo reporting.</p>
+                <a href="https://niyulabs.com/products/bigquery" target="_blank" style="display:inline-block;text-decoration:none;background-color:#ffffff;color:#0f172a;border-radius:999px;padding:16px 34px;font-weight:950;font-size:15px;">View Product Page &#8594;</a>
+                <div style="height:34px;line-height:34px;">&nbsp;</div>
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;border-top:1px solid #334155;padding-top:24px;box-sizing:border-box;">
+                    <tr>
+                        <td style="width:50%;text-align:left;color:#ffffff;font-weight:950;font-size:18px;vertical-align:top;">NIYU <span style="color:#93c5fd;">LABS</span><div style="color:#94a3b8;font-size:12px;font-weight:700;margin-top:7px;">Odoo connectors for analytics, AI and automation</div></td>
+                        <td style="width:50%;text-align:right;color:#94a3b8;font-weight:900;font-size:12px;vertical-align:top;text-transform:uppercase;letter-spacing:1px;">Support<div style="text-transform:none;letter-spacing:0;color:#ffffff;font-size:15px;margin-top:7px;">info@niyulabs.com</div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
