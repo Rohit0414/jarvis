@@ -1,505 +1,483 @@
 <!-- ================================================================================= -->
-<!-- NIYU LABS MCP SERVER FOR ODOO - ODOO APP STORE DESCRIPTION                         -->
-<!-- Inline CSS + existing Odoo/Bootstrap utility classes only.                         -->
+<!-- NIYU LABS ADVANCED BIGQUERY CONNECTOR FOR ODOO - PREMIUM APP STORE DESCRIPTION     -->
+<!-- Inline CSS + local static assets only. Built for Odoo App Store description page.  -->
 <!-- ================================================================================= -->
 
-<div style="background-color:#ffffff;font-family:'Inter','Plus Jakarta Sans',Arial,sans-serif;color:#0f172a;overflow-x:hidden;">
+<style>
+  @keyframes nl_bq_float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+  }
 
-    <!-- HERO -->
-    <div style="position:relative;padding:108px 20px 82px 20px;text-align:center;background:#f8fbff;overflow:hidden;">
-       
-        <div style="position:relative;z-index:2;max-width:1240px;margin:0 auto;">
-            <div style="display:inline-flex;align-items:center;gap:12px;padding:11px 24px;background-color:#020617;border:1px solid #1e293b;border-radius:100px;box-shadow:0 18px 45px #cbd5e1;margin-bottom:30px;">
-                <span style="color:#60a5fa;font-size:18px;line-height:1;">&#10022;</span>
-                <span style="width:1px;height:16px;background:#334155;"></span>
-                <span style="color:#bfdbfe;font-size:12px;font-weight:900;letter-spacing:1.6px;text-transform:uppercase;">ChatGPT + Claude + Cursor + Codex + Any MCP Client</span>
+  @keyframes nl_bq_glow {
+    0% { box-shadow: 0 0 0 rgba(37,99,235,0); }
+    50% { box-shadow: 0 0 55px rgba(37,99,235,0.35); }
+    100% { box-shadow: 0 0 0 rgba(37,99,235,0); }
+  }
+
+  @keyframes nl_bq_pan {
+    0% { background-position: 0% center; }
+    100% { background-position: 200% center; }
+  }
+
+  .nl-bq-wrap * { box-sizing: border-box; }
+  .nl-bq-wrap img, .nl-bq-wrap video { max-width: 100%; }
+  .nl-bq-card { transition: transform .35s ease, box-shadow .35s ease, border-color .35s ease; }
+  .nl-bq-card:hover { transform: translateY(-8px); box-shadow: 0 34px 85px rgba(15,23,42,.14) !important; border-color: #bfdbfe !important; }
+  .nl-bq-chip { display:inline-block; margin:6px; padding:10px 15px; border-radius:999px; font-size:13px; font-weight:900; }
+  .nl-bq-gradient-text {
+    background: linear-gradient(90deg,#1d4ed8,#0ea5e9,#14b8a6,#1d4ed8);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: nl_bq_pan 6s linear infinite;
+  }
+
+  @media (max-width: 768px) {
+    .nl-bq-hero-title { font-size: 48px !important; letter-spacing: -3px !important; }
+    .nl-bq-section-title { font-size: 38px !important; letter-spacing: -2px !important; }
+    .nl-bq-big-title { font-size: 44px !important; letter-spacing: -3px !important; }
+    .nl-bq-pad { padding: 70px 18px !important; }
+    .nl-bq-split { gap: 26px !important; }
+  }
+</style>
+
+<div class="nl-bq-wrap" style="background:#ffffff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#0f172a;overflow:hidden;line-height:1.65;">
+
+  <!-- HERO -->
+  <section style="position:relative;padding:112px 20px 78px 20px;text-align:center;background:
+    radial-gradient(circle at 15% 8%, rgba(37,99,235,.18), transparent 28%),
+    radial-gradient(circle at 85% 12%, rgba(20,184,166,.18), transparent 30%),
+    linear-gradient(180deg,#f8fbff 0%,#ffffff 62%);overflow:hidden;">
+
+    <div style="position:absolute;left:-140px;top:120px;width:360px;height:360px;border-radius:999px;background:rgba(37,99,235,.10);filter:blur(30px);"></div>
+    <div style="position:absolute;right:-160px;bottom:120px;width:430px;height:430px;border-radius:999px;background:rgba(14,165,233,.12);filter:blur(35px);"></div>
+
+    <div style="position:relative;z-index:2;max-width:1240px;margin:0 auto;">
+      <div style="display:inline-flex;align-items:center;gap:12px;padding:11px 24px;background:#020617;border-radius:999px;border:1px solid #1e293b;box-shadow:0 18px 45px rgba(148,163,184,.45);margin-bottom:30px;">
+        <span style="color:#60a5fa;font-size:18px;line-height:1;">&#10022;</span>
+        <span style="width:1px;height:16px;background:#334155;"></span>
+        <span style="color:#e2e8f0;font-size:12px;font-weight:950;letter-spacing:1.5px;text-transform:uppercase;">Odoo &rarr; BigQuery &rarr; Power BI / Looker / Tableau / AI</span>
+      </div>
+
+      <h1 class="nl-bq-hero-title" style="font-size:82px;font-weight:950;line-height:.93;letter-spacing:-6px;color:#0f172a;margin:0 0 30px 0;">
+        Stop reporting on live Odoo. <br>
+        <span class="nl-bq-gradient-text">Move analytics to BigQuery.</span>
+      </h1>
+
+      <p style="font-size:23px;color:#475569;max-width:950px;margin:0 auto 44px auto;line-height:1.62;font-weight:550;">
+        Niyu BigQuery Connector turns Odoo into a clean analytics pipeline: select the data you need, filter it, export it in batches, keep it updated with incremental sync, and build serious dashboards without slowing down your ERP.
+      </p>
+
+      <div style="display:flex;justify-content:center;align-items:center;flex-wrap:wrap;margin-bottom:58px;">
+        <span class="nl-bq-chip" style="background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe;box-shadow:0 10px 28px rgba(191,219,254,.8);">&#10004; Column selection</span>
+        <span class="nl-bq-chip" style="background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;box-shadow:0 10px 28px rgba(187,247,208,.8);">&#10004; Domain filtering</span>
+        <span class="nl-bq-chip" style="background:#ecfeff;color:#0e7490;border:1px solid #a5f3fc;box-shadow:0 10px 28px rgba(165,243,252,.8);">&#10004; Incremental sync</span>
+        <span class="nl-bq-chip" style="background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;box-shadow:0 10px 28px rgba(254,215,170,.8);">&#10004; Logs + recovery</span>
+        <span class="nl-bq-chip" style="background:#faf5ff;color:#6d28d9;border:1px solid #ddd6fe;box-shadow:0 10px 28px rgba(221,214,254,.8);">&#10004; BI-ready warehouse</span>
+      </div>
+
+      <div style="max-width:1260px;margin:0 auto;">
+        <div style="border-radius:36px;padding:7px;background:linear-gradient(135deg,#2563eb,#0ea5e9,#14b8a6);box-shadow:0 65px 135px -34px rgba(37,99,235,.6);border:1px solid #ffffff;animation:nl_bq_glow 4s ease-in-out infinite;">
+          <div style="position:relative;background:#020617;border-radius:30px;overflow:hidden;">
+            <div style="position:absolute;left:24px;top:18px;z-index:3;display:flex;gap:8px;">
+              <span style="width:12px;height:12px;border-radius:50%;background:#ef4444;display:block;"></span>
+              <span style="width:12px;height:12px;border-radius:50%;background:#f59e0b;display:block;"></span>
+              <span style="width:12px;height:12px;border-radius:50%;background:#22c55e;display:block;"></span>
             </div>
-
-            <h1 style="font-size:78px;font-weight:950;line-height:0.93;letter-spacing:-0.07em;color:#0f172a;margin:0 0 28px 0;">
-                Ask Anything. <br>
-                Do Anything in Odoo. <br>
-                <span style="color:#2563eb;">Safely.</span>
-            </h1>
-
-            <p style="font-size:22px;color:#475569;max-width:960px;margin:0 auto 38px;line-height:1.65;font-weight:500;">
-                Niyu Labs MCP Server turns Odoo into a governed AI workspace. Connect modern AI clients to real Odoo data, expose only approved apps and models, choose the execution user, control CRUD access, inspect diagnostics, and audit every action from one Odoo-native control layer.
-            </p>
-
-            <div class="d-flex justify-content-center align-items-center flex-wrap" style="margin-bottom:60px;">
-                <span class="mb-2 mr-2" style="display:inline-block;background:#ffffff;border:1px solid #dbeafe;border-radius:100px;padding:12px 20px;box-shadow:0 8px 25px #dbeafe;font-weight:900;color:#1d4ed8;font-size:14px;">Native /mcp endpoint</span>
-                <span class="mb-2 mr-2" style="display:inline-block;background:#ffffff;border:1px solid #ede9fe;border-radius:100px;padding:12px 20px;box-shadow:0 8px 25px #ede9fe;font-weight:900;color:#6d28d9;font-size:14px;">Business app bundles</span>
-                <span class="mb-2 mr-2" style="display:inline-block;background:#ffffff;border:1px solid #dcfce7;border-radius:100px;padding:12px 20px;box-shadow:0 8px 25px #dcfce7;font-weight:900;color:#15803d;font-size:14px;">Execution-user control</span>
-                <span class="mb-2 mr-2" style="display:inline-block;background:#ffffff;border:1px solid #fee2e2;border-radius:100px;padding:12px 20px;box-shadow:0 8px 25px #fee2e2;font-weight:900;color:#b91c1c;font-size:14px;">Audit + diagnostics</span>
-            </div>
-
-            <div style="max-width:1240px;margin:0 auto;">
-                <div style="border-radius:36px;padding:7px;background:linear-gradient(135deg,#2563eb,#7c3aed,#06b6d4);box-shadow:0 55px 130px -28px #93c5fd;position:relative;border:1px solid #ffffff;">
-                    <div style="position:absolute;left:28px;top:22px;z-index:3;display:flex;gap:8px;">
-                        <span style="display:block;width:12px;height:12px;border-radius:999px;background:#ef4444;"></span>
-                        <span style="display:block;width:12px;height:12px;border-radius:999px;background:#f59e0b;"></span>
-                        <span style="display:block;width:12px;height:12px;border-radius:999px;background:#22c55e;"></span>
-                    </div>
-                    <video autoplay loop muted playsinline preload="auto" style="width:100%;display:block;border-radius:29px;background-color:#020617;">
-                        <source src="./response.webm" type="video/webm">
-                    </video>
-                </div>
-            </div>
+            <video autoplay loop muted playsinline preload="auto" style="width:100%;display:block;border-radius:30px;background:#020617;">
+              <source src="./bigqueryvideo.webm" type="video/webm">
+            </video>
+          </div>
         </div>
+      </div>
     </div>
+  </section>
 
-    <!-- POSITIONING -->
-    <div style="padding:94px 20px;background:#ffffff;">
-        <div style="max-width:1180px;margin:0 auto;">
-            <div style="margin-bottom:58px;text-align:center;">
-                <span style="display:inline-block;color:#1d4ed8;background:#eff6ff;border:1px solid #dbeafe;border-radius:100px;padding:8px 18px;font-weight:900;font-size:12px;letter-spacing:2px;text-transform:uppercase;">Why this product exists</span>
-                <h2 style="font-size:56px;font-weight:950;color:#0f172a;margin:22px 0 0 0;letter-spacing:-0.055em;line-height:1.03;">
-                    AI without governance is risky. <br><span style="color:#94a3b8;">Odoo without context is confusing.</span>
-                </h2>
-            </div>
+  <!-- VALUE STATEMENT -->
+  <section class="nl-bq-pad" style="padding:92px 20px;background:#ffffff;">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:58px;">
+        <span style="display:inline-block;color:#1e3a8a;background:#eff6ff;border:1px solid #bfdbfe;border-radius:999px;padding:8px 18px;font-weight:950;font-size:12px;letter-spacing:2px;text-transform:uppercase;">The real problem</span>
+        <h2 class="nl-bq-section-title" style="font-size:56px;font-weight:950;color:#0f172a;margin:22px 0 0 0;letter-spacing:-3px;line-height:1.05;">
+          Odoo is for operations. <br><span style="color:#94a3b8;">BigQuery is for analytics.</span>
+        </h2>
+      </div>
 
-            <div class="d-flex justify-content-center flex-wrap" style="display:flex;flex-wrap:wrap;gap:20px;">
-                <div style="flex:1;min-width:290px;padding:38px;background:#ffffff;border:1px solid #e2e8f0;border-radius:32px;margin:12px;box-shadow:0 22px 60px #e2e8f0;">
-                    <div style="width:58px;height:58px;border-radius:18px;background:#eff6ff;color:#2563eb;display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:24px;">&#129302;</div>
-                    <h4 style="font-weight:900;color:#0f172a;font-size:21px;margin-bottom:14px;">Business language to real Odoo models</h4>
-                    <p style="color:#64748b;font-size:15px;line-height:1.75;margin:0;">Customers, vendors, RFQs, invoices, receipts, deliveries, opportunities, products, warehouses, and custom workflows live across many technical models. The module gives AI a discoverable Odoo guide, glossary, model guidance, prompts, and resources.</p>
-                </div>
-
-                <div style="flex:1;min-width:290px;padding:38px;background:#ffffff;border:1px solid #e2e8f0;border-radius:32px;margin:12px;box-shadow:0 22px 60px #e2e8f0;">
-                    <div style="width:58px;height:58px;border-radius:18px;background:#f0fdf4;color:#16a34a;display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:24px;">&#128737;</div>
-                    <h4 style="font-weight:900;color:#0f172a;font-size:21px;margin-bottom:14px;">Access is capped from three sides</h4>
-                    <p style="color:#64748b;font-size:15px;line-height:1.75;margin:0;">Final MCP permission is not random. It is limited by normal Odoo ACLs, the selected execution user, and the assigned access bundle. Admins control exactly what AI clients can read, create, update, or delete.</p>
-                </div>
-
-                <div style="flex:1;min-width:290px;padding:38px;background:#ffffff;border:1px solid #e2e8f0;border-radius:32px;margin:12px;box-shadow:0 22px 60px #e2e8f0;">
-                    <div style="width:58px;height:58px;border-radius:18px;background:#faf5ff;color:#7c3aed;display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:24px;">&#9881;</div>
-                    <h4 style="font-weight:900;color:#0f172a;font-size:21px;margin-bottom:14px;">Made for real administrators</h4>
-                    <p style="color:#64748b;font-size:15px;line-height:1.75;margin:0;">Admins do not need to manually guess every Odoo model. Choose business apps such as Inventory, Sales, Purchase, CRM, Accounting, Project, Manufacturing, Website, Helpdesk, HR, and Contacts. Fine-tune only when needed.</p>
-                </div>
-            </div>
+      <div style="display:flex;flex-wrap:wrap;gap:20px;justify-content:center;">
+        <div class="nl-bq-card" style="flex:1;min-width:285px;background:#ffffff;border:1px solid #e2e8f0;border-radius:30px;padding:34px;box-shadow:0 18px 50px rgba(226,232,240,.9);">
+          <div style="width:58px;height:58px;border-radius:18px;background:#eff6ff;color:#2563eb;display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:22px;">&#9889;</div>
+          <h3 style="font-size:22px;font-weight:950;color:#0f172a;margin:0 0 12px 0;">Keep Odoo fast</h3>
+          <p style="margin:0;color:#64748b;font-size:15px;line-height:1.75;">Heavy dashboards, joins, filters, pivots and historical analysis should not run on the same database your sales, purchase, inventory and accounting teams use every day.</p>
         </div>
-    </div>
 
-    <!-- CONTROL CENTER -->
-    <div style="background-color:#020617;color:#ffffff;padding:104px 20px;">
-        <div style="max-width:1180px;margin:0 auto;">
-            <div style="text-align:center;margin-bottom:64px;">
-                <span style="display:inline-block;padding:8px 18px;border-radius:100px;background:#0f172a;border:1px solid #334155;color:#60a5fa;font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase;">Odoo-native control center</span>
-                <h2 style="font-size:64px;font-weight:950;line-height:0.98;letter-spacing:-4px;margin:24px 0 18px;color:#ffffff;">Turn MCP on. <br><span style="color:#93c5fd;">Control everything from Odoo.</span></h2>
-                <p style="font-size:19px;color:#cbd5e1;max-width:850px;margin:0 auto;line-height:1.75;">Enable the server, generate the bearer token, choose allowed browser origins, select the execution user, copy Cursor configs, configure rate limits, set IP allowlists, manage log retention, and add an instance playbook for your business rules.</p>
-            </div>
-
-            <div style="background-color:#0f172a;border:1px solid #334155;border-radius:36px;padding:16px;box-shadow:0 60px 140px -36px #000000;margin-bottom:28px;">
-                <img src="./settings.png" alt="Niyu MCP Server Settings" style="width:100%;height:auto;display:block;border-radius:24px;">
-            </div>
-
-            <div class="d-flex justify-content-center flex-wrap" style="display:flex;flex-wrap:wrap;gap:18px;">
-                <div style="flex:1;min-width:245px;background:#111827;border:1px solid #334155;border-radius:24px;padding:26px;">
-                    <h4 style="color:#ffffff;font-weight:900;font-size:19px;margin:0 0 10px;">Endpoint + token</h4>
-                    <p style="color:#cbd5e1;font-size:14px;line-height:1.7;margin:0;">Native `/mcp` endpoint with Bearer Token mode for production clients and generated connection snippets.</p>
-                </div>
-                <div style="flex:1;min-width:245px;background:#111827;border:1px solid #334155;border-radius:24px;padding:26px;">
-                    <h4 style="color:#ffffff;font-weight:900;font-size:19px;margin:0 0 10px;">Execution user</h4>
-                    <p style="color:#cbd5e1;font-size:14px;line-height:1.7;margin:0;">All MCP tool calls run as the selected internal Odoo user, so permissions remain predictable.</p>
-                </div>
-                <div style="flex:1;min-width:245px;background:#111827;border:1px solid #334155;border-radius:24px;padding:26px;">
-                    <h4 style="color:#ffffff;font-weight:900;font-size:19px;margin:0 0 10px;">Allowed origins + IPs</h4>
-                    <p style="color:#cbd5e1;font-size:14px;line-height:1.7;margin:0;">Restrict browser origins and client IPs for safer hosted MCP access.</p>
-                </div>
-                <div style="flex:1;min-width:245px;background:#111827;border:1px solid #334155;border-radius:24px;padding:26px;">
-                    <h4 style="color:#ffffff;font-weight:900;font-size:19px;margin:0 0 10px;">Playbook for AI</h4>
-                    <p style="color:#cbd5e1;font-size:14px;line-height:1.7;margin:0;">Describe custom rules, modules, field meanings, naming conventions, and workflows so AI understands your instance.</p>
-                </div>
-            </div>
+        <div class="nl-bq-card" style="flex:1;min-width:285px;background:#ffffff;border:1px solid #e2e8f0;border-radius:30px;padding:34px;box-shadow:0 18px 50px rgba(226,232,240,.9);">
+          <div style="width:58px;height:58px;border-radius:18px;background:#ecfeff;color:#0891b2;display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:22px;">&#128202;</div>
+          <h3 style="font-size:22px;font-weight:950;color:#0f172a;margin:0 0 12px 0;">Give BI clean data</h3>
+          <p style="margin:0;color:#64748b;font-size:15px;line-height:1.75;">Export only the tables and columns that matter, apply Odoo domain filters, then use BigQuery as the trusted data layer for reports, dashboards and data teams.</p>
         </div>
-    </div>
 
-    <!-- ACCESS BUNDLES -->
-    <div style="background:#ffffff;padding:112px 20px;">
-        <div style="max-width:1180px;margin:0 auto;text-align:center;">
-            <span style="display:inline-block;padding:8px 18px;background:#fff7ed;border:1px solid #fed7aa;border-radius:100px;color:#ea580c;font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase;">Access bundles</span>
-            <h2 style="font-size:62px;font-weight:950;line-height:0.98;letter-spacing:-4px;margin:24px 0 22px;color:#0f172a;">Expose apps, not chaos. <br><span style="color:#ea580c;">Then fine-tune models.</span></h2>
-            <p style="font-size:20px;color:#475569;max-width:850px;margin:0 auto 70px;line-height:1.75;">Pick business apps. The module computes matching Odoo models automatically. Add manual include models for special workflows. Add exclude models when a model must never be visible to MCP clients.</p>
-
-            <div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:36px;padding:16px;box-shadow:0 42px 90px #dbeafe;margin-bottom:26px;">
-                <img src="./embedded.png" alt="MCP access bundles app selection" style="width:100%;height:auto;display:block;border-radius:24px;">
-            </div>
-
-            <div class="d-flex justify-content-center flex-wrap" style="margin-bottom:48px;">
-                <span class="mb-2 mr-2" style="display:inline-block;background:#eff6ff;color:#1d4ed8;font-size:13px;font-weight:900;padding:10px 16px;border-radius:100px;">Inventory</span>
-                <span class="mb-2 mr-2" style="display:inline-block;background:#f0fdf4;color:#166534;font-size:13px;font-weight:900;padding:10px 16px;border-radius:100px;">Sales</span>
-                <span class="mb-2 mr-2" style="display:inline-block;background:#fff7ed;color:#c2410c;font-size:13px;font-weight:900;padding:10px 16px;border-radius:100px;">Purchase</span>
-                <span class="mb-2 mr-2" style="display:inline-block;background:#faf5ff;color:#6b21a8;font-size:13px;font-weight:900;padding:10px 16px;border-radius:100px;">CRM</span>
-                <span class="mb-2 mr-2" style="display:inline-block;background:#fef2f2;color:#b91c1c;font-size:13px;font-weight:900;padding:10px 16px;border-radius:100px;">Accounting</span>
-                <span class="mb-2 mr-2" style="display:inline-block;background:#ecfeff;color:#0e7490;font-size:13px;font-weight:900;padding:10px 16px;border-radius:100px;">Website</span>
-                <span class="mb-2 mr-2" style="display:inline-block;background:#f8fafc;color:#334155;font-size:13px;font-weight:900;padding:10px 16px;border-radius:100px;">Project</span>
-                <span class="mb-2 mr-2" style="display:inline-block;background:#f5f3ff;color:#5b21b6;font-size:13px;font-weight:900;padding:10px 16px;border-radius:100px;">Manufacturing</span>
-                <span class="mb-2 mr-2" style="display:inline-block;background:#f0f9ff;color:#0369a1;font-size:13px;font-weight:900;padding:10px 16px;border-radius:100px;">Helpdesk</span>
-                <span class="mb-2 mr-2" style="display:inline-block;background:#f1f5f9;color:#0f172a;font-size:13px;font-weight:900;padding:10px 16px;border-radius:100px;">HR</span>
-                <span class="mb-2 mr-2" style="display:inline-block;background:#ecfccb;color:#3f6212;font-size:13px;font-weight:900;padding:10px 16px;border-radius:100px;">Contacts</span>
-            </div>
-
-            <div class="d-flex justify-content-center flex-wrap" style="display:flex;flex-wrap:wrap;gap:22px;text-align:left;align-items:stretch;">
-                <div style="flex:1;min-width:310px;background:#ffffff;border:1px solid #e2e8f0;border-radius:28px;padding:14px;box-shadow:0 28px 70px #e2e8f0;">
-                    <img src="./Manual_Override.png" alt="Manual include and exclude model controls" style="width:100%;height:auto;display:block;border-radius:20px;margin-bottom:18px;">
-                    <div style="padding:4px 10px 14px;">
-                        <h4 style="font-size:22px;font-weight:900;color:#0f172a;margin:0 0 8px;">Include and exclude models</h4>
-                        <p style="color:#64748b;font-size:15px;line-height:1.75;margin:0;">Add one-off models when your workflow needs them. Exclude risky or irrelevant models even if they match an app pattern.</p>
-                    </div>
-                </div>
-                <div style="flex:1;min-width:310px;background:#ffffff;border:1px solid #e2e8f0;border-radius:28px;padding:14px;box-shadow:0 28px 70px #e2e8f0;">
-                    <img src="./access_bundle.png" alt="Exposed model counts and access bundles" style="width:100%;height:auto;display:block;border-radius:20px;margin-bottom:18px;">
-                    <div style="padding:4px 10px 14px;">
-                        <h4 style="font-size:22px;font-weight:900;color:#0f172a;margin:0 0 8px;">See model counts before using AI</h4>
-                        <p style="color:#64748b;font-size:15px;line-height:1.75;margin:0;">Admins can see which bundles are active, how many models are matched, and whether access is broad enough for the selected AI workflow.</p>
-                    </div>
-                </div>
-            </div>
+        <div class="nl-bq-card" style="flex:1;min-width:285px;background:#ffffff;border:1px solid #e2e8f0;border-radius:30px;padding:34px;box-shadow:0 18px 50px rgba(226,232,240,.9);">
+          <div style="width:58px;height:58px;border-radius:18px;background:#f0fdf4;color:#16a34a;display:flex;align-items:center;justify-content:center;font-size:28px;margin-bottom:22px;">&#128257;</div>
+          <h3 style="font-size:22px;font-weight:950;color:#0f172a;margin:0 0 12px 0;">Update without rebuilding everything</h3>
+          <p style="margin:0;color:#64748b;font-size:15px;line-height:1.75;">Incremental sync uses Odoo change markers such as <b>write_date</b> and <b>id</b>, loads batches into staging tables, then updates BigQuery through MERGE.</p>
         </div>
+      </div>
+
+      <div style="margin-top:58px;background:#0f172a;border-radius:32px;padding:30px 34px;border:1px solid #1e293b;box-shadow:0 35px 90px rgba(15,23,42,.28);">
+        <p style="margin:0;color:#e2e8f0;font-size:18px;line-height:1.7;font-weight:800;text-align:center;">
+          This is not just a file export button. It is a controllable Odoo-to-BigQuery pipeline inside your Odoo backend.
+        </p>
+      </div>
     </div>
+  </section>
 
-    <!-- PERMISSION ENGINE -->
-    <div style="background-color:#f8fafc;padding:108px 20px;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0;">
-        <div style="max-width:1180px;margin:0 auto;">
-            <div style="text-align:center;margin-bottom:64px;">
-                <span style="display:inline-block;padding:8px 18px;background:#ecfdf5;border:1px solid #bbf7d0;border-radius:100px;color:#15803d;font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase;">Permission engine</span>
-                <h2 style="font-size:58px;font-weight:950;color:#0f172a;letter-spacing:-3px;line-height:1.02;margin:24px 0 18px;">Read-only by default. <br><span style="color:#16a34a;">CRUD only when allowed.</span></h2>
-                <p style="font-size:19px;color:#475569;max-width:850px;margin:0 auto;line-height:1.75;">This is not a blind gateway. Create, update, and delete tools appear only when the selected execution user, Odoo ACLs, and bundle permissions allow them.</p>
-            </div>
+  <!-- ARCHITECTURE -->
+  <section class="nl-bq-pad" style="background-color:#020617;color:#ffffff;padding:112px 20px;">
+    <div style="max-width:1200px;margin:0 auto;text-align:center;">
+      <span style="display:inline-block;padding:8px 18px;border-radius:999px;background:#0f172a;border:1px solid #334155;color:#38bdf8;font-size:12px;font-weight:950;letter-spacing:2px;text-transform:uppercase;margin-bottom:24px;">Architecture that sells</span>
+      <h2 class="nl-bq-big-title" style="font-size:70px;font-weight:950;line-height:.96;letter-spacing:-5px;margin:0 0 26px 0;color:#ffffff;">
+        From Odoo tables to <br><span style="color:#93c5fd;">business-ready analytics.</span>
+      </h2>
+      <p style="font-size:20px;color:#cbd5e1;max-width:840px;margin:0 auto 66px auto;line-height:1.75;">
+        Configure once in Odoo, push structured data to BigQuery, then connect the tools your team already uses: Power BI, Looker Studio, Tableau, SQL notebooks, machine learning and AI analytics workflows.
+      </p>
 
-            <div class="d-flex justify-content-center flex-wrap" style="display:flex;flex-wrap:wrap;gap:18px;text-align:center;margin-bottom:54px;">
-                <div style="flex:1;min-width:235px;background:#ffffff;border:1px solid #e2e8f0;border-radius:26px;padding:30px;box-shadow:0 18px 45px #e2e8f0;">
-                    <div style="font-size:42px;font-weight:950;color:#2563eb;margin-bottom:10px;">1</div>
-                    <h4 style="font-size:20px;font-weight:900;color:#0f172a;margin:0 0 10px;">Odoo ACLs</h4>
-                    <p style="font-size:14px;color:#64748b;line-height:1.7;margin:0;">Normal Odoo user permissions still apply.</p>
-                </div>
-                <div style="flex:1;min-width:235px;background:#ffffff;border:1px solid #e2e8f0;border-radius:26px;padding:30px;box-shadow:0 18px 45px #e2e8f0;">
-                    <div style="font-size:42px;font-weight:950;color:#7c3aed;margin-bottom:10px;">2</div>
-                    <h4 style="font-size:20px;font-weight:900;color:#0f172a;margin:0 0 10px;">Execution user cap</h4>
-                    <p style="font-size:14px;color:#64748b;line-height:1.7;margin:0;">The selected user has Read, Write, Create, Delete flags.</p>
-                </div>
-                <div style="flex:1;min-width:235px;background:#ffffff;border:1px solid #e2e8f0;border-radius:26px;padding:30px;box-shadow:0 18px 45px #e2e8f0;">
-                    <div style="font-size:42px;font-weight:950;color:#ea580c;margin-bottom:10px;">3</div>
-                    <h4 style="font-size:20px;font-weight:900;color:#0f172a;margin:0 0 10px;">Bundle cap</h4>
-                    <p style="font-size:14px;color:#64748b;line-height:1.7;margin:0;">Each access bundle has its own permission preset.</p>
-                </div>
-                <div style="flex:1;min-width:235px;background-color:#020617;border:1px solid #334155;border-radius:26px;padding:30px;box-shadow:0 18px 45px #cbd5e1;">
-                    <div style="font-size:42px;font-weight:950;color:#22c55e;margin-bottom:10px;">=</div>
-                    <h4 style="font-size:20px;font-weight:900;color:#ffffff;margin:0 0 10px;">Final MCP tools</h4>
-                    <p style="font-size:14px;color:#cbd5e1;line-height:1.7;margin:0;">AI sees only the tools that survive all caps.</p>
-                </div>
-            </div>
+      <div style="background:#0b1220;border:1px solid #334155;border-radius:36px;padding:18px;box-shadow:0 70px 140px -40px #000000;margin-bottom:34px;">
+        <img src="./all.png" alt="Odoo to BigQuery analytics architecture" style="width:100%;display:block;border-radius:26px;background:#000000;">
+      </div>
 
-            <div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:32px;padding:34px;box-shadow:0 24px 70px #e2e8f0;">
-                <div class="d-flex justify-content-center flex-wrap" style="display:flex;flex-wrap:wrap;gap:16px;">
-                    <span style="display:inline-block;background:#eff6ff;color:#1d4ed8;border:1px solid #dbeafe;font-weight:900;border-radius:100px;padding:12px 18px;">No Access</span>
-                    <span style="display:inline-block;background:#ecfdf5;color:#15803d;border:1px solid #bbf7d0;font-weight:900;border-radius:100px;padding:12px 18px;">Read Only</span>
-                    <span style="display:inline-block;background:#fff7ed;color:#c2410c;border:1px solid #fed7aa;font-weight:900;border-radius:100px;padding:12px 18px;">Read + Write</span>
-                    <span style="display:inline-block;background:#f5f3ff;color:#6d28d9;border:1px solid #ddd6fe;font-weight:900;border-radius:100px;padding:12px 18px;">Read + Write + Create</span>
-                    <span style="display:inline-block;background:#fef2f2;color:#b91c1c;border:1px solid #fecaca;font-weight:900;border-radius:100px;padding:12px 18px;">Full CRUD</span>
-                    <span style="display:inline-block;background:#f8fafc;color:#334155;border:1px solid #e2e8f0;font-weight:900;border-radius:100px;padding:12px 18px;">Custom</span>
-                </div>
-            </div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:34px;">
+        <div style="flex:1;min-width:210px;background:#0f172a;border:1px solid #334155;border-radius:24px;padding:22px;">
+          <div style="font-size:13px;font-weight:950;color:#60a5fa;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px;">01</div>
+          <div style="font-weight:950;font-size:18px;color:#ffffff;">Odoo source</div>
+          <p style="margin:8px 0 0 0;color:#94a3b8;font-size:14px;line-height:1.65;">Select Odoo tables/models from your database.</p>
         </div>
-    </div>
-
-    <!-- TOOLS -->
-    <div style="background:#ffffff;padding:112px 20px;">
-        <div style="max-width:1180px;margin:0 auto;">
-            <div style="text-align:center;margin-bottom:66px;">
-                <span style="display:inline-block;padding:8px 18px;background:#eff6ff;border:1px solid #dbeafe;border-radius:100px;color:#1d4ed8;font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase;">MCP tools exposed to AI</span>
-                <h2 style="font-size:60px;font-weight:950;color:#0f172a;letter-spacing:-3px;line-height:1.02;margin:24px 0 18px;">Give AI useful tools. <br><span style="color:#2563eb;">Not unlimited power.</span></h2>
-                <p style="font-size:19px;color:#475569;max-width:850px;margin:0 auto;line-height:1.75;">The module exposes safe discovery tools, model tools, CRUD tools, prompts, and resources. Availability changes based on your actual permissions.</p>
-            </div>
-
-            <div class="d-flex justify-content-center flex-wrap" style="display:flex;flex-wrap:wrap;gap:22px;">
-                <div style="flex:1;min-width:330px;background-color:#020617;border:1px solid #1e293b;border-radius:30px;padding:30px;box-shadow:0 34px 80px #cbd5e1;">
-                    <div style="font-size:12px;color:#60a5fa;font-weight:900;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px;">Discovery tools</div>
-                    <h4 style="font-size:26px;font-weight:900;color:#ffffff;margin:0 0 16px;">Understand before acting</h4>
-                    <p style="font-size:15px;color:#cbd5e1;line-height:1.75;margin:0 0 18px;">Health, diagnostics, system info, instance guide, exposed model list, semantic glossary, business question resolver, search, and fetch.</p>
-                    <div style="font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:13px;line-height:1.8;color:#bfdbfe;text-align:left;background:#0f172a;border:1px solid #334155;border-radius:18px;padding:18px;">odoo_diagnostics<br>odoo_instance_guide<br>odoo_list_models<br>odoo_resolve_question<br>odoo_semantic_glossary</div>
-                </div>
-
-                <div style="flex:1;min-width:330px;background:#ffffff;border:1px solid #e2e8f0;border-radius:30px;padding:30px;box-shadow:0 26px 70px #e2e8f0;">
-                    <div style="font-size:12px;color:#16a34a;font-weight:900;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px;">Record tools</div>
-                    <h4 style="font-size:26px;font-weight:900;color:#0f172a;margin:0 0 16px;">Read and act on Odoo records</h4>
-                    <p style="font-size:15px;color:#64748b;line-height:1.75;margin:0 0 18px;">Search records, read IDs, browse with pagination, count records, inspect model fields, create records, update records, delete records, and create contacts when allowed.</p>
-                    <div style="font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:13px;line-height:1.8;color:#0f172a;text-align:left;background:#f8fafc;border:1px solid #e2e8f0;border-radius:18px;padding:18px;">odoo_search / odoo_read<br>odoo_browse / odoo_count<br>odoo_create / odoo_write<br>odoo_delete<br>create_res_partner_contact</div>
-                </div>
-
-                <div style="flex:1;min-width:330px;background:#ffffff;border:1px solid #e2e8f0;border-radius:30px;padding:30px;box-shadow:0 26px 70px #e2e8f0;">
-                    <div style="font-size:12px;color:#7c3aed;font-weight:900;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px;">Prompts + resources</div>
-                    <h4 style="font-size:26px;font-weight:900;color:#0f172a;margin:0 0 16px;">Built-in guidance for AI clients</h4>
-                    <p style="font-size:15px;color:#64748b;line-height:1.75;margin:0 0 18px;">Clients can read Odoo resources and use prompt templates for safe reads, safe updates, inventory checks, and sales assistant workflows.</p>
-                    <div style="font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:13px;line-height:1.8;color:#0f172a;text-align:left;background:#f8fafc;border:1px solid #e2e8f0;border-radius:18px;padding:18px;">odoo://guide<br>odoo://models<br>odoo://health<br>odoo://diagnostics<br>safe_odoo_read / safe_odoo_update</div>
-                </div>
-            </div>
+        <div style="flex:1;min-width:210px;background:#0f172a;border:1px solid #334155;border-radius:24px;padding:22px;">
+          <div style="font-size:13px;font-weight:950;color:#67e8f9;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px;">02</div>
+          <div style="font-weight:950;font-size:18px;color:#ffffff;">Filter + shape</div>
+          <p style="margin:8px 0 0 0;color:#94a3b8;font-size:14px;line-height:1.65;">Choose columns and apply Odoo domain filters.</p>
         </div>
-    </div>
-
-    <!-- CLIENT CONNECTIONS -->
-    <div style="background-color:#020617;color:#ffffff;padding:112px 20px;overflow:hidden;">
-        <div style="max-width:1180px;margin:0 auto;text-align:center;">
-            <span style="display:inline-block;padding:8px 18px;border-radius:100px;background:#0f172a;border:1px solid #334155;color:#93c5fd;font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase;">Connect your AI clients</span>
-            <h2 style="font-size:64px;font-weight:950;line-height:0.98;letter-spacing:-4px;margin:24px 0 22px;color:#ffffff;">One Odoo server. <br><span style="color:#93c5fd;">Many AI clients.</span></h2>
-            <p style="font-size:19px;color:#cbd5e1;max-width:850px;margin:0 auto 68px;line-height:1.75;">Use the same governed MCP layer from ChatGPT, Claude, Cursor, Codex, VS Code, and other compatible tools. Remote HTTP for hosted environments. Local STDIO bridge for development and localhost workflows.</p>
-
-            <div class="d-flex justify-content-center flex-wrap text-left" style="display:flex;flex-wrap:wrap;gap:24px;">
-                <div style="flex:1;min-width:330px;background:#111827;border:1px solid #334155;border-radius:30px;padding:18px;box-shadow:0 44px 110px -40px #000000;">
-                    <div style="padding:8px 6px 20px;">
-                        <div style="font-size:12px;font-weight:900;color:#60a5fa;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;">Demo 01</div>
-                        <h3 style="font-size:29px;font-weight:900;color:#ffffff;margin:0 0 10px;">Connect with ChatGPT</h3>
-                        <p style="font-size:15px;line-height:1.75;color:#cbd5e1;margin:0;">Paste the endpoint, configure authentication as supported by the client, and ask real Odoo questions using the selected execution user.</p>
-                    </div>
-                    <div style="border-radius:24px;overflow:hidden;background:#000;box-shadow:0 22px 50px #000000;">
-                        <a href="https://www.youtube.com/watch?v=ia_yhfP-Smg" target="_blank" style="display:block;position:relative;text-decoration:none;">
-                            <img src="./chatgpt.png" alt="Connect Niyu MCP Server to ChatGPT" style="width:100%;height:auto;display:block;">
-                            <div style="position:absolute;left:18px;top:18px;background:#020617;color:#ffffff;font-size:12px;font-weight:900;padding:8px 12px;border-radius:100px;letter-spacing:0.5px;">ChatGPT MCP</div>
-                            <div style="position:absolute;bottom:16px;right:16px;background:#ff0000;color:#ffffff;font-size:12px;font-weight:900;padding:8px 12px;border-radius:100px;letter-spacing:0.5px;">Watch Demo</div>
-                        </a>
-                    </div>
-                </div>
-
-                <div style="flex:1;min-width:330px;background:#111827;border:1px solid #334155;border-radius:30px;padding:18px;box-shadow:0 44px 110px -40px #000000;">
-                    <div style="padding:8px 6px 20px;">
-                        <div style="font-size:12px;font-weight:900;color:#a78bfa;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;">Demo 02</div>
-                        <h3 style="font-size:29px;font-weight:900;color:#ffffff;margin:0 0 10px;">Connect with Claude</h3>
-                        <p style="font-size:15px;line-height:1.75;color:#cbd5e1;margin:0;">Use Claude with the same permissioned Odoo endpoint, resources, prompts, and model restrictions.</p>
-                    </div>
-                    <div style="border-radius:24px;overflow:hidden;background:#000;box-shadow:0 22px 50px #000000;">
-                        <a href="https://www.youtube.com/watch?v=jpv2Jg79bDU" target="_blank" style="display:block;position:relative;text-decoration:none;">
-                            <img src="./claude.png" alt="Connect Niyu MCP Server to Claude" style="width:100%;height:auto;display:block;">
-                            <div style="position:absolute;left:18px;top:18px;background:#020617;color:#ffffff;font-size:12px;font-weight:900;padding:8px 12px;border-radius:100px;letter-spacing:0.5px;">Claude MCP</div>
-                            <div style="position:absolute;bottom:16px;right:16px;background:#ff0000;color:#ffffff;font-size:12px;font-weight:900;padding:8px 12px;border-radius:100px;letter-spacing:0.5px;">Watch Demo</div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div style="margin-top:24px;background-color:#111827;border:1px solid #334155;border-radius:30px;padding:24px;box-shadow:0 44px 110px -40px #000000;text-align:left;">
-                <div class="d-flex justify-content-center flex-wrap" style="display:flex;flex-wrap:wrap;gap:24px;align-items:stretch;">
-                    <div style="flex:1;min-width:310px;">
-                        <div style="font-size:12px;font-weight:900;color:#34d399;text-transform:uppercase;letter-spacing:2px;margin-bottom:8px;">Cursor remote config</div>
-                        <h3 style="font-size:29px;font-weight:900;color:#ffffff;margin:0 0 12px;">Copy config from Odoo</h3>
-                        <p style="font-size:15px;line-height:1.75;color:#cbd5e1;margin:0;">Use generated remote config for hosted Odoo, or local STDIO bridge config for development environments where the AI client runs on your machine.</p>
-                    </div>
-                    <div style="flex:1;min-width:310px;background-color:#020617;border:1px solid #334155;border-radius:22px;padding:22px;">
-                        <div style="font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:13px;line-height:1.7;color:#bfdbfe;text-align:left;white-space:normal;">
-                            <div style="color:#94a3b8;margin-bottom:10px;">cursor_mcp.json</div>
-                            <div>{</div>
-                            <div style="padding-left:18px;">"mcpServers": {</div>
-                            <div style="padding-left:36px;">"niyu-odoo": {</div>
-                            <div style="padding-left:54px;color:#a7f3d0;">"url": "https://your-odoo.com/mcp",</div>
-                            <div style="padding-left:54px;color:#ddd6fe;">"headers": { "Authorization": "Bearer TOKEN" }</div>
-                            <div style="padding-left:36px;">}</div>
-                            <div style="padding-left:18px;">}</div>
-                            <div>}</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div style="flex:1;min-width:210px;background:#0f172a;border:1px solid #334155;border-radius:24px;padding:22px;">
+          <div style="font-size:13px;font-weight:950;color:#34d399;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px;">03</div>
+          <div style="font-weight:950;font-size:18px;color:#ffffff;">Batch + merge</div>
+          <p style="margin:8px 0 0 0;color:#94a3b8;font-size:14px;line-height:1.65;">Load batches through staging tables and update BigQuery.</p>
         </div>
-    </div>
-
-    <!-- SEMANTIC LAYER -->
-    <div style="background:#ffffff;padding:112px 20px;">
-        <div style="max-width:1180px;margin:0 auto;">
-            <div style="text-align:center;margin-bottom:66px;">
-                <span style="display:inline-block;padding:8px 18px;background:#faf5ff;border:1px solid #ddd6fe;border-radius:100px;color:#7c3aed;font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase;">Odoo semantic layer</span>
-                <h2 style="font-size:60px;font-weight:950;color:#0f172a;letter-spacing:-3px;line-height:1.02;margin:24px 0 18px;">AI understands Odoo words. <br><span style="color:#7c3aed;">Not only table names.</span></h2>
-                <p style="font-size:19px;color:#475569;max-width:850px;margin:0 auto;line-height:1.75;">The module gives clients business vocabulary and model hints so questions like “overdue invoices”, “RFQs”, “internal transfers”, “stock by warehouse”, and “stale opportunities” map to the right Odoo models.</p>
-            </div>
-
-            <div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:36px;padding:16px;box-shadow:0 42px 90px #e2e8f0;margin-bottom:36px;">
-                <img src="./ChatGPT_Response.png" alt="ChatGPT response using Odoo MCP data" style="width:100%;height:auto;display:block;border-radius:24px;">
-            </div>
-
-            <div class="d-flex justify-content-center flex-wrap" style="display:flex;flex-wrap:wrap;gap:18px;">
-                <div style="flex:1;min-width:260px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:26px;padding:28px;">
-                    <h4 style="font-size:20px;font-weight:900;color:#0f172a;margin:0 0 10px;">Business glossary</h4>
-                    <p style="font-size:15px;color:#64748b;line-height:1.75;margin:0;">Customer/vendor/contact to res.partner. Invoice/bill to account.move. RFQ to purchase.order. Transfer to stock.picking.</p>
-                </div>
-                <div style="flex:1;min-width:260px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:26px;padding:28px;">
-                    <h4 style="font-size:20px;font-weight:900;color:#0f172a;margin:0 0 10px;">Instance playbook</h4>
-                    <p style="font-size:15px;color:#64748b;line-height:1.75;margin:0;">Add your custom business rules, custom modules, field meanings, naming conventions, and approval flows.</p>
-                </div>
-                <div style="flex:1;min-width:260px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:26px;padding:28px;">
-                    <h4 style="font-size:20px;font-weight:900;color:#0f172a;margin:0 0 10px;">Question resolver</h4>
-                    <p style="font-size:15px;color:#64748b;line-height:1.75;margin:0;">AI can resolve business-language questions into likely models, fields, domains, ordering, and ambiguity notes.</p>
-                </div>
-                <div style="flex:1;min-width:260px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:26px;padding:28px;">
-                    <h4 style="font-size:20px;font-weight:900;color:#0f172a;margin:0 0 10px;">Model guidance</h4>
-                    <p style="font-size:15px;color:#64748b;line-height:1.75;margin:0;">Per-model business terms, prompt guidance, cache TTL, and safe field metadata help clients work with fewer mistakes.</p>
-                </div>
-            </div>
+        <div style="flex:1;min-width:210px;background:#0f172a;border:1px solid #334155;border-radius:24px;padding:22px;">
+          <div style="font-size:13px;font-weight:950;color:#fbbf24;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:8px;">04</div>
+          <div style="font-weight:950;font-size:18px;color:#ffffff;">BI + AI layer</div>
+          <p style="margin:8px 0 0 0;color:#94a3b8;font-size:14px;line-height:1.65;">Use BigQuery with dashboards, SQL, ML and AI tools.</p>
         </div>
+      </div>
     </div>
+  </section>
 
-    <!-- DIAGNOSTICS AUDIT SECURITY -->
-    <div style="background:#f8fafc;padding:112px 20px;border-top:1px solid #e2e8f0;">
-        <div style="max-width:1180px;margin:0 auto;text-align:center;">
-            <span style="display:inline-block;padding:8px 18px;background:#fef2f2;border:1px solid #fecaca;border-radius:100px;color:#b91c1c;font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase;">Diagnostics + audit + hardening</span>
-            <h2 style="font-size:60px;font-weight:950;color:#0f172a;letter-spacing:-3px;line-height:1.02;margin:24px 0 18px;">Know what is exposed. <br><span style="color:#b91c1c;">Know what happened.</span></h2>
-            <p style="font-size:19px;color:#475569;max-width:850px;margin:0 auto 66px;line-height:1.75;">The module is built for production support: health checks, exposed model counts, execution-user visibility, auth status, security settings, audit logs, and automatic cleanup.</p>
-
-            <div class="d-flex justify-content-center flex-wrap" style="display:flex;flex-wrap:wrap;gap:24px;text-align:left;margin-bottom:48px;">
-                <div style="flex:1;min-width:330px;background:#ffffff;border:1px solid #e2e8f0;border-radius:30px;padding:14px;box-shadow:0 28px 70px #e2e8f0;">
-                    <img src="./health_check.png" alt="MCP health and diagnostics" style="width:100%;height:auto;display:block;border-radius:20px;margin-bottom:18px;">
-                    <div style="padding:4px 10px 14px;">
-                        <h4 style="font-size:22px;font-weight:900;color:#0f172a;margin:0 0 8px;">Health and diagnostics</h4>
-                        <p style="color:#64748b;font-size:15px;line-height:1.75;margin:0;">Check enabled state, auth mode, bearer token, execution user, exposed model count, origin restrictions, generic method-call status, and client configs.</p>
-                    </div>
-                </div>
-                <div style="flex:1;min-width:330px;background:#ffffff;border:1px solid #e2e8f0;border-radius:30px;padding:14px;box-shadow:0 28px 70px #e2e8f0;">
-                    <img src="./audit_logs.png" alt="MCP audit logs" style="width:100%;height:auto;display:block;border-radius:20px;margin-bottom:18px;">
-                    <div style="padding:4px 10px 14px;">
-                        <h4 style="font-size:22px;font-weight:900;color:#0f172a;margin:0 0 8px;">Audit every tool call</h4>
-                        <p style="color:#64748b;font-size:15px;line-height:1.75;margin:0;">Track user, model, operation, method, record IDs, record count, request data, status, error message, IP address, user agent, duration, and timestamp.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="d-flex justify-content-center flex-wrap" style="display:flex;flex-wrap:wrap;gap:18px;text-align:left;">
-                <div style="flex:1;min-width:260px;background:#ffffff;border:1px solid #e2e8f0;border-radius:26px;padding:28px;box-shadow:0 18px 45px #e2e8f0;">
-                    <h4 style="font-size:20px;font-weight:900;color:#0f172a;margin:0 0 10px;">Sensitive-field filtering</h4>
-                    <p style="font-size:15px;color:#64748b;line-height:1.75;margin:0;">Passwords, tokens, API keys, secrets, sessions, OTP fields, payment-card-like fields, and bank-account-like fields are blocked from exposure.</p>
-                </div>
-                <div style="flex:1;min-width:260px;background:#ffffff;border:1px solid #e2e8f0;border-radius:26px;padding:28px;box-shadow:0 18px 45px #e2e8f0;">
-                    <h4 style="font-size:20px;font-weight:900;color:#0f172a;margin:0 0 10px;">No blind all-field reads</h4>
-                    <p style="font-size:15px;color:#64748b;line-height:1.75;margin:0;">`__all__` field reads are blocked. Clients must request explicit fields or use safe defaults.</p>
-                </div>
-                <div style="flex:1;min-width:260px;background:#ffffff;border:1px solid #e2e8f0;border-radius:26px;padding:28px;box-shadow:0 18px 45px #e2e8f0;">
-                    <h4 style="font-size:20px;font-weight:900;color:#0f172a;margin:0 0 10px;">Forced-domain enforcement</h4>
-                    <p style="font-size:15px;color:#64748b;line-height:1.75;margin:0;">Forced domains are applied to reads and mutations, so scoped access remains scoped.</p>
-                </div>
-                <div style="flex:1;min-width:260px;background:#ffffff;border:1px solid #e2e8f0;border-radius:26px;padding:28px;box-shadow:0 18px 45px #e2e8f0;">
-                    <h4 style="font-size:20px;font-weight:900;color:#0f172a;margin:0 0 10px;">Rate limit + IP allowlist</h4>
-                    <p style="font-size:15px;color:#64748b;line-height:1.75;margin:0;">Limit requests per minute and restrict clients by IP when needed.</p>
-                </div>
-            </div>
+  <!-- SETUP -->
+  <section class="nl-bq-pad" style="background:#ffffff;padding:112px 20px;">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div class="nl-bq-split" style="display:flex;flex-wrap:wrap;gap:54px;align-items:center;">
+        <div style="flex:1;min-width:320px;">
+          <span style="display:inline-block;padding:8px 16px;border-radius:999px;background:#eff6ff;border:1px solid #bfdbfe;color:#2563eb;font-size:12px;font-weight:950;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;">Step 01: Configure</span>
+          <h2 class="nl-bq-section-title" style="font-size:54px;font-weight:950;letter-spacing:-3px;line-height:1.05;color:#0f172a;margin:0 0 22px 0;">Connect Odoo to your Google Cloud project.</h2>
+          <p style="font-size:18px;color:#475569;line-height:1.75;margin:0 0 26px 0;">Add your BigQuery Project ID, Dataset ID and service account JSON from Odoo Settings. Your team controls the Google Cloud destination, dataset and credentials.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:10px;">
+            <span class="nl-bq-chip" style="background:#eff6ff;color:#1d4ed8;border:1px solid #bfdbfe;">Project ID</span>
+            <span class="nl-bq-chip" style="background:#ecfeff;color:#0e7490;border:1px solid #a5f3fc;">Dataset ID</span>
+            <span class="nl-bq-chip" style="background:#f0fdf4;color:#15803d;border:1px solid #bbf7d0;">Service account JSON</span>
+          </div>
         </div>
-    </div>
-
-    <!-- PRODUCT SCREENSHOTS -->
-    <div style="background:#ffffff;padding:108px 20px;">
-        <div style="max-width:1180px;margin:0 auto;">
-            <div style="text-align:center;margin-bottom:62px;">
-                <span style="display:inline-block;padding:8px 18px;background:#eff6ff;border:1px solid #dbeafe;border-radius:100px;color:#1d4ed8;font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase;">Product screenshots</span>
-                <h2 style="font-size:54px;font-weight:950;color:#0f172a;letter-spacing:-3px;margin:22px 0 0;">What customers see inside Odoo</h2>
-            </div>
-
-            <div class="d-flex justify-content-center flex-wrap" style="display:flex;flex-wrap:wrap;gap:22px;">
-                <div style="flex:1;min-width:320px;max-width:560px;background:#fff;border:1px solid #e2e8f0;border-radius:28px;padding:14px;box-shadow:0 24px 58px #e2e8f0;margin:8px;">
-                    <img src="./ChatGPT-Auth.png" alt="ChatGPT authentication setup" style="width:100%;height:auto;display:block;border-radius:20px;margin-bottom:16px;">
-                    <div style="padding:0 8px 10px;"><h4 style="margin:0 0 8px;font-size:21px;font-weight:900;color:#0f172a;">Authentication and endpoint setup</h4><p style="margin:0;color:#64748b;font-size:15px;line-height:1.75;">Clear endpoint, token, and client setup experience for AI tools.</p></div>
-                </div>
-                <div style="flex:1;min-width:320px;max-width:560px;background:#fff;border:1px solid #e2e8f0;border-radius:28px;padding:14px;box-shadow:0 24px 58px #e2e8f0;margin:8px;">
-                    <img src="./Manual_Override.png" alt="Manual access controls" style="width:100%;height:auto;display:block;border-radius:20px;margin-bottom:16px;">
-                    <div style="padding:0 8px 10px;"><h4 style="margin:0 0 8px;font-size:21px;font-weight:900;color:#0f172a;">Manual overrides</h4><p style="margin:0;color:#64748b;font-size:15px;line-height:1.75;">Include special models and exclude models that should stay hidden.</p></div>
-                </div>
-                <div style="flex:1;min-width:320px;max-width:560px;background:#fff;border:1px solid #e2e8f0;border-radius:28px;padding:14px;box-shadow:0 24px 58px #e2e8f0;margin:8px;">
-                    <img src="./settings.png" alt="Niyu MCP settings panel" style="width:100%;height:auto;display:block;border-radius:20px;margin-bottom:16px;">
-                    <div style="padding:0 8px 10px;"><h4 style="margin:0 0 8px;font-size:21px;font-weight:900;color:#0f172a;">Full admin control</h4><p style="margin:0;color:#64748b;font-size:15px;line-height:1.75;">Enable MCP, choose execution user, control auth, origins, IPs, cache, logs, and configs.</p></div>
-                </div>
-                <div style="flex:1;min-width:320px;max-width:560px;background:#fff;border:1px solid #e2e8f0;border-radius:28px;padding:14px;box-shadow:0 24px 58px #e2e8f0;margin:8px;">
-                    <img src="./audit_logs.png" alt="MCP audit log list" style="width:100%;height:auto;display:block;border-radius:20px;margin-bottom:16px;">
-                    <div style="padding:0 8px 10px;"><h4 style="margin:0 0 8px;font-size:21px;font-weight:900;color:#0f172a;">Operational audit trail</h4><p style="margin:0;color:#64748b;font-size:15px;line-height:1.75;">Inspect successful, denied, and failed MCP activity.</p></div>
-                </div>
-            </div>
+        <div style="flex:1.1;min-width:320px;">
+          <div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:32px;padding:15px;box-shadow:0 42px 90px rgba(191,219,254,.7);">
+            <img src="./se.png" alt="BigQuery Connector settings with project, dataset and credentials" style="width:100%;display:block;border-radius:22px;">
+          </div>
         </div>
+      </div>
     </div>
+  </section>
 
-    <!-- USE CASES -->
-    <div style="background-color:#020617;color:#ffffff;padding:112px 20px;">
-        <div style="max-width:1180px;margin:0 auto;text-align:center;">
-            <span style="display:inline-block;padding:8px 18px;border-radius:100px;background:#0f172a;border:1px solid #334155;color:#93c5fd;font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase;">Real Odoo questions</span>
-            <h2 style="font-size:62px;font-weight:950;line-height:0.98;letter-spacing:-4px;margin:24px 0 22px;color:#ffffff;">Let AI work with the ERP. <br><span style="color:#93c5fd;">Without opening the whole ERP.</span></h2>
-            <p style="font-size:19px;color:#cbd5e1;max-width:850px;margin:0 auto 66px;line-height:1.75;">Examples of what teams can ask when the right apps, models, and permissions are exposed.</p>
+  <!-- QUERY BUILDER -->
+  <section class="nl-bq-pad" style="background:#f8fafc;padding:112px 20px;border-top:1px solid #e2e8f0;border-bottom:1px solid #e2e8f0;">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:62px;">
+        <span style="display:inline-block;padding:8px 16px;border-radius:999px;background:#fff7ed;border:1px solid #fed7aa;color:#ea580c;font-size:12px;font-weight:950;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;">Step 02: Build exports</span>
+        <h2 class="nl-bq-section-title" style="font-size:56px;font-weight:950;color:#0f172a;margin:0 0 18px 0;letter-spacing:-3px;line-height:1.05;">Create one export per business question.</h2>
+        <p style="font-size:19px;color:#475569;max-width:860px;margin:0 auto;line-height:1.75;">For each export, choose the Odoo source table, select only needed columns, add a domain filter, and decide whether it runs manually or on an incremental schedule.</p>
+      </div>
 
-            <div class="d-flex justify-content-center flex-wrap" style="display:flex;flex-wrap:wrap;gap:18px;text-align:left;">
-                <div style="flex:1;min-width:260px;background:#111827;border:1px solid #334155;border-radius:26px;padding:28px;">
-                    <h4 style="color:#ffffff;font-size:20px;font-weight:900;margin:0 0 12px;">Sales</h4>
-                    <p style="color:#cbd5e1;font-size:15px;line-height:1.75;margin:0;">“Show quotations older than 14 days.”<br>“Which customers have open follow-ups?”<br>“Create a draft note for this opportunity.”</p>
-                </div>
-                <div style="flex:1;min-width:260px;background:#111827;border:1px solid #334155;border-radius:26px;padding:28px;">
-                    <h4 style="color:#ffffff;font-size:20px;font-weight:900;margin:0 0 12px;">Inventory</h4>
-                    <p style="color:#cbd5e1;font-size:15px;line-height:1.75;margin:0;">“Check stock by warehouse.”<br>“Find pending receipts.”<br>“Explain stock moves for this product.”</p>
-                </div>
-                <div style="flex:1;min-width:260px;background:#111827;border:1px solid #334155;border-radius:26px;padding:28px;">
-                    <h4 style="color:#ffffff;font-size:20px;font-weight:900;margin:0 0 12px;">Accounting</h4>
-                    <p style="color:#cbd5e1;font-size:15px;line-height:1.75;margin:0;">“List overdue invoices.”<br>“Find unpaid vendor bills.”<br>“Summarize invoices by customer.”</p>
-                </div>
-                <div style="flex:1;min-width:260px;background:#111827;border:1px solid #334155;border-radius:26px;padding:28px;">
-                    <h4 style="color:#ffffff;font-size:20px;font-weight:900;margin:0 0 12px;">Purchase</h4>
-                    <p style="color:#cbd5e1;font-size:15px;line-height:1.75;margin:0;">“Show open RFQs.”<br>“Find purchases from this vendor.”<br>“Create a draft vendor contact.”</p>
-                </div>
-            </div>
+      <div style="display:flex;flex-wrap:wrap;gap:24px;justify-content:center;align-items:stretch;">
+        <div class="nl-bq-card" style="flex:1;min-width:320px;background:#ffffff;border:1px solid #e2e8f0;border-radius:30px;padding:14px;box-shadow:0 24px 60px rgba(203,213,225,.7);">
+          <img src="./co.png" alt="Select Odoo columns for BigQuery export" style="width:100%;display:block;border-radius:20px;margin-bottom:18px;">
+          <div style="padding:0 10px 10px 10px;">
+            <h3 style="font-size:22px;font-weight:950;color:#0f172a;margin:0 0 8px 0;">Column-level control</h3>
+            <p style="font-size:15px;color:#64748b;margin:0;line-height:1.75;">Export only the fields your dashboard needs. This keeps BigQuery tables cleaner and reduces unnecessary data movement.</p>
+          </div>
         </div>
-    </div>
 
-    <!-- FAQ -->
-    <div style="background:#ffffff;padding:108px 20px;">
-        <div style="max-width:1180px;margin:0 auto;">
-            <div style="text-align:center;margin-bottom:70px;">
-                <span style="display:inline-block;padding:8px 18px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:100px;color:#334155;font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase;">FAQ</span>
-                <h2 style="font-size:52px;font-weight:950;color:#0f172a;letter-spacing:-3px;margin:22px 0 0;">Everything customers ask before buying</h2>
-            </div>
-
-            <div style="font-size:0;text-align:center;margin-bottom:92px;">
-                <div style="display:inline-block;vertical-align:top;width:45%;min-width:320px;margin:2%;font-size:16px;text-align:left;background:#f8fafc;border:1px solid #e2e8f0;border-radius:26px;padding:36px;box-sizing:border-box;">
-                    <h5 style="font-weight:900;color:#0f172a;margin:0 0 14px;font-size:18px;">Does this work only with ChatGPT?</h5>
-                    <p style="color:#64748b;font-size:15px;line-height:1.75;margin:0;">No. It is built for MCP-compatible clients such as ChatGPT, Claude, Cursor, Codex, VS Code, and other tools that can connect to MCP servers.</p>
-                </div>
-
-                <div style="display:inline-block;vertical-align:top;width:45%;min-width:320px;margin:2%;font-size:16px;text-align:left;background:#f8fafc;border:1px solid #e2e8f0;border-radius:26px;padding:36px;box-sizing:border-box;">
-                    <h5 style="font-weight:900;color:#0f172a;margin:0 0 14px;font-size:18px;">Can it create, update, or delete Odoo records?</h5>
-                    <p style="color:#64748b;font-size:15px;line-height:1.75;margin:0;">Yes, when allowed. CRUD access depends on the execution user, normal Odoo ACLs, and the access bundle permission preset. New setups are read-only by default.</p>
-                </div>
-
-                <div style="display:inline-block;vertical-align:top;width:45%;min-width:320px;margin:2%;font-size:16px;text-align:left;background:#f8fafc;border:1px solid #e2e8f0;border-radius:26px;padding:36px;box-sizing:border-box;">
-                    <h5 style="font-weight:900;color:#0f172a;margin:0 0 14px;font-size:18px;">Do admins need to know technical model names?</h5>
-                    <p style="color:#64748b;font-size:15px;line-height:1.75;margin:0;">No. Built-in access bundles cover common apps such as Inventory, Sales, Purchase, CRM, Accounting, Project, Manufacturing, Website, Helpdesk, HR, and Contacts. Technical model overrides are available only when needed.</p>
-                </div>
-
-                <div style="display:inline-block;vertical-align:top;width:45%;min-width:320px;margin:2%;font-size:16px;text-align:left;background:#f8fafc;border:1px solid #e2e8f0;border-radius:26px;padding:36px;box-sizing:border-box;">
-                    <h5 style="font-weight:900;color:#0f172a;margin:0 0 14px;font-size:18px;">What keeps AI from accessing everything?</h5>
-                    <p style="color:#64748b;font-size:15px;line-height:1.75;margin:0;">Execution user permissions, assigned bundles, Odoo ACLs, record rules, permission presets, sensitive-field filtering, blocked models, allowed origins, IP allowlists, and audit logs.</p>
-                </div>
-
-                <div style="display:inline-block;vertical-align:top;width:45%;min-width:320px;margin:2%;font-size:16px;text-align:left;background:#f8fafc;border:1px solid #e2e8f0;border-radius:26px;padding:36px;box-sizing:border-box;">
-                    <h5 style="font-weight:900;color:#0f172a;margin:0 0 14px;font-size:18px;">Does it support Cursor?</h5>
-                    <p style="color:#64748b;font-size:15px;line-height:1.75;margin:0;">Yes. The module provides Cursor-ready remote MCP configuration and a local STDIO bridge configuration for development or localhost Odoo instances.</p>
-                </div>
-
-                <div style="display:inline-block;vertical-align:top;width:45%;min-width:320px;margin:2%;font-size:16px;text-align:left;background:#f8fafc;border:1px solid #e2e8f0;border-radius:26px;padding:36px;box-sizing:border-box;">
-                    <h5 style="font-weight:900;color:#0f172a;margin:0 0 14px;font-size:18px;">Can it call arbitrary Odoo methods?</h5>
-                    <p style="color:#64748b;font-size:15px;line-height:1.75;margin:0;">The generic method-call endpoint is disabled by default for safety. Production workflows should use explicit MCP tools and approved model permissions.</p>
-                </div>
-            </div>
-
-            <!-- FINAL CTA -->
-            <div style="background-color:#020617;border-radius:50px;padding:96px 40px;text-align:center;overflow:hidden;box-shadow:0 55px 110px -25px #000000;border:1px solid #1f2937;">
-                <h2 style="font-size:58px;font-weight:950;color:#ffffff;letter-spacing:-3px;margin:0 0 28px;line-height:0.98;">Your Odoo becomes <br><span style="color:#93c5fd;">AI-ready, permission-safe, and auditable.</span></h2>
-                <p style="max-width:830px;margin:0 auto 42px;color:#cbd5e1;font-size:18px;line-height:1.75;">Native MCP endpoint. Bearer authentication. Execution-user control. App-based access bundles. Include/exclude models. Safe CRUD permissions. Prompts and resources. Semantic glossary. Diagnostics. Audit trail. One serious MCP layer for Odoo teams.</p>
-
-                <div style="margin-bottom:70px;">
-                    <a href="https://apps.odoo.com/apps/modules/browse?search=Niyu+Labs" target="_blank" style="display:inline-block;background-color:#ffffff;color:#020617;padding:22px 60px;border-radius:100px;font-weight:900;font-size:18px;text-decoration:none;box-shadow:0 0 40px #334155;border:1px solid #ffffff;">Install the Module &#8594;</a>
-                </div>
-
-                <div style="border-top:1px solid #1f2937;padding-top:40px;">
-                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
-                        <tr>
-                            <td align="left" style="vertical-align:middle;">
-                                <div style="font-weight:950;color:#ffffff;font-size:20px;letter-spacing:-1px;">NIYU <span style="color:#93c5fd;">LABS</span></div>
-                                <div style="color:#64748b;font-size:12px;font-weight:700;margin-top:5px;">Secure AI infrastructure for Odoo teams</div>
-                            </td>
-                            <td align="right" style="vertical-align:middle;">
-                                <div style="color:#94a3b8;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1px;margin-bottom:5px;">Queries &amp; Support</div>
-                                <a href="mailto:info@niyulabs.com" style="color:#ffffff;text-decoration:none;font-size:16px;font-weight:800;">info@niyulabs.com</a>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
+        <div class="nl-bq-card" style="flex:1;min-width:320px;background:#ffffff;border:1px solid #e2e8f0;border-radius:30px;padding:14px;box-shadow:0 24px 60px rgba(203,213,225,.7);">
+          <img src="./in.png" alt="Odoo domain filter for filtered BigQuery export" style="width:100%;display:block;border-radius:20px;margin-bottom:18px;">
+          <div style="padding:0 10px 10px 10px;">
+            <h3 style="font-size:22px;font-weight:950;color:#0f172a;margin:0 0 8px 0;">Odoo domain filters</h3>
+            <p style="font-size:15px;color:#64748b;margin:0;line-height:1.75;">Use familiar Odoo-style domains such as confirmed orders, posted invoices, active customers, stock locations, or company-specific records.</p>
+          </div>
         </div>
+
+        <div class="nl-bq-card" style="flex:1;min-width:320px;background:#ffffff;border:1px solid #e2e8f0;border-radius:30px;padding:14px;box-shadow:0 24px 60px rgba(203,213,225,.7);">
+          <img src="./incre_export.png" alt="Incremental export interval controls" style="width:100%;display:block;border-radius:20px;margin-bottom:18px;">
+          <div style="padding:0 10px 10px 10px;">
+            <h3 style="font-size:22px;font-weight:950;color:#0f172a;margin:0 0 8px 0;">Incremental auto export</h3>
+            <p style="font-size:15px;color:#64748b;margin:0;line-height:1.75;">Turn on scheduled sync per query and define the interval. The connector creates or updates the related Odoo cron automatically.</p>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
+
+  <!-- RUN MONITOR RECOVER -->
+  <section class="nl-bq-pad" style="background:#ffffff;padding:112px 20px;">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div class="nl-bq-split" style="display:flex;flex-wrap:wrap;gap:54px;align-items:center;">
+        <div style="flex:1.08;min-width:320px;">
+          <div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:32px;padding:15px;box-shadow:0 42px 90px rgba(203,213,225,.75);">
+            <img src="./query.png" alt="BigQuery export query list with status and actions" style="width:100%;display:block;border-radius:22px;">
+          </div>
+        </div>
+        <div style="flex:.92;min-width:320px;">
+          <span style="display:inline-block;padding:8px 16px;border-radius:999px;background:#f0fdf4;border:1px solid #bbf7d0;color:#16a34a;font-size:12px;font-weight:950;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;">Step 03: Run + monitor</span>
+          <h2 class="nl-bq-section-title" style="font-size:52px;font-weight:950;letter-spacing:-3px;line-height:1.05;color:#0f172a;margin:0 0 22px 0;">Admins can see what is running, what is done, and what needs attention.</h2>
+          <p style="font-size:17px;color:#475569;line-height:1.75;margin:0 0 26px 0;">Each export shows status, last sync, last run, latest batch time, rows exported, lock status, alerts, query log count and change log count.</p>
+          <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;">
+            <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:18px;padding:15px;"><b style="color:#0f172a;">Run</b><br><span style="color:#64748b;font-size:14px;">Manual export on demand.</span></div>
+            <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:18px;padding:15px;"><b style="color:#0f172a;">Hard Refresh</b><br><span style="color:#64748b;font-size:14px;">Reset sync cursor and rerun.</span></div>
+            <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:18px;padding:15px;"><b style="color:#0f172a;">Clear Error</b><br><span style="color:#64748b;font-size:14px;">Clear failure and retry.</span></div>
+            <div style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:18px;padding:15px;"><b style="color:#0f172a;">Reset Stuck</b><br><span style="color:#64748b;font-size:14px;">Recover locked exports safely.</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENGINE SECTION -->
+  <section class="nl-bq-pad" style="background-color:#0a0f1c;color:#ffffff;padding:118px 20px;">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:66px;">
+        <span style="display:inline-block;padding:8px 16px;border-radius:999px;background:#111827;border:1px solid #334155;color:#67e8f9;font-size:12px;font-weight:950;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;">Under the hood</span>
+        <h2 class="nl-bq-section-title" style="font-size:56px;font-weight:950;color:#ffffff;margin:0 0 18px 0;letter-spacing:-3px;line-height:1.05;">Built for large Odoo tables, not demo records.</h2>
+        <p style="font-size:19px;color:#cbd5e1;max-width:880px;margin:0 auto;line-height:1.75;">The connector handles batch processing, stable schema mapping, staging tables, BigQuery MERGE logic, cron continuation and protected runtime state.</p>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:18px;justify-content:center;">
+        <div style="flex:1;min-width:260px;background:#111827;border:1px solid #334155;border-radius:26px;padding:30px;box-shadow:0 28px 65px rgba(0,0,0,.25);">
+          <div style="font-size:30px;margin-bottom:16px;">&#128230;</div>
+          <h3 style="font-size:21px;color:#ffffff;font-weight:950;margin:0 0 10px 0;">Batch export engine</h3>
+          <p style="font-size:15px;color:#cbd5e1;line-height:1.75;margin:0;">Large datasets are fetched and loaded in batches instead of one fragile all-at-once operation.</p>
+        </div>
+        <div style="flex:1;min-width:260px;background:#111827;border:1px solid #334155;border-radius:26px;padding:30px;box-shadow:0 28px 65px rgba(0,0,0,.25);">
+          <div style="font-size:30px;margin-bottom:16px;">&#128279;</div>
+          <h3 style="font-size:21px;color:#ffffff;font-weight:950;margin:0 0 10px 0;">Staging + MERGE</h3>
+          <p style="font-size:15px;color:#cbd5e1;line-height:1.75;margin:0;">Data lands in a temporary BigQuery staging table, then updates/inserts into the final table with MERGE.</p>
+        </div>
+        <div style="flex:1;min-width:260px;background:#111827;border:1px solid #334155;border-radius:26px;padding:30px;box-shadow:0 28px 65px rgba(0,0,0,.25);">
+          <div style="font-size:30px;margin-bottom:16px;">&#128736;</div>
+          <h3 style="font-size:21px;color:#ffffff;font-weight:950;margin:0 0 10px 0;">Stable schema mapping</h3>
+          <p style="font-size:15px;color:#cbd5e1;line-height:1.75;margin:0;">Odoo/PostgreSQL types are mapped to BigQuery types, with JSON and unusual values handled safely.</p>
+        </div>
+        <div style="flex:1;min-width:260px;background:#111827;border:1px solid #334155;border-radius:26px;padding:30px;box-shadow:0 28px 65px rgba(0,0,0,.25);">
+          <div style="font-size:30px;margin-bottom:16px;">&#128274;</div>
+          <h3 style="font-size:21px;color:#ffffff;font-weight:950;margin:0 0 10px 0;">Advisory locks</h3>
+          <p style="font-size:15px;color:#cbd5e1;line-height:1.75;margin:0;">The export process uses locks and stuck-state detection so duplicate/crashed runs are visible and recoverable.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BIGQUERY RESULTS -->
+  <section class="nl-bq-pad" style="background:#ffffff;padding:112px 20px;">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:62px;">
+        <span style="display:inline-block;padding:8px 16px;border-radius:999px;background:#eff6ff;border:1px solid #bfdbfe;color:#1d4ed8;font-size:12px;font-weight:950;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;">Step 04: Use the warehouse</span>
+        <h2 class="nl-bq-section-title" style="font-size:56px;font-weight:950;color:#0f172a;margin:0 0 18px 0;letter-spacing:-3px;line-height:1.05;">Your Odoo data becomes queryable inside BigQuery.</h2>
+        <p style="font-size:19px;color:#475569;max-width:860px;margin:0 auto;line-height:1.75;">Once exported, teams can inspect schema, run SQL, connect BI dashboards, join with marketing/finance/support data, or feed downstream AI and ML projects.</p>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:24px;justify-content:center;align-items:stretch;">
+        <div class="nl-bq-card" style="flex:1;min-width:320px;background:#ffffff;border:1px solid #e2e8f0;border-radius:30px;padding:14px;box-shadow:0 24px 60px rgba(203,213,225,.7);">
+          <img src="./schema.png" alt="BigQuery schema generated from Odoo export" style="width:100%;display:block;border-radius:20px;margin-bottom:18px;">
+          <div style="padding:0 10px 10px 10px;">
+            <h3 style="font-size:22px;font-weight:950;color:#0f172a;margin:0 0 8px 0;">Generated schema</h3>
+            <p style="font-size:15px;color:#64748b;margin:0;line-height:1.75;">BigQuery receives structured tables with typed fields that BI tools can understand.</p>
+          </div>
+        </div>
+        <div class="nl-bq-card" style="flex:1;min-width:320px;background:#ffffff;border:1px solid #e2e8f0;border-radius:30px;padding:14px;box-shadow:0 24px 60px rgba(203,213,225,.7);">
+          <img src="./fullbig.png" alt="Odoo data exported to BigQuery table" style="width:100%;display:block;border-radius:20px;margin-bottom:18px;">
+          <div style="padding:0 10px 10px 10px;">
+            <h3 style="font-size:22px;font-weight:950;color:#0f172a;margin:0 0 8px 0;">Queryable rows</h3>
+            <p style="font-size:15px;color:#64748b;margin:0;line-height:1.75;">Sales, inventory, accounting, CRM, product, website or custom Odoo data becomes available for SQL and dashboards.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BI CONNECTIONS -->
+  <section class="nl-bq-pad" style="background-color:#f8fafc;padding:112px 20px;border-top:1px solid #e2e8f0;">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:62px;">
+        <span style="display:inline-block;padding:8px 16px;border-radius:999px;background:#ecfeff;border:1px solid #a5f3fc;color:#0e7490;font-size:12px;font-weight:950;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;">BI connections</span>
+        <h2 class="nl-bq-section-title" style="font-size:56px;font-weight:950;color:#0f172a;margin:0 0 18px 0;letter-spacing:-3px;line-height:1.05;">Use the dashboards your team already knows.</h2>
+        <p style="font-size:19px;color:#475569;max-width:830px;margin:0 auto;line-height:1.75;">BigQuery is the middle layer. After export, your analysts can connect Power BI, Looker Studio, Tableau and other BI tools directly to the warehouse.</p>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:24px;justify-content:center;align-items:stretch;">
+        <div class="nl-bq-card" style="flex:1;min-width:300px;background:#ffffff;border:1px solid #e2e8f0;border-radius:30px;padding:16px;box-shadow:0 24px 60px rgba(203,213,225,.7);">
+          <div style="border-radius:22px;background:#fff;overflow:hidden;margin-bottom:18px;">
+            <video autoplay loop muted playsinline preload="auto" style="width:100%;display:block;border-radius:22px;background:#ffffff;">
+              <source src="./powerbiconnection.webm" type="video/webm">
+            </video>
+          </div>
+          <div style="display:flex;align-items:center;gap:14px;padding:0 8px 8px 8px;">
+            <img src="./copy.png" alt="Power BI" style="width:44px;height:44px;object-fit:contain;">
+            <div><h3 style="font-size:22px;font-weight:950;color:#0f172a;margin:0;">Power BI</h3><p style="font-size:14px;color:#64748b;margin:2px 0 0 0;">Connect reports to BigQuery tables.</p></div>
+          </div>
+        </div>
+
+        <div class="nl-bq-card" style="flex:1;min-width:300px;background:#ffffff;border:1px solid #e2e8f0;border-radius:30px;padding:16px;box-shadow:0 24px 60px rgba(203,213,225,.7);">
+          <img src="./lookerconnection.png" alt="Looker Studio BigQuery connection" style="width:100%;display:block;border-radius:22px;margin-bottom:18px;">
+          <div style="display:flex;align-items:center;gap:14px;padding:0 8px 8px 8px;">
+            <img src="./2.png" alt="Looker Studio" style="width:44px;height:44px;object-fit:contain;">
+            <div><h3 style="font-size:22px;font-weight:950;color:#0f172a;margin:0;">Looker Studio</h3><p style="font-size:14px;color:#64748b;margin:2px 0 0 0;">Build Google-native dashboards.</p></div>
+          </div>
+        </div>
+
+        <div class="nl-bq-card" style="flex:1;min-width:300px;background:#ffffff;border:1px solid #e2e8f0;border-radius:30px;padding:16px;box-shadow:0 24px 60px rgba(203,213,225,.7);">
+          <img src="./tableauconnection.png" alt="Tableau BigQuery connection" style="width:100%;display:block;border-radius:22px;margin-bottom:18px;">
+          <div style="display:flex;align-items:center;gap:14px;padding:0 8px 8px 8px;">
+            <img src="./hd.png" alt="Tableau" style="width:44px;height:44px;object-fit:contain;">
+            <div><h3 style="font-size:22px;font-weight:950;color:#0f172a;margin:0;">Tableau</h3><p style="font-size:14px;color:#64748b;margin:2px 0 0 0;">Analyze Odoo with Tableau.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GOVERNANCE AND LOGS -->
+  <section class="nl-bq-pad" style="background:#ffffff;padding:112px 20px;">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div class="nl-bq-split" style="display:flex;flex-wrap:wrap;gap:54px;align-items:center;">
+        <div style="flex:.92;min-width:320px;">
+          <span style="display:inline-block;padding:8px 16px;border-radius:999px;background:#fef2f2;border:1px solid #fecaca;color:#b91c1c;font-size:12px;font-weight:950;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;">Control + visibility</span>
+          <h2 class="nl-bq-section-title" style="font-size:52px;font-weight:950;letter-spacing:-3px;line-height:1.05;color:#0f172a;margin:0 0 22px 0;">Managers control exports. Users can inspect safely.</h2>
+          <p style="font-size:17px;color:#475569;line-height:1.75;margin:0 0 28px 0;">The module includes dedicated BigQuery Connector security groups. Managers can configure and run exports. Users can view connector data, query logs and change logs in read-only mode.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;">
+            <div style="flex:1;min-width:180px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:20px;padding:18px;">
+              <b style="font-size:17px;color:#0f172a;">Query Logs</b>
+              <p style="font-size:14px;color:#64748b;margin:8px 0 0 0;line-height:1.65;">Start, batch, success, warning, error, stuck and cron events.</p>
+            </div>
+            <div style="flex:1;min-width:180px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:20px;padding:18px;">
+              <b style="font-size:17px;color:#0f172a;">Change Logs</b>
+              <p style="font-size:14px;color:#64748b;margin:8px 0 0 0;line-height:1.65;">Track create, update, delete, hard refresh and recovery changes.</p>
+            </div>
+          </div>
+        </div>
+        <div style="flex:1.08;min-width:320px;">
+          <div style="background:#ffffff;border:1px solid #e2e8f0;border-radius:32px;padding:15px;box-shadow:0 42px 90px rgba(203,213,225,.75);">
+            <img src="./security.png" alt="BigQuery Connector access control and security settings" style="width:100%;display:block;border-radius:22px;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURE GRID -->
+  <section class="nl-bq-pad" style="background-color:#f8fafc;padding:108px 20px;border-top:1px solid #e2e8f0;">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:58px;">
+        <span style="display:inline-block;padding:8px 16px;border-radius:999px;background:#ffffff;border:1px solid #e2e8f0;color:#334155;font-size:12px;font-weight:950;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;">Complete capability list</span>
+        <h2 class="nl-bq-section-title" style="font-size:54px;font-weight:950;color:#0f172a;margin:0;letter-spacing:-3px;line-height:1.05;">Everything customers should see before buying.</h2>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:18px;justify-content:center;">
+        <div class="nl-bq-card" style="flex:1;min-width:250px;background:#ffffff;border:1px solid #e2e8f0;border-radius:24px;padding:28px;box-shadow:0 18px 45px rgba(226,232,240,.8);"><div style="font-size:28px;margin-bottom:12px;">&#128451;</div><h3 style="font-size:19px;font-weight:950;margin:0 0 8px 0;color:#0f172a;">Any Odoo table</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">Pick source tables from the Odoo database and create separate export definitions.</p></div>
+        <div class="nl-bq-card" style="flex:1;min-width:250px;background:#ffffff;border:1px solid #e2e8f0;border-radius:24px;padding:28px;box-shadow:0 18px 45px rgba(226,232,240,.8);"><div style="font-size:28px;margin-bottom:12px;">&#9986;</div><h3 style="font-size:19px;font-weight:950;margin:0 0 8px 0;color:#0f172a;">Column selection</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">Choose exactly which columns should reach BigQuery.</p></div>
+        <div class="nl-bq-card" style="flex:1;min-width:250px;background:#ffffff;border:1px solid #e2e8f0;border-radius:24px;padding:28px;box-shadow:0 18px 45px rgba(226,232,240,.8);"><div style="font-size:28px;margin-bottom:12px;">&#128269;</div><h3 style="font-size:19px;font-weight:950;margin:0 0 8px 0;color:#0f172a;">Domain filtering</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">Export only records matching Odoo business conditions.</p></div>
+        <div class="nl-bq-card" style="flex:1;min-width:250px;background:#ffffff;border:1px solid #e2e8f0;border-radius:24px;padding:28px;box-shadow:0 18px 45px rgba(226,232,240,.8);"><div style="font-size:28px;margin-bottom:12px;">&#9201;</div><h3 style="font-size:19px;font-weight:950;margin:0 0 8px 0;color:#0f172a;">Scheduled sync</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">Enable incremental export and set the interval per query.</p></div>
+        <div class="nl-bq-card" style="flex:1;min-width:250px;background:#ffffff;border:1px solid #e2e8f0;border-radius:24px;padding:28px;box-shadow:0 18px 45px rgba(226,232,240,.8);"><div style="font-size:28px;margin-bottom:12px;">&#128257;</div><h3 style="font-size:19px;font-weight:950;margin:0 0 8px 0;color:#0f172a;">Incremental cursor</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">Tracks last sync timestamp and last synced ID.</p></div>
+        <div class="nl-bq-card" style="flex:1;min-width:250px;background:#ffffff;border:1px solid #e2e8f0;border-radius:24px;padding:28px;box-shadow:0 18px 45px rgba(226,232,240,.8);"><div style="font-size:28px;margin-bottom:12px;">&#128230;</div><h3 style="font-size:19px;font-weight:950;margin:0 0 8px 0;color:#0f172a;">Batch processing</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">Handles large exports in repeatable chunks instead of one risky transfer.</p></div>
+        <div class="nl-bq-card" style="flex:1;min-width:250px;background:#ffffff;border:1px solid #e2e8f0;border-radius:24px;padding:28px;box-shadow:0 18px 45px rgba(226,232,240,.8);"><div style="font-size:28px;margin-bottom:12px;">&#128221;</div><h3 style="font-size:19px;font-weight:950;margin:0 0 8px 0;color:#0f172a;">Query logs</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">See run events, rows exported, messages, errors and cron activity.</p></div>
+        <div class="nl-bq-card" style="flex:1;min-width:250px;background:#ffffff;border:1px solid #e2e8f0;border-radius:24px;padding:28px;box-shadow:0 18px 45px rgba(226,232,240,.8);"><div style="font-size:28px;margin-bottom:12px;">&#128220;</div><h3 style="font-size:19px;font-weight:950;margin:0 0 8px 0;color:#0f172a;">Change logs</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">Audit who changed export name, table, columns, domain or interval.</p></div>
+        <div class="nl-bq-card" style="flex:1;min-width:250px;background:#ffffff;border:1px solid #e2e8f0;border-radius:24px;padding:28px;box-shadow:0 18px 45px rgba(226,232,240,.8);"><div style="font-size:28px;margin-bottom:12px;">&#128721;</div><h3 style="font-size:19px;font-weight:950;margin:0 0 8px 0;color:#0f172a;">Stuck-state recovery</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">Detect and reset exports that were locked by an interrupted run.</p></div>
+        <div class="nl-bq-card" style="flex:1;min-width:250px;background:#ffffff;border:1px solid #e2e8f0;border-radius:24px;padding:28px;box-shadow:0 18px 45px rgba(226,232,240,.8);"><div style="font-size:28px;margin-bottom:12px;">&#128737;</div><h3 style="font-size:19px;font-weight:950;margin:0 0 8px 0;color:#0f172a;">User/manager access</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">Managers operate exports; users inspect records and logs.</p></div>
+        <div class="nl-bq-card" style="flex:1;min-width:250px;background:#ffffff;border:1px solid #e2e8f0;border-radius:24px;padding:28px;box-shadow:0 18px 45px rgba(226,232,240,.8);"><div style="font-size:28px;margin-bottom:12px;">&#128640;</div><h3 style="font-size:19px;font-weight:950;margin:0 0 8px 0;color:#0f172a;">Hard refresh</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">Reset runtime cursor and run the export again from the beginning.</p></div>
+        <div class="nl-bq-card" style="flex:1;min-width:250px;background:#ffffff;border:1px solid #e2e8f0;border-radius:24px;padding:28px;box-shadow:0 18px 45px rgba(226,232,240,.8);"><div style="font-size:28px;margin-bottom:12px;">&#129302;</div><h3 style="font-size:19px;font-weight:950;margin:0 0 8px 0;color:#0f172a;">AI/ML ready data</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">Use BigQuery as the clean layer for analytics, ML and AI reporting projects.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- USE CASES -->
+  <section class="nl-bq-pad" style="background:#ffffff;padding:108px 20px;">
+    <div style="max-width:1180px;margin:0 auto;text-align:center;">
+      <span style="display:inline-block;padding:8px 16px;border-radius:999px;background:#f0fdf4;border:1px solid #bbf7d0;color:#15803d;font-size:12px;font-weight:950;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;">Practical use cases</span>
+      <h2 class="nl-bq-section-title" style="font-size:54px;font-weight:950;color:#0f172a;margin:0 0 18px 0;letter-spacing:-3px;line-height:1.05;">What customers can build after installing it.</h2>
+      <p style="font-size:19px;color:#475569;max-width:850px;margin:0 auto 54px auto;line-height:1.75;">The connector is valuable because it moves Odoo data where serious reporting tools can use it.</p>
+
+      <div style="display:flex;flex-wrap:wrap;gap:18px;justify-content:center;text-align:left;">
+        <div style="flex:1;min-width:270px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:28px;padding:30px;"><h3 style="margin:0 0 10px 0;font-size:22px;font-weight:950;color:#0f172a;">Sales dashboards</h3><p style="margin:0;color:#64748b;font-size:15px;line-height:1.75;">Track quotations, orders, revenue, salespersons, products, regions and customer trends in Power BI or Looker.</p></div>
+        <div style="flex:1;min-width:270px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:28px;padding:30px;"><h3 style="margin:0 0 10px 0;font-size:22px;font-weight:950;color:#0f172a;">Inventory reporting</h3><p style="margin:0;color:#64748b;font-size:15px;line-height:1.75;">Analyze stock quantities, moves, warehouses, product categories and historical movement data outside live Odoo.</p></div>
+        <div style="flex:1;min-width:270px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:28px;padding:30px;"><h3 style="margin:0 0 10px 0;font-size:22px;font-weight:950;color:#0f172a;">Finance analysis</h3><p style="margin:0;color:#64748b;font-size:15px;line-height:1.75;">Use posted invoices, payments, partners and journal data for executive dashboards and financial reporting layers.</p></div>
+        <div style="flex:1;min-width:270px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:28px;padding:30px;"><h3 style="margin:0 0 10px 0;font-size:22px;font-weight:950;color:#0f172a;">Custom Odoo apps</h3><p style="margin:0;color:#64748b;font-size:15px;line-height:1.75;">Export custom module tables and build reporting around workflows that standard BI connectors do not understand.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL SCREENSHOT / DEMO -->
+  <section style="background-color:#020617;color:#ffffff;padding:118px 20px;text-align:center;">
+    <div style="max-width:1180px;margin:0 auto;">
+      <span style="display:inline-block;padding:8px 16px;border-radius:999px;background:#0f172a;border:1px solid #334155;color:#93c5fd;font-size:12px;font-weight:950;letter-spacing:2px;text-transform:uppercase;margin-bottom:24px;">Visual product proof</span>
+      <h2 class="nl-bq-big-title" style="font-size:68px;font-weight:950;line-height:.96;letter-spacing:-5px;margin:0 0 26px 0;color:#ffffff;">A connector that looks simple, <br><span style="color:#93c5fd;">but works like infrastructure.</span></h2>
+      <p style="font-size:20px;color:#cbd5e1;max-width:860px;margin:0 auto 62px auto;line-height:1.75;">Customers should immediately understand the value: Odoo data goes into BigQuery, and BigQuery becomes the source for dashboards, analytics and AI.</p>
+      <div style="background:#0b1220;border:1px solid #334155;border-radius:36px;padding:18px;box-shadow:0 70px 140px -40px #000000;">
+        <img src="./banner.gif" alt="Niyu BigQuery Connector Odoo to BI platforms" style="width:100%;display:block;border-radius:26px;background:#000000;">
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="nl-bq-pad" style="background:#ffffff;padding:108px 20px;">
+    <div style="max-width:1180px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:62px;">
+        <span style="display:inline-block;padding:8px 16px;border-radius:999px;background:#f8fafc;border:1px solid #e2e8f0;color:#334155;font-size:12px;font-weight:950;letter-spacing:2px;text-transform:uppercase;margin-bottom:20px;">FAQ</span>
+        <h2 class="nl-bq-section-title" style="font-size:52px;font-weight:950;color:#0f172a;margin:0;letter-spacing:-3px;line-height:1.05;">Questions buyers ask before purchase.</h2>
+      </div>
+
+      <div style="display:flex;flex-wrap:wrap;gap:20px;justify-content:center;">
+        <div style="flex:1;min-width:320px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:26px;padding:34px;"><h3 style="font-size:20px;font-weight:950;color:#0f172a;margin:0 0 12px 0;">Does this replace Power BI, Looker or Tableau?</h3><p style="margin:0;color:#64748b;font-size:15px;line-height:1.75;">No. It feeds BigQuery with Odoo data so those tools can read from a proper analytics warehouse.</p></div>
+        <div style="flex:1;min-width:320px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:26px;padding:34px;"><h3 style="font-size:20px;font-weight:950;color:#0f172a;margin:0 0 12px 0;">Can I export only specific records?</h3><p style="margin:0;color:#64748b;font-size:15px;line-height:1.75;">Yes. Use Odoo domain filters to restrict records, for example posted invoices, confirmed sales orders, active products or company-specific data.</p></div>
+        <div style="flex:1;min-width:320px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:26px;padding:34px;"><h3 style="font-size:20px;font-weight:950;color:#0f172a;margin:0 0 12px 0;">Can I choose only required fields?</h3><p style="margin:0;color:#64748b;font-size:15px;line-height:1.75;">Yes. The query form lets you select columns instead of exporting every field by default.</p></div>
+        <div style="flex:1;min-width:320px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:26px;padding:34px;"><h3 style="font-size:20px;font-weight:950;color:#0f172a;margin:0 0 12px 0;">Does it support incremental sync?</h3><p style="margin:0;color:#64748b;font-size:15px;line-height:1.75;">Yes. You can enable incremental auto export per query and set the sync interval. The connector manages related Odoo cron records.</p></div>
+        <div style="flex:1;min-width:320px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:26px;padding:34px;"><h3 style="font-size:20px;font-weight:950;color:#0f172a;margin:0 0 12px 0;">What happens if an export fails?</h3><p style="margin:0;color:#64748b;font-size:15px;line-height:1.75;">Admins can inspect the error, clear it, review logs, and reset stuck export state when a previous run was interrupted.</p></div>
+        <div style="flex:1;min-width:320px;background:#f8fafc;border:1px solid #e2e8f0;border-radius:26px;padding:34px;"><h3 style="font-size:20px;font-weight:950;color:#0f172a;margin:0 0 12px 0;">What do I need before setup?</h3><p style="margin:0;color:#64748b;font-size:15px;line-height:1.75;">You need a Google Cloud project, a BigQuery dataset and a service account JSON with the required BigQuery permissions.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background:#ffffff;padding:0 20px 112px 20px;">
+    <div style="max-width:1180px;margin:0 auto;background:#0a0a0a;border-radius:48px;padding:92px 40px;text-align:center;box-shadow:0 55px 115px -28px rgba(0,0,0,.6);border:1px solid #1f2937;">
+      <h2 class="nl-bq-big-title" style="font-size:60px;font-weight:950;color:#ffffff;letter-spacing:-4px;line-height:.98;margin:0 0 26px 0;">Make Odoo data usable <br><span style="color:#93c5fd;">outside Odoo.</span></h2>
+      <p style="max-width:830px;margin:0 auto 42px auto;color:#d1d5db;font-size:18px;line-height:1.75;">Clean exports. Column selection. Domain filters. Incremental sync. Batch processing. BigQuery MERGE. Logs. Recovery. BI connections. A practical data layer for companies that have outgrown basic Odoo reporting.</p>
+      <a href="https://niyulabs.com/products/bigquery" target="_blank" style="display:inline-block;background:#ffffff;color:#0a0a0a;text-decoration:none;border-radius:999px;padding:20px 46px;font-weight:950;font-size:17px;box-shadow:0 0 45px rgba(96,165,250,.35);">View Product Page &#8594;</a>
+
+      <div style="border-top:1px solid #222222;margin-top:62px;padding-top:34px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;text-align:left;">
+        <div>
+          <div style="font-weight:950;color:#ffffff;font-size:20px;letter-spacing:-1px;">NIYU <span style="color:#93c5fd;">LABS</span></div>
+          <div style="color:#6b7280;font-size:12px;font-weight:800;margin-top:4px;">Odoo connectors for analytics, AI and automation</div>
+        </div>
+        <div style="text-align:right;">
+          <div style="color:#9ca3af;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:1px;margin-bottom:4px;">Support</div>
+          <a href="mailto:info@niyulabs.com" style="color:#ffffff;text-decoration:none;font-size:16px;font-weight:900;">info@niyulabs.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>
