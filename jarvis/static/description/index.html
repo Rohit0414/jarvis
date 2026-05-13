@@ -80,136 +80,165 @@
     </div>
 
 
-  <!-- TOP CORE FEATURES -->
-<div style="width:100%;box-sizing:border-box;padding:92px 18px;background-color:#ffffff;overflow:hidden;">
+    <!-- TOP CORE FEATURES -->
+<div style="width:100%;box-sizing:border-box;padding:88px 18px;background-color:#ffffff;overflow:hidden;">
     <div style="max-width:1180px;width:100%;margin:0 auto;box-sizing:border-box;">
-
-        <div style="text-align:center;margin:0 auto 48px auto;max-width:960px;">
-            <div style="display:inline-block;border:1px solid #bfdbfe;border-radius:999px;padding:8px 18px;background-color:#eff6ff;color:#1d4ed8;font-size:12px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px;">
-                What makes this different
-            </div>
-
-            <h2 style="font-size:42px;line-height:1.08;font-weight:950;color:#0f172a;margin:0;letter-spacing:-0.045em;">
-                This is not a data dump connector. It is a controlled Odoo data pipeline for BigQuery.
-            </h2>
-
-            <p style="margin:18px auto 0 auto;color:#64748b;font-size:17px;line-height:1.75;max-width:890px;">
-                Most connectors simply move full Odoo tables into BigQuery. Niyu BigQuery Connector gives you the control serious reporting needs: sync only changed rows, run near realtime exports, filter records before export, and send only the fields your dashboards actually use.
-            </p>
+        <div style="text-align:center;margin:0 auto 46px auto;max-width:920px;">
+            <div style="display:inline-block;border:1px solid #bfdbfe;border-radius:999px;padding:8px 18px;background-color:#eff6ff;color:#1d4ed8;font-size:12px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px;">Main features buyers notice first</div>
+            <h2 style="font-size:42px;line-height:1.08;font-weight:950;color:#0f172a;margin:0;letter-spacing:-0.045em;">Not just another BigQuery connector. Built for controlled, fresh Odoo data.</h2>
+            <p style="margin:18px auto 0 auto;color:#64748b;font-size:17px;line-height:1.75;max-width:820px;">The key value is simple: choose the exact columns, send only the right records, update only what changed, and keep BigQuery close to live without manual exports.</p>
         </div>
 
         <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;table-layout:fixed;border-collapse:separate;border-spacing:14px;box-sizing:border-box;">
             <tr>
                 <td style="width:25%;vertical-align:top;padding:0;box-sizing:border-box;">
                     <div style="height:100%;background-color:#eff6ff;border:1px solid #bfdbfe;border-radius:30px;padding:30px;box-sizing:border-box;box-shadow:0 24px 58px rgba(37,99,235,0.10);">
-                        <div style="font-size:13px;font-weight:950;color:#1d4ed8;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:14px;">
-                            01 &#8226; Not full-table repeats
-                        </div>
-
-                        <h3 style="margin:0 0 10px 0;font-size:24px;line-height:1.16;font-weight:950;color:#0f172a;letter-spacing:-0.035em;">
-                            Sync only what changed, not the whole table again.
-                        </h3>
-
-                        <p style="margin:0;color:#475569;font-size:15px;line-height:1.72;">
-                            Many connectors keep exporting the same data again and again. Niyu BigQuery Connector can continue from the last sync point and push only new or updated Odoo records, making exports faster and more practical for real business reporting.
-                        </p>
+                        <div style="font-size:13px;font-weight:950;color:#1d4ed8;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:14px;">01 &#8226; Incremental sync</div>
+                        <h3 style="margin:0 0 10px 0;font-size:24px;line-height:1.16;font-weight:950;color:#0f172a;letter-spacing:-0.035em;">Update changed rows without rebuilding the table.</h3>
+                        <p style="margin:0;color:#475569;font-size:15px;line-height:1.72;">After the first export, the connector can continue from the last sync cursor and push new or updated Odoo records to BigQuery.</p>
                     </div>
                 </td>
 
                 <td style="width:25%;vertical-align:top;padding:0;box-sizing:border-box;">
                     <div style="height:100%;background-color:#f0fdf4;border:1px solid #bbf7d0;border-radius:30px;padding:30px;box-sizing:border-box;box-shadow:0 24px 58px rgba(22,163,74,0.10);">
-                        <div style="font-size:13px;font-weight:950;color:#15803d;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:14px;">
-                            02 &#8226; Not stale reporting
-                        </div>
-
-                        <h3 style="margin:0 0 10px 0;font-size:24px;line-height:1.16;font-weight:950;color:#0f172a;letter-spacing:-0.035em;">
-                            Keep BigQuery close to live Odoo data.
-                        </h3>
-
-                        <p style="margin:0;color:#475569;font-size:15px;line-height:1.72;">
-                            Some connectors are useful only for occasional exports. This connector can run scheduled exports as often as every 1 minute, so sales, inventory, accounting, and operations dashboards stay much closer to current Odoo activity.
-                        </p>
+                        <div style="font-size:13px;font-weight:950;color:#15803d;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:14px;">02 &#8226; Realtime export</div>
+                        <h3 style="margin:0 0 10px 0;font-size:24px;line-height:1.16;font-weight:950;color:#0f172a;letter-spacing:-0.035em;">Run exports as often as every 1 minute.</h3>
+                        <p style="margin:0;color:#475569;font-size:15px;line-height:1.72;">For reports that need fresh data, set a 1-minute auto export interval and let the Odoo cron keep BigQuery updated.</p>
                     </div>
                 </td>
 
                 <td style="width:25%;vertical-align:top;padding:0;box-sizing:border-box;">
                     <div style="height:100%;background-color:#f5f3ff;border:1px solid #ddd6fe;border-radius:30px;padding:30px;box-sizing:border-box;box-shadow:0 24px 58px rgba(124,58,237,0.10);">
-                        <div style="font-size:13px;font-weight:950;color:#6d28d9;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:14px;">
-                            03 &#8226; Not blind export
-                        </div>
-
-                        <h3 style="margin:0 0 10px 0;font-size:24px;line-height:1.16;font-weight:950;color:#0f172a;letter-spacing:-0.035em;">
-                            Filter records before they enter BigQuery.
-                        </h3>
-
-                        <p style="margin:0;color:#475569;font-size:15px;line-height:1.72;">
-                            Instead of flooding BigQuery with every record, add Odoo domain filters per export definition. Export only posted invoices, confirmed sales, selected companies, active products, specific warehouses, or the exact business slice your report needs.
-                        </p>
+                        <div style="font-size:13px;font-weight:950;color:#6d28d9;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:14px;">03 &#8226; Filtering</div>
+                        <h3 style="margin:0 0 10px 0;font-size:24px;line-height:1.16;font-weight:950;color:#0f172a;letter-spacing:-0.035em;">Export only the records the report actually needs.</h3>
+                        <p style="margin:0;color:#475569;font-size:15px;line-height:1.72;">Use Odoo domain filters per export definition, so BigQuery receives clean business slices instead of every record.</p>
                     </div>
                 </td>
 
                 <td style="width:25%;vertical-align:top;padding:0;box-sizing:border-box;">
                     <div style="height:100%;background-color:#fff7ed;border:1px solid #fed7aa;border-radius:30px;padding:30px;box-sizing:border-box;box-shadow:0 24px 58px rgba(234,88,12,0.10);">
-                        <div style="font-size:13px;font-weight:950;color:#c2410c;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:14px;">
-                            04 &#8226; Not messy tables
-                        </div>
-
-                        <h3 style="margin:0 0 10px 0;font-size:24px;line-height:1.16;font-weight:950;color:#0f172a;letter-spacing:-0.035em;">
-                            Send only useful fields, not every Odoo column.
-                        </h3>
-
-                        <p style="margin:0;color:#475569;font-size:15px;line-height:1.72;">
-                            Odoo models can contain many technical fields that reporting teams do not need. Choose the exact fields for each export, so BigQuery tables stay smaller, cleaner, easier to query, and easier to use in dashboards.
-                        </p>
+                        <div style="font-size:13px;font-weight:950;color:#c2410c;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:14px;">04 &#8226; Column selection</div>
+                        <h3 style="margin:0 0 10px 0;font-size:24px;line-height:1.16;font-weight:950;color:#0f172a;letter-spacing:-0.035em;">Export only the fields your report needs.</h3>
+                        <p style="margin:0;color:#475569;font-size:15px;line-height:1.72;">Choose exact Odoo fields per export definition instead of sending every column to BigQuery. Keep tables smaller, cleaner and easier to use.</p>
                     </div>
                 </td>
             </tr>
         </table>
+    </div>
+</div>
+   <!-- INCREMENTAL + REALTIME SYNC SCREENSHOT -->
+<div style="width:100%;box-sizing:border-box;padding:88px 18px;background:linear-gradient(180deg,#eff6ff 0%,#ffffff 100%);overflow:hidden;border-top:1px solid #dbeafe;">
+    <div style="max-width:1320px;width:100%;margin:0 auto;box-sizing:border-box;">
+        <div style="text-align:center;margin:0 auto 46px auto;max-width:980px;">
+            <div style="display:inline-block;border:1px solid #bfdbfe;border-radius:999px;padding:8px 18px;background-color:#ffffff;color:#1d4ed8;font-size:12px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px;">
+                Incremental sync &#8226; 1-minute export &#8226; BigQuery MERGE
+            </div>
 
-    </div>
-</div><!-- INCREMENTAL + REALTIME SYNC SCREENSHOT -->
-    <div style="width:100%;box-sizing:border-box;padding:88px 18px;background:linear-gradient(180deg,#eff6ff 0%,#ffffff 100%);overflow:hidden;border-top:1px solid #dbeafe;">
-        <div style="max-width:1320px;width:100%;margin:0 auto;box-sizing:border-box;">
-            <div style="text-align:center;margin:0 auto 46px auto;max-width:960px;">
-                <div style="display:inline-block;border:1px solid #bfdbfe;border-radius:999px;padding:8px 18px;background-color:#ffffff;color:#1d4ed8;font-size:12px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px;">Incremental sync &#8226; Near realtime export</div>
-                <h2 style="font-size:42px;line-height:1.08;font-weight:950;color:#0f172a;margin:0;letter-spacing:-0.045em;">Keep BigQuery fresh without rebuilding the whole table.</h2>
-                <p style="margin:18px auto 0 auto;color:#64748b;font-size:17px;line-height:1.75;max-width:860px;">After the first export, the connector can send only new and updated Odoo records. For dashboards that need fresh data, the same incremental sync can run at a low interval close to realtime, as often as every 1 minute.</p>
-            </div>
-            <div style="background-color:#ffffff;border:1px solid #bfdbfe;border-radius:34px;padding:14px;box-sizing:border-box;box-shadow:0 34px 90px rgba(37,99,235,0.16);overflow:hidden;margin-bottom:22px;">
-                <img src="./incremental_sync.png" alt="Incremental and near realtime sync settings in Odoo BigQuery connector" style="display:block;width:100%;max-width:100%;height:auto;border-radius:24px;border:0;">
-                <div style="padding:16px 12px 4px 12px;color:#475569;font-size:14px;line-height:1.65;font-weight:850;">Configure incremental export behavior and short sync intervals directly on the export definition.</div>
-            </div>
-            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;table-layout:fixed;border-collapse:separate;border-spacing:14px;box-sizing:border-box;">
-                <tr>
-                    <td style="width:33.333%;vertical-align:top;background-color:#ffffff;border:1px solid #dbeafe;border-radius:24px;padding:24px;box-sizing:border-box;"><h3 style="margin:0 0 8px 0;font-size:18px;font-weight:950;color:#0f172a;">Only changed rows</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">Avoid repeated full exports by syncing new and updated Odoo records after the first load.</p></td>
-                    <td style="width:33.333%;vertical-align:top;background-color:#ffffff;border:1px solid #dbeafe;border-radius:24px;padding:24px;box-sizing:border-box;"><h3 style="margin:0 0 8px 0;font-size:18px;font-weight:950;color:#0f172a;">Close to realtime</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">Set short auto export intervals, including 1 minute, when dashboards need very fresh BigQuery data.</p></td>
-                    <td style="width:33.333%;vertical-align:top;background-color:#ffffff;border:1px solid #dbeafe;border-radius:24px;padding:24px;box-sizing:border-box;"><h3 style="margin:0 0 8px 0;font-size:18px;font-weight:950;color:#0f172a;">Cursor and MERGE logic</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">Sync state, batching and BigQuery MERGE help update existing rows and insert new rows safely.</p></td>
-                </tr>
-            </table>
-        </div>
-    </div>
+            <h2 style="font-size:42px;line-height:1.08;font-weight:950;color:#0f172a;margin:0;letter-spacing:-0.045em;">
+                This is where the connector stops being a simple exporter.
+            </h2>
 
-    <!-- FILTERING SCREENSHOT -->
-    <div style="width:100%;box-sizing:border-box;padding:88px 18px;background:linear-gradient(180deg,#f5f3ff 0%,#ffffff 100%);overflow:hidden;border-top:1px solid #ddd6fe;border-bottom:1px solid #e2e8f0;">
-        <div style="max-width:1320px;width:100%;margin:0 auto;box-sizing:border-box;">
-            <div style="text-align:center;margin:0 auto 46px auto;max-width:940px;">
-                <div style="display:inline-block;border:1px solid #ddd6fe;border-radius:999px;padding:8px 18px;background-color:#ffffff;color:#6d28d9;font-size:12px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px;">Filtering</div>
-                <h2 style="font-size:42px;line-height:1.08;font-weight:950;color:#0f172a;margin:0;letter-spacing:-0.045em;">Do not export everything. Export the exact business slice.</h2>
-                <p style="margin:18px auto 0 auto;color:#64748b;font-size:17px;line-height:1.75;max-width:840px;">Apply Odoo domain filters before records are sent to BigQuery. This keeps warehouse tables cleaner, smaller and closer to the reporting requirement.</p>
-            </div>
-            <div style="background-color:#ffffff;border:1px solid #ddd6fe;border-radius:34px;padding:14px;box-sizing:border-box;box-shadow:0 34px 90px rgba(124,58,237,0.14);overflow:hidden;margin-bottom:22px;">
-                <img src="./domain.png" alt="Odoo domain filtering in BigQuery export builder" style="display:block;width:100%;max-width:100%;height:auto;border-radius:24px;border:0;">
-                <div style="padding:16px 12px 4px 12px;color:#475569;font-size:14px;line-height:1.65;font-weight:850;">Use domain filters on the export definition to control exactly which Odoo records reach BigQuery.</div>
-            </div>
-            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;table-layout:fixed;border-collapse:separate;border-spacing:14px;box-sizing:border-box;">
-                <tr>
-                    <td style="width:33.333%;vertical-align:top;background-color:#ffffff;border:1px solid #ddd6fe;border-radius:24px;padding:24px;box-sizing:border-box;"><h3 style="margin:0 0 8px 0;font-size:18px;font-weight:950;color:#0f172a;">Business-specific datasets</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">Create exports for confirmed orders, active products, one company, one warehouse or a custom condition.</p></td>
-                    <td style="width:33.333%;vertical-align:top;background-color:#ffffff;border:1px solid #ddd6fe;border-radius:24px;padding:24px;box-sizing:border-box;"><h3 style="margin:0 0 8px 0;font-size:18px;font-weight:950;color:#0f172a;">Less noise in BigQuery</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">Avoid sending cancelled, archived, draft or irrelevant records when the report does not need them.</p></td>
-                    <td style="width:33.333%;vertical-align:top;background-color:#ffffff;border:1px solid #ddd6fe;border-radius:24px;padding:24px;box-sizing:border-box;"><h3 style="margin:0 0 8px 0;font-size:18px;font-weight:950;color:#0f172a;">Clearer reporting logic</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">The export itself documents the business condition used to build the warehouse table.</p></td>
-                </tr>
-            </table>
+            <p style="margin:18px auto 0 auto;color:#64748b;font-size:17px;line-height:1.75;max-width:900px;">
+                Basic connectors usually send the whole table again and again. Niyu BigQuery Connector is built like a real data pipeline: after the first export, it can track what changed, push only new or updated Odoo records, and keep BigQuery fresh as often as every 1 minute.
+            </p>
         </div>
+
+        <div style="background-color:#ffffff;border:1px solid #bfdbfe;border-radius:34px;padding:14px;box-sizing:border-box;box-shadow:0 34px 90px rgba(37,99,235,0.16);overflow:hidden;margin-bottom:22px;">
+            <img src="./incremental_sync.png" alt="Incremental and near realtime sync settings in Odoo BigQuery connector" style="display:block;width:100%;max-width:100%;height:auto;border-radius:24px;border:0;">
+            <div style="padding:16px 12px 4px 12px;color:#475569;font-size:14px;line-height:1.65;font-weight:850;">
+                Configure incremental sync, short export intervals, batching, and update behavior directly from the Odoo export definition.
+            </div>
+        </div>
+
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;table-layout:fixed;border-collapse:separate;border-spacing:14px;box-sizing:border-box;">
+            <tr>
+                <td style="width:33.333%;vertical-align:top;background-color:#ffffff;border:1px solid #dbeafe;border-radius:24px;padding:24px;box-sizing:border-box;">
+                    <h3 style="margin:0 0 8px 0;font-size:18px;font-weight:950;color:#0f172a;">
+                        No repeated full-table exports
+                    </h3>
+                    <p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">
+                        After the first load, the connector can continue from the last sync point and send only records that are new or changed. This saves time, reduces unnecessary load, and makes frequent reporting realistic.
+                    </p>
+                </td>
+
+                <td style="width:33.333%;vertical-align:top;background-color:#ffffff;border:1px solid #dbeafe;border-radius:24px;padding:24px;box-sizing:border-box;">
+                    <h3 style="margin:0 0 8px 0;font-size:18px;font-weight:950;color:#0f172a;">
+                        Dashboards stay close to live
+                    </h3>
+                    <p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">
+                        Run scheduled exports as often as every 1 minute. Sales, inventory, accounting, and operations dashboards can stay close to current Odoo activity without manual CSV work.
+                    </p>
+                </td>
+
+                <td style="width:33.333%;vertical-align:top;background-color:#ffffff;border:1px solid #dbeafe;border-radius:24px;padding:24px;box-sizing:border-box;">
+                    <h3 style="margin:0 0 8px 0;font-size:18px;font-weight:950;color:#0f172a;">
+                        Real update logic in BigQuery
+                    </h3>
+                    <p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">
+                        Sync cursors, batching, and BigQuery MERGE logic help update existing rows and insert new rows properly. BigQuery receives updated business data instead of duplicate table dumps.
+                    </p>
+                </td>
+            </tr>
+        </table>
     </div>
+</div>
+
+<!-- FILTERING SCREENSHOT -->
+<div style="width:100%;box-sizing:border-box;padding:88px 18px;background:linear-gradient(180deg,#f5f3ff 0%,#ffffff 100%);overflow:hidden;border-top:1px solid #ddd6fe;border-bottom:1px solid #e2e8f0;">
+    <div style="max-width:1320px;width:100%;margin:0 auto;box-sizing:border-box;">
+        <div style="text-align:center;margin:0 auto 46px auto;max-width:960px;">
+            <div style="display:inline-block;border:1px solid #ddd6fe;border-radius:999px;padding:8px 18px;background-color:#ffffff;color:#6d28d9;font-size:12px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px;">
+                Odoo domain filtering before export
+            </div>
+
+            <h2 style="font-size:42px;line-height:1.08;font-weight:950;color:#0f172a;margin:0;letter-spacing:-0.045em;">
+                Do not dump your whole Odoo database into BigQuery.
+            </h2>
+
+            <p style="margin:18px auto 0 auto;color:#64748b;font-size:17px;line-height:1.75;max-width:880px;">
+                Most connectors treat export as a blind data dump. Niyu BigQuery Connector lets you apply Odoo domain filters before the data leaves Odoo, so BigQuery receives only the records that actually belong in the report.
+            </p>
+        </div>
+
+        <div style="background-color:#ffffff;border:1px solid #ddd6fe;border-radius:34px;padding:14px;box-sizing:border-box;box-shadow:0 34px 90px rgba(124,58,237,0.14);overflow:hidden;margin-bottom:22px;">
+            <img src="./domain.png" alt="Odoo domain filtering in BigQuery export builder" style="display:block;width:100%;max-width:100%;height:auto;border-radius:24px;border:0;">
+            <div style="padding:16px 12px 4px 12px;color:#475569;font-size:14px;line-height:1.65;font-weight:850;">
+                Add Odoo domain filters on each export definition to control exactly which records reach BigQuery.
+            </div>
+        </div>
+
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;table-layout:fixed;border-collapse:separate;border-spacing:14px;box-sizing:border-box;">
+            <tr>
+                <td style="width:33.333%;vertical-align:top;background-color:#ffffff;border:1px solid #ddd6fe;border-radius:24px;padding:24px;box-sizing:border-box;">
+                    <h3 style="margin:0 0 8px 0;font-size:18px;font-weight:950;color:#0f172a;">
+                        Export exact business slices
+                    </h3>
+                    <p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">
+                        Create focused exports for posted invoices, confirmed sales, active products, selected companies, specific warehouses, or any custom Odoo condition your reporting team needs.
+                    </p>
+                </td>
+
+                <td style="width:33.333%;vertical-align:top;background-color:#ffffff;border:1px solid #ddd6fe;border-radius:24px;padding:24px;box-sizing:border-box;">
+                    <h3 style="margin:0 0 8px 0;font-size:18px;font-weight:950;color:#0f172a;">
+                        Cleaner tables from the start
+                    </h3>
+                    <p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">
+                        Keep cancelled, archived, draft, test, or irrelevant records out of BigQuery when the dashboard does not need them. Less noise means faster analysis and fewer report mistakes.
+                    </p>
+                </td>
+
+                <td style="width:33.333%;vertical-align:top;background-color:#ffffff;border:1px solid #ddd6fe;border-radius:24px;padding:24px;box-sizing:border-box;">
+                    <h3 style="margin:0 0 8px 0;font-size:18px;font-weight:950;color:#0f172a;">
+                        Reporting logic stays visible
+                    </h3>
+                    <p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">
+                        The export definition itself shows the business rule used to build the BigQuery table. Teams can understand why a dataset contains certain records instead of guessing later.
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
 
     <!-- WORKFLOW -->
     <div style="width:100%;box-sizing:border-box;padding:82px 18px;background-color:#ffffff;overflow:hidden;">
