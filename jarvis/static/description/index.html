@@ -126,7 +126,7 @@
         </table>
     </div>
 </div>
-   <!-- INCREMENTAL + REALTIME SYNC SCREENSHOT -->
+    <!-- INCREMENTAL + REALTIME SYNC SCREENSHOT -->
 <div style="width:100%;box-sizing:border-box;padding:88px 18px;background:linear-gradient(180deg,#eff6ff 0%,#ffffff 100%);overflow:hidden;border-top:1px solid #dbeafe;">
     <div style="max-width:1320px;width:100%;margin:0 auto;box-sizing:border-box;">
         <div style="text-align:center;margin:0 auto 46px auto;max-width:980px;">
@@ -134,8 +134,12 @@
                 Incremental sync &#8226; 1-minute export &#8226; BigQuery MERGE
             </div>
 
-            <h2 style="font-size:42px;line-height:1.08;font-weight:950;color:#0f172a;margin:0;letter-spacing:-0.045em;">
-                This is where the connector stops being a simple exporter.
+           <h2 style="font-size:42px;line-height:1.08;font-weight:950;color:#0f172a;margin:0;letter-spacing:-0.045em;">
+                This is where the connector stops being a simple exporter and delivers
+                <span style="color:#1d4ed8; padding:2px 10px;border-radius:12px;display:inline-block;">
+                    realtime incremental sync
+                </span>
+                for BigQuery.
             </h2>
 
             <p style="margin:18px auto 0 auto;color:#64748b;font-size:17px;line-height:1.75;max-width:900px;">
@@ -191,8 +195,12 @@
                 Odoo domain filtering before export
             </div>
 
-            <h2 style="font-size:42px;line-height:1.08;font-weight:950;color:#0f172a;margin:0;letter-spacing:-0.045em;">
+           <h2 style="font-size:42px;line-height:1.08;font-weight:950;color:#0f172a;margin:0;letter-spacing:-0.045em;">
                 Do not dump your whole Odoo database into BigQuery.
+                <span style="color:#6d28d9; padding:2px 10px;border-radius:12px;display:inline-block;">
+                    Domain filtering
+                </span>
+                lets you export the exact business slice.
             </h2>
 
             <p style="margin:18px auto 0 auto;color:#64748b;font-size:17px;line-height:1.75;max-width:880px;">
