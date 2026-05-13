@@ -10,14 +10,14 @@
         <div style="max-width:1320px;width:100%;margin:0 auto;text-align:center;box-sizing:border-box;">
             <div style="display:inline-block;border:1px solid #bfdbfe;background-color:#ffffff;border-radius:999px;padding:10px 22px;color:#1d4ed8;font-size:12px;font-weight:950;letter-spacing:1.9px;text-transform:uppercase;margin-bottom:24px;box-shadow:0 14px 42px rgba(37,99,235,0.14);">&#128202; Advanced BigQuery Connector for Odoo</div>
             <h1 style="font-size:58px;line-height:1.01;letter-spacing:-0.06em;color:#0f172a;font-weight:950;margin:0 auto 22px auto;max-width:1060px;">Stop reporting on live Odoo. Move serious analytics to BigQuery.</h1>
-            <p style="font-size:20px;line-height:1.72;color:#475569;margin:0 auto 36px auto;max-width:920px;font-weight:650;">Export selected Odoo data to Google BigQuery with column control, domain filters, incremental sync, scheduling, batching, audit logs, change history and recovery controls. Keep Odoo fast while BI, AI and analytics teams work on warehouse data.</p>
+            <p style="font-size:20px;line-height:1.72;color:#475569;margin:0 auto 36px auto;max-width:920px;font-weight:650;">Export selected Odoo data to Google BigQuery with three practical controls: filter exactly what should go out, keep tables updated with incremental sync, and run near real-time exports as fast as every 1 minute. Keep Odoo fast while BI, AI and analytics teams work on warehouse data.</p>
 
             <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;table-layout:fixed;border-collapse:separate;border-spacing:12px;margin:0 auto 38px auto;box-sizing:border-box;">
                 <tr>
                     <td style="width:25%;vertical-align:top;background-color:#ffffff;border:1px solid #dbeafe;border-radius:22px;padding:18px;box-sizing:border-box;color:#1d4ed8;font-weight:950;font-size:13px;line-height:1.45;box-shadow:0 16px 42px rgba(15,23,42,0.06);">&#10003; Select exact Odoo fields</td>
-                    <td style="width:25%;vertical-align:top;background-color:#ffffff;border:1px solid #dcfce7;border-radius:22px;padding:18px;box-sizing:border-box;color:#166534;font-weight:950;font-size:13px;line-height:1.45;box-shadow:0 16px 42px rgba(15,23,42,0.06);">&#10003; Filter records before export</td>
-                    <td style="width:25%;vertical-align:top;background-color:#ffffff;border:1px solid #ede9fe;border-radius:22px;padding:18px;box-sizing:border-box;color:#6d28d9;font-weight:950;font-size:13px;line-height:1.45;box-shadow:0 16px 42px rgba(15,23,42,0.06);">&#10003; Auto incremental sync</td>
-                    <td style="width:25%;vertical-align:top;background-color:#ffffff;border:1px solid #fee2e2;border-radius:22px;padding:18px;box-sizing:border-box;color:#b91c1c;font-weight:950;font-size:13px;line-height:1.45;box-shadow:0 16px 42px rgba(15,23,42,0.06);">&#10003; Logs, errors and recovery</td>
+                    <td style="width:25%;vertical-align:top;background-color:#ffffff;border:1px solid #dcfce7;border-radius:22px;padding:18px;box-sizing:border-box;color:#166534;font-weight:950;font-size:13px;line-height:1.45;box-shadow:0 16px 42px rgba(15,23,42,0.06);">&#10003; Filtering before export</td>
+                    <td style="width:25%;vertical-align:top;background-color:#ffffff;border:1px solid #ede9fe;border-radius:22px;padding:18px;box-sizing:border-box;color:#6d28d9;font-weight:950;font-size:13px;line-height:1.45;box-shadow:0 16px 42px rgba(15,23,42,0.06);">&#10003; Incremental sync</td>
+                    <td style="width:25%;vertical-align:top;background-color:#ffffff;border:1px solid #fee2e2;border-radius:22px;padding:18px;box-sizing:border-box;color:#b91c1c;font-weight:950;font-size:13px;line-height:1.45;box-shadow:0 16px 42px rgba(15,23,42,0.06);">&#10003; 1-minute realtime export</td>
                 </tr>
             </table>
 
@@ -79,6 +79,109 @@
         </div>
     </div>
 
+
+    <!-- TOP CORE FEATURES -->
+    <div style="width:100%;box-sizing:border-box;padding:88px 18px;background-color:#ffffff;overflow:hidden;">
+        <div style="max-width:1180px;width:100%;margin:0 auto;box-sizing:border-box;">
+            <div style="text-align:center;margin:0 auto 46px auto;max-width:920px;">
+                <div style="display:inline-block;border:1px solid #bfdbfe;border-radius:999px;padding:8px 18px;background-color:#eff6ff;color:#1d4ed8;font-size:12px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px;">Main features buyers notice first</div>
+                <h2 style="font-size:42px;line-height:1.08;font-weight:950;color:#0f172a;margin:0;letter-spacing:-0.045em;">Not just another BigQuery connector. Built for controlled, fresh Odoo data.</h2>
+                <p style="margin:18px auto 0 auto;color:#64748b;font-size:17px;line-height:1.75;max-width:820px;">The key value is simple: send only the right records, update only what changed, and keep BigQuery close to live without manual exports.</p>
+            </div>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;table-layout:fixed;border-collapse:separate;border-spacing:14px;box-sizing:border-box;">
+                <tr>
+                    <td style="width:33.333%;vertical-align:top;padding:0;box-sizing:border-box;">
+                        <div style="height:100%;background-color:#eff6ff;border:1px solid #bfdbfe;border-radius:30px;padding:30px;box-sizing:border-box;box-shadow:0 24px 58px rgba(37,99,235,0.10);">
+                            <div style="font-size:13px;font-weight:950;color:#1d4ed8;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:14px;">01 &#8226; Incremental sync</div>
+                            <h3 style="margin:0 0 10px 0;font-size:24px;line-height:1.16;font-weight:950;color:#0f172a;letter-spacing:-0.035em;">Update changed rows without rebuilding the table.</h3>
+                            <p style="margin:0;color:#475569;font-size:15px;line-height:1.72;">After the first export, the connector can continue from the last sync cursor and push new or updated Odoo records to BigQuery.</p>
+                        </div>
+                    </td>
+                    <td style="width:33.333%;vertical-align:top;padding:0;box-sizing:border-box;">
+                        <div style="height:100%;background-color:#f0fdf4;border:1px solid #bbf7d0;border-radius:30px;padding:30px;box-sizing:border-box;box-shadow:0 24px 58px rgba(22,163,74,0.10);">
+                            <div style="font-size:13px;font-weight:950;color:#15803d;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:14px;">02 &#8226; Realtime export</div>
+                            <h3 style="margin:0 0 10px 0;font-size:24px;line-height:1.16;font-weight:950;color:#0f172a;letter-spacing:-0.035em;">Run exports as often as every 1 minute.</h3>
+                            <p style="margin:0;color:#475569;font-size:15px;line-height:1.72;">For reports that need fresh data, set a 1-minute auto export interval and let the Odoo cron keep BigQuery updated.</p>
+                        </div>
+                    </td>
+                    <td style="width:33.333%;vertical-align:top;padding:0;box-sizing:border-box;">
+                        <div style="height:100%;background-color:#f5f3ff;border:1px solid #ddd6fe;border-radius:30px;padding:30px;box-sizing:border-box;box-shadow:0 24px 58px rgba(124,58,237,0.10);">
+                            <div style="font-size:13px;font-weight:950;color:#6d28d9;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:14px;">03 &#8226; Filtering</div>
+                            <h3 style="margin:0 0 10px 0;font-size:24px;line-height:1.16;font-weight:950;color:#0f172a;letter-spacing:-0.035em;">Export only the records the report actually needs.</h3>
+                            <p style="margin:0;color:#475569;font-size:15px;line-height:1.72;">Use Odoo domain filters per export definition, so BigQuery receives clean business slices instead of every record.</p>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- INCREMENTAL SYNC SCREENSHOT -->
+    <div style="width:100%;box-sizing:border-box;padding:88px 18px;background:linear-gradient(180deg,#eff6ff 0%,#ffffff 100%);overflow:hidden;border-top:1px solid #dbeafe;">
+        <div style="max-width:1320px;width:100%;margin:0 auto;box-sizing:border-box;">
+            <div style="text-align:center;margin:0 auto 46px auto;max-width:940px;">
+                <div style="display:inline-block;border:1px solid #bfdbfe;border-radius:999px;padding:8px 18px;background-color:#ffffff;color:#1d4ed8;font-size:12px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px;">Incremental sync</div>
+                <h2 style="font-size:42px;line-height:1.08;font-weight:950;color:#0f172a;margin:0;letter-spacing:-0.045em;">First export loads the table. Next runs send only what changed.</h2>
+                <p style="margin:18px auto 0 auto;color:#64748b;font-size:17px;line-height:1.75;max-width:840px;">Incremental sync avoids repeated full-table exports. It uses sync state such as last timestamp and last synced record ID, then updates BigQuery using controlled batch and merge logic.</p>
+            </div>
+            <div style="background-color:#ffffff;border:1px solid #bfdbfe;border-radius:34px;padding:14px;box-sizing:border-box;box-shadow:0 34px 90px rgba(37,99,235,0.16);overflow:hidden;margin-bottom:22px;">
+                <img src="./export.png" alt="Incremental sync configuration in Odoo BigQuery connector" style="display:block;width:100%;max-width:100%;height:auto;border-radius:24px;border:0;">
+                <div style="padding:16px 12px 4px 12px;color:#475569;font-size:14px;line-height:1.65;font-weight:850;">Configure incremental export behavior directly on the export definition.</div>
+            </div>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;table-layout:fixed;border-collapse:separate;border-spacing:14px;box-sizing:border-box;">
+                <tr>
+                    <td style="width:33.333%;vertical-align:top;background-color:#ffffff;border:1px solid #dbeafe;border-radius:24px;padding:24px;box-sizing:border-box;"><h3 style="margin:0 0 8px 0;font-size:18px;font-weight:950;color:#0f172a;">New and updated rows</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">Keep BigQuery current without exporting the same full dataset again and again.</p></td>
+                    <td style="width:33.333%;vertical-align:top;background-color:#ffffff;border:1px solid #dbeafe;border-radius:24px;padding:24px;box-sizing:border-box;"><h3 style="margin:0 0 8px 0;font-size:18px;font-weight:950;color:#0f172a;">Cursor tracking</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">Last sync timestamp and last ID help the connector continue from the correct point.</p></td>
+                    <td style="width:33.333%;vertical-align:top;background-color:#ffffff;border:1px solid #dbeafe;border-radius:24px;padding:24px;box-sizing:border-box;"><h3 style="margin:0 0 8px 0;font-size:18px;font-weight:950;color:#0f172a;">BigQuery MERGE</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">Existing rows can be updated and new rows inserted using stable record keys.</p></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- REALTIME EXPORT SCREENSHOT -->
+    <div style="width:100%;box-sizing:border-box;padding:88px 18px;background-color:#0f172a;overflow:hidden;color:#ffffff;">
+        <div style="max-width:1320px;width:100%;margin:0 auto;box-sizing:border-box;">
+            <div style="text-align:center;margin:0 auto 46px auto;max-width:940px;">
+                <div style="display:inline-block;border:1px solid #334155;border-radius:999px;padding:8px 18px;background-color:#111827;color:#86efac;font-size:12px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px;">Realtime export &#8226; 1 minute</div>
+                <h2 style="font-size:42px;line-height:1.08;font-weight:950;color:#ffffff;margin:0;letter-spacing:-0.045em;">Keep BigQuery close to live with a 1-minute export cycle.</h2>
+                <p style="margin:18px auto 0 auto;color:#cbd5e1;font-size:17px;line-height:1.75;max-width:840px;">For dashboards that need frequent updates, each export definition can run automatically as often as every 1 minute through Odoo scheduling.</p>
+            </div>
+            <div style="background-color:#020617;border:1px solid #334155;border-radius:34px;padding:14px;box-sizing:border-box;box-shadow:0 38px 100px rgba(2,6,23,0.55);overflow:hidden;margin-bottom:22px;">
+                <img src="./all_queries.png" alt="Realtime export status and scheduled BigQuery queries in Odoo" style="display:block;width:100%;max-width:100%;height:auto;border-radius:24px;border:0;">
+                <div style="padding:16px 12px 4px 12px;color:#cbd5e1;font-size:14px;line-height:1.65;font-weight:850;">Monitor every export definition, its status, rows exported, sync details and run controls from one screen.</div>
+            </div>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;table-layout:fixed;border-collapse:separate;border-spacing:14px;box-sizing:border-box;">
+                <tr>
+                    <td style="width:33.333%;vertical-align:top;background-color:#111827;border:1px solid #334155;border-radius:24px;padding:24px;box-sizing:border-box;"><h3 style="margin:0 0 8px 0;font-size:18px;font-weight:950;color:#ffffff;">1-minute interval</h3><p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.7;">Use a very short sync interval when reporting needs near-live data.</p></td>
+                    <td style="width:33.333%;vertical-align:top;background-color:#111827;border:1px solid #334155;border-radius:24px;padding:24px;box-sizing:border-box;"><h3 style="margin:0 0 8px 0;font-size:18px;font-weight:950;color:#ffffff;">Per-query scheduling</h3><p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.7;">Important tables can update frequently while less important tables run slower.</p></td>
+                    <td style="width:33.333%;vertical-align:top;background-color:#111827;border:1px solid #334155;border-radius:24px;padding:24px;box-sizing:border-box;"><h3 style="margin:0 0 8px 0;font-size:18px;font-weight:950;color:#ffffff;">Manual run still available</h3><p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.7;">Admins can run a query immediately when data is needed before the next scheduled cycle.</p></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- FILTERING SCREENSHOT -->
+    <div style="width:100%;box-sizing:border-box;padding:88px 18px;background:linear-gradient(180deg,#f5f3ff 0%,#ffffff 100%);overflow:hidden;border-top:1px solid #ddd6fe;border-bottom:1px solid #e2e8f0;">
+        <div style="max-width:1320px;width:100%;margin:0 auto;box-sizing:border-box;">
+            <div style="text-align:center;margin:0 auto 46px auto;max-width:940px;">
+                <div style="display:inline-block;border:1px solid #ddd6fe;border-radius:999px;padding:8px 18px;background-color:#ffffff;color:#6d28d9;font-size:12px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px;">Filtering</div>
+                <h2 style="font-size:42px;line-height:1.08;font-weight:950;color:#0f172a;margin:0;letter-spacing:-0.045em;">Do not export everything. Export the exact business slice.</h2>
+                <p style="margin:18px auto 0 auto;color:#64748b;font-size:17px;line-height:1.75;max-width:840px;">Apply Odoo domain filters before records are sent to BigQuery. This keeps warehouse tables cleaner, smaller and closer to the reporting requirement.</p>
+            </div>
+            <div style="background-color:#ffffff;border:1px solid #ddd6fe;border-radius:34px;padding:14px;box-sizing:border-box;box-shadow:0 34px 90px rgba(124,58,237,0.14);overflow:hidden;margin-bottom:22px;">
+                <img src="./export.png" alt="Odoo domain filtering in BigQuery export builder" style="display:block;width:100%;max-width:100%;height:auto;border-radius:24px;border:0;">
+                <div style="padding:16px 12px 4px 12px;color:#475569;font-size:14px;line-height:1.65;font-weight:850;">Use domain filters on the export definition to control exactly which Odoo records reach BigQuery.</div>
+            </div>
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;table-layout:fixed;border-collapse:separate;border-spacing:14px;box-sizing:border-box;">
+                <tr>
+                    <td style="width:33.333%;vertical-align:top;background-color:#ffffff;border:1px solid #ddd6fe;border-radius:24px;padding:24px;box-sizing:border-box;"><h3 style="margin:0 0 8px 0;font-size:18px;font-weight:950;color:#0f172a;">Business-specific datasets</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">Create exports for confirmed orders, active products, one company, one warehouse or a custom condition.</p></td>
+                    <td style="width:33.333%;vertical-align:top;background-color:#ffffff;border:1px solid #ddd6fe;border-radius:24px;padding:24px;box-sizing:border-box;"><h3 style="margin:0 0 8px 0;font-size:18px;font-weight:950;color:#0f172a;">Less noise in BigQuery</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">Avoid sending cancelled, archived, draft or irrelevant records when the report does not need them.</p></td>
+                    <td style="width:33.333%;vertical-align:top;background-color:#ffffff;border:1px solid #ddd6fe;border-radius:24px;padding:24px;box-sizing:border-box;"><h3 style="margin:0 0 8px 0;font-size:18px;font-weight:950;color:#0f172a;">Clearer reporting logic</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">The export itself documents the business condition used to build the warehouse table.</p></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
     <!-- WORKFLOW -->
     <div style="width:100%;box-sizing:border-box;padding:82px 18px;background-color:#ffffff;overflow:hidden;">
         <div style="max-width:1180px;width:100%;margin:0 auto;box-sizing:border-box;">
@@ -90,7 +193,7 @@
             <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="width:100%;table-layout:fixed;border-collapse:separate;border-spacing:14px;box-sizing:border-box;">
                 <tr>
                     <td style="width:25%;vertical-align:top;padding:0;box-sizing:border-box;"><div style="height:100%;background-color:#f8fafc;border:1px solid #dbe5f0;border-radius:28px;padding:28px;box-sizing:border-box;"><div style="color:#2563eb;font-size:36px;font-weight:950;margin-bottom:14px;letter-spacing:-0.04em;">01</div><h3 style="margin:0 0 8px 0;font-size:19px;font-weight:950;color:#0f172a;">Select data</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">Choose Odoo model/table, columns and optional domain filter.</p></div></td>
-                    <td style="width:25%;vertical-align:top;padding:0;box-sizing:border-box;"><div style="height:100%;background-color:#f8fafc;border:1px solid #dbe5f0;border-radius:28px;padding:28px;box-sizing:border-box;"><div style="color:#2563eb;font-size:36px;font-weight:950;margin-bottom:14px;letter-spacing:-0.04em;">02</div><h3 style="margin:0 0 8px 0;font-size:19px;font-weight:950;color:#0f172a;">Export safely</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">Run manually, schedule auto sync or use incremental export.</p></div></td>
+                    <td style="width:25%;vertical-align:top;padding:0;box-sizing:border-box;"><div style="height:100%;background-color:#f8fafc;border:1px solid #dbe5f0;border-radius:28px;padding:28px;box-sizing:border-box;"><div style="color:#2563eb;font-size:36px;font-weight:950;margin-bottom:14px;letter-spacing:-0.04em;">02</div><h3 style="margin:0 0 8px 0;font-size:19px;font-weight:950;color:#0f172a;">Export safely</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">Run manually, use incremental sync or schedule near real-time export every 1 minute.</p></div></td>
                     <td style="width:25%;vertical-align:top;padding:0;box-sizing:border-box;"><div style="height:100%;background-color:#f8fafc;border:1px solid #dbe5f0;border-radius:28px;padding:28px;box-sizing:border-box;"><div style="color:#2563eb;font-size:36px;font-weight:950;margin-bottom:14px;letter-spacing:-0.04em;">03</div><h3 style="margin:0 0 8px 0;font-size:19px;font-weight:950;color:#0f172a;">Store in BigQuery</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">Use schema mapping, staging tables and MERGE logic.</p></div></td>
                     <td style="width:25%;vertical-align:top;padding:0;box-sizing:border-box;"><div style="height:100%;background-color:#f8fafc;border:1px solid #dbe5f0;border-radius:28px;padding:28px;box-sizing:border-box;"><div style="color:#2563eb;font-size:36px;font-weight:950;margin-bottom:14px;letter-spacing:-0.04em;">04</div><h3 style="margin:0 0 8px 0;font-size:19px;font-weight:950;color:#0f172a;">Build reports</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">Connect BI, SQL, AI and data science workflows.</p></div></td>
                 </tr>
@@ -126,7 +229,7 @@
             <div style="text-align:center;margin:0 auto 46px auto;max-width:940px;">
                 <div style="display:inline-block;border:1px solid #334155;border-radius:999px;padding:8px 18px;background-color:#111827;color:#a78bfa;font-size:12px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;margin-bottom:18px;">Export builder</div>
                 <h2 style="font-size:42px;line-height:1.08;font-weight:950;color:#ffffff;margin:0;letter-spacing:-0.045em;">Create one export per business question.</h2>
-                <p style="margin:18px auto 0 auto;color:#cbd5e1;font-size:17px;line-height:1.75;max-width:820px;">Each query can control the source table, selected fields, domain filters, sync behavior, schedule and runtime state.</p>
+                <p style="margin:18px auto 0 auto;color:#cbd5e1;font-size:17px;line-height:1.75;max-width:820px;">Each query can control the source table, selected fields, domain filters, incremental sync behavior, 1-minute export interval and runtime state.</p>
             </div>
             <div style="background-color:#020617;border:1px solid #334155;border-radius:34px;padding:14px;box-sizing:border-box;box-shadow:0 38px 100px rgba(2,6,23,0.55);overflow:hidden;margin-bottom:22px;">
                 <img src="./export.png" alt="BigQuery query builder in Odoo" style="display:block;width:100%;max-width:100%;height:auto;border-radius:24px;border:0;">
@@ -137,7 +240,7 @@
                     <td style="width:25%;vertical-align:top;background-color:#111827;border:1px solid #334155;border-radius:24px;padding:24px;box-sizing:border-box;"><h3 style="margin:0 0 8px 0;font-size:18px;font-weight:950;color:#ffffff;">Column control</h3><p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.7;">Export only the fields the report needs, not every column from Odoo.</p></td>
                     <td style="width:25%;vertical-align:top;background-color:#111827;border:1px solid #334155;border-radius:24px;padding:24px;box-sizing:border-box;"><h3 style="margin:0 0 8px 0;font-size:18px;font-weight:950;color:#ffffff;">Domain filter</h3><p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.7;">Restrict records before they reach BigQuery using Odoo domain logic.</p></td>
                     <td style="width:25%;vertical-align:top;background-color:#111827;border:1px solid #334155;border-radius:24px;padding:24px;box-sizing:border-box;"><h3 style="margin:0 0 8px 0;font-size:18px;font-weight:950;color:#ffffff;">Incremental sync</h3><p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.7;">Track timestamp and ID cursors so updates can continue without full rebuilds.</p></td>
-                    <td style="width:25%;vertical-align:top;background-color:#111827;border:1px solid #334155;border-radius:24px;padding:24px;box-sizing:border-box;"><h3 style="margin:0 0 8px 0;font-size:18px;font-weight:950;color:#ffffff;">Scheduled export</h3><p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.7;">Run exports automatically at configured intervals through Odoo cron.</p></td>
+                    <td style="width:25%;vertical-align:top;background-color:#111827;border:1px solid #334155;border-radius:24px;padding:24px;box-sizing:border-box;"><h3 style="margin:0 0 8px 0;font-size:18px;font-weight:950;color:#ffffff;">Scheduled export</h3><p style="margin:0;color:#cbd5e1;font-size:14px;line-height:1.7;">Run exports automatically at configured intervals, including near real-time 1-minute export cycles.</p></td>
                 </tr>
             </table>
         </div>
@@ -287,8 +390,8 @@
                     <td style="width:33.333%;vertical-align:top;background-color:#f8fafc;border:1px solid #dbe5f0;border-radius:26px;padding:26px;box-sizing:border-box;"><h3 style="margin:0 0 8px 0;font-size:19px;font-weight:950;color:#0f172a;">Odoo domain filtering</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">Export only records that match the business reporting condition.</p></td>
                 </tr>
                 <tr>
-                    <td style="width:33.333%;vertical-align:top;background-color:#f8fafc;border:1px solid #dbe5f0;border-radius:26px;padding:26px;box-sizing:border-box;"><h3 style="margin:0 0 8px 0;font-size:19px;font-weight:950;color:#0f172a;">Incremental sync</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">Repeated exports can focus on new and changed rows.</p></td>
-                    <td style="width:33.333%;vertical-align:top;background-color:#f8fafc;border:1px solid #dbe5f0;border-radius:26px;padding:26px;box-sizing:border-box;"><h3 style="margin:0 0 8px 0;font-size:19px;font-weight:950;color:#0f172a;">Scheduled export</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">Set automatic export intervals per query.</p></td>
+                    <td style="width:33.333%;vertical-align:top;background-color:#f8fafc;border:1px solid #dbe5f0;border-radius:26px;padding:26px;box-sizing:border-box;"><h3 style="margin:0 0 8px 0;font-size:19px;font-weight:950;color:#0f172a;">Incremental sync</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">Repeated exports can focus on new and changed rows instead of rebuilding the full table every time.</p></td>
+                    <td style="width:33.333%;vertical-align:top;background-color:#f8fafc;border:1px solid #dbe5f0;border-radius:26px;padding:26px;box-sizing:border-box;"><h3 style="margin:0 0 8px 0;font-size:19px;font-weight:950;color:#0f172a;">Scheduled export</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">Set automatic export intervals per query, including a 1-minute cycle for near real-time reporting.</p></td>
                     <td style="width:33.333%;vertical-align:top;background-color:#f8fafc;border:1px solid #dbe5f0;border-radius:26px;padding:26px;box-sizing:border-box;"><h3 style="margin:0 0 8px 0;font-size:19px;font-weight:950;color:#0f172a;">Manual run</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.7;">Run an export immediately when data is needed now.</p></td>
                 </tr>
                 <tr>
@@ -339,7 +442,7 @@
                 <tr>
                     <td style="width:33.333%;vertical-align:top;background-color:#f8fafc;border:1px solid #dbe5f0;border-radius:28px;padding:28px;box-sizing:border-box;"><h3 style="margin:0 0 10px 0;font-size:19px;font-weight:950;color:#0f172a;">Can I filter what gets exported?</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.72;">Yes. Use Odoo domain filters to restrict records before they reach BigQuery.</p></td>
                     <td style="width:33.333%;vertical-align:top;background-color:#f8fafc;border:1px solid #dbe5f0;border-radius:28px;padding:28px;box-sizing:border-box;"><h3 style="margin:0 0 10px 0;font-size:19px;font-weight:950;color:#0f172a;">Can I choose only required fields?</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.72;">Yes. Select exact columns per query instead of exporting every field by default.</p></td>
-                    <td style="width:33.333%;vertical-align:top;background-color:#f8fafc;border:1px solid #dbe5f0;border-radius:28px;padding:28px;box-sizing:border-box;"><h3 style="margin:0 0 10px 0;font-size:19px;font-weight:950;color:#0f172a;">Does it support incremental sync?</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.72;">Yes. Enable incremental auto export per query and set the sync interval.</p></td>
+                    <td style="width:33.333%;vertical-align:top;background-color:#f8fafc;border:1px solid #dbe5f0;border-radius:28px;padding:28px;box-sizing:border-box;"><h3 style="margin:0 0 10px 0;font-size:19px;font-weight:950;color:#0f172a;">Does it support incremental sync?</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.72;">Yes. Enable incremental auto export per query, then use the sync cursor so future runs focus on new and changed rows.</p></td>
                 </tr>
                 <tr>
                     <td style="width:33.333%;vertical-align:top;background-color:#f8fafc;border:1px solid #dbe5f0;border-radius:28px;padding:28px;box-sizing:border-box;"><h3 style="margin:0 0 10px 0;font-size:19px;font-weight:950;color:#0f172a;">What happens if an export fails?</h3><p style="margin:0;color:#64748b;font-size:14px;line-height:1.72;">The query shows an error state. Admins can inspect logs, fix the issue and use Clear Error when appropriate.</p></td>
@@ -355,7 +458,7 @@
         <div style="max-width:1180px;width:100%;margin:0 auto;box-sizing:border-box;">
             <div style="border:1px solid #0f172a;border-radius:38px;background-color:#0f172a;padding:60px 38px;text-align:center;box-sizing:border-box;box-shadow:0 40px 110px rgba(15,23,42,0.26);">
                 <h2 style="font-size:44px;line-height:1.08;font-weight:950;color:#ffffff;margin:0 auto 18px auto;letter-spacing:-0.045em;max-width:900px;">Turn Odoo into a serious warehouse source for reporting, BI and AI.</h2>
-                <p style="font-size:17px;line-height:1.75;color:#cbd5e1;margin:0 auto 32px auto;max-width:860px;">Clean exports. Column selection. Domain filters. Incremental sync. Batch processing. BigQuery MERGE. Query logs. Change logs. Error states. Recovery controls.</p>
+                <p style="font-size:17px;line-height:1.75;color:#cbd5e1;margin:0 auto 32px auto;max-width:860px;">Clean exports. Column selection. Domain filters. Incremental sync. 1-minute realtime export. Batch processing. BigQuery MERGE. Query logs. Change logs. Error states. Recovery controls.</p>
                 <div style="display:inline-block;background-color:#ffffff;color:#0f172a;border-radius:999px;padding:15px 28px;font-size:14px;font-weight:950;letter-spacing:0.3px;box-shadow:0 18px 44px rgba(255,255,255,0.14);">Install the connector and move analytics out of live Odoo</div>
             </div>
         </div>
