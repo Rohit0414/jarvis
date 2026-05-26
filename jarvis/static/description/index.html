@@ -15,7 +15,10 @@
             </div>
 
             <h1 style="font-size:clamp(3rem,7vw,5.6rem);font-weight:950;line-height:0.98;letter-spacing:-0.065em;color:#0f172a;margin:0 0 26px 0;">
-                Realtime Power BI Connector <br/>
+                <span style="background:linear-gradient(135deg,#f59e0b 0%,#fbbf24 45%,#fde68a 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;color:#f59e0b;">
+                    Realtime Power BI
+                </span>
+                Connector <br/>
                 <span style="background:linear-gradient(135deg,#2563eb 0%,#06b6d4 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;color:#2563eb;">for Odoo</span>
             </h1>
 
@@ -23,9 +26,18 @@
                 Build Power BI dashboards from clean Odoo data &mdash; without forcing every refresh through your live Odoo screens.
             </p>
 
-            <p style="font-size:17px;color:#64748b;max-width:930px;margin:0 auto 44px auto;line-height:1.85;font-weight:400;">
+            <p style="font-size:17px;color:#64748b;max-width:930px;margin:0 auto 28px auto;line-height:1.85;font-weight:400;">
                 Keep Power BI close to live Odoo data without making Power BI hit your live Odoo screens. Use near real-time incremental sync, DirectQuery or Import mode, domain filters, schedules, logs, and recovery controls to keep reporting fresh and controlled.
             </p>
+
+            <div style="max-width:930px;margin:0 auto 38px auto;padding:16px 18px;border-radius:20px;background-color:#fffaf0;border:1px solid #fde68a;box-sizing:border-box;text-align:left;">
+                <div style="color:#b45309;font-size:11px;font-weight:950;letter-spacing:1.6px;text-transform:uppercase;margin-bottom:8px;">
+                    Note
+                </div>
+                <p style="margin:0;color:#78350f;font-size:13px;line-height:1.72;">
+                    As Odoo uses PostgreSQL, a true live CDC connection is not practical here. “Real-time” means a sync interval as short as 1 minute, which is near real-time for most Odoo reporting use cases. This approach does not put extra stress on Odoo because the module uses incremental export and sends only new or changed records instead of the full table on each refresh. The connector supports both DirectQuery and Import mode in Power BI, making this practical for Power BI Service and Power BI Desktop.
+                </p>
+            </div>
 
             <div style="font-size:0;text-align:center;margin:0 auto 42px auto;max-width:1040px;">
                 <span style="display:inline-block;margin:7px;padding:10px 15px;border-radius:999px;background-color:#f8fafc;border:1px solid #e2e8f0;color:#334155;font-size:13px;font-weight:850;">&#10004; Model selection</span>
@@ -286,9 +298,18 @@
                     First full load. <br/>
                     <span style="color:#2dd4bf;">Then near real-time updates.</span>
                 </h2>
-                <p style="font-size:22px;color:#a7f3d0;max-width:840px;margin:0 auto 90px auto;line-height:1.62;font-weight:350;text-shadow:1px 1px 2px rgba(0,0,0,0.2);">
+                <p style="font-size:22px;color:#a7f3d0;max-width:840px;margin:0 auto 34px auto;line-height:1.62;font-weight:350;text-shadow:1px 1px 2px rgba(0,0,0,0.2);">
                     Use full export for the first dataset load. After that, incremental sync sends only new and updated records to the reporting warehouse, so Power BI can refresh from prepared data without repeated full Odoo pulls.
                 </p>
+
+                <div style="max-width:930px;margin:0 auto 72px auto;padding:17px 19px;border-radius:20px;background-color:rgba(250,204,21,0.10);border:1px solid rgba(250,204,21,0.34);box-sizing:border-box;text-align:left;">
+                    <div style="color:#fde68a;font-size:11px;font-weight:950;letter-spacing:1.7px;text-transform:uppercase;margin-bottom:8px;">
+                        Note
+                    </div>
+                    <p style="margin:0;color:#fef3c7;font-size:13px;line-height:1.76;">
+                        As Odoo uses PostgreSQL, a true live CDC connection is not practical here. “Real-time” means a sync interval as short as 1 minute, which is near real-time for most Odoo reporting use cases. This approach does not put extra stress on Odoo because the module uses incremental export and sends only new or changed records instead of the full table on each refresh. The connector supports both DirectQuery and Import mode in Power BI, making this practical for Power BI Service and Power BI Desktop.
+                    </p>
+                </div>
 
                 <div style="max-width:1200px;width:100%;margin:0 auto;box-sizing:border-box;">
                     <div style="background-color:rgba(255,255,255,0.05);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.12);border-radius:40px;padding:15px;box-shadow:0 80px 150px -35px rgba(0,0,0,0.8);box-sizing:border-box;">
@@ -316,9 +337,18 @@
                     Keep Power BI close <br/>
                     <span style="background:linear-gradient(135deg,#60a5fa 0%,#22d3ee 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;color:#60a5fa;">to live Odoo data.</span>
                 </h2>
-                <p style="font-size:22px;color:#bfdbfe;max-width:870px;margin:0 auto 72px auto;line-height:1.62;font-weight:350;">
+                <p style="font-size:22px;color:#bfdbfe;max-width:870px;margin:0 auto 34px auto;line-height:1.62;font-weight:350;">
                     Set the Odoo sync interval as short as <b style="color:#ffffff;font-weight:950;">1 minute</b>. Odoo sends lightweight incremental updates to the reporting warehouse, and Power BI connects to that prepared layer instead of querying live Odoo directly.
                 </p>
+
+                <div style="max-width:930px;margin:0 auto 58px auto;padding:17px 19px;border-radius:20px;background-color:rgba(250,204,21,0.10);border:1px solid rgba(250,204,21,0.34);box-sizing:border-box;text-align:left;">
+                    <div style="color:#fde68a;font-size:11px;font-weight:950;letter-spacing:1.7px;text-transform:uppercase;margin-bottom:8px;">
+                        Note
+                    </div>
+                    <p style="margin:0;color:#fef3c7;font-size:13px;line-height:1.76;">
+                        As Odoo uses PostgreSQL, a true live CDC connection is not practical here. “Real-time” means a sync interval as short as 1 minute, which is near real-time for most Odoo reporting use cases. This approach does not put extra stress on Odoo because the module uses incremental export and sends only new or changed records instead of the full table on each refresh. The connector supports both DirectQuery and Import mode in Power BI, making this practical for Power BI Service and Power BI Desktop.
+                    </p>
+                </div>
 
                 <div style="font-size:0;text-align:left;margin:0 -1% 58px -1%;box-sizing:border-box;">
                     <div style="display:inline-block;vertical-align:top;width:31.333%;min-width:280px;margin:1%;box-sizing:border-box;font-size:16px;">
