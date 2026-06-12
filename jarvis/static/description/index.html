@@ -1,254 +1,355 @@
+<body style="margin: 0; padding: 0; background-color: #f0f4f8; color: #1e293b; font-family: 'Inter', 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased;">
 
-<body style="margin:0; padding:0; background-color:#f6f7fb; color:#172033; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif; line-height:1.55;">
+<div class="container" style="max-width: 1240px; margin: 0 auto; padding: 40px 20px 80px 20px;">
 
-<div class="container" style="max-width:1180px; margin:0 auto; padding:0 18px 48px 18px;">
-
-    <!-- HERO -->
-    <section class="row align-items-center" style="display:flex; flex-wrap:wrap; align-items:center; gap:28px; margin-top:28px; padding:46px 34px; border-radius:28px; background:linear-gradient(135deg,#1d1028 0%,#3a183f 45%,#f26522 140%); color:#ffffff; overflow:hidden; box-shadow:0 18px 50px rgba(31,20,48,.22);">
-        <div class="col-lg-7" style="flex:1 1 560px; min-width:280px;">
-            <div style="display:inline-flex; align-items:center; gap:8px; background-color:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.2); color:#fff; padding:8px 14px; border-radius:999px; font-size:13px; font-weight:700; letter-spacing:.2px; margin-bottom:18px;">
-                Magento 2 / Adobe Commerce + Odoo 19
+    <!-- HERO SECTION -->
+    <section class="row align-items-center mt-3 mb-5" style="border-radius: 32px; background: linear-gradient(135deg, #0f0715 0%, #2d1332 40%, #e85310 160%); color: #ffffff; overflow: hidden; box-shadow: 0 40px 80px rgba(232, 83, 16, 0.15), inset 0 2px 0 rgba(255,255,255,0.1); padding: 60px 40px; position: relative;">
+        <!-- Decorative Background Glow -->
+        <div style="position: absolute; top: -50%; left: -20%; width: 100%; height: 100%; background: radial-gradient(circle, rgba(242,101,34,0.15) 0%, transparent 60%); pointer-events: none;"></div>
+        
+        <div class="col-lg-7 d-flex flex-column" style="z-index: 1;">
+            <div class="d-inline-flex align-items-center gap-2 mb-4" style="align-self: flex-start; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15); backdrop-filter: blur(10px); color: #fff; padding: 8px 18px; border-radius: 100px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 8px 16px rgba(0,0,0,0.2);">
+                <span style="width: 8px; height: 8px; background-color: #f26522; border-radius: 50%; box-shadow: 0 0 10px #f26522;"></span>
+                Magento 2 + Odoo 19
             </div>
-            <h1 style="font-size:44px; line-height:1.08; margin:0 0 16px 0; font-weight:800; letter-spacing:-1.2px; color:#ffffff;">Magento 2 Connector Pro for Odoo</h1>
-            <p style="font-size:19px; margin:0 0 24px 0; color:rgba(255,255,255,.88); max-width:740px;">Connect Magento 2 with Odoo using a clean, guided connector built for practical ecommerce operations: stores, products, orders, stock, queues, logs, and readiness checks in one simple Odoo workspace.</p>
-            <div class="d-flex flex-wrap" style="display:flex; flex-wrap:wrap; gap:12px; margin-top:8px;">
-                <span style="background-color:#ffffff; color:#3a183f; padding:11px 16px; border-radius:14px; font-weight:800; box-shadow:0 8px 20px rgba(0,0,0,.12);">Test Connection</span>
-                <span style="background-color:rgba(255,255,255,.16); color:#ffffff; padding:11px 16px; border-radius:14px; font-weight:700; border:1px solid rgba(255,255,255,.22);">Import Stores</span>
-                <span style="background-color:rgba(255,255,255,.16); color:#ffffff; padding:11px 16px; border-radius:14px; font-weight:700; border:1px solid rgba(255,255,255,.22);">Import Products</span>
-                <span style="background-color:rgba(255,255,255,.16); color:#ffffff; padding:11px 16px; border-radius:14px; font-weight:700; border:1px solid rgba(255,255,255,.22);">Export Stock</span>
+            <h1 style="font-size: clamp(36px, 4vw, 52px); line-height: 1.1; margin: 0 0 20px 0; font-weight: 900; letter-spacing: -0.03em; color: #ffffff; text-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                Magento 2 Connector <br> <span style="background: linear-gradient(90deg, #fff, #fbd2bd); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Pro for Odoo</span>
+            </h1>
+            <p style="font-size: 18px; margin: 0 0 32px 0; color: rgba(255,255,255,0.85); max-width: 600px; font-weight: 400;">
+                Connect Magento 2 with Odoo using a clean, guided connector built for practical ecommerce operations: stores, products, orders, stock, queues, logs, and readiness checks in one simple Odoo workspace.
+            </p>
+            <div class="d-flex flex-wrap gap-3 align-items-center">
+                <span class="d-flex align-items-center justify-content-center gap-2" style="background: #ffffff; color: #2d1332; padding: 14px 24px; border-radius: 16px; font-weight: 800; font-size: 15px; box-shadow: 0 12px 24px rgba(0,0,0,0.2), inset 0 -3px 0 rgba(0,0,0,0.1); cursor: pointer; transition: all 0.3s ease;">&#128640; Test Connection</span>
+                <span class="d-flex align-items-center justify-content-center" style="background: rgba(255,255,255,0.05); color: #ffffff; padding: 14px 24px; border-radius: 16px; font-weight: 600; font-size: 15px; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(8px); cursor: pointer;">Import Stores</span>
+                <span class="d-flex align-items-center justify-content-center" style="background: rgba(255,255,255,0.05); color: #ffffff; padding: 14px 24px; border-radius: 16px; font-weight: 600; font-size: 15px; border: 1px solid rgba(255,255,255,0.2); backdrop-filter: blur(8px); cursor: pointer;">Sync Data</span>
             </div>
         </div>
-        <div class="col-lg-5" style="flex:1 1 360px; min-width:280px;">
-            <div style="background-color:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.18); border-radius:24px; padding:18px; box-shadow:inset 0 1px 0 rgba(255,255,255,.12);">
-                <img src="screen_connection.jpg" alt="Magento 2 Connector Pro connection screen in Odoo" style="width:100%; display:block; border-radius:18px; box-shadow:0 18px 42px rgba(0,0,0,.28);" />
+        
+        <div class="col-lg-5 mt-5 mt-lg-0 z-1" style="perspective: 1000px;">
+            <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 28px; padding: 12px; backdrop-filter: blur(20px); transform: rotateY(-8deg) rotateX(4deg); box-shadow: -20px 30px 60px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.2);">
+                <img src="screen_connection.jpg" alt="Magento 2 Connector Pro connection screen in Odoo" style="width: 100%; display: block; border-radius: 20px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);" />
             </div>
         </div>
     </section>
 
     <!-- TRUST / SUMMARY STRIP -->
-    <section class="row" style="display:flex; flex-wrap:wrap; gap:16px; margin-top:22px;">
-        <div class="col-md-3" style="flex:1 1 220px; background-color:#ffffff; border:1px solid #e8ebf2; border-radius:20px; padding:22px; box-shadow:0 10px 28px rgba(17,24,39,.05);">
-            <div style="font-size:28px; font-weight:900; color:#f26522; margin-bottom:4px;">1</div>
-            <h3 style="font-size:16px; margin:0 0 6px 0; color:#172033;">Simple connection</h3>
-            <p style="font-size:14px; color:#667085; margin:0;">Connect Magento with base URL and API access token. No technical setup inside Odoo for daily users.</p>
+    <section class="row g-4 mt-2 mb-5">
+        <div class="col-md-6 col-lg-3">
+            <div class="d-flex flex-column h-100" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 24px; padding: 32px 24px; box-shadow: 0 10px 30px rgba(15,23,42,0.04); position: relative; overflow: hidden; border-top: 4px solid #f26522;">
+                <div style="position: absolute; right: -10px; bottom: -20px; font-size: 140px; font-weight: 900; color: rgba(242,101,34,0.04); line-height: 1;">1</div>
+                <h3 style="font-size: 18px; margin: 0 0 10px 0; color: #0f172a; font-weight: 800;">Simple connection</h3>
+                <p style="font-size: 15px; color: #64748b; margin: 0; position: relative; z-index: 2;">Connect Magento with base URL and API access token. No technical setup inside Odoo for daily users.</p>
+            </div>
         </div>
-        <div class="col-md-3" style="flex:1 1 220px; background-color:#ffffff; border:1px solid #e8ebf2; border-radius:20px; padding:22px; box-shadow:0 10px 28px rgba(17,24,39,.05);">
-            <div style="font-size:28px; font-weight:900; color:#f26522; margin-bottom:4px;">2</div>
-            <h3 style="font-size:16px; margin:0 0 6px 0; color:#172033;">Guided sync flow</h3>
-            <p style="font-size:14px; color:#667085; margin:0;">Clear buttons and recommended order: test connection, import stores, check readiness, then sync products and orders.</p>
+        <div class="col-md-6 col-lg-3">
+            <div class="d-flex flex-column h-100" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 24px; padding: 32px 24px; box-shadow: 0 10px 30px rgba(15,23,42,0.04); position: relative; overflow: hidden; border-top: 4px solid #b82e5b;">
+                <div style="position: absolute; right: -10px; bottom: -20px; font-size: 140px; font-weight: 900; color: rgba(184,46,91,0.04); line-height: 1;">2</div>
+                <h3 style="font-size: 18px; margin: 0 0 10px 0; color: #0f172a; font-weight: 800;">Guided sync flow</h3>
+                <p style="font-size: 15px; color: #64748b; margin: 0; position: relative; z-index: 2;">Clear buttons and recommended order: test connection, import stores, check readiness, then sync.</p>
+            </div>
         </div>
-        <div class="col-md-3" style="flex:1 1 220px; background-color:#ffffff; border:1px solid #e8ebf2; border-radius:20px; padding:22px; box-shadow:0 10px 28px rgba(17,24,39,.05);">
-            <div style="font-size:28px; font-weight:900; color:#f26522; margin-bottom:4px;">3</div>
-            <h3 style="font-size:16px; margin:0 0 6px 0; color:#172033;">Operations visibility</h3>
-            <p style="font-size:14px; color:#667085; margin:0;">Queues, failed jobs, logs, readiness score, and stock drift indicators help teams understand every sync state.</p>
+        <div class="col-md-6 col-lg-3">
+            <div class="d-flex flex-column h-100" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 24px; padding: 32px 24px; box-shadow: 0 10px 30px rgba(15,23,42,0.04); position: relative; overflow: hidden; border-top: 4px solid #714B67;">
+                <div style="position: absolute; right: -10px; bottom: -20px; font-size: 140px; font-weight: 900; color: rgba(113,75,103,0.04); line-height: 1;">3</div>
+                <h3 style="font-size: 18px; margin: 0 0 10px 0; color: #0f172a; font-weight: 800;">Operations visibility</h3>
+                <p style="font-size: 15px; color: #64748b; margin: 0; position: relative; z-index: 2;">Queues, failed jobs, logs, readiness score, and stock drift indicators help teams understand every state.</p>
+            </div>
         </div>
-        <div class="col-md-3" style="flex:1 1 220px; background-color:#ffffff; border:1px solid #e8ebf2; border-radius:20px; padding:22px; box-shadow:0 10px 28px rgba(17,24,39,.05);">
-            <div style="font-size:28px; font-weight:900; color:#f26522; margin-bottom:4px;">4</div>
-            <h3 style="font-size:16px; margin:0 0 6px 0; color:#172033;">MSI stock support</h3>
-            <p style="font-size:14px; color:#667085; margin:0;">Export Odoo stock to Magento source items with source code, warehouse, safety stock, and quantity field controls.</p>
+        <div class="col-md-6 col-lg-3">
+            <div class="d-flex flex-column h-100" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 24px; padding: 32px 24px; box-shadow: 0 10px 30px rgba(15,23,42,0.04); position: relative; overflow: hidden; border-top: 4px solid #4b235f;">
+                <div style="position: absolute; right: -10px; bottom: -20px; font-size: 140px; font-weight: 900; color: rgba(75,35,95,0.04); line-height: 1;">4</div>
+                <h3 style="font-size: 18px; margin: 0 0 10px 0; color: #0f172a; font-weight: 800;">MSI stock support</h3>
+                <p style="font-size: 15px; color: #64748b; margin: 0; position: relative; z-index: 2;">Export Odoo stock to Magento source items with warehouse, safety stock, and quantity field controls.</p>
+            </div>
         </div>
     </section>
 
     <!-- WHY SECTION -->
-    <section style="margin-top:38px; padding:34px; background-color:#ffffff; border-radius:26px; border:1px solid #e8ebf2; box-shadow:0 16px 40px rgba(17,24,39,.06);">
-        <div class="row align-items-center" style="display:flex; flex-wrap:wrap; align-items:center; gap:28px;">
-            <div class="col-lg-6" style="flex:1 1 460px; min-width:280px;">
-                <p style="display:inline-block; margin:0 0 10px 0; padding:7px 12px; border-radius:999px; background-color:#fff3ed; color:#d94f10; font-weight:800; font-size:13px;">Built for real ecommerce teams</p>
-                <h2 style="font-size:32px; line-height:1.18; margin:0 0 12px 0; color:#172033; letter-spacing:-.5px;">A connector that keeps the workflow clear.</h2>
-                <p style="font-size:16px; color:#667085; margin:0 0 18px 0;">Many connectors become hard to operate because every sync is hidden. Magento 2 Connector Pro gives users simple actions, clean statuses, and clear error visibility directly inside Odoo.</p>
-                <div class="row" style="display:flex; flex-wrap:wrap; gap:12px;">
-                    <div style="flex:1 1 220px; padding:16px; border-radius:18px; background-color:#f7f8fc; border:1px solid #edf0f6;">
-                        <strong style="display:block; color:#172033; margin-bottom:6px;">For non-technical users</strong>
-                        <span style="color:#667085; font-size:14px;">One connection screen, direct buttons, and readiness checks before sync.</span>
+    <section class="mb-5" style="padding: 48px; background: #ffffff; border-radius: 32px; border: 1px solid rgba(255,255,255,0.8); box-shadow: 0 20px 40px rgba(15,23,42,0.06), 0 1px 3px rgba(15,23,42,0.02);">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 d-flex flex-column">
+                <span class="d-inline-flex align-items-center gap-2" style="align-self: flex-start; margin-bottom: 16px; padding: 8px 16px; border-radius: 100px; background: linear-gradient(135deg, #fff3ed 0%, #ffe9df 100%); color: #d94f10; font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; box-shadow: inset 0 2px 4px rgba(255,255,255,0.8);">
+                    &#11088; Built for real ecommerce teams
+                </span>
+                <h2 style="font-size: clamp(28px, 3vw, 38px); line-height: 1.15; margin: 0 0 16px 0; color: #0f172a; font-weight: 800; letter-spacing: -0.03em;">
+                    A connector that keeps the <span style="color: #f26522;">workflow clear.</span>
+                </h2>
+                <p style="font-size: 17px; color: #64748b; margin: 0 0 28px 0; font-weight: 400;">
+                    Many connectors become hard to operate because every sync is hidden. Magento 2 Connector Pro gives users simple actions, clean statuses, and clear error visibility directly inside Odoo.
+                </p>
+                <div class="row g-3">
+                    <div class="col-sm-6">
+                        <div class="d-flex flex-column h-100" style="padding: 20px; border-radius: 20px; background: #f8fafc; border: 1px solid #e2e8f0;">
+                            <strong style="color: #0f172a; margin-bottom: 8px; font-size: 16px;">&#128101; Non-technical users</strong>
+                            <span style="color: #64748b; font-size: 14px; line-height: 1.5;">One connection screen, direct buttons, and readiness checks before sync.</span>
+                        </div>
                     </div>
-                    <div style="flex:1 1 220px; padding:16px; border-radius:18px; background-color:#f7f8fc; border:1px solid #edf0f6;">
-                        <strong style="display:block; color:#172033; margin-bottom:6px;">For support teams</strong>
-                        <span style="color:#667085; font-size:14px;">Pending jobs, failed jobs, logs, and queue processing for fast debugging.</span>
+                    <div class="col-sm-6">
+                        <div class="d-flex flex-column h-100" style="padding: 20px; border-radius: 20px; background: #f8fafc; border: 1px solid #e2e8f0;">
+                            <strong style="color: #0f172a; margin-bottom: 8px; font-size: 16px;">&#128736; Support teams</strong>
+                            <span style="color: #64748b; font-size: 14px; line-height: 1.5;">Pending jobs, failed jobs, logs, and queue processing for fast debugging.</span>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6" style="flex:1 1 460px; min-width:280px;">
-                <img src="screen_action_buttons.jpg" alt="Simple Magento connector action buttons in Odoo" style="width:100%; display:block; border-radius:20px; border:1px solid #e6e9f0; box-shadow:0 14px 36px rgba(17,24,39,.09);" />
+            <div class="col-lg-6">
+                <div style="position: relative; padding: 12px; background: linear-gradient(135deg, #f1f5f9, #ffffff); border-radius: 28px; box-shadow: 0 24px 48px rgba(15,23,42,0.1); border: 1px solid #e2e8f0;">
+                    <!-- Decorative glow behind image -->
+                    <div style="position: absolute; top: 20%; left: 10%; width: 80%; height: 60%; background: #f26522; filter: blur(60px); opacity: 0.15; z-index: 0;"></div>
+                    <img src="screen_action_buttons.jpg" alt="Simple Magento connector action buttons in Odoo" style="width: 100%; display: block; border-radius: 20px; position: relative; z-index: 1; border: 1px solid rgba(0,0,0,0.05);" />
+                </div>
             </div>
         </div>
     </section>
 
     <!-- FEATURES -->
-    <section style="margin-top:38px;">
-        <div style="text-align:center; max-width:760px; margin:0 auto 24px auto;">
-            <p style="display:inline-block; margin:0 0 10px 0; padding:7px 12px; border-radius:999px; background-color:#efe7f5; color:#4b235f; font-weight:800; font-size:13px;">Complete sync workspace</p>
-            <h2 style="font-size:34px; line-height:1.18; margin:0 0 10px 0; color:#172033; letter-spacing:-.6px;">Everything needed to manage Magento from Odoo</h2>
-            <p style="font-size:16px; color:#667085; margin:0;">Designed around the practical tasks ecommerce teams perform every day.</p>
+    <section class="mb-5 mt-5">
+        <div class="d-flex flex-column align-items-center text-center mb-5" style="max-width: 700px; margin: 0 auto;">
+            <span class="d-flex align-items-center gap-2" style="margin-bottom: 12px; padding: 8px 16px; border-radius: 100px; background: #f3e8f8; color: #6a2a88; font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">
+                &#9889; Complete sync workspace
+            </span>
+            <h2 style="font-size: clamp(30px, 3.5vw, 42px); line-height: 1.15; margin: 0 0 16px 0; color: #0f172a; font-weight: 900; letter-spacing: -0.03em;">
+                Everything needed to manage Magento from Odoo
+            </h2>
+            <p style="font-size: 18px; color: #64748b; margin: 0;">Designed around the practical tasks ecommerce teams perform every day.</p>
         </div>
 
-        <div class="row" style="display:flex; flex-wrap:wrap; gap:16px;">
-            <div class="col-md-4" style="flex:1 1 310px; background-color:#ffffff; border:1px solid #e8ebf2; border-radius:22px; padding:24px;">
-                <div style="width:46px; height:46px; border-radius:14px; background-color:#fff3ed; color:#f26522; display:flex; align-items:center; justify-content:center; font-weight:900; font-size:20px; margin-bottom:14px;">✓</div>
-                <h3 style="font-size:19px; margin:0 0 8px 0; color:#172033;">Magento store import</h3>
-                <p style="font-size:14px; color:#667085; margin:0;">Import Magento websites, stores, and store views so Odoo understands your Magento structure before product and order sync.</p>
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="d-flex flex-column h-100" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 24px; padding: 32px; box-shadow: 0 10px 30px rgba(15,23,42,0.03); transition: transform 0.3s ease;">
+                    <div class="d-flex align-items-center justify-content-center" style="width: 54px; height: 54px; border-radius: 16px; background: linear-gradient(135deg, #f26522, #fa8c58); color: #ffffff; font-weight: 900; font-size: 24px; margin-bottom: 20px; box-shadow: 0 8px 16px rgba(242,101,34,0.3);">&#10003;</div>
+                    <h3 style="font-size: 20px; margin: 0 0 12px 0; color: #0f172a; font-weight: 800;">Store import</h3>
+                    <p style="font-size: 15px; color: #64748b; margin: 0;">Import Magento websites, stores, and store views so Odoo understands your Magento structure before product and order sync.</p>
+                </div>
             </div>
-            <div class="col-md-4" style="flex:1 1 310px; background-color:#ffffff; border:1px solid #e8ebf2; border-radius:22px; padding:24px;">
-                <div style="width:46px; height:46px; border-radius:14px; background-color:#fff3ed; color:#f26522; display:flex; align-items:center; justify-content:center; font-weight:900; font-size:20px; margin-bottom:14px;">✓</div>
-                <h3 style="font-size:19px; margin:0 0 8px 0; color:#172033;">Product and category import</h3>
-                <p style="font-size:14px; color:#667085; margin:0;">Bring Magento products into Odoo and keep product records mapped through connector bindings for safer future syncs.</p>
+            <!-- Card 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="d-flex flex-column h-100" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 24px; padding: 32px; box-shadow: 0 10px 30px rgba(15,23,42,0.03);">
+                    <div class="d-flex align-items-center justify-content-center" style="width: 54px; height: 54px; border-radius: 16px; background: linear-gradient(135deg, #f26522, #fa8c58); color: #ffffff; font-weight: 900; font-size: 24px; margin-bottom: 20px; box-shadow: 0 8px 16px rgba(242,101,34,0.3);">&#10003;</div>
+                    <h3 style="font-size: 20px; margin: 0 0 12px 0; color: #0f172a; font-weight: 800;">Catalog import</h3>
+                    <p style="font-size: 15px; color: #64748b; margin: 0;">Bring Magento products into Odoo and keep product records mapped through connector bindings for safer future syncs.</p>
+                </div>
             </div>
-            <div class="col-md-4" style="flex:1 1 310px; background-color:#ffffff; border:1px solid #e8ebf2; border-radius:22px; padding:24px;">
-                <div style="width:46px; height:46px; border-radius:14px; background-color:#fff3ed; color:#f26522; display:flex; align-items:center; justify-content:center; font-weight:900; font-size:20px; margin-bottom:14px;">✓</div>
-                <h3 style="font-size:19px; margin:0 0 8px 0; color:#172033;">Order import</h3>
-                <p style="font-size:14px; color:#667085; margin:0;">Import Magento orders into Odoo with controlled order action settings, shipping product, and adjustment handling.</p>
+            <!-- Card 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="d-flex flex-column h-100" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 24px; padding: 32px; box-shadow: 0 10px 30px rgba(15,23,42,0.03);">
+                    <div class="d-flex align-items-center justify-content-center" style="width: 54px; height: 54px; border-radius: 16px; background: linear-gradient(135deg, #f26522, #fa8c58); color: #ffffff; font-weight: 900; font-size: 24px; margin-bottom: 20px; box-shadow: 0 8px 16px rgba(242,101,34,0.3);">&#10003;</div>
+                    <h3 style="font-size: 20px; margin: 0 0 12px 0; color: #0f172a; font-weight: 800;">Order import</h3>
+                    <p style="font-size: 15px; color: #64748b; margin: 0;">Import Magento orders into Odoo with controlled order action settings, shipping product, and adjustment handling.</p>
+                </div>
             </div>
-            <div class="col-md-4" style="flex:1 1 310px; background-color:#ffffff; border:1px solid #e8ebf2; border-radius:22px; padding:24px;">
-                <div style="width:46px; height:46px; border-radius:14px; background-color:#efe7f5; color:#4b235f; display:flex; align-items:center; justify-content:center; font-weight:900; font-size:20px; margin-bottom:14px;">↗</div>
-                <h3 style="font-size:19px; margin:0 0 8px 0; color:#172033;">Stock export to Magento</h3>
-                <p style="font-size:14px; color:#667085; margin:0;">Export available quantity from Odoo to Magento, including Magento MSI source item mode and source code configuration.</p>
+            <!-- Card 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="d-flex flex-column h-100" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 24px; padding: 32px; box-shadow: 0 10px 30px rgba(15,23,42,0.03);">
+                    <div class="d-flex align-items-center justify-content-center" style="width: 54px; height: 54px; border-radius: 16px; background: linear-gradient(135deg, #714B67, #9b688d); color: #ffffff; font-weight: 900; font-size: 24px; margin-bottom: 20px; box-shadow: 0 8px 16px rgba(113,75,103,0.3);">&#8599;</div>
+                    <h3 style="font-size: 20px; margin: 0 0 12px 0; color: #0f172a; font-weight: 800;">Stock export</h3>
+                    <p style="font-size: 15px; color: #64748b; margin: 0;">Export available quantity from Odoo to Magento, including Magento MSI source item mode and source code configuration.</p>
+                </div>
             </div>
-            <div class="col-md-4" style="flex:1 1 310px; background-color:#ffffff; border:1px solid #e8ebf2; border-radius:22px; padding:24px;">
-                <div style="width:46px; height:46px; border-radius:14px; background-color:#efe7f5; color:#4b235f; display:flex; align-items:center; justify-content:center; font-weight:900; font-size:20px; margin-bottom:14px;">⚙</div>
-                <h3 style="font-size:19px; margin:0 0 8px 0; color:#172033;">Queue and job control</h3>
-                <p style="font-size:14px; color:#667085; margin:0;">Review pending jobs, failed jobs, and process the queue from Odoo instead of guessing what happened in the background.</p>
+            <!-- Card 5 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="d-flex flex-column h-100" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 24px; padding: 32px; box-shadow: 0 10px 30px rgba(15,23,42,0.03);">
+                    <div class="d-flex align-items-center justify-content-center" style="width: 54px; height: 54px; border-radius: 16px; background: linear-gradient(135deg, #714B67, #9b688d); color: #ffffff; font-weight: 900; font-size: 24px; margin-bottom: 20px; box-shadow: 0 8px 16px rgba(113,75,103,0.3);">&#9881;</div>
+                    <h3 style="font-size: 20px; margin: 0 0 12px 0; color: #0f172a; font-weight: 800;">Queue control</h3>
+                    <p style="font-size: 15px; color: #64748b; margin: 0;">Review pending jobs, failed jobs, and process the queue from Odoo instead of guessing what happened in the background.</p>
+                </div>
             </div>
-            <div class="col-md-4" style="flex:1 1 310px; background-color:#ffffff; border:1px solid #e8ebf2; border-radius:22px; padding:24px;">
-                <div style="width:46px; height:46px; border-radius:14px; background-color:#efe7f5; color:#4b235f; display:flex; align-items:center; justify-content:center; font-weight:900; font-size:20px; margin-bottom:14px;">!</div>
-                <h3 style="font-size:19px; margin:0 0 8px 0; color:#172033;">Readiness checker</h3>
-                <p style="font-size:14px; color:#667085; margin:0;">Validate connection, stores, warehouse, products, and sync defaults before running larger operations.</p>
+            <!-- Card 6 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="d-flex flex-column h-100" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 24px; padding: 32px; box-shadow: 0 10px 30px rgba(15,23,42,0.03);">
+                    <div class="d-flex align-items-center justify-content-center" style="width: 54px; height: 54px; border-radius: 16px; background: linear-gradient(135deg, #714B67, #9b688d); color: #ffffff; font-weight: 900; font-size: 24px; margin-bottom: 20px; box-shadow: 0 8px 16px rgba(113,75,103,0.3);">&#33;</div>
+                    <h3 style="font-size: 20px; margin: 0 0 12px 0; color: #0f172a; font-weight: 800;">Readiness checker</h3>
+                    <p style="font-size: 15px; color: #64748b; margin: 0;">Validate connection, stores, warehouse, products, and sync defaults before running larger operations.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- SCREENSHOTS -->
-    <section style="margin-top:44px; padding:34px; background-color:#172033; border-radius:28px; color:#ffffff; box-shadow:0 18px 48px rgba(17,24,39,.18);">
-        <div style="text-align:center; max-width:760px; margin:0 auto 26px auto;">
-            <p style="display:inline-block; margin:0 0 10px 0; padding:7px 12px; border-radius:999px; background-color:rgba(255,255,255,.12); color:#ffffff; font-weight:800; font-size:13px;">Screenshots</p>
-            <h2 style="font-size:34px; line-height:1.18; margin:0 0 10px 0; color:#ffffff; letter-spacing:-.5px;">A simple workspace your team can actually use</h2>
-            <p style="font-size:16px; color:rgba(255,255,255,.72); margin:0;">Clear connection settings, guided actions, and Magento API authorization screens.</p>
+    <!-- SCREENSHOTS (DARK MODE) -->
+    <section class="mt-5 mb-5" style="padding: 60px 40px; background: linear-gradient(180deg, #0b1120 0%, #171e2e 100%); border-radius: 36px; color: #ffffff; box-shadow: 0 30px 60px rgba(11,17,32,0.3), inset 0 1px 0 rgba(255,255,255,0.1);">
+        <div class="d-flex flex-column align-items-center text-center mb-5" style="max-width: 760px; margin: 0 auto;">
+            <span class="d-flex align-items-center gap-2" style="margin-bottom: 16px; padding: 8px 16px; border-radius: 100px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); color: #ffffff; font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; backdrop-filter: blur(8px);">
+                &#128444; The Interface
+            </span>
+            <h2 style="font-size: clamp(30px, 3.5vw, 42px); line-height: 1.15; margin: 0 0 16px 0; color: #ffffff; font-weight: 900; letter-spacing: -0.03em;">
+                A simple workspace your team can actually use
+            </h2>
+            <p style="font-size: 18px; color: rgba(255,255,255,0.7); margin: 0;">Clear connection settings, guided actions, and Magento API authorization screens without the clutter.</p>
         </div>
 
-        <div class="row" style="display:flex; flex-wrap:wrap; gap:22px;">
-            <div class="col-lg-6" style="flex:1 1 480px; min-width:280px;">
-                <div style="background-color:#ffffff; border-radius:22px; padding:12px; box-shadow:0 18px 40px rgba(0,0,0,.24);">
-                    <img src="screen_connection.jpg" alt="Odoo Magento connection screen" style="width:100%; display:block; border-radius:16px;" />
+        <div class="row g-5">
+            <div class="col-lg-6">
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 28px; padding: 16px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); backdrop-filter: blur(10px);">
+                    <img src="screen_connection.jpg" alt="Odoo Magento connection screen" style="width: 100%; display: block; border-radius: 16px; border: 1px solid rgba(0,0,0,0.2);" />
                 </div>
-                <h3 style="font-size:18px; margin:14px 0 6px 0; color:#ffffff;">Odoo connection screen</h3>
-                <p style="margin:0; color:rgba(255,255,255,.7); font-size:14px;">Base URL, access token, store code, SSL verification, order import settings, and stock export settings in one place.</p>
+                <div class="mt-4 px-2">
+                    <h3 style="font-size: 22px; margin: 0 0 8px 0; color: #ffffff; font-weight: 800;">Odoo connection screen</h3>
+                    <p style="margin: 0; color: rgba(255,255,255,0.6); font-size: 16px; line-height: 1.6;">Base URL, access token, store code, SSL verification, order import settings, and stock export settings in one place.</p>
+                </div>
             </div>
-            <div class="col-lg-6" style="flex:1 1 480px; min-width:280px;">
-                <div style="background-color:#ffffff; border-radius:22px; padding:12px; box-shadow:0 18px 40px rgba(0,0,0,.24);">
-                    <img src="screen_guided_sync.jpg" alt="Guided sync wizard in Odoo Magento connector" style="width:100%; display:block; border-radius:16px;" />
+            <div class="col-lg-6">
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 28px; padding: 16px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); backdrop-filter: blur(10px);">
+                    <img src="screen_guided_sync.jpg" alt="Guided sync wizard in Odoo Magento connector" style="width: 100%; display: block; border-radius: 16px; border: 1px solid rgba(0,0,0,0.2);" />
                 </div>
-                <h3 style="font-size:18px; margin:14px 0 6px 0; color:#ffffff;">Guided sync wizard</h3>
-                <p style="margin:0; color:rgba(255,255,255,.7); font-size:14px;">Recommended first run flow helps users avoid wrong sync order and reduces onboarding mistakes.</p>
+                <div class="mt-4 px-2">
+                    <h3 style="font-size: 22px; margin: 0 0 8px 0; color: #ffffff; font-weight: 800;">Guided sync wizard</h3>
+                    <p style="margin: 0; color: rgba(255,255,255,0.6); font-size: 16px; line-height: 1.6;">Recommended first run flow helps users avoid wrong sync order and reduces onboarding mistakes.</p>
+                </div>
             </div>
-        </div>
-
-        <div class="row" style="display:flex; flex-wrap:wrap; gap:22px; margin-top:24px;">
-            <div class="col-lg-6" style="flex:1 1 480px; min-width:280px;">
-                <div style="background-color:#ffffff; border-radius:22px; padding:12px; box-shadow:0 18px 40px rgba(0,0,0,.24);">
-                    <img src="screen_magento_integration.jpg" alt="Magento new integration screen" style="width:100%; display:block; border-radius:16px;" />
+            <div class="col-lg-6">
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 28px; padding: 16px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); backdrop-filter: blur(10px);">
+                    <img src="screen_magento_integration.jpg" alt="Magento new integration screen" style="width: 100%; display: block; border-radius: 16px; border: 1px solid rgba(0,0,0,0.2);" />
                 </div>
-                <h3 style="font-size:18px; margin:14px 0 6px 0; color:#ffffff;">Magento integration setup</h3>
-                <p style="margin:0; color:rgba(255,255,255,.7); font-size:14px;">Create a Magento integration and use the generated access token to connect Odoo.</p>
+                <div class="mt-4 px-2">
+                    <h3 style="font-size: 22px; margin: 0 0 8px 0; color: #ffffff; font-weight: 800;">Magento integration setup</h3>
+                    <p style="margin: 0; color: rgba(255,255,255,0.6); font-size: 16px; line-height: 1.6;">Create a Magento integration and use the generated access token to connect Odoo securely.</p>
+                </div>
             </div>
-            <div class="col-lg-6" style="flex:1 1 480px; min-width:280px;">
-                <div style="background-color:#ffffff; border-radius:22px; padding:12px; box-shadow:0 18px 40px rgba(0,0,0,.24);">
-                    <img src="screen_magento_authorize.jpg" alt="Magento API authorization screen" style="width:100%; display:block; border-radius:16px;" />
+            <div class="col-lg-6">
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 28px; padding: 16px; box-shadow: 0 20px 50px rgba(0,0,0,0.5); backdrop-filter: blur(10px);">
+                    <img src="screen_magento_authorize.jpg" alt="Magento API authorization screen" style="width: 100%; display: block; border-radius: 16px; border: 1px solid rgba(0,0,0,0.2);" />
                 </div>
-                <h3 style="font-size:18px; margin:14px 0 6px 0; color:#ffffff;">Magento API authorization</h3>
-                <p style="margin:0; color:rgba(255,255,255,.7); font-size:14px;">Authorize the integration and control Magento API permissions from the Magento admin panel.</p>
+                <div class="mt-4 px-2">
+                    <h3 style="font-size: 22px; margin: 0 0 8px 0; color: #ffffff; font-weight: 800;">Magento API authorization</h3>
+                    <p style="margin: 0; color: rgba(255,255,255,0.6); font-size: 16px; line-height: 1.6;">Authorize the integration and strictly control Magento API permissions directly from the Magento admin.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- HOW IT WORKS -->
-    <section style="margin-top:40px;">
-        <div class="row" style="display:flex; flex-wrap:wrap; gap:22px; align-items:stretch;">
-            <div class="col-lg-5" style="flex:1 1 360px; min-width:280px; background-color:#ffffff; border-radius:26px; border:1px solid #e8ebf2; padding:30px; box-shadow:0 14px 36px rgba(17,24,39,.06);">
-                <p style="display:inline-block; margin:0 0 10px 0; padding:7px 12px; border-radius:999px; background-color:#fff3ed; color:#d94f10; font-weight:800; font-size:13px;">How it works</p>
-                <h2 style="font-size:31px; line-height:1.18; margin:0 0 12px 0; color:#172033; letter-spacing:-.5px;">A safe first run, then repeatable sync.</h2>
-                <p style="font-size:15px; color:#667085; margin:0;">The module is designed so users can start with a small controlled sync, verify data, and then continue with bigger catalog and order operations.</p>
+    <section class="mb-5 mt-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-5">
+                <div class="d-flex flex-column justify-content-center h-100" style="background: #ffffff; border-radius: 32px; border: 1px solid #e2e8f0; padding: 48px; box-shadow: 0 20px 40px rgba(15,23,42,0.04);">
+                    <span class="d-inline-flex align-items-center gap-2" style="align-self: flex-start; margin-bottom: 16px; padding: 8px 16px; border-radius: 100px; background: linear-gradient(135deg, #fff3ed 0%, #ffe9df 100%); color: #d94f10; font-weight: 800; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;">
+                        &#128259; How it works
+                    </span>
+                    <h2 style="font-size: clamp(28px, 3vw, 38px); line-height: 1.15; margin: 0 0 16px 0; color: #0f172a; font-weight: 900; letter-spacing: -0.03em;">
+                        A safe first run, then repeatable sync.
+                    </h2>
+                    <p style="font-size: 17px; color: #64748b; margin: 0; line-height: 1.6;">
+                        The module is designed so users can start with a small controlled sync, verify data, and then continue with bigger catalog and order operations seamlessly.
+                    </p>
+                </div>
             </div>
-            <div class="col-lg-7" style="flex:2 1 560px; min-width:280px; display:flex; flex-direction:column; gap:14px;">
-                <div style="display:flex; gap:14px; align-items:flex-start; background-color:#ffffff; border:1px solid #e8ebf2; border-radius:20px; padding:18px;">
-                    <span style="min-width:38px; height:38px; border-radius:12px; background-color:#f26522; color:#ffffff; display:flex; align-items:center; justify-content:center; font-weight:900;">1</span>
-                    <div><strong style="display:block; color:#172033; margin-bottom:4px;">Connect Magento</strong><span style="font-size:14px; color:#667085;">Enter Magento base URL, access token, store code, and SSL preference.</span></div>
+            
+            <div class="col-lg-7 d-flex flex-column gap-3">
+                <div class="d-flex align-items-center gap-4" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 24px; padding: 24px; box-shadow: 0 8px 24px rgba(15,23,42,0.03);">
+                    <div class="d-flex align-items-center justify-content-center flex-shrink-0" style="width: 50px; height: 50px; border-radius: 16px; background: linear-gradient(135deg, #f26522, #fa8c58); color: #ffffff; font-weight: 900; font-size: 20px; box-shadow: 0 8px 16px rgba(242,101,34,0.3);">1</div>
+                    <div>
+                        <strong style="display: block; color: #0f172a; margin-bottom: 4px; font-size: 18px; font-weight: 800;">Connect Magento</strong>
+                        <span style="font-size: 15px; color: #64748b; line-height: 1.5;">Enter Magento base URL, access token, store code, and SSL preference.</span>
+                    </div>
                 </div>
-                <div style="display:flex; gap:14px; align-items:flex-start; background-color:#ffffff; border:1px solid #e8ebf2; border-radius:20px; padding:18px;">
-                    <span style="min-width:38px; height:38px; border-radius:12px; background-color:#f26522; color:#ffffff; display:flex; align-items:center; justify-content:center; font-weight:900;">2</span>
-                    <div><strong style="display:block; color:#172033; margin-bottom:4px;">Import stores</strong><span style="font-size:14px; color:#667085;">Import Magento websites, stores, and store views to prepare the connector.</span></div>
+                
+                <div class="d-flex align-items-center gap-4" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 24px; padding: 24px; box-shadow: 0 8px 24px rgba(15,23,42,0.03);">
+                    <div class="d-flex align-items-center justify-content-center flex-shrink-0" style="width: 50px; height: 50px; border-radius: 16px; background: linear-gradient(135deg, #f26522, #fa8c58); color: #ffffff; font-weight: 900; font-size: 20px; box-shadow: 0 8px 16px rgba(242,101,34,0.3);">2</div>
+                    <div>
+                        <strong style="display: block; color: #0f172a; margin-bottom: 4px; font-size: 18px; font-weight: 800;">Import stores</strong>
+                        <span style="font-size: 15px; color: #64748b; line-height: 1.5;">Import Magento websites, stores, and store views to prepare the connector.</span>
+                    </div>
                 </div>
-                <div style="display:flex; gap:14px; align-items:flex-start; background-color:#ffffff; border:1px solid #e8ebf2; border-radius:20px; padding:18px;">
-                    <span style="min-width:38px; height:38px; border-radius:12px; background-color:#f26522; color:#ffffff; display:flex; align-items:center; justify-content:center; font-weight:900;">3</span>
-                    <div><strong style="display:block; color:#172033; margin-bottom:4px;">Check readiness</strong><span style="font-size:14px; color:#667085;">Review missing setup before importing products, orders, or exporting stock.</span></div>
+                
+                <div class="d-flex align-items-center gap-4" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 24px; padding: 24px; box-shadow: 0 8px 24px rgba(15,23,42,0.03);">
+                    <div class="d-flex align-items-center justify-content-center flex-shrink-0" style="width: 50px; height: 50px; border-radius: 16px; background: linear-gradient(135deg, #f26522, #fa8c58); color: #ffffff; font-weight: 900; font-size: 20px; box-shadow: 0 8px 16px rgba(242,101,34,0.3);">3</div>
+                    <div>
+                        <strong style="display: block; color: #0f172a; margin-bottom: 4px; font-size: 18px; font-weight: 800;">Check readiness</strong>
+                        <span style="font-size: 15px; color: #64748b; line-height: 1.5;">Review missing setup before importing products, orders, or exporting stock.</span>
+                    </div>
                 </div>
-                <div style="display:flex; gap:14px; align-items:flex-start; background-color:#ffffff; border:1px solid #e8ebf2; border-radius:20px; padding:18px;">
-                    <span style="min-width:38px; height:38px; border-radius:12px; background-color:#f26522; color:#ffffff; display:flex; align-items:center; justify-content:center; font-weight:900;">4</span>
-                    <div><strong style="display:block; color:#172033; margin-bottom:4px;">Run sync operations</strong><span style="font-size:14px; color:#667085;">Import products, import orders, export stock, and process queued jobs from Odoo.</span></div>
+                
+                <div class="d-flex align-items-center gap-4" style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 24px; padding: 24px; box-shadow: 0 8px 24px rgba(15,23,42,0.03);">
+                    <div class="d-flex align-items-center justify-content-center flex-shrink-0" style="width: 50px; height: 50px; border-radius: 16px; background: linear-gradient(135deg, #f26522, #fa8c58); color: #ffffff; font-weight: 900; font-size: 20px; box-shadow: 0 8px 16px rgba(242,101,34,0.3);">4</div>
+                    <div>
+                        <strong style="display: block; color: #0f172a; margin-bottom: 4px; font-size: 18px; font-weight: 800;">Run sync operations</strong>
+                        <span style="font-size: 15px; color: #64748b; line-height: 1.5;">Import products, import orders, export stock, and process queued jobs.</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- SYNC DETAILS -->
-    <section style="margin-top:38px; background-color:#ffffff; border-radius:26px; border:1px solid #e8ebf2; padding:32px; box-shadow:0 14px 36px rgba(17,24,39,.06);">
-        <div style="text-align:center; max-width:760px; margin:0 auto 24px auto;">
-            <h2 style="font-size:32px; margin:0 0 10px 0; color:#172033;">What the connector handles</h2>
-            <p style="font-size:16px; color:#667085; margin:0;">A practical feature set for Magento-to-Odoo operations.</p>
+    <section class="mt-5 mb-5" style="background: #ffffff; border-radius: 36px; border: 1px solid #e2e8f0; padding: 60px 40px; box-shadow: 0 20px 40px rgba(15,23,42,0.04);">
+        <div class="d-flex flex-column align-items-center text-center mb-5" style="max-width: 700px; margin: 0 auto;">
+            <h2 style="font-size: clamp(28px, 3vw, 38px); margin: 0 0 12px 0; color: #0f172a; font-weight: 900; letter-spacing: -0.03em;">What the connector handles</h2>
+            <p style="font-size: 18px; color: #64748b; margin: 0;">A practical, battle-tested feature set for Magento-to-Odoo operations.</p>
         </div>
-        <div class="row" style="display:flex; flex-wrap:wrap; gap:16px;">
-            <div style="flex:1 1 280px; padding:20px; border-radius:20px; background-color:#f7f8fc; border:1px solid #edf0f6;">
-                <h3 style="font-size:18px; margin:0 0 10px 0; color:#172033;">Catalog</h3>
-                <ul style="margin:0; padding-left:18px; color:#667085; font-size:14px;">
-                    <li>Magento products</li>
-                    <li>Product/category bindings</li>
-                    <li>Auto-create products option</li>
-                    <li>Product count visibility</li>
-                </ul>
+        
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="d-flex flex-column h-100" style="padding: 24px; border-radius: 24px; background: #f8fafc; border: 1px solid #e2e8f0;">
+                    <h3 class="d-flex align-items-center gap-2" style="font-size: 18px; margin: 0 0 16px 0; color: #0f172a; font-weight: 800;">&#128722; Catalog</h3>
+                    <ul style="margin: 0; padding-left: 0; list-style: none; color: #64748b; font-size: 15px; display: flex; flex-direction: column; gap: 8px;">
+                        <li style="display: flex; align-items: center; gap: 8px;"><span style="color:#f26522; font-size:18px;">&#8226;</span> Magento products</li>
+                        <li style="display: flex; align-items: center; gap: 8px;"><span style="color:#f26522; font-size:18px;">&#8226;</span> Product/category bindings</li>
+                        <li style="display: flex; align-items: center; gap: 8px;"><span style="color:#f26522; font-size:18px;">&#8226;</span> Auto-create products option</li>
+                        <li style="display: flex; align-items: center; gap: 8px;"><span style="color:#f26522; font-size:18px;">&#8226;</span> Product count visibility</li>
+                    </ul>
+                </div>
             </div>
-            <div style="flex:1 1 280px; padding:20px; border-radius:20px; background-color:#f7f8fc; border:1px solid #edf0f6;">
-                <h3 style="font-size:18px; margin:0 0 10px 0; color:#172033;">Orders</h3>
-                <ul style="margin:0; padding-left:18px; color:#667085; font-size:14px;">
-                    <li>Order import date control</li>
-                    <li>Create quotation flow</li>
-                    <li>Shipping product line</li>
-                    <li>Adjustment line for totals</li>
-                </ul>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="d-flex flex-column h-100" style="padding: 24px; border-radius: 24px; background: #f8fafc; border: 1px solid #e2e8f0;">
+                    <h3 class="d-flex align-items-center gap-2" style="font-size: 18px; margin: 0 0 16px 0; color: #0f172a; font-weight: 800;">&#128230; Orders</h3>
+                    <ul style="margin: 0; padding-left: 0; list-style: none; color: #64748b; font-size: 15px; display: flex; flex-direction: column; gap: 8px;">
+                        <li style="display: flex; align-items: center; gap: 8px;"><span style="color:#f26522; font-size:18px;">&#8226;</span> Order import date control</li>
+                        <li style="display: flex; align-items: center; gap: 8px;"><span style="color:#f26522; font-size:18px;">&#8226;</span> Create quotation flow</li>
+                        <li style="display: flex; align-items: center; gap: 8px;"><span style="color:#f26522; font-size:18px;">&#8226;</span> Shipping product line</li>
+                        <li style="display: flex; align-items: center; gap: 8px;"><span style="color:#f26522; font-size:18px;">&#8226;</span> Adjustment line for totals</li>
+                    </ul>
+                </div>
             </div>
-            <div style="flex:1 1 280px; padding:20px; border-radius:20px; background-color:#f7f8fc; border:1px solid #edf0f6;">
-                <h3 style="font-size:18px; margin:0 0 10px 0; color:#172033;">Inventory</h3>
-                <ul style="margin:0; padding-left:18px; color:#667085; font-size:14px;">
-                    <li>Magento MSI source items</li>
-                    <li>Source code control</li>
-                    <li>Odoo warehouse selection</li>
-                    <li>Safety stock and stock field settings</li>
-                </ul>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="d-flex flex-column h-100" style="padding: 24px; border-radius: 24px; background: #f8fafc; border: 1px solid #e2e8f0;">
+                    <h3 class="d-flex align-items-center gap-2" style="font-size: 18px; margin: 0 0 16px 0; color: #0f172a; font-weight: 800;">&#128202; Inventory</h3>
+                    <ul style="margin: 0; padding-left: 0; list-style: none; color: #64748b; font-size: 15px; display: flex; flex-direction: column; gap: 8px;">
+                        <li style="display: flex; align-items: center; gap: 8px;"><span style="color:#f26522; font-size:18px;">&#8226;</span> Magento MSI source items</li>
+                        <li style="display: flex; align-items: center; gap: 8px;"><span style="color:#f26522; font-size:18px;">&#8226;</span> Source code control</li>
+                        <li style="display: flex; align-items: center; gap: 8px;"><span style="color:#f26522; font-size:18px;">&#8226;</span> Odoo warehouse selection</li>
+                        <li style="display: flex; align-items: center; gap: 8px;"><span style="color:#f26522; font-size:18px;">&#8226;</span> Safety stock controls</li>
+                    </ul>
+                </div>
             </div>
-            <div style="flex:1 1 280px; padding:20px; border-radius:20px; background-color:#f7f8fc; border:1px solid #edf0f6;">
-                <h3 style="font-size:18px; margin:0 0 10px 0; color:#172033;">Monitoring</h3>
-                <ul style="margin:0; padding-left:18px; color:#667085; font-size:14px;">
-                    <li>Pending jobs</li>
-                    <li>Failed jobs</li>
-                    <li>Connection status</li>
-                    <li>Readiness score and logs</li>
-                </ul>
+            
+            <div class="col-md-6 col-lg-3">
+                <div class="d-flex flex-column h-100" style="padding: 24px; border-radius: 24px; background: #f8fafc; border: 1px solid #e2e8f0;">
+                    <h3 class="d-flex align-items-center gap-2" style="font-size: 18px; margin: 0 0 16px 0; color: #0f172a; font-weight: 800;">&#128200; Monitoring</h3>
+                    <ul style="margin: 0; padding-left: 0; list-style: none; color: #64748b; font-size: 15px; display: flex; flex-direction: column; gap: 8px;">
+                        <li style="display: flex; align-items: center; gap: 8px;"><span style="color:#f26522; font-size:18px;">&#8226;</span> Pending jobs review</li>
+                        <li style="display: flex; align-items: center; gap: 8px;"><span style="color:#f26522; font-size:18px;">&#8226;</span> Failed jobs insights</li>
+                        <li style="display: flex; align-items: center; gap: 8px;"><span style="color:#f26522; font-size:18px;">&#8226;</span> Connection status ping</li>
+                        <li style="display: flex; align-items: center; gap: 8px;"><span style="color:#f26522; font-size:18px;">&#8226;</span> Readiness score & logs</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- CTA -->
-    <section style="margin-top:40px; padding:36px; border-radius:28px; background:linear-gradient(135deg,#fff3ed 0%,#ffffff 55%,#efe7f5 100%); border:1px solid #eadfeb; text-align:center;">
-        <h2 style="font-size:34px; line-height:1.15; margin:0 0 12px 0; color:#172033; letter-spacing:-.5px;">Run Magento and Odoo from one controlled workspace.</h2>
-        <p style="font-size:16px; color:#667085; max-width:760px; margin:0 auto 22px auto;">Magento 2 Connector Pro for Odoo helps teams connect, sync, monitor, and troubleshoot Magento operations without confusing technical screens.</p>
-        <div class="d-flex justify-content-center flex-wrap" style="display:flex; justify-content:center; flex-wrap:wrap; gap:12px;">
-            <span style="background-color:#f26522; color:#ffffff; padding:12px 18px; border-radius:14px; font-weight:900;">Magento 2 Ready</span>
-            <span style="background-color:#4b235f; color:#ffffff; padding:12px 18px; border-radius:14px; font-weight:900;">Odoo 19 Ready</span>
-            <span style="background-color:#ffffff; color:#172033; padding:12px 18px; border-radius:14px; font-weight:900; border:1px solid #e8ebf2;">Built by Niyu Labs</span>
+    <section class="mt-5 mb-4 text-center d-flex flex-column align-items-center justify-content-center" style="padding: 60px 40px; border-radius: 36px; background: linear-gradient(135deg, #f26522 0%, #b82e5b 50%, #4b235f 100%); color: #ffffff; box-shadow: 0 30px 60px rgba(184,46,91,0.25);">
+        <h2 style="font-size: clamp(32px, 4vw, 44px); line-height: 1.15; margin: 0 0 16px 0; font-weight: 900; letter-spacing: -0.03em;">
+            Run Magento and Odoo from <br> one controlled workspace.
+        </h2>
+        <p style="font-size: 18px; color: rgba(255,255,255,0.9); max-width: 760px; margin: 0 auto 32px auto; font-weight: 400;">
+            Magento 2 Connector Pro for Odoo helps teams connect, sync, monitor, and troubleshoot Magento operations without confusing technical screens.
+        </p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+            <span class="d-flex align-items-center gap-2" style="background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); color: #ffffff; padding: 12px 24px; border-radius: 100px; font-weight: 800; backdrop-filter: blur(10px);">&#10003; Magento 2 Ready</span>
+            <span class="d-flex align-items-center gap-2" style="background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); color: #ffffff; padding: 12px 24px; border-radius: 100px; font-weight: 800; backdrop-filter: blur(10px);">&#10003; Odoo 19 Ready</span>
+            <span class="d-flex align-items-center" style="background: #ffffff; color: #4b235f; padding: 12px 24px; border-radius: 100px; font-weight: 900; box-shadow: 0 10px 20px rgba(0,0,0,0.15);">Built by Niyu Labs</span>
         </div>
     </section>
 
     <!-- SUPPORT -->
-    <section style="margin-top:28px; padding:22px; border-radius:20px; background-color:#ffffff; border:1px solid #e8ebf2; text-align:center;">
-        <p style="margin:0; color:#667085; font-size:14px;">Need help with setup? We provide installation support and connector configuration guidance.</p>
+    <section class="text-center" style="padding: 24px; border-radius: 20px; background: transparent; border: 1px solid rgba(15,23,42,0.1);">
+        <p style="margin: 0; color: #64748b; font-size: 15px; font-weight: 500;">
+            Need help with setup? We provide dedicated installation support and connector configuration guidance.
+        </p>
     </section>
 
 </div>
 </body>
-
