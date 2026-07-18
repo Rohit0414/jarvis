@@ -1,327 +1,445 @@
-<div class="container-fluid" style="background-color: #f6f7fb; color: #172033; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; padding: 20px 0 80px 0; line-height: 1.6;">
-    <div class="container" style="max-width: 1200px; margin: 0 auto;">
-
-        <!-- ==========================================
-             HERO SECTION (Odoo Safe - Solid Colors)
-             ========================================== -->
-        <div class="row align-items-center" style="background-color: #1d1028; border-radius: 24px; padding: 40px 20px; margin-bottom: 60px; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
-            <div class="col-lg-8" style="padding: 20px;">
-                <div style="display: inline-block; background-color: #3a183f; border: 1px solid #f26522; color: #ffffff; padding: 8px 16px; border-radius: 50px; font-size: 13px; font-weight: 800; text-transform: uppercase; margin-bottom: 24px;">
-                    &#10004; Verified for Odoo 16, 17, 18 & 19
-                </div>
-                <h1 style="font-size: 42px; line-height: 1.1; margin: 0 0 20px 0; font-weight: 900; color: #ffffff;">
-                    Magento 2 Connector Pro <br><span style="color: #fbd2bd;">Official Documentation</span>
-                </h1>
-                <p style="font-size: 18px; margin: 0 0 30px 0; color: #e8ebf2; max-width: 700px;">
-                    Welcome to the most transparent, operations-grade integration ever built for Magento and Odoo. This comprehensive manual covers everything from configuring MSI stock rules and order total guardrails, to operating the self-healing queue engine and fulfilling automated shipments.
-                </p>
-                <div>
-                    <span style="display: inline-block; background-color: #f26522; color: #ffffff; padding: 14px 28px; border-radius: 12px; font-weight: 800; font-size: 16px; margin-right: 15px; margin-bottom: 10px;">&#128214; Read the Manual</span>
-                    <span style="display: inline-block; background-color: #3a183f; color: #ffffff; border: 1px solid #e8ebf2; padding: 14px 28px; border-radius: 12px; font-weight: 800; font-size: 16px; margin-bottom: 10px;">&#128269; View Setup Workflow</span>
-                </div>
-            </div>
-            
-            <div class="col-lg-4" style="padding: 20px;">
-                <div style="background-color: #2d183d; border: 1px solid #4b235f; border-radius: 16px; padding: 24px; margin-bottom: 20px;">
-                    <h3 style="font-size: 18px; color: #ffffff; margin: 0 0 20px 0; font-weight: 800; border-bottom: 1px solid #4b235f; padding-bottom: 10px;">Documentation Index</h3>
-                    <ul style="list-style: none; padding: 0; margin: 0; color: #e8ebf2; font-size: 15px; font-weight: 500;">
-                        <li style="margin-bottom: 12px;"><strong style="color: #f26522; margin-right: 8px;">1.</strong> The Core Philosophy</li>
-                        <li style="margin-bottom: 12px;"><strong style="color: #f26522; margin-right: 8px;">2.</strong> Technical Deep Dive</li>
-                        <li style="margin-bottom: 12px;"><strong style="color: #f26522; margin-right: 8px;">3.</strong> Configuration & Settings</li>
-                        <li style="margin-bottom: 12px;"><strong style="color: #f26522; margin-right: 8px;">4.</strong> Guided Setup Workflow</li>
-                        <li style="margin-bottom: 12px;"><strong style="color: #f26522; margin-right: 8px;">5.</strong> The Mapping Center</li>
-                        <li style="margin-bottom: 0;"><strong style="color: #f26522; margin-right: 8px;">6.</strong> Operations & Queue Triage</li>
-                    </ul>
-                </div>
-              
+<section class="oe_container" style="background-color:#ffffff; color:#172033; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif; overflow:hidden;">
+    <div class="container py-4 py-lg-5">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <img src="banner.png" alt="Wrike Connector for Odoo 19" class="img-fluid w-100 rounded shadow-sm" style="border:1px solid #e4e9f2;"/>
             </div>
         </div>
-
-        <!-- ==========================================
-             SECTION 1: PHILOSOPHY
-             ========================================== -->
-        <div style="text-align: center; margin-bottom: 40px;">
-            <span style="display: inline-block; background-color: #efe7f5; color: #4b235f; padding: 8px 16px; border-radius: 50px; font-weight: 800; font-size: 13px; text-transform: uppercase; margin-bottom: 15px;">&#11088; Section 1: The Architecture</span>
-            <h2 style="font-size: 36px; margin: 0 0 20px 0; color: #172033; font-weight: 900;">Killing the "Black Box"</h2>
-            <p style="font-size: 18px; color: #667085; max-width: 800px; margin: 0 auto;">Standard integrations operate entirely in the shadows. When an order drops due to a rounding error or an API timeout, your operations team is left blind. We built this module with absolute operational transparency and active database protection.</p>
-        </div>
-
-        <div class="row mb-5">
-            <div class="col-md-6 mb-4">
-                <div style="background-color: #ffffff; border: 1px solid #e8ebf2; border-radius: 20px; padding: 30px; height: 100%; border-top: 5px solid #f26522; box-shadow: 0 8px 20px rgba(0,0,0,0.03);">
-                    <div style="font-size: 36px; color: #f26522; margin-bottom: 15px;">&#128269;</div>
-                    <h3 style="font-size: 22px; margin: 0 0 15px 0; color: #172033; font-weight: 800;">The Pre-Flight Readiness Checker</h3>
-                    <p style="font-size: 15px; color: #667085; margin: 0 0 15px 0;">Before you ever push or pull massive amounts of data, our built-in auditor scans your system. It actively prevents database corruption.</p>
-                    <ul style="list-style: none; padding: 0; margin: 0; color: #4b235f; font-size: 14px; font-weight: 600; margin-bottom: 20px;">
-                        <li style="margin-bottom: 8px;">&#10004; Blocks sync if duplicate Odoo SKUs are detected.</li>
-                        <li style="margin-bottom: 8px;">&#10004; Warns if Default Odoo Warehouses are not selected.</li>
-                        <li style="margin-bottom: 8px;">&#10004; Checks if critical mappings (Taxes, Shipping) are ignored.</li>
-                        <li>&#10004; Generates a precise 0-100 System Health Score.</li>
-                    </ul>
-                    <!-- READINESS SCREENSHOT -->
-                    <img src="./readiness.png" alt="Action Buttons" style="width: 100%; border-radius: 12px; border: 1px solid #e8ebf2; margin-top: auto;">
-                </div>
-            </div>
-            <div class="col-md-6 mb-4">
-                <div style="background-color: #ffffff; border: 1px solid #e8ebf2; border-radius: 20px; padding: 30px; height: 100%; border-top: 5px solid #3a183f; box-shadow: 0 8px 20px rgba(0,0,0,0.03);">
-                    <div style="font-size: 36px; color: #3a183f; margin-bottom: 15px;">&#128202;</div>
-                    <h3 style="font-size: 22px; margin: 0 0 15px 0; color: #172033; font-weight: 800;">Inventory Drift Reconciliation</h3>
-                    <p style="font-size: 15px; color: #667085; margin: 0 0 15px 0;">Never guess if your stock is accurate. The Inventory Drift module explicitly calculates the exact difference between Odoo's real-time stock and Magento's MSI Source quantities.</p>
-                    <ul style="list-style: none; padding: 0; margin: 0; color: #f26522; font-size: 14px; font-weight: 600;">
-                        <li style="margin-bottom: 8px;">&#10004; Warning State: Flags minor differences ( > 0.0001 ).</li>
-                        <li style="margin-bottom: 8px;">&#10004; Critical State: Flags major differences ( > 10 units ).</li>
-                        <li style="margin-bottom: 8px;">&#10004; Not Found: Alerts if a product exists in Odoo but not Magento.</li>
-                        <li>&#10004; One-Click Fix: Instantly generate an export job to fix drifted SKUs.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- ==========================================
-             SECTION 2: FEATURE DEEP DIVE
-             ========================================== -->
-        <div style="background-color: #ffffff; border-radius: 24px; border: 1px solid #e8ebf2; padding: 40px; box-shadow: 0 15px 35px rgba(0,0,0,0.03); margin-bottom: 60px;">
-            <div style="text-align: center; margin-bottom: 40px;">
-                <span style="display: inline-block; background-color: #fff3ed; color: #d94f10; padding: 8px 16px; border-radius: 50px; font-weight: 800; font-size: 13px; text-transform: uppercase; margin-bottom: 15px;">&#128296; Section 2: Technical Deep Dive</span>
-                <h2 style="font-size: 36px; margin: 0 0 20px 0; color: #172033; font-weight: 900;">How the Code Actually Works</h2>
-                <p style="font-size: 16px; color: #667085; max-width: 800px; margin: 0 auto;">We have programmed complex logic to handle Magento's most notoriously difficult architectural quirks. Here is exactly how our module handles your most critical operations under the hood.</p>
-            </div>
-
-            <!-- Order Math -->
-            <div class="row align-items-center mb-5" style="border-bottom: 1px solid #e8ebf2; padding-bottom: 30px;">
-                <div class="col-md-2 text-center mb-3 mb-md-0">
-                    <div style="width: 80px; height: 80px; background-color: #f8fafc; border: 1px solid #edf0f6; border-radius: 16px; display: inline-flex; align-items: center; justify-content: center; font-size: 36px; color: #3a183f;">&#128230;</div>
-                </div>
-                <div class="col-md-10">
-                    <h3 style="font-size: 24px; font-weight: 800; color: #172033; margin: 0 0 10px 0;">Order Routing & Financial Math Guardrails</h3>
-                    <p style="font-size: 15px; color: #667085; margin: 0 0 15px 0;">Magento calculates taxes differently than Odoo. When parsing order JSON, the connector executes strict validation against the `order_total_tolerance` setting.</p>
-                    <ul style="list-style: none; padding: 0; margin: 0; color: #172033; font-size: 14px; font-weight: 600;">
-                        <li style="margin-bottom: 8px;">&#10140; <strong>Variant Splitting:</strong> The module ignores Magento `parent_item_id` lines. It only imports the physical <em>Simple Product</em> variant to Odoo.</li>
-                        <li style="margin-bottom: 8px;">&#10140; <strong>Shipping & Discounts:</strong> Extracts `shipping_amount` and `discount_amount` and converts them into dedicated Sale Order lines.</li>
-                        <li>&#10140; <strong>Adjustment Injection:</strong> If Odoo's total differs from Magento's, the `order_total_policy` automatically injects a financial Adjustment Service Line to balance the accounting, or strictly blocks the import.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Inventory MSI -->
-            <div class="row align-items-center mb-5" style="border-bottom: 1px solid #e8ebf2; padding-bottom: 30px;">
-                <div class="col-md-2 text-center mb-3 mb-md-0">
-                    <div style="width: 80px; height: 80px; background-color: #f8fafc; border: 1px solid #edf0f6; border-radius: 16px; display: inline-flex; align-items: center; justify-content: center; font-size: 36px; color: #f26522;">&#128202;</div>
-                </div>
-                <div class="col-md-10">
-                    <h3 style="font-size: 24px; font-weight: 800; color: #172033; margin: 0 0 10px 0;">Multi-Source Inventory (MSI) & Safety Stock</h3>
-                    <p style="font-size: 15px; color: #667085; margin: 0 0 15px 0;">Natively queries and updates the `/V1/inventory/source-items` API, allowing you to map multiple Odoo warehouses to precise Magento physical locations.</p>
-                    <ul style="list-style: none; padding: 0; margin: 0; color: #172033; font-size: 14px; font-weight: 600;">
-                        <li style="margin-bottom: 8px;">&#10140; <strong>Source Code Mapping:</strong> Export stock targeting specific `stock_source_code` values instead of overwriting global catalogs.</li>
-                        <li style="margin-bottom: 8px;">&#10140; <strong>Quantity Logic:</strong> Choose exactly what Odoo field calculates stock (`qty_available` / On Hand, `virtual_available` / Forecasted, or Free to Use).</li>
-                        <li>&#10140; <strong>Safety Stock Buffer:</strong> Define a subtraction rule. If you set Safety Stock to 5, and Odoo has 12 items, the connector strictly pushes 7 units to Magento to prevent overselling.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Queue & Triage -->
-            <div class="row align-items-center mb-5" style="border-bottom: 1px solid #e8ebf2; padding-bottom: 30px;">
-                <div class="col-md-2 text-center mb-3 mb-md-0">
-                    <div style="width: 80px; height: 80px; background-color: #f8fafc; border: 1px solid #edf0f6; border-radius: 16px; display: inline-flex; align-items: center; justify-content: center; font-size: 36px; color: #3a183f;">&#9881;</div>
-                </div>
-                <div class="col-md-10">
-                    <h3 style="font-size: 24px; font-weight: 800; color: #172033; margin: 0 0 10px 0;">Self-Healing Queue Engine</h3>
-                    <p style="font-size: 15px; color: #667085; margin: 0 0 15px 0;">Every action is packaged into a `commerce.bridge.queue.job`. If a network timeout occurs, operations do not freeze.</p>
-                    <ul style="list-style: none; padding: 0; margin: 0; color: #172033; font-size: 14px; font-weight: 600;">
-                        <li style="margin-bottom: 8px;">&#10140; <strong>Exponential Backoff:</strong> Calculates retry delays using `min(60, 2 ** max(0, retry_count - 1))`, preventing you from getting IP-banned by your own server.</li>
-                        <li style="margin-bottom: 8px;">&#10140; <strong>Collision Locks:</strong> Generates strict `external_key` hashes to guarantee duplicate background jobs don't pile up.</li>
-                        <li>&#10140; <strong>Human Action Hints:</strong> Catches raw JSON errors (like `401 Unauthorized` or `No such entity`) and translates them into plain-English advice in the Odoo interface.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Automated Shipments -->
-            <div class="row align-items-center">
-                <div class="col-md-2 text-center mb-3 mb-md-0">
-                    <div style="width: 80px; height: 80px; background-color: #f8fafc; border: 1px solid #edf0f6; border-radius: 16px; display: inline-flex; align-items: center; justify-content: center; font-size: 36px; color: #f26522;">&#128666;</div>
-                </div>
-                <div class="col-md-10">
-                    <h3 style="font-size: 24px; font-weight: 800; color: #172033; margin: 0 0 10px 0;">Automated Shipments & Tracking</h3>
-                    <p style="font-size: 15px; color: #667085; margin: 0 0 15px 0;">Fulfillment is tightly integrated into Odoo's native Inventory app.</p>
-                    <ul style="list-style: none; padding: 0; margin: 0; color: #172033; font-size: 14px; font-weight: 600;">
-                        <li style="margin-bottom: 8px;">&#10140; <strong>Stock Picking Hooks:</strong> Validated Odoo Delivery Orders (`stock.picking`) unlock an Export Shipment action.</li>
-                        <li style="margin-bottom: 8px;">&#10140; <strong>Item_ID Matching:</strong> The module parses `order_items_json` to map shipped SKUs back to their exact Magento `item_id`, ensuring partial fulfillments work perfectly.</li>
-                        <li>&#10140; <strong>Tracking Number Push:</strong> Automatically extracts the Odoo Carrier Name and Tracking Reference to trigger the frontend Magento shipping email.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <!-- ==========================================
-             SECTION 3: SETTINGS
-             ========================================== -->
-        <div style="text-align: center; margin-bottom: 40px;">
-            <span style="display: inline-block; background-color: #efe7f5; color: #4b235f; padding: 8px 16px; border-radius: 50px; font-weight: 800; font-size: 13px; text-transform: uppercase; margin-bottom: 15px;">&#9881; Section 3: Setup Guide</span>
-            <h2 style="font-size: 36px; margin: 0 0 20px 0; color: #172033; font-weight: 900;">Configuration & Settings</h2>
-            <p style="font-size: 16px; color: #667085; max-width: 800px; margin: 0 auto;">Navigate to <strong>CommerceBridge &rarr; Instances</strong> and create a new instance. Below are the critical settings you must configure before initiating a sync.</p>
-        </div>
-
-        <div class="row mb-4">
-            <div class="col-lg-4 mb-4">
-                <div style="background-color: #ffffff; border-radius: 20px; border: 1px solid #e8ebf2; padding: 25px; height: 100%; box-shadow: 0 5px 15px rgba(0,0,0,0.02);">
-                    <h4 style="font-size: 18px; color: #172033; font-weight: 800; border-bottom: 1px solid #f6f7fb; padding-bottom: 10px; margin-top: 0;">1. Connection Rules</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0; color: #475569; font-size: 14px;">
-                        <li style="margin-bottom: 10px;"><strong>Base URL:</strong> Your store URL (e.g., <code>https://shop.com</code>).</li>
-                        <li style="margin-bottom: 10px;"><strong>Access Token:</strong> Generated via Magento Admin.</li>
-                        <li style="margin-bottom: 10px;"><strong>Store Code:</strong> Leave as <code>all</code> to connect to the entire instance.</li>
-                        <li><strong>Verify SSL:</strong> Keep checked for security.</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <div style="background-color: #ffffff; border-radius: 20px; border: 1px solid #e8ebf2; padding: 25px; height: 100%; box-shadow: 0 5px 15px rgba(0,0,0,0.02);">
-                    <h4 style="font-size: 18px; color: #172033; font-weight: 800; border-bottom: 1px solid #f6f7fb; padding-bottom: 10px; margin-top: 0;">2. Order Rules</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0; color: #475569; font-size: 14px;">
-                        <li style="margin-bottom: 10px;"><strong>Import From Date:</strong> <em>Crucial:</em> Prevents importing 10 years of history.</li>
-                        <li style="margin-bottom: 10px;"><strong>Order Action:</strong> Import as <code>Draft</code> or auto-<code>Confirm</code>.</li>
-                        <li style="margin-bottom: 10px;"><strong>Total Policy:</strong> Select <code>Block</code>, <code>Warn</code>, or <code>Adjust</code>.</li>
-                        <li><strong>Tolerance:</strong> Allowed difference (e.g., <code>0.05</code>).</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-4 mb-4">
-                <div style="background-color: #ffffff; border-radius: 20px; border: 1px solid #e8ebf2; padding: 25px; height: 100%; box-shadow: 0 5px 15px rgba(0,0,0,0.02);">
-                    <h4 style="font-size: 18px; color: #172033; font-weight: 800; border-bottom: 1px solid #f6f7fb; padding-bottom: 10px; margin-top: 0;">3. Inventory Rules</h4>
-                    <ul style="list-style: none; padding: 0; margin: 0; color: #475569; font-size: 14px;">
-                        <li style="margin-bottom: 10px;"><strong>Stock API Mode:</strong> Select <code>Magento MSI</code> or <code>Classic</code>.</li>
-                        <li style="margin-bottom: 10px;"><strong>Source Code:</strong> Input your MSI Source Code.</li>
-                        <li style="margin-bottom: 10px;"><strong>Quantity Field:</strong> Select Odoo stock field.</li>
-                        <li><strong>Safety Stock:</strong> Units to subtract before export.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        
-        <!-- CONNECTION SCREENSHOT -->
-        <div class="row mb-5">
-            <div class="col-12 text-center">
-                <img src="./connection.png" alt="Magento 2 Settings Screen" style="max-width: 100%; border-radius: 20px; border: 1px solid #e8ebf2; box-shadow: 0 10px 25px rgba(0,0,0,0.05);">
-            </div>
-        </div>
-
-        <!-- ==========================================
-             SECTION 4: WORKFLOW (Fixed Grid)
-             ========================================== -->
-        <div style="background-color: #1d1028; border-radius: 24px; padding: 50px 30px; color: #ffffff; margin-bottom: 60px; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
-            <div style="text-align: center; margin-bottom: 40px;">
-                <span style="display: inline-block; background-color: #3a183f; color: #ffffff; padding: 8px 16px; border-radius: 50px; font-weight: 800; font-size: 13px; text-transform: uppercase; margin-bottom: 15px; border: 1px solid #4b235f;">&#128640; Section 4: The Sync Workflow</span>
-                <h2 style="font-size: 36px; margin: 0 0 15px 0; font-weight: 900;">Step-by-Step Guided Setup</h2>
-                <p style="font-size: 16px; color: #e8ebf2; max-width: 800px; margin: 0 auto 30px auto;">The module uses a strictly enforced, logical progression to ensure data integrity. Do not skip steps. Execute these actions directly via the action buttons on the Instance dashboard.</p>
-                <!-- GUIDED SYNC SCREENSHOT -->
-                <img src="./guided.png" alt="Guided Sync Wizard" style="max-width: 100%; border-radius: 16px; border: 1px solid #3a183f; box-shadow: 0 10px 20px rgba(0,0,0,0.3); margin-bottom: 30px;">
-            </div>
-
-            <div class="row">
-                <!-- Workflow Step 1 -->
-                <div class="col-12 mb-4">
-                    <div class="row align-items-center" style="background-color: rgba(255,255,255,0.05); border: 1px solid #3a183f; border-radius: 16px; padding: 20px; margin: 0;">
-                        <div class="col-md-2 text-center mb-3 mb-md-0">
-                            <div style="font-size: 28px; font-weight: 900; color: #ffffff; background-color: #f26522; width: 60px; height: 60px; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center;">1</div>
-                        </div>
-                        <div class="col-md-10">
-                            <h4 style="font-size: 20px; font-weight: 800; color: #ffffff; margin: 0 0 8px 0;">Test Connection & Import Stores</h4>
-                            <p style="font-size: 15px; color: #e8ebf2; margin: 0;">Click <strong>Test Connection</strong>. If successful, click <strong>Import Stores</strong>. The module will pull your exact Magento Websites, Store Groups, and Store Views into Odoo so the connector understands your site architecture and multi-store context.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Workflow Step 2 -->
-                <div class="col-12 mb-4">
-                    <div class="row align-items-center" style="background-color: rgba(255,255,255,0.05); border: 1px solid #3a183f; border-radius: 16px; padding: 20px; margin: 0;">
-                        <div class="col-md-2 text-center mb-3 mb-md-0">
-                            <div style="font-size: 28px; font-weight: 900; color: #ffffff; background-color: #f26522; width: 60px; height: 60px; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center;">2</div>
-                        </div>
-                        <div class="col-md-10">
-                            <h4 style="font-size: 20px; font-weight: 800; color: #ffffff; margin: 0 0 8px 0;">Run Readiness Check</h4>
-                            <p style="font-size: 15px; color: #e8ebf2; margin: 0;">Click <strong>Run Readiness</strong>. Open the generated list. The system will grade your setup. Fix any <span style="color: #f26522; font-weight: 700;">Blocking</span> issues (like missing MSI codes or duplicate internal references in Odoo) before proceeding.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Workflow Step 3 -->
-                <div class="col-12 mb-4">
-                    <div class="row align-items-center" style="background-color: rgba(255,255,255,0.05); border: 1px solid #3a183f; border-radius: 16px; padding: 20px; margin: 0;">
-                        <div class="col-md-2 text-center mb-3 mb-md-0">
-                            <div style="font-size: 28px; font-weight: 900; color: #ffffff; background-color: #f26522; width: 60px; height: 60px; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center;">3</div>
-                        </div>
-                        <div class="col-md-10">
-                            <h4 style="font-size: 20px; font-weight: 800; color: #ffffff; margin: 0 0 8px 0;">Import Products & Orders</h4>
-                            <p style="font-size: 15px; color: #e8ebf2; margin: 0;">Click <strong>Import Products</strong>. The system pulls categories first, then products, creating permanent binding records. If <code>Auto-Create</code> is checked, missing SKUs are built. Then, click <strong>Import Orders</strong>. These actions create Background Jobs.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Workflow Step 4 -->
-                <div class="col-12">
-                    <div class="row align-items-center" style="background-color: rgba(255,255,255,0.05); border: 1px solid #3a183f; border-radius: 16px; padding: 20px; margin: 0;">
-                        <div class="col-md-2 text-center mb-3 mb-md-0">
-                            <div style="font-size: 28px; font-weight: 900; color: #ffffff; background-color: #f26522; width: 60px; height: 60px; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center;">4</div>
-                        </div>
-                        <div class="col-md-10">
-                            <h4 style="font-size: 20px; font-weight: 800; color: #ffffff; margin: 0 0 8px 0;">Export Stock</h4>
-                            <p style="font-size: 15px; color: #e8ebf2; margin: 0;">Once products are bound and the catalog is synced, click <strong>Export Stock</strong>. This reads Odoo's real-time inventory levels, deducts Safety Stock, and pushes the exact count to Magento.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- ==========================================
-             SECTION 5 & 6: MAPPING & OPERATIONS
-             ========================================== -->
-        <div class="row mb-5">
-            <!-- Mapping Center -->
-            <div class="col-lg-6 mb-4">
-                <div style="background-color: #ffffff; border-radius: 24px; border: 1px solid #e8ebf2; padding: 35px; height: 100%; box-shadow: 0 10px 25px rgba(0,0,0,0.02);">
-                    <span style="display: inline-block; background-color: #efe7f5; color: #4b235f; padding: 6px 12px; border-radius: 50px; font-weight: 800; font-size: 12px; text-transform: uppercase; margin-bottom: 15px;">&#128269; Section 5</span>
-                    <h3 style="font-size: 26px; font-weight: 900; color: #172033; margin: 0 0 15px 0;">The Mapping Center</h3>
-                    <p style="font-size: 15px; color: #667085; margin: 0 0 20px 0;">Avoid hardcoded development. Connect text-based Magento logic to exact Odoo database models via the UI.</p>
-                    <div style="background-color: #f8fafc; border: 1px solid #edf0f6; border-radius: 12px; padding: 15px; margin-bottom: 20px;">
-                        <h4 style="font-size: 16px; color: #3a183f; font-weight: 800; margin: 0 0 10px 0;">How to Map (Example):</h4>
-                        <p style="font-size: 14px; color: #475569; margin: 0 0 5px 0;"><strong>1.</strong> Create record for <code>Payment Method</code>.</p>
-                        <p style="font-size: 14px; color: #475569; margin: 0 0 5px 0;"><strong>2.</strong> Set Magento Value to exactly what it sends (e.g., <code>checkmo</code>).</p>
-                        <p style="font-size: 14px; color: #475569; margin: 0 0 5px 0;"><strong>3.</strong> Enter Odoo Model (<code>account.journal</code>) and Record ID.</p>
-                        <p style="font-size: 14px; color: #475569; margin: 0;"><strong>4.</strong> Click <strong>Mark as Mapped</strong>.</p>
-                    </div>
-                    <!-- MAPPING SCREENSHOT -->
-                    <img src="./mapping.png" alt="Mapping Integrations" style="width: 100%; border-radius: 12px; border: 1px solid #e8ebf2; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-                </div>
-            </div>
-
-            <!-- Daily Operations -->
-            <div class="col-lg-6 mb-4">
-                <div style="background-color: #ffffff; border-radius: 24px; border: 1px solid #e8ebf2; padding: 35px; height: 100%; box-shadow: 0 10px 25px rgba(0,0,0,0.02);">
-                    <span style="display: inline-block; background-color: #fff3ed; color: #d94f10; padding: 6px 12px; border-radius: 50px; font-weight: 800; font-size: 12px; text-transform: uppercase; margin-bottom: 15px;">&#9881; Section 6</span>
-                    <h3 style="font-size: 26px; font-weight: 900; color: #172033; margin: 0 0 15px 0;">Daily Operations & Triage</h3>
-                    <p style="font-size: 15px; color: #667085; margin: 0 0 20px 0;">All sync actions generate <code>commerce.bridge.queue.job</code> records. Triage errors without calling a developer.</p>
-                    <ul style="list-style: none; padding: 0; margin: 0; color: #475569; font-size: 14px; margin-bottom: 20px;">
-                        <li style="margin-bottom: 10px;">&#10004; <strong style="color: #3a183f;">Retry Waiting:</strong> Job timed out and will auto-retry via exponential backoff.</li>
-                        <li style="margin-bottom: 10px;">&#10008; <strong style="color: #f26522;">Failed Jobs:</strong> Hard error. Open the job to read the <code>Help Message</code>. Fix data, click Retry.</li>
-                        <li>&#128269; <strong style="color: #172033;">Sync Logs:</strong> View exact JSON Request/Response data sent to Magento for rapid IT debugging.</li>
-                    </ul>
-                    <!-- OPS SCREENSHOT -->
-                    <img src="./operations.png" alt="Operations Authorization" style="width: 100%; border-radius: 12px; border: 1px solid #e8ebf2; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
-                </div>
-            </div>
-        </div>
-
-        <!-- ==========================================
-             FOOTER CTA
-             ========================================== -->
-        <div style="background-color: #3a183f; border-radius: 24px; padding: 50px 20px; text-align: center; color: #ffffff;">
-            <h2 style="font-size: 36px; font-weight: 900; margin: 0 0 15px 0;">Stop fighting your integration.</h2>
-            <p style="font-size: 18px; color: #e8ebf2; max-width: 700px; margin: 0 auto 30px auto;">Deploy a transparent, strictly enforced, operations-grade connector built to scale your Magento 2 and Odoo architecture securely. Fully verified and native.</p>
-            <div>
-                <span style="display: inline-block; background-color: #f26522; color: #ffffff; padding: 14px 30px; border-radius: 12px; font-weight: 800; font-size: 16px; margin-right: 15px; margin-bottom: 10px; cursor: pointer;">&#128722; Get the Connector</span>
-                <span style="display: inline-block; background-color: transparent; color: #ffffff; border: 1px solid #e8ebf2; padding: 14px 30px; border-radius: 12px; font-weight: 800; font-size: 16px; margin-bottom: 10px; cursor: pointer;">&#128231; Request Tech Support</span>
-            </div>
-        </div>
-
     </div>
-</div>
-</body>
+</section>
+
+<section class="oe_container" style="background-color:#ffffff; color:#172033; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;">
+    <div class="container pb-5">
+        <div class="row justify-content-center text-center">
+            <div class="col-lg-10">
+                <span class="badge badge-pill px-3 py-2 mb-3" style="background-color:#eaf0ff; color:#2451c6;">Odoo 19 · OAuth 2.0 · Wrike API v4</span>
+                <h1 class="font-weight-bold mb-3" style="font-size:38px; line-height:1.2;">Keep Odoo and Wrike aligned without duplicate project administration</h1>
+                <p class="text-muted mx-auto mb-4" style="font-size:18px; line-height:1.75; max-width:850px;">
+                    Connect Odoo Project and Timesheets with Wrike through a controlled bidirectional synchronization layer. Import the Wrike workspace into Odoo, export operational changes back to Wrike, react to signed webhook events, and monitor every operation through a retryable queue.
+                </p>
+                <div class="d-flex flex-wrap justify-content-center">
+                    <span class="badge badge-light border px-3 py-2 m-1">Projects &amp; folders</span>
+                    <span class="badge badge-light border px-3 py-2 m-1">Tasks</span>
+                    <span class="badge badge-light border px-3 py-2 m-1">Comments</span>
+                    <span class="badge badge-light border px-3 py-2 m-1">Timelogs &amp; timesheets</span>
+                    <span class="badge badge-light border px-3 py-2 m-1">Contacts</span>
+                    <span class="badge badge-light border px-3 py-2 m-1">Custom fields</span>
+                    <span class="badge badge-light border px-3 py-2 m-1">Webhooks</span>
+                    <span class="badge badge-light border px-3 py-2 m-1">Queue &amp; logs</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-6 col-lg-3 mb-3">
+                <div class="h-100 text-center rounded border p-4" style="background-color:#f8faff; border-color:#dce5f7 !important;">
+                    <i class="fa fa-exchange mb-3" style="font-size:30px; color:#2451c6;"></i>
+                    <h3 class="h5 font-weight-bold mb-2">Bidirectional</h3>
+                    <p class="text-muted small mb-0">Direction-specific imports and exports connect projects, tasks, comments, and time entries.</p>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3 mb-3">
+                <div class="h-100 text-center rounded border p-4" style="background-color:#f8faff; border-color:#dce5f7 !important;">
+                    <i class="fa fa-shield mb-3" style="font-size:30px; color:#0f9f7a;"></i>
+                    <h3 class="h5 font-weight-bold mb-2">Secure OAuth</h3>
+                    <p class="text-muted small mb-0">Authorization-code flow, token refresh, state validation, and host-aware API access.</p>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3 mb-3">
+                <div class="h-100 text-center rounded border p-4" style="background-color:#f8faff; border-color:#dce5f7 !important;">
+                    <i class="fa fa-bolt mb-3" style="font-size:30px; color:#e09b16;"></i>
+                    <h3 class="h5 font-weight-bold mb-2">Event-aware</h3>
+                    <p class="text-muted small mb-0">Signed Wrike webhook events create traceable follow-up synchronization jobs.</p>
+                </div>
+            </div>
+            <div class="col-6 col-lg-3 mb-3">
+                <div class="h-100 text-center rounded border p-4" style="background-color:#f8faff; border-color:#dce5f7 !important;">
+                    <i class="fa fa-refresh mb-3" style="font-size:30px; color:#7c4dce;"></i>
+                    <h3 class="h5 font-weight-bold mb-2">Recoverable</h3>
+                    <p class="text-muted small mb-0">Deduplicated jobs, automatic retries, response history, and actionable errors.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container py-5" style="background-color:#f6f8fc; color:#172033; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;">
+    <div class="container">
+        <div class="row align-items-center mb-4">
+            <div class="col-lg-7">
+                <span class="text-uppercase font-weight-bold" style="font-size:12px; letter-spacing:1.3px; color:#2451c6;">Connection control center</span>
+                <h2 class="font-weight-bold mt-2 mb-3" style="font-size:32px;">Configure, connect, import, and monitor from one Odoo-native workspace</h2>
+                <p class="text-muted mb-0" style="font-size:16px; line-height:1.7;">
+                    Each connection keeps its own company, Wrike host, OAuth credentials, sync policy, import window, default export folder, connection status, counters, and webhook configuration.
+                </p>
+            </div>
+            <div class="col-lg-5 mt-4 mt-lg-0">
+                <div class="rounded border bg-white p-4 shadow-sm">
+                    <div class="d-flex align-items-start mb-3">
+                        <i class="fa fa-check-circle mr-3 mt-1" style="color:#0f9f7a; font-size:20px;"></i>
+                        <div><strong>US and EU-aware</strong><div class="text-muted small">Uses the API host returned by Wrike OAuth.</div></div>
+                    </div>
+                    <div class="d-flex align-items-start mb-3">
+                        <i class="fa fa-check-circle mr-3 mt-1" style="color:#0f9f7a; font-size:20px;"></i>
+                        <div><strong>Multiple connections</strong><div class="text-muted small">Separate connection records and company ownership.</div></div>
+                    </div>
+                    <div class="d-flex align-items-start">
+                        <i class="fa fa-check-circle mr-3 mt-1" style="color:#0f9f7a; font-size:20px;"></i>
+                        <div><strong>Manager-controlled credentials</strong><div class="text-muted small">Secrets and write actions are restricted by security groups.</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img src="screenshots/01_connection_dashboard.png" alt="Wrike connection dashboard interface preview" class="img-fluid w-100 rounded shadow-sm" style="border:1px solid #dfe6f0;"/>
+    </div>
+</section>
+
+<section class="oe_container py-5" style="background-color:#ffffff; color:#172033; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;">
+    <div class="container">
+        <div class="row justify-content-center text-center mb-4">
+            <div class="col-lg-9">
+                <span class="text-uppercase font-weight-bold" style="font-size:12px; letter-spacing:1.3px; color:#2451c6;">Verified synchronization coverage</span>
+                <h2 class="font-weight-bold mt-2 mb-3" style="font-size:32px;">Clear two-way coverage — without misleading promises</h2>
+                <p class="text-muted mb-0" style="font-size:16px; line-height:1.7;">The connector intentionally treats contacts and custom-field definitions as import-only reference data. Operational project work is synchronized in both directions.</p>
+            </div>
+        </div>
+
+        <div class="table-responsive rounded border shadow-sm">
+            <table class="table table-borderless mb-0" style="min-width:760px;">
+                <thead style="background-color:#172033; color:#ffffff;">
+                    <tr>
+                        <th class="py-3 px-4">Area</th>
+                        <th class="py-3 text-center">Wrike → Odoo</th>
+                        <th class="py-3 text-center">Odoo → Wrike</th>
+                        <th class="py-3 px-4">What is covered</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr style="background-color:#ffffff; border-bottom:1px solid #edf0f5;">
+                        <td class="py-3 px-4 font-weight-bold">Projects / folders</td>
+                        <td class="py-3 text-center"><span class="badge badge-success px-3 py-2">Yes</span></td>
+                        <td class="py-3 text-center"><span class="badge badge-success px-3 py-2">Yes</span></td>
+                        <td class="py-3 px-4 text-muted">Import Wrike folder/project records and optionally create linked Odoo projects; create or update Wrike projects from Odoo.</td>
+                    </tr>
+                    <tr style="background-color:#fbfcfe; border-bottom:1px solid #edf0f5;">
+                        <td class="py-3 px-4 font-weight-bold">Tasks</td>
+                        <td class="py-3 text-center"><span class="badge badge-success px-3 py-2">Yes</span></td>
+                        <td class="py-3 text-center"><span class="badge badge-success px-3 py-2">Yes</span></td>
+                        <td class="py-3 px-4 text-muted">Wrike import maps title, description, due date, parent project, and assignees; Odoo export also sends priority and completed stage.</td>
+                    </tr>
+                    <tr style="background-color:#ffffff; border-bottom:1px solid #edf0f5;">
+                        <td class="py-3 px-4 font-weight-bold">Comments</td>
+                        <td class="py-3 text-center"><span class="badge badge-success px-3 py-2">Yes</span></td>
+                        <td class="py-3 text-center"><span class="badge badge-success px-3 py-2">Yes</span></td>
+                        <td class="py-3 px-4 text-muted">Import Wrike task comments and optionally post them to Odoo chatter; export new Odoo task chatter comments.</td>
+                    </tr>
+                    <tr style="background-color:#fbfcfe; border-bottom:1px solid #edf0f5;">
+                        <td class="py-3 px-4 font-weight-bold">Timelogs / timesheets</td>
+                        <td class="py-3 text-center"><span class="badge badge-success px-3 py-2">Yes</span></td>
+                        <td class="py-3 text-center"><span class="badge badge-success px-3 py-2">Yes</span></td>
+                        <td class="py-3 px-4 text-muted">Import hours, dates, comments, billing and approval metadata; optionally create Odoo timesheets; create or update Wrike timelogs.</td>
+                    </tr>
+                    <tr style="background-color:#ffffff; border-bottom:1px solid #edf0f5;">
+                        <td class="py-3 px-4 font-weight-bold">Contacts / users</td>
+                        <td class="py-3 text-center"><span class="badge badge-success px-3 py-2">Yes</span></td>
+                        <td class="py-3 text-center"><span class="badge badge-secondary px-3 py-2">Import only</span></td>
+                        <td class="py-3 px-4 text-muted">Matches Wrike contacts to Odoo users and partners by email; optional partner creation.</td>
+                    </tr>
+                    <tr style="background-color:#fbfcfe;">
+                        <td class="py-3 px-4 font-weight-bold">Custom fields</td>
+                        <td class="py-3 text-center"><span class="badge badge-success px-3 py-2">Yes</span></td>
+                        <td class="py-3 text-center"><span class="badge badge-secondary px-3 py-2">Import only</span></td>
+                        <td class="py-3 px-4 text-muted">Stores field definitions, settings, applicable entity types, and imported task/folder custom-field values for reference.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container py-5" style="background-color:#f6f8fc; color:#172033; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;">
+    <div class="container">
+        <div class="row align-items-center mb-4">
+            <div class="col-lg-6">
+                <span class="text-uppercase font-weight-bold" style="font-size:12px; letter-spacing:1.3px; color:#2451c6;">Work inside standard Odoo records</span>
+                <h2 class="font-weight-bold mt-2 mb-3" style="font-size:32px;">Project, task, chatter, and timesheet actions remain where users already work</h2>
+            </div>
+            <div class="col-lg-6">
+                <p class="text-muted mb-0" style="font-size:16px; line-height:1.7;">The module extends native Odoo Project, Task, Timesheet, and Chatter behavior. Users can bind records, sync manually, open the internal Wrike binding, or launch the source record in Wrike.</p>
+            </div>
+        </div>
+        <img src="screenshots/02_project_task_sync.png" alt="Odoo project and task Wrike synchronization interface preview" class="img-fluid w-100 rounded shadow-sm" style="border:1px solid #dfe6f0;"/>
+
+        <div class="row mt-4">
+            <div class="col-md-6 col-lg-3 mb-3">
+                <div class="h-100 bg-white border rounded p-4 shadow-sm">
+                    <div class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width:44px; height:44px; background-color:#eaf0ff; color:#2451c6; font-size:18px;"><i class="fa fa-briefcase"></i></div>
+                    <h3 class="h5 font-weight-bold">Project export</h3>
+                    <p class="text-muted small mb-0">Create a Wrike project beneath the configured default parent, or update an existing binding.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-3">
+                <div class="h-100 bg-white border rounded p-4 shadow-sm">
+                    <div class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width:44px; height:44px; background-color:#eaf8f4; color:#0f9f7a; font-size:18px;"><i class="fa fa-tasks"></i></div>
+                    <h3 class="h5 font-weight-bold">Task export</h3>
+                    <p class="text-muted small mb-0">Create or update Wrike tasks with description, due date, priority, assignees, and completion state.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-3">
+                <div class="h-100 bg-white border rounded p-4 shadow-sm">
+                    <div class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width:44px; height:44px; background-color:#fff3df; color:#b77900; font-size:18px;"><i class="fa fa-comments"></i></div>
+                    <h3 class="h5 font-weight-bold">Chatter export</h3>
+                    <p class="text-muted small mb-0">New comments on linked Odoo tasks are converted to plain text and queued for Wrike.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3 mb-3">
+                <div class="h-100 bg-white border rounded p-4 shadow-sm">
+                    <div class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width:44px; height:44px; background-color:#f0eafd; color:#7648bd; font-size:18px;"><i class="fa fa-clock-o"></i></div>
+                    <h3 class="h5 font-weight-bold">Timesheet export</h3>
+                    <p class="text-muted small mb-0">New and edited task timesheets are queued as Wrike timelog create or update operations.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container py-5" style="background-color:#ffffff; color:#172033; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;">
+    <div class="container">
+        <div class="row align-items-center mb-4">
+            <div class="col-lg-6">
+                <span class="text-uppercase font-weight-bold" style="font-size:12px; letter-spacing:1.3px; color:#2451c6;">Workspace mirror</span>
+                <h2 class="font-weight-bold mt-2 mb-3" style="font-size:32px;">Inspect imported Wrike data without losing its original context</h2>
+            </div>
+            <div class="col-lg-6">
+                <p class="text-muted mb-0" style="font-size:16px; line-height:1.7;">Dedicated Odoo models preserve IDs, permalinks, parent relationships, responsible users, dates, custom values, metadata, raw JSON, synchronization state, and linked Odoo records.</p>
+            </div>
+        </div>
+        <img src="screenshots/05_workspace_data.png" alt="Imported Wrike workspace data interface preview" class="img-fluid w-100 rounded shadow-sm" style="border:1px solid #dfe6f0;"/>
+    </div>
+</section>
+
+<section class="oe_container py-5" style="background-color:#172033; color:#ffffff; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;">
+    <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-9">
+                <span class="text-uppercase font-weight-bold" style="font-size:12px; letter-spacing:1.3px; color:#9fb8ff;">Designed for production operations</span>
+                <h2 class="font-weight-bold mt-2 mb-3" style="font-size:32px;">A synchronization queue you can see, retry, and diagnose</h2>
+                <p class="mb-0" style="font-size:16px; line-height:1.7; color:#c8d2e4;">Instead of hiding API work inside user transactions, the connector creates explicit jobs. Duplicate pending work is merged, recoverable API errors wait and retry, and every job retains its operational evidence.</p>
+            </div>
+        </div>
+        <img src="screenshots/03_sync_queue.png" alt="Wrike synchronization queue interface preview" class="img-fluid w-100 rounded shadow" style="border:1px solid #40506c;"/>
+
+        <div class="row mt-4">
+            <div class="col-md-4 mb-3">
+                <div class="h-100 rounded border p-4" style="background-color:#202c44; border-color:#3d4b65 !important;">
+                    <i class="fa fa-compress mb-3" style="color:#8fb0ff; font-size:24px;"></i>
+                    <h3 class="h5 font-weight-bold">Merge duplicate work</h3>
+                    <p class="small mb-0" style="color:#c8d2e4;">Pending jobs share stable external keys, preventing repeated edits from creating an uncontrolled queue.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="h-100 rounded border p-4" style="background-color:#202c44; border-color:#3d4b65 !important;">
+                    <i class="fa fa-history mb-3" style="color:#66dfba; font-size:24px;"></i>
+                    <h3 class="h5 font-weight-bold">Automatic backoff</h3>
+                    <p class="small mb-0" style="color:#c8d2e4;">Timeouts, conflicts, rate limits, and server errors retry automatically with increasing delays.</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="h-100 rounded border p-4" style="background-color:#202c44; border-color:#3d4b65 !important;">
+                    <i class="fa fa-search mb-3" style="color:#ffc76b; font-size:24px;"></i>
+                    <h3 class="h5 font-weight-bold">Full traceability</h3>
+                    <p class="small mb-0" style="color:#c8d2e4;">Review payloads, responses, durations, linked records, error types, retry counts, and recovery guidance.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container py-5" style="background-color:#f6f8fc; color:#172033; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;">
+    <div class="container">
+        <div class="row align-items-center mb-4">
+            <div class="col-lg-7">
+                <span class="text-uppercase font-weight-bold" style="font-size:12px; letter-spacing:1.3px; color:#2451c6;">Signed webhook intake</span>
+                <h2 class="font-weight-bold mt-2 mb-3" style="font-size:32px;">Respond to Wrike changes with targeted follow-up jobs</h2>
+                <p class="text-muted mb-0" style="font-size:16px; line-height:1.7;">The public endpoint validates the Wrike signature before accepting data. Events are stored in Odoo, linked to task/folder/comment/timelog identifiers, and then processed by the normal queue.</p>
+            </div>
+            <div class="col-lg-5 mt-4 mt-lg-0">
+                <div class="rounded border bg-white p-4 shadow-sm">
+                    <div class="d-flex align-items-center mb-3"><i class="fa fa-lock mr-3" style="color:#0f9f7a;"></i><strong>HMAC SHA-256 signature validation</strong></div>
+                    <div class="d-flex align-items-center mb-3"><i class="fa fa-globe mr-3" style="color:#2451c6;"></i><strong>Public HTTPS URL validation</strong></div>
+                    <div class="d-flex align-items-center"><i class="fa fa-list-alt mr-3" style="color:#7c4dce;"></i><strong>Stored event payload and process state</strong></div>
+                </div>
+            </div>
+        </div>
+        <img src="screenshots/04_webhook_events.png" alt="Wrike webhook event interface preview" class="img-fluid w-100 rounded shadow-sm" style="border:1px solid #dfe6f0;"/>
+    </div>
+</section>
+
+<section class="oe_container py-5" style="background-color:#ffffff; color:#172033; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;">
+    <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-9">
+                <span class="text-uppercase font-weight-bold" style="font-size:12px; letter-spacing:1.3px; color:#2451c6;">Setup</span>
+                <h2 class="font-weight-bold mt-2 mb-3" style="font-size:32px;">From installation to first synchronized workspace</h2>
+                <p class="text-muted mb-0" style="font-size:16px; line-height:1.7;">A manager completes the OAuth connection once; users then work with normal Odoo project records and the Wrike menu.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="h-100 rounded border p-4 shadow-sm">
+                    <span class="badge badge-primary badge-pill px-3 py-2 mb-3">1</span>
+                    <h3 class="h5 font-weight-bold">Install the module</h3>
+                    <p class="text-muted small mb-0">Install Wrike Connector for Odoo. The module adds the Wrike application, access groups, queue cron, records, and native Odoo integrations.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="h-100 rounded border p-4 shadow-sm">
+                    <span class="badge badge-primary badge-pill px-3 py-2 mb-3">2</span>
+                    <h3 class="h5 font-weight-bold">Create a connection</h3>
+                    <p class="text-muted small mb-0">Open <strong>Wrike → Connections</strong>, create a connection, choose its Odoo company, and enter the Wrike OAuth Client ID and Client Secret.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="h-100 rounded border p-4 shadow-sm">
+                    <span class="badge badge-primary badge-pill px-3 py-2 mb-3">3</span>
+                    <h3 class="h5 font-weight-bold">Register the callback</h3>
+                    <p class="text-muted small mb-0">Copy the generated <strong>OAuth Redirect URL</strong> from Odoo and add it to the callback URLs of the corresponding Wrike OAuth application.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="h-100 rounded border p-4 shadow-sm">
+                    <span class="badge badge-primary badge-pill px-3 py-2 mb-3">4</span>
+                    <h3 class="h5 font-weight-bold">Authorize and test</h3>
+                    <p class="text-muted small mb-0">Click <strong>Connect to Wrike</strong>, approve access, then use <strong>Test Connection</strong> to verify the account identity and API host.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="h-100 rounded border p-4 shadow-sm">
+                    <span class="badge badge-primary badge-pill px-3 py-2 mb-3">5</span>
+                    <h3 class="h5 font-weight-bold">Choose sync behavior</h3>
+                    <p class="text-muted small mb-0">Set the import date, auto-create policies, comment behavior, timesheet policy, automatic Odoo exports, and default Wrike export parent.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="h-100 rounded border p-4 shadow-sm">
+                    <span class="badge badge-primary badge-pill px-3 py-2 mb-3">6</span>
+                    <h3 class="h5 font-weight-bold">Import and enable events</h3>
+                    <p class="text-muted small mb-0">Run <strong>Import Workspace</strong>. For event-driven updates, configure a public HTTPS <strong>web.base.url</strong> and create the signed webhook.</p>
+                </div>
+            </div>
+        </div>
+        <div class="alert border mt-2 mb-0" style="background-color:#eff6ff; border-color:#cfe0ff !important; color:#294d87;">
+            <i class="fa fa-info-circle mr-2"></i>
+            The webhook URL must be publicly reachable over HTTPS. Localhost and non-HTTPS endpoints are rejected by the connector before webhook creation.
+        </div>
+    </div>
+</section>
+
+<section class="oe_container py-5" style="background-color:#f6f8fc; color:#172033; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="h-100 bg-white rounded border p-4 p-lg-5 shadow-sm">
+                    <span class="text-uppercase font-weight-bold" style="font-size:12px; letter-spacing:1.3px; color:#2451c6;">Security and governance</span>
+                    <h2 class="h3 font-weight-bold mt-2 mb-4">Access is separated by role</h2>
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="rounded-circle d-flex align-items-center justify-content-center mr-3" style="width:42px; height:42px; min-width:42px; background-color:#eaf0ff; color:#2451c6;"><i class="fa fa-eye"></i></div>
+                        <div><strong>Wrike Connector User</strong><p class="text-muted small mb-0 mt-1">Read access to connection status, imported workspace records, jobs, logs, and webhook events.</p></div>
+                    </div>
+                    <div class="d-flex align-items-start mb-4">
+                        <div class="rounded-circle d-flex align-items-center justify-content-center mr-3" style="width:42px; height:42px; min-width:42px; background-color:#eaf8f4; color:#0f9f7a;"><i class="fa fa-cog"></i></div>
+                        <div><strong>Wrike Connector Manager</strong><p class="text-muted small mb-0 mt-1">Configuration, credentials, connection actions, imports, webhooks, job processing, retries, and record administration.</p></div>
+                    </div>
+                    <div class="d-flex align-items-start">
+                        <div class="rounded-circle d-flex align-items-center justify-content-center mr-3" style="width:42px; height:42px; min-width:42px; background-color:#fff3df; color:#b77900;"><i class="fa fa-key"></i></div>
+                        <div><strong>Sensitive fields protected</strong><p class="text-muted small mb-0 mt-1">Client credentials, access tokens, refresh tokens, and webhook secrets are restricted to the manager group.</p></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="h-100 bg-white rounded border p-4 p-lg-5 shadow-sm">
+                    <span class="text-uppercase font-weight-bold" style="font-size:12px; letter-spacing:1.3px; color:#2451c6;">Technical requirements</span>
+                    <h2 class="h3 font-weight-bold mt-2 mb-4">Built for Odoo 19 Project operations</h2>
+                    <div class="table-responsive">
+                        <table class="table table-sm mb-0">
+                            <tbody>
+                                <tr><th class="border-0 py-3">Odoo version</th><td class="border-0 py-3 text-muted">19.0</td></tr>
+                                <tr><th class="py-3">Required Odoo apps</th><td class="py-3 text-muted">Project, Mail, Timesheets</td></tr>
+                                <tr><th class="py-3">Python dependency</th><td class="py-3 text-muted"><code>requests</code></td></tr>
+                                <tr><th class="py-3">Wrike API</th><td class="py-3 text-muted">API v4 through OAuth 2.0</td></tr>
+                                <tr><th class="py-3">Queue schedule</th><td class="py-3 text-muted">Automatic processing every 5 minutes</td></tr>
+                                <tr><th class="py-3">Webhook requirement</th><td class="py-3 text-muted">Public HTTPS Odoo base URL</td></tr>
+                                <tr><th class="py-3">License</th><td class="py-3 text-muted">OPL-1</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container py-5" style="background-color:#ffffff; color:#172033; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;">
+    <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+            <div class="col-lg-9">
+                <span class="text-uppercase font-weight-bold" style="font-size:12px; letter-spacing:1.3px; color:#2451c6;">Frequently asked questions</span>
+                <h2 class="font-weight-bold mt-2 mb-0" style="font-size:32px;">Important behavior before deployment</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 mb-3">
+                <div class="h-100 rounded border p-4">
+                    <h3 class="h5 font-weight-bold">Does it automatically export every Odoo project?</h3>
+                    <p class="text-muted small mb-0">No. A project must have a Wrike connection. New exports also require a configured default Wrike parent folder/project.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-3">
+                <div class="h-100 rounded border p-4">
+                    <h3 class="h5 font-weight-bold">Will imported Wrike contacts create Odoo contacts?</h3>
+                    <p class="text-muted small mb-0">Only when <strong>Auto-create Partners</strong> is enabled. Otherwise the connector links to an existing partner or user when the email matches.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-3">
+                <div class="h-100 rounded border p-4">
+                    <h3 class="h5 font-weight-bold">Can Wrike timelogs become Odoo timesheets?</h3>
+                    <p class="text-muted small mb-0">Yes, when automatic timesheet creation is enabled and the imported Wrike task is linked to an Odoo task. Employee mapping is used when available.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-3">
+                <div class="h-100 rounded border p-4">
+                    <h3 class="h5 font-weight-bold">What happens when Wrike temporarily fails?</h3>
+                    <p class="text-muted small mb-0">Recoverable failures such as timeouts, rate limits, conflicts, and server errors move to retry waiting. Non-recoverable configuration or authorization failures are blocked for review.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-3">
+                <div class="h-100 rounded border p-4">
+                    <h3 class="h5 font-weight-bold">Does the connector export Wrike users or custom-field definitions?</h3>
+                    <p class="text-muted small mb-0">No. Contacts/users and custom-field definitions are imported for matching and reference. Their creation in Wrike is intentionally not automated.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-3">
+                <div class="h-100 rounded border p-4">
+                    <h3 class="h5 font-weight-bold">Can I run synchronization manually?</h3>
+                    <p class="text-muted small mb-0">Yes. Managers can import individual areas, import the complete workspace, process the queue, retry jobs, or sync linked projects, tasks, and timesheets from their forms.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="oe_container py-5" style="background-color:#172033; color:#ffffff; font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 text-center text-lg-left">
+                <span class="text-uppercase font-weight-bold" style="font-size:12px; letter-spacing:1.3px; color:#9fb8ff;">Support by Niyu Labs</span>
+                <h2 class="font-weight-bold mt-2 mb-2" style="font-size:30px;">Need help with setup, mapping, or deployment?</h2>
+                <p class="mb-0" style="color:#c8d2e4;">Contact the product team with your Odoo version, deployment type, and Wrike account region.</p>
+            </div>
+            <div class="col-lg-4 text-center text-lg-right mt-4 mt-lg-0">
+                <a href="mailto:info@niyulabs.com" class="btn btn-light btn-lg px-4 font-weight-bold">info@niyulabs.com</a>
+                <div class="mt-3" style="color:#aebbd2;">niyulabs.com</div>
+            </div>
+        </div>
+    </div>
+</section>
